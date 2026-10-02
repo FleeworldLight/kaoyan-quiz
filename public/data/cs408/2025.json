@@ -1038,7 +1038,9 @@
      "explanation": "参考 ： - 电路交换的时间 Tcs​ = 连接建立时间 + 数据传输时间 = 32us + 2MB / 10Mbps - 报文交换的时间 Tms​ = 各链路传输时间之和 = 2MB/10Mbps + 2MB/100Mbps + 2MB/1000Mbps - 分组交换的时间 Tps​ = 考虑分组传输 overlap 的时间 = 2MB/10Mbps + 400B/100Mbps + 400B/1000Mbps 经计算可知 Tms​>Tps​>Tcs​ 。",
      "score": 2,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2025-p4-1.png"
+     ]
     },
     {
      "id": "cs408-2025-q34",
@@ -1129,7 +1131,9 @@
      "topics": [
       "cn-网络层"
      ],
-     "images": []
+     "images": [
+      "cs408-2025-p4-2.png"
+     ]
     },
     {
      "id": "cs408-2025-q37",
@@ -1191,7 +1195,9 @@
      "topics": [
       "cn-传输层"
      ],
-     "images": []
+     "images": [
+      "cs408-2025-p5-3.png"
+     ]
     },
     {
      "id": "cs408-2025-q39",
@@ -1287,7 +1293,9 @@
      "topics": [
       "ds-图"
      ],
-     "images": []
+     "images": [
+      "cs408-2025-p7-4.png"
+     ]
     },
     {
      "id": "cs408-2025-q43",
@@ -1315,7 +1323,9 @@
      "topics": [
       "co-数据的表示和运算"
      ],
-     "images": []
+     "images": [
+      "cs408-2025-p9-5.png"
+     ]
     },
     {
      "id": "cs408-2025-q45",
@@ -1341,7 +1351,9 @@
      "explanation": "",
      "score": 8,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2025-p11-6.png"
+     ]
     },
     {
      "id": "cs408-2025-q47",
@@ -1355,7 +1367,9 @@
      "topics": [
       "cn-数据链路层"
      ],
-     "images": []
+     "images": [
+      "cs408-2025-p12-7.png"
+     ]
     }
    ]
   }

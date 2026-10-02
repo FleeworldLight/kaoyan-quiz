@@ -4,11 +4,17 @@ import { cn } from "../lib/utils.js";
 
 const DATA_BASE = (import.meta.env.BASE_URL || "./").replace(/\/$/, "") + "/data/";
 
-/** 把题目 images 里的文件名拼成可访问的 URL */
+/** 把题目 images 里的文件名拼成可访问的 URL（容错：去掉各种可能的前缀） */
 export function dataImageUrl(subject, name) {
   if (!name) return "";
-  if (/^https?:/.test(name)) return name;
-  return DATA_BASE + (subject ? subject + "/" : "") + "images/" + String(name).replace(/^images\//, "");
+  const raw = String(name).trim();
+  if (/^https?:|^\/\//.test(raw)) return raw;
+  if (/^\//.test(raw)) return raw;                       // 已经是绝对路径
+  let f = raw.replace(/^\.\//, "");
+  f = f.replace(/^images\//, "");
+  if (subject) f = f.replace(new RegExp("^" + subject + "/images/"), "").replace(new RegExp("^" + subject + "/"), "");
+  if (f.includes("/images/")) f = f.split("/images/").pop();
+  return DATA_BASE + (subject ? subject + "/" : "") + "images/" + f;
 }
 
 function renderMath(tex, display) {

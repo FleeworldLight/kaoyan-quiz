@@ -15,6 +15,26 @@ function err(f, msg) { problems.push(`[${f}] ${msg}`); }
 function warnA(f, msg) { warn.push(`[${f}] ${msg}`); }
 function readJSON(p) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return null; } }
 
+/**
+ * 题目 images 里引用的文件必须真实存在于 public/data/<subject>/images/ 下。
+ * 详见 SCHEMA.md：images 是「相对 public/data/<subject>/images/ 的文件名数组」。
+ */
+let imageRefs = 0;
+const imageSeen = new Set();
+function checkImages(rel, qid, sid, images) {
+  if (!images || !images.length) return;
+  if (!Array.isArray(images)) return; // 上面已报错
+  for (const name of images) {
+    if (typeof name !== "string" || !name.trim()) { err(rel, `${qid} images 里有空文件名`); continue; }
+    if (/[\\/]/.test(name) || name.includes("..")) { err(rel, `${qid} images 里应写文件名而不是路径: ${name}`); continue; }
+    imageRefs++;
+    imageSeen.add(`${sid}/${name}`);
+    const p = path.join(DATA, sid, "images", name);
+    if (!fs.existsSync(p)) err(rel, `${qid} 引用的图片不存在: ${sid}/images/${name}`);
+    else if (fs.statSync(p).size === 0) err(rel, `${qid} 引用的图片是空文件: ${sid}/images/${name}`);
+  }
+}
+
 const index = JSON.parse(fs.readFileSync(path.join(DATA, "index.json"), "utf8"));
 const subjectIds = index.subjects.map((s) => s.id);
 
@@ -81,6 +101,7 @@ for (const sid of subjectIds) {
         if (q.answer || q.explanation) an++;
         if (q.topics && !Array.isArray(q.topics)) err(rel, `${qid} topics 必须是数组`);
         if (q.images && !Array.isArray(q.images)) err(rel, `${qid} images 必须是数组`);
+        checkImages(rel, qid, sid, q.images);
       }
     }
     subQ += qn; subChoice += cn; subAns += an;
@@ -141,6 +162,7 @@ if (fs.existsSync(mockManifestPath)) {
             }
           }
           if (q.answer || q.explanation) an++;
+          checkImages(rel, q.id || q.no, doc.subject || "mock", q.images);
         }
       }
       mq += qn; mChoice += cn; mAns += an;
@@ -157,6 +179,7 @@ if (fs.existsSync(mockManifestPath)) {
 
 console.log("=== 结果 ===");
 console.log(`总题量: ${totalQ}`);
+console.log(`题目图片引用: ${imageRefs} 处 / ${imageSeen.size} 个文件（均已核对存在性）`);
 console.log(`ERROR: ${problems.length} 条`);
 for (const p of problems.slice(0, 40)) console.log("  ✗ " + p);
 if (problems.length > 40) console.log(`  … 另有 ${problems.length - 40} 条`);

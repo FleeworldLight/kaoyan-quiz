@@ -243,7 +243,9 @@
      "topics": [
       "ds-图"
      ],
-     "images": []
+     "images": [
+      "cs408-2012-p1-1.png"
+     ]
     },
     {
      "id": "cs408-2012-q8",
@@ -305,7 +307,9 @@
      "topics": [
       "ds-树与二叉树"
      ],
-     "images": []
+     "images": [
+      "cs408-2012-p1-2.png"
+     ]
     },
     {
      "id": "cs408-2012-q10",
@@ -1252,7 +1256,9 @@
      "topics": [
       "cn-应用层"
      ],
-     "images": []
+     "images": [
+      "cs408-2012-p4-3.png"
+     ]
     }
    ]
   },
@@ -1282,7 +1288,9 @@
      "explanation": "",
      "score": 13,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2012-p6-4.png"
+     ]
     },
     {
      "id": "cs408-2012-q43",
@@ -1346,7 +1354,10 @@
      "explanation": "",
      "score": 9,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2012-p11-5.png",
+      "cs408-2012-p11-6.png"
+     ]
     }
    ]
   }

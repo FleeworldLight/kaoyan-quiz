@@ -177,7 +177,9 @@
      "topics": [
       "ds-树与二叉树"
      ],
-     "images": []
+     "images": [
+      "cs408-2017-p1-1.png"
+     ]
     },
     {
      "id": "cs408-2017-q6",
@@ -266,7 +268,9 @@
      "topics": [
       "ds-树与二叉树"
      ],
-     "images": []
+     "images": [
+      "cs408-2017-p1-2.png"
+     ]
     },
     {
      "id": "cs408-2017-q9",
@@ -1081,7 +1085,9 @@
      "explanation": "IEE 802.11 数据帧有四种子类型，分别是 IBSS、From AP、To AP、WDS。这里的数据帧 F 是从笔记本电脑发送往访问接入点(AP)，所以属于 To AP 子类型。这种帧地址 1 是RA(BSSID)，地址 2 是 SA，地址 3 是 DA。RA 是 Receiver Address 的缩写，BSSID 是 basicservice set idenrifier 的缩写，SA 是 source address 的缩写，DA 是 destination address 的缩写。因此地址 1 是 AP 的 MAC，地址 2 是 H 的 MAC，地址 3 是 R 的 MAC，答案选 B。",
      "score": 2,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2017-p4-3.png"
+     ]
     },
     {
      "id": "cs408-2017-q36",
@@ -1252,7 +1258,10 @@
      "topics": [
       "ds-树与二叉树"
      ],
-     "images": []
+     "images": [
+      "cs408-2017-p5-4.png",
+      "cs408-2017-p5-5.png"
+     ]
     },
     {
      "id": "cs408-2017-q42",
@@ -1266,7 +1275,9 @@
      "topics": [
       "ds-图"
      ],
-     "images": []
+     "images": [
+      "cs408-2017-p6-6.png"
+     ]
     },
     {
      "id": "cs408-2017-q43",
@@ -1320,7 +1331,9 @@
      "topics": [
       "os-进程管理"
      ],
-     "images": []
+     "images": [
+      "cs408-2017-p10-7.png"
+     ]
     },
     {
      "id": "cs408-2017-q47",
@@ -1332,7 +1345,9 @@
      "explanation": "",
      "score": 9,
      "topics": [],
-     "images": []
+     "images": [
+      "cs408-2017-p11-8.png"
+     ]
     }
    ]
   }
