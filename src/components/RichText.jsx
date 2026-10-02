@@ -4,6 +4,13 @@ import { cn } from "../lib/utils.js";
 
 const DATA_BASE = (import.meta.env.BASE_URL || "./").replace(/\/$/, "") + "/data/";
 
+/** 把题目 images 里的文件名拼成可访问的 URL */
+export function dataImageUrl(subject, name) {
+  if (!name) return "";
+  if (/^https?:/.test(name)) return name;
+  return DATA_BASE + (subject ? subject + "/" : "") + "images/" + String(name).replace(/^images\//, "");
+}
+
 function renderMath(tex, display) {
   try {
     return katex.renderToString(tex, {

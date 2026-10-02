@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle, Copy } from "lucide-react";
-import RichText from "./RichText.jsx";
+import RichText, { dataImageUrl } from "./RichText.jsx";
 import { Badge, Button, Tip, Kbd } from "./ui.jsx";
-import { normMultiple, isAutoGraded, isCorrect } from "../lib/question.js";
+import { normMultiple, isAutoGraded, isCorrect, figureMissing } from "../lib/question.js";
 import { cn } from "../lib/utils.js";
 
 const TYPE_META = {
@@ -90,6 +90,21 @@ export default function QuestionView({
         ) : null}
 
         <RichText text={q.stem} subject={q.subject} />
+
+        {q.images?.length > 0 ? (
+          <div className="mt-2.5 flex flex-wrap gap-2">
+            {q.images.map((img) => (
+              <img key={img} src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy" className="q-figure !my-0" />
+            ))}
+          </div>
+        ) : null}
+
+        {figureMissing(q) ? (
+          <p className="mt-2 flex items-start gap-1.5 rounded-md bg-warn-soft px-2.5 py-1.5 text-[12px] text-warn">
+            <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
+            本题题干提到图，但题库未收录配图，请对照原卷 PDF 查看。
+          </p>
+        ) : null}
 
         {q.optionIssue ? (
           <p className="mt-2 flex items-start gap-1.5 rounded-md bg-warn-soft px-2.5 py-1.5 text-[12px] text-warn">

@@ -60,3 +60,10 @@ export function scoreOf(questions, answers) {
 export function optionKeysOf(q) {
   return (q.options || []).map((o) => o.key);
 }
+
+/** 题干提到图（「如下图」「如图所示」等）但没有配图时，前端要提示对照原卷 */
+export function figureMissing(q) {
+  if (!q) return false;
+  if ((q.images || []).length > 0) return false;
+  return /如下图|如图|下图|上图|图\s*\d+\s*所示|见\s*图|图示/.test(String(q.stem || ""));
+}
