@@ -14,7 +14,7 @@ if (!EDGE) { console.error("找不到 Edge"); process.exit(1); }
 
 const PORT = 9340;
 const BASE = process.env.KQ_URL || "http://127.0.0.1:5199";
-const PROFILE = path.resolve(".edge-e2e-profile");
+const PROFILE = path.resolve(".edge-e2e-profile-" + Date.now());
 fs.rmSync(PROFILE, { recursive: true, force: true });
 
 const child = spawn(EDGE, [
@@ -125,6 +125,10 @@ try {
   await waitFor(`document.querySelector('[data-testid="explanation"]') !== null`, "解析出现");
   const ex = await ev(`document.querySelector('[data-testid="explanation"]').innerText`);
   check("答错后显示正确答案", /正确答案/.test(ex) && /C/.test(ex), ex.slice(0, 30).replace(/\s+/g, " "));
+  // 回归保护：单题布局下答完不能自动跳题，否则用户看不到解析
+  await sleep(1300);
+  const stillThere = await ev(`({ exp: !!document.querySelector('[data-testid="explanation"]'), qno: document.querySelector('[data-testid="question"]')?.innerText.slice(0, 4).replace(/\\s/g, "") })`);
+  check("单题布局答完不跳题（解析保持可见）", stillThere.exp === true, "题号 " + stillThere.qno);
   await sleep(900);
   const st = await ev(`(() => { const s = JSON.parse(localStorage.getItem('kq:state:v1') || '{}');
     return { p: Object.keys(s.progress || {}).length, w: Object.keys(s.wrong || {}).length, id: Object.keys(s.wrong || {})[0] }; })()`);
@@ -262,7 +266,7 @@ try {
   try { ws?.close(); } catch {}
   child.kill();
   await sleep(400);
-  fs.rmSync(PROFILE, { recursive: true, force: true });
+  try { fs.rmSync(PROFILE, { recursive: true, force: true, maxRetries: 3 }); } catch {}
 }
 
 const fail = results.filter((r) => !r.ok).length;

@@ -1,6 +1,6 @@
 # CS408 题库构建：来源勘察与产出说明
 
-> 生成时间：2026-02（本文件由数据工程子代理构建，边做边写）
+> 生成时间：2026-02（本文件由数据工程子代理构建，边做边写；2026-10 由后续子代理增量扩展到 2024/2025）
 > 产出目录：`kaoyan-quiz/public/data/cs408/`
 > 构建脚本：`kaoyan-quiz/tools/build-cs408.mjs`　校验脚本：`kaoyan-quiz/tools/validate-cs408.mjs`
 
@@ -8,12 +8,13 @@
 
 ## 一、结论速览
 
-**成功产出 2009–2023 全部 15 年真题结构化数据，每年 40 道单选 + 7 道综合应用题 = 47 题，共 705 题。**
+**成功产出 2009–2025 全部 17 年真题结构化数据，每年 40 道单选 + 7 道综合应用题 = 47 题，共 799 题。**
 
-- 单选 600 题：全部有题干、4 个选项槽位、合法答案（A–D）、解析（仅 3 题解析为空）。
-- 综合 105 题：全部有题干、分值、参考答案全文（来自本地答案 PDF）。
+- 单选 680 题：全部有题干、4 个选项槽位、合法答案（A–D）、解析（仅 3 题解析为空）。
+- 综合 119 题：全部有题干、分值、参考答案全文。
 - `answer` 字段 100% 非空。
 - 校验脚本 `validate-cs408.mjs` 结果：**PASS，0 错误**。
+- 增量年份 **2024 / 2025** 的答案采用**三源互证**（详见第五节）；`quality` 均为 `high`。
 
 ---
 
@@ -35,8 +36,11 @@
 
 | 来源 | URL | 可用性结论 |
 |---|---|---|
-| **neville-studio/408-exam-paper** | https://github.com/neville-studio/408-exam-paper | **★ 本次题干的主来源。** `papers-rebuild/2009.pdf … 2025.pdf` 是「重构版真题」，中文文本层完全可读、格式整齐，覆盖 2009–2025。实测 15 份全部可抽取（每份中文 4000–4900 字）。同时提供 `answers/2009-2025-answer.pdf` |
+| **neville-studio/408-exam-paper** | https://github.com/neville-studio/408-exam-paper | **★ 题干的主来源。** `papers-rebuild/2009.pdf … 2025.pdf` 是「重构版真题」，中文文本层完全可读、格式整齐，覆盖 2009–2025（17 份全部可抽取，每份中文 4000–5200 字）。同时提供 `answers/<year>-answer.pdf`；其中 **2024/2025 两份是扫描件（无文本层）**，2021 也是扫描件 |
 | JDC2001/408 | https://github.com/JDC2001/408 | 真题/答案 PDF 与本地 A/D 套基本同名同大小，无额外价值。**但其 `答案/2021答案.pdf` 有可读文本层（中文 6771 字），补上了本地 2021 答案的缺口** |
+| **dyuebug/csgraduates** | https://github.com/dyuebug/csgraduates | **★ 2024/2025 答案与解析的主来源。** `study_methods/408quiz/<year>/content.md` 含「选择题答案速对」表、逐题「正确答案：X」+ 解析，以及 41–47「解答题」参考解答（覆盖 2009–2026） |
+| **kaichan-kc/408-questions** | https://github.com/kaichan-kc/408-questions | **★ 2024/2025 答案的第二来源。** `408_questions_by_year/2009–2025.json` 是从 408os.cn 抓取的结构化题库，含 `question.answer` 与 `analysisText` |
+| kxmzyc/cs408-exam-analysis | https://github.com/kxmzyc/cs408-exam-analysis | 2009–2026 大题逐题解析 + 年度原卷 PDF（2025/2026 自述为回忆版）。本次用作 2024/2025 综合题科目分组的旁证 |
 | suhan42/cs-408 | https://github.com/suhan42/cs-408 | 即本地 `cs-408-main` 的上游仓库（文件大小逐一对应），无额外价值 |
 | CheapMeow/CS408 | https://github.com/CheapMeow/CS408 | 四门课笔记 markdown（图来自 PNG），**不含成卷真题文本**，无法用于组卷 |
 | lij768423-svg/408- | https://github.com/lij768423-svg/408- | 网页刷题应用，未发现可直接抓取的真题数据文件 |
@@ -48,6 +52,11 @@
 - 试图用本地 B 套的 2016 那份：扫描图片，0 文本，**放弃**。
 - 试图用本地 D 套的 2021 答案：扫描图片，0 文本，**放弃**（改用 JDC2001）。
 - neville-studio `answers/2021-answer.pdf` 也是扫描件，0 文本 → 不可用。
+- **（2026-10 追加）** `raw.githubusercontent.com` 后来变得不稳定/超时 → 下载统一改走
+  **GitHub Git Blobs API**（`api.github.com/repos/<repo>/git/blobs/<sha>`，`Accept: application/vnd.github.raw`）；
+  未认证 API 每小时 60 次的限额用尽后，改用 **jsDelivr CDN**（`cdn.jsdelivr.net/gh/<repo>@main/<path>`），实测可用。
+- **（2026-10 追加）** neville `answers/2024-answer.pdf`、`answers/2025-answer.pdf` 文本层为 0 →
+  改为「抽内嵌 JPEG + Windows 自带 OCR」的迂回方案（见第八节），OCR 只能读出部分答案，故仅作仲裁。
 
 ---
 
@@ -57,7 +66,7 @@
 
 ```
 kaoyan-quiz/public/data/cs408/
-  2009.json … 2023.json      15 份卷（每年 47 题）
+  2009.json … 2025.json      17 份卷（每年 47 题）
   _manifest.json             清单：subject 对象（可直接并入 index.json）+ 覆盖范围 + 缺陷 + 诊断
 ```
 
@@ -80,8 +89,10 @@ kaoyan-quiz/public/data/cs408/
 | 2021 | 40 | 7 | 47 | high | 0 | 0 | JDC2001/408 答案/2021答案.pdf |
 | 2022 | 40 | 7 | 47 | high | 0 | 0 | 本地 2009-2023答案/2022答案.pdf |
 | 2023 | 40 | 7 | 47 | high | 0 | 0 | 本地 2009-2023答案/2023答案.pdf |
+| **2024** | 40 | 7 | 47 | **high** | 0 | 0 | csgraduates.com 408 真题精讲 ＋ 408os.cn 题库（三源互证，见第五节） |
+| **2025** | 40 | 7 | 47 | **high** | 0 | 0 | csgraduates.com 408 真题精讲 ＋ 408os.cn 题库（三源互证，见第五节） |
 
-**题干+选项来源**：全部 15 年均来自 `neville-studio/408-exam-paper` 的 `papers-rebuild/<year>.pdf`。
+**题干+选项来源**：全部 17 年均来自 `neville-studio/408-exam-paper` 的 `papers-rebuild/<year>.pdf`。
 每份卷子的 `source` 与 `sources[]` 字段都写明了这一点（含逐年的 PDF 直链）。
 
 ---
@@ -126,6 +137,11 @@ kaoyan-quiz/public/data/cs408/
   其中 q7 的解析标记在 OCR 中写成了 `【解析）`（右括号错成）），已做兼容处理。
 - 2022：本地答案 PDF 的 q38 答案字母是小写 `38. c.`，已做大小写兼容。
 
+### 4. 2024 / 2025 采用完全不同的验证方式
+
+这两年**没有可读的答案 PDF 文本层**，改成「两个独立文本来源 + 官方扫描件 OCR 仲裁」的三源互证，
+详见 **第八节**。核心结论：三方在可读范围内 0 冲突，答案 100% 有来源、无任何模型推断。
+
 ---
 
 ## 五、校验脚本输出
@@ -134,10 +150,10 @@ kaoyan-quiz/public/data/cs408/
 
 ```
 === CS408 题库校验报告 ===
-扫描文件: 15 份卷子 (2009–2023)
-题目总数: 705（单选 600 / 综合 105）
-空 stem: 0 | 空 answer: 0 | 空 explanation: 107
-含空选项文本的单选题: 3 | 无 topics 的题: 228
+扫描文件: 17 份卷子 (2009–2025)
+题目总数: 799（单选 680 / 综合 119）
+空 stem: 0 | 空 answer: 0 | 空 explanation: 121
+含空选项文本的单选题: 3 | 无 topics 的题: 261
 
 ERRORS (0):
 
@@ -149,7 +165,7 @@ WARNINGS (12):
 RESULT: PASS（无错误）
 ```
 
-（107 个「空 explanation」= 105 道综合应用题（其解析内容放在 `answer` 字段，符合 SCHEMA）+ 2 道单选
+（121 个「空 explanation」= 119 道综合应用题（其解析内容放在 `answer` 字段，符合 SCHEMA）+ 2 道单选
 解析在源 PDF 中确实缺失。脚本退出码 0。）
 
 校验项：JSON 可 `JSON.parse`、卷级必填字段、`id` 全库唯一且符合 `cs408-<year>-q<no>`、
@@ -161,7 +177,7 @@ RESULT: PASS（无错误）
 
 ## 六、已知缺陷（按年份）
 
-### 6.1 卷级共性缺陷（全部 15 年）
+### 6.1 卷级共性缺陷（全部 17 年）
 
 1. **完全没有采集图片**：所有题目的 `images` 都是 `[]`。408 真题中相当多题目带插图（二叉树/图/
    Cache 结构/页表/时序图等），这些题目的题干会写「如下图」「如下表」，图形信息缺失。
@@ -180,16 +196,17 @@ RESULT: PASS（无错误）
 | 2011 | q9/q10/q12/q14 的解析原文本身极简（如「送分题。」），非解析失败 |
 | 2017 | q8 的选项是图片，`options[].text` 为空串 |
 | 2020 | q10 解析缺失（`explanation` 为空）；q18 解析极简（「自陷是属于内中断。」） |
+| 2024 / 2025 | 无空选项/空答案；主要缺陷见 8.7（图片未采集、重构版措辞） |
 | 其余年份 | 无已知缺陷 |
 
 ### 6.3 知识点（topics）覆盖
 
-- 章节标签覆盖 **477/705 题（68%）**，**228 题 topics 为空数组**（按「不确定就留空」原则保守处理）。
+- 章节标签覆盖 **538/799 题（67%）**，**261 题 topics 为空数组**（按「不确定就留空」原则保守处理）。
 - 共使用 26 个章节 id，全部为 `<科目>-<章节>` 格式，例如 `ds-树与二叉树`、`co-存储系统`、
   `os-进程管理`、`cn-网络层`。
 - 科目归属：单选按 408 固定题号区间（1–11 DS / 12–22 CO / 23–32 OS / 33–40 CN）加内容关键词校验；
   综合题 41–47 **完全按题干内容**判定科目（因为各年综合题的科目顺序并不固定，例如 2016 的
-  41 题是计算机网络 TCP、42/43 题是数据结构）。
+  41 题是计算机网络 TCP、42/43 题是数据结构）；**2024/2025 的综合题科目另有来源实证**（见 8.5）。
 - 章节判定用关键词加权打分，最高分需 ≥3 且存在并列时需 ≥6 才输出，否则留空。
 
 ---
@@ -199,20 +216,141 @@ RESULT: PASS（无错误）
 1. **图片未采集**（见 6.1）。需要图像抽取与题目绑定，超出本次范围；已如实标注。
 2. **2009 q15、2020 q10 的解析**：所有本地来源中都找不到对应解析文本，留空而非编造。
 3. **公式的 LaTeX 还原**：未做（属改写而非抽取，有臆造风险）。
-4. **2024 / 2025**：neville-studio 仓库有 2024、2025 的重构版真题与答案，但任务范围是 2009–2023，
-   未产出。
-5. **`_manifest.json` 未并入总 `index.json`**：按任务要求，只产出可供合并的 subject 对象
-   （`_manifest.json.subject`），合并动作留给上层。
+4. **2024 / 2025 的官方参考答案 PDF 无文本层**：neville-studio 的 `answers/2024-answer.pdf`、
+   `answers/2025-answer.pdf` 是**扫描图片**（pdfjs 抽出 0 个汉字），只能靠 Windows OCR 读出
+   **部分**选择题答案（26/40、30/40）。因此这两年的答案主来源改为两个可读文本源，并把官方扫描件
+   OCR 结果作为**第三方仲裁**（三方在可读范围内 0 冲突）。若要 100% 用官方扫描件答案，需要逐页人工
+   校对扫描图，本次未做。
+5. **2015 / 2021 综合题分值合计不足 70**（2015=64、2021=68）：这是**改造前既有数据**的情况——
+   源 PDF 里这两年的部分综合题没有以「（N 分）」形式给出分值，解析脚本取不到就记 0。
+   本次增量改造**未改动 2015/2021 的任何数据**（与改造前逐字节一致），在此如实记录。
+6. **`_manifest.json` 未并入总 `index.json`**：按任务要求，只产出可供合并的 subject 对象
+   （`_manifest.json.subject`），合并动作由 `tools/build-index.mjs` 统一执行。
 
 ---
 
-## 八、复现方式
+## 八、2024 / 2025 增量说明（本次新增）
+
+### 8.1 题干与选项
+
+`neville-studio/408-exam-paper` 的 `papers-rebuild/2024.pdf`、`papers-rebuild/2025.pdf`，
+用与 2009–2023 完全相同的链路（`pdfjs-dist` 抽文本 → `cleanPaper` → `bestChain` 切题/切选项）解析。
+
+| 年份 | 页数 | 文本字符 | 汉字 | 解析结果 |
+|---|---|---|---|---|
+| 2024 | 12 | 10 568 | 5 124 | 40 单选 + 7 综合，全部有题干与 4 个选项 |
+| 2025 | 12 | 9 890 | 5 058 | 同上 |
+
+题干/选项/解析抽取的中间文本：`tools/cache/rebuild-2024.txt`、`rebuild-2025.txt`。
+
+### 8.2 答案：为什么不能用官方答案 PDF
+
+`answers/2024-answer.pdf`（6 页）与 `answers/2025-answer.pdf`（5 页）**都没有文本层**：
+
+```
+rebuild-ans/2024.pdf -> ans-2425-2024.txt: pages=6 chars=60 cjk=0
+rebuild-ans/2025.pdf -> ans-2425-2025.txt: pages=5 chars=50 cjk=0
+```
+
+但这两份 PDF 内部是 **DCTDecode(JPEG) 扫描图**，于是把它们逐张抽出来
+（`tools/extract-ans-images.mjs` → `tools/cache/alt/scan/*.jpg`），
+再用 **Windows 自带 OCR（`Windows.Media.Ocr`，zh-Hans-CN）** 识别
+（`tools/ocr-scans.ps1`；识别前用 Pillow 放大 3× + 自动对比度 + 锐化，见 `tools/cache/alt/scan-big/`）。
+
+OCR 能稳定读出的选择题答案：**2024 年 26/40、2025 年 30/40**（答案速查表的密集排版会漏字，
+因此只作为**仲裁证据**，不作为主来源）。
+
+### 8.3 三源互证结果
+
+| 来源 | 角色 | 2024 | 2025 |
+|---|---|---|---|
+| **csgraduates.com 408 真题精讲**（仓库 `dyuebug/csgraduates`，`study_methods/408quiz/<year>/content.md`） | 主来源：单选答案＋解析、41–47 参考解答 | 单选 40/40、综合 7/7 | 单选 40/40、综合 7/7 |
+| **408os.cn 题库**（仓库 `kaichan-kc/408-questions`，`408_questions_by_year/<year>.json`） | 第二来源：单选答案＋解析 | 单选 40/40 | 单选 40/40 |
+| **neville `answers/<year>-answer.pdf`**（官方参考答案扫描件） | 仲裁：OCR 可读部分 | 26/40 | 30/40 |
+
+**结论：三个来源在可读范围内逐题完全一致，0 冲突。**
+
+- 2024 答案串：`DAABDADABCDBBCDDCBCBACAADAABACCCBCDBDDCD`
+- 2025 答案串：`BDDBDCCCADADDDCBCBAABADCCBDCCACBBCCCBABA`
+- csgraduates 站内「答案速对表」与「逐题正确答案」也互相一致（各 40/40）。
+
+复现：`node tools/build-ans-2425.mjs`（生成中间产物，**任何跨源分歧都会直接抛错中止**）、
+`node tools/compare-2425.mjs`（输出多源比对报告 → `tools/cache/alt/compare-2425.txt`）。
+
+### 8.4 卷级 `answerVerification` 字段
+
+2024/2025 两份卷子额外写了 `answerVerification`：
+
+```jsonc
+"answerVerification": {
+  "method": "多源互证（两个独立文本来源 + 官方参考答案扫描件 OCR 仲裁）",
+  "sources": [ "csgraduates.com …（单选 40/40 + 41–47 参考解答 7/7）",
+               "408os.cn 题库（单选 40/40）",
+               "neville-studio answers/2024-answer.pdf（官方参考答案扫描件，OCR 可读 26/40）" ],
+  "officialScanReadable": "26/40",
+  "conflicts": [],
+  "note": "三个来源在可读范围内逐题一致，0 冲突。…",
+  "reproducedBy": "node tools/build-ans-2425.mjs && node tools/compare-2425.mjs"
+}
+```
+
+`_manifest.json.answerSourceNote` 与 `verificationSummary` 也写了同样的口径，便于追溯。
+
+### 8.5 综合题（41–47）的科目归属
+
+csgraduates 的「解答题」章节把 41–47 明确分成 4 组，据此写死 `ESSAY_SUBJ`：
+
+| 题号 | 科目 |
+|---|---|
+| 41、42 | 数据结构（ds） |
+| 43、44 | 计算机组成原理（co） |
+| 45、46 | 操作系统（os） |
+| 47 | 计算机网络（cn） |
+
+（与 `kxmzyc/cs408-exam-analysis` 归纳的「DS 41/42、组成 43/44、OS 45/46、网络 47」标准骨架一致。）
+
+### 8.6 2024 / 2025 的分值
+
+综合题分值取题干前缀「（本题 N 分）」/「（N 分）」：
+
+| 年份 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 合计 |
+|---|---|---|---|---|---|---|---|---|
+| 2024 | 13 | 10 | 13 | 10 | 7 | 8 | 9 | **70** |
+| 2025 | 13 | 10 | 12 | 11 | 7 | 8 | 9 | **70** |
+
+（2025 的源 PDF 写作「（本题 N 分）」，本次顺带把分值正则扩展为可识别「本题」前缀；
+已确认 2009–2023 的 rebuild PDF 中没有这种写法，因此对旧年份零影响。）
+
+### 8.7 2024 / 2025 的已知缺陷
+
+1. 仍然**没有采集图片**：2024 q4（邻接多重表）、2025 q3（二叉树顺序存储）、q42（AOE 网）、
+   q43（Cache/页表结构图）、q44（补码除法器）、q46（虚拟地址空间布局图）、q47（网络拓扑图）
+   等题依赖插图，题干里的「如题 43 图」指向缺失的图。
+2. 2024 q1 等题的题干是 neville「重构版」的措辞（例：「非首且非尾的任意一个结点」），
+   与 csgraduates 的转述（「不是第一个和最后一个结点」）语义相同、用词不同。
+   本库以 neville 重构版为题干唯一来源，**没有混合两个来源的措辞**。
+3. 公式上下标丢失、表格串行等 6.1 的共性问题同样存在。
+
+---
+
+## 九、复现方式
 
 ```powershell
 $node = "C:\Users\20396\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe"
 cd G:\期末及简历和别的项目\考研资料\kaoyan-quiz
-& $node tools\build-cs408.mjs      # 重新生成 public/data/cs408/*.json
-& $node tools\validate-cs408.mjs   # 校验
-```
 
-中间产物（PDF 抽取的纯文本）都在 `tools/cache/` 下，便于复查。
+# 2009–2023 原有链路
+& $node tools\build-cs408.mjs        # 重新生成 public/data/cs408/*.json（2009–2025）
+& $node tools\validate-cs408.mjs     # 校验
+
+# 2024/2025 增量链路（按顺序）
+& $node tools\fetch-neville-2425.mjs     # 下载 papers-rebuild + answers 的 2024/2025 PDF（走 Git Blobs API）
+& $node tools\extract-rebuild-2425.mjs   # pdfjs 抽文本层
+& $node tools\extract-ans-images.mjs     # 从扫描版答案 PDF 抽 JPEG
+& $node tools\fetch-alt-answers.mjs      # 下载 csgraduates / kxmzyc 的文本来源
+& $node tools\build-ans-2425.mjs         # 生成答案中间产物（含一致性断言）
+& $node tools\compare-2425.mjs           # 多源比对报告
+```
+（Windows OCR 一步用 `powershell.exe -File tools\ocr-scans.ps1 <目录> "<*.png>"`，需本机装有 zh-Hans OCR 语言包。）
+
+中间产物（PDF 抽取的纯文本、扫描图、OCR 文本、答案中间产物）都在 `tools/cache/` 下，便于复查。

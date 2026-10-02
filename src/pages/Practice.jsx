@@ -121,14 +121,14 @@ export default function Practice({ index }) {
     if (!isExam && settings.instantReveal) {
       setRevealed((prev) => ({ ...prev, [q.id]: true }));
       commit(q, isCorrect(q, key), false);
-      if (settings.autoScroll) setTimeout(() => go(1, true), 260);
+      if (settings.autoScroll && layout === "list") setTimeout(() => go(1, true), 260);
     }
   }
   function confirmMultiple() {
     if (!q || !answers[q.id]) return;
     setRevealed((prev) => ({ ...prev, [q.id]: true }));
     commit(q, isCorrect(q, answers[q.id]), false);
-    if (!isExam && settings.autoScroll) setTimeout(() => go(1, true), 260);
+    if (!isExam && settings.autoScroll && layout === "list") setTimeout(() => go(1, true), 260);
   }
   function reveal() {
     if (!q) return;
@@ -138,7 +138,7 @@ export default function Practice({ index }) {
     if (!q) return;
     setRevealed((prev) => ({ ...prev, [q.id]: true }));
     commit(q, ok, false);
-    if (settings.autoScroll) setTimeout(() => go(1, true), 260);
+    if (settings.autoScroll && layout === "list") setTimeout(() => go(1, true), 260);
   }
   function skipBlank() {
     if (!q) return;
@@ -356,7 +356,7 @@ export default function Practice({ index }) {
           <Switch checked={settings.instantReveal} onCheckedChange={(v) => setSettings({ instantReveal: v })}
             label="作答后立即显示答案" desc="练习模式下选择选项后直接弹出解析" />
           <Switch checked={settings.autoScroll} onCheckedChange={(v) => setSettings({ autoScroll: v })}
-            label="作答后自动跳到下一题" desc="配合「连续」模式实现做完一题自动滚动" />
+            label="作答后自动跳到下一题" desc="仅在「连续」布局下生效；单题布局会停留在原题看解析" />
           <Switch checked={settings.shuffleOptions} onCheckedChange={(v) => setSettings({ shuffleOptions: v })}
             label="打乱选项顺序" desc="避免靠位置记答案" />
           <Switch checked={settings.overtimeHint !== false} onCheckedChange={(v) => setSettings({ overtimeHint: v })}

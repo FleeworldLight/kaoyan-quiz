@@ -91,6 +91,7 @@ export function buildEnglishManifest(outsDir, opts = {}) {
       sections: (doc.sections || []).map((s) => ({ id: s.id, count: (s.questions || []).length })),
       source: (doc.source && doc.source.name) || "",
       sourceUrl: (doc.source && doc.source.url) || "",
+      ...(doc.verification ? { singleSource: !!doc.verification.singleSource } : {}),
     });
   }
   papers.sort((a, b) => a.year - b.year);

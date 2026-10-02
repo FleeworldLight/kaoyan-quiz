@@ -40,6 +40,19 @@ const INFO = {
     ansUrl: "https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/",
     crossCheck: "启航考研 2024 全卷解析 + 中国考研网 2024 分 Text 页（用于解决懒笔记/中考研答案个别字母冲突）",
     verified: "PDF 首页标题为「2024 年全国硕士研究生招生考试英语（一）」，完型为自动门（automatic doors）、阅读 Text 1 为罗马钉子、Text 3 为 AI 绘画，与 2024 年真题一致。",
+    singleSource: false,
+    sources: [
+      { role: "真题原文/题干/选项", name: "GitHub Fantasia1999/kaoyanzhenti（文本层 PDF）", url: "https://github.com/Fantasia1999/kaoyanzhenti" },
+      { role: "答案/译文/范文", name: "懒笔记 english-exam.lazynote.cn（整卷答案速查 + 分题型解析）", url: "https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/" },
+      { role: "交叉核对（客观题）", name: "启航考研 2024 全卷解析", url: "http://m-jixun.iqihang.com/index.php?m=content&c=index&a=show&catid=1660&id=335191" },
+      { role: "交叉核对（客观题）", name: "中国考研网 2024 分 Text 页", url: "http://h.chinakaoyan.com:8080/info/article/id/527381.shtml" },
+    ],
+    adjudicated: {
+      q34: "懒笔记 D / 中国考研网 D 一致；启航标注 C，但启航自己的解析讲的是「在公共领域图像上训练模型、与博物馆和艺术家合作」，对应真题选项 D “adopt a different strategy for AI model training” → 取 D。",
+      q35: "懒笔记 A / 启航 A 一致（两家解析都引末段 “It's not just artists… Any sort of visual professional…”）；中国考研网列 B → 取 A。",
+      q42: "懒笔记 C / 中国考研网 C 一致；启航标 D，但启航解析的文字「复制品不能取代真品」与 Buck 那段「复制品可作归还替代方案、重要的是展览要讲的故事」语义相反 → 取 C（选项 C = Museum visitors can still learn as much from artifacts' copies after the originals are returned）。",
+    },
+    note: "客观题（1–45）每题都有 ≥2 份独立来源一致（懒笔记 + 启航/中国考研网），完型另有「答案词与真题 PDF 选项字母」20/20 一致性校验；仅 q34/q35/q42 三家来源不完全一致，已按真题选项原文与解析语义裁决（见 adjudicated）。翻译 46–50 参考译文有懒笔记与中国考研网两份（措辞不同、含义一致）。写作范文仅懒笔记一家，但写作题面取自真题 PDF，范文非唯一答案。",
   },
   2025: {
     paperPdf: "paper-2025.pdf",
@@ -47,8 +60,16 @@ const INFO = {
     paperUrl: "https://github.com/Fantasia1999/kaoyanzhenti",
     ansName: "懒笔记 english-exam.lazynote.cn · 2025年考研英语一真题及答案解析（整卷）",
     ansUrl: "https://english-exam.lazynote.cn/kaoyan/paper/2025-english-one/",
-    crossCheck: "禾虎考研 2025 完型答案（m.hhky001.com/sys-nd/7068.html）与懒笔记 1–20 逐空一致",
-    verified: "PDF 首页标题为「2025 年全国硕士研究生招生考试英语（一）」，完型为 Pavlopetri 水下古城、Part C 为公民科学（citizen science），与 2025 年真题一致。",
+    crossCheck: "禾虎考研 2025 完型答案（m.hhky001.com/sys-nd/7068.html）与懒笔记 1–20 逐空完全一致",
+    verified: "PDF 首页标题为「2025 年全国硕士研究生招生考试英语（一）」，完型为 Pavlopetri 水下古城、Part C 为公民科学（citizen science，与中公考研 2025 翻译解析页「本文选自 How It Works 2020-03-09 How does citizen science work?」一致），与 2025 年真题一致。",
+    singleSource: true,
+    sources: [
+      { role: "真题原文/题干/选项", name: "GitHub Fantasia1999/kaoyanzhenti（文本层 PDF）", url: "https://github.com/Fantasia1999/kaoyanzhenti" },
+      { role: "答案/译文/范文", name: "懒笔记 english-exam.lazynote.cn（整卷答案速查 + 分题型解析）", url: "https://english-exam.lazynote.cn/kaoyan/paper/2025-english-one/" },
+      { role: "交叉核对（仅完型 1–20）", name: "禾虎考研 2025 英语一真题＋答案", url: "https://m.hhky001.com/sys-nd/7068.html" },
+      { role: "交叉核对（仅帕夫洛佩特里/公民科学话题与题型）", name: "中公考研 2025 英语(一)试题解析（经研招网转载）", url: "https://www.yanzhaowang.com.cn/beikao/en/202503/2561015.html" },
+    ],
+    note: "完型 1–20 有懒笔记 + 禾虎考研两份独立来源完全一致，并额外通过「答案词 vs 真题 PDF 选项字母」20/20 校验；阅读 21–40、新题型 41–45、翻译参考译文、写作范文**只有懒笔记一份来源**，故按纪律把卷级 quality 降为 medium 并标 singleSource。已排除的假来源：koolearn 新闻页 2024-12-21《2025考研英语一答案：翻译+作文答案》给的 Part C 是「密码战/Scovell/拿破仑战争」，与真题 PDF 及中公考研解析的「公民科学」不是同一篇，判定为错年/占位内容，未采用；人人文库《2025年-2026年考研英语一真题及答案解析》内容为「AI 伦理/数字阅读/语言濒危」，与真实 2025 卷完全不符，判定为伪造文档，未采用。",
   },
 };
 
@@ -456,7 +477,16 @@ async function buildYear(year, log) {
   if (cover >= 0.9 && optOk >= 0.9 && matOk >= 0.9) quality = "high";
   else if (cover >= 0.5 && optOk >= 0.7) quality = "medium";
   if (all.length < 40) quality = "low";
-  return { groups, all, cover, optOk, matOk, quality, sourceText: info.paperName + " + " + info.ansName, sourceUrl: info.paperUrl + "  |  " + info.ansUrl };
+  /* 纪律：只有单一来源支撑的卷子，卷级质量最高只能算 medium */
+  if (info.singleSource && quality === "high") { quality = "medium"; log("  · 单一来源 → quality 降为 medium"); }
+  const verification = {
+    singleSource: !!info.singleSource,
+    verifiedAsYear: info.verified,
+    sources: info.sources,
+    ...(info.adjudicated ? { adjudicated: info.adjudicated } : {}),
+    note: info.note,
+  };
+  return { groups, all, cover, optOk, matOk, quality, verification, sourceText: info.paperName + " + " + info.ansName, sourceUrl: info.paperUrl + "  |  " + info.ansUrl };
 }
 
 /* ------------------------------------------------------------------ 主流程 */
@@ -478,6 +508,7 @@ if (isMain) {
       title: year + " 年全国硕士研究生招生考试 英语（一）",
       duration: 180, totalScore, quality: r.quality,
       source: { name: r.sourceText, url: r.sourceUrl },
+      verification: r.verification,
       sections,
     };
     fs.mkdirSync(OUTS, { recursive: true });
@@ -495,7 +526,9 @@ if (isMain) {
   const m = buildEnglishManifest(OUTS, {
     extraNotes: [
       "2024/2025 卷：真题文本取自 GitHub Fantasia1999/kaoyanzhenti 的文本层 PDF；答案/参考译文/参考范文取自懒笔记 english-exam.lazynote.cn 的整卷答案速查表与分题型解析页（2024 另用启航考研全卷解析、中国考研网分 Text 页交叉核对；2025 完型另用禾虎考研交叉核对）。",
-      "2024/2025 的 explanation 是来源页逐题解析原文（懒笔记），风格与 2010–2023 的【考点】【解析】不同。",
+      "2025 卷卷级 quality=medium：阅读 21–40、新题型 41–45、翻译译文、写作范文只有懒笔记单一来源（完型 1–20 有禾虎考研第二来源且通过真题选项词校验）；卷内 verification.singleSource=true。",
+      "2024 卷卷级 quality=high：客观题每题均有 ≥2 份独立来源一致；q34/q35/q42 三家来源不完全一致，已按真题选项原文与解析语义裁决（卷内 verification.adjudicated）。",
+      "2024/2025 的 explanation 是来源页逐题解析原文（懒笔记），文风与 2010–2023 的【考点】【解析】不同。",
     ],
   });
   console.log("_manifest.json: " + m.papers.length + " 卷");

@@ -39,11 +39,9 @@
       }
     ],
     "conflictList": [
-      "Q13: koolearn 选项顺序与主来源不同，且有 1 个选项无法内容对齐（相似度 0.24），该题不计入票池",
-      "Q16（选项顺序三源相同）: wsyu=C / shzu=D / koolearn=C → 本库采用多数票 C",
-      "Q19: shzu 选项顺序与主来源不同，且有 1 个选项无法内容对齐（相似度 0.45），该题不计入票池",
-      "Q21（选项顺序三源相同）: wsyu=BC / shzu=BCD / koolearn=BCD → 本库采用多数票 BCD",
-      "Q27（选项顺序三源相同）: wsyu=AD / shzu=ACD / koolearn=AD → 本库采用多数票 AD"
+      "Q16: wsyu=C / shzu=D / koolearn=C → 本库采用多数票 C",
+      "Q21: wsyu=BC / shzu=BCD / koolearn=BCD → 本库采用多数票 BCD",
+      "Q27: wsyu=AD / shzu=ACD / koolearn=AD → 本库采用多数票 AD"
     ],
     "disputedQuestions": [
       16,
@@ -505,7 +503,7 @@
           "score": 1,
           "topics": [],
           "images": [],
-          "verify": "2src-agree",
+          "verify": "3src-agree",
           "chapterTopics": [
             "史纲-综合"
           ],
@@ -724,7 +722,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "verify": "2src-agree",
+          "verify": "3src-agree",
           "chapterTopics": [
             "思修-综合"
           ],

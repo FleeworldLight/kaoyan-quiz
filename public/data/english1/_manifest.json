@@ -726,7 +726,8 @@
     }
    ],
    "source": "Fantasia1999/kaoyanzhenti · 公共课/英语真题/英语一/2024年考研英语一真题.pdf + 懒笔记 english-exam.lazynote.cn · 2024年考研英语一真题及答案解析（整卷）",
-   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/"
+   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/",
+   "singleSource": false
   },
   {
    "id": "english1-2025",
@@ -743,7 +744,7 @@
    "missingAnswerNos": [],
    "totalScore": 70,
    "duration": 180,
-   "quality": "high",
+   "quality": "medium",
    "sections": [
     {
      "id": "cloze",
@@ -767,7 +768,8 @@
     }
    ],
    "source": "Fantasia1999/kaoyanzhenti · 公共课/英语真题/英语一/2025年考研英语一真题.pdf + 懒笔记 english-exam.lazynote.cn · 2025年考研英语一真题及答案解析（整卷）",
-   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2025-english-one/"
+   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2025-english-one/",
+   "singleSource": true
   }
  ],
  "topics": [
@@ -827,6 +829,6 @@
    "count": 13
   }
  ],
- "generatedAt": "2026-10-02T11:40:52.152Z",
- "note": "覆盖 2010–2025 共 16 卷 （目标区间 2010–2025）。目标区间无缺卷。\nquality：high 15 卷，low 1 卷（2023）。\n答案/范文缺口（该题在来源里确实没有答案，按纪律留空、未推断）：2017 第 51,52 题；2018 第 51,52 题；2019 第 48 题；2021 第 51,52 题；2022 第 51,52 题；2023 第 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52 题。\n题目客观题（单选）640 题；答案/解析覆盖 776/827（94%）。\n2024/2025 卷：真题文本取自 GitHub Fantasia1999/kaoyanzhenti 的文本层 PDF；答案/参考译文/参考范文取自懒笔记 english-exam.lazynote.cn 的整卷答案速查表与分题型解析页（2024 另用启航考研全卷解析、中国考研网分 Text 页交叉核对；2025 完型另用禾虎考研交叉核对）。\n2024/2025 的 explanation 是来源页逐题解析原文（懒笔记），风格与 2010–2023 的【考点】【解析】不同。"
+ "generatedAt": "2026-10-02T11:47:11.047Z",
+ "note": "覆盖 2010–2025 共 16 卷 （目标区间 2010–2025）。目标区间无缺卷。\nquality：high 14 卷，medium 1 卷（2025），low 1 卷（2023）。\n答案/范文缺口（该题在来源里确实没有答案，按纪律留空、未推断）：2017 第 51,52 题；2018 第 51,52 题；2019 第 48 题；2021 第 51,52 题；2022 第 51,52 题；2023 第 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52 题。\n题目客观题（单选）640 题；答案/解析覆盖 776/827（94%）。\n2024/2025 卷：真题文本取自 GitHub Fantasia1999/kaoyanzhenti 的文本层 PDF；答案/参考译文/参考范文取自懒笔记 english-exam.lazynote.cn 的整卷答案速查表与分题型解析页（2024 另用启航考研全卷解析、中国考研网分 Text 页交叉核对；2025 完型另用禾虎考研交叉核对）。\n2025 卷卷级 quality=medium：阅读 21–40、新题型 41–45、翻译译文、写作范文只有懒笔记单一来源（完型 1–20 有禾虎考研第二来源且通过真题选项词校验）；卷内 verification.singleSource=true。\n2024 卷卷级 quality=high：客观题每题均有 ≥2 份独立来源一致；q34/q35/q42 三家来源不完全一致，已按真题选项原文与解析语义裁决（卷内 verification.adjudicated）。\n2024/2025 的 explanation 是来源页逐题解析原文（懒笔记），文风与 2010–2023 的【考点】【解析】不同。"
 }
