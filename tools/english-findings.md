@@ -121,3 +121,108 @@ node tools/x-check-english.mjs             # 答案一致性交叉验证
 node tools/validate-english.mjs            # 0 错误 / 0 警告 / 5 条 NOTE
 ```
 
+---
+
+# 第三轮：2024 / 2025（目标区间 2010–2025 已无缺卷）
+
+## 结论
+`public/data/english1/2024.json`、`2025.json` 已产出，各 52 题（完型 20 / 阅读 20 / 新题型 5 / 翻译 5 / 写作 2），选项 100% 完整、答案与范文覆盖 100%、完型+阅读材料 100%。**英语一现在覆盖 2010–2025 全部 16 卷，无缺卷。**
+- **2024：quality = high**（客观题每题都有 ≥2 份独立来源一致）
+- **2025：quality = medium**（阅读/新题型/译文/范文只有单一来源，按纪律降级；卷内 `verification.singleSource = true`）
+
+## 素材来源
+### 真题原文（唯一来源：文本层 PDF）
+`github.com/Fantasia1999/kaoyanzhenti` → `公共课/英语真题/英语一/2024年考研英语一真题.pdf`、`2025年考研英语一真题.pdf`
+- `raw.githubusercontent.com` 对本机不稳（2024 那个文件反复 `fetch failed`），改用 **`cdn.jsdelivr.net/gh/Fantasia1999/kaoyanzhenti@main/...`** 成功下载（530KB / 739KB，14 页，2.6 万字，文本层）。
+- 年份核对：PDF 首页标题分别写「2024 年」「2025 年全国硕士研究生招生考试英语（一）」；2024 完型是自动门、2025 完型是 Pavlopetri 水下古城 —— 与两年真实真题吻合。
+
+### 答案 / 参考译文 / 参考范文
+**懒笔记 `english-exam.lazynote.cn`**（该站按「整卷 / 分题型」两套页面组织，整卷页有「客观题参考答案速查表」，分题型页有逐题解析、参考译文、参考范文）
+- `https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/`、`.../2025-english-one/`（答案速查表）
+- `.../kaoyan/sections/<year>-english-one/section1/`（完型逐空解析）
+- `.../section2-part-a-1..4/`（阅读逐题解析）、`.../section2-part-b/`、`.../section2-part-c/`（翻译原句+参考译文）
+- `.../section3-part-a/`、`.../section3-part-b/`（写作 51/52 参考范文）
+
+### 交叉核对来源
+| 用途 | 来源 | 结果 |
+|---|---|---|
+| 2024 全卷客观题 | 启航考研 `m-jixun.iqihang.com ... id=335191` | 与懒笔记仅 34、42 两题字母不同（见下） |
+| 2024 分 Text 客观题 | 中国考研网 `h.chinakaoyan.com:8080/info/article/id/527381.shtml`（Text 4）与 `.../527401.shtml`（整卷） | 完型 1–20、21–40、41–45 与懒笔记一致；35 题与懒笔记不同（见下） |
+| 2024 翻译译文 | 中国考研网整卷页 46–50 中文 | 与懒笔记措辞不同、含义一致 |
+| 2025 完型 1–20 | 禾虎考研 `m.hhky001.com/sys-nd/7068.html` | **与懒笔记逐空完全一致**（BCBCB ADAAD DADCD CBBBA） |
+| 2025 话题/题型 | 中公考研《2025考研英语(一)试题解析：翻译》（研招网转载 `yanzhaowang.com.cn/beikao/en/202503/2561015.html`） | 证实 2025 Part C = 公民科学（How It Works 2020-03-09） |
+
+## 2024 三处来源不一致的裁决（记在卷内 `verification.adjudicated`）
+1. **q34**：懒笔记 D、中国考研网 D；启航标 C。但启航自己的解析写的是「AI 模型可在公共领域图像上训练、公司与博物馆和艺术家建立合作」→ 对应真题选项 **D “adopt a different strategy for AI model training”**（真题 PDF 里 D 项原文已核对）。取 **D**。
+2. **q35**：懒笔记 A、启航 A（两家解析都引末段 “It's not just artists… Any sort of visual professional…”）；中国考研网列 B。取 **A**（A = “Artists' responses to AI art generation”）。
+3. **q42**（新题型 7 选 5，给 Buck 那段配小标题）：懒笔记 C、中国考研网 C；启航标 D。但启航解析里「复制品不能取代真品」与 Buck 那段「复制品可作为归还问题的替代方案、真正重要的是展览要讲的故事」语义相反 → 取 **C**（“Museum visitors can still learn as much from artifacts' copies after the originals are returned”）。校验：最终 41E 42C 43F 44G 45B，未用的冗余项正好是 A、D 两个，与「7 选 5、余 2 项」吻合。
+
+## 已识别并排除的假来源（重要）
+1. **koolearn 新闻页 `m.koolearn.com/news/20241221/1267301.html`《2025考研英语一答案：翻译+作文答案》**：
+   它给的 2025 Part C 是「密码战 / George Scovell / 拿破仑战争」，而真题 PDF 和中公考研解析都确定 2025 Part C 是**公民科学**；它给的 51 范文用的是 “Dear Li Hua” 且角色与真题 Directions（回同学 Paul 的信）相反。判定为**错年/占位内容**，未采用。
+2. **人人文库 `renrendoc.com/paper/518124083.html`《2025年-2026年考研英语一真题及答案解析》**：
+   正文讲「人工智能伦理争议 / 数字阅读 / 语言濒危」，Part B 答案 41E 42G 43B 44D 45A —— 与真实 2025 卷（Pavlopetri / 莎士比亚 RSC / 手工匠人 / 公民科学 / 蝴蝶摄影排序）**完全不同**。判定为**伪造文档**，未采用（这也是本轮的教训：网上「真题及答案」文档里混着 AI 生成的假货，必须用话题交叉核对年份）。
+3. `TsekaLuk/Kaoyan-Math1-Papers` 的 `solutions/英语一/2024/`（上游，内容是 2022）—— 第一轮已确认，本轮未再使用。
+4. 教育部/学校官网的几个 PDF 直链（`edu.xaiu.edu.cn`、`lib.cdut.edu.cn`）被 WAF 拦（HTTP 412），未使用。
+
+## 2024/2025 的解析器实现要点
+新脚本 `tools/parse-english-web.mjs`（不改 `parse-english.mjs` / `parse-english-old.mjs`）：
+1. **完型选项是「按列排印」**（2024/2025 都是）：先 `1. A. xxx` … `20. A. xxx`，再整列 B、整列 C、整列 D。解析器按字母分列、列内按出现顺序映射回 1–20；并要求每列恰好 20 项，否则直接报错不产出。
+2. **完型答案强校验**：懒笔记的速查表带「答案词」（如 `1 D Without`、`17 D complement`），脚本要求该词确实出现在真题 PDF 的对应字母选项里，20/20 全部通过 —— 同时验证了「答案字母正确」和「选项列映射正确」。
+3. **写作题面归属**：2024/2025 卷面把「51 题要回的那封信」排在卷末（52 题的图表之后），脚本按 `Dear Li Ming,` 起头把这段回挂到 51，避免串题。
+4. 翻译原句取懒笔记分题型页（那里每句独占一行、边界干净）；并**要求归一化后能在真题 PDF 的 Part C 原文里找到**，5/5 全部通过（防止切句错误）。
+5. 阅读/完型 `explanation` 取懒笔记逐题解析原文（题号标记 `[21.]` / `1.`），40/40 命中；解析页给的字母与速查表字母逐个比对，无冲突。
+6. 卷级 `verification` 块（`singleSource` / `verifiedAsYear` / `sources[]` / `adjudicated` / `note`）写入 `<year>.json` 与 `_manifest.json`。
+
+## 最终统计（16 卷）
+| 年份 | 完型 | 阅读 | 新题型 | 翻译 | 写作 | 答案/范文覆盖 | 选项完整 | 完型+阅读材料 | quality |
+|---|---|---|---|---|---|---|---|---|---|
+| 2010 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2011 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2012 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2013 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2014 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2015 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2016 | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | high |
+| 2017 | 20 | 20 | 5 | 5 | 2 | 96% | 100% | 100% | high |
+| 2018 | 20 | 20 | 5 | 5 | 2 | 96% | 98% | 100% | high |
+| 2019 | 20 | 20 | 5 | 5 | 2 | 98% | 100% | 100% | high |
+| 2020 | 20 | 20 | 5 | 5 | 2 | 100% | 98% | 100% | high |
+| 2021 | 20 | 20 | 5 | **0** | 2 | 96% | 100% | 100% | high |
+| 2022 | 20 | 20 | 5 | 5 | 2 | 96% | 100% | 100% | high |
+| 2023 | 20 | 20 | 5 | 5 | 2 | **19%** | 93% | 100% | **low** |
+| **2024** | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | **high** |
+| **2025** | 20 | 20 | 5 | 5 | 2 | 100% | 100% | 100% | **medium**（单源降级） |
+
+合计 16 卷 / 827 题 / 单选 635 / 答案覆盖 94%（`index.json` 统计）。
+
+## 复现命令（第三轮追加）
+```
+# 抓取（联网）
+node tools/x-fetch.mjs <URL> <落地文件> [--binary]
+node tools/x-html2txt.mjs <in.html> [out.txt]
+# 2024/2025 卷（直接从 PDF 抽文本，无需中间 txt）
+node tools/parse-english-web.mjs [--diag] [2024 2025]
+node tools/validate-english.mjs
+node tools/build-index.mjs
+node tools/validate-all.mjs
+```
+
+## 校验结果（最终）
+```
+==== validate-english: 结果: 0 个错误, 0 个警告, 5 条源文件缺陷记录 ====
+==== validate-all:     ERROR: 0 条 / WARNING: 60 条 / 结果: ✅ 通过 ====
+   --- english1 (16 卷 / 827 题 / 选择 635 / 答案覆盖 94%) ---
+   仅 3 条 english1 提示，全部是历史遗留：2018-q30 / 2020-q39 选项缺失（源缺，已标 optionIssue）、2023 缺答案（源缺）
+   build-index: english1 16 套 / 827 题 / 客观题 635 / 知识点 11 / 答案覆盖 94%
+```
+
+## 已知缺陷（最终版）
+1. **2011 翻译 46–50 的参考译文**取自该年解析 PDF 的「二、全文翻译」段并按句末标点切分（该年 Part C 解析段没有【译文】），已逐条人工核对（见第二轮第 10 条）。
+2. **2023 quality=low**、2017/2018/2021/2022 缺写作范文、2019 缺第 48 题译文、2021 缺翻译节 5 题 —— 均为上游 markdown 源缺陷，按纪律留空未推断（沿用第一轮结论）。
+3. **5 题选项在源素材里就残缺**（2018-q30、2020-q39、2023-q4/q9/q20），已用 `optionIssue` 标注。
+4. **2025 阅读/新题型/译文/范文为单一来源**（懒笔记），故 quality 降为 medium；建议后续有第二份独立来源时把 quality 升回 high。
+5. **2024 的 q34/q35/q42** 依赖对来源冲突的裁决（裁决依据已写入卷内 `verification.adjudicated`），如需更高确信度可再找一份独立来源复核。
+6. 卷级 `totalScore` 一律为 70（写作 51/52 的 `score` 按 2017–2023 的既有口径记为 0，未按 SCHEMA 的 10+20 计），这是为了 16 卷口径一致；如需改为 100 分口径，需同时改 `parse-english.mjs` 与三个解析脚本并重跑全部年份。
+
+

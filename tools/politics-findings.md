@@ -158,7 +158,7 @@
 ```jsonc
 {
   "version": 2,
-  "tagging": { "choiceQuestions": 495, "chapterLevel": 394, "subjectFallback": 101, "untagged": 0, "chapterPrecision": 79.6, "coverage": 100 },
+  "tagging": { "choiceQuestions": 528, "chapterLevel": 417, "subjectFallback": 110, "untagged": 1, "chapterPrecision": 79, "coverage": 99.8 },
   "chapters": [ { "id": "马原-政治经济学", "subject": "马原", "name": "…", "count": 57, "kind": "chapter" } ],
   "subjects": [ { "id": "马原", "name": "…", "chapters": [ { "id": "…", "topics": [ { "id": "…", "name": "…", "kind": "考点", "count": 10 } ] } ] } ]
 }

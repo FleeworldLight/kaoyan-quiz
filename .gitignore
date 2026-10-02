@@ -4,11 +4,8 @@ dist/
 .pnpm-store/
 pnpm-workspace.yaml
 
-# 测试/调试用的浏览器 profile 与截图
-.edge-profile/
-.edge-e2e-profile/
-.edge-dbg-profile/
-.edg*/ 
+# 测试/调试用的浏览器 profile（每次运行都是唯一目录）与截图
+.edge-*/
 shots/
 
 # 原始素材缓存（很大，可由 tools/ 下的脚本重新抓取）
