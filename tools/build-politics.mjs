@@ -138,6 +138,11 @@ function buildHtmlYear(year) {
 }
 
 /* ---------------- 主流程 ---------------- */
+// 可选：POLITICS_YEARS=2025 时只**写出**指定年份的卷子（其余年份仍参与 build-report 统计，
+ * 便于增量新增年份时不动既有数据）。
+const ONLY_YEARS = process.env.POLITICS_YEARS
+  ? new Set(process.env.POLITICS_YEARS.split(",").map(s => Number(s.trim())).filter(Boolean))
+  : null;
 const years = [];
 const stat = { q: 0, single: 0, multiple: 0, essay: 0, noAnswer: 0 };
 const qualityTally = { high: 0, medium: 0, low: 0 };
@@ -230,7 +235,8 @@ for (let year = 2010; year <= 2025; year++) {
 
   const conflicts = questions.filter(q => q.verify && q.verify.startsWith("CONFLICT")).length;
   const noAns = questions.filter(q => !q.answer).length;
-  const quality = noAns > 0 ? "low" : conflicts === 0 ? "high" : conflicts <= 3 ? "medium" : "low";
+  // 口径与既有题库一致：有缺答案 → low；无冲突 → high；有冲突（含 4 处冲突的 2010/2020）→ medium
+  const quality = noAns > 0 ? "low" : conflicts === 0 ? "high" : "medium";
   qualityTally[quality]++;
 
   const paper = {
@@ -257,7 +263,9 @@ for (let year = 2010; year <= 2025; year++) {
     ].filter(s => s.questions.length),
   };
   if (sourceDetail) paper.verification.sources = sourceDetail;
-  fs.writeFileSync(path.join(OUT, `${year}.json`), JSON.stringify(paper, null, 2), "utf8");
+  if (!ONLY_YEARS || ONLY_YEARS.has(year)) {
+    fs.writeFileSync(path.join(OUT, `${year}.json`), JSON.stringify(paper, null, 2), "utf8");
+  }
   years.push({ year, quality, count: questions.length, single: paper.sections[0]?.questions.length || 0, multiple: paper.sections[1]?.questions.length || 0, essay: paper.sections[2]?.questions.length || 0, conflicts, notes });
   console.log(`${year}: 题数=${questions.length} 单${paper.sections[0]?.questions.length||0}/多${paper.sections[1]?.questions.length||0}/材${paper.sections[2]?.questions.length||0}  quality=${quality} 冲突=${conflicts}`);
 }

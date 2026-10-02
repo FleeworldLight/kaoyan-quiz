@@ -222,7 +222,8 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort())
       for (const [k, v] of Object.entries(perSubj)) if (v > sMax) { sMax = v; subject = k; }
       if (sMax <= 0) subject = null;
       if (q.type === "single" && q.no <= 4) subject = "马原";     // 考研政治固定结构
-      q.subjectHint = subject;
+      // 先删除旧键再按规范顺序重新写入，保证脚本可重复运行且字段顺序稳定
+      delete q.chapterTopics; delete q.chapterConfidence; delete q.subjectHint;
       perChap.sort((a, b) => b.s - a.s);
       const chosen = subject ? perChap.filter(c => c.subject === subject) : [];
       if (chosen.length) {
@@ -238,6 +239,10 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort())
         q.chapterTopics = []; q.chapterConfidence = null; stat.none++;
         noHint.push(`${paper.year}-Q${q.no} ${q.stem.slice(0, 55)}`);
       }
+      // subjectHint 必须放在 chapterTopics / chapterConfidence 之后：
+      // 既有题库（2010–2024）的字段顺序是 …chapterTopics, chapterConfidence, subjectHint，
+      // 这样重跑后 15 年数据与既有文件逐字节一致（内容不变，仅避免无意义的字段顺序 diff）。
+      q.subjectHint = subject;
     }
   }
   fs.writeFileSync(path.join(DIR, f), JSON.stringify(paper, null, 2), "utf8");

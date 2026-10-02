@@ -88,11 +88,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q2",
@@ -123,11 +123,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q3",
@@ -158,11 +158,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q4",
@@ -193,11 +193,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-科学社会主义"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q5",
@@ -228,11 +228,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q6",
@@ -263,11 +263,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q7",
@@ -298,11 +298,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q8",
@@ -333,11 +333,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q9",
@@ -368,11 +368,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q10",
@@ -403,11 +403,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2025-q11",
@@ -438,11 +438,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q12",
@@ -473,11 +473,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q13",
@@ -508,11 +508,11 @@
           "topics": [],
           "images": [],
           "verify": "2src-agree",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2025-q14",
@@ -543,11 +543,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2025-q15",
@@ -578,11 +578,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-基本问题"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q16",
@@ -616,11 +616,11 @@
           "note": "三源互证结论：武昌首义学院（附解析，解析明确支持 C）与新东方在线均给 C；石河子大学 eol 版给 D。选项顺序三源一致，属真实分歧。本库采用多数票 C。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「武昌首义学院马克思主义学院 ＋ 新东方在线（二源一致）」的答案（C）；石河子大学 eol 版给出的答案是 D。请以官方答案为准。",
           "answerDisputed": true,
-          "subjectHint": "时政",
           "chapterTopics": [
             "时政-当年时事"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "时政"
         }
       ]
     },
@@ -657,11 +657,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q18",
@@ -692,11 +692,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q19",
@@ -727,11 +727,11 @@
           "topics": [],
           "images": [],
           "verify": "2src-agree",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2025-q20",
@@ -762,11 +762,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q21",
@@ -800,11 +800,11 @@
           "note": "三源互证结论：石河子大学 eol 版与新东方在线均给 BCD；武昌首义学院给 BC。选项顺序三源一致，属真实分歧。按考点（A「所有制性质发生根本变化」明显错误，B/C/D 均成立）本库采用多数票 BCD。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「石河子大学 eol 版 ＋ 新东方在线（二源一致）」的答案（BC）；武昌首义学院马克思主义学院给出的答案是 BC（漏选 D）。请以官方答案为准。",
           "answerDisputed": true,
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q22",
@@ -835,11 +835,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q23",
@@ -870,11 +870,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q24",
@@ -905,11 +905,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q25",
@@ -940,9 +940,9 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": null,
           "chapterTopics": [],
-          "chapterConfidence": null
+          "chapterConfidence": null,
+          "subjectHint": null
         },
         {
           "id": "politics-2025-q26",
@@ -973,11 +973,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2025-q27",
@@ -1011,11 +1011,11 @@
           "note": "三源互证结论：武昌首义学院与新东方在线均给 AD；石河子大学 eol 版给 ACD。选项顺序三源一致，属真实分歧。按考点（B「在农民运动基础上产生」错误，C 非一大历史特点）本库采用多数票 AD。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「武昌首义学院马克思主义学院 ＋ 新东方在线（二源一致）」的答案（AD）；石河子大学 eol 版给出的答案是 ACD（多选 C）。请以官方答案为准。",
           "answerDisputed": true,
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2025-q28",
@@ -1046,11 +1046,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2025-q29",
@@ -1081,11 +1081,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2025-q30",
@@ -1116,11 +1116,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2025-q31",
@@ -1151,11 +1151,11 @@
           "topics": [],
           "images": [],
           "verify": "2src-agree",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-道德"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2025-q32",
@@ -1186,11 +1186,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2025-q33",
@@ -1221,11 +1221,11 @@
           "topics": [],
           "images": [],
           "verify": "3src-agree",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "新思想"
         }
       ]
     },

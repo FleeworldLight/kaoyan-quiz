@@ -1,5 +1,5 @@
-import React from "react";
-import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle } from "lucide-react";
+import React, { useState } from "react";
+import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle, Copy } from "lucide-react";
 import RichText from "./RichText.jsx";
 import { Badge, Button, Tip, Kbd } from "./ui.jsx";
 import { normMultiple, isAutoGraded, isCorrect } from "../lib/question.js";
@@ -22,6 +22,7 @@ export default function QuestionView({
   flagged, onToggleFlag, favorited, onToggleFav, onOpenNote, note,
   footer, compact = false, className,
 }) {
+  const [copied, setCopied] = useState(false);
   if (!q) return null;
   const meta = TYPE_META[q.type] || TYPE_META.essay;
   const auto = isAutoGraded(q);
@@ -177,7 +178,29 @@ export default function QuestionView({
               </div>
             ) : null}
             {!q.answer && !q.explanation ? <p className="text-[12.5px] text-ink-faint">本题未收录参考答案。</p> : null}
-            {q.answerNote ? (
+            <div className="mt-2.5 flex justify-end">
+              <Button
+                variant="ghost"
+                size="xs"
+                onClick={async () => {
+                  const parts = [];
+                  parts.push("【题目】" + String(q.stem).replace(/\n+/g, " "));
+                  if (q.options?.length) parts.push(q.options.map((o) => o.key + ". " + o.text).join("\n"));
+                  if (q.answer) parts.push("【答案】" + q.answer);
+                  if (q.explanation) parts.push("【解析】" + q.explanation);
+                  parts.push("—— 来自考研刷题 " + (q.subjectName || "") + " " + (q.year || "") + " 第 " + q.no + " 题");
+                  try {
+                    await navigator.clipboard.writeText(parts.join("\n\n"));
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 1600);
+                  } catch {
+                    setCopied(false);
+                  }
+                }}
+              >
+                {copied ? <><Check className="size-3.5 text-ok" />已复制</> : <><Copy className="size-3.5" />复制解析</>}
+              </Button>
+            </div>            {q.answerNote ? (
               <p className="mt-2 flex items-start gap-1.5 text-[12px] text-bad">
                 <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />{q.answerNote}
               </p>

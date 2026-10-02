@@ -67,11 +67,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-科学社会主义"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q2",
@@ -102,11 +102,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-辩证法"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q3",
@@ -137,11 +137,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q4",
@@ -174,11 +174,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q5",
@@ -211,11 +211,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-导论"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q6",
@@ -246,11 +246,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q7",
@@ -281,11 +281,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-党建"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q8",
@@ -316,11 +316,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q9",
@@ -351,11 +351,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2019-q10",
@@ -386,11 +386,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2019-q11",
@@ -424,11 +424,11 @@
           "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（B）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2019-q12",
@@ -459,11 +459,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2019-q13",
@@ -494,11 +494,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-基本问题"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q14",
@@ -529,11 +529,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2019-q15",
@@ -564,11 +564,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "时政",
           "chapterTopics": [
             "时政-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "时政"
         },
         {
           "id": "politics-2019-q16",
@@ -599,11 +599,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "新思想"
         }
       ]
     },
@@ -640,11 +640,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q18",
@@ -675,11 +675,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-认识论"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q19",
@@ -710,11 +710,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q20",
@@ -745,11 +745,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q21",
@@ -780,11 +780,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "马原",
           "chapterTopics": [
             "马原-科学社会主义"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "马原"
         },
         {
           "id": "politics-2019-q22",
@@ -815,11 +815,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-基本问题"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q23",
@@ -850,11 +850,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q24",
@@ -885,11 +885,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q25",
@@ -920,11 +920,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2019-q26",
@@ -955,11 +955,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q27",
@@ -990,11 +990,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2019-q28",
@@ -1027,11 +1027,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "毛中特"
         },
         {
           "id": "politics-2019-q29",
@@ -1064,11 +1064,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "史纲"
         },
         {
           "id": "politics-2019-q30",
@@ -1104,11 +1104,11 @@
           "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（ABCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q31",
@@ -1139,11 +1139,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "思修",
           "chapterTopics": [
             "思修-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "思修"
         },
         {
           "id": "politics-2019-q32",
@@ -1174,11 +1174,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter"
+          "chapterConfidence": "chapter",
+          "subjectHint": "新思想"
         },
         {
           "id": "politics-2019-q33",
@@ -1209,11 +1209,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
-          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only"
+          "chapterConfidence": "subject-only",
+          "subjectHint": "新思想"
         }
       ]
     },
