@@ -686,65 +686,147 @@
    ],
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2024",
+   "year": 2024,
+   "title": "2024 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2024.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "Fantasia1999/kaoyanzhenti · 公共课/英语真题/英语一/2024年考研英语一真题.pdf + 懒笔记 english-exam.lazynote.cn · 2024年考研英语一真题及答案解析（整卷）",
+   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2024-english-one/"
+  },
+  {
+   "id": "english1-2025",
+   "year": 2025,
+   "title": "2025 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2025.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "Fantasia1999/kaoyanzhenti · 公共课/英语真题/英语一/2025年考研英语一真题.pdf + 懒笔记 english-exam.lazynote.cn · 2025年考研英语一真题及答案解析（整卷）",
+   "sourceUrl": "https://github.com/Fantasia1999/kaoyanzhenti  |  https://english-exam.lazynote.cn/kaoyan/paper/2025-english-one/"
   }
  ],
  "topics": [
   {
    "id": "完型-词汇辨析",
    "name": "完型 · 词汇辨析",
-   "count": 213
+   "count": 248
   },
   {
    "id": "阅读-细节题",
    "name": "阅读 · 细节题",
-   "count": 73
+   "count": 85
   },
   {
    "id": "新题型-排序/匹配",
    "name": "新题型 · 排序/匹配",
-   "count": 70
-  },
-  {
-   "id": "完型-逻辑关系",
-   "name": "完型 · 逻辑关系",
-   "count": 67
+   "count": 80
   },
   {
    "id": "翻译-长难句",
    "name": "翻译 · 长难句",
-   "count": 65
+   "count": 75
+  },
+  {
+   "id": "完型-逻辑关系",
+   "name": "完型 · 逻辑关系",
+   "count": 72
   },
   {
    "id": "阅读-推断题",
    "name": "阅读 · 推断题",
-   "count": 31
+   "count": 37
   },
   {
    "id": "阅读-主旨题",
    "name": "阅读 · 主旨题",
-   "count": 20
-  },
-  {
-   "id": "阅读-态度题",
-   "name": "阅读 · 态度题",
-   "count": 15
+   "count": 24
   },
   {
    "id": "写作-图画作文",
    "name": "写作 · 图画作文",
-   "count": 14
+   "count": 16
   },
   {
    "id": "写作-应用文",
    "name": "写作 · 应用文",
-   "count": 14
+   "count": 16
+  },
+  {
+   "id": "阅读-态度题",
+   "name": "阅读 · 态度题",
+   "count": 16
   },
   {
    "id": "阅读-词义句意题",
    "name": "阅读 · 词义句意题",
-   "count": 12
+   "count": 13
   }
  ],
- "generatedAt": "2026-10-02T11:15:20.391Z",
- "note": "覆盖 2010–2023 共 14 卷 （目标区间 2010–2025）。缺失年份：2024、2025。\nquality：high 13 卷，low 1 卷（2023）。\n答案/范文缺口（该题在来源里确实没有答案，按纪律留空、未推断）：2017 第 51,52 题；2018 第 51,52 题；2019 第 48 题；2021 第 51,52 题；2022 第 51,52 题；2023 第 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52 题。\n题目客观题（单选）560 题；答案/解析覆盖 672/723（93%）。\n2010–2016 年素材：KaoYan-English-master 的《2005—2016年历年考研英语真题集》(PDF) + 《<年>年考研英语真题答案及解析》(PDF)；由 tools/parse-english-old.mjs 解析。\n2017–2023 年素材：上游仓库 TsekaLuk/Kaoyan-Math1-Papers 的英语一 markdown + 答案解析；由 tools/parse-english.mjs 解析。"
+ "generatedAt": "2026-10-02T11:40:52.152Z",
+ "note": "覆盖 2010–2025 共 16 卷 （目标区间 2010–2025）。目标区间无缺卷。\nquality：high 15 卷，low 1 卷（2023）。\n答案/范文缺口（该题在来源里确实没有答案，按纪律留空、未推断）：2017 第 51,52 题；2018 第 51,52 题；2019 第 48 题；2021 第 51,52 题；2022 第 51,52 题；2023 第 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52 题。\n题目客观题（单选）640 题；答案/解析覆盖 776/827（94%）。\n2024/2025 卷：真题文本取自 GitHub Fantasia1999/kaoyanzhenti 的文本层 PDF；答案/参考译文/参考范文取自懒笔记 english-exam.lazynote.cn 的整卷答案速查表与分题型解析页（2024 另用启航考研全卷解析、中国考研网分 Text 页交叉核对；2025 完型另用禾虎考研交叉核对）。\n2024/2025 的 explanation 是来源页逐题解析原文（懒笔记），风格与 2010–2023 的【考点】【解析】不同。"
 }

@@ -31,7 +31,7 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x))) {
   for (const sec of paper.sections) for (const q of sec.questions) {
     const key = `${paper.year}-${q.no}`;
     if (q.verify && q.verify.startsWith("CONFLICT")) {
-      q.note = EXTRA[key] || "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。";
+      q.note = EXTRA[key] || "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂采用来源答案，请以官方答案为准。";
       n++;
     }
   }

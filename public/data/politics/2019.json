@@ -421,7 +421,7 @@
           "topics": [],
           "images": [],
           "verify": "CONFLICT-yy-vs-kyzz",
-          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。",
+          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂采用来源答案，请以官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（B）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
           "chapterTopics": [
@@ -1101,7 +1101,7 @@
           ],
           "images": [],
           "verify": "CONFLICT-yy-vs-kyzz",
-          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。",
+          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂采用来源答案，请以官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（ABCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
           "chapterTopics": [

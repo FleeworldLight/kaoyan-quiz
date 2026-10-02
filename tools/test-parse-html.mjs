@@ -8,15 +8,14 @@ const SRC = [
 const parsed = {};
 for (const [name, file] of SRC) parsed[name] = parsePaperHtmlFile(file, { year: 2025 });
 
-const want = [16, 21, 27];
+const want = process.argv.slice(2).map(Number);
 for (const no of want) {
   console.log(`\n############### Q${no} ###############`);
   for (const [name] of SRC) {
-    const p = parsed[name];
-    const q = [...p.single, ...p.multiple].find((x) => x.no === no);
+    const q = [...parsed[name].single, ...parsed[name].multiple].find((x) => x.no === no);
     if (!q) { console.log(`${name}: 缺失`); continue; }
     console.log(`--- ${name} answer=${q.answer}`);
-    console.log(`    stem: ${q.stem.replace(/\s+/g, " ").slice(0, 150)}`);
-    for (const o of q.options) console.log(`    ${o.key}. ${o.text.slice(0, 90)}`);
+    console.log(`    stem: ${q.stem.replace(/\s+/g, " ").slice(0, 120)}`);
+    for (const o of q.options) console.log(`    ${o.key}. [${o.text.length}] ${o.text.slice(0, 100)}`);
   }
 }

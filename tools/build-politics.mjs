@@ -94,15 +94,26 @@ function buildHtmlYear(year) {
       continue;
     }
 
-    // 各源答案 → 按选项文本内容翻译回主来源字母体系
-    const votes = [{ id: primary.id, letters: pq.answer, raw: pq.answer }];
+    // 各源答案 → 对齐到主来源字母体系。
+    // 优先判断「选项顺序是否相同」：4 个选项按位置两两相似度 ≥0.5 的有 ≥3 个即视为同序，
+    // 同序时直接采信该源自己的答案字母（避免因同一选项的不同措辞被误判为「无法对齐」而丢票）；
+    // 顺序不同时才按选项文本内容翻译字母，翻译不出来的题才舍弃该源并记入说明。
+    const qOf = (p, n) => [...p.p.single, ...p.p.multiple].find((q) => q.no === n) || { options: [] };
+    const sameOrder = parsed.every((p) => {
+      if (p === primary) return true;
+      const o = qOf(p, no).options;
+      if (o.length !== pq.options.length) return false;
+      return pq.options.filter((d, i) => sim(d.text, o[i].text) >= 0.5).length >= 3;
+    });
+    const votes = [{ id: primary.id, letters: pq.answer, raw: pq.answer, aligned: "primary" }];
     for (const p of parsed) {
       if (p === primary) continue;
-      const oq = [...p.p.single, ...p.p.multiple].find(q => q.no === no);
-      if (!oq || !oq.answer) continue;
+      const oq = qOf(p, no);
+      if (!oq.answer) continue;
+      if (sameOrder) { votes.push({ id: p.id, letters: oq.answer, raw: oq.answer, aligned: "same-order" }); continue; }
       const tr = translateAnswer(oq.answer, oq.options, pq.options);
-      if (tr.unmapped && tr.unmapped.length) { notes.push(`Q${no}: ${p.id} 有 ${tr.unmapped.length} 个选项无法内容对齐（相似度 ${tr.unmapped.map(u => u.best).join("/")}），该题不计入票池`); continue; }
-      votes.push({ id: p.id, letters: tr.letters, raw: oq.answer });
+      if (tr.unmapped && tr.unmapped.length) { notes.push(`Q${no}: ${p.id} 选项顺序与主来源不同，且有 ${tr.unmapped.length} 个选项无法内容对齐（相似度 ${tr.unmapped.map(u => u.best).join("/")}），该题不计入票池`); continue; }
+      votes.push({ id: p.id, letters: tr.letters, raw: oq.answer, aligned: "content" });
     }
     const counts = new Map();
     for (const v of votes) if (v.letters) counts.set(v.letters, (counts.get(v.letters) || 0) + 1);
@@ -114,7 +125,7 @@ function buildHtmlYear(year) {
     if (tie) answer = pq.answer;                       // 平票 → 主来源
     const conflict = counts.size > 1;
     if (conflict) {
-      notes.push(`Q${no}: ${votes.map(v => `${v.id}=${v.raw}${v.letters !== v.raw ? `(对齐→${v.letters})` : ""}`).join(" / ")} → 本库采用多数票 ${answer}`);
+      notes.push(`Q${no}（选项顺序${sameOrder ? "三源相同" : "存在差异"}）: ${votes.map(v => `${v.id}=${v.raw}${v.letters !== v.raw ? `(对齐→${v.letters})` : ""}`).join(" / ")} → 本库采用多数票 ${answer}`);
     }
     questions.push({
       id: `politics-${year}-q${no}`, no, type,
@@ -139,7 +150,7 @@ function buildHtmlYear(year) {
 
 /* ---------------- 主流程 ---------------- */
 // 可选：POLITICS_YEARS=2025 时只**写出**指定年份的卷子（其余年份仍参与 build-report 统计，
- * 便于增量新增年份时不动既有数据）。
+// 便于增量新增年份时不动既有数据）。
 const ONLY_YEARS = process.env.POLITICS_YEARS
   ? new Set(process.env.POLITICS_YEARS.split(",").map(s => Number(s.trim())).filter(Boolean))
   : null;

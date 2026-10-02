@@ -221,7 +221,7 @@ function parseAnswerTable(text) {
       continue;
     }
     if (/Section\s*II\s*Part\s*B/.test(t)) {
-      const re = /(\d{2})\s*[=·]\s*([A-H])/g;
+      const re = /(\d{2})\s*[=·]?\s*([A-H])\b/g;
       while ((m = re.exec(t))) partB.set(Number(m[1]), m[2]);
       continue;
     }
@@ -288,13 +288,12 @@ function parseSectionPartC(file, paperMaterial) {
 /* 懒笔记写作页：`【参考范文 · N 词 】…` 之后是范文，遇到下一个「【」块或分栏标题结束 */
 function parseSectionWriting(file) {
   const lines = loadLines(file);
-  const norm = (s) => String(s || "").replace(/[^A-Za-z]+/g, "").toLowerCase();
-  const out = { title: "", date: "" };
+  const out = { parts: [] };
   for (let i = 0; i < lines.length; i++) {
     if (/^【参考范文/.test(T(lines[i]))) {
-      for (let j = i + 1; j < Math.min(lines.length, i + 40); j++) {
+      for (let j = i + 1; j < Math.min(lines.length, i + 60); j++) {
         const t = T(lines[j]);
-        if (!t) { if (out.parts.length) break; else continue; }
+        if (!t) { if (out.parts.length) continue; else continue; }
         if (/^【/.test(t)) break;
         if (/^[A-Z][A-Z &·]{6,}$/.test(t)) break;
         out.parts.push(t);
@@ -302,7 +301,7 @@ function parseSectionWriting(file) {
       break;
     }
   }
-  return out.parts || [];
+  return out.parts;
 }
 
 /* ------------------------------------------------------------------ 组卷 */
@@ -325,7 +324,7 @@ function tagReading(stem) {
 async function buildYear(year, log) {
   const info = INFO[year];
   const lines = await pdfLines(path.join(WEB, info.paperPdf));
-  const table = parseAnswerTable(fs.readFileSync(path.join(WEB, `lz-kaoyan_paper-${year}-english-one.txt`), "utf8"));
+  const table = parseAnswerTable(fs.readFileSync(path.join(WEB, `lz-kaoyan_paper_${year}-english-one.txt`), "utf8"));
   const iCloze = findIdx(lines, isClozeHdr);
   const iReading = findIdx(lines, isReadingHdr, iCloze + 1);
   const iPartA = findIdx(lines, isPartA, iReading + 1);

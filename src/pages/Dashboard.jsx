@@ -248,11 +248,23 @@ export default function Dashboard({ index }) {
 
 const MODE_LABEL = { exam: "整套模考", chapter: "章节练习", random: "随机组卷", wrong: "错题复测", fav: "收藏练习", paper: "套卷练习", mock: "模拟卷", custom: "智能组卷" };
 
+/** 考研初试一般在 12 月的倒数第二个周末（周六开考），按此推算下一个考试日 */
+export function nextExamDate(now = new Date()) {
+  const secondLastSaturday = (y) => {
+    const d = new Date(y, 11, 31);
+    while (d.getDay() !== 6) d.setDate(d.getDate() - 1);
+    d.setDate(d.getDate() - 7);
+    return d;
+  };
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let exam = secondLastSaturday(now.getFullYear());
+  if (exam < today) exam = secondLastSaturday(now.getFullYear() + 1);
+  return exam;
+}
 function daysToExam() {
   const now = new Date();
-  const y = now.getMonth() >= 11 ? now.getFullYear() + 1 : now.getFullYear();
-  const exam = new Date(y, 11, 21); // 通常为 12 月倒数第二个周末，这里取 12/21 作为近似
-  return Math.max(0, Math.ceil((exam - now) / 86400000));
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.max(0, Math.round((nextExamDate(now) - today) / 86400000));
 }
 
 function MiniStat({ icon: Icon, label, value, unit }) {
