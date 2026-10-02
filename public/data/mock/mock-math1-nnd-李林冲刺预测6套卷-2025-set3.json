@@ -1,0 +1,518 @@
+{
+  "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 李林冲刺预测6套卷",
+  "publisher": "李林",
+  "year": 2025,
+  "paperNo": 3,
+  "paperKind": "testPaper",
+  "title": "2025 李林冲刺预测6套卷（三）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 李林冲刺预测6套卷（三）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/36645/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "设\\( f(x)=\\begin{cases} \\dfrac{x\\text{e}^{\\frac{1}{x}}}{1+\\text{e}^{\\frac{1}{x}}}, & x \\neq 0, \\\\ 0, & x = 0, \\end{cases}\\)则\\( x = 0 \\)是\\( f'(x) \\)的",
+          "options": [
+            {
+              "key": "A",
+              "text": "可去间断点."
+            },
+            {
+              "key": "B",
+              "text": "跳跃间断点."
+            },
+            {
+              "key": "C",
+              "text": "振荡间断点."
+            },
+            {
+              "key": "D",
+              "text": "无穷间断点."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析：当\\( x \\neq 0 \\)时，\n\n\\( f'(x)=\\dfrac{\\left(x\\text{e}^{\\frac{1}{x}}\\right)'\\left(1+\\text{e}^{\\frac{1}{x}}\\right)-x\\text{e}^{\\frac{1}{x}}\\left(1+\\text{e}^{\\frac{1}{x}}\\right)'}{\\left(1+\\text{e}^{\\frac{1}{x}}\\right)^2}=\\dfrac{\\text{e}^{\\frac{1}{x}}+\\text{e}^{\\frac{2}{x}}-\\dfrac{1}{x}\\text{e}^{\\frac{1}{x}}}{\\left(1+\\text{e}^{\\frac{1}{x}}\\right)^2} \\)，\n\n\\( \\lim\\limits_{x \\to 0^-} f'(x) = \\lim\\limits_{x \\to 0^-} \\dfrac{\\text{e}^{\\frac{1}{x}}+\\text{e}^{\\frac{2}{x}}-\\dfrac{1}{x}\\text{e}^{\\frac{1}{x}}}{\\left(1+\\text{e}^{\\frac{1}{x}}\\right)^2} \\)。\n\n又\\( \\lim\\limits_{x \\to 0^-} \\dfrac{1}{x}\\text{e}^{\\frac{1}{x}} = \\lim\\limits_{x \\to 0^-} \\dfrac{\\dfrac{1}{x}}{\\text{e}^{-\\frac{1}{x}}} = \\lim\\limits_{x \\to 0^-} \\dfrac{-\\dfrac{1}{x^2}}{\\text{e}^{-\\frac{1}{x}} \\cdot \\left(-\\dfrac{1}{x^2}\\right)} = \\lim\\limits_{x \\to 0^-} \\dfrac{1}{\\text{e}^{-\\frac{1}{x}}} = 0 \\)，故\\( \\lim\\limits_{x \\to 0^-} f'(x) = 0 \\)。\n\n同理，可求得\n\n\\( \\lim\\limits_{x \\to 0^+} f'(x) = \\lim\\limits_{x \\to 0^+} \\dfrac{\\text{e}^{\\frac{1}{x}}+\\text{e}^{\\frac{2}{x}}-\\dfrac{1}{x}\\text{e}^{\\frac{1}{x}}}{\\left(1+\\text{e}^{\\frac{1}{x}}\\right)^2} = \\lim\\limits_{x \\to 0^+} \\dfrac{\\text{e}^{-\\frac{1}{x}} + 1 - \\dfrac{1}{x}\\text{e}^{-\\frac{1}{x}}}{\\left(1+\\text{e}^{-\\frac{1}{x}}\\right)^2} = 1 \\)。\n\n故\\( x = 0 \\)是\\( f'(x) \\)的跳跃间断点. 选项B正确.\n\n答案 B",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10475/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设$\\boxed{\\alpha}$和$\\boxed{\\beta}$均是非零常向量，$\\boxed{\\beta}$的模$\\|\\boxed{\\beta}\\| = 2$，且$\\boxed{\\alpha}$与$\\boxed{\\beta}$之间的夹角为$\\frac{\\pi}{3}$，则$\\lim\\limits_{x \\to 0} \\frac{\\|\\boxed{\\alpha} + x\\boxed{\\beta}\\| - \\|\\boxed{\\alpha}\\|}{x} =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "0."
+            },
+            {
+              "key": "B",
+              "text": "1."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{1}{2}$."
+            },
+            {
+              "key": "D",
+              "text": "2."
+            }
+          ],
+          "answer": "B",
+          "explanation": "$\\lim\\limits_{x \\to 0} \\frac{\\|\\boxed{\\alpha} + x\\boxed{\\beta}\\| - \\|\\boxed{\\alpha}\\|}{x} = \\lim\\limits_{x \\to 0} \\frac{\\|\\boxed{\\alpha} + x\\boxed{\\beta}\\|^2 - \\|\\boxed{\\alpha}\\|^2}{x(\\|\\boxed{\\alpha} + x\\boxed{\\beta}\\| + \\|\\boxed{\\alpha}\\|)}$\n\n$= \\lim\\limits_{x \\to 0} \\frac{(\\boxed{\\alpha} + x\\boxed{\\beta}) \\cdot (\\boxed{\\alpha} + x\\boxed{\\beta}) - \\boxed{\\alpha} \\cdot \\boxed{\\alpha}}{x(\\|\\boxed{\\alpha} + x\\boxed{\\beta}\\| + \\|\\boxed{\\alpha}\\|)}$\n\n$= \\lim\\limits_{x \\to 0} \\frac{2x\\boxed{\\alpha} \\cdot \\boxed{\\beta} + x^2\\|\\boxed{\\beta}\\|^2}{2\\|\\boxed{\\alpha}\\|x} = \\frac{\\boxed{\\alpha} \\cdot \\boxed{\\beta}}{\\|\\boxed{\\alpha}\\|} + 0$\n\n$= \\|\\boxed{\\beta}\\|\\cos\\langle \\boxed{\\alpha}, \\boxed{\\beta} \\rangle = 2 \\times \\frac{1}{2} = 1$.\n\n选项 B 正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10476/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设\\( f(x,y)=\\begin{cases}\n\n|xy|\\ln (x^2 + y^2), & (x,y) \\neq (0,0), \\\\\n\n0, & (x,y) = (0,0),\n\n\\end{cases} \\)则\\( f(x,y) \\)在点\\((0,0)\\)处",
+          "options": [
+            {
+              "key": "A",
+              "text": "连续但\\( f'_x(0,0) \\)与\\( f'_y(0,0) \\)不存在."
+            },
+            {
+              "key": "B",
+              "text": "\\( f'_x(0,0) \\)与\\( f'_y(0,0) \\)存在但不可微."
+            },
+            {
+              "key": "C",
+              "text": "连续但不可微."
+            },
+            {
+              "key": "D",
+              "text": "可微."
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析\n\n由\\(\\lim\\limits_{\\substack{x \\to 0 \\\\ y \\to 0}} f(x,y) = \\lim\\limits_{\\substack{x \\to 0 \\\\ y \\to 0}} |xy| \\ln (x^2 + y^2) = 0 = f(0,0)\\)，知\\( f(x,y) \\)在点\\((0,0)\\)处连续，\n\n\\( f'_x(0,0) = \\lim\\limits_{x \\to 0} \\frac{f(x,0) - f(0,0)}{x} = \\lim\\limits_{x \\to 0} \\frac{0 - 0}{x} = 0 \\).\n\n同理，\\( f'_y(0,0) = 0 \\).\n\n\\(\\lim\\limits_{\\substack{x \\to 0 \\\\ y \\to 0}} \\frac{f(x,y) - f(0,0) - [f'_x(0,0)x + f'_y(0,0)y]}{\\rho}\\)\n\n\\( = \\lim\\limits_{\\substack{x \\to 0 \\\\ y \\to 0}} \\frac{|xy| \\ln (x^2 + y^2)}{\\sqrt{x^2 + y^2}}, \\ \\rho = \\sqrt{x^2 + y^2} \\).\n\n又\\( 0 \\leq \\left| \\frac{|xy| \\ln (x^2 + y^2)}{\\sqrt{x^2 + y^2}} \\right| \\leq \\frac{1}{2\\rho}(x^2 + y^2) |\\ln (x^2 + y^2)| = \\rho |\\ln \\rho| \\)，\n\n且\\(\\lim\\limits_{\\rho \\to 0} \\rho |\\ln \\rho| = 0\\)，故\\(\\lim\\limits_{\\substack{x \\to 0 \\\\ y \\to 0}} \\frac{|xy| \\ln (x^2 + y^2)}{\\sqrt{x^2 + y^2}} = 0\\).\n\n\\( f(x,y) \\)在点\\((0,0)\\)处可微. 选项D正确.\n\n【注】$\\vert xy\\vert \\leqslant \\frac{1}{2}({x}^{2}+{y}^{2})$",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10477/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设\\(\\Sigma\\)为曲面\\( z = \\sqrt{x^2 + y^2} \\)的下侧，\\( P = P(x, y, z) \\)，\\( Q = Q(x, y, z) \\)均为连续函数，则\\( \\iint_{\\Sigma} P\\text{d}y\\text{d}z - Q\\text{d}z\\text{d}x = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( \\iint_{\\Sigma} \\left( -\\frac{x}{z}P + \\frac{y}{z}Q \\right) \\text{d}x\\text{d}y \\)"
+            },
+            {
+              "key": "B",
+              "text": "\\( \\iint_{\\Sigma} \\left( -\\frac{x}{z}P - \\frac{y}{z}Q \\right) \\text{d}x\\text{d}y \\)"
+            },
+            {
+              "key": "C",
+              "text": "\\( \\iint_{\\Sigma} \\left( \\frac{x}{z}P - \\frac{y}{z}Q \\right) \\text{d}x\\text{d}y \\)"
+            },
+            {
+              "key": "D",
+              "text": "\\( \\iint_{\\Sigma} \\left( \\frac{x}{z}P + \\frac{y}{z}Q \\right) \\text{d}x\\text{d}y \\)"
+            }
+          ],
+          "answer": "A",
+          "explanation": "解析 依题设，曲面\\( z = \\sqrt{x^2 + y^2} \\)的法向量为\n\n\\( \\boxed{n} = (z'_x, z'_y, -1) = \\left( \\frac{x}{\\sqrt{x^2 + y^2}}, \\frac{y}{\\sqrt{x^2 + y^2}}, -1 \\right) = \\left( \\frac{x}{z}, \\frac{y}{z}, -1 \\right) \\)，\n\n其方向余弦为\\( \\cos\\alpha = \\frac{x}{\\sqrt{2}z} \\)，\\( \\cos\\beta = \\frac{y}{\\sqrt{2}z} \\)，\\( \\cos\\gamma = \\frac{-1}{\\sqrt{2}} \\)。\n\n由转换公式\\( \\frac{\\text{d}y\\text{d}z}{\\cos\\alpha} = \\frac{\\text{d}z\\text{d}x}{\\cos\\beta} = \\frac{\\text{d}x\\text{d}y}{\\cos\\gamma} \\)，有\n\n\\( \\text{d}y\\text{d}z = \\frac{\\cos\\alpha}{\\cos\\gamma}\\text{d}x\\text{d}y = -\\frac{x}{z}\\text{d}x\\text{d}y \\)，\\( \\text{d}z\\text{d}x = \\frac{\\cos\\beta}{\\cos\\gamma}\\text{d}x\\text{d}y = -\\frac{y}{z}\\text{d}x\\text{d}y \\)。\n\n故\\( \\iint_{\\Sigma} P\\text{d}y\\text{d}z - Q\\text{d}z\\text{d}x = \\iint_{\\Sigma} \\left( -\\frac{x}{z}P + \\frac{y}{z}Q \\right) \\text{d}x\\text{d}y \\)。选项 A 正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10478/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "已知3阶实对称矩阵\\( A \\)与矩阵\\( B = \\begin{bmatrix} 0&1&0 \\\\ 1&0&0 \\\\ 0&0&2 \\end{bmatrix} \\)合同，则二次型\\( \\boldsymbol{X^TAX} \\)的规范形为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( y_1^2 + y_2^2 - y_3^2 \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( -y_1^2 - y_2^2 - y_3^2 \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( y_1^2 - y_2^2 - y_3^2 \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( y_1^2 + y_2^2 + y_3^2 \\)."
+            }
+          ],
+          "answer": "A",
+          "explanation": "解析 由\\( A \\)与\\( B \\)合同，知\\( \\boldsymbol{X^TAX} \\)与\\( \\boldsymbol{X^TBX} \\)有相同的正、负惯性指数.\n\n又由\\( |\\lambda E - B| = \\begin{vmatrix} \\lambda & -1 & 0 \\\\ -1 & \\lambda & 0 \\\\ 0 & 0 & \\lambda - 2 \\end{vmatrix} = (\\lambda - 2)(\\lambda^2 - 1) \\)，得\\( B \\)的特征值为1,2,-1.\\( \\boldsymbol{X^TBX} \\)的正惯性指数\\( p = 2 \\)，负惯性指数\\( q = 1 \\).\n\n从而\\( \\boldsymbol{X^TAX} \\)的规范形为\\( y_1^2 + y_2^2 - y_3^2 \\).\n\n故选项A正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10479/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "设$\\boldsymbol{A}$是$n(n \\geq 3)$阶矩阵，$\\boldsymbol{A}^*$是$\\boldsymbol{A}$的伴随矩阵，线性方程组$\\boldsymbol{AX = 0}$有两个线性无关的解，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\boldsymbol{AX = 0}$与$\\boldsymbol{A^*X = 0}$同解."
+            },
+            {
+              "key": "B",
+              "text": "$\\boldsymbol{A^*X = 0}$的解均是$\\boldsymbol{AX = 0}$的解."
+            },
+            {
+              "key": "C",
+              "text": "$\\boldsymbol{AX = 0}$的解均是$\\boldsymbol{A^*X = 0}$的解."
+            },
+            {
+              "key": "D",
+              "text": "$\\boldsymbol{AX = 0}$与$\\boldsymbol{A^*X = 0}$没有非零公共解."
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析 由$\\boldsymbol{AX = 0}$有两个线性无关的解，知$\\boldsymbol{AX = 0}$的基础解向量的个数$n - \\mathrm{r}(\\boldsymbol{A}) \\geq 2$，即$\\mathrm{r}(\\boldsymbol{A}) \\leq n - 2$. 故$\\mathrm{r}(\\boldsymbol{A}^*) = 0$，从而$\\boldsymbol{A}^* = \\boldsymbol{O}$，所以任意$n$维列向量均是$\\boldsymbol{A^*X = 0}$的解. 因此，$\\boldsymbol{AX = 0}$的解均是$\\boldsymbol{A^*X = 0}$的解. 选项C正确，选项B不正确，选项A不正确.\n\n对于选项D，由$\\boldsymbol{AX = 0}$的基础解系至少包含两个解向量，知$\\boldsymbol{AX = 0}$有无穷多个非零解，从而$\\boldsymbol{AX = 0}$与$\\boldsymbol{A^*X = 0}$的公共解有无穷多个非零解. 选项D不正确.\n\nC. $\\boldsymbol{AX = 0}$的解均是$\\boldsymbol{A^*X = 0}$的解.\n\nD. $\\boldsymbol{AX = 0}$与$\\boldsymbol{A^*X = 0}$没有非零公共解.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10480/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "设$\\boldsymbol{A}$是3阶实对称矩阵，$\\boldsymbol{E}$是3阶单位矩阵，且$|\\boldsymbol{A}| = -2$，$\\boldsymbol{A}^* = -\\boldsymbol{A} - \\boldsymbol{E}$，其中$\\boldsymbol{A}^*$是$\\boldsymbol{A}$的伴随矩阵，若二次型$f(x_1, x_2, x_3) = \\boldsymbol{X}^{\\mathrm{T}}(\\boldsymbol{A}^* + a\\boldsymbol{E})\\boldsymbol{X} = 1$在空间直角坐标系下表示椭球面，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$a > 2$."
+            },
+            {
+              "key": "B",
+              "text": "$a > -2$."
+            },
+            {
+              "key": "C",
+              "text": "$a < 2$."
+            },
+            {
+              "key": "D",
+              "text": "$a < -2$."
+            }
+          ],
+          "answer": "A",
+          "explanation": "解析 $\\boldsymbol{A}^* = -\\boldsymbol{A} - \\boldsymbol{E}$两边左乘$\\boldsymbol{A}$，得\n\n$\\boldsymbol{A}\\boldsymbol{A}^* = -\\boldsymbol{A}^2 - \\boldsymbol{A}$。\n\n由$|\\boldsymbol{A}| = -2$，知$|\\boldsymbol{A}|\\boldsymbol{E} = -\\boldsymbol{A}^2 - \\boldsymbol{A}$，即$\\boldsymbol{A}^2 + \\boldsymbol{A} - 2\\boldsymbol{E} = \\boldsymbol{O}$。\n\n设$\\boldsymbol{A}$的任一特征值为$\\lambda$，则$\\lambda^2 + \\lambda - 2 = 0$，解得$\\boldsymbol{A}$的可能特征值为$1$，$-2$。\n\n由$|\\boldsymbol{A}| = -2$，知$\\boldsymbol{A}$的特征值只能为$1$，$1$，$-2$。\n\n故$\\boldsymbol{A}^*$的特征值为$\\frac{|\\boldsymbol{A}|}{\\lambda}$，即$-2$，$-2$，$1$。\n\n$\\boldsymbol{A}^* + a\\boldsymbol{E}$的特征值为$-2 + a$，$-2 + a$，$1 + a$。\n\n由$\\boldsymbol{X}^{\\mathrm{T}}(\\boldsymbol{A}^* + a\\boldsymbol{E})\\boldsymbol{X} = 1$表示椭球面，知该二次型的正惯性指数为3，负惯性指数为0，\n\n故$-2 + a > 0$，$-2 + a > 0$，$1 + a > 0$，解得$a > 2$。\n\n选项A正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10481/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设随机变量 \\( X \\) 与 \\( Y \\) 均服从正态分布 \\( N(0, \\sigma^2) \\)（\\( \\sigma > 0 \\)），且 \\( P\\{X \\leq 1, Y \\leq -1\\} = \\frac{1}{4} \\)，则 \\( P\\{X > 1, Y > -1\\} = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "1."
+            },
+            {
+              "key": "B",
+              "text": "\\( \\frac{1}{4} \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( \\frac{1}{2} \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( \\frac{3}{4} \\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 记 \\( A = \\{X \\leq 1\\} \\)，\\( B = \\{Y \\leq -1\\} \\)，由已知得 \\( P(AB) = \\frac{1}{4} \\).\n\n\\( P\\{X > 1, Y > -1\\} = P(\\overline{A}\\overline{B}) = P(\\overline{A \\cup B}) = 1 - P(A \\cup B) \\)\n\n\\( = 1 - P(A) - P(B) + P(AB) \\).\n\n又 \\( P(A) = P\\{X \\leq 1\\} = \\Phi\\left(\\frac{1}{\\sigma}\\right) \\)，\\( P(B) = P\\{Y \\leq -1\\} = \\Phi\\left(-\\frac{1}{\\sigma}\\right) = 1 - \\Phi\\left(\\frac{1}{\\sigma}\\right) \\)，故\n\n\\( P\\{X > 1, Y > -1\\} = 1 - \\Phi\\left(\\frac{1}{\\sigma}\\right) - 1 + \\Phi\\left(\\frac{1}{\\sigma}\\right) + \\frac{1}{4} = \\frac{1}{4} \\).\n\n选项 B 正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10482/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设\\( X_1,X_2,\\cdots,X_n \\)为来自总体\\( X \\)的简单随机样本，\\( X \\)服从参数为\\( \\lambda = \\frac{1}{2} \\)的泊松分布，\\( \\Phi(x) \\)为\\( N(0,1) \\)的分布函数，则\\( \\lim\\limits_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i=1}^{n} X_i - n}{2\\sqrt{n}} \\leq 1 \\right\\} = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( \\Phi\\left( \\frac{1}{2} \\right) \\)"
+            },
+            {
+              "key": "B",
+              "text": "\\( \\Phi(\\sqrt{2}) \\)"
+            },
+            {
+              "key": "C",
+              "text": "\\( \\Phi(\\sqrt{3}) \\)"
+            },
+            {
+              "key": "D",
+              "text": "\\( \\Phi(1) \\)"
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 由已知，得 \\( X_1, X_2, \\cdots, X_n \\) 相互独立，且都服从参数为 \\( \\lambda = \\frac{1}{2} \\) 的泊松分布。\n\n故 \\( EX_i = \\frac{1}{2} \\)，\\( DX_i = \\frac{1}{2} (i = 1, 2, \\cdots, n) \\)。\n\n由独立同分布的中心极限定理知，对任意的 \\( x \\in \\mathbf{R} \\)，有\n\n\\[\n\n\\begin{align*}\n\n\\lim_{n \\to \\infty} P\\left\\{ \\frac{\\sum_{i=1}^{n} X_i - E\\left( \\sum_{i=1}^{n} X_i \\right)}{\\sqrt{D\\left( \\sum_{i=1}^{n} X_i \\right)}} \\leq x \\right\\} &= \\lim_{n \\to \\infty} P\\left\\{ \\frac{\\sum_{i=1}^{n} X_i - \\frac{n}{2}}{\\sqrt{\\frac{n}{2}}} \\leq x \\right\\} \\\\\n\n&= \\lim_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i=1}^{n} X_i - n}{2\\sqrt{n}} \\leq \\frac{x}{\\sqrt{2}} \\right\\} = \\Phi(x)\n\n\\end{align*}\n\n\\]\n\n取 \\( \\frac{x}{\\sqrt{2}} = 1 \\)，即 \\( x = \\sqrt{2} \\)，则 \\( \\lim_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i=1}^{n} X_i - n}{2\\sqrt{n}} \\leq 1 \\right\\} = \\Phi(\\sqrt{2}) \\)。选项 B 正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10483/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设\\(X_{1},X_{2},\\cdots,X_{n}(n>1)\\)为来自总体\\(N(\\mu,\\sigma^{2})\\)的简单随机样本，\\(\\overline{X}\\)为样本均值，\\(S^{2}\\)为样本方差，则\\(\\mu\\sigma^{2}\\)的无偏估计量为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\overline{X}^{2}S\\)"
+            },
+            {
+              "key": "B",
+              "text": "\\(\\overline{X}S\\)"
+            },
+            {
+              "key": "C",
+              "text": "\\(\\overline{X}S^{2}\\)"
+            },
+            {
+              "key": "D",
+              "text": "\\(\\overline{X}^{2}S^{2}\\)"
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析 由已知，得\\(\\overline{X}\\sim N\\left(\\mu,\\frac{\\sigma^{2}}{n}\\right)\\)，且\\(\\overline{X}\\)与\\(S^{2}\\)相互独立，故\\(E\\overline{X}=\\mu\\)，\\(E(\\overline{X}S^{2})=E\\overline{X}\\cdot E(S^{2})\\)。\n\n又\\(\\frac{(n-1)S^{2}}{\\sigma^{2}}\\sim\\chi^{2}(n-1)\\)，所以\n\n\\(E(S^{2})=E\\left[\\frac{\\sigma^{2}}{n-1}\\cdot\\frac{(n-1)S^{2}}{\\sigma^{2}}\\right]=\\frac{\\sigma^{2}}{n-1}E\\left[\\chi^{2}(n-1)\\right]=\\frac{\\sigma^{2}}{n-1}(n-1)=\\sigma^{2}\\)。\n\n故\\(E(\\overline{X}S^{2})=\\mu\\sigma^{2}\\)。选项C正确。\n\n【注】 也可以直接应用结论：\\(E(S^{2})=\\sigma^{2}\\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10484/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设函数 \\( y = y(x) \\) 由 \\( \\begin{cases} x = \\int_{0}^{t} 2e^{-s^2} ds, \\\\ y = \\int_{0}^{t} \\sin(t - s) ds \\end{cases} \\) 确定，则曲线 \\( y = y(x) \\) 在 \\( t = 0 \\) 对应点处的曲率",
+          "options": [],
+          "answer": "4\n\n解析\n\n\\( y = \\int_{0}^{t} \\sin(t - s)ds \\stackrel{t - s = u}{=} \\int_{0}^{t} \\sin u du \\),\n\n\\( \\frac{dy}{dx} = \\frac{y_{t}'}{x_{t}'} = \\frac{\\sin t}{2e^{-t^{2}}} = \\frac{1}{2}e^{t^{2}} \\sin t, \\frac{dy}{dx}\\big|_{t=0} = 0 \\),\n\n\\( \\frac{d^{2}y}{dx^{2}} = \\frac{(\\frac{1}{2}e^{t^{2}} \\sin t)'}{x_{t}'} = \\frac{1}{4}e^{2t^{2}}(2t\\sin t + \\cos t) \\),\n\n所以\\( \\frac{d^{2}y}{dx^{2}}\\big|_{t=0} = \\frac{1}{4} \\)，故曲率半径为\\( R = \\frac{(1 + y'^{2})^{\\frac{3}{2}}}{|y''|} = 4 \\)",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10485/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）\\( \\int_{\\frac{1}{2}}^{+\\infty} \\frac{6x}{x^3 + 1} \\, dx = \\underline{\\quad\\quad} \\)",
+          "options": [],
+          "answer": "$\\sqrt{3}\\pi + \\ln 3$\n\n解析 $\\frac{6x}{x^3 + 1} = \\frac{-2}{x + 1} + \\frac{2x + 2}{x^2 - x + 1} = \\frac{-2}{x + 1} + \\frac{2x - 1}{x^2 - x + 1} + \\frac{3}{\\left(x - \\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2}$，\n\n$\\int \\frac{6x}{x^3 + 1}dx = \\int \\frac{-2}{x + 1}dx + \\int \\frac{2x - 1}{x^2 - x + 1}dx + \\int \\frac{3}{\\left(x - \\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2}dx$\n\n$= \\ln \\frac{x^2 - x + 1}{(x + 1)^2} + 2\\sqrt{3}\\arctan \\frac{2x - 1}{\\sqrt{3}} + c$．\n\n故 $\\int_{\\frac{1}{2}}^{+\\infty} \\frac{6x}{x^3 + 1}dx = \\left[\\ln \\frac{x^2 - x + 1}{(x + 1)^2} + 2\\sqrt{3}\\arctan \\frac{2x - 1}{\\sqrt{3}}\\right] \\bigg|_{\\frac{1}{2}}^{+\\infty}$\n\n$= \\sqrt{3}\\pi + \\ln 3$．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10486/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题） 设$u=\\ln(x^{2}+y^{2}+z^{2})$，则$\\text{div}(\\text{grad}\\ u)\\big|_{(1,1,1)}=$______．",
+          "options": [],
+          "answer": "$\\frac{2}{3}$\n\n解析 由已知，有\n\n$\\frac{\\partial u}{\\partial x}=\\frac{2x}{x^{2}+y^{2}+z^{2}},\\frac{\\partial u}{\\partial y}=\\frac{2y}{x^{2}+y^{2}+z^{2}},\\frac{\\partial u}{\\partial z}=\\frac{2z}{x^{2}+y^{2}+z^{2}},$\n\n$\\text{grad}\\ u=\\left(\\frac{\\partial u}{\\partial x},\\frac{\\partial u}{\\partial y},\\frac{\\partial u}{\\partial z}\\right)\\stackrel{\\text{记}}{=}(P,Q,R)$，则\n\n$\\frac{\\partial P}{\\partial x}=\\frac{2(-x^{2}+y^{2}+z^{2})}{(x^{2}+y^{2}+z^{2})^{2}},\\frac{\\partial Q}{\\partial y}=\\frac{2(x^{2}+z^{2}-y^{2})}{(x^{2}+y^{2}+z^{2})^{2}},\\frac{\\partial R}{\\partial z}=\\frac{2(x^{2}+y^{2}-z^{2})}{(x^{2}+y^{2}+z^{2})^{2}}.$\n\n所以$\\text{div}(\\text{grad}\\ u)=\\frac{\\partial P}{\\partial x}+\\frac{\\partial Q}{\\partial y}+\\frac{\\partial R}{\\partial z}=\\frac{2}{x^{2}+y^{2}+z^{2}}$，于是$\\text{div}(\\text{grad}\\ u)\\big|_{(1,1,1)}=\\frac{2}{3}.$13.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10487/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）设平面曲线\\( L \\)为\\( x^2 + y^2 = R^2 (R > 0) \\)，取逆时针方向，则\\( I(R) = \\oint_L (y^3 + 3x)dx + (3x - x^3)dy \\)的最大值为______。",
+          "options": [],
+          "answer": "\\( \\frac{3}{2}\\pi \\)\n\n解析 记\\( x^2 + y^2 = R^2 \\)所围区域为\\( D \\)，则由格林公式，有\n\n\\[\n\n\\begin{align*}\n\nI(R) &= \\iint_D \\left( \\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} \\right) dxdy = 3\\iint_D (1 - x^2 - y^2) dxdy \\\\\n\n&= 3\\int_0^{2\\pi} d\\theta \\int_0^R (1 - r^2)r dr = 6\\pi \\left( \\frac{1}{2}r^2 - \\frac{1}{4}r^4 \\right) \\bigg|_0^R = 3\\pi R^2 \\left( 1 - \\frac{R^2}{2} \\right).\n\n\\end{align*}\n\n\\]\n\n令\\( I'(R) = 6\\pi R(1 - R^2) = 0 \\)，得\\( R = 1 \\)。\n\n当\\( R > 1 \\)时，\\( I'(R) < 0 \\)；当\\( 0 < R < 1 \\)时，\\( I'(R) > 0 \\)。\n\n故\\( R = 1 \\)为\\( I(R) \\)的极大值点，也是最大值点，最大值为\\( I(1) = \\frac{3}{2}\\pi \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10488/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设列向量组\\(\\alpha_1,\\alpha_2,\\alpha_3\\)与\\(\\beta_1,\\beta_2,\\beta_3\\)分别是3维向量空间\\(\\mathbb{R}^3\\)的两组基，且\\(\\beta_1 = \\alpha_1\\)，\\(\\beta_2 = \\alpha_1 + 2\\alpha_2\\)，\\(\\beta_3 = \\alpha_1 + 2\\alpha_2 + 3\\alpha_3\\)，则由\\(\\beta_1,\\beta_2,\\beta_3\\)到\\(\\alpha_1,\\alpha_2,\\alpha_3\\)的过渡矩阵为______。",
+          "options": [],
+          "answer": "\\(\\begin{bmatrix} 1 & -\\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{2} & -\\frac{1}{3} \\\\ 0 & 0 & \\frac{1}{3} \\end{bmatrix}\\)\n\n解析 由已知，有\\((\\beta_1,\\beta_2,\\beta_3)=(\\alpha_1,\\alpha_2,\\alpha_3)\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 2 & 2 \\\\ 0 & 0 & 3 \\end{bmatrix}\\stackrel{记}{=}(\\alpha_1,\\alpha_2,\\alpha_3)P\\)，故\\((\\alpha_1,\\alpha_2,\\alpha_3)=(\\beta_1,\\beta_2,\\beta_3)P^{-1}\\)，\\(P^{-1}=\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 2 & 2 \\\\ 0 & 0 & 3 \\end{bmatrix}^{-1}=\\begin{bmatrix} 1 & -\\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{2} & -\\frac{1}{3} \\\\ 0 & 0 & \\frac{1}{3} \\end{bmatrix}\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10489/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题） 设\\( X_1, X_2, \\cdots, X_n \\)为来自总体\\( N(0,1) \\)的简单随机样本，\\( \\overline{X} \\)为样本均值，\\( S^2 \\)为样本方差，记\\( T = \\frac{1}{n}(\\overline{X} - S) \\)，则\\( E(T^2) = \\)______。",
+          "options": [],
+          "answer": "\\(\\frac{1}{n^2} + \\frac{1}{n^3}\\)\n\n解析 \\( E(T^2) = E\\left[ \\left( \\frac{\\overline{X} - S}{n} \\right)^2 \\right] = \\frac{1}{n^2}E\\left[ (\\overline{X} - S)^2 \\right] \\)\n\n\\( = \\frac{1}{n^2}\\left[ E(\\overline{X}^2 - 2\\overline{X}S + S^2) \\right] = \\frac{1}{n^2}\\left[ E(\\overline{X}^2) - 2E(\\overline{X}S) + E(S^2) \\right] \\)\n\n依题设，知\\( E\\overline{X} = EX = 0 \\)，\\( D\\overline{X} = \\frac{1}{n} \\)，\\( E(S^2) = DX = 1 \\)。\n\n又\\( \\overline{X} \\)与\\( S^2 \\)相互独立，故\\( \\overline{X} \\)与\\( S \\)相互独立，所以\n\n\\( E(\\overline{X}^2) = D\\overline{X} + (E\\overline{X})^2 = \\frac{1}{n} + 0 = \\frac{1}{n} \\)，\n\n\\( E(\\overline{X}S) = E\\overline{X} \\cdot ES = 0 \\)。\n\n故\\( E(T^2) = \\frac{1}{n^2}\\left( \\frac{1}{n} - 0 + 1 \\right) = \\frac{1}{n^2} + \\frac{1}{n^3} \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10490/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）设$f(x)$在$[1,+\\infty)$上可导，$f(1)=2$，且满足$\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2+t)}{(2x-1)t}=1-2\\ln x$。\n\n求$f(x)$及$f(x)$的极值。",
+          "options": [],
+          "answer": "### 解析\n\n由$\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2+t)}{(2x-1)t}=1-2\\ln x$，有\n\n$\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2+t)}{t}=(2x-1)(1-2\\ln x)$。\n\n而\n\n$\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2+t)}{t}$\n\n$=\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2)}{t}-\\lim\\limits_{t\\to 0}\\frac{f(x^2+t)-f(x^2)}{t}$\n\n$=[f(x^2)]'-f'(x^2)=f'(x^2)\\cdot 2x - f'(x^2)=f'(x^2)(2x-1)$。\n\n故$f'(x^2)(2x-1)=(2x-1)(1-2\\ln x)$，从而$f'(x^2)=1-\\ln x^2$，于是$f'(x)=1-\\ln x$，\n\n$f(x)=\\int (1-\\ln x)dx = x - \\int \\ln x dx = 2x - x\\ln x + c$。\n\n由$f(1)=2$，得$c=0$，故$f(x)=2x - x\\ln x$。\n\n令$f'(x)=1-\\ln x=0$，得$x=e$，又$f''(e)=-\\frac{1}{e}<0$，知$f(e)=e$为$f(x)$的极大值。\n\n【注】$\\lim\\limits_{t\\to 0}\\frac{f[(x+t)^2]-f(x^2)}{t}=\\lim\\limits_{t\\to 0}\\frac{f(x^2+2xt+t^2)-f(x^2)}{2xt+t^2}\\cdot \\frac{2xt+t^2}{t}=f'(x^2)\\cdot 2x$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10491/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）设可微函数$f(x,y)$满足$\\mathrm{d}f(x,y) = (3x^2 - 2ax)\\mathrm{d}x + (3y^2 - 2ay)\\mathrm{d}y(a > 0)$，且$f(0,0) = 0$.\n\n（Ⅰ）求$f(x,y)$；\n\n（Ⅱ）若$f(x,y)$有极小值$-8$，求$a$的值.",
+          "options": [],
+          "answer": "解析 （Ⅰ）由\n\n$\\mathrm{d}f(x,y) = (3x^2 - 2ax)\\mathrm{d}x + (3y^2 - 2ay)\\mathrm{d}y$\n\n$= \\mathrm{d}(x^3 - ax^2) + \\mathrm{d}(y^3 - ay^2)$\n\n$= \\mathrm{d}(x^3 + y^3 - ax^2 - ay^2 + c)$，\n\n知$f(x,y) = x^3 + y^3 - ax^2 - ay^2 + c$. 由$f(0,0) = 0$，得$c = 0$.\n\n故$f(x,y) = x^3 + y^3 - ax^2 - ay^2$.\n\n（Ⅱ）由$\\begin{cases} f'_x = 3x^2 - 2ax = 0, \\\\ f'_y = 3y^2 - 2ay = 0, \\end{cases}$得$(0,0)$，$(0,\\frac{2}{3}a)$，$(\\frac{2}{3}a,0)$，$(\\frac{2}{3}a,\\frac{2}{3}a)$，且$f_{xx}'' = 6x - 2a$，$f_{xy}''=0,f_{yy}''=6y - 2a$.\n\n对于点$(0,0)$，有$A = -2a < 0$，$B = 0$，$C = -2a$，$AC - B^2 = 4a^2 > 0$，故$f(0,0) = 0$为极大值.\n\n对于点$(0,\\frac{2}{3}a)$，有$A = -2a$，$B = 0$，$C = 2a$，$AC - B^2 = -4a^2 < 0$，故$f(x,y)$在点$(0,\\frac{2}{3}a)$处不取得极值.\n\n同理，在$(\\frac{2}{3}a,0)$处，$f(x,y)$不取得极值.\n\n对于点$(\\frac{2}{3}a,\\frac{2}{3}a)$，$A = 2a > 0$，$B = 0$，$C = 2a$，$AC - B^2 = 4a^2 > 0$，故$f(\\frac{2}{3}a,\\frac{2}{3}a) = -\\frac{4}{27} \\cdot 2a^3 = -8$为极小值，即$a^3 = 27$，得$a = 3$.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10492/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（本题满分12分）设\\( f(x)(x \\geq 0) \\)为非负连续函数，当\\( x \\geq 0 \\)时，有\\( \\int_{0}^{x} 4t f(x^2) f(x^2 - t^2) dt = x^6 \\)。\n\n（Ⅰ）求\\( f(x) \\)的表达式；\n\n（Ⅱ）求级数\\( \\sum_{n=1}^{\\infty} 2^{1-n} f(n^2) \\)的和。",
+          "options": [],
+          "answer": "解析 （Ⅰ）因\\( \\int_{0}^{x} 4t f(x^2) f(x^2 - t^2) dt = 2f(x^2) \\int_{0}^{x} 2t f(x^2 - t^2) dt \\)，\n\n又因\\( \\int_{0}^{x} 2t f(x^2 - t^2) dt \\stackrel{x^2 - t^2 = s}{=} \\int_{0}^{x^2} f(s) ds = \\int_{0}^{x^2} f(t) dt \\)，\n\n故原等式化为\\( 2f(x^2) \\int_{0}^{x^2} f(t) dt = x^6 \\)，记\\( x^2 = u \\)，上式可化为\n\n\\[ 2f(u) \\int_{0}^{u} f(t) dt = u^3 \\] ①\n\n令\\( F(u) = \\int_{0}^{u} f(t) dt \\)，则①式为\n\n\\[ 2F'(u)F(u) = u^3 \\]\n\n上式两边同时积分，得\\( F^2(u) = \\frac{1}{4} u^4 + C \\)。\n\n由\\( F(0) = 0 \\)，得\\( C = 0 \\)，故\\( F(u) = \\frac{1}{2} u^2 \\)（因\\( F(u) \\geq 0 \\)），即\\( \\int_{0}^{u} f(t) dt = \\frac{1}{2} u^2 \\)。\n\n上式两边同时对\\( u \\)求导，得\\( f(u) = u \\)，即\n\n\\[ f(x) = x (x \\geq 0) \\]\n\n（Ⅱ）由（Ⅰ），知\\( \\sum_{n=1}^{\\infty} 2^{1-n} f(n^2) = \\sum_{n=1}^{\\infty} \\frac{n^2}{2^{n-1}} \\)，\n\n构造幂级数\\( S(x) = \\sum_{n=1}^{\\infty} n^2 x^{n-1} \\)，可求得其收敛半径为1，且当\\( x = \\pm 1 \\)时，级数发散，故其收敛域为\\( (-1,1) \\)。\n\n\\( S(x) = \\sum_{n=1}^{\\infty} n^2 x^{n-1} = \\sum_{n=1}^{\\infty} (n x^n)' = \\left( \\sum_{n=1}^{\\infty} n x^n \\right)' = \\left( x \\sum_{n=1}^{\\infty} n x^{n-1} \\right)' \\)\n\n记\\( S_1(x) = \\sum_{n=1}^{\\infty} n x^{n-1} \\)，则\\( S_1(x) = \\sum_{n=1}^{\\infty} (x^n)' = \\left( \\sum_{n=1}^{\\infty} x^n \\right)' = \\left( \\frac{x}{1 - x} \\right)' = \\frac{1}{(1 - x)^2} \\)，\n\n故\\( S(x) = [x S_1(x)]' = \\left[ x \\cdot \\frac{1}{(1 - x)^2} \\right]' = \\frac{1 + x}{(1 - x)^3} \\)，\\(| x | < 1\\)。\n\n令\\( x = \\frac{1}{2} \\)，则\\( \\sum_{n=1}^{\\infty} \\frac{n^2}{2^{n-1}} = S\\left( \\frac{1}{2} \\right) = \\frac{1 + \\frac{1}{2}}{\\left( 1 - \\frac{1}{2} \\right)^3} = 12 \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10493/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）设$f(x)$在$[0,1]$上二阶可导，$f(0)=f(1)=0$，$f''(x)>0$，且$f(x)$在$[0,1]$上的最小值为$m<0$．\n\n（Ⅰ）证明：方程$nf'(x)=m$（$n$为正整数）在$x\\in(0,1)$内有唯一实根$x_n$；\n\n（Ⅱ）在第（Ⅰ）问的基础上，证明：$\\lim\\limits_{n\\to\\infty}x_n$存在，并求$\\lim\\limits_{n\\to\\infty}f(x_n)$．",
+          "options": [],
+          "answer": "解析 （Ⅰ）设$f(x_0)=m$，由$f(0)=f(1)=0$，$m<0$，知$x_0\\in(0,1)$，且$f'(x_0)=0$．\n\n由拉格朗日中值定理，知存在$\\xi\\in(0,x_0)$，使得\n\n$$f'(\\xi)=\\frac{f(x_0)-f(0)}{x_0-0}=\\frac{m}{x_0}<\\frac{m}{n}<f'(x_0).$$\n\n对$f'(x)$在$[\\xi,x_0]$上应用介值定理，存在$x_n\\in(\\xi,x_0)\\subset(0,1)$，使得$f'(x_n)=\\frac{m}{n}$，\n\n即$nf'(x)=m$在$x\\in(0,1)$内有实根$x_n$．又$f''(x)>0$，知$f'(x)$在$(0,1)$内严格单调递增．故$x_n$是唯一的．\n\n（Ⅱ）由$f'(x)$严格单调递增，知\n\n$$f'(x_n)=\\frac{m}{n}<\\frac{m}{n+1}=f'(x_{n+1}),$$\n\n故$x_n<x_{n+1}<x_0<1$，$\\{x_n\\}$单调递增有上界，由单调有界准则，知$\\lim\\limits_{n\\to\\infty}x_n$存在．\n\n记$\\lim\\limits_{n\\to\\infty}x_n=A$，则$0<A\\leq x_0$，由$f'(x)$在$(0,1)$内连续，知\n\n$$f'(A)=f'\\left(\\lim\\limits_{n\\to\\infty}x_n\\right)=\\lim\\limits_{n\\to\\infty}f'(x_n)=\\lim\\limits_{n\\to\\infty}\\frac{m}{n}=0.$$\n\n由$f'(x)$严格单调递增，知$A=x_0$．\n\n故$\\lim\\limits_{n\\to\\infty}f(x_n)=f\\left(\\lim\\limits_{n\\to\\infty}x_n\\right)=f(x_0)=m$．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10494/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（本题满分12分）设矩阵$\\boldsymbol{A}=\\begin{bmatrix}a&1&1\\\\0&a - 1&0\\\\1&1&a\\end{bmatrix}$不可逆，$\\boldsymbol{\\beta}=\\begin{bmatrix}b\\\\1\\\\1\\end{bmatrix}$。已知方程组$\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}$的解均是$\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}$的解。\n\n（Ⅰ）求$a,b$的值；\n\n（Ⅱ）求可逆矩阵$\\boldsymbol{P}$，使得$\\boldsymbol{P}^{-1}\\boldsymbol{AP}=\\boldsymbol{\\Lambda}$。21.",
+          "options": [],
+          "answer": "解析 （Ⅰ）由$\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}$的解均是$\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}$的解，知$\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}$与$\\begin{cases}\\boldsymbol{A}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}\\\\\\boldsymbol{\\beta}^{\\mathrm{T}}\\boldsymbol{X}=\\boldsymbol{0}\\end{cases}$同解，\n\n故$\\mathrm{r}(\\boldsymbol{A}^{\\mathrm{T}})=\\mathrm{r}\\begin{pmatrix}\\boldsymbol{A}^{\\mathrm{T}}\\\\\\boldsymbol{\\beta}^{\\mathrm{T}}\\end{pmatrix}$，即$\\mathrm{r}(\\boldsymbol{A})=\\mathrm{r}(\\boldsymbol{A},\\boldsymbol{\\beta})$。对$(\\boldsymbol{A},\\boldsymbol{\\beta})$作初等行变换，有\n\n$(\\boldsymbol{A},\\boldsymbol{\\beta})=\\begin{bmatrix}a&1&1&b\\\\0&a - 1&0&1\\\\1&1&a&1\\end{bmatrix}\\to\\begin{bmatrix}1&1&a&1\\\\0&a - 1&0&1\\\\a&1&1&b\\end{bmatrix}$\n\n$\\to\\begin{bmatrix}1&1&a&1\\\\0&a - 1&0&1\\\\0&1 - a&1 - a^2&b - a\\end{bmatrix}\\to\\begin{bmatrix}1&1&a&1\\\\0&a - 1&0&1\\\\0&0&1 - a^2&b - a + 1\\end{bmatrix}$。\n\n当$a=1$时，$\\mathrm{r}(\\boldsymbol{A})=1$，$\\mathrm{r}(\\boldsymbol{A},\\boldsymbol{\\beta})=2$，故$a=1$舍去。\n\n当$a=-1$时，$(\\boldsymbol{A},\\boldsymbol{\\beta})\\to\\begin{bmatrix}1&1&-1&1\\\\0&-2&0&1\\\\0&0&0&b + 2\\end{bmatrix}$，故$b=-2$，有$\\mathrm{r}(\\boldsymbol{A})=\\mathrm{r}(\\boldsymbol{A},\\boldsymbol{\\beta})=2$。\n\n综上所述，$a=-1$，$b=-2$。\n\n（Ⅱ）由（Ⅰ）知，$\\boldsymbol{A}=\\begin{bmatrix}-1&1&1\\\\0&-2&0\\\\1&1&-1\\end{bmatrix}$，则由\n\n$|\\lambda\\boldsymbol{E}-\\boldsymbol{A}|=\\begin{vmatrix}\\lambda + 1&-1&-1\\\\0&\\lambda + 2&0\\\\-1&-1&\\lambda + 1\\end{vmatrix}=\\lambda(\\lambda + 2)^2=0$，\n\n得$\\boldsymbol{A}$的特征值为$\\lambda_1=0$，$\\lambda_2=\\lambda_3=-2$。\n\n由$0\\boldsymbol{E}-\\boldsymbol{A}=\\begin{bmatrix}1&-1&-1\\\\0&2&0\\\\-1&-1&1\\end{bmatrix}\\to\\begin{bmatrix}1&0&-1\\\\0&1&0\\\\0&0&0\\end{bmatrix}$，得$\\boldsymbol{\\alpha}_1=(1,0,1)^{\\mathrm{T}}$。\n\n由$-2\\boldsymbol{E}-\\boldsymbol{A}=\\begin{bmatrix}-1&-1&-1\\\\0&0&0\\\\-1&-1&-1\\end{bmatrix}\\to\\begin{bmatrix}1&1&1\\\\0&0&0\\\\0&0&0\\end{bmatrix}$，得$\\boldsymbol{\\alpha}_2=(-1,1,0)^{\\mathrm{T}}$，$\\boldsymbol{\\alpha}_3=(-1,0,1)^{\\mathrm{T}}$。\n\n令$\\boldsymbol{P}=(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3)=\\begin{bmatrix}1&-1&-1\\\\0&1&0\\\\1&0&1\\end{bmatrix}$，则$\\boldsymbol{P}^{-1}\\boldsymbol{AP}=\\begin{bmatrix}0&0&0\\\\0&-2&0\\\\0&0&-2\\end{bmatrix}=\\boldsymbol{\\Lambda}$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10495/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（本题满分12分）设随机变量$X_1,X_2,X_3$相互独立，且均服从参数为$\\lambda(\\lambda>0)$的指数分布.$X = \\min(X_1,X_2)$，\n\n$Y$的分布律为$P\\{Y = -1\\} = \\frac{1}{3}$，$P\\{Y = 1\\} = \\frac{2}{3}$，且$X$与$Y$相互独立，记$T = \\max(X,X_3)$.\n\n（Ⅰ）求$Z = XY$的概率密度$f_Z(z)$；\n\n（Ⅱ）若$T_1,T_2,\\cdots,T_n$为来自总体$T$的简单随机样本，求$\\lambda$的矩估计量$\\hat{\\lambda}$.",
+          "options": [],
+          "answer": "**解析 （Ⅰ）** 先求$X$的概率密度.\n\n记$X$的分布函数为$F_X(x)$，则当$x \\leq 0$时，$F_X(x) = 0$；当$x > 0$时，有\n\n$$F_X(x) = P\\{\\min(X_1,X_2) \\leq x\\} = 1 - P\\{X_1 > x, X_2 > x\\}$$\n\n$$= 1 - P\\{X_1 > x\\}P\\{X_2 > x\\} = 1 - \\mathrm{e}^{-\\lambda x} \\cdot \\mathrm{e}^{-\\lambda x} = 1 - \\mathrm{e}^{-2\\lambda x}.$$\n\n故$X$的概率密度为\n\n$$f_X(x) = F_X'(x) = \\begin{cases} 2\\lambda \\mathrm{e}^{-2\\lambda x}, & x > 0, \\\\ 0, & x \\leq 0. \\end{cases}$$\n\n$Z$的分布函数为\n\n$$F_Z(z) = P\\{XY \\leq z\\} = P\\{XY \\leq z, Y = -1\\} + P\\{XY \\leq z, Y = 1\\}$$\n\n$$= P\\{X \\geq -z, Y = -1\\} + P\\{X \\leq z, Y = 1\\}$$\n\n$$= P\\{X \\geq -z\\} \\cdot P\\{Y = -1\\} + P\\{X \\leq z\\} \\cdot P\\{Y = 1\\}$$\n\n$$= \\frac{1}{3}[1 - F_X(-z)] + \\frac{2}{3}F_X(z)$$\n\n故$f_Z(z) = F_Z'(z) = \\frac{1}{3}f_X(-z) + \\frac{2}{3}f_X(z)$.\n\n当$z < 0$，即$-z > 0$时，有$f_X(-z) = 2\\lambda \\mathrm{e}^{2\\lambda z}$，$f_X(z) = 0$.\n\n当$z > 0$，即$-z < 0$时，有$f_X(z) = 2\\lambda \\mathrm{e}^{-2\\lambda z}$，$f_X(-z) = 0$.\n\n当$z = 0$时，$f_Z(z) = 0$，故\n\n$$f_Z(z) = \\begin{cases} \\frac{2}{3}\\lambda \\mathrm{e}^{2\\lambda z}, & z < 0, \\\\ 0, & z = 0, \\\\ \\frac{4}{3}\\lambda \\mathrm{e}^{-2\\lambda z}, & z > 0. \\end{cases}$$\n\n**（Ⅱ）** 先求$T = \\max(X, X_3)$的概率密度，由$X = \\min(X_1,X_2)$与$X_3$相互独立，有\n\n$$F_T(t) = P\\{X \\leq t\\} \\cdot P\\{X_3 \\leq t\\} = (1 - \\mathrm{e}^{-2\\lambda t})(1 - \\mathrm{e}^{-\\lambda t}), t > 0.$$\n\n故$f_T(t) = F_T'(t) = \\begin{cases} \\lambda \\mathrm{e}^{-\\lambda t} + 2\\lambda \\mathrm{e}^{-2\\lambda t} - 3\\lambda \\mathrm{e}^{-3\\lambda t}, & t > 0, \\\\ 0, & t \\leq 0, \\end{cases}$\n\n$$ET = \\int_0^{+\\infty} t(\\lambda \\mathrm{e}^{-\\lambda t} + 2\\lambda \\mathrm{e}^{-2\\lambda t} - 3\\lambda \\mathrm{e}^{-3\\lambda t}) \\mathrm{d}t = \\frac{1}{\\lambda} + \\frac{1}{2\\lambda} - \\frac{1}{3\\lambda} = \\frac{7}{6\\lambda}.$$\n\n于是$\\lambda$的矩估计量为$\\hat{\\lambda} = \\frac{7}{6\\bar{T}}(\\bar{T} = \\frac{1}{n}\\sum_{i=1}^n T_i)$.\n\n【注】 第（Ⅱ）问中的计算用到了$\\Gamma$函数，$\\int_0^{+\\infty} x^{\\alpha - 1}\\mathrm{e}^{-x} \\mathrm{d}x = \\Gamma(\\alpha), \\alpha > 0$.\n\n特别地，$\\Gamma(n + 1) = n!$（$n$为正整数）.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/10496/"
+        }
+      ]
+    }
+  ]
+}

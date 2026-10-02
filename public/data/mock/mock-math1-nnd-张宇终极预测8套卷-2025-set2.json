@@ -1,0 +1,521 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2025,
+  "paperNo": 2,
+  "paperKind": "testPaper",
+  "title": "2025 张宇终极预测8套卷（二）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（二）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/35250/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "设\\( f(x)=\\int_{0}^{\\vert\\sin x\\vert}e^{t^2}dt,g(x)=\\int_{0}^{\\vert x\\vert}\\sin t^2dt \\)，则在\\((-\\pi,\\pi)\\)内，",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( f(x) \\)是可导的奇函数."
+            },
+            {
+              "key": "B",
+              "text": "\\( g(x) \\)是可导的偶函数."
+            },
+            {
+              "key": "C",
+              "text": "\\( f(x) \\)是奇函数且\\( f^\\prime(0) \\)不存在."
+            },
+            {
+              "key": "D",
+              "text": "\\( g(x) \\)是偶函数且\\( g^\\prime(0) \\)不存在."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 令\\( f_1(x)=\\int_{0}^{x}e^{t^2}dt,g_1(x)=\\vert\\sin x\\vert \\)，则\\( f(x)=f_1[g_1(x)] \\)， \\(\\frac{f_1[g_1(x)] - f_1[g_1(0)]}{x - 0}=\\frac{\\int_{0}^{\\vert\\sin x\\vert}e^{t^2}dt}{x} \\)， \\( f_+^\\prime(0)=\\lim\\limits_{x \\to 0^+}\\frac{\\int_{0}^{\\sin x}e^{t^2}dt}{x}=\\lim\\limits_{x \\to 0^+}e^{(\\sin x)^2} \\cdot \\cos x = 1 \\)， \\( f_-^\\prime(0)=\\lim\\limits_{x \\to 0^-}\\frac{\\int_{0}^{-\\sin x}e^{t^2}dt}{x}=\\lim\\limits_{x \\to 0^-}e^{(-\\sin x)^2} \\cdot (-\\cos x)= - 1 \\)。 故\\( f^\\prime(0) \\)不存在，又显然，在\\((-\\pi,\\pi)\\)内，当\\( x\\neq0 \\)时，\\( f^\\prime(x) \\)存在，且\\( g_1(x) \\)是偶函数，\\( f_1(x) \\)是奇函数，故\\( f(x) \\)是偶函数。 令\\( f_2(x)=\\int_{0}^{x}\\sin t^2dt,g_2(x)=\\vert x\\vert \\)，则\\( g(x)=f_2[g_2(x)] \\)， \\( g_+^\\prime(0)=\\lim\\limits_{x \\to 0^+}\\frac{\\int_{0}^{x}\\sin t^2dt}{x}=\\lim\\limits_{x \\to 0^+}\\sin x^2 = 0 \\)， \\( g_-^\\prime(0)=\\lim\\limits_{x \\to 0^-}\\frac{\\int_{0}^{-x}\\sin t^2dt}{x}=\\lim\\limits_{x \\to 0^-}\\sin(-x)^2 \\cdot (-1)= 0 \\)。 故\\( g^\\prime(0) \\)存在，又显然，在\\((-\\pi,\\pi)\\)内，当\\( x\\neq0 \\)时，\\( g^\\prime(x) \\)存在，且\\( g_2(x) \\)是偶函数，\\( f_2(x) \\)是奇函数，故\\( g(x) \\)是偶函数。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9374/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设\\( b\\gt0\\gt a \\)，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( ae^a(e^b - 1)\\gt be^b(e^a - 1) \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( ae^a(e^b - 1)\\lt be^b(e^a - 1) \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( be^a(e^b - 1)\\gt ae^b(e^a - 1) \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( be^a(e^b - 1)\\lt ae^b(e^a - 1) \\)."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 令\\( f(x)=\\frac{\\int_{0}^{x}te^t dt}{\\int_{0}^{x}e^t dt}(x\\neq0) \\)，则 \\( f^\\prime(x)=\\frac{xe^x \\cdot \\int_{0}^{x}e^t dt - \\int_{0}^{x}te^t dt \\cdot e^x}{(e^x - 1)^2} \\) \\(=\\frac{e^x(\\int_{0}^{x}xe^t dt - \\int_{0}^{x}te^t dt)}{(e^x - 1)^2} \\) \\(=\\frac{e^x \\cdot \\int_{0}^{x}(x - t)e^t dt}{(e^x - 1)^2}\\gt0 \\)， 故\\( f(x) \\)在\\((-\\infty,0),(0,+\\infty)\\)上分别单调递增，又\\(\\lim\\limits_{x \\to 0}f(x)=\\lim\\limits_{x \\to 0}\\frac{xe^x}{e^x}=0 \\)，所以当\\( b\\gt0\\gt a \\)时，\\( f(b)\\gt\\lim\\limits_{x \\to 0^+}f(x)=\\lim\\limits_{x \\to 0^-}f(x)\\gt f(a) \\)，即\\(\\frac{\\int_{0}^{b}te^t dt}{\\int_{0}^{b}e^t dt}\\gt\\frac{\\int_{0}^{a}te^t dt}{\\int_{0}^{a}e^t dt} \\)，整理得\\( ae^a(e^b - 1)\\gt be^b(e^a - 1) \\)。故A正确，B错误。 对于选项C，D，构造函数\\( g(x)=\\frac{x(e^x - 1)}{e^x} \\)，求导得\\( g^\\prime(x)=\\frac{e^x - 1 + x}{e^x}\\begin{cases}\\gt0, & x\\gt0 \\\\ \\lt0, & x\\lt0 \\end{cases} \\)，得\\( g(x) \\)在\\((0,+\\infty)\\)上单调递增，在\\((-\\infty,0)\\)上单调递减，无法判断\\( g(a),g(b) \\)的大小。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9375/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设\\(\\Gamma\\)为曲面\\( x^2 + y^2 + z^2 = a^2(a\\gt0) \\)与平面\\( x + y + z = 0 \\)的交线，则\\(\\oint_{\\Gamma}x(1 + y)ds = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\frac{\\pi}{6}a^3 \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(-\\frac{\\pi}{6}a^3 \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{\\pi}{3}a^3 \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(-\\frac{\\pi}{3}a^3 \\)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 由轮换对称性知，\\(\\oint_{\\Gamma}x ds = \\oint_{\\Gamma}y ds = \\oint_{\\Gamma}z ds \\)，故\\(\\oint_{\\Gamma}x ds = \\frac{1}{3}\\oint_{\\Gamma}(x + y + z)ds = 0 \\)。 \\(\\oint_{\\Gamma}xyds = \\oint_{\\Gamma}xzds = \\oint_{\\Gamma}yzds = \\frac{1}{3}\\oint_{\\Gamma}(xy + yz + zx)ds \\) \\(=\\frac{1}{6}\\oint_{\\Gamma}[(x + y + z)^2 - (x^2 + y^2 + z^2)]ds \\) \\(=-\\frac{1}{6}a^2 \\cdot 2\\pi a = -\\frac{\\pi}{3}a^3 \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9376/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设\\( z = z(x,y) \\)由\\(\\begin{cases}x = ue^v \\\\ y = uv,(u\\gt0,v\\gt1) \\\\ z = v \\end{cases}\\)所确定，则\\(\\frac{\\partial^2 z}{\\partial x\\partial y} = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\frac{xy}{z(1 - z)^3} \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{xy}{z(z - 1)^3} \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{z}{xy(1 - z)^3} \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(\\frac{z}{xy(z - 1)^3} \\)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 由于\\(\\frac{y}{x}=\\frac{v}{e^v}=\\frac{z}{e^z} \\)，故 \\(\\frac{xdy - ydx}{x^2}=\\frac{e^z dz - ze^z dz}{(e^z)^2}=\\frac{1 - z}{e^z}dz \\)， 于是 \\( dz = \\frac{e^z xdy - e^z ydx}{x^2(1 - z)} \\) \\(=-\\frac{e^z y}{x^2(1 - z)}dx + \\frac{e^z x}{x^2(1 - z)}dy \\) \\(=-\\frac{e^z \\cdot \\frac{y}{x}}{x(1 - z)}dx + \\frac{e^z \\cdot \\frac{y}{x}}{y(1 - z)}dy \\) \\(=-\\frac{z}{x(1 - z)}dx + \\frac{z}{y(1 - z)}dy \\)， 即 \\(\\frac{\\partial z}{\\partial x}=-\\frac{z}{x(1 - z)},\\frac{\\partial z}{\\partial y}=\\frac{z}{y(1 - z)} \\)， 则 \\(\\frac{\\partial^2 z}{\\partial x\\partial y}=\\frac{\\partial(\\frac{\\partial z}{\\partial x})}{\\partial y}=-\\frac{1}{x}\\frac{\\partial(\\frac{z}{1 - z})}{\\partial y} \\) \\(=-\\frac{1}{x}(\\frac{z}{1 - z})_z^\\prime \\cdot \\frac{\\partial z}{\\partial y} \\) \\(=-\\frac{1}{x} \\cdot \\frac{1}{(1 - z)^2} \\cdot \\frac{z}{y(1 - z)} \\) \\(=\\frac{-z}{xy(1 - z)^3} \\) \\(=\\frac{z}{xy(z - 1)^3} \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9377/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设2阶矩阵\\( A \\)的特征值均为实数，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\([\\text{tr}(A)]^2\\geq\\vert A\\vert \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\([\\text{tr}(A)]^2\\leq\\vert A\\vert \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\([\\frac{\\text{tr}(A)}{2}]^2\\geq\\vert A\\vert \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\([\\frac{\\text{tr}(A)}{2}]^2\\leq\\vert A\\vert \\)."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 设\\( A = \\begin{pmatrix}a_{11}&a_{12} \\\\ a_{21}&a_{22} \\end{pmatrix} \\)，则 \\(\\vert\\lambda E - A\\vert = \\lambda^2 - (a_{11} + a_{22})\\lambda + a_{11}a_{22} - a_{12}a_{21} = \\lambda^2 - \\text{tr}(A)\\lambda + \\vert A\\vert \\)。 又矩阵\\( A \\)的特征值均为实数，故\\(\\Delta = [\\text{tr}(A)]^2 - 4\\vert A\\vert\\geq0 \\)，即\\([\\frac{\\text{tr}(A)}{2}]^2\\geq\\vert A\\vert \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9378/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "设\\( A \\)是\\( n \\)阶矩阵，\\( b \\)是\\( n \\)维列向量且与\\( A^T x = 0 \\)的解均正交，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( A^T x = 0 \\)的解与\\( A \\)的行向量正交."
+            },
+            {
+              "key": "B",
+              "text": "\\( Ax = 0 \\)的解与\\( A \\)的列向量正交."
+            },
+            {
+              "key": "C",
+              "text": "\\( A^T x = b \\)有解."
+            },
+            {
+              "key": "D",
+              "text": "\\( Ax = b \\)有解."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 设\\( A = (\\alpha_1,\\alpha_2,\\cdots,\\alpha_n) \\)，则\\( A^T = \\begin{pmatrix}\\alpha_1^T \\\\ \\alpha_2^T \\\\ \\vdots \\\\ \\alpha_n^T \\end{pmatrix} \\)。由\\( A^T x = 0 \\)可得\\(\\alpha_1^T x = 0,\\alpha_2^T x = 0,\\cdots,\\alpha_n^T x = 0 \\)，即\\( A \\)的列向量与\\( x \\)均正交。 又由\\( b \\)是\\( n \\)维列向量，且与\\( A^T x = 0 \\)的解均正交，则\\( b^T x = 0 \\)。由\\(\\begin{pmatrix}A^T \\\\ b^T \\end{pmatrix}x = 0 \\)，则\\( r(A^T)=r\\begin{pmatrix}A^T \\\\ b^T \\end{pmatrix} \\)，即\\( b \\)可以由\\( A \\)的列向量组线性表示，故\\( r(A)=r(A\\vert b) \\)，于是\\( Ax = b \\)有解。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9379/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "设\\( A \\)为\\( n \\)阶实对称矩阵，则“\\(\\vert A\\vert\\lt0 \\)”是“存在\\( n \\)维非零列向量\\(\\alpha \\)，使得\\(\\alpha^T A\\alpha\\lt0 \\)”的",
+          "options": [
+            {
+              "key": "A",
+              "text": "充分非必要条件."
+            },
+            {
+              "key": "B",
+              "text": "必要非充分条件."
+            },
+            {
+              "key": "C",
+              "text": "充要条件."
+            },
+            {
+              "key": "D",
+              "text": "既非充分又非必要条件."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 由\\(\\vert A\\vert\\lt0 \\)，知\\( r(A)=n \\)，且存在可逆矩阵\\( C \\)，使得 \\( C^T AC = \\begin{pmatrix}1&\\ddots& & & \\\\ &1& & & \\\\ & & -1&\\ddots& \\\\ & & &\\ddots& -1 \\end{pmatrix}\\)（其中\\( 1 \\)有\\( p \\)个，\\( -1 \\)有奇数个，记为\\( n - p \\)） 令\\(\\beta = (\\underbrace{0,\\cdots,0}_{p个},1,0,\\cdots,0)^T \\)，取\\(\\alpha = C\\beta \\)，有 \\(\\alpha^T A\\alpha = (C\\beta)^T A(C\\beta) = \\beta^T C^T AC\\beta = - 1\\lt0 \\) 成立。 反之，取\\(\\alpha = \\begin{pmatrix}1 \\\\ 1 \\\\ \\vdots \\\\ 1 \\end{pmatrix},A = \\begin{pmatrix}-1&-1&\\cdots&-1 \\\\ -1&-1&\\cdots&-1 \\\\ \\vdots&\\vdots&\\vdots&\\vdots \\\\ -1&-1&\\cdots&-1 \\end{pmatrix} \\)，则\\(\\alpha^T A\\alpha = -n^2\\lt0 \\)，但\\(\\vert A\\vert = 0 \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9380/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设随机变量 X 与 Y 独立同分布，且都服从参数为 1 的指数分布.若\\[Z = \\begin{cases}2X, & X\\geqslant Y, \\\\ Y - 1, & X\\lt Y, \\end{cases}\\]则\\(E(Z) =\\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\frac{2}{7}\\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{7}{2}\\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{7}{4}\\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(\\frac{4}{7}\\)."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 法一 由题知，随机变量 X 与 Y 的联合概率密度为\\[f(x,y) = \\begin{cases}\\mathrm{e}^{-x - y}, & x\\gt 0,y\\gt 0, \\\\ 0, & \\text{其他}, \\end{cases}\\]故\\[E(Z) = \\int_{0}^{+\\infty}dy\\int_{0}^{y}(y - 1)\\mathrm{e}^{-x - y}dx + \\int_{0}^{+\\infty}dx\\int_{0}^{x}2x\\mathrm{e}^{-x - y}dy\\] \\[=\\int_{0}^{+\\infty}(y - 1)\\mathrm{e}^{-y}(1 - \\mathrm{e}^{-y})dy + \\int_{0}^{+\\infty}2x\\mathrm{e}^{-x}(1 - \\mathrm{e}^{-x})dx\\] \\[=\\int_{0}^{+\\infty}(3y - 1)(\\mathrm{e}^{-y} - \\mathrm{e}^{-2y})dy = \\frac{7}{4}.\\] 法二 当\\(X = x\\)时，\\(Z = \\begin{cases}2x, & x\\geqslant Y, \\\\ Y - 1, & x\\lt Y \\end{cases}\\)是 Y 的函数. \\[E(Z\\mid X = x) = \\int_{0}^{x}2x\\mathrm{e}^{-y}dy + \\int_{x}^{+\\infty}(y - 1)\\mathrm{e}^{-y}dy = 2x(1 - \\mathrm{e}^{-x}) + x\\mathrm{e}^{-x}\\] \\[= 2x - x\\mathrm{e}^{-x},\\]则\\(E(Z) = E[E(Z\\mid X)] = E(2X - X\\mathrm{e}^{-X}) = 2E(X) - E(X\\mathrm{e}^{-X}) = 2 - \\frac{1}{4} = \\frac{7}{4}.\\)",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9381/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设连续型随机变量 X 与 Y 独立同分布，且其分布函数\\(F(x)\\)为严格单调增加函数，若\\(E(X)\\)存在，且\\(E(\\vert X - Y\\vert) = 1\\)，则 X 与\\(F(X)\\)的协方差为",
+          "options": [
+            {
+              "key": "A",
+              "text": "0."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{1}{4}\\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{1}{2}\\)."
+            },
+            {
+              "key": "D",
+              "text": "1."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 由题意，知\\(F(X)\\sim U(0,1)\\)，则\\(E[F(X)] = \\frac{1}{2}\\)，且\\[E(\\vert X - Y\\vert) = E(\\max\\{X,Y\\}) - E(\\min\\{X,Y\\})\\] \\[=\\int_{-\\infty}^{+\\infty}m\\cdot 2F(m)f(m)dm - \\int_{-\\infty}^{+\\infty}n\\cdot 2[1 - F(n)]f(n)dn\\] \\[= 4\\int_{-\\infty}^{+\\infty}xF(x)f(x)dx - 2\\int_{-\\infty}^{+\\infty}xf(x)dx\\] \\[= 4\\{E[XF(X)] - E(X)E[F(X)]\\}\\] \\[= 4\\text{Cov}[X,F(X)] = 1,\\]故\\(\\text{Cov}[X,F(X)] = \\frac{1}{4}.\\)",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9382/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设\\(X_1,X_2,\\cdots,X_n\\)是来自均匀分布总体\\(U(0,\\theta)(\\theta\\gt 0)\\)的简单随机样本，原假设\\(H_0:\\theta\\geqslant 2\\)，备择假设\\(H_1:\\theta\\lt 2\\)，拒绝域为\\(W = \\{X_{(n)}\\leqslant a\\}\\)，其中\\(a\\gt 0\\)，\\(X_{(n)} = \\max\\{X_1,X_2,\\cdots,X_n\\}\\)，若犯第一类错误的概率的最大值为\\(\\frac{1}{3^n}\\)，则\\(a =\\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\frac{4}{3}\\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{2}{3}\\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{3}{4}\\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(\\frac{3}{2}\\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 \\(X_{(n)}\\sim F_{(n)}(x) = [F(x)]^n = \\left(\\frac{x}{\\theta}\\right)^n,0\\lt x\\lt \\theta\\)，故\\(\\alpha(\\theta) = P\\{X_{(n)}\\leqslant a\\mid \\theta\\geqslant 2\\} = \\left(\\frac{a}{\\theta}\\right)^n,\\theta\\geqslant 2\\)，\\(\\alpha_{\\max} = \\alpha(2) = \\left(\\frac{a}{2}\\right)^n = \\left(\\frac{1}{3}\\right)^n\\)，于是\\(a = \\frac{2}{3}.\\)",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9383/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设圆与曲线\\(x = y^2\\)在\\((0,0)\\)处有公切线且它们关于\\(y\\)的二阶导数值相同，则该圆的方程为______。",
+          "options": [],
+          "answer": "\\((x - \\frac{1}{2})^2 + y^2 = \\frac{1}{4}\\)\n因\\(x|_{y = 0} = 0\\)，\\(x'|_{y = 0} = 2y|_{y = 0} = 0\\)，\\(x''|_{y = 0} = 2 > 0\\)，故设圆的方程为\\((x - a)^2 + y^2 = a^2\\)。\n对该方程两边关于\\(y\\)求二阶导数，有\\(2(x - a)\\cdot x' + 2y = 0\\)，\\(2(x')^2 + 2(x - a)x'' + 2 = 0\\)。\n由于\\(x|_{y = 0} = 0\\)，\\(x'|_{y = 0} = 0\\)，\\(x''|_{y = 0} = 2\\)，故有\\(2\\cdot(-a)\\cdot2 + 2 = 0\\)，得\\(a = \\frac{1}{2}\\)。\n于是圆的方程为\\((x - \\frac{1}{2})^2 + y^2 = \\frac{1}{4}\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9384/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）设\\(x = t^3 + 2t + 1\\)，\\(\\int_{0}^{y + t} e^{-u^2} du = t\\)，则\\(\\left.\\frac{d^2 y}{dx^2}\\right\\rvert_{t = 0} = \\)______。",
+          "options": [],
+          "answer": "\\(\\boldsymbol{0}\\)",
+          "explanation": "由\\(\\int_{0}^{y + t} e^{-u^2} du = t\\)知，当\\(t = 0\\)时，\\(y = 0\\)。对\\(\\int_{0}^{y + t} e^{-u^2} du = t\\)两端关于\\(t\\)求导可得\\(e^{-(y + t)^2}\\left(\\frac{dy}{dt} + 1\\right) = 1\\)，所以\\(\\frac{dy}{dt} = e^{(y + t)^2} - 1\\) 。由参数方程求导法可得\\(\\frac{dy}{dx} = \\frac{\\frac{dy}{dt}}{\\frac{dx}{dt}} = \\frac{e^{(y + t)^2} - 1}{3t^2 + 2}\\) ，则\\(\\frac{d^2 y}{dx^2} = \\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)\\cdot \\frac{1}{\\frac{dx}{dt}} = \\frac{2(y + t)(3t^2 + 2)e^{(y + t)^2} - [e^{(y + t)^2} - 1]\\cdot 6t}{(3t^2 + 2)^3}\\) ，所以\\(\\left.\\frac{d^2 y}{dx^2}\\right\\rvert_{t = 0} = 0\\) 。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9385/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）设函数\\(f(x) = \\frac{x^2 - x - 1}{x^2(x + 1)}\\)的幂级数展开式为\\(\\sum_{n = 0}^{\\infty} a_n (x - 1)^n\\)，\\(x \\in (0,2)\\)，则\\(\\lim_{n \\to \\infty} \\frac{(-1)^n a_n}{\\sqrt{n^2 + 1}} = \\)______。",
+          "options": [],
+          "answer": "\\(\\boldsymbol{-1}\\)",
+          "explanation": "当\\(x \\in (0,2)\\)时，\\(f(x) = \\frac{x^2 - x - 1}{x^2(x + 1)} = \\frac{1}{1 + x} - \\frac{1}{x^2} = \\frac{1}{2}\\cdot \\frac{1}{1 + \\frac{x - 1}{2}} + \\left[\\frac{1}{1 + (x - 1)}\\right]'\\) \\( = \\sum_{n = 0}^{\\infty} \\frac{(-1)^n}{2^{n + 1}}(x - 1)^n + \\sum_{n = 0}^{\\infty} (n + 1)(-1)^{n + 1}(x - 1)^n\\) ，故\\(a_n = (-1)^{n + 1}\\left(n + 1 - \\frac{1}{2^{n + 1}}\\right)\\)，于是\\(\\lim_{n \\to \\infty} \\frac{(-1)^n a_n}{\\sqrt{n^2 + 1}} = \\lim_{n \\to \\infty} \\frac{1}{2^{n + 1}\\cdot \\sqrt{n^2 + 1}} - \\lim_{n \\to \\infty} \\frac{n + 1}{\\sqrt{n^2 + 1}} = -1\\) 。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9386/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）设\\(y = y(x)\\)满足\\(y'' + 2y' + y = e^{-x}\\)，\\(y(0) = y'(0) = 1\\)，则\\(\\int_{0}^{+\\infty} xdy = \\)______。",
+          "options": [],
+          "answer": "\\(-4\\)\n\\(y'' + 2y' + y = e^{-x}\\)的解为\\(y(x) = (C_1 + C_2x)e^{-x} + Ae^{-x}x^2\\)，\n故\\(y'(x) = (C_2 - C_1 - C_2x)e^{-x} - Ae^{-x}x^2 + 2Ae^{-x}x\\)。\n又\\(\\int_{0}^{+\\infty} (y'' + 2y' + y)dx = \\int_{0}^{+\\infty} e^{-x}dx = 1\\)，即\\(y'(+\\infty) - y'(0) + 2[y(+\\infty) - y(0)] + \\int_{0}^{+\\infty} ydx = 1\\)。\n又\\(y'(+\\infty) = 0\\)，\\(y(+\\infty) = 0\\)，\\(y(0) = y'(0) = 1\\)，故\\(\\int_{0}^{+\\infty} ydx = 1 + 1 + 2 = 4\\)，因此\\(\\int_{0}^{+\\infty} xdy = xy|_{0}^{+\\infty} - \\int_{0}^{+\\infty} ydx = -4\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9387/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设\\(x \\neq 0\\)，则\\(D_4 = \\begin{vmatrix} x & x & 0 & 0 \\\\ 1 & 1 + 2x & 2x & 0 \\\\ 0 & 2 & 2 + 3x & 3x \\\\ 0 & 0 & 3 & 3 + 4x \\end{vmatrix} = \\)______。",
+          "options": [],
+          "answer": "\\(\\boldsymbol{24x^4}\\)",
+          "explanation": "法一：利用行列式性质，\\(D_4 = x\\begin{vmatrix} 1 & 1 & 0 & 0 \\\\ 1 & 1 + 2x & 2x & 0 \\\\ 0 & 2 & 2 + 3x & 3x \\\\ 0 & 0 & 3 & 3 + 4x \\end{vmatrix} = x\\begin{vmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 2x & 2x & 0 \\\\ 0 & 2 & 2 + 3x & 3x \\\\ 0 & 0 & 3 & 3 + 4x \\end{vmatrix}\\) \\( = x\\cdot 2x\\begin{vmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 2 & 2 + 3x & 3x \\\\ 0 & 0 & 3 & 3 + 4x \\end{vmatrix} = x\\cdot 2x\\begin{vmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 3x & 3x \\\\ 0 & 0 & 3 & 3 + 4x \\end{vmatrix}\\) \\( = x\\cdot 2x\\cdot 3x\\begin{vmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 4x \\end{vmatrix} = x\\cdot 2x\\cdot 3x\\cdot 4x = 24x^4\\) 。\n法二：\\(D_4 = (3 + 4x)D_3 - 9xD_2 = (3 + 4x)[(2 + 3x)D_2 - 4xD_1] - 9xD_2\\) 。又\\(D_1 = x\\)，\\(D_2 = \\begin{vmatrix} x & x \\\\ 1 & 1 + 2x \\end{vmatrix} = 2x^2\\)，故\\(D_4 = (3 + 4x)[(2 + 3x)\\cdot 2x^2 - 4x^2] - 9x\\cdot 2x^2 = (3 + 4x)\\cdot 6x^3 - 18x^3 = 24x^4\\) 。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9388/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）甲口袋有1只黑球，2只白球，乙口袋有3只白球，每次从两口袋中各任取一球，交换后放另一口袋，则交换3次后，黑球仍在甲口袋中的概率为______。",
+          "options": [],
+          "answer": "\\(\\boldsymbol{\\frac{14}{27}}\\)",
+          "explanation": "设事件\\(A_i\\)为“第\\(i\\)次交换后黑球仍在甲口袋中”，记\\(p_i = P(A_i)\\)，\\(i = 0,1,2,\\cdots\\)，则有\\(p_0 = 1\\)，且\\(P(A_{i + 1} | A_i) = \\frac{2}{3}\\)，\\(P(A_{i + 1} | \\overline{A_i}) = \\frac{1}{3}\\) 。所以由全概率公式得递推公式，即\\(p_n = P(A_{n - 1})P(A_n | A_{n - 1}) + P(\\overline{A_{n - 1}})P(A_n | \\overline{A_{n - 1}}) = \\frac{2}{3}p_{n - 1} + \\frac{1}{3}(1 - p_{n - 1}) = \\frac{1}{3}p_{n - 1} + \\frac{1}{3}\\)，\\(n \\geq 1\\) 。令\\(p_n - a = \\frac{1}{3}(p_{n - 1} - a)\\)，\\(n \\geq 1\\)，对比递推公式，解得\\(a = \\frac{1}{2}\\)，得\\(p_n - \\frac{1}{2} = \\frac{1}{3}(p_{n - 1} - \\frac{1}{2})\\)，\\(n \\geq 1\\) 。将\\(p_0 = 1\\)代入上式可得\\(p_n - \\frac{1}{2} = \\left(\\frac{1}{3}\\right)^n \\frac{1}{2}\\) 。由此得\\(p_n = \\frac{1}{2}\\left[1 + \\left(\\frac{1}{3}\\right)^n\\right]\\)，\\(n = 1,2,\\cdots\\) 。当\\(n = 3\\)时，\\(p_3 = \\frac{1}{2}\\left(1 + \\frac{1}{27}\\right) = \\frac{14}{27}\\) 。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9389/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）求曲线\\( y = x^2\\left[\\frac{\\left(1 + \\frac{1}{x}\\right)^x}{e} - 1\\right] (x \\gt 0) \\)的斜渐近线.",
+          "options": [],
+          "answer": "17.",
+          "explanation": "\\( a = \\lim_{x \\to +\\infty} \\frac{y}{x} = \\lim_{x \\to +\\infty} x\\left[\\frac{\\left(1 + \\frac{1}{x}\\right)^x}{e} - 1\\right] \\)\n\\(\\stackrel{x = \\frac{1}{t}}{=} \\lim_{t \\to 0^+} \\frac{e^{\\frac{\\ln(1 + t)}{t} - 1} - 1}{t} \\)\n\\( = \\lim_{t \\to 0^+} \\frac{\\ln(1 + t) - t}{t^2} = -\\frac{1}{2} \\)，\n\\( b = \\lim_{x \\to +\\infty} \\left(y + \\frac{1}{2}x\\right) \\stackrel{x = \\frac{1}{t}}{=} \\lim_{t \\to 0^+} \\frac{2e^{\\frac{\\ln(1 + t)}{t} - 1} - 2 + t}{2t^2} \\)\n\\( = \\lim_{t \\to 0^+} \\frac{2\\left[e^{-\\frac{t}{2} + \\frac{t^2}{3} + o(t^2)} - 1\\right] + t}{2t^2} \\)\n\\( = \\lim_{t \\to 0^+} \\frac{2\\left\\{-\\frac{t}{2} + \\frac{t^2}{3} + o(t^2) + \\frac{1}{2}\\left[-\\frac{t}{2} + \\frac{t^2}{3} + o(t^2)\\right]^2 + o(t^2)\\right\\} + t}{2t^2} \\)\n\\( = \\lim_{t \\to 0^+} \\frac{\\frac{2}{3}t^2 + \\frac{1}{4}t^2 + o(t^2)}{2t^2} = \\frac{11}{24} \\)，\n故斜渐近线为\\( y = -\\frac{1}{2}x + \\frac{11}{24} \\).",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9390/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）设曲面\\(\\Sigma\\)由曲线\\( x = \\cos z, y = 0, -\\frac{\\pi}{2} \\leq z \\leq \\frac{\\pi}{2} \\)绕\\( z \\)轴旋转一周形成，计算\\(\\iint_{\\Sigma} \\sqrt{1 - x^2 - y^2} dS\\).",
+          "options": [],
+          "answer": "18.",
+          "explanation": "由题可知，曲面\\(\\Sigma\\)：\\( x^2 + y^2 = \\cos^2 z, -\\frac{\\pi}{2} \\leq z \\leq \\frac{\\pi}{2} \\)，\n如图所示，则\n\\( dS = \\sqrt{1 + (z'_x)^2 + (z'_y)^2}dxdy = \\sqrt{1 + \\frac{x^2 + y^2}{\\cos^2 z \\sin^2 z}}dxdy \\)\n\\( = \\sqrt{1 + \\frac{1}{\\sin^2 z}}dxdy \\).\n故 原式\\( = 2\\iint_{x^2 + y^2 \\leq 1} \\sqrt{1 - \\cos^2 z} \\cdot \\frac{\\sqrt{1 + \\sin^2 z}}{|\\sin z|}dxdy = 2\\iint_{x^2 + y^2 \\leq 1} \\sqrt{1 + \\sin^2 z}dxdy \\)\n\\( = 2\\iint_{x^2 + y^2 \\leq 1} \\sqrt{2 - x^2 - y^2}dxdy \\)\n\\( = 2\\int_{0}^{2\\pi} d\\theta \\int_{0}^{1} \\sqrt{2 - r^2} rdr = \\int_{0}^{2\\pi} \\frac{2}{3}(2 - r^2)^{\\frac{3}{2}}|_{1}^{0} d\\theta \\)\n\\( = \\frac{2}{3} \\cdot 2\\pi \\cdot (2\\sqrt{2} - 1) = \\frac{4\\pi}{3}(2\\sqrt{2} - 1) \\).",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9391/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "(1) 存在\\(\\xi \\in (0,1)\\)，使得对任意\\( x \\in (0,\\xi) \\)，有\\( f'(x) \\gt 0 \\)；\n\n(2) \\(\\int_{0}^{1} \\sqrt{1 + [f'(x)]^2} dx \\lt 3\\).",
+          "options": [],
+          "answer": "19.【证】 (1) 由\\( f(0) = f(1) \\)，根据罗尔定理，存在\\(\\xi \\in (0,1)\\)，使得\\( f'(\\xi) = 0 \\). 又\\( f''(x) \\lt 0 \\)，所以\\( f'(x) \\)在\\((0,1)\\)上严格单调减少，即对任意\\( x \\in (0,\\xi) \\)，有\\( f'(x) \\gt 0 \\). (2) \\(\\int_{0}^{1} \\sqrt{1 + [f'(x)]^2} dx = \\int_{0}^{\\xi} \\sqrt{1 + [f'(x)]^2} dx + \\int_{\\xi}^{1} \\sqrt{1 + [f'(x)]^2} dx \\) \\(\\lt \\int_{0}^{\\xi} \\sqrt{1 + [f'(x)]^2 + 2f'(x)} dx + \\int_{\\xi}^{1} \\sqrt{1 + [f'(x)]^2 - 2f'(x)} dx \\) \\( = \\int_{0}^{\\xi} [1 + f'(x)]dx + \\int_{\\xi}^{1} [1 - f'(x)]dx \\) \\( = 1 + 2f(\\xi) \\leq 3 \\). 【注】 本题欲证\\(\\int_{0}^{1} \\sqrt{1 + [f'(x)]^2} dx \\lt 3\\)，但在\\([0,1]\\)上无法实现此证明. 将\\([0,1]\\)拆分成\\([0,\\xi]\\)与\\([\\xi,1]\\)，在两个子区间上分别放缩，便可达到目的. 这提示考生，在一个大区间上完成不了的任务，一个常用的办法是切分成若干小区间来处理，这就是“三向解题法”中的黎曼思想.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分）设\\( f(x) \\)在\\([0,1]\\)上具有二阶导数，\\( f(0) = f(1) = 0 \\)，\\( f''(x) \\lt 0 \\)，\\( 0 \\leq f(x) \\leq 1 \\).\n\n证明：",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9392/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "本题满分12分）\n设\\( P = 2zxf(y + z) - y^3 \\)，\\( Q = 2yzf(y + z) + x^3 \\)，\\( R = \\int_{0}^{x^2 + y^2} f(z - t)dt \\)，其中\\( f \\)具有一阶连续导数.且\\( L \\)为曲面\\( z = x^2 + y^2 \\)与平面\\( y + z = 1 \\)的交线，从\\( z \\)轴正向往看下为逆时针方向，计算 \\( \\oint_{L} Pdx + Qdy + Rdz \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "联立\\(\\begin{cases}z = x^2 + y^2\\\\y + z = 1\\end{cases}\\)，消去\\( z \\)，得到\\( x^2 + y^2 = 1 - y \\)，将其投影到\\( xOy \\)面上，得到区域\\( D = \\{ (x, y)|x^2 + y^2 \\leq 1 - y \\} \\)，其图形如图所示. \\( L \\)满足\\(\\begin{cases}z = x^2 + y^2\\\\y + z = 1\\end{cases}\\)，于是\n\\( P = 2zxf(1) - y^3 \\)，\\( Q = 2yzf(1) + x^3 \\)，\n\\( R \\stackrel{z - t = u}{=} \\int_{z - (x^2 + y^2)}^{z} f(u)du = \\int_{0}^{z} f(u)du \\)，\n故\n\\[\n\\begin{align*}\n&\\oint_{L} Pdx + Qdy + Rdz\\\\\n=&\\oint_{L} [2zxf(1) - y^3]dx + [2yzf(1) + x^3]dy + \\left[ \\int_{0}^{z} f(u)du \\right] dz\\\\\n=&\\iint_{\\Sigma} \\begin{vmatrix}\ndydz & dzdx & dxdy\\\\\n\\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z}\\\\\n2zxf(1) - y^3 & 2yzf(1) + x^3 & \\int_{0}^{z} f(u)du\n\\end{vmatrix}\\\\\n=&\\iint_{\\Sigma} 2xf(1)dzdx - \\iint_{\\Sigma} 2yf(1)dydz + \\iint_{\\Sigma} 3(x^2 + y^2)dxdy\\\\\n\\stackrel{\\Sigma 关于yOz面对称}{=}& 0 + 0 + 3\\iint_{D} (x^2 + y^2)d\\sigma = 3\\int_{0}^{2\\pi} d\\theta \\int_{0}^{\\frac{\\sqrt{5}}{2}} r^3 dr\\\\\n=& 3 \\times 2\\pi \\times \\frac{25}{64} = \\frac{75}{32}\\pi.\n\\end{align*}\n\\]",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9393/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（1）是否存在可逆矩阵\\( \\boldsymbol{D} \\)，使\\( \\boldsymbol{B} = \\boldsymbol{D}^T\\boldsymbol{D} \\)？若存在，求出矩阵\\( \\boldsymbol{D} \\)，若不存在，说明理由；\n\n（2）求\\(\\max\\limits_{x \\neq 0} \\frac{f(\\boldsymbol{x})}{g(\\boldsymbol{x})}\\)，其中\\( \\boldsymbol{x} = \\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix} \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）由于\\( \\boldsymbol{B}^T = \\boldsymbol{B} \\)，\\( 1 > 0 \\)，\\(\\begin{vmatrix} 1 & -1 \\\\ -1 & 2 \\end{vmatrix} > 0 \\)，故\\( \\boldsymbol{B} \\)为正定矩阵. 又\\( g(x_1, x_2) = (x_1 - x_2)^2 + x_2^2 \\)，令\\(\\begin{cases} x_1 - x_2 = y_1 \\\\ x_2 = y_2 \\end{cases}\\)，于是有\\(\\begin{cases} x_1 = y_1 + y_2 \\\\ x_2 = y_2 \\end{cases}\\)，即\\( \\boldsymbol{x} = \\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix} = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} y_1 \\\\ y_2 \\end{pmatrix} = \\boldsymbol{C}\\boldsymbol{y} \\)，使\\( \\boldsymbol{x}^T\\boldsymbol{B}\\boldsymbol{x} = \\boldsymbol{y}^T\\boldsymbol{C}^T\\boldsymbol{B}\\boldsymbol{C}\\boldsymbol{y} = \\boldsymbol{y}^T\\boldsymbol{y} \\)，即 \\( \\boldsymbol{C}^T\\boldsymbol{B}\\boldsymbol{C} = \\boldsymbol{E} \\)，\\( \\boldsymbol{B} = (\\boldsymbol{C}^{-1})^T\\boldsymbol{C}^{-1} = \\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix}^T \\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix} = \\boldsymbol{D}^T\\boldsymbol{D} \\). 故存在可逆矩阵\\( \\boldsymbol{D} = \\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix} \\)，使\\( \\boldsymbol{B} = \\boldsymbol{D}^T\\boldsymbol{D} \\). （2）设\\( f(\\boldsymbol{x}) \\)的二次型矩阵为\\( \\boldsymbol{A} \\)，则 \\[ \\begin{align*} \\frac{f(\\boldsymbol{x})}{g(\\boldsymbol{x})} &= \\frac{\\boldsymbol{x}^T\\boldsymbol{A}\\boldsymbol{x}}{\\boldsymbol{x}^T\\boldsymbol{B}\\boldsymbol{x}} = \\frac{\\boldsymbol{x}^T\\boldsymbol{A}\\boldsymbol{x}}{\\boldsymbol{x}^T\\boldsymbol{D}^T\\boldsymbol{D}\\boldsymbol{x}} = \\frac{\\boldsymbol{x}^T\\boldsymbol{A}\\boldsymbol{x}}{(\\boldsymbol{D}\\boldsymbol{x})^T\\boldsymbol{D}\\boldsymbol{x}} \\stackrel{令\\boldsymbol{D}\\boldsymbol{x} = \\boldsymbol{z}}{=} \\frac{(\\boldsymbol{D}^{-1}\\boldsymbol{z})^T\\boldsymbol{A}\\boldsymbol{D}^{-1}\\boldsymbol{z}}{\\boldsymbol{z}^T\\boldsymbol{z}} = \\frac{\\boldsymbol{z}^T(\\boldsymbol{D}^{-1})^T\\boldsymbol{A}\\boldsymbol{D}^{-1}\\boldsymbol{z}}{\\boldsymbol{z}^T\\boldsymbol{z}}, \\end{align*} \\] 其中\\( \\boldsymbol{z} = \\begin{pmatrix} z_1 \\\\ z_2 \\end{pmatrix} \\). 又 \\( (\\boldsymbol{D}^{-1})^T\\boldsymbol{A}\\boldsymbol{D}^{-1} = \\boldsymbol{C}^T\\boldsymbol{A}\\boldsymbol{C} = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & -2 \\\\ -2 & 4 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & -2 \\\\ -1 & 2 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & -1 \\\\ -1 & 1 \\end{pmatrix} \\stackrel{记}{=} \\boldsymbol{M} \\)， 其对应的二次型为\\( h(z_1, z_2) = z_1^2 + z_2^2 - 2z_1z_2 \\)，则由 \\[ |\\lambda\\boldsymbol{E} - \\boldsymbol{M}| = \\begin{vmatrix} \\lambda - 1 & 1 \\\\ 1 & \\lambda - 1 \\end{vmatrix} = (\\lambda - 1)^2 - 1 = \\lambda(\\lambda - 2) = 0, \\] 得\\( \\lambda_1 = 2 \\)，\\( \\boldsymbol{\\xi}_1 = \\frac{1}{\\sqrt{2}} \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix} \\)；\\( \\lambda_2 = 0 \\)，\\( \\boldsymbol{\\xi}_2 = \\frac{1}{\\sqrt{2}} \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} \\). 令\\( \\boldsymbol{Q} = \\frac{1}{\\sqrt{2}} \\begin{pmatrix} -1 & 1 \\\\ 1 & 1 \\end{pmatrix} \\)，\\( \\boldsymbol{z} = \\boldsymbol{Q}\\boldsymbol{r} = \\boldsymbol{Q} \\begin{pmatrix} r_1 \\\\ r_2 \\end{pmatrix} \\)，则 \\[ \\begin{align*} \\boldsymbol{z}^T\\boldsymbol{M}\\boldsymbol{z} &= \\boldsymbol{r}^T\\boldsymbol{Q}^T\\boldsymbol{M}\\boldsymbol{Q}\\boldsymbol{r} = \\boldsymbol{r}^T \\begin{pmatrix} 2 & 0 \\\\ 0 & 0 \\end{pmatrix} \\boldsymbol{r} = 2r_1^2\\\\ &\\leq 2(r_1^2 + r_2^2) \\stackrel{\\boldsymbol{z}^T\\boldsymbol{z} = \\boldsymbol{r}^T\\boldsymbol{Q}^T\\boldsymbol{Q}\\boldsymbol{r} = \\boldsymbol{r}^T\\boldsymbol{r}}{=} 2(z_1^2 + z_2^2), \\end{align*} \\] 于是\\( \\boldsymbol{z}^T\\boldsymbol{M}\\boldsymbol{z} \\leq 2\\boldsymbol{z}^T\\boldsymbol{z} \\)，即\\( \\frac{\\boldsymbol{z}^T\\boldsymbol{M}\\boldsymbol{z}}{\\boldsymbol{z}^T\\boldsymbol{z}} \\leq 2 \\). 令\\( \\boldsymbol{z}_0 = \\boldsymbol{Q} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} \\)，得\\( \\frac{(1, 0) \\begin{pmatrix} 2 & 0 \\\\ 0 & 0 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}}{(1, 0) \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}} = 2 \\)，此时\\( \\boldsymbol{x}_0 = \\boldsymbol{D}^{-1}\\boldsymbol{z}_0 = \\boldsymbol{D}^{-1}\\boldsymbol{Q} \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ \\frac{1}{\\sqrt{2}} \\end{pmatrix} \\)，于是\\(\\max\\limits_{x \\neq 0} \\frac{f(\\boldsymbol{x})}{g(\\boldsymbol{x})} = 2 \\). 【注】 在2025版《张宇线性代数9讲》中已经指出，\\(\\frac{\\boldsymbol{x}^T\\boldsymbol{A}\\boldsymbol{x}}{\\boldsymbol{x}^T\\boldsymbol{B}\\boldsymbol{x}}\\)比\\(\\frac{\\boldsymbol{x}^T\\boldsymbol{A}\\boldsymbol{x}}{\\boldsymbol{x}^T\\boldsymbol{x}}\\)使用范围更为广泛，后者已经出现过，前者尚未出现在真题中，值得注意.",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "material": "（本题满分12分） 设二次型\\( f(x_1, x_2) = x_1^2 - 4x_1x_2 + 4x_2^2 \\)，\\( g(x_1, x_2) \\)的二次型矩阵为\\( \\boldsymbol{B} = \\begin{pmatrix} 1 & -1 \\\\ -1 & 2 \\end{pmatrix} \\).",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9394/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（1）求\\( e^Z \\)的数学期望；\n\n（2）\\( Z \\)与\\( X - Y \\)是否同分布？说明理由.",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）令\\( w = e^z \\)，则\\( z = \\ln w (w > 0) \\)，于是 \\[ f_W(w) = \\begin{cases} f_Z(\\ln w) \\cdot \\frac{1}{w}, & w > 0, \\\\ 0, & 其他 \\end{cases} = \\begin{cases} \\frac{1}{(1 + w)^2}, & w > 0, \\\\ 0, & 其他. \\end{cases} \\] 故 \\[ \\begin{align*} E(e^Z) &= E(W) = \\int_{0}^{+\\infty} w \\cdot \\frac{1}{(1 + w)^2}dw \\stackrel{1 + w = t}{=} \\int_{1}^{+\\infty} \\frac{t - 1}{t^2}dt\\\\ &= \\int_{1}^{+\\infty} \\frac{1}{t}dt - \\int_{1}^{+\\infty} \\frac{1}{t^2}dt = +\\infty, \\end{align*} \\] 故\\( e^Z \\)的数学期望不存在. （2）法一 令\\(\\begin{cases} x - y = u \\\\ y = v \\end{cases}\\)，则\\(\\begin{cases} x = u + v \\\\ y = v \\end{cases}\\)，\\( J = \\begin{vmatrix} \\frac{\\partial x}{\\partial u} & \\frac{\\partial x}{\\partial v} \\\\ \\frac{\\partial y}{\\partial u} & \\frac{\\partial y}{\\partial v} \\end{vmatrix} = \\begin{vmatrix} 1 & 1 \\\\ 0 & 1 \\end{vmatrix} = 1 \\)，故 \\[ \\begin{align*} f_{U, V}(u, v) &= f_{X, Y}(u + v, v) = f_X(u + v)f_Y(v) = e^{-(u + v)}e^{-e^{-(u + v)}} e^{-v}e^{-e^{-v}}\\\\ &= e^{-u - 2v}e^{-e^{-(u + 1) + e^{-v}}}, u \\in \\mathbf{R}, v \\in \\mathbf{R}. \\end{align*} \\] \\[ \\begin{align*} f_U(u) &= \\int_{-\\infty}^{+\\infty} f_{U, V}(u, v)dv = e^{-u} \\cdot \\int_{-\\infty}^{+\\infty} e^{-(e^{-u} + 1)e^{-v}} \\cdot (e^{-v})^2 dv\\\\ &\\stackrel{e^{-v} = s}{=} e^{-u} \\cdot \\int_{0}^{+\\infty} e^{-(e^{-u} + 1)s} \\cdot s^2 \\cdot \\left( -\\frac{1}{s} \\right) ds \\stackrel{e^{-(e^{-u} + 1)} = a}{=} e^{-u} \\cdot \\int_{0}^{+\\infty} a^s \\cdot s ds\\\\ &= e^{-u} \\cdot \\left[ a^s \\frac{s}{\\ln a} \\big|_{0}^{+\\infty} - a^s \\left( \\frac{1}{\\ln a} \\right)^2 \\big|_{0}^{+\\infty} \\right] = e^{-u} \\left( \\frac{1}{\\ln a} \\right)^2 = e^{-u} \\frac{1}{[ - (e^{-u} + 1) ]^2}\\\\ &= \\frac{e^{-u}}{(1 + e^{-u})^2} = \\frac{e^u}{(e^u + 1)^2}, u \\in \\mathbf{R}, \\end{align*} \\] 故\\( U = X - Y \\)与\\( Z \\)同分布. 法二 由卷积公式，令\\( V = X - Y \\)，则 \\( f(x, y) = f_X(x) \\cdot f_Y(y) = e^{-x}e^{-e^{-x}} \\cdot e^{-y}e^{-e^{-y}} \\). 因此 \\[ \\begin{align*} f_V(v) &= \\int_{-\\infty}^{+\\infty} f(x, x - v)dx = \\int_{-\\infty}^{+\\infty} e^{-2x + v} \\cdot e^{-e^{-x} - e^{-(x - v)}} dx\\\\ &= e^v \\int_{-\\infty}^{+\\infty} e^{-2x} \\cdot e^{-e^{-x}} \\cdot e^{-e^{-x}e^{v}} dx\\\\ &= e^v \\cdot \\frac{1}{(e^v + 1)^2}\\\\ &= \\frac{e^v}{(e^v + 1)^2}, v \\in \\mathbf{R}, \\end{align*} \\] 故\\( V = X - Y \\)与\\( Z \\)同分布.",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "material": "（本题满分12分） 设随机变量\\( X, Y \\)独立同分布，且\\( X \\)的概率密度为\\( f_X(x) = e^{-x}e^{-e^{-x}}, x \\in \\mathbf{R} \\). \\( Z \\)的概率密度为 \\( f_Z(z) = \\frac{e^z}{(1 + e^z)^2}, z \\in \\mathbf{R} \\).",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9395/"
+        }
+      ]
+    }
+  ]
+}

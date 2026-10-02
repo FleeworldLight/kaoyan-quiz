@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T11:31:26.634Z",
+  "generatedAt": "2026-10-02T12:35:20.671Z",
   "note": "模拟卷来源为互联网公开渠道，未经逐题校验，仅供练习；请以正式出版物为准。本区所有卷 quality 均为 unverified；其中部分素材为「题库型」（按章节组织，非整卷模拟卷），已在各 group 的 note / 各卷的 paperKind 中标明。",
   "failed": [
     {
@@ -445,6 +445,671 @@
           "truncatedOpts": 0
         }
       ]
+    },
+    {
+      "id": "nnd-math1-李林冲刺预测6套卷-2025",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "李林",
+      "name": "2025 李林冲刺预测6套卷",
+      "year": 2025,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2025 李林冲刺预测6套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/36075/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set1.json",
+          "title": "2025 李林冲刺预测6套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 21,
+          "choiceCount": 9,
+          "withAnswer": 21,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 1,
+          "examId": 36075,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36075/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set2",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set2.json",
+          "title": "2025 李林冲刺预测6套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 21,
+          "choiceCount": 9,
+          "withAnswer": 21,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 2,
+          "examId": 36211,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36211/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set3",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set3.json",
+          "title": "2025 李林冲刺预测6套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 3,
+          "examId": 36645,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36645/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set4",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set4.json",
+          "title": "2025 李林冲刺预测6套卷（四）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 4,
+          "examId": 36990,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36990/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set5",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set5.json",
+          "title": "2025 李林冲刺预测6套卷（五）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 5,
+          "examId": 37134,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37134/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2025-set6.json",
+          "title": "2025 李林冲刺预测6套卷（六）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2025",
+          "paperNo": 6,
+          "examId": 37406,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37406/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-math1-李林冲刺预测6套卷-2026",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "李林",
+      "name": "2026 李林冲刺预测6套卷",
+      "year": 2026,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2026 李林冲刺预测6套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/37276/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set1",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set1.json",
+          "title": "2026 李林冲刺预测6套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 1,
+          "examId": 37276,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37276/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set2.json",
+          "title": "2026 李林冲刺预测6套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 20,
+          "choiceCount": 8,
+          "withAnswer": 20,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 2,
+          "examId": 37279,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37279/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set3",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set3.json",
+          "title": "2026 李林冲刺预测6套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 21,
+          "choiceCount": 10,
+          "withAnswer": 21,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 3,
+          "examId": 38375,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38375/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set4",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set4.json",
+          "title": "2026 李林冲刺预测6套卷（四）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 4,
+          "examId": 38409,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38409/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set5",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set5.json",
+          "title": "2026 李林冲刺预测6套卷（五）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 5,
+          "examId": 37395,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37395/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set6",
+          "file": "mock/mock-math1-nnd-李林冲刺预测6套卷-2026-set6.json",
+          "title": "2026 李林冲刺预测6套卷（六）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李林冲刺预测6套卷-2026",
+          "paperNo": 6,
+          "examId": 38048,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38048/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-math1-李艳芳预测3套卷-2025",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "李艳芳",
+      "name": "2025 李艳芳预测3套卷",
+      "year": 2025,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2025 李艳芳预测3套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/38064/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-math1-nnd-李艳芳预测3套卷-2025-set3",
+          "file": "mock/mock-math1-nnd-李艳芳预测3套卷-2025-set3.json",
+          "title": "2025 李艳芳预测3套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 21,
+          "choiceCount": 0,
+          "withAnswer": 21,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-李艳芳预测3套卷-2025",
+          "paperNo": 3,
+          "examId": 38064,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38064/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-math1-张宇终极预测8套卷-2025",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "张宇",
+      "name": "2025 张宇终极预测8套卷",
+      "year": 2025,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/34107/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set1.json",
+          "title": "2025 张宇终极预测8套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 20,
+          "answerRate": 0.9091,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 1,
+          "examId": 34107,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/34107/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set2",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set2.json",
+          "title": "2025 张宇终极预测8套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 19,
+          "answerRate": 0.8636,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 2,
+          "examId": 35250,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/35250/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set3",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set3.json",
+          "title": "2025 张宇终极预测8套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 22,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 3,
+          "examId": 35370,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/35370/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set4.json",
+          "title": "2025 张宇终极预测8套卷（四）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 20,
+          "answerRate": 0.9091,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 4,
+          "examId": 37506,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37506/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set5.json",
+          "title": "2025 张宇终极预测8套卷（五）",
+          "paperKind": "testPaper",
+          "questionCount": 21,
+          "choiceCount": 9,
+          "withAnswer": 19,
+          "answerRate": 0.9048,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 5,
+          "examId": 35688,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/35688/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set6.json",
+          "title": "2025 张宇终极预测8套卷（六）",
+          "paperKind": "testPaper",
+          "questionCount": 14,
+          "choiceCount": 0,
+          "withAnswer": 9,
+          "answerRate": 0.6429,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 6,
+          "examId": 36613,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36613/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set7.json",
+          "title": "2025 张宇终极预测8套卷（七）",
+          "paperKind": "testPaper",
+          "questionCount": 12,
+          "choiceCount": 0,
+          "withAnswer": 8,
+          "answerRate": 0.6667,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 7,
+          "examId": 38825,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38825/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2025-set8.json",
+          "title": "2025 张宇终极预测8套卷（八）",
+          "paperKind": "testPaper",
+          "questionCount": 12,
+          "choiceCount": 0,
+          "withAnswer": 11,
+          "answerRate": 0.9167,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2025",
+          "paperNo": 8,
+          "examId": 38826,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38826/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-math1-张宇终极预测8套卷-2026",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "张宇",
+      "name": "2026 张宇终极预测8套卷",
+      "year": 2026,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2026 张宇终极预测8套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/39557/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2026-set1.json",
+          "title": "2026 张宇终极预测8套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 17,
+          "answerRate": 0.7727,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2026",
+          "paperNo": 1,
+          "examId": 39557,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39557/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2",
+          "file": "mock/mock-math1-nnd-张宇终极预测8套卷-2026-set2.json",
+          "title": "2026 张宇终极预测8套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 17,
+          "answerRate": 0.7727,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-math1-张宇终极预测8套卷-2026",
+          "paperNo": 2,
+          "examId": 39891,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39891/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "肖秀荣",
+      "name": "2026 肖秀荣考研政治冲刺 8 套卷",
+      "year": 2026,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2026 肖秀荣考研政治冲刺 8 套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/38659/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set1",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set1.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 1,
+          "examId": 38659,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38659/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set2",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set2.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 2,
+          "examId": 38748,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38748/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set3",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set3.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 3,
+          "examId": 38879,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38879/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set4",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set4.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（四）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 4,
+          "examId": 38916,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/38916/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set5",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set5.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（五）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 5,
+          "examId": 39173,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39173/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set6",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set6.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（六）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 6,
+          "examId": 39180,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39180/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set7",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set7.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（七）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 7,
+          "examId": 39312,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39312/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set8",
+          "file": "mock/mock-politics-nnd-肖秀荣考研政治冲刺8套卷-2026-set8.json",
+          "title": "2026 肖秀荣考研政治冲刺 8 套卷（八）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣考研政治冲刺8套卷-2026",
+          "paperNo": 8,
+          "examId": 39613,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/39613/"
+        }
+      ]
+    },
+    {
+      "id": "nnd-politics-肖秀荣终极预测4套卷-2025",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "肖秀荣",
+      "name": "2025 肖秀荣终极预测4套卷",
+      "year": 2025,
+      "source": {
+        "name": "N诺考研 noobdream.com · 2025 肖秀荣终极预测4套卷 系列练习解析页",
+        "url": "https://noobdream.com/Practice/exam_solution/36764/"
+      },
+      "note": "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+      "papers": [
+        {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set1",
+          "file": "mock/mock-politics-nnd-肖秀荣终极预测4套卷-2025-set1.json",
+          "title": "2025 肖秀荣终极预测4套卷（一）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 35,
+          "answerRate": 0.9211,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣终极预测4套卷-2025",
+          "paperNo": 1,
+          "examId": 36764,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36764/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set2",
+          "file": "mock/mock-politics-nnd-肖秀荣终极预测4套卷-2025-set2.json",
+          "title": "2025 肖秀荣终极预测4套卷（二）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣终极预测4套卷-2025",
+          "paperNo": 2,
+          "examId": 36883,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36883/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set3",
+          "file": "mock/mock-politics-nnd-肖秀荣终极预测4套卷-2025-set3.json",
+          "title": "2025 肖秀荣终极预测4套卷（三）",
+          "paperKind": "testPaper",
+          "questionCount": 38,
+          "choiceCount": 33,
+          "withAnswer": 38,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣终极预测4套卷-2025",
+          "paperNo": 3,
+          "examId": 36988,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/36988/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4",
+          "file": "mock/mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4.json",
+          "title": "2025 肖秀荣终极预测4套卷（四）",
+          "paperKind": "testPaper",
+          "questionCount": 36,
+          "choiceCount": 31,
+          "withAnswer": 36,
+          "answerRate": 1,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "nnd-politics-肖秀荣终极预测4套卷-2025",
+          "paperNo": 4,
+          "examId": 37096,
+          "sourceUrl": "https://noobdream.com/Practice/exam_solution/37096/"
+        }
+      ]
     }
   ],
   "droppedSummary": {
@@ -886,6 +1551,244 @@
         "ref": "net/6.2#9",
         "reason": "选项数 3 != 4",
         "detail": "（）可以将其管辖的主机名转换主机的IP地址。"
+      }
+    ]
+  },
+  "droppedSummaryNnd": {
+    "count": 37,
+    "note": "本轮（N诺考研来源）解析阶段主动丢弃、未写入题库的题目。依据「不乱码/不编造」纪律。完整明细见 tools/cache/mock-xiao/build-report.json。",
+    "byReason": [
+      {
+        "reason": "题干为空",
+        "count": 35
+      },
+      {
+        "reason": "选项数",
+        "count": 2
+      }
+    ],
+    "items": [
+      {
+        "source": "nnd/36075",
+        "ref": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1#8",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36211",
+        "ref": "mock-math1-nnd-李林冲刺预测6套卷-2025-set2#8",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38064",
+        "ref": "mock-math1-nnd-李艳芳预测3套卷-2025-set3#9",
+        "reason": "选项数 2 != 4",
+        "detail": "设矩阵\\( A = \\begin{pmatrix} a&b&b \\\\ b&a&b \\\\ b&b&a \\end{pmatr"
+      },
+      {
+        "source": "nnd/37096",
+        "ref": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4#9",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/37096",
+        "ref": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4#10",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/35688",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set5#6",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#1",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#2",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#3",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#4",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#5",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#6",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#9",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/36613",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set6#10",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#1",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#2",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#3",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#4",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#5",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#6",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#7",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#8",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#9",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38825",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set7#10",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#1",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#2",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#3",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#4",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#5",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#6",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#7",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#8",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#9",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/38826",
+        "ref": "mock-math1-nnd-张宇终极预测8套卷-2025-set8#10",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/37279",
+        "ref": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2#4",
+        "reason": "题干为空",
+        "detail": ""
+      },
+      {
+        "source": "nnd/37279",
+        "ref": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2#6",
+        "reason": "选项数 3 != 4",
+        "detail": "B. $r(B,β)=r(B)+1$.\n\nD. $r[(A,α),B^T]=r\\begin{bmatrix} (A^T,"
+      },
+      {
+        "source": "nnd/38375",
+        "ref": "mock-math1-nnd-李林冲刺预测6套卷-2026-set3#16",
+        "reason": "题干为空",
+        "detail": ""
       }
     ]
   }

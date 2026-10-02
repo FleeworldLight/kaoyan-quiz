@@ -153,7 +153,24 @@ const MARKER_RE = /^\s*(\d{1,2})\s*[.．]/;
  *  - excludedTop/excludedBottom：页眉页脚带（题号不会出现在那里）
  *  - 题号必须顶格（x ≈ 正文最小 x）
  */
-const FOOTER_RE = /页[（(]共|第\s*\d+\s*页/;
+const FOOTER_RE = /页[（(]共|第\s*\d+\s*页|共\s*\d+\s*页/;
+/** 把同一行的文本碎片拼成整行（CJK 不加空格），便于读「题 N 图」这类图注 */
+function groupLines(items) {
+  const out = [];
+  for (const it of items) {
+    let line = out.find((l) => Math.abs(l.y - it.y) < 2.5);
+    if (!line) { line = { y: it.y, items: [] }; out.push(line); }
+    line.items.push(it);
+  }
+  for (const l of out) {
+    l.items.sort((a, b) => a.x - b.x);
+    l.x0 = l.items[0].x;
+    l.x1 = l.items[l.items.length - 1].x;
+    l.text = l.items.map((i) => i.str).join("").replace(/\s+/g, " ").trim();
+  }
+  out.sort((a, b) => b.y - a.y);
+  return out;
+}
 function scanPageText(items, pageH) {
   const body = items.filter((it) => {
     if (!it.str || !it.str.trim() || !it.transform) return false;
@@ -164,6 +181,7 @@ function scanPageText(items, pageH) {
   });
   const xs = body.map((it) => it.transform[4]);
   const minX = xs.length ? Math.min(...xs) : 0;
+  const lines = groupLines(body.map((it) => ({ str: it.str.replace(/[\u0000-\u001f]/g, ""), x: it.transform[4], y: it.transform[5] })));
   const markers = [];
   for (const it of body) {
     const m = it.str.match(MARKER_RE);
@@ -171,13 +189,9 @@ function scanPageText(items, pageH) {
     const n = Number(m[1]);
     if (n < 1 || n > 47) continue;
     if (Math.abs(it.transform[4] - minX) > 3) continue;
-    markers.push({ no: n, x: r1(it.transform[4]), y: r1(it.transform[5]), str: it.str.slice(0, 60) });
+    const line = lines.reduce((a, b) => (Math.abs(b.y - it.transform[5]) < Math.abs(a.y - it.transform[5]) ? b : a), lines[0]);
+    markers.push({ no: n, x: r1(it.transform[4]), y: r1(it.transform[5]), lineX1: line ? r1(line.x1) : null, str: it.str.slice(0, 60) });
   }
-  // 正文行（用于给图做「上方/下方最近一行文字」的上下文，便于人工核对）
-  const lines = body
-    .filter((it) => !MARKER_RE.test(it.str.trim()) || it.transform[4] > minX + 3)
-    .map((it) => ({ x: r1(it.transform[4]), y: r1(it.transform[5]), str: it.str.replace(/\s+/g, " ").trim().slice(0, 70) }))
-    .filter((l) => l.str);
   return { markers, minX: r1(minX), textCount: body.length, lines };
 }
 
@@ -255,29 +269,76 @@ function buildMarkerChain(pages) {
 }
 
 /* ---------- 挂图 ---------- */
-function assignImages(pages, chain) {
-  // 阅读序位置：(page, -y)
-  const markers = chain.map((c) => ({ no: c.no, page: c.page, y: c.y }));
+const CAP_RE = /题\s*(\d{1,2})(?:\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)]))?\s*(?:[～~至]\s*(\d{1,2})\s*题?)?\s*[图表]/;
+/** 题干/选项里「引用了一张图」的措辞 */
+const FIG_RE = /如下图|如图|下图|上图|图中|右图|左图|如下表|下表|表所示|如下所示|树形|示意图|结构图|流程图|时序图|编码图|如下|下面[^，。；]{0,4}图|下列[^，。；]{0,4}图|题\s*\d{1,2}\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)])?\s*(?:[～~\-—－至]\s*\d{1,2})?\s*题?\s*[图表]/;
+const TABLE_RE = /如下表|下表|表所示|题\s*\d{1,2}\s*表/;
+/** 注意：来源 PDF 的文本层会在汉字之间插空格（如「如 右 图 所 示」），匹配前先去掉空白 */
+const squash = (s) => String(s || "").replace(/\s+/g, "");
+function figKeywords(text) {
+  return [...new Set(squash(text).match(new RegExp(FIG_RE.source, "g")) || [])];
+}
+/**
+ * 定位规则（按优先级）：
+ *  R1 图注：图上方/下方 45pt 内最近一行若是「题 N 图」→ 归第 N 题；若是「题 N～M 图」→ 归 N..M 全段（共享图）。
+ *  R2 右侧图：若某题号的行落在图的纵向区间内、且该行文字在图的左侧（水平不重叠），
+ *             且该题题干含图字样、而按 R3 定位到的那题题干不含图字样 → 归该题号（取最靠上者）。
+ *  R3 题号区间（默认规则）：图的顶边 y 落在「本题题号 y」与「下一题题号 y」之间 → 归本题。
+ */
+function assignImages(pages, chain, textOf) {
+  const markers = chain.map((c) => ({ no: c.no, page: c.page, y: c.y, lineX1: c.lineX1 }));
   const imgs = [];
   for (const pg of pages) for (const im of pg.images) imgs.push(im);
   imgs.sort((a, b) => (a.page - b.page) || (b.visible[3] - a.visible[3]) || (a.visible[0] - b.visible[0]));
   const out = [];
-  for (const im of imgs) {
-    const y = im.visible[3];
-    let owner = null, prev = null, next = null;
-    for (const m of markers) {
-      if (m.page < im.page || (m.page === im.page && m.y >= y)) { if (!prev || (m.page > prev.page) || (m.page === prev.page && m.y < prev.y)) prev = m; }
-      else if (!next) next = m;
-    }
-    // prev 应是「阅读序上最后一个不晚于该图」的题号
+  /** 按 R3 找 owner（阅读序上最后一个不晚于该图顶边的题号） */
+  const bandOwner = (im) => {
+    const top = im.visible[3];
     let best = null;
     for (const m of markers) {
-      const before = m.page < im.page || (m.page === im.page && m.y >= y);
+      const before = m.page < im.page || (m.page === im.page && m.y >= top);
       if (!before) continue;
       if (!best || m.page > best.page || (m.page === best.page && m.y < best.y)) best = m;
     }
-    owner = best;
-    out.push({ ...im, owner: owner ? owner.no : null, ownerMarker: owner, nextMarker: next, prevMarker: prev });
+    return best;
+  };
+  for (const im of imgs) {
+    const pg = pages.find((p) => p.page === im.page);
+    const lines = pg ? pg.lines : [];
+    const top = im.visible[3], bot = im.visible[1], x0 = im.visible[0];
+    let res = { owners: [], rule: "" };
+    // --- R1 图注 ---
+    const below = lines.filter((l) => l.y <= bot + 1 && bot - l.y <= 45).sort((a, b) => b.y - a.y)[0];
+    const above = lines.filter((l) => l.y >= top - 1 && l.y - top <= 45).sort((a, b) => a.y - b.y)[0];
+    for (const [l, where] of [[below, "图注(下)"], [above, "图注(上)"]]) {
+      if (!l) continue;
+      const m = l.text.match(CAP_RE);
+      if (!m) continue;
+      const a = Number(m[1]), b = m[2] ? Number(m[2]) : a;
+      if (a >= 1 && b <= 47 && b >= a) {
+        res = { owners: Array.from({ length: b - a + 1 }, (_, i) => a + i), rule: where + " 「" + l.text.slice(0, 20) + "」", caption: l.text.slice(0, 40) };
+        break;
+      }
+    }
+    // --- R2 右侧图 ---
+    const inBand = markers.filter((m) => m.page === im.page && m.y >= bot - 1 && m.y <= top + 1
+      && m.lineX1 !== null && m.lineX1 + 2 <= x0).sort((a, b) => b.y - a.y);
+    const phys = bandOwner(im);
+    const hasFig = (no) => FIG_RE.test(squash(textOf(im.year, no)));
+    const diag = `区间内题号=${inBand.map((m) => `${m.no}(行右${r1(m.lineX1)})`).join(",") || "无"} 图左沿=${r1(x0)} ` +
+      `区间规则归=${phys ? phys.no : "无"}${phys ? (hasFig(phys.no) ? "(题干含图)" : "(题干无图)") : ""}`;
+    if (!res.owners.length) {
+      const ownKw = phys && hasFig(phys.no);
+      const candKw = inBand.find((m) => hasFig(m.no));
+      if (!ownKw && candKw) res = { owners: [candKw.no], rule: "右侧图(题号与图同行)" };
+    }
+    // --- R3 默认 ---
+    if (!res.owners.length) res = { owners: phys ? [phys.no] : [], rule: "题号区间" };
+    const idx = chain.findIndex((c) => c.no === res.owners[0]);
+    res.ownerMarker = idx >= 0 ? chain[idx] : null;
+    res.nextMarker = idx >= 0 && idx + 1 < chain.length ? chain[idx + 1] : null;
+    res.diag = diag;
+    out.push({ ...im, owners: res.owners, rule: res.rule, caption: res.caption || "", diag: res.diag, ownerMarker: res.ownerMarker, nextMarker: res.nextMarker });
   }
   return out;
 }
@@ -299,6 +360,14 @@ const stemOf = (y, no) => {
   for (const sec of papers[y].sections) for (const q of sec.questions) if (q.no === no) return q.stem || "";
   return null;
 };
+/** 题干 + 选项全文（判断题干是否引用图） */
+const textOf = (y, no) => {
+  for (const sec of papers[y].sections) for (const q of sec.questions) {
+    if (q.no !== no) continue;
+    return [q.stem || "", ...(q.options || []).map((o) => o.text || "")].join(" ");
+  }
+  return null;
+};
 
 push("=== 408 真题配图抽取报告 ===");
 push(`生成时间: ${new Date().toISOString()}`);
@@ -314,7 +383,7 @@ for (const y of YEARS) {
   const { pages, setTransformCount } = await scanPdf(y);
   pagesByYear[y] = pages;
   const { chain, skipped, missing } = buildMarkerChain(pages);
-  const imgs = assignImages(pages, chain);
+  const imgs = assignImages(pages, chain, textOf);
   let kept = 0, droppedBg = 0, droppedSmall = 0, droppedBlank = 0, unresolved = 0;
   const files = [];
   let n = 0;
@@ -367,11 +436,6 @@ for (const y of YEARS) {
 }
 
 /* ---------- 分配一致性检查 ---------- */
-function figKeywords(stem) {
-  const kws = ["如下图", "如图", "下图", "上图", "图中", "所示图", "如下表", "下表", "表所示", "如题", "图示", "图 1", "图1", "树形", "结构图", "示意图", "流程图", "时序图", "编码图"];
-  return kws.filter((k) => stem.includes(k));
-}
-
 const assignments = []; // { year, no, file, page, stem40, kw, ratio, pages }
 /** 图的上方/下方最近一行正文，以及到本题题号/下一题题号的距离 */
 function contextAround(year, page, vis, ownerMarker, nextMarker) {
@@ -383,28 +447,32 @@ function contextAround(year, page, vis, ownerMarker, nextMarker) {
     if (l.y >= vis[3] - 1) { if (!above || l.y < above.y) above = l; }
     else if (l.y <= vis[1] + 1) { if (!below || l.y > below.y) below = l; }
   }
+  const s = (l) => (l ? `${r1(l.y)} x${r1(l.x0)}-${r1(l.x1)} ${l.text.slice(0, 46)}` : null);
   return {
-    above: above ? `${above.y} ${above.str}` : "(页首无正文)",
-    below: below ? `${below.y} ${below.str}` : "(页尾无正文)",
+    above: s(above) || "(页首/图上方无正文)",
+    below: s(below) || "(页尾/图下方无正文)",
     distUp: ownerMarker ? r1(ownerMarker.y - vis[3]) : null,
     distDown: nextMarker ? r1(vis[1] - nextMarker.y) : null,
   };
 }
 for (const im of allAssigned) {
   if (!im.file) continue;
-  const stem = stemOf(im.year, im.owner) || "";
   const ctx = contextAround(im.year, im.page, im.visible, im.ownerMarker, im.nextMarker);
-  assignments.push({
-    year: im.year, no: im.owner, file: im.file, page: im.page, idx: im.idx,
-    stem40: stem.replace(/\s+/g, " ").slice(0, 40), kw: figKeywords(stem).join("/"),
-    visible: im.visible, px: `${im.px}x${im.py}`, bytes: im.pngBytes,
-    nonWhite: im.nonWhiteRatio, pageRatio: im.pageAreaRatio, clipped: im.clipped,
-    nextNo: im.nextMarker ? im.nextMarker.no : null,
-    ...ctx,
-  });
+  for (const no of im.owners) {
+    const stem = stemOf(im.year, no) || "";
+    assignments.push({
+      year: im.year, no, file: im.file, page: im.page, idx: im.idx, rule: im.rule, caption: im.caption, diag: im.diag,
+      owners: im.owners,
+      stem40: stem.replace(/\s+/g, " ").slice(0, 40), kw: figKeywords(textOf(im.year, no)).join("/"),
+      visible: im.visible, px: `${im.px}x${im.py}`, bytes: im.pngBytes,
+      nonWhite: im.nonWhiteRatio, pageRatio: im.pageAreaRatio, clipped: im.clipped,
+      nextNo: im.nextMarker ? im.nextMarker.no : null,
+      ...ctx,
+    });
+  }
 }
-// 同一题可能多图：按 (year, no, page) 排序
-assignments.sort((a, b) => (a.year - b.year) || (a.no - b.no) || (a.page - b.page));
+// 同一题可能多图：按 (year, no, 页, 图从上到下的位置) 排序
+assignments.sort((a, b) => (a.year - b.year) || (a.no - b.no) || (a.page - b.page) || (b.visible[3] - a.visible[3]));
 
 /* ---------- 写回 JSON ---------- */
 const writeLog = [];
@@ -434,12 +502,16 @@ if (!DRY) {
 
 /* ---------- 仍缺图（题干提到图但没挂上） ---------- */
 const missingFig = [];
+const missingTable = [];
 for (const y of YEARS) {
   for (const sec of papers[y].sections) for (const q of sec.questions) {
-    const stem = q.stem || "";
-    const kws = figKeywords(stem);
+    const full = [q.stem || "", ...(q.options || []).map((o) => o.text || "")].join(" ");
+    const kws = figKeywords(full);
     const got = assignments.filter((a) => a.year === y && a.no === q.no).length;
-    if (kws.length && got === 0) missingFig.push({ year: y, no: q.no, type: q.type, kw: kws.join("/"), stem40: stem.replace(/\s+/g, " ").slice(0, 40) });
+    if (!kws.length || got) continue;
+    const isTable = !/图/.test(kws.join("")) && TABLE_RE.test(squash(full));
+    const row = { year: y, no: q.no, type: q.type, kw: kws.join("/"), stem40: (q.stem || "").replace(/\s+/g, " ").slice(0, 40) };
+    (isTable ? missingTable : missingFig).push(row);
   }
 }
 
@@ -457,22 +529,26 @@ push("");
 push("--- 二、未定位题号的年份 ---");
 for (const y of YEARS) if (yearStats[y].missing.length) push(`  ${y}: 缺 ${yearStats[y].missing.join(",")}（共 ${yearStats[y].missing.length}）`);
 push("");
-push("--- 三、挂图对照表 (year / 题号 / 图文件 / 页码 / 图尺寸pt / 像素 / 非白% / 题干关键词 / 题干前40字) ---");
+push("--- 三、挂图对照表 (year / 题号 / 图文件 / 页码 / 定位规则 / 图尺寸pt / 像素 / 非白% / 题干关键词 / 题干前40字) ---");
 for (const a of assignments) {
-  push(`${a.year}  q${String(a.no).padStart(2)}  ${a.file.padEnd(26)} p${String(a.page).padStart(2)}  ${r1(a.visible[2] - a.visible[0])}x${r1(a.visible[3] - a.visible[1])}pt  ${a.px.padEnd(10)}  ${(a.nonWhite * 100).toFixed(1)}%  [${a.kw || "无关键词"}]  ${a.stem40}`);
-  push(`      图上方: ${a.above}   |  图下方: ${a.below}   |  距本题号 ${a.distUp}pt / 距下一题号(${a.nextNo ?? "-"}) ${a.distDown}pt`);
+  push(`${a.year}  q${String(a.no).padStart(2)}  ${a.file.padEnd(26)} p${String(a.page).padStart(2)}  ${(a.rule + (a.owners.length > 1 ? ` [共享→${a.owners.join(",")}]` : "")).padEnd(30)}  ${r1(a.visible[2] - a.visible[0])}x${r1(a.visible[3] - a.visible[1])}pt  ${a.px.padEnd(10)}  ${(a.nonWhite * 100).toFixed(1)}%  [${a.kw || "无关键词"}]  ${a.stem40}`);
+  push(`      图上方: ${a.above}   |  图下方: ${a.below}`);
+  push(`      定位诊断: ${a.diag} | 本题题号y ${a.distUp !== null ? a.distUp + "(相对图顶边)" : "?"}`);
 }
 push("");
-push(`挂图题数: ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道（共 ${assignments.length} 张图）`);
+push(`挂图题数: ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道（共 ${assignments.length} 处引用 / ${new Set(assignments.map((a) => a.file)).size} 个 PNG 文件）`);
 push("");
 push("--- 四、未定位到题目的图 ---");
-for (const im of allUnassigned) if (!im.file) { /* 未采用 */ }
-for (const im of allAssigned) if (!im.owner) push(`  [无题号] ${im.year} p${im.page} #${im.idx} ${im.name} ${im.px}x${im.py} box=${im.box.join(",")}（未写盘/未挂）`);
+for (const im of allAssigned) if (!im.owners.length) push(`  [无题号] ${im.year} p${im.page} #${im.idx} ${im.name} ${im.px}x${im.py} box=${im.box.join(",")}（已写盘但未挂到任何题）`);
 for (const im of allDropped) push(`  [丢弃] ${im.year} p${im.page} #${im.idx} ${im.name || "(无名)"} ${im.px || "?"}x${im.py || "?"} box=${im.box.join(",")} → ${im.dropReasons.join("; ")}`);
 push("");
-push("--- 五、仍缺图的题（题干含『图/表』关键词但 images 为空） ---");
+push("--- 五、仍缺图的题（题干/选项提到『图』但 images 为空） ---");
 for (const m of missingFig) push(`  ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
 push(`共 ${missingFig.length} 道`);
+push("");
+push("--- 五之二、只提到『表』的题（表格在源 PDF 里多为文本，不一定缺图） ---");
+for (const m of missingTable) push(`  ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
+push(`共 ${missingTable.length} 道`);
 push("");
 push("--- 六、写回 JSON ---");
 push(writeLog.length ? writeLog.join("\n") : (DRY ? "(dry-run，未写)" : "(无变更)"));
@@ -482,25 +558,31 @@ console.log(`\n报告已写入 ${REPORT_TXT}`);
 if (!DRY) {
   fs.writeFileSync(MAP_MD, [
     "# 408 真题配图对照表", "",
-    "| 年份 | 题号 | 图文件 | 页码 | 显示尺寸(pt) | 像素 | 非白像素比 | 题干关键词 | 题干前 40 字 |",
-    "|---|---|---|---|---|---|---|---|---|",
-    ...assignments.map((a) => `| ${a.year} | ${a.no} | \`${a.file}\` | p${a.page} | ${(a.visible[2] - a.visible[0]).toFixed(0)}×${(a.visible[3] - a.visible[1]).toFixed(0)} | ${a.px} | ${(a.nonWhite * 100).toFixed(1)}% | ${a.kw || "—"} | ${a.stem40.replace(/\|/g, "\\|")} |`),
+    "| 年份 | 题号 | 图文件 | 页码 | 定位规则 | 显示尺寸(pt) | 像素 | 非白像素比 | 题干关键词 | 题干前 40 字 |",
+    "|---|---|---|---|---|---|---|---|---|---|",
+    ...assignments.map((a) => `| ${a.year} | ${a.no} | \`${a.file}\` | p${a.page} | ${a.rule}${a.owners.length > 1 ? `（共享→${a.owners.join(",")}）` : ""} | ${(a.visible[2] - a.visible[0]).toFixed(0)}×${(a.visible[3] - a.visible[1]).toFixed(0)} | ${a.px} | ${(a.nonWhite * 100).toFixed(1)}% | ${a.kw || "—"} | ${a.stem40.replace(/\|/g, "\\|")} |`),
     "",
-    `共 ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道题挂图，${assignments.length} 张图。`,
-    `仍缺图（题干提到图/表但无图）：${missingFig.length} 道。`,
+    `共 ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道题挂图，${assignments.length} 处引用（去重后 ${new Set(assignments.map((a) => a.file)).size} 个 PNG 文件）。`,
+    `仍缺图（题干/选项提到「图」但无图）：${missingFig.length} 道；只提到「表」的：${missingTable.length} 道。`,
     "",
-    "## 仍缺图",
+    "## 仍缺图（提到「图」）",
     "",
     "| 年份 | 题号 | 类型 | 关键词 | 题干前 40 字 |",
     "|---|---|---|---|---|",
     ...missingFig.map((m) => `| ${m.year} | ${m.no} | ${m.type} | ${m.kw} | ${m.stem40.replace(/\|/g, "\\|")} |`),
+    "",
+    "## 只提到「表」（表格通常已以文本形式在题干里）",
+    "",
+    "| 年份 | 题号 | 类型 | 关键词 | 题干前 40 字 |",
+    "|---|---|---|---|---|",
+    ...missingTable.map((m) => `| ${m.year} | ${m.no} | ${m.type} | ${m.kw} | ${m.stem40.replace(/\|/g, "\\|")} |`),
     "",
     "## 丢弃/未定位的图",
     "",
     "| 年份 | 页 | 序号 | 名称 | 像素 | box(pt) | 原因 |",
     "|---|---|---|---|---|---|---|",
     ...allDropped.map((im) => `| ${im.year} | p${im.page} | #${im.idx} | ${im.name || "—"} | ${im.px || "?"}×${im.py || "?"} | ${im.box.join(", ")} | ${im.dropReasons.join("; ")} |`),
-    ...allAssigned.filter((im) => !im.owner).map((im) => `| ${im.year} | p${im.page} | #${im.idx} | ${im.name} | ${im.px}×${im.py} | ${im.box.join(", ")} | 未能定位到题号 |`),
+    ...allAssigned.filter((im) => !im.owners.length).map((im) => `| ${im.year} | p${im.page} | #${im.idx} | ${im.name} | ${im.px}×${im.py} | ${im.box.join(", ")} | 未能定位到题号 |`),
     "",
   ].join("\n"), "utf8");
   console.log(`对照表已写入 ${MAP_MD}`);

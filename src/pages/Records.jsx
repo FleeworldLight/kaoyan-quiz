@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { History, Download, TrendingUp, Flame, Target, Clock, FileStack, Play, Trash2, CalendarDays } from "lucide-react";
+import { History, Download, Upload, Save, TrendingUp, Flame, Target, Clock, FileStack, Play, Trash2, CalendarDays } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Progress, Segmented, StatCard } from "../components/ui.jsx";
 import { PracticeHeatmap, ActivityTrend, DonutStat } from "../components/Charts.jsx";
-import { useStore, subjectStats, heatmap, streak, resetAll } from "../lib/store.js";
+import { useStore, subjectStats, heatmap, streak, resetAll, importData } from "../lib/store.js";
 import { accuracy, fmtDate, fmtDuration } from "../lib/utils.js";
 
 const MODE_LABEL = { exam: "整套模考", chapter: "章节练习", random: "随机组卷", wrong: "错题复测", fav: "收藏练习", paper: "套卷练习", mock: "模拟卷", custom: "智能组卷" };
@@ -11,7 +11,9 @@ const MODE_LABEL = { exam: "整套模考", chapter: "章节练习", random: "随
 export default function Records({ index }) {
   const s = useStore();
   const [mode, setMode] = useState("all");
+  const fileRef = React.useRef(null);
   const [subject, setSubject] = useState("all");
+  const [msg, setMsg] = useState(null);
 
   const days = useMemo(() => heatmap(s, 26), [s.records]);
   const sum = useMemo(() => {
@@ -49,18 +51,50 @@ export default function Records({ index }) {
     URL.revokeObjectURL(a.href);
   }
 
+  function exportAll() {
+    const blob = new Blob([JSON.stringify({ kind: "kaoyan-quiz-state", version: 1, exportedAt: new Date().toISOString(), state: s }, null, 1)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "考研刷题-学习数据-" + new Date().toISOString().slice(0, 10) + ".json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+
+  async function importAll(file) {
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const stats = importData(JSON.parse(text));
+      setMsg(`导入完成：进度 ${stats.progress} 条 · 错题 ${stats.wrong} 条 · 收藏 ${stats.fav} 条 · 笔记 ${stats.notes} 条 · 记录 ${stats.records} 条（已有的数据按较大值保留，不会丢）`);
+    } catch (e) {
+      setMsg("导入失败：" + e.message);
+    }
+    if (fileRef.current) fileRef.current.value = "";
+  }
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center gap-2">
         <h1 className="font-serif text-[19px] font-bold text-ink-strong">学习记录</h1>
         <Badge tone="brand">{sum.sessions} 次练习</Badge>
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex flex-wrap items-center gap-2">
           <Button variant="secondary" size="sm" onClick={exportCSV} disabled={!list.length}><Download className="size-3.5" />导出 CSV</Button>
+          <Button variant="secondary" size="sm" onClick={exportAll}><Save className="size-3.5" />备份全部数据</Button>
+          <input ref={fileRef} type="file" accept="application/json,.json" className="hidden"
+                 onChange={(e) => importAll(e.target.files?.[0])} />
+          <Button variant="secondary" size="sm" onClick={() => fileRef.current?.click()}><Upload className="size-3.5" />导入数据</Button>
           <Button variant="danger" size="sm" onClick={() => { if (confirm("确定清空全部学习数据（进度、错题、收藏、笔记、记录）？不可恢复。")) resetAll(); }}>
             <Trash2 className="size-3.5" />清空数据
           </Button>
         </div>
       </div>
+
+      {msg ? (
+        <p className="flex items-start gap-2 rounded-md bg-brand-soft px-3 py-2 text-[12.5px] text-brand">
+          <span className="flex-1">{msg}</span>
+          <button onClick={() => setMsg(null)} className="shrink-0 text-brand/70 hover:text-brand">关闭</button>
+        </p>
+      ) : null}
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <StatCard label="累计答题" value={sum.total} unit="题" icon={FileStack} hint={sum.sessions + " 次练习"} />

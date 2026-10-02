@@ -1,0 +1,198 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2025,
+  "paperNo": 7,
+  "paperKind": "testPaper",
+  "title": "2025 张宇终极预测8套卷（七）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（七）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/38825/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "blank",
+      "name": "一、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设$f(x)$是以$2$为周期的连续奇函数且$\\int_{0}^{4}(x + 2)f(x)dx = 2$，则$\\int_{0}^{2}(2x + 1)f(x)dx =$______。",
+          "options": [],
+          "answer": "2",
+          "explanation": "\\(\\int_{0}^{4}(x + 2)f(x)dx \\xlongequal{x - 2 = t \\\\ x = t + 2} \\int_{-2}^{2}(t + 4)f(t)dt\\)\n\\(=\\int_{-2}^{2}tf(t)dt + 4\\int_{-2}^{2}f(t)dt\\)\n\\(=2\\int_{0}^{2}tf(t)dt = 2\\)，\n故 \\(\\int_{0}^{2}tf(t)dt = 1\\)。\n于是 \\(\\int_{0}^{2}(2x + 1)f(x)dx = 2\\int_{0}^{2}xf(x)dx + \\int_{0}^{2}f(x)dx = 2 + \\int_{-1}^{1}f(x)dx = 2\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9546/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）已知二元函数$u = u(x,y)$，$v = v(x,y)$由方程组$\\begin{cases}x + y + u + v = 0\\\\x^{2} + y^{2} + u^{4} + v^{4} = 1\\end{cases}$确定，且$u(0,0) > 0$，$v(0,0) < 0$，则$\\frac{\\partial u}{\\partial x}\\big|_{(0,0)} =$______。",
+          "options": [],
+          "answer": "$-\\frac{1}{2}$",
+          "explanation": "将\\(x = 0,y = 0\\)代入题干方程组，并由\\(u(0,0)>0,v(0,0)<0\\)解得\n\\(u(0,0)=\\frac{1}{2^{\\frac{1}{4}}},v(0,0)=-\\frac{1}{2^{\\frac{1}{4}}}\\)。\n方程组的等式两端对\\(x\\)求偏导得\n\\[\n\\begin{cases}\n1+\\frac{\\partial u}{\\partial x}+\\frac{\\partial v}{\\partial x}=0,\\\\\n2x + 4u^{3}\\frac{\\partial u}{\\partial x}+4v^{3}\\frac{\\partial v}{\\partial x}=0,\n\\end{cases}\n\\]\n解得\n\\(\\frac{\\partial u}{\\partial x}=\\frac{x - 2v^{3}}{2v^{3}-2u^{3}}\\)。\n\n代入\\(x = 0,y = 0,u(0,0)=\\frac{1}{2^{\\frac{1}{4}}},v(0,0)=-\\frac{1}{2^{\\frac{1}{4}}}\\)，并注意到\\(u(0,0)=-v(0,0)\\)，得\n\\(\\left.\\frac{\\partial u}{\\partial x}\\right|_{(0,0)}=\\frac{2\\left[u(0,0)\\right]^{3}}{-2\\left[u(0,0)\\right]^{3}-2\\left[u(0,0)\\right]^{3}}=-\\frac{1}{2}\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9547/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）$\\sum_{n = 1}^{\\infty}\\frac{1}{(n + 1)2^{n}} =$______。",
+          "options": [],
+          "answer": "$-1 + 2\\ln 2$",
+          "explanation": "令\\(S(x)=\\sum_{n = 1}^{\\infty}\\frac{1}{n + 1}x^{n + 1}(-1\\lt x\\lt1)\\)，则\n\\(S^\\prime(x)=\\left(\\sum_{n = 1}^{\\infty}\\frac{1}{n + 1}x^{n + 1}\\right)^\\prime=\\sum_{n = 1}^{\\infty}x^{n}=\\frac{x}{1 - x}\\)，\n又因为\\(S(0) = 0\\)，所以\n\\(S(x)=\\int_{0}^{x}S^\\prime(t)dt+S(0)=\\int_{0}^{x}\\frac{t}{1 - t}dt=-x - \\ln(1 - x)\\)，\n则\\(S\\left(\\frac{1}{2}\\right)=\\sum_{n = 1}^{\\infty}\\frac{1}{n + 1}\\left(\\frac{1}{2}\\right)^{n + 1}=-\\frac{1}{2}+\\ln2\\)，故\n\\[\n\\begin{align*}\n\\sum_{n = 1}^{\\infty}\\frac{1}{(n + 1)2^{n}}&=2\\sum_{n = 1}^{\\infty}\\frac{1}{n + 1}\\left(\\frac{1}{2}\\right)^{n + 1}=2S\\left(\\frac{1}{2}\\right)\\\\\n&=2\\left(-\\frac{1}{2}+\\ln2\\right)=-1 + 2\\ln2\n\\end{align*}\n\\]",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9548/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）设$f(x) = \\frac{1 + e^{x}}{1 + x}$，则$f^{(5)}(0) =$______。",
+          "options": [],
+          "answer": "$-164$",
+          "explanation": "\\((1 + x)f(x)=1 + e^{x}\\)，由莱布尼茨公式，得\n\\(\\text{C}_{n}^{0}(1 + x)f^{(n)}(x)+\\text{C}_{n}^{1}f^{(n - 1)}(x)=e^{x}\\)。\n令\\(x = 0\\)，有\\(f^{(n)}(0)+nf^{(n - 1)}(0)=1,n = 1,2,3,\\cdots\\)。\n由\n\\(f(0)=2,f^\\prime(0)=1 - f(0)=-1,f^{\\prime\\prime}(0)=1 - 2f^\\prime(0)=3\\)，\n\\(f^{\\prime\\prime\\prime}(0)=1 - 3f^{\\prime\\prime}(0)=-8,f^{(4)}(0)=1 - 4f^{\\prime\\prime\\prime}(0)=33\\)，\n\\(f^{(5)}(0)=1 - 5f^{(4)}(0)=-164\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9549/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）若$\\boldsymbol{\\alpha}_{1} = (1,1,a)^{\\text{T}}$，$\\boldsymbol{\\alpha}_{2} = (1,a,1)^{\\text{T}}$，$\\boldsymbol{\\alpha}_{3} = (a,1,1)^{\\text{T}}$能由$\\boldsymbol{\\beta}_{1} = (1,1,a)^{\\text{T}}$，$\\boldsymbol{\\beta}_{2} = (-2,a,4)^{\\text{T}}$，$\\boldsymbol{\\beta}_{3} = (-2,a,a)^{\\text{T}}$线性表示，但$\\boldsymbol{\\beta}_{1}$，$\\boldsymbol{\\beta}_{2}$，$\\boldsymbol{\\beta}_{3}$不能由$\\boldsymbol{\\alpha}_{1}$，$\\boldsymbol{\\alpha}_{2}$，$\\boldsymbol{\\alpha}_{3}$线性表示，则常数$a =$______。",
+          "options": [],
+          "answer": "1",
+          "explanation": "\\(\\alpha_{1},\\alpha_{2},\\alpha_{3}\\)能由\\(\\beta_{1},\\beta_{2},\\beta_{3}\\)线性表示，则\\(r(\\alpha_{1},\\alpha_{2},\\alpha_{3}) \\leq r(\\beta_{1},\\beta_{2},\\beta_{3})\\)。又\\(\\beta_{1},\\beta_{2},\\beta_{3}\\)不能由\\(\\alpha_{1},\\alpha_{2},\\alpha_{3}\\)线性表示，故\\(r(\\alpha_{1},\\alpha_{2},\\alpha_{3}) < r(\\beta_{1},\\beta_{2},\\beta_{3})\\)。而\\(r(\\beta_{1},\\beta_{2},\\beta_{3}) \\leq 3\\)，于是\\(r(\\alpha_{1},\\alpha_{2},\\alpha_{3}) < 3\\)，从而\\(|\\alpha_{1},\\alpha_{2},\\alpha_{3}| = 0\\)，解得\\(a = 1\\)或\\(a = - 2\\)。\n当\\(a = 1\\)时，\\(\\alpha_{1} = \\alpha_{2} = \\alpha_{3} = \\beta_{1} = (1,1,1)^{\\text{T}}\\)，显然\\(\\alpha_{1},\\alpha_{2},\\alpha_{3}\\)可由\\(\\beta_{1},\\beta_{2},\\beta_{3}\\)线性表示，而此时\\(\\beta_{2} = (-2,1,4)^{\\text{T}}\\)不能由\\(\\alpha_{1},\\alpha_{2},\\alpha_{3}\\)线性表示，即\\(a = 1\\)符合题意。\n当\\(a = - 2\\)时，有\n\\[\n\\begin{pmatrix}\n1 & -2 & -2 &\\vdots& 1 & 1 & -2 \\\\\n1 & -2 & -2 &\\vdots& 1 & -2 & 1 \\\\\n-2 & 4 & -2 &\\vdots& -2 & 1 & 1\n\\end{pmatrix}\n\\to\n\\begin{pmatrix}\n1 & -2 & -2 &\\vdots& 1 & 1 & -2 \\\\\n0 & 0 & 0 &\\vdots& 0 & -3 & 3 \\\\\n0 & 0 & -6 &\\vdots& 0 & 3 & -3\n\\end{pmatrix}\n\\to\n\\begin{pmatrix}\n1 & -2 & -2 &\\vdots& 1 & 1 & -2 \\\\\n0 & 0 & -6 &\\vdots& 0 & 3 & -3 \\\\\n0 & 0 & 0 &\\vdots& 0 & -3 & 3\n\\end{pmatrix}\n\\]\n可知\\(r(\\beta_{1},\\beta_{2},\\beta_{3}) = 2\\)，而\\(r(\\beta_{1},\\beta_{2},\\beta_{3},\\alpha_{2}) = 3\\)，故\\(\\alpha_{2}\\)不能由向量组\\(\\beta_{1},\\beta_{2},\\beta_{3}\\)线性表示，所以\\(a = - 2\\)不符合题意。\n综上所述，\\(a = 1\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9550/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）设随机变量$X$，$Y$，$Z$满足$D(X) = D(Z)$，$D(Y) = 4D(X)$，相关系数$\\rho_{XY} = -1$，$\\rho_{XZ} = \\frac{1}{2}$，则$X$与$Y + Z$的相关系数$\\rho_{X(Y + Z)}$为______。",
+          "options": [],
+          "answer": "$-\\frac{\\sqrt{3}}{2}$",
+          "explanation": "设\\(D(X)=\\sigma^{2}\\)，则\\(D(Y)=4\\sigma^{2}\\)，\\(D(Z)=\\sigma^{2}\\)。由\\(\\rho_{XY}=-1\\)知，存在常数\\(C\\)，使得\\(Y = - 2X + C\\)，且\\(\\text{Cov}(X,Y)=-2\\sigma^{2}\\)。由\\(\\rho_{XZ}=\\frac{1}{2}\\)，得\\(\\text{Cov}(X,Z)=\\frac{1}{2}\\sigma^{2}\\)，则\n\\[\n\\begin{align*}\nD(Y + Z)&=4\\sigma^{2}+\\sigma^{2}+2\\text{Cov}(Y,Z)\\\\\n&=5\\sigma^{2}-4\\text{Cov}(X,Z)=3\\sigma^{2},\n\\end{align*}\n\\]\n又\n\\[\n\\text{Cov}(X,Y + Z)=\\text{Cov}(X,Y)+\\text{Cov}(X,Z)=-2\\sigma^{2}+\\frac{1}{2}\\sigma^{2}=-\\frac{3}{2}\\sigma^{2},\n\\]\n故\\(\\rho_{X(Y + Z)}=-\\frac{\\sqrt{3}}{2}\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9551/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "二、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）\n计算\\(\\lim\\limits_{x \\to 0}\\frac{\\int_{0}^{x}\\int_{0}^{x}[e^{(t - x)^{2}} - 1]\\sin tdt}{x^{2}\\ln(1 + x^{2})}\\)。",
+          "options": [],
+          "answer": "",
+          "explanation": "当\\(x \\to 0\\)时，\\(\\ln(1 + x^{2}) \\sim x^{2}\\)，\n\\(\\int_{0}^{x}[e^{(t - x)^{2}} - 1]\\sin tdt \\stackrel{u = x - t}{=} \\int_{0}^{x}(e^{u^{2}} - 1)\\sin(x - u)du\\)，\n故\n原式\\( = \\lim\\limits_{x \\to 0}\\frac{\\int_{0}^{x}(e^{u^{2}} - 1)\\sin(x - u)du}{x^{4}}\\)\n\\( = \\lim\\limits_{x \\to 0}\\frac{\\sin x\\int_{0}^{x}(e^{u^{2}} - 1)\\cos udu - \\cos x\\int_{0}^{x}(e^{u^{2}} - 1)\\sin udu}{x^{4}}\\)\n\\(\\stackrel{洛}{=} \\lim\\limits_{x \\to 0}\\frac{\\cos x\\int_{0}^{x}(e^{u^{2}} - 1)\\cos udu + \\sin x(e^{x^{2}} - 1)\\cos x + \\sin x\\int_{0}^{x}(e^{u^{2}} - 1)\\sin udu - \\cos x(e^{x^{2}} - 1)\\sin x}{4x^{3}}\\)\n\\( = \\lim\\limits_{x \\to 0}\\frac{\\int_{0}^{x}(e^{u^{2}} - 1)\\cos(x - u)du}{4x^{3}}\\)\n\\(\\stackrel{第一积分中值定理}{=} \\lim\\limits_{x \\to 0}\\frac{\\cos(x - \\xi)\\int_{0}^{x}(e^{u^{2}} - 1)du}{4x^{3}}\\)\n\\( = \\frac{1}{12}\\)，\n其中\\(\\xi\\)介于\\(0\\)与\\(x\\)之间。\n【注】① 通过换元及三角公式恒等变形，将\\(x\\)移出积分号，是解决本题的关键。\n②\\(x \\to 0\\)时，在积分号下作\\(e^{(t - x)^{2}} - 1 \\sim (t - x)^{2}\\)是没有依据的，不得分。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9552/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）\n求二元函数\\(f(x,y) = y(x^{2} + y^{2} + \\sqrt{2}x - 2)\\)在闭区域\\(D = \\{(x,y)|x^{2} + y^{2} \\leq 3\\}\\)上的最大值与最小值。",
+          "options": [],
+          "answer": "",
+          "explanation": "令\n\\(\\frac{\\partial f}{\\partial x} = 2xy + \\sqrt{2}y = 0\\)，\\(\\frac{\\partial f}{\\partial y} = x^{2} + 3y^{2} + \\sqrt{2}x - 2 = 0\\)，\n解得驻点为\n\\((\\frac{-\\sqrt{2} \\pm \\sqrt{10}}{2},0)\\)，\\((-\\frac{1}{\\sqrt{2}},\\pm\\sqrt{\\frac{5}{6}})\\)。\n经检验，\\((\\frac{-\\sqrt{2} + \\sqrt{10}}{2},0)\\)，\\((-\\frac{1}{\\sqrt{2}},\\pm\\sqrt{\\frac{5}{6}})\\)满足\\(x^{2} + y^{2} \\frac{5\\sqrt{30}}{18}\\)，所以\\(f(x,y)\\)在\\(D = \\{(x,y)|x^{2} + y^{2} \\leq 3\\}\\)上的最大值与最小值分别为\\(\\frac{5\\sqrt{30}}{8}\\)，\\(-\\frac{5\\sqrt{30}}{8}\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9553/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设\\(f(x)\\)在\\([0,x]\\)上具有三阶连续导数。\n（1）证明：存在\\(\\xi \\in (0,x)\\)，使\\(\\int_{0}^{x}f(t)dt = \\frac{x[f(0) + f(x)]}{2} - \\frac{x^{3}}{12}f''(\\xi)\\)；\n（2）由（1），计算\\(\\lim\\limits_{x \\to 0^{+}}\\frac{\\xi}{x}\\)。",
+          "options": [],
+          "answer": "（1）【证】\\(\\int_{0}^{x}f(t)dt = \\int_{0}^{x}f(t)(t - \\frac{x}{2})'dt\\)\n\\( = f(t)(t - \\frac{x}{2})\\big|_{0}^{x} - \\int_{0}^{x}(t - \\frac{x}{2}) \\cdot f'(t)dt\\)\n\\( = \\frac{x}{2}[f(0) + f(x)] - \\frac{1}{2}\\int_{0}^{x}[t(t - x)]'f'(t)dt\\)\n\\( = \\frac{x}{2}[f(0) + f(x)] + \\frac{1}{2}\\int_{0}^{x}f''(t)t(t - x)dt\\)，\n由\\(t(t - x)\\)不变号，对最后一项使用第一积分中值定理，有\n\\(\\frac{1}{2}\\int_{0}^{x}f''(t)t(t - x)dt = \\frac{1}{2}f''(\\xi)\\int_{0}^{x}t(t - x)dt = -\\frac{x^{3}}{12}f''(\\xi)\\)，\n故\n\\(\\int_{0}^{x}f(t)dt = \\frac{x[f(0) + f(x)]}{2} - \\frac{x^{3}}{12}f''(\\xi)\\)，\n其中\\(\\xi \\in (0,x)\\)，得证。\n（2）",
+          "explanation": "对\\(f(t)\\)在\\(t = 0\\)处进行泰勒展开，有\n\\(f(t) = f(0) + f'(0)t + \\frac{f''(0)}{2}t^{2} + \\frac{f'''(0)}{6}t^{3} + o(t^{3})\\)，\n则\n\\(\\int_{0}^{x}f(t)dt = f(0)x + \\frac{f'(0)}{2}x^{2} + \\frac{f''(0)}{6}x^{3} + \\frac{f'''(0)}{24}x^{4} + o(x^{4})\\)。 ①\n由（1）可得\n\\(\\int_{0}^{x}f(t)dt = \\frac{x}{2}f(0) + \\frac{x}{2}f(x) - \\frac{x^{3}}{12}f''(\\xi)\\)\n\\( = \\frac{x}{2}f(0) + \\frac{x}{2}[f(0) + f'(0)x + \\frac{f''(0)}{2}x^{2} + \\frac{f'''(0)}{6}x^{3} + o(x^{3})] - \\frac{x^{3}}{12}[f''(0) + f'''(0)\\xi + o(\\xi)]\\)， ②\n由于①式的右边 = ②式的右边，对其整理，得\n\\(\\frac{1}{24}f'''(0)x = \\frac{f'''(0)}{12}x - \\frac{f'''(0)}{12}\\xi + o(\\xi) + o(x)\\)，\n则有\n\\(\\lim\\limits_{x \\to 0^{+}}\\frac{\\xi}{x} = \\frac{1}{2} + \\lim\\limits_{x \\to 0^{+}}\\frac{o(\\xi)}{x} + \\lim\\limits_{x \\to 0^{+}}\\frac{o(x)}{x} = \\frac{1}{2}\\)，\n其中\\(\\lim\\limits_{x \\to 0^{+}}\\frac{o(\\xi)}{x} = \\lim\\limits_{x \\to 0^{+}}\\frac{o(\\xi)}{\\xi} \\cdot \\frac{\\xi}{x} = 0\\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9554/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设函数$f(x,y)$在平面$\\mathbf{R}^2$上存在连续偏导数，且只有唯一零点$O(0,0)$，对任何包围$O(0,0)$的光滑正向闭曲线$C$，曲线积分$\\oint_{C}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = m$，$m$为正常数。\n（1）证明：对任何不包围$O(0,0)$的光滑闭曲线$L$，曲线积分$\\oint_{L}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = 0$；\n（2）若$f(x,y) = g(x) + h(y)$，且$g'(1)\\cdot h'(1) = 4\\pi^2$，求$m$的值。",
+          "options": [],
+          "answer": "（1）【证】设$L$为任一不包围$O(0,0)$的光滑闭曲线，在$L$上任取两个不同的点$A,B$，以$A,B$为端点作包含$O(0,0)$的曲线段$APB$（见图）。\n记$C_1$为封闭曲线$APBMA$，$C_2$为封闭曲线$APBNA$。因为$C_1$和$C_2$都包围着原点，所以\n$\\oint_{C_1}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = m$，$\\oint_{C_2}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = m$。\n又因为$L = C_1 - C_2$，所以\n$\\oint_{L}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = \\oint_{C_1}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} - \\oint_{C_2}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = m - m = 0$。\n（2）",
+          "explanation": "由（1）可知，曲线积分$\\oint_{L}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)}$与路径无关，所以$\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{f(x,y)} = \\frac{x\\mathrm{d}y - y\\mathrm{d}x}{g(x) + h(y)}$是全微分式，因此\n$\\frac{\\partial}{\\partial x}\\left[\\frac{x}{g(x) + h(y)}\\right] = \\frac{\\partial}{\\partial y}\\left[\\frac{-y}{g(x) + h(y)}\\right]$。\n因为\n$\\frac{\\partial}{\\partial x}\\left[\\frac{x}{g(x) + h(y)}\\right] = \\frac{g(x) + h(y) - xg'(x)}{[g(x) + h(y)]^2}$，\n$\\frac{\\partial}{\\partial y}\\left[\\frac{-y}{g(x) + h(y)}\\right] = \\frac{-g(x) - h(y) + yh'(y)}{[g(x) + h(y)]^2}$，\n所以\n$2[g(x) + h(y)] = xg'(x) + yh'(y)$，\n即\n$2g(x) - xg'(x) = yh'(y) - 2h(y)$。\n解$\\begin{cases}2g(x) - xg'(x) = c\\\\yh'(y) - 2h(y) = c\\end{cases}$，得$\\begin{cases}g(x) = ax^2 + \\frac{c}{2}\\\\h(y) = by^2 - \\frac{c}{2}\\end{cases}$。所以$f(x,y) = ax^2 + by^2$。由于$g'(x) = 2ax$，$g'(1) = 2a$，$h'(y) = 2by$，$h'(1) = 2b$，$g'(1)\\cdot h'(1) = 4ab = 4\\pi^2$，故$ab = \\pi^2 > 0$。\n由$\\oint_{C}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{ax^2 + by^2} = m > 0$，取$C:ax^2 + by^2 = 1$，根据格林公式，得\n$m = \\oint_{C}\\frac{x\\mathrm{d}y - y\\mathrm{d}x}{ax^2 + by^2} = \\iint_{ax^2 + by^2 \\leq 1}2\\mathrm{d}x\\mathrm{d}y = \\frac{2\\pi}{\\sqrt{ab}}$，\n即$ab = \\left(\\frac{2\\pi}{m}\\right)^2$，则$ab = \\pi^2 = \\frac{4\\pi^2}{m^2}$，得$m = 2$。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9555/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设$\\boldsymbol{A} = \\begin{pmatrix}-4&2&10\\\\-4&3&a\\\\-3&1&7\\end{pmatrix}$，且$\\boldsymbol{A}$的所有特征向量中只有一个线性无关的特征向量，$\\boldsymbol{B} = \\begin{pmatrix}2&1&0\\\\0&2&1\\\\0&0&2\\end{pmatrix}$。\n（1）求$a$的值；\n（2）是否存在可逆矩阵$\\boldsymbol{P}$，使$\\boldsymbol{P}^{-1}\\boldsymbol{A}\\boldsymbol{P} = \\boldsymbol{B}$？若存在，求出矩阵$\\boldsymbol{P}$，若不存在，说明理由。",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）由题意知，$\\boldsymbol{A}$有三重特征值$\\lambda$。因为\n$|\\lambda\\boldsymbol{E} - \\boldsymbol{A}| = \\begin{vmatrix}\\lambda + 4&-2&-10\\\\4&\\lambda - 3&-a\\\\3&-1&\\lambda - 7\\end{vmatrix} \\stackrel{r_1 - 2r_3}{=} \\begin{vmatrix}\\lambda - 2&0&-2(\\lambda - 2)\\\\4&\\lambda - 3&-a\\\\3&-1&\\lambda - 7\\end{vmatrix}$\n$= (\\lambda - 2)\\begin{vmatrix}1&0&-2\\\\4&\\lambda - 3&-a\\\\3&-1&\\lambda - 7\\end{vmatrix} \\stackrel{c_3 + 2c_1}{=} (\\lambda - 2)\\begin{vmatrix}1&0&0\\\\4&\\lambda - 3&8 - a\\\\3&-1&\\lambda - 1\\end{vmatrix}$\n$= (\\lambda - 2)[(\\lambda - 3)(\\lambda - 1) + 8 - a] = (\\lambda - 2)(\\lambda^2 - 4\\lambda + 11 - a)$，\n所以对于$\\lambda^2 - 4\\lambda + 11 - a = 0$，有$\\Delta = (-4)^2 - 4(11 - a) = 0$，故$a = 7$。\n令\n$|\\lambda\\boldsymbol{E} - \\boldsymbol{A}| = (\\lambda - 2)(\\lambda^2 - 4\\lambda + 4) = (\\lambda - 2)^3 = 0$，\n即$\\lambda_1 = \\lambda_2 = \\lambda_3 = 2$。\n（2）令$\\boldsymbol{P} = (x_1, x_2, x_3)$，由$\\boldsymbol{A}\\boldsymbol{P} = \\boldsymbol{P}\\boldsymbol{B}$，得\n$(\\boldsymbol{A}x_1, \\boldsymbol{A}x_2, \\boldsymbol{A}x_3) = (2x_1, x_1 + 2x_2, x_2 + 2x_3)$。\n由$(\\boldsymbol{A} - 2\\boldsymbol{E})x_1 = \\boldsymbol{0}$，得$x_1 = k_1\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix}$；由$(\\boldsymbol{A} - 2\\boldsymbol{E})x_2 = x_1$，得$x_2 = k_2\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix} + \\begin{pmatrix}0\\\\k_1\\\\0\\end{pmatrix} = \\begin{pmatrix}2k_2\\\\k_2 + k_1\\\\k_2\\end{pmatrix}$；由$(\\boldsymbol{A} - 2\\boldsymbol{E})x_3 = x_2$，得$x_3 = k_3\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix} + \\begin{pmatrix}-k_1\\\\k_2 - 3k_1\\\\0\\end{pmatrix} = \\begin{pmatrix}2k_3 - k_1\\\\k_3 + k_2 - 3k_1\\\\k_3\\end{pmatrix}$，故\n$\\boldsymbol{P} = (x_1, x_2, x_3) = \\begin{pmatrix}2k_1&2k_2&2k_3 - k_1\\\\k_1&k_1 + k_2&k_3 + k_2 - 3k_1\\\\k_1&k_2&k_3\\end{pmatrix}$，\n由$|\\boldsymbol{P}| \\neq 0$得$k_1 \\neq 0$，$k_2, k_3$为任意常数。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9556/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（本题满分12分）\n在长度为1的直杆上任取一点，将直杆分成两段，设$X,Y$分别是较短与较长的部分的长度，令$Z = \\frac{X}{Y}$。\n（1）求$Z$的概率密度；\n（2）求$Z$和$\\frac{1}{Z}$的数学期望。",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）令$V \\sim U(0,1)$，如图所示，则$X = \\min\\{V, 1 - V\\}$。\n当$x x\\}$\n$= 1 - P\\{V > x, 1 - V > x\\} = 1 - P\\{x < V < 1 - x\\}$\n$= 1 - (1 - 2x) = 2x$。\n所以$X$的分布函数为\n$F_X(x) = \\begin{cases}0, & x < 0,\\\\2x, & 0 \\leq x < \\frac{1}{2},\\\\1, & x \\geq \\frac{1}{2}.\\end{cases}$\n故$X$的概率密度为\n$f_X(x) = \\begin{cases}2, & 0 < x < \\frac{1}{2},\\\\0, & 其他.\\end{cases}$\n由条件知，$Z = \\frac{X}{Y} = \\frac{X}{1 - X}$。由于函数$z = \\frac{x}{1 - x}$在$(0, \\frac{1}{2})$内严格单调递增且可导，因此反函数为$x = \\frac{z}{1 + z}$，且$\\frac{\\mathrm{d}x}{\\mathrm{d}z} = \\frac{1}{(1 + z)^2}$，故$Z$的概率密度为\n$f_Z(z) = \\begin{cases}f_X\\left(\\frac{z}{1 + z}\\right)\\left|\\frac{1}{(1 + z)^2}\\right|, & 0 < z < 1,\\\\0, & 其他\\end{cases}$\n$= \\begin{cases}\\frac{2}{(1 + z)^2}, & 0 < z < 1,\\\\0, & 其他.\\end{cases}$\n（2）由（1）可知，$E(Z) = \\int_{0}^{1} z \\cdot \\frac{2}{(1 + z)^2}\\mathrm{d}z = 2\\ln 2 - 1$。\n$E\\left(\\frac{1}{Z}\\right) = \\int_{0}^{1} \\frac{1}{z} \\cdot \\frac{2}{(1 + z)^2}\\mathrm{d}z$发散，故$E\\left(\\frac{1}{Z}\\right)$不存在。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9557/"
+        }
+      ]
+    }
+  ]
+}

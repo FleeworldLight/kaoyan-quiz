@@ -1,0 +1,201 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2025,
+  "paperNo": 8,
+  "paperKind": "testPaper",
+  "title": "2025 张宇终极预测8套卷（八）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（八）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/38826/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "blank",
+      "name": "一、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设\\( a_k = n + \\frac{2k(k - 1)}{2k - 1}(k = 1,2,\\cdots,n) \\)，则\\( \\lim_{n \\to \\infty} \\sum_{k = 1}^{n} a_k^{-1} = \\)______。",
+          "options": [],
+          "answer": "\\(\\ln 2\\)",
+          "explanation": "\\( a_k^{-1} = \\frac{1}{n + \\frac{2k(k - 1)}{2k - 1}} \\)\n\\( = \\frac{1}{1 + \\frac{2k(k - 1)}{(2k - 1)n}} \\cdot \\frac{1}{n} \\)\n\\( = \\frac{1}{1 + \\frac{2}{\\frac{k - 1}{n} + \\frac{1}{k}}} \\cdot \\frac{1}{n} \\)，\n故\\( \\lim_{n \\to \\infty} \\sum_{k = 1}^{n} a_k^{-1} = \\int_{0}^{1} \\frac{1}{1 + x} \\mathrm{d}x = \\ln 2 \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9568/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）函数\\( f(x,y) = x\\text{e}^y \\)在点\\( (1,0) \\)处的二阶泰勒多项式为______。",
+          "options": [],
+          "answer": "\\( x + xy + \\frac{1}{2}y^2 \\)",
+          "explanation": "由题意可知，\\( f(1,0) = 1 \\)。又\n\\( f'_x(x,y) = \\text{e}^y \\)，\\( f'_y(x,y) = x\\text{e}^y \\)，\n\\( f''_{xx}(x,y) = 0 \\)，\\( f''_{xy}(x,y) = \\text{e}^y \\)，\\( f''_{yy}(x,y) = x\\text{e}^y \\)，\n将\\( x = 1 \\)，\\( y = 0 \\)代入得\n\\( f'_x(1,0) = 1 \\)，\\( f'_y(1,0) = 1 \\)，\n\\( f''_{xx}(1,0) = 0 \\)，\\( f''_{xy}(1,0) = 1 \\)，\\( f''_{yy}(1,0) = 1 \\)。\n故\\( f(x,y) \\)在点\\( (1,0) \\)处的二阶泰勒多项式为\n\\( f(1,0) + f'_x(1,0)(x - 1) + f'_y(1,0)(y - 0) + \\frac{1}{2}f''_{xx}(1,0)(x - 1)^2 + f''_{xy}(1,0)(x - 1)(y - 0) + \\frac{1}{2}f''_{yy}(1,0)(y - 0)^2 = x + xy + \\frac{1}{2}y^2 \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9569/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）设\\( x > 0 \\)，\\( I = \\int_{L} (1 + y\\sin x)\\mathrm{d}x + \\frac{f(x)}{x}\\mathrm{d}y \\)与路径\\( L \\)无关，\\( f(x) \\)有连续导数且\\( f\\left( \\frac{\\pi}{2} \\right) = 0 \\)。当\\( L \\)是从点\\( A\\left( \\frac{\\pi}{2},1 \\right) \\)到点\\( B(\\pi,0) \\)的任一曲线时，\\( I = \\)______。",
+          "options": [],
+          "answer": "\\( \\frac{3}{8}\\pi^2 \\)",
+          "explanation": "因为积分与路径无关，所以\n\\( \\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[ \\frac{f(x)}{x} \\right] = \\frac{\\partial}{\\partial y}(x + xy\\sin x) = x\\sin x \\)，\n对\\( \\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[ \\frac{f(x)}{x} \\right] = x\\sin x \\)两端积分，得\n\\( \\frac{f(x)}{x} = \\int x\\sin x\\mathrm{d}x = \\sin x - x\\cos x + C \\)。\n又\\( f\\left( \\frac{\\pi}{2} \\right) = 0 \\)，所以\\( C = -1 \\)。又由于积分与路径无关，因此取折线段路径\n\\( L_1:\\left( \\frac{\\pi}{2},1 \\right) \\to \\left( \\frac{\\pi}{2},0 \\right) \\)；\\( L_2:\\left( \\frac{\\pi}{2},0 \\right) \\to (\\pi,0) \\)，\n得\n\\( I = \\int_{A}^{B} (x + xy\\sin x)\\mathrm{d}x + (\\sin x - x\\cos x - 1)\\mathrm{d}y \\)\n\\( = \\int_{L_1} 0\\mathrm{d}y + \\int_{L_2} x\\mathrm{d}x \\)\n\\( = \\int_{\\frac{\\pi}{2}}^{\\pi} x\\mathrm{d}x = \\frac{3}{8}\\pi^2 \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9570/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）\\( \\sum_{n = 1}^{\\infty} \\sum_{m = 1}^{n} \\frac{m}{2^{n - 1}} = \\)______。",
+          "options": [],
+          "answer": "8",
+          "explanation": "原式\\( = \\sum_{n = 1}^{\\infty} \\left( \\sum_{m = 1}^{n} \\frac{m}{2^{n - 1}} \\right) = \\sum_{n = 1}^{\\infty} \\frac{\\frac{n(n + 1)}{2}}{2^{n - 1}} = \\sum_{n = 1}^{\\infty} \\frac{n(n + 1)}{2^n} = \\sum_{n = 1}^{\\infty} (n^2 + n)\\left( \\frac{1}{2} \\right)^n \\)，\n令\\( f(x) = x\\sum_{n = 1}^{\\infty} n(n + 1)x^{n - 1} = x\\left( \\sum_{n = 1}^{\\infty} x^{n + 1} \\right)'' = x\\left( \\frac{x^2}{1 - x} \\right)'' = \\frac{2x}{(1 - x)^3} \\)，\n故原式\\( = \\left. \\frac{2x}{(1 - x)^3} \\right|_{x = \\frac{1}{2}} = 8 \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9571/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设\\( A \\)为\\( 3 \\times 4 \\)矩阵，若\\( AA^{\\text{T}} \\)的特征值之和为\\( 1 \\)，\\( AA^{\\text{T}} \\)的每行元素之和均为\\( 2 \\)，\\( A^{\\text{T}}A - 3E \\)不可逆，则\\( |A^{\\text{T}}A + 3E| = \\)______。",
+          "options": [],
+          "answer": "\\(-90\\)",
+          "explanation": "记矩阵\\( AA^{\\text{T}} \\)的特征值为\\( \\lambda_1,\\lambda_2,\\lambda_3 \\)。由于\\( AA^{\\text{T}} \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} = 2\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} \\)，故\\( \\lambda_1 = 2 \\)，又\n\\( |3E - A^{\\text{T}}A| \\stackrel{(*)}{=} 3|3E - AA^{\\text{T}}| = 0 \\)，\n故\\( \\lambda_2 = 3 \\)，于是\\( 2 + 3 + \\lambda_3 = 1 \\)，解得\\( \\lambda_3 = -4 \\)。故\n\\( |A^{\\text{T}}A + 3E| = | - (3E + A^{\\text{T}}A)| = | - 3E - A^{\\text{T}}A| \\)\n\\( = (-3)| - 3E - AA^{\\text{T}}| \\)\n\\( = (-3)(-1)^3|3E + AA^{\\text{T}}| \\)\n\\( = 3 \\times 5 \\times 6 \\times (-1) = -90 \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9572/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）已知两只灯泡的寿命独立同分布于期望为\\( 2 \\)的指数分布。第一只灯泡先亮，若\\( 1 \\)小时内第一只灯泡坏掉，则在第\\( 1 \\)小时时第二只灯泡才亮；若\\( 1 \\)小时内第一只灯泡未坏掉，则在第一只灯泡坏掉时，立即点亮第二只灯泡。令\\( T \\)为从点亮第一只灯泡直到第二只灯泡坏掉的时间，则\\( E(T) = \\)______。",
+          "options": [],
+          "answer": "\\( 3 + 2\\text{e}^{-\\frac{1}{2}} \\)",
+          "explanation": "法一 令\\( T_i = \\)｛第\\( i \\)只灯泡的寿命｝，\\( i = 1,2 \\)，则\n\\( E(T) = P\\{ T_1 1 \\)时，\\( F_T(t) = (1 - \\text{e}^{-\\frac{1}{2}}) \\cdot [1 - \\text{e}^{-\\frac{1}{2}(t - 1)}] + \\int_{1}^{t} \\mathrm{d}x \\int_{0}^{t - x} \\frac{1}{2}\\text{e}^{-\\frac{1}{2}x} \\cdot \\frac{1}{2}\\text{e}^{-\\frac{1}{2}y}\\mathrm{d}y \\)\n\\( = (1 - \\text{e}^{-\\frac{1}{2}}) \\cdot [1 - \\text{e}^{-\\frac{1}{2}(t - 1)}] + \\int_{1}^{t} \\frac{1}{2}\\text{e}^{-\\frac{1}{2}x} \\cdot [1 - \\text{e}^{-\\frac{1}{2}(t - x)}]\\mathrm{d}x \\)\n\\( = (1 - \\text{e}^{-\\frac{1}{2}}) \\cdot [1 - \\text{e}^{-\\frac{1}{2}(t - 1)}] + \\int_{1}^{t} \\frac{1}{2}(\\text{e}^{-\\frac{1}{2}x} - \\text{e}^{-\\frac{1}{2}t})\\mathrm{d}x \\)\n\\( = 1 - \\text{e}^{-\\frac{1}{2}(t - 1)} + \\frac{1}{2}\\text{e}^{-\\frac{1}{2}t} - \\frac{1}{2}t\\text{e}^{-\\frac{1}{2}t} \\)。\n故\\( T \\)的概率密度为\n\\( f_T(t) = \\frac{1}{2}\\text{e}^{-\\frac{1}{2}(t - 1)} - \\frac{3}{4}\\text{e}^{-\\frac{1}{2}t} + \\frac{1}{4}t\\text{e}^{-\\frac{1}{2}t}, t > 1 \\)。\n所以\\( E(T) = \\int_{1}^{+\\infty} t f_T(t)\\mathrm{d}t = \\int_{1}^{+\\infty} t\\left[ \\frac{1}{2}\\text{e}^{-\\frac{1}{2}(t - 1)} - \\frac{3}{4}\\text{e}^{-\\frac{1}{2}t} + \\frac{1}{4}t\\text{e}^{-\\frac{1}{2}t} \\right]\\mathrm{d}t \\)\n\\( = \\int_{1}^{+\\infty} t \\cdot \\frac{1}{2}\\text{e}^{-\\frac{1}{2}(t - 1)}\\mathrm{d}t - \\frac{3}{4}\\int_{1}^{+\\infty} t\\text{e}^{-\\frac{1}{2}t}\\mathrm{d}t + \\frac{1}{4}\\int_{1}^{+\\infty} t^2\\text{e}^{-\\frac{1}{2}t}\\mathrm{d}t \\)\n\\( = \\int_{0}^{+\\infty} (u + 1) \\cdot \\frac{1}{2}\\text{e}^{-\\frac{1}{2}u}\\mathrm{d}u - \\frac{3}{4}\\int_{1}^{+\\infty} t\\text{e}^{-\\frac{1}{2}t}\\mathrm{d}t - \\frac{1}{2}\\int_{1}^{+\\infty} t^2\\text{d}(\\text{e}^{-\\frac{1}{2}t}) \\)\n\\( = 3 + \\frac{1}{2}\\text{e}^{-\\frac{1}{2}} + \\frac{1}{4}\\int_{1}^{+\\infty} t\\text{e}^{-\\frac{1}{2}t}\\mathrm{d}t = 3 + 2\\text{e}^{-\\frac{1}{2}} \\)。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9573/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "二、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）\n设函数$f(x)$满足$f'(x)=f(\\frac{2}{x})(x\\gt0)$．\n（1）证明$x^{2}f''(x)+2f(x)=0(x\\gt0)$；\n（2）求$f(x)$．",
+          "options": [],
+          "answer": "（1）【证】由于$f'(x)=f(\\frac{2}{x})$，因此$f''(x)=f'(\\frac{2}{x})\\cdot(-\\frac{2}{x^{2}})$．\n从而有$x^{2}f''(x)+2f'(\\frac{2}{x})=0$，由题设可知$f'(\\frac{2}{x})=f(x)$，故\n$x^{2}f''(x)+2f(x)=0$．\n证毕．\n（2）",
+          "explanation": "令$x=\\mathrm{e}^{t}$，$y = f(x)$，则\n$f'(x)=\\frac{\\frac{\\mathrm{d}y}{\\mathrm{d}t}}{\\frac{\\mathrm{d}x}{\\mathrm{d}t}}=\\mathrm{e}^{-t}\\frac{\\mathrm{d}y}{\\mathrm{d}t}$，$f''(x)=\\frac{\\frac{\\mathrm{d}}{\\mathrm{d}t}(\\mathrm{e}^{-t}\\frac{\\mathrm{d}y}{\\mathrm{d}t})}{\\frac{\\mathrm{d}x}{\\mathrm{d}t}}=\\mathrm{e}^{-2t}\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}-\\mathrm{e}^{-2t}\\frac{\\mathrm{d}y}{\\mathrm{d}t}$．\n将$y = f(x)$，$f''(x)$代入方程$x^{2}f''(x)+2f(x)=0$，化简得\n$\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}-\\frac{\\mathrm{d}y}{\\mathrm{d}t}+2y = 0$，\n解得\n$y=\\mathrm{e}^{\\frac{1}{2}t}(C_{1}\\cos\\frac{\\sqrt{7}}{2}t + C_{2}\\sin\\frac{\\sqrt{7}}{2}t)$\n$=\\sqrt{x}[C_{1}\\cos(\\frac{\\sqrt{7}}{2}\\ln x)+C_{2}\\sin(\\frac{\\sqrt{7}}{2}\\ln x)](x\\gt0)$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9574/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）\n（1）证明：设$f(x)$连续，当$f(x)$单调减少时，$\\sum_{k = 1}^{n - 1}f(k + 1)\\leq\\int_{1}^{n}f(x)\\mathrm{d}x$；\n（2）计算$\\lim_{n\\rightarrow\\infty}\\sum_{k = 1}^{n^{2}}\\frac{n}{n^{2}+k^{2}}$．",
+          "options": [],
+          "answer": "（1）【证】$\\int_{1}^{n}f(x)\\mathrm{d}x=\\sum_{k = 1}^{n - 1}\\int_{k}^{k + 1}f(x)\\mathrm{d}x=\\sum_{k = 1}^{n - 1}f(\\xi_{k})$，$k\\lt\\xi_{k}\\lt k + 1$，\n由于$f(x)$单调减少，故$f(k + 1)\\leq f(\\xi_{k})$，即$\\sum_{k = 1}^{n - 1}f(k + 1)\\leq\\sum_{k = 1}^{n - 1}f(\\xi_{k})$，如图（a）所示，\n也即矩形面积之和不大于曲边梯形面积．证毕．\n（2）",
+          "explanation": "注意到$\\sum_{k = 1}^{n^{2}}\\frac{1}{1 + (\\frac{k}{n})^{2}}\\cdot\\frac{1}{n}$是在$[0,n]$上作$n^{2}$等分后，其高为$\\frac{1}{1 + (\\frac{k}{n})^{2}}$，底边长为$\\frac{1}{n}$的矩形面积之和，\n$\\int_{\\frac{1}{n}}^{n + \\frac{1}{n}}\\frac{1}{1 + x^{2}}\\mathrm{d}x\\lt\\sum_{k = 1}^{n^{2}}\\frac{1}{1 + (\\frac{k}{n})^{2}}\\cdot\\frac{1}{n}\\lt\\int_{0}^{n}\\frac{1}{1 + x^{2}}\\mathrm{d}x$，\n其中，由图（b）可知，第1个小于号成立，由图（c）可知，第2个小于号成立．\n当$n\\rightarrow\\infty$时，$\\int_{\\frac{1}{n}}^{n + \\frac{1}{n}}\\frac{1}{1 + x^{2}}\\mathrm{d}x=\\int_{0}^{n}\\frac{1}{1 + x^{2}}\\mathrm{d}x=\\int_{0}^{+\\infty}\\frac{1}{1 + x^{2}}\\mathrm{d}x=\\frac{\\pi}{2}$，由夹逼准则知，\n$\\lim_{n\\rightarrow\\infty}\\sum_{k = 1}^{n^{2}}\\frac{n}{n^{2}+k^{2}}=\\frac{\\pi}{2}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9575/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（本题满分12分）\n求$\\sum_{n = 1}^{\\infty}\\frac{[2 + (-1)^{n}]^{n}}{n\\cdot6^{n}}$的值．",
+          "options": [],
+          "answer": "",
+          "explanation": "设\n$S(x)=\\sum_{n = 1}^{\\infty}\\frac{[2 + (-1)^{n}]^{n}}{n}x^{n}=\\sum_{n = 1}^{\\infty}\\frac{3^{2n}}{2n}x^{2n}+\\sum_{n = 1}^{\\infty}\\frac{1}{2n - 1}x^{2n - 1}$．\n对于级数$\\sum_{n = 1}^{\\infty}\\frac{3^{2n}}{2n}x^{2n}$，因为$\\lim_{n\\rightarrow\\infty}\\left|\\frac{3^{2(n + 1)}}{2(n + 1)}\\cdot\\frac{2n}{3^{2n}}\\cdot\\frac{x^{2(n + 1)}}{x^{2n}}\\right| = 3^{2}|x|^{2}$，所以收敛半径是$\\frac{1}{3}$，代入$x = \\pm\\frac{1}{3}$可知，级数都发散，所以收敛域是$(-\\frac{1}{3},\\frac{1}{3})$．\n对于级数$\\sum_{n = 1}^{\\infty}\\frac{1}{2n - 1}x^{2n - 1}$，因为$\\lim_{n\\rightarrow\\infty}\\left|\\frac{2n - 1}{2n + 1}\\cdot\\frac{x^{2n + 1}}{x^{2n - 1}}\\right| = |x|^{2}$，所以收敛半径是1，代入$x = \\pm1$可知，级数都发散，所以收敛域是$(-1,1)$．\n综上，级数$\\sum_{n = 1}^{\\infty}\\frac{[2 + (-1)^{n}]^{n}}{n}x^{n}$的收敛域是$(-\\frac{1}{3},\\frac{1}{3})$．\n令$S_{1}(x)=\\sum_{n = 1}^{\\infty}\\frac{3^{2n}}{2n}x^{2n}$，则$S_{1}'(x)=\\sum_{n = 1}^{\\infty}3^{2n}x^{2n - 1}$，从而\n$xS_{1}'(x)=\\sum_{n = 1}^{\\infty}3^{2n}x^{2n}=\\sum_{n = 1}^{\\infty}(9x^{2})^{n}=\\frac{9x^{2}}{1 - 9x^{2}}$，\n所以\n$S_{1}'(x)=\\frac{9x}{1 - 9x^{2}}$．\n又因为$S_{1}(0) = 0$，所以\n$S_{1}(x)=S_{1}(0)+\\int_{0}^{x}S_{1}'(t)\\mathrm{d}t=\\int_{0}^{x}\\frac{9t}{1 - 9t^{2}}\\mathrm{d}t=-\\frac{1}{2}\\int_{0}^{x}\\frac{-18t}{1 - 9t^{2}}\\mathrm{d}t=-\\frac{1}{2}\\ln(1 - 9x^{2})$．\n令$S_{2}(x)=\\sum_{n = 1}^{\\infty}\\frac{1}{2n - 1}x^{2n - 1}$，则\n$S_{2}'(x)=\\sum_{n = 1}^{\\infty}x^{2n - 2}=\\sum_{n = 0}^{\\infty}x^{2n}=\\frac{1}{1 - x^{2}}=\\frac{1}{2}\\cdot\\frac{1}{1 - x}+\\frac{1}{2}\\cdot\\frac{1}{1 + x}$，\n又因为$S_{2}(0) = 0$，所以\n$S_{2}(x)=S_{2}(0)+\\int_{0}^{x}S_{2}'(t)\\mathrm{d}t=\\int_{0}^{x}(\\frac{1}{2}\\cdot\\frac{1}{1 - t}+\\frac{1}{2}\\cdot\\frac{1}{1 + t})\\mathrm{d}t$\n$=\\frac{1}{2}\\ln(1 + x)-\\frac{1}{2}\\ln(1 - x)$．\n因而\n$S(x)=-\\frac{1}{2}\\ln(1 - 9x^{2})+\\frac{1}{2}\\ln(1 + x)-\\frac{1}{2}\\ln(1 - x),x\\in(-\\frac{1}{3},\\frac{1}{3})$．\n因为$\\frac{1}{6}\\in(-\\frac{1}{3},\\frac{1}{3})$，所以所求级数\n$\\sum_{n = 1}^{\\infty}\\frac{[2 + (-1)^{n}]^{n}}{n\\cdot6^{n}}=S(\\frac{1}{6})=-\\frac{1}{2}\\ln\\frac{3}{4}+\\frac{1}{2}\\ln\\frac{7}{6}-\\frac{1}{2}\\ln\\frac{5}{6}$\n$=\\frac{1}{2}\\ln(\\frac{7}{6}\\times\\frac{6}{5}\\times\\frac{4}{3})=\\frac{1}{2}\\ln\\frac{28}{15}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9576/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设a，b为实数，函数\\( f(x,y)=ax^{2}+by^{2} \\)在点\\((1,1)\\)处沿方向\\( l = i + j \\)的方向导数最大，最大值为\\( 2\\sqrt{2} \\)。若\\(\\Sigma\\)为曲面\\( x^{2}+z^{2}=2z \\)被曲面\\( z = \\sqrt{f(x,y)} \\)所截取的部分。\n（1）求a，b的值；\n（2）计算\\(\\iint_{\\Sigma} z\\mathrm{d}S\\)。",
+          "options": [],
+          "answer": "（1）函数\\( f(x,y)=ax^{2}+by^{2} \\)在点\\((1,1)\\)处的梯度为\n\\(\\text{grad } f(1,1)=\\left. \\left( \\frac{\\partial f}{\\partial x},\\frac{\\partial f}{\\partial y} \\right) \\right|_{(1,1)}=\\left. (2ax,2by) \\right|_{(1,1)}=(2a,2b)\\)。\n由题设条件知，\\(\\sqrt{(2a)^{2}+(2b)^{2}} = 2\\sqrt{2}\\)且\\(\\frac{2a}{1}=\\frac{2b}{1}=k>0\\)，解得\\(\\begin{cases} a = 1 \\\\ b = 1 \\end{cases}\\)。\n（2）由（1）知\\( f(x,y)=x^{2}+y^{2} \\)。记\\(\\Sigma_{1}\\)为\\(\\Sigma\\)在第一卦限的部分，由对称性，有\n\\( I = 4\\iint_{\\Sigma_{1}} z\\mathrm{d}S \\)。\n由\\( x^{2}+z^{2}=2z \\)与\\( z = \\sqrt{x^{2}+y^{2}} \\)消去\\( z \\)可知\\(\\Sigma_{1}\\)在\\( xOy \\)平面的投影为曲线\\( 2x^{2}+y^{2}=2\\sqrt{x^{2}+y^{2}} \\)与坐标轴围成的有界区域，记其为\\( D \\)。由于曲面\\(\\Sigma\\)满足\\( z = 1 + \\sqrt{1 - x^{2}} \\)，于是\n\\(\\sqrt{1+(z_{x}')^{2}+(z_{y}')^{2}}=\\sqrt{1+\\frac{x^{2}}{1 - x^{2}}}=\\frac{1}{\\sqrt{1 - x^{2}}}\\)，\n从而\n\\( I = 4\\iint_{\\Sigma_{1}} z\\mathrm{d}S = 4\\iint_{D} \\left( 1 + \\sqrt{1 - x^{2}} \\right) \\cdot \\frac{1}{\\sqrt{1 - x^{2}}}\\mathrm{d}x\\mathrm{d}y = 4\\iint_{D} \\left( \\frac{1}{\\sqrt{1 - x^{2}}} + 1 \\right)\\mathrm{d}x\\mathrm{d}y \\)\n\\( = 4\\int_{0}^{\\frac{\\pi}{2}} \\mathrm{d}\\theta \\int_{0}^{\\frac{2}{1 + \\cos^{2}\\theta}} \\left( \\frac{1}{\\sqrt{1 - r^{2}\\cos^{2}\\theta}} + 1 \\right) \\cdot r\\mathrm{d}r \\)\n\\( = 4\\int_{0}^{\\frac{\\pi}{2}} \\frac{1}{\\cos^{2}\\theta} \\sqrt{1 - r^{2}\\cos^{2}\\theta} \\big|_{0}^{\\frac{2}{1 + \\cos^{2}\\theta}} \\mathrm{d}\\theta + 4 \\cdot \\frac{1}{2}\\int_{0}^{\\frac{\\pi}{2}} \\frac{4}{(1 + \\cos^{2}\\theta)^{2}}\\mathrm{d}\\theta \\)\n\\( = 4\\int_{0}^{\\frac{\\pi}{2}} \\frac{1 - \\sqrt{1 - \\frac{4\\cos^{2}\\theta}{(1 + \\cos^{2}\\theta)^{2}}}}{\\cos^{2}\\theta}\\mathrm{d}\\theta + 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}\\theta}{(1 + \\cos^{2}\\theta)^{2}} \\)\n\\( = 4\\int_{0}^{\\frac{\\pi}{2}} \\frac{1 - \\frac{1 - \\cos^{2}\\theta}{1 + \\cos^{2}\\theta}}{\\cos^{2}\\theta}\\mathrm{d}\\theta + 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}\\theta}{(1 + \\cos^{2}\\theta)^{2}} \\)\n\\( = 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}\\theta}{1 + \\cos^{2}\\theta} + 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}\\theta}{(1 + \\cos^{2}\\theta)^{2}} \\)\n\\( = 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\mathrm{d}(\\tan\\theta)}{\\sec^{2}\\theta + 1} + 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\sec^{2}\\theta}{(\\sec^{2}\\theta + 1)^{2}}\\mathrm{d}(\\tan\\theta) \\)\n\\( = 8\\int_{0}^{+\\infty} \\frac{\\mathrm{d}t}{t^{2} + 2} + 8\\int_{0}^{+\\infty} \\frac{(t^{2} + 2) - 1}{(t^{2} + 2)^{2}}\\mathrm{d}t \\)\n\\( = 2 \\cdot 8 \\cdot \\frac{1}{\\sqrt{2}} \\arctan\\frac{t}{\\sqrt{2}} \\big|_{0}^{+\\infty} - 8\\int_{0}^{+\\infty} \\frac{\\mathrm{d}t}{(t^{2} + 2)^{2}} \\)\n\\( \\stackrel{t = \\sqrt{2}\\tan u}{=} 8\\sqrt{2} \\cdot \\frac{\\pi}{2} - 8\\int_{0}^{\\frac{\\pi}{2}} \\frac{\\sqrt{2}\\sec^{2}u}{4\\sec^{4}u}\\mathrm{d}u \\)\n\\( = 4\\sqrt{2}\\pi - 2\\sqrt{2}\\int_{0}^{\\frac{\\pi}{2}} \\cos^{2}u\\mathrm{d}u \\)\n\\( = 4\\sqrt{2}\\pi - 2\\sqrt{2} \\cdot \\frac{1}{2} \\cdot \\frac{\\pi}{2} = \\frac{7}{2}\\sqrt{2}\\pi \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9577/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设实二次型\\( f(x_{1},x_{2},x_{3})=(x_{1}-x_{2}+x_{3})^{2}+(x_{2}+x_{3})^{2}+(x_{1}+ax_{3})^{2} \\)，且\\( f(x_{1},x_{2},x_{3}) = 0 \\)有无穷多解，其中\\( a \\)是参数。若\\(\\eta_{1}\\)为二次型矩阵最大特征值对应的单位特征向量，且\\( x^{\\mathrm{T}}\\eta_{1} = 0 \\)。求：\n（1）\\( a \\)的值；\n（2）\\(\\max\\limits_{x \\neq 0} \\frac{f(x)}{x^{\\mathrm{T}}x} \\)。",
+          "options": [],
+          "answer": "（1）由题设可知，线性方程组\n\\(\\begin{cases} x_{1}-x_{2}+x_{3}=0 \\\\ x_{2}+x_{3}=0 \\\\ x_{1}+ax_{3}=0 \\end{cases}\\)\n有无穷多解，即\n\\(\\begin{vmatrix} 1 & -1 & 1 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & a \\end{vmatrix} = 0\\)，\n解得\\( a = 2 \\)。\n（2）由（1）可知二次型\\( f(x_{1},x_{2},x_{3}) \\)的矩阵\\( A = \\begin{pmatrix} 2 & -1 & 3 \\\\ -1 & 2 & 0 \\\\ 3 & 0 & 6 \\end{pmatrix} \\)。由\\( |\\lambda E - A| = \\lambda(\\lambda^{2} - 10\\lambda + 18) = 0 \\)，知\\( A \\)的特征值为\\(\\lambda_{1} = 5 + \\sqrt{7}\\)，\\(\\lambda_{2} = 5 - \\sqrt{7}\\)，\\(\\lambda_{3} = 0 \\)。由题知，\\(\\eta_{1}\\)为\\(\\lambda_{1}\\)对应的单位特征向量，令\\(\\eta_{2}\\)，\\(\\eta_{3}\\)分别为\\(\\lambda_{2}\\)，\\(\\lambda_{3}\\)对应的单位特征向量，记\\( Q = (\\eta_{1},\\eta_{2},\\eta_{3}) \\)，则\\( Q^{-1} = Q^{\\mathrm{T}} \\)。再令\\( x = Qy \\)，有\n\\( f = x^{\\mathrm{T}}Ax = y^{\\mathrm{T}} \\begin{pmatrix} 5 + \\sqrt{7} & 0 & 0 \\\\ 0 & 5 - \\sqrt{7} & 0 \\\\ 0 & 0 & 0 \\end{pmatrix} y \\)，\\( x^{\\mathrm{T}}x = y^{\\mathrm{T}}y \\)，\n由\\( x^{\\mathrm{T}}\\eta_{1} = 0 \\)，即\\( y^{\\mathrm{T}}Q^{\\mathrm{T}}\\eta_{1} = 0 \\)，因\\( Q^{\\mathrm{T}}\\eta_{1} = \\begin{pmatrix} \\eta_{1}^{\\mathrm{T}} \\\\ \\eta_{2}^{\\mathrm{T}} \\\\ \\eta_{3}^{\\mathrm{T}} \\end{pmatrix} \\eta_{1} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\)，于是\n\\( (y_{1},y_{2},y_{3}) \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} = 0 \\)，\\( y_{1} = 0 \\)，\n\\( f = (5 - \\sqrt{7})y_{2}^{2} \\leq (5 - \\sqrt{7})(y_{2}^{2} + y_{3}^{2}) = (5 - \\sqrt{7})y^{\\mathrm{T}}y = (5 - \\sqrt{7})x^{\\mathrm{T}}x \\)。\n当\\( x \\neq 0 \\)时，\\(\\frac{f(x)}{x^{\\mathrm{T}}x} \\leq 5 - \\sqrt{7}\\)，令\\( x_{0} = Q \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix} \\)，得\\(\\frac{f(x_{0})}{x_{0}^{\\mathrm{T}}x_{0}} = 5 - \\sqrt{7} \\)。故\\(\\max\\limits_{x \\neq 0} \\frac{f(x)}{x^{\\mathrm{T}}x} = 5 - \\sqrt{7} \\)。\n【注】本题的理论基础在卷（四）第7题中讲过了。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9578/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设\\( X_{1},X_{2},\\cdots,X_{n} \\)是来自总体\\( X \\)的简单随机样本，总体\\( X \\)的概率密度为\n\\( f(x;\\theta) = \\frac{1}{2}(1 + \\theta x), - 1 0 \\\\ 0, & \\text{其他} \\end{cases} \\)，\\( i = 1,\\cdots,n \\)，\\(\\bar{Y} = \\frac{1}{n}\\sum_{i = 1}^{n}Y_{i} \\)。求\\( \\theta \\)的最大似然估计量。",
+          "options": [],
+          "answer": "由题设，\n\\( P\\{ X_{i} > 0 \\} = \\int_{0}^{1} \\frac{1}{2}(1 + \\theta x)\\mathrm{d}x = \\frac{1}{2} + \\frac{\\theta}{4} \\)，\n于是\\( Y_{i} \\sim B\\left( 1,\\frac{1}{2} + \\frac{\\theta}{4} \\right) \\)，\\( i = 1,\\cdots,n \\)。\n则似然函数\n\\( L(\\theta) = \\left( \\frac{1}{2} + \\frac{\\theta}{4} \\right)^{\\sum_{i = 1}^{n}y_{i}} \\left( \\frac{1}{2} - \\frac{\\theta}{4} \\right)^{n - \\sum_{i = 1}^{n}y_{i}} \\)\n\\( = \\left( \\frac{1}{2} + \\frac{\\theta}{4} \\right)^{n\\bar{y}} \\left( \\frac{1}{2} - \\frac{\\theta}{4} \\right)^{n - n\\bar{y}} \\)，\n取对数，得\n\\( \\ln L(\\theta) = n\\bar{y}\\ln\\left( \\frac{1}{2} + \\frac{\\theta}{4} \\right) + (n - n\\bar{y})\\ln\\left( \\frac{1}{2} - \\frac{\\theta}{4} \\right) \\)。\n令\\( \\frac{\\mathrm{d}[\\ln L(\\theta)]}{\\mathrm{d}\\theta} = \\frac{n\\bar{y} \\cdot \\frac{1}{4}}{\\frac{1}{2} + \\frac{\\theta}{4}} - \\frac{(n - n\\bar{y})\\frac{1}{4}}{\\frac{1}{2} - \\frac{\\theta}{4}} = 0 \\)，解得\\( \\theta = 4\\bar{y} - 2 \\)，又因为\\( |\\theta| \\leq 1 \\)，且\\( 0 \\leq \\bar{Y} \\leq 1 \\)，故\\( \\theta \\)的最大似然估计量为\n\\( \\hat{\\theta} = \\begin{cases} - 1, & 0 \\leq \\bar{y} \\leq 0.25 \\\\ 4\\bar{Y} - 2, & 0.25 < \\bar{y} < 0.75 \\\\ 1, & 0.75 \\leq \\bar{y} \\leq 1 \\end{cases} \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9579/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2025,
+  "paperNo": 1,
+  "paperKind": "testPaper",
+  "title": "2025 张宇终极预测8套卷（一）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（一）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/34107/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "设函数$f(x)$在区间$(-1,1)$内有定义，且在点$x = 0$处连续，则以下结论：\n\n①当$\\lim\\limits_{x \\to 0}\\frac{f(x)}{\\sqrt[3]{x}} = 0$时，$f(x)$在点$x = 0$处可导；\n\n②当$\\lim\\limits_{x \\to 0}\\frac{f(x)}{x^2} = 0$时，$f(x)$在点$x = 0$处可导；\n\n③当$f(x)$在点$x = 0$处可导时，$\\lim\\limits_{x \\to 0}\\frac{f(x)}{\\sqrt[3]{x}} = 0$．\n\n所有正确结论的序号为",
+          "options": [
+            {
+              "key": "A",
+              "text": "①"
+            },
+            {
+              "key": "B",
+              "text": "②"
+            },
+            {
+              "key": "C",
+              "text": "②③"
+            },
+            {
+              "key": "D",
+              "text": "①②"
+            }
+          ],
+          "answer": "B",
+          "explanation": "对于①，取$f(x) = x^{\\frac{2}{3}}$，则$f(x)$在$x = 0$处连续但不可导，故①不正确； 对于②，因$\\lim\\limits_{x \\to 0}f(x) = f(0)$，又由$\\lim\\limits_{x \\to 0}\\frac{f(x)}{x^2} = 0$，有$f(0) = 0$，则 $f^\\prime(0) = \\lim\\limits_{x \\to 0}\\frac{f(x) - f(0)}{x - 0} = \\lim\\limits_{x \\to 0}\\frac{f(x)}{x} = \\lim\\limits_{x \\to 0}\\frac{f(x)}{x^2} \\cdot x = 0$， 故②正确； 对于③，取$f(x) = 1$，此时$\\lim\\limits_{x \\to 0}\\frac{f(x)}{\\sqrt[3]{x}} = \\infty$，故③不正确．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9580/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设函数$f(x) = \\frac{x}{\\cos x}$在$x = 0$处的三次泰勒多项式为$ax + bx^2 + cx^3$，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$a = 1$，$b = 0$，$c = \\frac{1}{2}$"
+            },
+            {
+              "key": "B",
+              "text": "$a = 0$，$b = 1$，$c = \\frac{1}{2}$"
+            },
+            {
+              "key": "C",
+              "text": "$a = 0$，$b = \\frac{1}{2}$，$c = 1$"
+            },
+            {
+              "key": "D",
+              "text": "$a = \\frac{1}{2}$，$b = 1$，$c = 0$"
+            }
+          ],
+          "answer": "A",
+          "explanation": "将$\\cos x$在$x = 0$处泰勒展开，可得$f(x) = \\frac{x}{1 - \\frac{1}{2}x^2 + \\frac{1}{24}x^4 - \\cdots}$，列出除法竖式并计算，得 所以$a = 1$，$b = 0$，$c = \\frac{1}{2}$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9581/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "已知数列$\\{a_n\\}$收敛于$a(a > 0)$，则数列$\\{\\sum\\limits_{k = 1}^n\\frac{a_{n + k}}{n + k}\\}$",
+          "options": [
+            {
+              "key": "A",
+              "text": "收敛于$b(b > a)$"
+            },
+            {
+              "key": "B",
+              "text": "收敛于$a$"
+            },
+            {
+              "key": "C",
+              "text": "收敛于$b(b < a)$"
+            },
+            {
+              "key": "D",
+              "text": "发散"
+            }
+          ],
+          "answer": "C",
+          "explanation": "由定积分定义，得 $\\lim\\limits_{n \\to +\\infty}\\sum\\limits_{k = 1}^n\\frac{1}{n + k} = \\int_0^1\\frac{1}{1 + x}dx = \\ln 2$， 又$\\lim\\limits_{n \\to \\infty}a_n = a$，则对于任意的$\\varepsilon > 0$，存在$N > 0$，当$n > N$时，恒有$|a_n - a| < \\varepsilon$，故当$n > N$时， $\\left|\\sum\\limits_{k = 1}^n\\frac{a_{n + k}}{n + k} - \\sum\\limits_{k = 1}^n\\frac{a}{n + k}\\right|$ $= \\left|\\sum\\limits_{k = 1}^n\\frac{a_{n + k} - a}{n + k}\\right| \\leq \\sum\\limits_{k = 1}^n\\frac{|a_{n + k} - a|}{n + k} < \\sum\\limits_{k = 1}^n\\frac{\\varepsilon}{n + k}$ $< \\sum\\limits_{k = 1}^n\\frac{\\varepsilon}{n} = \\frac{\\varepsilon}{n} \\cdot n = \\varepsilon$， 故 $\\lim\\limits_{n \\to \\infty}\\sum\\limits_{k = 1}^n\\frac{a_{n + k} - a}{n + k} = 0$， 即 $\\lim\\limits_{n \\to \\infty}\\sum\\limits_{k = 1}^n\\frac{a_{n + k}}{n + k} = \\lim\\limits_{n \\to \\infty}\\sum\\limits_{k = 1}^n\\frac{a}{n + k} = a\\ln 2 = b$． 由于$\\ln 2 < 1$，故$\\{\\sum\\limits_{k = 1}^n\\frac{a_{n + k}}{n + k}\\}$收敛于$b(b < a)$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9582/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "函数$f(x, y) = x + 4y$在条件$\\frac{x^2}{2} - x + y^2 = 1$下的最大值是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$2 + 2\\sqrt{2}$"
+            },
+            {
+              "key": "B",
+              "text": "$1 + 3\\sqrt{2}$"
+            },
+            {
+              "key": "C",
+              "text": "$2 + 2\\sqrt{3}$"
+            },
+            {
+              "key": "D",
+              "text": "$1 + 3\\sqrt{3}$"
+            }
+          ],
+          "answer": "D",
+          "explanation": "构造拉格朗日函数$L(x, y, \\lambda) = x + 4y + \\lambda(\\frac{x^2}{2} - x + y^2 - 1)$，令 $\\begin{cases} L_x^\\prime = 1 + \\lambda(x - 1) = 0, & ①\\\\ L_y^\\prime = 4 + 2\\lambda y = 0, & ②\\\\ L_\\lambda^\\prime = \\frac{x^2}{2} - x + y^2 - 1 = 0. & ③ \\end{cases}$ 由式②可知$\\lambda = -\\frac{2}{y}$，将其代入到式①，有 $1 - \\frac{2}{y}(x - 1) = 0$， 即$y = 2(x - 1)$，将其代入到式③，便有 $\\frac{x^2}{2} - x + 4(x - 1)^2 - 1 = 0$， 解得$x = 1 \\pm \\frac{1}{\\sqrt{3}}$，所以上述方程组的解为 $(x, y, \\lambda) = \\left(1 \\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{2}{\\sqrt{3}}, \\mp \\sqrt{3}\\right)$． 计算可知 $f\\left(1 + \\frac{1}{\\sqrt{3}}, \\frac{2}{\\sqrt{3}}\\right) = 1 + 3\\sqrt{3}$，$f\\left(1 - \\frac{1}{\\sqrt{3}}, -\\frac{2}{\\sqrt{3}}\\right) = 1 - 3\\sqrt{3}$， 所以最大值是$1 + 3\\sqrt{3}$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9583/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设函数$f(x) = \\begin{cases} 1, & |x| \\leq \\frac{\\pi}{2}, \\\\ \\cos^4 x, & \\frac{\\pi}{2} < x < \\pi, \\end{cases}$若$\\int_k^\\pi f(x)dx = \\frac{7}{16}\\pi$，则$k =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$0$"
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{\\pi}{4}$"
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{\\pi}{2}$"
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{3}{4}\\pi$"
+            }
+          ],
+          "answer": "B",
+          "explanation": "由题设知，当$x \\in \\left[-\\frac{\\pi}{2}, \\pi\\right)$时，$f(x) > 0$，从而 $I(k) = \\int_k^\\pi f(x)dx > 0$，$k \\in \\left[-\\frac{\\pi}{2}, \\pi\\right)$． 又 $\\int_{\\frac{\\pi}{2}}^\\pi \\cos^4 x dx \\stackrel{令x = \\pi - t}{=} \\int_{-\\frac{\\pi}{2}}^0 (-\\cos t)^4 dt = \\int_0^{\\frac{\\pi}{2}} \\cos^4 t dt$ $= \\frac{3}{4} \\times \\frac{1}{2} \\times \\frac{\\pi}{2} = \\frac{3}{16}\\pi < \\frac{7}{16}\\pi$， 故$k \\in \\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$．因此有 $\\int_k^\\pi f(x)dx = \\int_k^{\\frac{\\pi}{2}} 1dx + \\int_{\\frac{\\pi}{2}}^\\pi \\cos^4 x dx = \\frac{\\pi}{2} - k + \\frac{3}{16}\\pi = \\frac{11}{16}\\pi - k = \\frac{7}{16}\\pi$， 故$k = \\frac{\\pi}{4}$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9584/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "设$f(x),g(x)$在$[0,1]$上连续，则使得$\\int_{0}^{1}f(x)dx\\int_{0}^{1}g(x)dx\\geqslant\\int_{0}^{1}f(x)g(x)dx$成立的条件是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$f(x),g(x)$均为增函数."
+            },
+            {
+              "key": "B",
+              "text": "$f(x),g(x)$均为减函数."
+            },
+            {
+              "key": "C",
+              "text": "$f(x)$为减函数，$g(x)$为增函数."
+            },
+            {
+              "key": "D",
+              "text": "$f(x)$为奇函数，$g(x)$为偶函数."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 令$F(x)=x\\int_{0}^{x}f(t)g(t)dt - \\int_{0}^{x}f(t)dt\\int_{0}^{x}g(t)dt$，则$F(0)=0$， $F'(x)=\\int_{0}^{x}f(t)g(t)dt + xf(x)g(x) - f(x)\\int_{0}^{x}g(t)dt - g(x)\\int_{0}^{x}f(t)dt$ $=\\int_{0}^{x}[f(t)g(t) + f(x)g(x) - f(x)g(t) - g(x)f(t)]dt$ $=\\int_{0}^{x}[f(x) - f(t)][g(x) - g(t)]dt$. 当$f(x),g(x)$单调性相同时，$[f(x) - f(t)][g(x) - g(t)]\\geqslant0$，$F'(x)\\geqslant0$，有$F(x)\\geqslant0$. 当$f(x),g(x)$单调性相反时，$[f(x) - f(t)][g(x) - g(t)]\\leqslant0$，$F'(x)\\leqslant0$，有$F(x)\\leqslant0$. 【注】 命制辅助函数时，为何写$F(x)=x\\int_{0}^{x}f(t)g(t)dt - \\int_{0}^{x}f(t)dt\\int_{0}^{x}g(t)dt$，而不写$F(x)=\\int_{0}^{x}f(t)g(t)dt - \\int_{0}^{x}f(t)dt\\int_{0}^{x}g(t)dt$，这是为了前后统一量纲.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9585/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "一物体在距离同一水平面上的地面观测器10m处离地匀速铅垂上升，其速度为$a$m/s。若该物体上升到离地20m时，观测器视线倾角的变化率为$\\frac{1}{10}$，则$a=$",
+          "options": [
+            {
+              "key": "A",
+              "text": "1."
+            },
+            {
+              "key": "B",
+              "text": "2."
+            },
+            {
+              "key": "C",
+              "text": "3."
+            },
+            {
+              "key": "D",
+              "text": "5."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 设时间$t$时，物体离地面的距离为$h(t)$，观测器视线的倾角为$\\theta(t)$，如图所示，则有$\\theta(t)=\\arctan\\frac{h(t)}{10}$，故 $\\frac{d[\\theta(t)]}{dt}=\\frac{\\frac{1}{10}}{1 + [\\frac{h(t)}{10}]^2}\\cdot\\frac{d[h(t)]}{dt}$. 当$h(t)=20$时，$\\frac{d[h(t)]}{dt}=a$，得$\\frac{d[\\theta(t)]}{dt}=\\frac{a}{50}=\\frac{1}{10}$，即$a = 5$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9586/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设$\\boldsymbol{A}$为3阶矩阵，若$|\\boldsymbol{E} - \\boldsymbol{A}| = -2$，$|-\\boldsymbol{E} - \\boldsymbol{A}| = 2$，$|2\\boldsymbol{E} - \\boldsymbol{A}| = 3$，则$|3\\boldsymbol{E} - \\boldsymbol{A}| =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "21."
+            },
+            {
+              "key": "B",
+              "text": "20."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{64}{3}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{62}{3}$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 设$|\\lambda\\boldsymbol{E} - \\boldsymbol{A}| = \\lambda^3 + a\\lambda^2 + b\\lambda + c$， 则$|\\boldsymbol{E} - \\boldsymbol{A}| = 1 + a + b + c = -2$， $|-\\boldsymbol{E} - \\boldsymbol{A}| = -1 + a - b + c = 2$， $|2\\boldsymbol{E} - \\boldsymbol{A}| = 8 + 4a + 2b + c = 3$， 解得$\\begin{cases}a = \\frac{1}{3}, \\\\ b = -3, \\\\ c = -\\frac{1}{3}.\\end{cases}$ 故$|\\lambda\\boldsymbol{E} - \\boldsymbol{A}| = \\lambda^3 + \\frac{1}{3}\\lambda^2 - 3\\lambda - \\frac{1}{3}$，于是$|3\\boldsymbol{E} - \\boldsymbol{A}| = \\frac{62}{3}$. 【注】 常规考题会给出特征方程：$|\\boldsymbol{E} - \\boldsymbol{A}| = |-\\boldsymbol{E} - \\boldsymbol{A}| = |2\\boldsymbol{E} - \\boldsymbol{A}| = 0$，则$|3\\boldsymbol{E} - \\boldsymbol{A}| = 8$，而本题给出的不是特征方程的条件。考生需对特征多项式有深刻理解。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9587/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设$\\boldsymbol{A}=\\begin{pmatrix}-1&2\\\\2&-3\\\\-1&3\\end{pmatrix}$，$\\boldsymbol{b}=\\begin{pmatrix}4\\\\1\\\\2\\end{pmatrix}$，若对任意2维实列向量$\\boldsymbol{x}$，均有$\\|\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x}_0\\|\\leqslant\\|\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x}\\|$，则$\\boldsymbol{x}_0 =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\begin{pmatrix}3\\\\2\\end{pmatrix}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\begin{pmatrix}3\\\\-2\\end{pmatrix}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\begin{pmatrix}-3\\\\2\\end{pmatrix}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\begin{pmatrix}-3\\\\-2\\end{pmatrix}$."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 由$(\\boldsymbol{A} \\vdots \\boldsymbol{b}) \\to \\begin{pmatrix}-1&2&4\\\\0&1&9\\\\0&0&-11\\end{pmatrix}$，故$r(\\boldsymbol{A}) = 2$，$r(\\boldsymbol{A} \\vdots \\boldsymbol{b}) = 3$，则$\\boldsymbol{A}\\boldsymbol{x} = \\boldsymbol{b}$无解. 设$\\boldsymbol{x} = \\begin{pmatrix}x\\\\y\\end{pmatrix}$，$\\boldsymbol{x}_0 = \\begin{pmatrix}x_0\\\\y_0\\end{pmatrix}$，则$\\boldsymbol{A}\\boldsymbol{x} = \\begin{pmatrix}-1&2\\\\2&-3\\\\-1&3\\end{pmatrix}\\begin{pmatrix}x\\\\y\\end{pmatrix} = \\begin{pmatrix}-x + 2y\\\\2x - 3y\\\\-x + 3y\\end{pmatrix}$，所以 $\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x} = \\begin{pmatrix}4\\\\1\\\\2\\end{pmatrix} - \\begin{pmatrix}-x + 2y\\\\2x - 3y\\\\-x + 3y\\end{pmatrix} = \\begin{pmatrix}4 + x - 2y\\\\1 - 2x + 3y\\\\2 + x - 3y\\end{pmatrix}$， 故$\\|\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x}\\|^2 = (4 + x - 2y)^2 + (1 - 2x + 3y)^2 + (2 + x - 3y)^2$. 令$f(x,y) = (4 + x - 2y)^2 + (1 - 2x + 3y)^2 + (2 + x - 3y)^2$，则 $\\frac{\\partial f}{\\partial x} = 2(4 + x - 2y) + 2(1 - 2x + 3y)(-2) + 2(2 + x - 3y) = 8 + 12x - 22y$， $\\frac{\\partial f}{\\partial y} = 2(4 + x - 2y)(-2) + 2(1 - 2x + 3y)×3 + 2(2 + x - 3y)(-3)$ $= -22 - 22x + 44y$. 当$\\frac{\\partial f}{\\partial x} = 0$，$\\frac{\\partial f}{\\partial y} = 0$时，解得$x = 3$，$y = 2$. 又$\\frac{\\partial^2 f}{\\partial x^2} = 12$，$\\frac{\\partial^2 f}{\\partial x\\partial y} = -22$，$\\frac{\\partial^2 f}{\\partial y^2} = 44$，故$AC - B^2 = 12×44 - (-22)^2 > 0$且$A = 12 > 0$，所以$f(x,y)$有最小值，且最小值点为$(3,2)$. 因此$\\boldsymbol{x}_0 = \\begin{pmatrix}3\\\\2\\end{pmatrix}$时，有$\\|\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x}_0\\|\\leqslant\\|\\boldsymbol{b} - \\boldsymbol{A}\\boldsymbol{x}\\|$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9588/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设$\\boldsymbol{\\alpha}_1 = \\begin{pmatrix}1\\\\-1\\\\a\\end{pmatrix}$，$\\boldsymbol{\\alpha}_2 = \\begin{pmatrix}-1\\\\0\\\\1\\end{pmatrix}$，$\\boldsymbol{\\alpha}_3 = \\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}$是3阶实矩阵$\\boldsymbol{A}$的3个互异特征值的特征向量，则“$(a,b) = (1,2)$”是“$\\boldsymbol{A}$为对称矩阵”的",
+          "options": [
+            {
+              "key": "A",
+              "text": "充要条件."
+            },
+            {
+              "key": "B",
+              "text": "充分非必要条件."
+            },
+            {
+              "key": "C",
+              "text": "必要非充分条件."
+            },
+            {
+              "key": "D",
+              "text": "既非充分又非必要条件."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 当$a = 1$，$b = 2$时，$[\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2] = 0$，$[\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_3] = 0$，$[\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3] = 0$，在2025版《张宇线性代数9讲》P126中有重要结论“$\\boldsymbol{A}$为$n$阶实对称矩阵$\\Leftrightarrow\\boldsymbol{A}$有$n$个正交的特征向量”，故为充要条件. 【注】 本题亦可这样命题：若$\\boldsymbol{A}$为实对称矩阵，则$(a,b) =$______. 这里需要计算$[\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2] = 0$，即$-1 + a = 0$，$[\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_3] = 0$，即$1 - b + a = 0$，从而有$a = 1$，$b = 2$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9589/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）$\\lim\\limits _{x→+∞}(x^{\\frac {2}{e^{x}}}-1)^{\\frac {2}{e^{x}}}=$______.",
+          "options": [],
+          "answer": "$\\text{e}^{-2}$，原式$=\\text{e}^{\\lim\\limits _{x→+∞}\\frac {2\\ln (\\text{e}^{\\frac {2}{x}\\ln x}-1)}{\\ln x}}$，由洛必达法则，逐步化简可得结果为$\\text{e}^{-2}$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9590/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）$f(x)=x\\ln x(0\\lt x\\leqslant2)$绕$x$轴旋转一周所得旋转体体积为______.",
+          "options": [],
+          "answer": "$\\pi\\left[\\frac {8}{3}(\\ln 2)^{2}-\\frac {16\\ln 2}{9}+\\frac {16}{27}\\right]$，所求旋转体体积为$V = \\int_{0}^{2}\\pi(x\\ln x)^{2}dx$，通过分步积分等运算得出结果。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9591/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）曲线$y=\\frac {1}{2}x^{2}(x\\in[0,1])$的长度为______.",
+          "options": [],
+          "answer": "$\\frac {1}{2}[\\sqrt {2}+\\ln(1+\\sqrt {2})]$，由$\\text{d}s = \\sqrt {1+(y')^{2}}\\text{d}x = \\sqrt {1+x^{2}}\\text{d}x$，知曲线长度为$s = \\int_{0}^{1}\\sqrt {1+x^{2}}\\text{d}x$，令$x = \\tan t$，通过积分运算得出结果。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9592/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）微分方程$\\frac {\\text{d}y}{\\text{d}x}=\\frac {x + 2y - 3}{x + 1}$满足$y(0)=2$的解为______.",
+          "options": [],
+          "answer": "$y = x^{2}+x + 2$，令$x + 1 = X$，$y - 2 = Y$，将方程化简，再令$U = \\frac{Y}{X}$，通过分离变量、积分等运算，并结合初始条件得出结果。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9593/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设$f(x)=\\int_{x}^{x + 1}\\text{e}^{t^{2}+tx}\\text{d}t$，则$f'(0)=$______.",
+          "options": [],
+          "answer": "$\\frac {3}{2}(\\text{e}-1)$，令$t = \\frac{u - x}{2}$，即$u = 2t + x$，对$f(x)$进行变形后求导，再代入$x = 0$得出结果；也可通过令$\\begin{cases}u = x + 1\\\\v = x\\end{cases}$，利用变上限积分求导法则计算。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9594/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）$D=\\begin{vmatrix}x&x&1&2x\\\\2&1&x&1\\\\1&x&2&-1\\\\2&-1&1&x\\end{vmatrix}$的展开式中$x^{3}$的系数为______.",
+          "options": [],
+          "answer": "$5$，按第一行展开行列式，分析只有第2项和第4项含$x^{3}$，分别计算这两项中含$x^{3}$的部分，再求和得出系数。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9595/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）若曲线\\(y = \\frac{1}{e^{x}-1}\\)与\\(y=\\frac{1}{x}+k\\)在第一象限相交，求\\(k\\)的取值范围。",
+          "options": [],
+          "answer": "由两曲线在第一象限相交，得\\(k = \\frac{1}{e^{x}-1}-\\frac{1}{x}(x\\gt0)\\)，令\\(f(x)=\\frac{1}{e^{x}-1}-\\frac{1}{x}\\)，则\\(f^\\prime(x)=\\frac{1}{x^{2}}-\\frac{e^{x}}{(e^{x}-1)^{2}}=\\frac{(e^{x}-1)^{2}-x^{2}e^{x}}{x^{2}(e^{x}-1)^{2}}\\)。\n令\\(g(x)=(e^{x}-1)^{2}-x^{2}e^{x}\\)，则\\(g^\\prime(x)=2(e^{x}-1)e^{x}-2xe^{x}-x^{2}e^{x}=e^{x}(2e^{x}-2 - 2x - x^{2})=e^{x}[2(1 + x+\\frac{1}{2}e^{\\xi}x^{2})-2x - x^{2}-2]=e^{x}(e^{\\xi}-1)x^{2}\\gt0(\\xi\\gt0)\\)，所以\\(g(x)\\gt g(0)=0\\)，故\\(f^\\prime(x)\\gt0\\)，于是当\\(x\\gt0\\)时，\\(f(x)\\)单调增加。\n由于当\\(x\\gt0\\)时，\\(e^{x}-1\\gt x\\)，故\\(\\frac{1}{e^{x}-1}-\\frac{1}{x}\\lt0\\)，又\\(\\lim\\limits_{x\\rightarrow0^{+}}f(x)=\\lim\\limits_{x\\rightarrow0^{+}}\\frac{x - e^{x}+1}{x(e^{x}-1)}=\\lim\\limits_{x\\rightarrow0^{+}}\\frac{x - e^{x}+1}{x^{2}}=\\lim\\limits_{x\\rightarrow0^{+}}\\frac{1 - e^{x}}{2x}=-\\frac{1}{2}\\)，\\(\\lim\\limits_{x\\rightarrow+\\infty}(\\frac{1}{e^{x}-1}-\\frac{1}{x}) = 0\\)，所以\\(-\\frac{1}{2}\\lt\\frac{1}{e^{x}-1}-\\frac{1}{x}\\lt0\\)，故\\(k\\)的取值范围为\\((-\\frac{1}{2},0)\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9596/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）求不定积分\\(\\int\\frac{dx}{(\\sqrt{x}+1)(x + 3)}\\)。",
+          "options": [],
+          "answer": "令\\(\\sqrt{x}=t\\)，可知\\(x = t^{2}\\)，且\\(dx = 2tdt\\)，于是\\(\\int\\frac{dx}{(\\sqrt{x}+1)(x + 3)}=\\int\\frac{2t}{(t + 1)(t^{2}+3)}dt\\)。\n设\\(\\frac{2t}{(t + 1)(t^{2}+3)}=\\frac{A}{t + 1}+\\frac{Bt + C}{t^{2}+3}=\\frac{(A + B)t^{2}+(B + C)t+(3A + C)}{(t + 1)(t^{2}+3)}\\)，即\\(A + B = 0\\)，\\(B + C = 2\\)，\\(3A + C = 0\\)，解得\\(A=-\\frac{1}{2}\\)，\\(B=\\frac{1}{2}\\)，\\(C=\\frac{3}{2}\\)，从而\\(\\int\\frac{2t}{(t + 1)(t^{2}+3)}dt=-\\frac{1}{2}\\int\\frac{1}{1 + t}dt+\\frac{1}{2}\\int\\frac{t + 3}{t^{2}+3}dt=-\\frac{1}{2}\\ln(1 + t)+\\frac{1}{2}\\int\\frac{t}{t^{2}+3}dt+\\frac{3}{2}\\int\\frac{1}{t^{2}+3}dt=-\\frac{1}{2}\\ln(1 + t)+\\frac{1}{4}\\ln(t^{2}+3)+\\frac{\\sqrt{3}}{2}\\arctan\\frac{t}{\\sqrt{3}}+C=-\\frac{1}{2}\\ln(1 + \\sqrt{x})+\\frac{1}{4}\\ln(x + 3)+\\frac{\\sqrt{3}}{2}\\arctan\\sqrt{\\frac{x}{3}}+C\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9597/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（1）求\\(a,b\\)的值；\n\n（2）求\\(z(x,y)\\)的表达式。",
+          "options": [],
+          "answer": "（1）\\(3\\frac{\\partial^{2}z}{\\partial x^{2}}-4\\frac{\\partial^{2}z}{\\partial x\\partial y}+\\frac{\\partial^{2}z}{\\partial y^{2}}=(3 - 4a + a^{2})\\frac{\\partial^{2}z}{\\partial u^{2}}+[6 - 4(a + b)+2ab]\\frac{\\partial^{2}z}{\\partial u\\partial v}+(3 - 4b + b^{2})\\frac{\\partial^{2}z}{\\partial v^{2}} = 0\\)。 由题意可得，\\(\\begin{cases}3 - 4a + a^{2}=0\\\\3 - 4b + b^{2}=0\\end{cases}\\)，因为\\(a\\lt b\\)，所以解得\\(a = 1\\)，\\(b = 3\\)。 （2）由\\(\\frac{\\partial^{2}z}{\\partial u\\partial v}=0\\)，即\\(\\frac{\\partial}{\\partial v}(\\frac{\\partial z}{\\partial u}) = 0\\)，令\\(\\frac{\\partial z}{\\partial u}=h(u)\\)，则\\(z=\\int h(u)du+g(v)=f(u)+g(v)=f(x + y)+g(x + 3y)\\)。 因此，\\(z(x,0)=f(x)+g(x)=\\sin x\\)，\\(z_{y}^\\prime(x,y)=f^\\prime(x + y)+3g^\\prime(x + 3y)\\)，\\(z_{y}^\\prime(x,0)=f^\\prime(x)+3g^\\prime(x)=0\\)。 于是，\\(\\begin{cases}f^\\prime(x)+g^\\prime(x)=\\cos x\\\\f^\\prime(x)+3g^\\prime(x)=0\\end{cases}\\Rightarrow\\begin{cases}f^\\prime(x)=\\frac{3}{2}\\cos x\\\\g^\\prime(x)=-\\frac{1}{2}\\cos x\\end{cases}\\Rightarrow\\begin{cases}f(x)=\\frac{3}{2}\\sin x + C_{1}\\\\g(x)=-\\frac{1}{2}\\sin x + C_{2}\\end{cases}\\)。 因为\\(f(x)+g(x)=\\sin x\\)，所以\\(C_{2}=-C_{1}\\)，即\\(\\begin{cases}f(x)=\\frac{3}{2}\\sin x + C_{1}\\\\g(x)=-\\frac{1}{2}\\sin x - C_{1}\\end{cases}\\)。 故\\(z(x,y)=\\frac{3}{2}\\sin(x + y)-\\frac{1}{2}\\sin(x + 3y)\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分）设\\(z = z(x,y)\\)二阶偏导数连续，且\\(\\begin{cases}u = x + ay\\\\v = x + by\\end{cases}(a\\lt b)\\)可将方程\\(3\\frac{\\partial^{2}z}{\\partial x^{2}}-4\\frac{\\partial^{2}z}{\\partial x\\partial y}+\\frac{\\partial^{2}z}{\\partial y^{2}} = 0\\)化简为\\(\\frac{\\partial^{2}z}{\\partial u\\partial v}=0\\)，\\(z(x,0)=\\sin x\\)，\\(z_{y}^\\prime(x,0)=0\\)。",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9598/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设平面有界区域\\( D \\)是由曲线\\( 2x^{2}+y^{2}=2\\sqrt{x^{2}+y^{2}} \\)与坐标轴围成的第一象限的部分.计算\\( \\iint_{D}\\frac{1}{\\sqrt{1 - x^{2}}}d\\sigma \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "平面区域\\( D \\)如图所示.令\\(\\begin{cases}x = r\\cos\\theta\\\\y = r\\sin\\theta\\end{cases}\\)，则有\\( r^{2}(2\\cos^{2}\\theta+\\sin^{2}\\theta)=2r \\)，即\\( r=\\frac{2}{1 + \\cos^{2}\\theta} \\).\n所以\n原式\\(=\\int_{0}^{\\frac{\\pi}{2}}d\\theta\\int_{0}^{\\frac{2}{1+\\cos^{2}\\theta}}\\frac{r}{\\sqrt{1 - r^{2}\\cos^{2}\\theta}}dr\\)\n\\(=-\\int_{0}^{\\frac{\\pi}{2}}\\frac{1}{\\cos^{2}\\theta}\\left[\\sqrt{1 - \\frac{4\\cos^{2}\\theta}{(1 + \\cos^{2}\\theta)^{2}}}-1\\right]d\\theta\\)\n\\(=\\int_{0}^{\\frac{\\pi}{2}}\\left(1 - \\frac{1 - \\cos^{2}\\theta}{1 + \\cos^{2}\\theta}\\right)\\frac{1}{\\cos^{2}\\theta}d\\theta\\)\n\\(=2\\int_{0}^{\\frac{\\pi}{2}}\\frac{1}{\\sec^{2}\\theta + 1}d(\\tan\\theta)=2\\int_{0}^{\\frac{\\pi}{2}}\\frac{1}{\\tan^{2}\\theta + 2}d(\\tan\\theta)\\)\n\\(=2\\times\\frac{1}{\\sqrt{2}}\\arctan\\frac{\\tan\\theta}{\\sqrt{2}}\\big|_{0}^{\\frac{\\pi}{2}}=\\sqrt{2}\\times\\frac{\\pi}{2}=\\frac{\\sqrt{2}\\pi}{2}\\).",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9599/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设\\( f(x) \\)在\\([0,1]\\)上二阶可导，\\( f(0)=0 \\)，\\(\\vert f^{\\prime}(x)\\vert\\leqslant1\\)，\\(\\vert f^{\\prime\\prime}(x)\\vert\\leqslant1\\)，证明：\\(\\vert\\int_{0}^{1}f(x)dx\\vert\\leqslant\\frac{13}{24}\\).",
+          "options": [],
+          "answer": "【证】 在\\( x = \\frac{1}{2} \\)处将\\( f(x) \\)展开为一阶带有拉格朗日余项的泰勒公式，有\n\\( f(x)=f\\left(\\frac{1}{2}\\right)+f^{\\prime}\\left(\\frac{1}{2}\\right)\\left(x - \\frac{1}{2}\\right)+\\frac{f^{\\prime\\prime}(\\xi)}{2}\\left(x - \\frac{1}{2}\\right)^{2} \\)， ①\n其中\\( \\xi \\)在\\( \\frac{1}{2} \\)和\\( x \\)之间.\n对式 ① 两端积分，得\n\\( \\int_{0}^{1}f(x)dx=\\int_{0}^{1}f\\left(\\frac{1}{2}\\right)dx+\\int_{0}^{1}f^{\\prime}\\left(\\frac{1}{2}\\right)\\left(x - \\frac{1}{2}\\right)dx+\\int_{0}^{1}\\frac{f^{\\prime\\prime}(\\xi)}{2}\\left(x - \\frac{1}{2}\\right)^{2}dx \\). ②\n注意到\n\\( \\int_{0}^{1}f\\left(\\frac{1}{2}\\right)dx = f\\left(\\frac{1}{2}\\right) \\)，\\( \\int_{0}^{1}f^{\\prime}\\left(\\frac{1}{2}\\right)\\left(x - \\frac{1}{2}\\right)dx = 0 \\)，\n代入式 ② 即可得到\n\\( \\left|\\int_{0}^{1}f(x)dx\\right|=\\left|f\\left(\\frac{1}{2}\\right)+\\int_{0}^{1}\\frac{f^{\\prime\\prime}(\\xi)}{2}\\left(x - \\frac{1}{2}\\right)^{2}dx\\right|\\leqslant\\left|f\\left(\\frac{1}{2}\\right)\\right|+\\int_{0}^{1}\\frac{1}{2}\\left(x - \\frac{1}{2}\\right)^{2}dx \\).\n又因为\n\\( \\left|f\\left(\\frac{1}{2}\\right)-f(0)\\right|=\\left|f^{\\prime}(\\eta)\\cdot\\frac{1}{2}\\right|\\leqslant1\\cdot\\frac{1}{2} \\)，\n其中\\( 0\\lt\\eta\\lt\\frac{1}{2} \\)，所以\n\\( \\left|f\\left(\\frac{1}{2}\\right)\\right|+\\int_{0}^{1}\\frac{1}{2}\\left(x - \\frac{1}{2}\\right)^{2}dx\\leqslant\\frac{1}{2}+\\frac{1}{24}=\\frac{13}{24} \\).",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9600/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set1-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（1）\\( A \\)能否相似对角化？说明理由；\n\n（2）是否存在可逆矩阵\\( P \\)，使得\\( P^{-1}AP = B \\)？若存在，求出所有的\\( P \\).若不存在，请说明理由.",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）\\( \\vert\\lambda E - A\\vert=\\begin{vmatrix}\\lambda - a&0&2\\\\-1&\\lambda - a&1\\\\1&1&\\lambda - a\\end{vmatrix} \\) \\(\\stackrel{c_{1}+c_{2}-c_{3}}{=}\\begin{vmatrix}\\lambda - a - 2&0&2\\\\\\lambda - a - 2&\\lambda - a&1\\\\-(\\lambda - a - 2)&1&\\lambda - a\\end{vmatrix}\\) \\(=(\\lambda - a - 2)\\begin{vmatrix}1&0&2\\\\1&\\lambda - a&1\\\\-1&1&\\lambda - a\\end{vmatrix}\\) \\(=(\\lambda - a - 2)\\left[(\\lambda - a)^{2}-1 + 2(1 + \\lambda - a)\\right]\\) \\(=(\\lambda - a - 2)\\left[(\\lambda - a + 1)(\\lambda - a - 1)+2(\\lambda - a + 1)\\right]\\) \\(=(\\lambda - a - 2)(\\lambda - a + 1)^{2} \\)， 故\\( \\lambda_{1}=\\lambda_{2}=a - 1 \\)，\\( \\lambda_{3}=a + 2 \\). 又\\( (a - 1)E - A=\\begin{pmatrix}-1&0&2\\\\-1&-1&1\\\\1&1&-1\\end{pmatrix} \\)，\\( r[(a - 1)E - A]=2 \\)，故特征值\\( a - 1 \\)对应的线性无关的特征向量的个数为\\( 3 - 2 = 1 \\)，于是\\( A \\)不能相似对角化. （2）设\\( P=(x_{1},x_{2},x_{3}) \\)，其中\\( x_{i}(i = 1,2,3) \\)为3维列向量，则由\\( AP = PB \\)，有 \\( (Ax_{1},Ax_{2},Ax_{3})=(x_{1},x_{2},x_{3})\\begin{pmatrix}a - 1&1&0\\\\0&a - 1&0\\\\0&0&a + 2\\end{pmatrix} \\)， 即\\( Ax_{1}=(a - 1)x_{1} \\)，\\( Ax_{2}=x_{1}+(a - 1)x_{2} \\)，\\( Ax_{3}=(a + 2)x_{3} \\). 对于\\( Ax_{1}=(a - 1)x_{1} \\)，即\\( [A - (a - 1)E]x_{1}=0 \\)，由 \\( A - (a - 1)E=\\begin{pmatrix}1&0&-2\\\\1&1&-1\\\\-1&-1&1\\end{pmatrix}\\to\\begin{pmatrix}1&0&-2\\\\0&1&1\\\\0&0&0\\end{pmatrix} \\)， 可得\\( x_{1}=k_{1}\\begin{pmatrix}2\\\\-1\\\\1\\end{pmatrix} \\). 对于\\( Ax_{2}=x_{1}+(a - 1)x_{2} \\)，即\\( [A - (a - 1)E]x_{2}=x_{1} \\)，由 \\( \\begin{pmatrix}1&0&-2&2k_{1}\\\\1&1&-1&-k_{1}\\\\-1&-1&1&k_{1}\\end{pmatrix}\\to\\begin{pmatrix}1&0&-2&2k_{1}\\\\0&1&1&-3k_{1}\\\\0&0&0&0\\end{pmatrix} \\)， 可得\\( x_{2}=k_{1}\\begin{pmatrix}2\\\\-3\\\\0\\end{pmatrix}+k_{2}\\begin{pmatrix}2\\\\-1\\\\1\\end{pmatrix} \\). 对于\\( Ax_{3}=(a + 2)x_{3} \\)，即\\( [A - (a + 2)E]x_{3}=0 \\)，由 \\( A - (a + 2)E=\\begin{pmatrix}-2&0&-2\\\\1&-2&-1\\\\-1&-1&-2\\end{pmatrix}\\to\\begin{pmatrix}1&0&1\\\\0&1&1\\\\0&0&0\\end{pmatrix} \\)， 可得\\( x_{3}=k_{3}\\begin{pmatrix}-1\\\\-1\\\\1\\end{pmatrix} \\). 故\\( P=\\begin{pmatrix}2k_{1}&2k_{1}+2k_{2}&-k_{3}\\\\-k_{1}&-3k_{1}-k_{2}&-k_{3}\\\\k_{1}&k_{2}&k_{3}\\end{pmatrix} \\)，又因为\\( P \\)可逆，即 \\( \\vert P\\vert=\\begin{vmatrix}0&2k_{1}&-3k_{3}\\\\0&-3k_{1}&0\\\\k_{1}&k_{2}&k_{3}\\end{vmatrix}=-3k_{1}\\begin{vmatrix}0&-3k_{3}\\\\k_{1}&k_{3}\\end{vmatrix}=-9k_{1}^{2}k_{3}\\neq0 \\)， 即\\( k_{1}k_{3}\\neq0 \\)，\\( k_{2} \\)为任意常数即可.",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "material": "（本题满分12分） 设矩阵\\( A=\\begin{pmatrix}a&0&-2\\\\1&a&-1\\\\-1&-1&a\\end{pmatrix} \\)，\\( B=\\begin{pmatrix}a - 1&1&0\\\\0&a - 1&0\\\\0&0&a + 2\\end{pmatrix} \\).",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9601/"
+        }
+      ]
+    }
+  ]
+}

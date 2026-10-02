@@ -150,6 +150,100 @@ export function exportWrong() {
   return { exportedAt: new Date().toISOString(), count: items.length, items };
 }
 
+/* ------------------------------ 导入 ------------------------------ */
+
+/**
+ * 合并导入一份导出数据（或整份 kq:state:v1 快照）。
+ * 规则：进度取「更大的对/错次数」（不会因为导入而丢失已有练习量），
+ *       错题/收藏/笔记取并集（已有的优先），记录按 id 去重后拼接，考试状态取更新的。
+ * 返回一份合并统计，供界面提示。
+ */
+export function importData(raw) {
+  if (!raw || typeof raw !== "object") throw new Error("文件内容不是有效的 JSON 对象");
+  const src = raw.state && typeof raw.state === "object" ? raw.state : raw;
+  if (!src.progress && !src.wrong && !src.fav && !src.notes && !src.records) {
+    // 兼容「错题本导出」的 { items: [...] } 结构
+    if (Array.isArray(raw.items)) {
+      let n = 0;
+      set((s) => {
+        const wrong = { ...s.wrong };
+        for (const it of raw.items) {
+          if (!it.qid) continue;
+          const cur = wrong[it.qid];
+          wrong[it.qid] = {
+            addedAt: Math.min(cur?.addedAt || it.addedAt || Date.now(), it.addedAt || Date.now()),
+            lastAt: Math.max(cur?.lastAt || 0, it.lastAt || 0) || undefined,
+            subject: it.subject || cur?.subject,
+            loc: it.loc || cur?.loc,
+            wrongCount: Math.max(cur?.wrongCount || 0, it.wrongCount || 1),
+          };
+          if (it.note) s = { ...s, notes: { ...s.notes, [it.qid]: s.notes[it.qid] || it.note } };
+          n++;
+        }
+        return { ...s, wrong };
+      });
+      return { ok: true, wrong: n, progress: 0, fav: 0, notes: 0, records: 0 };
+    }
+    throw new Error("看不懂这个文件：既不是完整快照，也不是错题本导出文件");
+  }
+
+  const stats = { ok: true, progress: 0, wrong: 0, fav: 0, notes: 0, records: 0, exams: 0 };
+  set((s) => {
+    const progress = { ...s.progress };
+    for (const [qid, p] of Object.entries(src.progress || {})) {
+      const cur = progress[qid];
+      if (!cur) progress[qid] = p;
+      else progress[qid] = {
+        ...cur,
+        subject: cur.subject || p.subject,
+        loc: cur.loc || p.loc,
+        topics: [...new Set([...(cur.topics || []), ...(p.topics || [])])],
+        seen: Math.max(cur.seen || 0, p.seen || 0),
+        right: Math.max(cur.right || 0, p.right || 0),
+        wrong: Math.max(cur.wrong || 0, p.wrong || 0),
+        lastAt: Math.max(cur.lastAt || 0, p.lastAt || 0) || undefined,
+      };
+      stats.progress++;
+    }
+
+    const wrong = { ...s.wrong };
+    for (const [qid, w] of Object.entries(src.wrong || {})) {
+      const cur = wrong[qid];
+      wrong[qid] = cur
+        ? { ...cur, wrongCount: Math.max(cur.wrongCount || 0, w.wrongCount || 0), lastAt: Math.max(cur.lastAt || 0, w.lastAt || 0) || undefined }
+        : w;
+      stats.wrong++;
+    }
+
+    const fav = { ...s.fav };
+    for (const [qid, v] of Object.entries(src.fav || {})) {
+      if (!fav[qid]) { fav[qid] = v; stats.fav++; }
+    }
+
+    const notes = { ...s.notes };
+    for (const [qid, t] of Object.entries(src.notes || {})) {
+      if (!notes[qid] && t) { notes[qid] = t; stats.notes++; }
+    }
+
+    const seenRec = new Set((s.records || []).map((r) => r.id));
+    const records = [...(s.records || [])];
+    for (const r of src.records || []) {
+      if (r && r.id && !seenRec.has(r.id)) { records.push(r); seenRec.add(r.id); stats.records++; }
+    }
+    records.sort((a, b) => (a.at || 0) - (b.at || 0));
+
+    const exams = { ...s.exams };
+    for (const [k, e] of Object.entries(src.exams || {})) {
+      const cur = exams[k];
+      if (!cur || (e.startedAt || 0) > (cur.startedAt || 0)) { exams[k] = e; stats.exams++; }
+    }
+
+    const settings = { ...s.settings, ...(src.settings || {}) };
+    return { ...s, progress, wrong, fav, notes, records: records.slice(-3000), exams, settings };
+  });
+  return stats;
+}
+
 /* ------------------------------ 统计 ------------------------------ */
 
 export function subjectStats(s, subject) {

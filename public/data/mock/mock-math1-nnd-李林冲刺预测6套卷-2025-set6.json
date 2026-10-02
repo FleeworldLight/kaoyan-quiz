@@ -1,0 +1,518 @@
+{
+  "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 李林冲刺预测6套卷",
+  "publisher": "李林",
+  "year": 2025,
+  "paperNo": 6,
+  "paperKind": "testPaper",
+  "title": "2025 李林冲刺预测6套卷（六）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 李林冲刺预测6套卷（六）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/37406/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "设\\( f(x) \\)为连续函数，且\\(\\lim\\limits_{x \\to 1} \\frac{f(2x - 1)}{x - 1} = 1\\)，则\\(\\lim\\limits_{t \\to 0} \\frac{f[(1 + \\sin t)^2] - f(1 + \\sin t)}{t} =\\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "0."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{1}{2}\\)."
+            },
+            {
+              "key": "C",
+              "text": "1."
+            },
+            {
+              "key": "D",
+              "text": "2."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 由已知，有\\(\\lim\\limits_{x \\to 1}f(2x - 1) = f(1) = 0\\)，故\n\n\\(\\lim\\limits_{x \\to 1} \\frac{f(2x - 1) - f(1)}{x - 1} = \\lim\\limits_{x \\to 1} \\frac{f(1 + 2x - 2) - f(1)}{2x - 2} \\cdot \\frac{2x - 2}{x - 1}\\)\n\n\\(= 2f'(1) = 1\\)，\n\n从而\\(f'(1) = \\frac{1}{2}\\).\n\n\\(\\lim\\limits_{t \\to 0} \\frac{f[(1 + \\sin t)^2] - f(1 + \\sin t)}{t}\\)\n\n\\(= \\lim\\limits_{t \\to 0} \\frac{f[(1 + \\sin t)^2] - f(1)}{t} - \\lim\\limits_{t \\to 0} \\frac{f(1 + \\sin t) - f(1)}{t}\\)\n\n\\(= \\lim\\limits_{t \\to 0} \\frac{f(1 + 2\\sin t + \\sin^2 t) - f(1)}{2\\sin t + \\sin^2 t} \\cdot \\frac{2\\sin t + \\sin^2 t}{t} - \\lim\\limits_{t \\to 0} \\frac{f(1 + \\sin t) - f(1)}{\\sin t} \\cdot \\frac{\\sin t}{t}\\)\n\n\\(= 2f'(1) - f'(1) = f'(1) = \\frac{1}{2}\\).\n\n选项 B 正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11197/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设$f(x)$在$[0,1]$上可导，$f(x)>0$，$f'(x)<0$，$F(x)=\\int_{0}^{x}f(t)dt$，则在$x \\in (0,1)$内，有",
+          "options": [
+            {
+              "key": "A",
+              "text": "$xF(1) > 2\\int_{0}^{1}F(x)dx$．"
+            },
+            {
+              "key": "B",
+              "text": "$F(1) > 2\\int_{0}^{1}F(x)dx$．"
+            },
+            {
+              "key": "C",
+              "text": "$F(x) < 2\\int_{0}^{1}F(x)dx$．"
+            },
+            {
+              "key": "D",
+              "text": "$F(x) > 2\\int_{0}^{1}F(x)dx$．"
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析：由已知，有$F'(x)=f(x)>0$，$F''(x)=f'(x)<0$，且$F(0)=0$．\n\n故$y=F(x)$在$[0,1]$上单调递增，且是凸曲线，如右图所示．$\\overline{OA}$的方程为$y=xF(1)$，$F(x)>xF(1)$，$x \\in (0,1)$，故\n\n$\\int_{0}^{1}F(x)dx > \\int_{0}^{x}F(1)dx = \\frac{1}{2}F(1)$，\n\n即$F(1) < 2\\int_{0}^{1}F(x)dx$，可排除选项B．\n\n由$F(x)$在$[0,1]$上单调递增，知$F(1) > F(x)$，$x \\in (0,1)$，\n\n故$2\\int_{0}^{1}F(x)dx > F(1) > F(x)$，知选项C正确．\n\n由$xF(1) < F(x) < F(1) < 2\\int_{0}^{1}F(x)dx$，知选项A不正确．\n\n（图注：$y$轴，$x$轴，曲线$y=F(x)$，点$A(1,F(1))$，直线$y=xF(1)$从原点到$(1,F(1))$）",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11198/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设积分\\(\\int_{0}^{+\\infty}\\frac{x^{1-p}\\arctan x}{2+x^{p}}dx\\ (p>0)\\)收敛，则\\(p\\)的取值范围为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(1< p < 3\\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(2< p < 3\\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(1\\leqslant p < 2\\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(0< p < 3\\)."
+            }
+          ],
+          "answer": "A",
+          "explanation": "解析 \\(\\int_{0}^{+\\infty}\\frac{x^{1-p}\\arctan x}{2+x^{p}}dx = \\int_{0}^{1}\\frac{x^{1-p}\\arctan x}{2+x^{p}}dx + \\int_{1}^{+\\infty}\\frac{x^{1-p}\\arctan x}{2+x^{p}}dx \\stackrel{记}{=} I_1 + I_2\\).\n\n对于\\(I_1\\)，\n\n\\(\\lim_{x \\to 0^{+}} x^{-(1-p)-1} \\cdot \\frac{x^{1-p}\\arctan x}{2+x^{p}} = \\lim_{x \\to 0^{+}} \\frac{1}{2+x^{p}} = \\frac{1}{2}\\),\n\n由比较审敛法，当\\(-(1-p) - 1 < 1\\)，即\\(p < 3\\)时，\\(I_1\\)收敛.\n\n对于\\(I_2\\)，\n\n\\(\\lim_{x \\to +\\infty} x^{p - (1-p)} \\cdot \\frac{x^{1-p}\\arctan x}{2+x^{p}} = \\lim_{x \\to +\\infty} \\frac{x^{p}\\arctan x}{2+x^{p}} = \\frac{\\pi}{2}\\),\n\n由比较审敛法，当\\(p - (1-p) > 1\\)，即\\(p > 1\\)时，\\(I_2\\)收敛.\n\n故当\\(1 < p < 3\\)时，原积分收敛. 选项A正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11199/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设$f(x)$在$[0,+\\infty)$上正值连续，$\\{c_n\\}$（$n=1,2,\\cdots$）为正值数列，记$a_n=\\int_0^{c_n}f(x)\\mathrm{d}x$，$b_n=\\int_{c_n}^{c_{n+1}}f(x)\\mathrm{d}x$，则正确的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "当$b_n\\lt 0$时，$\\{a_n\\}$必发散."
+            },
+            {
+              "key": "B",
+              "text": "当$b_n\\lt 0$时，$\\{a_n\\}$必收敛."
+            },
+            {
+              "key": "C",
+              "text": "当$b_n\\gt 0$时，$\\{a_n\\}$必发散."
+            },
+            {
+              "key": "D",
+              "text": "当$b_n\\gt 0$时，$\\{a_n\\}$必收敛."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 令$F(x)=\\int_0^x f(t)\\mathrm{d}t$，则$F'(x)=f(x)\\gt 0$，即$F(x)$单调递增.\n\n当$b_n\\lt 0$时，由积分中值定理，有\n\n$b_n=\\int_{c_n}^{c_{n+1}}f(x)\\mathrm{d}x=f(\\xi)(c_{n+1}-c_n)\\lt 0$，$\\xi$介于$c_n$与$c_{n+1}$之间.\n\n由$f(\\xi)\\gt 0$，知$c_{n+1}-c_n\\lt 0$，从而$\\{c_n\\}$单调递减且有下界0，故$\\lim\\limits_{n\\to\\infty}c_n$存在.\n\n所以，$\\lim\\limits_{n\\to\\infty}a_n=\\lim\\limits_{n\\to\\infty}F(c_n)=F(\\lim\\limits_{n\\to\\infty}c_n)$存在，故选项B正确.\n\n当$b_n\\gt 0$时，$b_n=\\int_{c_n}^{c_{n+1}}f(x)\\mathrm{d}x=f(\\xi)(c_{n+1}-c_n)\\gt 0$，$\\xi$介于$c_n$与$c_{n+1}$之间.\n\n由$f(\\xi)\\gt 0$，知$c_{n+1}-c_n\\gt 0$，从而$\\{c_n\\}$单调递增.\n\n而由$a_n=F(c_n)$，知$\\{a_n\\}$单调递增. 由于不能确定$\\{F(c_n)\\}$是否有上界，故不能确定$\\{a_n\\}$是否收敛，所以排除选项C,D.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11200/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设A是3阶矩阵，$\\boxed{\\alpha_1}=(1,2,-2)^T$，$\\boxed{\\alpha_2}=(2,1,-1)^T$，$\\boxed{\\alpha_3}=(1,1,k)^T$是非齐次线性方程组$AX=b$的解向量，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "当$k=-1$时，必有$r(A)=2$."
+            },
+            {
+              "key": "B",
+              "text": "当$k=-1$时，必有$r(A)=1$."
+            },
+            {
+              "key": "C",
+              "text": "当$k\\neq-1$时，必有$r(A)=2$."
+            },
+            {
+              "key": "D",
+              "text": "当$k\\neq-1$时，必有$r(A)=1$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析 记$B=(\\boxed{\\alpha_1},\\boxed{\\alpha_2},\\boxed{\\alpha_3})=\\begin{bmatrix} 1&2&1\\\\ 2&1&1\\\\ -2&-1&k\\end{bmatrix} \\to \\begin{bmatrix} 1&2&1\\\\ 0&-3&-1\\\\ 0&3&k+2\\end{bmatrix} \\to \\begin{bmatrix} 1&2&1\\\\ 0&-3&-1\\\\ 0&0&k+1\\end{bmatrix} $.\n\n当$k\\neq-1$时，$r(B)=3$，$B$可逆.\n\n由已知，有\n\n$A(\\boxed{\\alpha_1},\\boxed{\\alpha_2},\\boxed{\\alpha_3})=AB=(b,b,b)(b\\neq0)$，\n\n从而$r(A)=r(AB)=r(b,b,b)=1$，选项D正确.\n\n选项D成立，则选项C不成立.\n\n当$k=-1$时，$r(B)=2$，知$AX=b$至少有两个线性无关的解向量，从而$AX=0$至少有一个线性无关的解向量.\n\n故$A$的秩可能为1，也可能为2，不能确定.\n\n所以，选项A,B均不成立.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11201/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "A.若r(C)=m,则r(A)≤m.\n\nC.若r(A)=n,则r(B)≤r(C).",
+          "options": [
+            {
+              "key": "A",
+              "text": "B分别为m×n,n×s矩阵,且AB="
+            },
+            {
+              "key": "B",
+              "text": "若r(C)=s,则r(B)≤s."
+            },
+            {
+              "key": "C",
+              "text": "则正确的是"
+            },
+            {
+              "key": "D",
+              "text": "若r(A)=n,则r(B)=r(C)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析 对于选项A,由AB=C,知r(AB)≤r(A),即r(A)≥r(C)=m.\n\n又A是m×n矩阵,知r(A)≤m,故r(A)=m.可排除选项A.\n\n对于选项B,s=r(C)=r(AB)≤r(B),即r(B)≥s.而r(B)≤s,故r(B)=s.可排除选项B.\n\n当r(A)=n时,考虑方程组(Ⅰ)ABX=0,(Ⅱ)BX=0,则方程组(Ⅰ)与(Ⅱ)是同解的.事实上,(Ⅱ)的解显然是(Ⅰ)的解.\n\n若α是(Ⅰ)的解,即ABα=A(Bα)=0,由r(A)=n,知AX=0只有零解,从而Bα=0,故α是(Ⅱ)的解.所以,(Ⅰ)与(Ⅱ)同解,从而r(AB)=r(C)=r(B).选项D正确.\n\n由选项D正确知选项C不正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11202/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "方程 \\( yz + xz + xy = 0 \\) 表示的二次曲面为",
+          "options": [
+            {
+              "key": "A",
+              "text": "单叶双曲面."
+            },
+            {
+              "key": "B",
+              "text": "双叶双曲面."
+            },
+            {
+              "key": "C",
+              "text": "柱面."
+            },
+            {
+              "key": "D",
+              "text": "圆锥面."
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析 二次型 \\( f = yz + xz + xy \\) 的矩阵为\n\n\\( \\mathbf{A} = \\begin{bmatrix} 0 & \\frac{1}{2} & \\frac{1}{2} \\\\ \\frac{1}{2} & 0 & \\frac{1}{2} \\\\ \\frac{1}{2} & \\frac{1}{2} & 0 \\end{bmatrix} \\).\n\n由\n\n\\( |\\lambda\\mathbf{E} - \\mathbf{A}| = \\begin{vmatrix} \\lambda & -\\frac{1}{2} & -\\frac{1}{2} \\\\ -\\frac{1}{2} & \\lambda & -\\frac{1}{2} \\\\ -\\frac{1}{2} & -\\frac{1}{2} & \\lambda \\end{vmatrix} = \\left( \\lambda + \\frac{1}{2} \\right)^2 (\\lambda - 1) = 0 \\),\n\n知 \\( \\mathbf{A} \\) 的特征值为 \\( \\lambda_1 = \\lambda_2 = -\\frac{1}{2}, \\lambda_3 = 1 \\). 故 \\( f \\) 的标准形为 \\( f = -\\frac{1}{2}X^2 - \\frac{1}{2}Y^2 + Z^2 \\)，所以 \\( f = 0 \\) 在正交变换下化为 \\( X^2 + Y^2 = 2Z^2 \\)，是圆锥面，故选项 D 正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11203/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设随机变量 \\( X \\) 与 \\( Y \\) 相互独立，\\( X \\sim N(0,1) \\)，\\( \\Phi(x) \\) 为其分布函数，\\( Y \\) 的分布律为 \\( P\\{Y = n\\} = \\left(\\frac{1}{2}\\right)^n, n = 1, 2, \\cdots \\)，则 \\( Z = X + Y \\) 的分布函数为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( \\sum_{k=1}^{\\infty} \\left(\\frac{1}{2}\\right)^k \\Phi(z) \\)"
+            },
+            {
+              "key": "B",
+              "text": "\\( \\sum_{k=1}^{\\infty} \\left(\\frac{1}{2}\\right)^{k-1} \\Phi(z) \\)"
+            },
+            {
+              "key": "C",
+              "text": "\\( \\sum_{k=1}^{\\infty} \\left(\\frac{1}{2}\\right)^k \\Phi(z + k) \\)"
+            },
+            {
+              "key": "D",
+              "text": "\\( \\sum_{k=1}^{\\infty} \\left(\\frac{1}{2}\\right)^k \\Phi(z - k) \\)"
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析 由全概率公式，有\n\n\\( F_Z(z) = P\\{X + Y \\leq z\\} = \\sum_{k=1}^{\\infty} P\\{Y = k\\} \\cdot P\\{X + Y \\leq z | Y = k\\} \\)\n\n\\( = \\sum_{k=1}^{\\infty} P\\{Y = k\\} \\cdot P\\{X \\leq z - k | Y = k\\} \\)\n\n\\( = \\sum_{k=1}^{\\infty} P\\{Y = k\\} \\cdot P\\{X \\leq z - k\\} = \\sum_{k=1}^{\\infty} \\left(\\frac{1}{2}\\right)^k \\Phi(z - k) \\)\n\n选项 D 正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11204/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "已知$X \\sim N(0,\\sigma^2)(\\sigma > 0)$，$Y$在区间$[0,\\sqrt{3}\\sigma]$上服从均匀分布，且$D(X - Y) = \\sigma^2$，则$\\rho_{XY} =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{1}{2}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{1}{3}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{1}{4}$."
+            },
+            {
+              "key": "D",
+              "text": "$1$."
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析 由已知，有$EX = 0$，$DX = \\sigma^2$，$EY = \\frac{\\sqrt{3}\\sigma}{2}$，$DY = \\frac{3\\sigma^2}{12} = \\frac{\\sigma^2}{4}$.\n\n故$D(X - Y) = DX + DY - 2\\text{Cov}(X,Y) = \\sigma^2 + \\frac{\\sigma^2}{4} - 2\\text{Cov}(X,Y) = \\sigma^2$，从而$\\text{Cov}(X,Y) = \\frac{\\sigma^2}{8}$，\n\n于是有$\\rho_{XY} = \\frac{\\text{Cov}(X,Y)}{\\sqrt{DX} \\sqrt{DY}} = \\frac{\\frac{\\sigma^2}{8}}{\\sigma \\cdot \\frac{\\sigma}{2}} = \\frac{1}{4}$. 选项C正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11205/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设$(X,Y)$服从二维正态分布$N(0,0;1,1;0)$，则$E(|X-Y|)=$",
+          "options": [
+            {
+              "key": "A",
+              "text": "0."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{1}{\\sqrt{\\pi}}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{2}{\\sqrt{\\pi}}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{1}{\\pi}$."
+            }
+          ],
+          "answer": "C",
+          "explanation": "解析 由已知，$\\rho_{XY}=0$，故$X$与$Y$相互独立，且$X\\sim N(0,1)$，$Y\\sim N(0,1)$.\n\n记$Z=X-Y$，则$Z\\sim N(0,2)$，故\n\n$E(|X-Y|)=\\int_{-\\infty}^{+\\infty}|z|\\frac{1}{\\sqrt{2\\pi}\\cdot\\sqrt{2}}e^{-\\frac{z^2}{2\\times2}}dz$\n\n$=\\frac{2}{\\sqrt{2\\pi}\\cdot\\sqrt{2}}\\int_{0}^{+\\infty}z e^{-\\frac{z^2}{4}}dz=-\\frac{2}{\\sqrt{\\pi}}\\int_{0}^{+\\infty}d\\left(e^{-\\frac{z^2}{4}}\\right)=-\\frac{2}{\\sqrt{\\pi}}e^{-\\frac{z^2}{4}}\\big|_{0}^{+\\infty}=\\frac{2}{\\sqrt{\\pi}}$.\n\n选项C正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11206/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设曲线 \\( y = (x + 1)(\\text{e}^{nx} - 1)(n > 1) \\) 与 \\( x \\) 轴所围成的有限区域的面积为 \\( S_n \\)，则 \\( \\lim\\limits_{n \\to \\infty} S_n = \\)",
+          "options": [],
+          "answer": "\\( \\frac{1}{2} \\)\n\n解析 由已知，得 \\( y = (x + 1)(\\text{e}^{nx} - 1) \\) 与 \\( x \\) 轴的交点为 \\( (-1, 0) \\)，\\( (0, 0) \\)。\n\n故所求面积为\n\n\\( S_n = \\int_{-1}^{0} |(x + 1)(\\text{e}^{nx} - 1)| \\text{d}x \\)\n\n\\( = \\int_{-1}^{0} (x + 1)(1 - \\text{e}^{nx}) \\text{d}x \\)\n\n\\( = \\int_{-1}^{0} (x + 1)\\text{d}x - \\int_{-1}^{0} (x + 1)\\text{e}^{nx} \\text{d}x \\)\n\n\\( = \\frac{1}{2}(x + 1)^2 \\big|_{-1}^{0} - \\frac{1}{n}\\int_{-1}^{0} (x + 1)\\text{d}(\\text{e}^{nx}) \\)\n\n\\( = \\frac{1}{2} - \\frac{1}{n}\\left[(x + 1)\\text{e}^{nx} \\big|_{-1}^{0} - \\int_{-1}^{0} \\text{e}^{nx} \\text{d}x\\right] \\)\n\n\\( = \\frac{1}{2} - \\frac{1}{n}\\left(1 - \\frac{1}{n}\\text{e}^{nx} \\big|_{-1}^{0}\\right) = \\frac{1}{2} - \\frac{1}{n} + \\frac{1}{n^2}(1 - \\text{e}^{-n}) \\)。\n\n所以 \\( \\lim\\limits_{n \\to \\infty} S_n = \\frac{1}{2} \\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11207/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）设$\\frac{1}{4}\\ln\\frac{1+x}{1-x}+\\frac{1}{2}\\arctan x - x = \\sum_{n=1}^{\\infty}a_{4n+1}x^{4n+1}, |x| < 1$，则$a_{4n+1} =$______。",
+          "options": [],
+          "answer": "$\\frac{1}{4n+1}$\n\n解析 记$f(x)=\\frac{1}{4}\\ln\\frac{1+x}{1-x}+\\frac{1}{2}\\arctan x - x$，则\n\n$f'(x)=\\frac{1}{4}(\\frac{1}{1+x}+\\frac{1}{1-x})+\\frac{1}{2}\\cdot\\frac{1}{1+x^2}-1$\n\n$=\\frac{1}{1-x^4}-1$\n\n$=\\sum_{n=1}^{\\infty}x^{4n}$.\n\n故$f(x)=f(x)-f(0)=\\int_{0}^{x}f'(t)dt=\\sum_{n=1}^{\\infty}\\frac{x^{4n+1}}{4n+1}, |x| < 1$，于是$a_{4n+1}=\\frac{1}{4n+1}$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11208/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）设圆柱面&Sigma;:$x^{2}+y^{2}=1(0≤z≤1)$,&Sigma;的密度$&rho;=1$,则&Sigma;关于z轴的转动惯量为______.",
+          "options": [],
+          "answer": "2π\n\n解析 由于圆柱面&Sigma;:$x^{2}+y^{2}=1$上任意一点$(x,y,z)$到z轴的距离的平方为$x^{2}+y^{2}$.\n\n故&Sigma;关于z轴的转动惯量为$I_{z}=\\iint_{\\Sigma}(x^{2}+y^{2})\\cdot &rho;dS=\\iint_{\\Sigma}dS=2π$.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11209/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）设&Sigma;为$z=\\sqrt{1-x^2-y^2}$被锥面$z=\\sqrt{x^2+y^2}$所截且位于锥面上方的部分，则曲面&Sigma;的面积为______。",
+          "options": [],
+          "answer": "$(2-\\sqrt{2})\\pi$\n\n解析 曲面&Sigma;的面积为$S=\\iint\\limits_\\Sigma dS=\\iint\\limits_{D_{xy}} \\sqrt{1+z'^2_x+z'^2_y}dxdy$，其中$D_{xy}$为&Sigma;在$xOy$平面上的投影区域，即$D_{xy}=\\{(x,y)|x^2+y^2\\leq \\frac{1}{2}\\}$。\n\n由$z=\\sqrt{1-x^2-y^2}$，计算得$\\sqrt{1+z'^2_x+z'^2_y}=\\frac{1}{\\sqrt{1-x^2-y^2}}$。\n\n故$S=\\iint\\limits_{D_{xy}} \\frac{1}{\\sqrt{1-x^2-y^2}}dxdy=\\int_0^{2\\pi} d\\theta \\int_0^{\\frac{\\sqrt{2}}{2}} \\frac{1}{\\sqrt{1-r^2}} \\cdot rdr=(2-\\sqrt{2})\\pi$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11210/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设3阶实对称矩阵A的特征值为2,3,4，A*是A的伴随矩阵. 若对任意3维实列向量X，都有|XᵀA*X - XᵀAX| ≤ aXᵀX，则a的最小取值为______.",
+          "options": [],
+          "answer": "10\n\n解析 由已知，得|A|=2×3×4=24，A*的特征值为\n\n|A|/2=12，|A|/3=8，|A|/4=6.\n\n由A为实对称矩阵，知存在正交矩阵Q，使得\n\n$Q^{\\mathrm{T}}AQ = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}$，$Q^{\\mathrm{T}}A^{*}Q = \\begin{bmatrix} 12 & 0 & 0 \\\\ 0 & 8 & 0 \\\\ 0 & 0 & 6 \\end{bmatrix}$.\n\n故\n\n$|X^{\\mathrm{T}}A^{*}X - X^{\\mathrm{T}}AX| = |X^{\\mathrm{T}}(A^{*} - A)X|$\n\n$\\stackrel{X=QY}{=} |(12-2)y_1^2 + (8-3)y_2^2 + (6-4)y_3^2|$\n\n$= |10y_1^2 + 5y_2^2 + 2y_3^2| \\leq 10(y_1^2 + y_2^2 + y_3^2) = 10Y^{\\mathrm{T}}Y$.\n\n又$X^{\\mathrm{T}}X \\stackrel{X=QY}{=} Y^{\\mathrm{T}}Q^{\\mathrm{T}}QY = Y^{\\mathrm{T}}Y$，故当$|X^{\\mathrm{T}}A^{*}X - X^{\\mathrm{T}}AX| \\leq aX^{\\mathrm{T}}X$时，有\n\n$|X^{\\mathrm{T}}A^{*}X - X^{\\mathrm{T}}AX| \\leq aY^{\\mathrm{T}}Y$.\n\n故a的最小取值为10.",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11211/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）设总体 \\( X \\sim N(0,\\sigma^{2})(\\sigma > 0) \\)，\\( X_{1},X_{2},X_{3} \\) 为来自总体 \\( X \\) 的简单随机样本，\\( Y = \\frac{1}{2}\\frac{(X_{1} + X_{2})^{2}}{X_{3}^{2}} \\)，若 \\( P\\{Y > a\\} = 0.05(a \\neq 0) \\)，则 \\( P\\{Y > \\frac{1}{a}\\} = \\) ______．",
+          "options": [],
+          "answer": "0.95\n\n解析 先确定 \\( Y \\) 的分布．\n\n\\( Y = \\frac{1}{2}\\frac{(X_{1} + X_{2})^{2}}{X_{3}^{2}} \\)，\\( X_{1} + X_{2} \\sim N(0,2\\sigma^{2}) \\)，\n\n\\( \\frac{X_{1} + X_{2}}{\\sqrt{2}\\sigma} \\sim N(0,1) \\)，\\( \\frac{X_{3}}{\\sigma} \\sim N(0,1) \\)，且 \\( X_{1} + X_{2} \\) 与 \\( X_{3} \\) 相互独立，故\n\n\\( Y = \\frac{1}{2}\\frac{(X_{1} + X_{2})^{2}}{X_{3}^{2}} = \\frac{\\frac{1}{2}\\left( \\frac{X_{1} + X_{2}}{\\sigma} \\right)^{2}}{\\left( \\frac{X_{3}}{\\sigma} \\right)^{2}} \\sim F(1,1) \\)．\n\n由 \\( F \\) 分布的定义，知 \\( \\frac{1}{Y} \\sim F(1,1) \\)，即 \\( Y \\) 与 \\( \\frac{1}{Y} \\) 都服从 \\( F(1,1) \\)，则 \\( P\\{Y > a\\} = P\\left\\{ \\frac{1}{Y} > a \\right\\} \\)．\n\n所以\n\n\\( P\\left\\{ Y > \\frac{1}{a} \\right\\} = P\\left\\{ \\frac{1}{Y} < a \\right\\} = 1 - P\\left\\{ \\frac{1}{Y} > a \\right\\} \\)\n\n\\( = 1 - P\\{Y > a\\} = 1 - 0.05 = 0.95 \\)．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11212/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（本题满分10分）计算$\\lim\\limits_{x \\to 0} \\frac{\\int_{0}^{x} du \\int_{0}^{u} [u^2 - 3\\sin(u - t)^2] dt}{x^8}$",
+          "options": [],
+          "answer": "解析 所求极限为$\\frac{0}{0}$型，利用洛必达法则，有\n\n$\\lim\\limits_{x \\to 0} \\frac{\\int_{0}^{x} du \\int_{0}^{u} [u^2 - 3\\sin(u - t)^2] dt}{x^8} = \\lim\\limits_{x \\to 0} \\frac{\\int_{0}^{x} [x^2 - 3\\sin(x - t)^2] dt}{8x^7}$．\n\n又$3\\int_{0}^{x} \\sin(x - t)^2 dt \\stackrel{x - t = s}{=} 3\\int_{0}^{x} \\sin s^2 ds$，故\n\n原式$= \\lim\\limits_{x \\to 0} \\frac{x^3 - 3\\int_{0}^{x} \\sin s^2 ds}{8x^7}$\n\n$= \\lim\\limits_{x \\to 0} \\frac{3x^2 - 3\\sin x^2}{56x^6} = \\lim\\limits_{x \\to 0} \\frac{6x - 3\\cos x^2 \\cdot 2x}{6 \\cdot 56x^5}$\n\n$= \\lim\\limits_{x \\to 0} \\frac{x(1 - \\cos x^2)}{56x^5} = \\lim\\limits_{x \\to 0} \\frac{\\frac{1}{2}x^4}{56x^4} = \\frac{1}{112}$．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11213/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）\n\n设可微函数$f(x,y)$在点$P(x,y)$处沿$l_1=(-1,0)$与$l_2=(0,-1)$的方向导数分别为$x^2 - y$与$1 - x$，且$f(1,1)=-\\frac{1}{3}$．\n\n（Ⅰ）求$f(x,y)$；\n\n（Ⅱ）求$f(x,y)$在$D=\\{(x,y)\\mid 0\\leqslant y\\leqslant 7 - x,0\\leqslant x\\leqslant 7\\}$上的最大值．",
+          "options": [],
+          "answer": "解析 （Ⅰ）依题设，$f(x,y)$在点$P(x,y)$处沿$l_1$与$l_2$（即$x$轴负向，$y$轴负向）的方向导数分别为$\\frac{\\partial f}{\\partial x}$与$\\frac{\\partial f}{\\partial y}$的相反数，故$\\frac{\\partial f}{\\partial x}=y - x^2$，$\\frac{\\partial f}{\\partial y}=x - 1$，所以有\n\n$f(x,y)=\\int \\frac{\\partial f}{\\partial x}\\mathrm{d}x + \\varphi(y)=xy - \\frac{1}{3}x^3 + \\varphi(y)$．\n\n由$\\frac{\\partial f}{\\partial y}=x + \\varphi'(y)=x - 1$，得$\\varphi'(y)=-1$，故$\\varphi(y)=-y + C$，即有\n\n$f(x,y)=xy - \\frac{1}{3}x^3 - y + C$．\n\n由$f(1,1)=-\\frac{1}{3}$，得$C=0$，故$f(x,y)=xy - \\frac{1}{3}x^3 - y$．\n\n（Ⅱ）在$D$内，由$\\begin{cases}\\frac{\\partial f}{\\partial x}=y - x^2=0,\\\\\\frac{\\partial f}{\\partial y}=x - 1=0\\end{cases}$得$D$内唯一的驻点$(1,1)$．\n\n在$D$的边界上，当$y=0$，$0\\leqslant x\\leqslant 7$时，$f(x,0)=-\\frac{1}{3}x^3$，最大值为$0$．\n\n当$x=0$，$0\\leqslant y\\leqslant 7$时，$f(0,y)=-y$，最大值为$0$．\n\n当$x + y=7$时，即$y=7 - x$，\n\n$f(x,7 - x)=-\\frac{1}{3}x^3 - x^2 + 8x - 7$（$0\\leqslant x\\leqslant 7$）．\n\n令$\\frac{\\mathrm{d}f}{\\mathrm{d}x}=-x^2 - 2x + 8=0$，得$x=2$，$x=-4$（舍）．\n\n比较大小：$f(1,1)=-\\frac{1}{3}$，$f(2,5)=\\frac{7}{3}$，$f(0,7)=-7$，$f(7,0)=-\\frac{343}{3}$．\n\n故最大值为$\\frac{7}{3}$．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11214/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（本题满分12分）设平面曲线\\( L \\)为\\( |\\ln x| + |\\ln y| = 1 \\)，取逆时针方向，计算\\( I = \\oint_L \\frac{-y\\mathrm{d}x + x\\mathrm{d}y}{|\\ln x| + |\\ln y|} \\)。",
+          "options": [],
+          "answer": "解析 平面曲线\\( L:|\\ln x| + |\\ln y| = 1 \\)为第一象限内的闭曲线，设\\( L \\)围成的区域为\\( D \\)。\n\n如下图所示，\n\n当\\( x \\geq 1 \\)且\\( y \\geq 1 \\)时，\\( L \\)为\\( \\ln x + \\ln y = 1 \\)，即\\( xy = \\mathrm{e} \\)；\n\n当\\( x \\geq 1 \\)且\\( 0 < y < 1 \\)时，\\( L \\)为\\( \\ln x - \\ln y = 1 \\)，即\\( y = \\frac{1}{\\mathrm{e}}x \\)；\n\n当\\( 0 < x < 1 \\)且\\( y \\geq 1 \\)时，\\( L \\)为\\( -\\ln x + \\ln y = 1 \\)，即\\( y = \\mathrm{e}x \\)；\n\n当\\( 0 < x < 1 \\)且\\( 0 < y < 1 \\)时，\\( L \\)为\\( -\\ln x - \\ln y = 1 \\)，即\\( xy = \\frac{1}{\\mathrm{e}} \\)。\n\n将\\( |\\ln x| + |\\ln y| = 1 \\)代入被积函数，有\n\n\\( I = \\oint_L \\frac{-y\\mathrm{d}x + x\\mathrm{d}y}{|\\ln x| + |\\ln y|} = \\oint_L -y\\mathrm{d}x + x\\mathrm{d}y \\)\n\n\\( \\stackrel{\\text{格林公式}}{=} \\iint_D \\left( \\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} \\right) \\mathrm{d}x\\mathrm{d}y = \\iint_D (1 + 1)\\mathrm{d}x\\mathrm{d}y \\)\n\n\\( = 2 \\int_{\\arctan \\frac{1}{\\mathrm{e}}}^{\\arctan \\mathrm{e}} \\mathrm{d}\\theta \\int_{\\sqrt{\\frac{1}{\\mathrm{e} \\sin \\theta \\cos \\theta}}}^{\\sqrt{\\frac{\\mathrm{e}}{\\sin \\theta \\cos \\theta}}} r\\mathrm{d}r \\)\n\n\\( = 2 \\int_{\\arctan \\frac{1}{\\mathrm{e}}}^{\\arctan \\mathrm{e}} \\frac{1}{2}r^2 \\bigg|_{\\sqrt{\\frac{1}{\\mathrm{e} \\sin \\theta \\cos \\theta}}}^{\\sqrt{\\frac{\\mathrm{e}}{\\sin \\theta \\cos \\theta}}} \\mathrm{d}\\theta \\)\n\n\\( = \\int_{\\arctan \\frac{1}{\\mathrm{e}}}^{\\arctan \\mathrm{e}} \\left( \\mathrm{e} - \\frac{1}{\\mathrm{e}} \\right) \\frac{\\mathrm{d}\\theta}{\\sin \\theta \\cos \\theta} \\)\n\n\\( = \\left( \\mathrm{e} - \\frac{1}{\\mathrm{e}} \\right) \\int_{\\arctan \\frac{1}{\\mathrm{e}}}^{\\arctan \\mathrm{e}} \\frac{\\mathrm{d}(\\tan \\theta)}{\\tan \\theta} \\)\n\n\\( = \\left( \\mathrm{e} - \\frac{1}{\\mathrm{e}} \\right) \\ln(\\tan \\theta) \\bigg|_{\\arctan \\frac{1}{\\mathrm{e}}}^{\\arctan \\mathrm{e}} = 2\\left( \\mathrm{e} - \\frac{1}{\\mathrm{e}} \\right) \\)。\n\n（图注：\\( y \\)轴标有\\( \\mathrm{e} \\)、1、0；\\( x \\)轴标有\\( \\mathrm{e} \\)、1、0；曲线有\\( y = \\mathrm{e}x \\)、\\( xy = \\mathrm{e} \\)、\\( y = \\frac{1}{\\mathrm{e}}x \\)、\\( xy = \\frac{1}{\\mathrm{e}} \\)，围成灰色区域。）",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11215/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）设$f(x)$在$[-1,1]$上有连续的二阶导数，证明：\n\n（Ⅰ）存在一点$\\xi \\in [-1,1]$，使得$\\int_{-1}^{1}xf(x)\\mathrm{d}x = \\frac{1}{3}\\left[2f'(\\xi) + \\xi f''(\\xi)\\right]$；\n\n（Ⅱ）若$f(x)$在$(-1,1)$内取得极值，则存在一点$\\eta \\in (-1,1)$，使得\n\n$\\left|2f'(\\eta) + \\eta f''(\\eta)\\right| \\geqslant \\frac{1}{2}\\left|f(1) - f(-1)\\right|$。",
+          "options": [],
+          "answer": "解析 （Ⅰ）令$F(x) = xf(x)$，则$F'(x) = f(x) + xf'(x)$，$F''(x) = 2f'(x) + xf''(x)$，\n\n且$F(0) = 0$，$F'(0) = f(0)$。\n\n$F(x)$在$x=0$处的泰勒展开式为\n\n$F(x) = F(0) + F'(0)x + \\frac{F''(c)}{2!}x^2 = f(0)x + \\frac{F''(c)}{2}x^2$，$c$介于$0$与$x$之间。\n\n上式两边积分，有\n\n$\\int_{-1}^{1}F(x)\\mathrm{d}x = \\int_{-1}^{1}f(0)x\\mathrm{d}x + \\frac{1}{2}\\int_{-1}^{1}F''(c)x^2\\mathrm{d}x = \\frac{1}{2}\\int_{-1}^{1}F''(c)x^2\\mathrm{d}x$。\n\n记$m = \\min\\limits_{-1\\leqslant x\\leqslant 1}F''(x)$，$M = \\max\\limits_{-1\\leqslant x\\leqslant 1}F''(x)$，则\n\n$m\\int_{-1}^{1}x^2\\mathrm{d}x \\leqslant \\int_{-1}^{1}F''(c)x^2\\mathrm{d}x \\leqslant M\\int_{-1}^{1}x^2\\mathrm{d}x$，\n\n即$\\frac{2m}{3} \\leqslant \\int_{-1}^{1}F''(c)x^2\\mathrm{d}x \\leqslant \\frac{2M}{3}$，故$m \\leqslant 3\\int_{-1}^{1}F(x)\\mathrm{d}x \\leqslant M$。\n\n对$F''(x)$利用介值定理，存在一点$\\xi \\in [-1,1]$，使得$3\\int_{-1}^{1}F(x)\\mathrm{d}x = F''(\\xi)$，即\n\n$\\int_{-1}^{1}xf(x)\\mathrm{d}x = \\frac{1}{3}\\left[2f'(\\xi) + \\xi f''(\\xi)\\right]$。\n\n（Ⅱ）由$f(x)$在$(-1,1)$内取得极值，知存在一点$x_0 \\in (-1,1)$，使得$f'(x_0) = 0$，故\n\n$F'(x_0) = f(x_0) + x_0f'(x_0) = f(x_0)$，\n\n其中$F(x) = xf(x)$。$F(x)$在$x_0$处的泰勒展开式为\n\n$F(x) = F(x_0) + F'(x_0)(x - x_0) + \\frac{F''(u)}{2}(x - x_0)^2$\n\n$= x_0f(x_0) + f(x_0)(x - x_0) + \\frac{F''(u)}{2}(x - x_0)^2$\n\n$= f(x_0)x + \\frac{F''(u)}{2}(x - x_0)^2$，\n\n其中$u$介于$x_0$与$x$之间，故\n\n$F(1) = f(x_0) + \\frac{F''(\\eta_1)}{2}(1 - x_0)^2$， ①\n\n$F(-1) = -f(x_0) + \\frac{F''(\\eta_2)}{2}(-1 - x_0)^2$。 ②\n\n其中$\\eta_1$介于$x_0$与$1$之间，$\\eta_2$介于$-1$与$x_0$之间。\n\n①式$+$②式，有\n\n$F(1) + F(-1) = f(1) - f(-1) = \\frac{F''(\\eta_1)}{2}(1 - x_0)^2 + \\frac{F''(\\eta_2)}{2}(1 + x_0)^2$。\n\n记$M = \\max\\{|F''(\\eta_1)|, |F''(\\eta_2)|\\}$，则由上式可得\n\n$|f(1) - f(-1)| \\leqslant \\frac{M}{2}[(1 - x_0)^2 + (1 + x_0)^2]$\n\n$= \\frac{M}{2}(2 + 2x_0^2) \\leqslant \\frac{M}{2}(2 + 2) = 2M$。\n\n因此，$M \\geqslant \\frac{1}{2}|f(1) - f(-1)|$。\n\n取$\\eta = \\eta_1$或$\\eta = \\eta_2$，使得$|F''(\\eta)| = M$，则存在一点$\\eta \\in (-1,1)$，满足\n\n$|F''(\\eta)| = |2f'(\\eta) + \\eta f''(\\eta)| \\geqslant \\frac{1}{2}|f(1) - f(-1)|$。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11216/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（本题满分12分）设\\(\\alpha\\)为3维非零实列向量，\\(E\\)为3阶单位矩阵，\\( A = E - \\frac{k}{\\alpha^T \\alpha}\\alpha\\alpha^T \\)，\\(\\lambda = -2\\)是\\(A\\)的特征值.\n\n（Ⅰ）计算\\( A^2 + A \\)，并求\\(k\\)的值；\n\n（Ⅱ）对于（Ⅰ）中的\\(k\\)值，若\\( \\alpha = (k,k,k)^T \\)，求正交变换\\( X = QY \\)，将二次型\\( f(x_1,x_2,x_3) = X^T A X \\)化为标准形.",
+          "options": [],
+          "answer": "解析 （Ⅰ）\n\n\\( A^2 = \\left(E - \\frac{k}{\\alpha^T \\alpha}\\alpha\\alpha^T\\right)\\left(E - \\frac{k}{\\alpha^T \\alpha}\\alpha\\alpha^T\\right) \\)\n\n\\( = E - \\frac{2k}{\\alpha^T \\alpha}\\alpha\\alpha^T + \\frac{k^2}{(\\alpha^T \\alpha)^2}(\\alpha\\alpha^T \\alpha\\alpha^T) \\)\n\n\\( = E - \\frac{2k}{\\alpha^T \\alpha}\\alpha\\alpha^T + \\frac{k^2}{(\\alpha^T \\alpha)^2}\\alpha(\\alpha^T \\alpha)\\alpha^T \\)\n\n\\( = E - \\frac{2k}{\\alpha^T \\alpha}\\alpha\\alpha^T + \\frac{k^2}{\\alpha^T \\alpha}\\alpha\\alpha^T \\).\n\n由已知，有\\( \\frac{k}{\\alpha^T \\alpha}\\alpha\\alpha^T = E - A \\)，代入上式，有\\( A^2 = (k - 1)E + (2 - k)A \\)，即\\( A^2 - (2 - k)A + (1 - k)E = 0 \\).\n\n设\\(\\lambda\\)为\\(A\\)的任一特征值，\\(\\xi\\)为其特征向量，则\\( [A^2 - (2 - k)A + (1 - k)E]\\xi = 0 \\)，得\\( \\lambda^2 - (2 - k)\\lambda + (1 - k) = 0 \\).\n\n由\\( \\lambda = -2 \\)是\\(A\\)的特征值，有\\( (-2)^2 - (2 - k)(-2) + 1 - k = 0 \\).\n\n解得\\( k = 3 \\)，且\\( A^2 + A = 2E \\).\n\n（Ⅱ）由（Ⅰ）知，\\( \\alpha = (k,k,k)^T = (3,3,3)^T \\)，则\n\n\\( \\alpha^T \\alpha = (3,3,3)\\begin{pmatrix} 3 \\\\ 3 \\\\ 3 \\end{pmatrix} = 27 \\)，\n\n\\( \\alpha\\alpha^T = \\begin{pmatrix} 3 \\\\ 3 \\\\ 3 \\end{pmatrix}(3,3,3) = 9\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{pmatrix} \\).\n\n故\\( A = E - \\frac{k}{\\alpha^T \\alpha}\\alpha\\alpha^T = E - \\frac{3}{27} \\cdot 9\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & -1 & -1 \\\\ -1 & 0 & -1 \\\\ -1 & -1 & 0 \\end{pmatrix} \\).\n\n由\\( |\\lambda E - A| = \\begin{vmatrix} \\lambda & 1 & 1 \\\\ 1 & \\lambda & 1 \\\\ 1 & 1 & \\lambda \\end{vmatrix} = (\\lambda - 1)^2(\\lambda + 2) = 0 \\)，知\\(A\\)的特征值为\\( \\lambda_1 = \\lambda_2 = 1 \\)，\\( \\lambda_3 = -2 \\).\n\n由\\( (E - A)X = 0 \\)，得\\(A\\)的特征向量为\n\n\\( \\alpha_1 = (-1,1,0)^T \\)，\\( \\alpha_2 = (1,1,-2)^T \\)（已正交）.\n\n由\\( (-2E - A)X = 0 \\)，得\\(A\\)的特征向量为\\( \\alpha_3 = (1,1,1)^T \\).\n\n将\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)单位化，得\n\n\\( \\gamma_1 = \\frac{1}{\\sqrt{2}}(-1,1,0)^T \\)，\\( \\gamma_2 = \\frac{1}{\\sqrt{6}}(1,1,-2)^T \\)，\\( \\gamma_3 = \\frac{1}{\\sqrt{3}}(1,1,1)^T \\).\n\n令\\( Q = (\\gamma_1, \\gamma_2, \\gamma_3) \\)，则\\( X = QY \\)为所求正交变换，标准形为\\( y_1^2 + y_2^2 - 2y_3^2 \\).",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11217/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（本题满分12分）设二维随机变量$(X,Y)$的概率密度为\n\n$f(x,y)= \\begin{cases} 2\\text{e}^{-(x+y)}, & 0<x<y, \\\\ 0, & \\text{其他}. \\end{cases}$\n\n（Ⅰ）求$(X,Y)$的联合分布函数$F(x,y)$；\n\n（Ⅱ）求$P\\left\\{X+Y>1\\big|X<\\frac{1}{2}\\right\\}$；\n\n（Ⅲ）求$E(Y-X)$．",
+          "options": [],
+          "answer": "解析 （Ⅰ）$F(x,y)=P\\{X\\leqslant x,Y\\leqslant y\\}=\\int_{-\\infty}^{x}\\int_{-\\infty}^{y}f(u,v)\\text{d}u\\text{d}v$．\n\n如图1所示，当$x\\leqslant 0$或$y\\leqslant 0$时，$F(x,y)=0$．\n\n当$0<y\\leqslant x$时，\n\n$F(x,y)=\\int_{0}^{y}\\text{d}u\\int_{u}^{y}2\\text{e}^{-u}\\text{e}^{-v}\\text{d}v=2\\int_{0}^{y}(\\text{e}^{-2u}-\\text{e}^{-y}\\text{e}^{-u})\\text{d}u$\n\n$=(-\\text{e}^{-2u}+2\\text{e}^{-y}\\text{e}^{-u})\\big|_{0}^{y}=1-2\\text{e}^{-y}+\\text{e}^{-2y}$．\n\n当$0<x<y$时，\n\n$F(x,y)=\\int_{0}^{x}\\text{d}u\\int_{u}^{y}2\\text{e}^{-u}\\text{e}^{-v}\\text{d}v=2\\int_{0}^{x}(\\text{e}^{-2u}-\\text{e}^{-y}\\text{e}^{-u})\\text{d}u$\n\n$=(-\\text{e}^{-2u}+2\\text{e}^{-y}\\text{e}^{-u})\\big|_{0}^{x}=1-2\\text{e}^{-y}-\\text{e}^{-2x}+2\\text{e}^{-(x+y)}$．\n\n故$F(x,y)= \\begin{cases} 1-2\\text{e}^{-y}-\\text{e}^{-2x}+2\\text{e}^{-(x+y)}, & 0<x<y, \\\\ 1-2\\text{e}^{-y}+\\text{e}^{-2y}, & 0<y\\leqslant x, \\\\ 0, & x\\leqslant 0\\text{或}y\\leqslant 0. \\end{cases}$\n\n（Ⅱ）由$F_X(x)=\\lim\\limits_{y\\to+\\infty}F(x,y)= \\begin{cases} 1-\\text{e}^{-2x}, & x>0, \\\\ 0, & x\\leqslant 0, \\end{cases}$知$X$的边缘概率密度为\n\n$f_X(x)=\\frac{\\text{d}F_X(x)}{\\text{d}x}= \\begin{cases} 2\\text{e}^{-2x}, & x>0, \\\\ 0, & x\\leqslant 0, \\end{cases}$\n\n$P\\left\\{X+Y>1\\big|X<\\frac{1}{2}\\right\\}=\\frac{P\\left\\{X+Y>1,X<\\frac{1}{2}\\right\\}}{P\\left\\{X<\\frac{1}{2}\\right\\}}$．\n\n又\n\n$P\\left\\{X<\\frac{1}{2}\\right\\}=\\int_{0}^{\\frac{1}{2}}2\\text{e}^{-2x}\\text{d}x=1-\\text{e}^{-1},$\n\n$P\\left\\{X+Y>1,X<\\frac{1}{2}\\right\\}=\\iint\\limits_{\\substack{x+y>1 \\\\ x<\\frac{1}{2}}} f(x,y)\\text{d}x\\text{d}y=\\int_{0}^{\\frac{1}{2}}\\text{d}x\\int_{1-x}^{+\\infty}2\\text{e}^{-(x+y)}\\text{d}y$\n\n$=2\\int_{0}^{\\frac{1}{2}}\\text{e}^{-1}\\text{d}x=\\text{e}^{-1},$\n\n故$P\\left\\{X+Y>1\\big|X<\\frac{1}{2}\\right\\}=\\frac{\\text{e}^{-1}}{1-\\text{e}^{-1}}=\\frac{1}{\\text{e}-1}$．\n\n（Ⅲ）记$Z=Y-X$，则$Z$的分布函数为\n\n$F_Z(z)=P\\{Y-X\\leqslant z\\}=\\iint\\limits_{y-x\\leqslant z} f(x,y)\\text{d}x\\text{d}y$．\n\n如图2所示，当$z\\leqslant 0$时，$F_Z(z)=0$．\n\n当$z>0$时，$F_Z(z)=\\int_{0}^{+\\infty}\\text{d}x\\int_{x}^{x+z}2\\text{e}^{-x}\\text{e}^{-y}\\text{d}y$\n\n$=2\\int_{0}^{+\\infty}\\text{e}^{-x}(\\text{e}^{-x}-\\text{e}^{-x-z})\\text{d}x$\n\n$=2(1-\\text{e}^{-z})\\int_{0}^{+\\infty}\\text{e}^{-2x}\\text{d}x=1-\\text{e}^{-z}$．\n\n故$F_Z(z)= \\begin{cases} 1-\\text{e}^{-z}, & z>0, \\\\ 0, & z\\leqslant 0, \\end{cases}$即$Z=Y-X$服从参数$\\lambda=1$的指数分布，\n\n从而$EZ=E(Y-X)=\\frac{1}{\\lambda}=1$．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11218/"
+        }
+      ]
+    }
+  ]
+}

@@ -85,9 +85,19 @@ for (const r of rows) {
     groups.set(seriesKey, { meta: { year: sp.year, body: sp.body, publisher: cls.publisher, subject }, sets: new Map() });
   }
   const g = groups.get(seriesKey);
+  const score = (x) => [x.qLinks || 0, x.ansCount || 0];
   const prev = g.sets.get(sp.setNo);
-  const score = (x) => [x.qLinks || 0, x.ansCount || 0, -(x.id || 0)];
-  if (!prev || JSON.stringify(score(r)) > JSON.stringify(score(prev))) g.sets.set(sp.setNo, r);
+  if (!prev) g.sets.set(sp.setNo, [r]);
+  else {
+    prev.push(r);
+    // 同一套卷可能有多个上传（不同 examId，页面完整度不同）：全部保留，交给 build 按实解质量挑
+    prev.sort((a, b) => {
+      const sa = score(a), sb = score(b);
+      if (sa[0] !== sb[0]) return sb[0] - sa[0];
+      if (sa[1] !== sb[1]) return sb[1] - sa[1];
+      return a.id - b.id;
+    });
+  }
 }
 
 // ------------------------------------------------------------------ 生成 sources.json
@@ -105,10 +115,12 @@ for (const [seriesKey, g] of [...groups].sort((a, b) => a[0].localeCompare(b[0],
   if (!sets.length) continue;
   groupSummary.push(`${setName}  [${g.meta.publisher} / ${g.meta.subject}]  套数 ${sets.length}（${sets.join(",")}）`);
   for (const n of sets) {
-    const r = g.sets.get(n);
+    const cands = g.sets.get(n);
+    const r = cands[0];
     papers.push({
       paperId: `mock-${g.meta.subject}-nnd-${slugify(g.meta.body)}-${g.meta.year}-set${n}`,
       examId: r.id,
+      examIds: cands.slice(0, 4).map((x) => x.id),
       groupId,
       subject: g.meta.subject,
       subjectName: g.meta.subject === "politics" ? "政治" : "数学一",
@@ -122,9 +134,9 @@ for (const [seriesKey, g] of [...groups].sort((a, b) => a[0].localeCompare(b[0],
       totalScore: g.meta.subject === "politics" ? 100 : 150,
       sourceName: `N诺考研 noobdream.com · ${setName}（${Object.keys(CN_NUM).find((k) => CN_NUM[k] === n)}）练习解析页`,
       sourceNote:
-        "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字照抄自该页；" +
-        "该页本身是用户练习记录的展示页，题干与公式为网页文本（含 LaTeX），未逐题人工核对，请以正式出版物为准。",
-      _stat: { qLinks: r.qLinks, ansCount: r.ansCount },
+        "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；" +
+        "该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+      _stat: { qLinks: r.qLinks, ansCount: r.ansCount, uploads: cands.length },
     });
   }
 }

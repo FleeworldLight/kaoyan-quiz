@@ -1,0 +1,513 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2026 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2026,
+  "paperNo": 2,
+  "paperKind": "testPaper",
+  "title": "2026 张宇终极预测8套卷（二）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2026 张宇终极预测8套卷（二）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/39891/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "设函数$f(x)$在$(0,+\\infty)$上有界且可导，$f'(x)$单调增加，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\{f(n)\\}$收敛，$\\{nf'(n)\\}$收敛."
+            },
+            {
+              "key": "B",
+              "text": "$\\{f(n)\\}$收敛，$\\{nf'(n)\\}$发散."
+            },
+            {
+              "key": "C",
+              "text": "$\\{f(n)\\}$发散，$\\{nf'(n)\\}$收敛."
+            },
+            {
+              "key": "D",
+              "text": "$\\{f(n)\\}$发散，$\\{nf'(n)\\}$发散."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 读懂题意，做好等价转化处理．\n\n①欲讨论$\\{ f(n)\\}$是否收敛，先讨论$\\lim\\limits _{x→+∞}f(x)$是否存在．\n\n若$\\lim\\limits _{x→+∞}f(x)$存在，则$\\{ f(n)\\}$收敛．于是想到单调有界准则．\n\n因为$f'(x)$单调增加，故当$x→+∞$时，根据$f'(x)$的保号性，可知$f(x)$单调，又因为$f(x)$有界，可知$\\lim\\limits _{x→+∞}f(x)$存在，故$\\{ f(n)\\}$收敛．\n\n②欲讨论$\\{ nf'(n)\\}$是否收敛，先讨论$\\lim\\limits _{x→+∞}xf'(x)$是否存在．\n\n因涉及$f(x)$与$f'(x)$，故可考虑拉格朗日中值定理．\n\n根据拉格朗日中值定理可知，存在$\\xi ∈(x,2x)$，使得$f(2x)-f(x)=xf'(\\xi )$；存在$\\eta ∈(\\frac {x}{2},x)$，使得$f(x)-f(\\frac {x}{2})=\\frac {x}{2}f'(\\eta )$．\n\n由①知，$\\lim\\limits _{x→+∞}[f(2x)-f(x)]=\\lim\\limits _{x→+∞}[f(x)-f(\\frac {x}{2})]=0$，\n\n即$\\lim\\limits _{x→+∞}xf'(\\xi )=\\lim\\limits _{x→+∞}xf'(\\eta )=0$．\n\n又因为$xf'(x)$介于$xf'(\\eta )$与$xf'(\\xi )$之间，故由夹逼准则可知，$\\lim\\limits _{x→+∞}xf'(x)=0$．\n\n综上，本题选A．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11959/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设可微函数$f(x,y)$在点$(0,0)$处的最小方向导数为$a$，$a\\neq0$且$a\\neq-1$，$b,c$是满足$b^2+c^2$为正常数的任意实数，则$\\text{grad }f(0,0)$与$(b,c)$内积的最大值为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$a\\sqrt{b^2+c^2}$."
+            },
+            {
+              "key": "B",
+              "text": "$-a\\sqrt{b^2+c^2}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\sqrt{|a|(b^2+c^2)}$."
+            },
+            {
+              "key": "D",
+              "text": "$-\\sqrt{|a|(b^2+c^2)}$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 $\\|\\text{grad} f(0,0)\\|=-a$，又$[\\alpha,\\beta]=\\|\\alpha\\|\\|\\beta\\|\\cos\\theta \\leq \\|\\alpha\\|\\|\\beta\\|$，其中$\\theta$为$\\alpha$与$\\beta$的夹角．\n\n于是$\\| \\text{grad} f(0,0),(b,c) \\| \\leq \\|\\text{grad} f(0,0)\\| \\sqrt{b^2 + c^2} = -a\\sqrt{b^2 + c^2}$，故选B．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11960/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "$\\sum_{n=2}^{\\infty}\\left[\\frac{1}{n!}+\\frac{1}{(n-2)!}\\right]=$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$e-1$."
+            },
+            {
+              "key": "B",
+              "text": "$e$."
+            },
+            {
+              "key": "C",
+              "text": "$2(e-1)$."
+            },
+            {
+              "key": "D",
+              "text": "$2e$."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 令$S(x)=\\sum_{n=2}^{\\infty} \\left[ \\frac{1}{n!} + \\frac{1}{(n-2)!} \\right] x^n$，则\n\n$S(x)=\\sum_{n=2}^{\\infty} \\frac{x^n}{n!} + \\sum_{n=2}^{\\infty} \\frac{x^n}{(n-2)!} \\to x^2$\n\n$= e^x - x - 1 + e^x \\cdot x^2 = e^x(1 + x^2) - x - 1$，\n\n故$\\sum_{n=2}^{\\infty} \\left[ \\frac{1}{n!} + \\frac{1}{(n-2)!} \\right] = S(1) = e \\cdot 2 - 1 - 1 = 2(e - 1)$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11961/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设$f(x)$在$[0,1]$上可导，当$0\\leq x\\leq1$时，$f'(x)+f^2(x)\\geq0$，$f(0)>0$，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\int_{0}^{1}f(x)\\text{d}x\\leq\\ln\\frac{f(1)}{f(0)}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\int_{0}^{1}f(x)\\text{d}x\\geq\\ln\\frac{f(0)}{f(1)}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\int_{0}^{1}f(x)\\text{d}x\\leq\\ln f(1)$."
+            },
+            {
+              "key": "D",
+              "text": "$\\int_{0}^{1}f(x)\\text{d}x\\geq\\ln f(0)$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 对于“$f'(x) + f^2(x)$”，用逆向思维，化归经典形式．\n\n令$F(x) = f(x)e^{\\int_{0}^{x} f(t) dt}$，则\n\n$F'(x) = e^{\\int_{0}^{x} f(t) dt} [f'(x) + f^2(x)] \\geq 0$，\n\n于是$F(x)$在$[0,1]$上单调增加，故有\n\n$F(1) \\geq F(0)$，\n\n则有$f(1)e^{\\int_{0}^{1} f(x) dx} \\geq f(0)$，又因为$f(0) > 0$，$e^{\\int_{0}^{1} f(x) dx} > 0$，可知$f(1) > 0$，进而可得\n\n$e^{\\int_{0}^{1} f(x) dx} \\geq \\frac{f(0)}{f(1)}$，即$\\int_{0}^{1} f(x) dx \\geq \\ln \\frac{f(0)}{f(1)}$．故选B．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11962/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设$A$为$n$阶实矩阵，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\begin{pmatrix} A & O \\\\ E & A^T A \\end{pmatrix}x=0$只有零解."
+            },
+            {
+              "key": "B",
+              "text": "$\\begin{pmatrix} O & A \\\\ A^T A & AA^T A \\end{pmatrix}x=0$只有零解."
+            },
+            {
+              "key": "C",
+              "text": "$\\begin{pmatrix} A & A^T A \\\\ O & A^T A \\end{pmatrix}x=0$与$\\begin{pmatrix} A^T A & A \\\\ O & A \\end{pmatrix}x=0$同解."
+            },
+            {
+              "key": "D",
+              "text": "$\\begin{pmatrix} AA^T A & A^T A \\\\ O & A \\end{pmatrix}x=0$与$\\begin{pmatrix} A^T A^2 & A \\\\ O & A^T A \\end{pmatrix}x=0$同解."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 由于$Ax=0$与$A^T A x=0$同解，故$A$与$A^T A$的行向量组等价．\n\n对于C选项，有\n\n$\\begin{pmatrix} A & A^T A \\\\ 0 & A^T A \\end{pmatrix} \\to \\begin{pmatrix} A & 0 \\\\ 0 & A^T A \\end{pmatrix}$，\n\n$\\begin{pmatrix} A^T A & A \\\\ 0 & A \\end{pmatrix} \\to \\begin{pmatrix} A^T A & 0 \\\\ 0 & A \\end{pmatrix}$，\n\n$\\begin{pmatrix} A & A^T A \\\\ 0 & A^T A \\\\ A^T A & A \\\\ 0 & A \\end{pmatrix} \\to \\begin{pmatrix} A & 0 \\\\ 0 & A^T A \\\\ A^T A & 0 \\\\ 0 & A \\end{pmatrix} \\to \\begin{pmatrix} A & 0 \\\\ 0 & A^T A \\\\ 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$，\n\n三秩相等，故C选项成立．\n\n对于A，B选项，矩阵$A$未必可逆，故$|A|,|A^T A|$未必非零，故齐次线性方程组可能有非零解．对于D选项，无法推出三秩相等．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11963/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "已知二次型$f(x_1,x_2,x_3)=4x_1^2+x_2^2+ax_3^2+2x_1x_2-4x_1x_3+2x_2x_3$可经可逆线性变换但不可经正交变换化为$g(y_1,y_2,y_3)=by_1^2+6y_2^2$，则$a+b$的取值范围为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$(4,+\\infty)$."
+            },
+            {
+              "key": "B",
+              "text": "$(7,+\\infty)$."
+            },
+            {
+              "key": "C",
+              "text": "$[4,+\\infty)$."
+            },
+            {
+              "key": "D",
+              "text": "$(4,7)\\cup(7,+\\infty)$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 设二次型$f(x_1,x_2,x_3)$和$g(y_1,y_2,y_3)$对应的矩阵分别为\n\n$A = \\begin{pmatrix} 4 & 1 & -2 \\\\ 1 & 1 & 1 \\\\ -2 & 1 & a \\end{pmatrix}$与$B = \\begin{pmatrix} b & 0 & 0 \\\\ 0 & 6 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$．\n\n由题设可知，$A$与$B$合同但不相似，则$A$与$B$有相同的正、负惯性指数且特征值不完全相同．显然，$B$的特征值为$b,6,0$，故$A$有特征值$0$，即$|A|=0$．\n\n计算得$|A|=3(a - 4)$，故有$a = 4$．此时\n\n$|\\lambda E - A| = \\begin{vmatrix} \\lambda - 4 & -1 & 2 \\\\ -1 & \\lambda - 1 & -1 \\\\ 2 & -1 & \\lambda - 4 \\end{vmatrix} = \\lambda(\\lambda - 3)(\\lambda - 6)$，\n\n可知$A$的特征值为$3,6,0$，即$A$的正惯性指数为$2$，负惯性指数为$0$，故$b > 0$且$b \\neq 3$，\n\n于是$a + b$的取值范围为$(4,7) \\cup (7, +\\infty)$．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11964/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "下列矩阵中，与$\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 2 \\end{pmatrix}$不相似的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\begin{pmatrix} 2 & 0 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{pmatrix}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\begin{pmatrix} 2 & 0 & 0 \\\\ -1 & 2 & 1 \\\\ 0 & 0 & 1 \\end{pmatrix}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\begin{pmatrix} 2 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{pmatrix}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\begin{pmatrix} 2 & -1 & 0 \\\\ 1 & 2 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 利用排除法，题干中给定矩阵的特征值为$1,2,2$，分别求选项中给出的矩阵的特征值，A,B,C选项中的矩阵的特征值均为$1,2,2$，D选项中的矩阵的特征值为$1,2 \\pm i$．\n\n若特征值不相同，则矩阵必不相似．故选D．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11965/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设10个球中有3个红球，7个白球，现从10个球中无放回地抽取3个球，记取到白球的个数为$X$，则$E(X)=$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{7}{10}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{21}{10}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{7}{5}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{21}{5}$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 此为超几何分布模型，$N=10,M=7,n=3$，故$E(X)=\\frac{nM}{N}=\\frac{3 \\times 7}{10}=\\frac{21}{10}$．\n\n【注】 考前要记住这一结论：超几何分布的数学期望$E(X)=\\frac{nM}{N}$．可以这样记，$p=\\frac{M}{N}$，则$E(X)=np$，与二项分布$X \\sim B(n,p)$的$E(X)=np$在形式上一样，但要注意，超几何分布的$E(X)=n \\cdot \\frac{M}{N}$是用组合恒等式经过计算化简得来的．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11966/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设随机变量$X$服从参数为$\\mu,\\sigma^2$的正态分布，其概率密度为$f(x)$，则$\\int_{-\\infty}^{+\\infty}f(x)\\ln f(x)\\text{d}x$",
+          "options": [
+            {
+              "key": "A",
+              "text": "与$\\mu$有关，与$\\sigma$无关."
+            },
+            {
+              "key": "B",
+              "text": "与$\\mu$有关，与$\\sigma$有关."
+            },
+            {
+              "key": "C",
+              "text": "与$\\mu$无关，与$\\sigma$有关."
+            },
+            {
+              "key": "D",
+              "text": "与$\\mu$无关，与$\\sigma$无关."
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 由题意，$f(x)=\\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$，则\n\n$\\int_{-\\infty}^{+\\infty} f(x) \\ln f(x) dx$\n\n$= \\int_{-\\infty}^{+\\infty} f(x) \\ln \\frac{1}{\\sqrt{2\\pi}\\sigma} dx + \\int_{-\\infty}^{+\\infty} f(x) \\ln e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}} dx$\n\n$= \\ln \\frac{1}{\\sqrt{2\\pi}\\sigma} - \\int_{-\\infty}^{+\\infty} f(x) \\cdot \\frac{(x - \\mu)^2}{2\\sigma^2} dx$，\n\n因 $\\int_{-\\infty}^{+\\infty} f(x)(x - \\mu)^2 dx = E[(X - \\mu)^2] = D(X - \\mu) + [E(X - \\mu)]^2 = D(X) + 0 = \\sigma^2$，\n\n故$\\int_{-\\infty}^{+\\infty} f(x) \\ln f(x) dx = \\ln \\frac{1}{\\sqrt{2\\pi}\\sigma} - \\frac{1}{2}$，仅与$\\sigma$有关，选C．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11967/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设总体$X$服从参数为1的指数分布，$X_1,X_2,\\cdots,X_n$为来自总体$X$的简单随机样本，记$\\nu_n(1)$为$n$个观测值中不大于1的个数，则$\\frac{\\nu_n(1)}{n}$的方差为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{e-1}{ne^2}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{e-1}{ne}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{e(e-1)}{n}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{e-1}{n}$."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 由题知，$X$的分布函数为$F(x)=\\begin{cases} 1 - e^{-x}, & x \\geq 0, \\\\ 0, & x < 0. \\end{cases}$\n\n$\\nu_n(1)$为$n$重伯努利试验中$\\{X \\leq 1\\}$出现的次数，故$\\nu_n(1) \\sim B(n,F(1))$，其中$F(1)=1 - e^{-1}$，故\n\n$D\\left[ \\frac{\\nu_n(1)}{n} \\right] = \\frac{F(1)[1 - F(1)]}{n} = \\frac{(1 - e^{-1})e^{-1}}{n} = \\frac{e - 1}{ne^2}$，\n\n选A．",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11968/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设$f(x,y)$具有二阶连续偏导数，$z=xf\\left(2x,\\frac{y^2}{x}\\right)$，则$\\frac{\\partial^2 z}{\\partial x\\partial y}=$______．",
+          "options": [],
+          "answer": "$4yf_{12}'' - \\frac{2y^3}{x^2}f_{22}''$",
+          "explanation": "显然，在$z = xf\\left(2x, \\frac{y^2}{x}\\right)$中，$x$多次出现，又$\\frac{\\partial^2 z}{\\partial x\\partial y} = \\frac{\\partial^2 z}{\\partial y\\partial x}$，故可先计算\n\n$\\frac{\\partial z}{\\partial y} = xf_2' \\cdot \\frac{2y}{x} = 2yf_2''$，\n\n再计算\n\n$\\frac{\\partial^2 z}{\\partial y\\partial x} = 2y\\left[f_{21}'' \\cdot 2 + f_{22}'' \\cdot \\left(-\\frac{y^2}{x^2}\\right)\\right] = 4yf_{12}'' - \\frac{2y^3}{x^2}f_{22}''$．\n\n故$\\frac{\\partial^2 z}{\\partial x\\partial y} = 4yf_{12}'' - \\frac{2y^3}{x^2}f_{22}''$．\n\n【注】 若先计算$\\frac{\\partial z}{\\partial x}$，会很烦琐，你是这样做的吗？要注意观察研究对象．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11969/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）设平面曲线$z^2=2x$绕$x$轴旋转一周所得空间曲面$\\Sigma$与平面$x=1$，$x=2$围成的空间区域为$\\Omega$，则$I=\\iiint_\\Omega \\frac{1}{x^2+y^2+z^2}\\,\\text{d}v=$______．",
+          "options": [],
+          "answer": "$3\\pi\\ln \\frac{4}{3}$",
+          "explanation": "$\\Sigma$的方程为$y^2 + z^2 = 2x$，用定限截面法，如图所示，则\n\n$I = \\int_{1}^{2} dx \\int_{0}^{2\\pi} d\\theta \\int_{0}^{\\sqrt{2x}} \\frac{r}{r^2 + x^2} dr = 3\\pi\\ln \\frac{4}{3}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11970/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）设$L$为圆周$x^2+y^2=1$，则$\\oint_L (x^3+y^2)\\,\\text{d}s=$______．",
+          "options": [],
+          "answer": "$\\pi$",
+          "explanation": "由于$L$关于$y$轴对称，故$\\oint_L x^3 ds = 0$，又\n\n$\\oint_L y^2 ds = \\frac{1}{2}\\oint_L (x^2 + y^2) ds = \\frac{1}{2}l = \\frac{1}{2} \\cdot 2\\pi = \\pi$，\n\n其中$l$表示圆周$L$的周长，于是\n\n$\\oint_L (x^3 + y^2) ds = \\pi$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11971/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）设$I=\\oint_L \\left(2x-\\frac{x^3}{3}\\right)\\text{d}y+\\left(y+\\frac{1}{6}y^3\\right)\\text{d}x$，其中$L$为平面上的简单闭曲线，方向为逆时针，若$I$达到最大值，则$L$的表达式为______．",
+          "options": [],
+          "answer": "$2x^2 + y^2 = 2$",
+          "explanation": "由格林公式，得\n\n$I = \\iint_D \\left(2 - x^2 - 1 - \\frac{1}{2}y^2\\right) dxdy$\n\n$= \\iint_D \\left(1 - x^2 - \\frac{1}{2}y^2\\right) dxdy$，\n\n其中，$D$为曲线$L$围成的闭区域．\n\n当$f(x, y) = 1 - x^2 - \\frac{1}{2}y^2$在平面区域$D$上非负，在$D$之外小于零时，$I$达到最大值．故\n\n$D = \\{(x, y) | 2x^2 + y^2 \\leq 2\\}$，此时$L$的表达式为$2x^2 + y^2 = 2$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11972/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设向量组$\\alpha_1=\\begin{pmatrix}1\\\\0\\\\-1\\end{pmatrix}$，$\\alpha_2=\\begin{pmatrix}a\\\\1\\\\1\\end{pmatrix}$，$\\alpha_3=\\begin{pmatrix}2\\\\1\\\\1\\end{pmatrix}$不可由向量组$\\beta_1=\\begin{pmatrix}1\\\\1\\\\2\\end{pmatrix}$，$\\beta_2=\\begin{pmatrix}2\\\\3\\\\7\\end{pmatrix}$，$\\beta_3=\\begin{pmatrix}a\\\\0\\\\-a\\end{pmatrix}$线性表示，则$a$的取值范围为______．",
+          "options": [],
+          "answer": "$(-\\infty, 2) \\cup (2, +\\infty)$",
+          "explanation": "令\n\n$A = \\begin{pmatrix} 1 & a & 2 \\\\ 0 & 1 & 1 \\\\ -1 & 1 & 1 \\end{pmatrix}, B = \\begin{pmatrix} 1 & 2 & a \\\\ 1 & 3 & 0 \\\\ 2 & 7 & -a \\end{pmatrix}$，\n\n若$\\alpha_i$可由$\\beta_1, \\beta_2, \\beta_3$线性表示，$i = 1,2,3$，即$BX = A$有解，则$r(B) = r(B \\mid A)$．\n\n又$B = \\begin{pmatrix} 1 & 2 & a \\\\ 1 & 3 & 0 \\\\ 2 & 7 & -a \\end{pmatrix} \\to \\begin{pmatrix} 1 & 2 & a \\\\ 0 & 1 & -a \\\\ 0 & 0 & 0 \\end{pmatrix}$，$r(B) = 2$，于是$r(B \\mid A) = 2$．\n\n$\\begin{align*}\n\n(B \\mid A) &= \\begin{pmatrix} 1 & 2 & a & \\vline & 1 & a & 2 \\\\ 1 & 3 & 0 & \\vline & 0 & 1 & 1 \\\\ 2 & 7 & -a & \\vline & -1 & 1 & 1 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 2 & a & \\vline & 1 & a & 2 \\\\ 0 & 1 & -a & \\vline & -1 & 1 - a & -1 \\\\ 0 & 3 & -3a & \\vline & -3 & 1 - 2a & -3 \\end{pmatrix} \\\\\n\n&\\to \\begin{pmatrix} 1 & 2 & a & \\vline & 1 & a & 2 \\\\ 0 & 1 & -a & \\vline & -1 & 1 - a & -1 \\\\ 0 & 0 & 0 & \\vline & 0 & -2 + a & 0 \\end{pmatrix},\n\n\\end{align*}$\n\n故$a = 2$．由题意，则$a$的取值范围为$(-\\infty, 2) \\cup (2, +\\infty)$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11973/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）设随机变量$X$的概率密度为$f(x)=\\begin{cases}\\frac{x}{2},\\ 0<x<2,\\\\0,\\ \\text{其他},\\end{cases}$ $F_X(x)$是$X$的分布函数，若$Y=-\\ln[1-F_X(X)]$，则$P\\left\\{Y>\\frac{1}{2}\\right\\}=$______．",
+          "options": [],
+          "answer": "$e^{-\\frac{1}{2}}$",
+          "explanation": "$P\\{Y \\leq x\\} = P\\{-\\ln[1 - F_X(X)] \\leq x\\} = P\\{F_X(X) \\leq 1 - e^{-x}\\}$．\n\n又$F_X(X) \\sim U(0,1)$，故\n\n$P\\{Y \\leq x\\} = P\\{F_X(X) \\leq 1 - e^{-x}\\} = 1 - e^{-x}, x > 0$．\n\n于是\n\n$P\\left\\{Y > \\frac{1}{2}\\right\\} = 1 - P\\left\\{Y \\leq \\frac{1}{2}\\right\\} = e^{-\\frac{1}{2}}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11974/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "(本题满分10分)\n\n求\\( f(x)=\\int_{0}^{1}\\ln|t - x|dt(0\\leq x\\leq1) \\)的最大值.",
+          "options": [],
+          "answer": "",
+          "explanation": "$f(x)=\\int_{0}^{x}|\\ln(x-t)|dt + \\int_{x}^{1}|\\ln(t-x)|dt$\n\n$=-\\int_{0}^{x}\\ln(x-t)dt - \\int_{x}^{1}\\ln(t-x)dt$\n\n$\\stackrel{前项令x-t=u}{后项令t-x=v}\\int_{x}^{0}\\ln u du - \\int_{0}^{1-x}\\ln v dv,$\n\n则当$x\\in(0,1)$时，\n\n$f'(x)=-\\ln x + \\ln(1-x)\\stackrel{令}{=}0$，\n\n得$\\ln\\frac{1-x}{x}=0$，即$\\frac{1-x}{x}=1$，解得$x=\\frac{1}{2}$．\n\n又\n\n$f''(x)=-\\left(\\frac{1}{x}+\\frac{1}{1-x}\\right)<0(0<x<1)$，\n\n故$x=\\frac{1}{2}$是唯一的极大值点，\n\n$f\\left(\\frac{1}{2}\\right)=-\\int_{0}^{\\frac{1}{2}}\\ln u du - \\int_{0}^{\\frac{1}{2}}\\ln v dv$\n\n$=-2\\int_{0}^{\\frac{1}{2}}\\ln u du = -2u\\ln u\\big|_{0}^{\\frac{1}{2}} + 2\\int_{0}^{\\frac{1}{2}}du = 1 + \\ln 2$．\n\n而$f(0)=f(1)=1$，故$f_{\\max}(x)=1 + \\ln 2$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/11975/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "(本题满分12分)\n\n设\\( f(x,y) \\)满足\\( f'_{x}(x,y)=y(1 + x)e^{-y},f(1,y)=ye^{1 - y} \\).求\n\n(1)\\( f(x,y) \\)的表达式；\n\n(2)\\( f(x,y) \\)的极值.",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）\n\n$f_{x}'(x,y)=y(1+x)e^{x-y}=ye^{-y}(1+x)e^{x}$，\n\n将$y$看作常数，两端同时对$x$积分，有\n\n$f(x,y)=ye^{-y}\\int(1+x)e^{x}dx = ye^{-y}\\left[xe^{x} + C(y)\\right]$．\n\n又由于\n\n$f(1,y)=ye^{-y}\\left[e + C(y)\\right]=ye^{1-y}$，\n\n则$C(y)=0$，故$f(x,y)=xye^{x-y}$．\n\n（2）\n\n$f_{x}'(x,y)=y(1+x)e^{x-y}, f_{y}'(x,y)=x(1-y)e^{x-y}$\n\n令$\\begin{cases}f_{x}'(x,y)=0, \\\\ f_{y}'(x,y)=0, \\end{cases}$ 解得$\\begin{cases}x=0, \\\\ y=0 \\end{cases}$ 或$\\begin{cases}x=-1, \\\\ y=1 \\end{cases}$．\n\n$f_{xx}''(x,y)=y(2+x)e^{x-y}, f_{xy}''(x,y)=(1+x-y-xy)e^{x-y}, f_{yy}''(x,y)=x(y-2)e^{x-y}$．\n\n对于点$(0,0)$，$A_{1}=f_{xx}''(0,0)=0$，$B_{1}=f_{xy}''(0,0)=1$，$C_{1}=f_{yy}''(0,0)=0$，$A_{1}C_{1}-B_{1}^{2}<0$，故点$(0,0)$不是极值点．\n\n对于点$(-1,1)$，$A_{2}=f_{xx}''(-1,1)=e^{-2}>0$，$B_{2}=f_{xy}''(-1,1)=0$，$C_{2}=f_{yy}''(-1,1)=e^{-2}$，$A_{2}C_{2}-B_{2}^{2}>0$，故点$(-1,1)$是极小值点，极小值为$f(-1,1)=-e^{-2}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/11976/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "(本题满分12分)\n\n设\\( f(x) \\)在\\( (a,b) \\)内有定义，且任给\\( (a,b) \\)内的\\( x_{1}<x_{2}<x_{3} \\)，有\\( f(x_{2})\\leq\\lambda f(x_{1})+(1 - \\lambda)f(x_{3}) \\)，其中\\( \\lambda=\\frac{x_{3}-x_{2}}{x_{3}-x_{1}} \\)，证明\n\n(1)\\( \\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{1})}{x_{3}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{2})}{x_{3}-x_{2}} \\)；\n\n(2)\\( f(x) \\)在\\( (a,b) \\)内连续.",
+          "options": [],
+          "answer": "【证】（1）由题设知，$f(x_{2})\\leq\\frac{x_{3}-x_{2}}{x_{3}-x_{1}}f(x_{1}) + \\frac{x_{2}-x_{1}}{x_{3}-x_{1}}f(x_{3})(x_{1}<x_{2}<x_{3})$，即\n\n$(x_{3}-x_{1})f(x_{2})\\leq(x_{3}-x_{2})f(x_{1}) + (x_{2}-x_{1})f(x_{3})$．\n\n因\n\n$x_{3}-x_{2}=(x_{3}-x_{1})-(x_{2}-x_{1})$，\n\n故有\n\n$(x_{3}-x_{1})[f(x_{2})-f(x_{1})]\\leq(x_{2}-x_{1})[f(x_{3})-f(x_{1})]$，\n\n即\n\n$\\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{1})}{x_{3}-x_{1}}$．\n\n又因$x_{2}-x_{1}=(x_{3}-x_{1})-(x_{3}-x_{2})$，故有\n\n$(x_{3}-x_{1})[f(x_{2})-f(x_{3})]\\leq(x_{3}-x_{2})[f(x_{1})-f(x_{3})]$，\n\n即\n\n$\\frac{f(x_{3})-f(x_{1})}{x_{3}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{2})}{x_{3}-x_{2}}$．\n\n综上，\n\n$\\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{1})}{x_{3}-x_{1}}\\leq\\frac{f(x_{3})-f(x_{2})}{x_{3}-x_{2}}$．\n\n（2）任取$x_{0}\\in(a,b)$，存在$\\delta>0$，使$[x_{0}-\\delta,x_{0}+\\delta]$在$(a,b)$内．\n\n当$x_{0}-\\delta<x_{0}<x<x_{0}+\\delta$时，由（1）知\n\n$\\frac{f(x_{0})-f(x_{0}-\\delta)}{\\delta}\\leq\\frac{f(x)-f(x_{0})}{x-x_{0}}\\leq\\frac{f(x_{0}+\\delta)-f(x_{0})}{\\delta}$，\n\n即\n\n$\\frac{f(x_{0})-f(x_{0}-\\delta)}{\\delta}(x-x_{0})\\leq f(x)-f(x_{0})\\leq\\frac{f(x_{0}+\\delta)-f(x_{0})}{\\delta}(x-x_{0})$． ①\n\n同理，当$x_{0}-\\delta<x<x_{0}<x_{0}+\\delta$时，有\n\n$\\frac{f(x_{0})-f(x_{0}-\\delta)}{\\delta}(x_{0}-x)\\leq f(x_{0})-f(x)\\leq\\frac{f(x_{0}+\\delta)-f(x_{0})}{\\delta}(x_{0}-x)$． ②\n\n当$x\\rightarrow x_{0}^{+}$时，①式两端的极限均为零，当$x\\rightarrow x_{0}^{-}$时，②式两端的极限亦均为零．由夹逼准则，可知$\\lim\\limits_{x\\rightarrow x_{0}}[f(x_{0})-f(x)]=0$，即$\\lim\\limits_{x\\rightarrow x_{0}}f(x)=f(x_{0})$，故$f(x)$在$(a,b)$内连续．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/11977/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "(本题满分12分)\n\n设\\( \\Sigma \\)为曲面\\( x = y^{2}+z^{2}(x\\leq1) \\)的后侧，计算曲面积分\n\n\\( I=\\iint_{\\Sigma}(x - 1)\\mathrm{d}y\\mathrm{d}z+(y - 1)^{3}\\mathrm{d}z\\mathrm{d}x+(z - 1)^{3}\\mathrm{d}x\\mathrm{d}y \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "曲面$\\Sigma$在$yOz$坐标面的投影域为$D=\\{(y,z)|y^{2}+z^{2}\\leq1\\}$，因为$\\frac{\\partial x}{\\partial y}=2y$，$\\frac{\\partial x}{\\partial z}=2z$，\n\n所以\n\n$I=\\iint_{\\Sigma}(x-1)dydz + (y-1)^{3}dzdx + (z-1)^{3}dxdy$\n\n$=\\iint_{D}[1-y^{2}-z^{2} + 2y(y-1)^{3} + 2z(z-1)^{3}]dydz$\n\n$=\\iint_{D}(2y^{4} + 2z^{4} - 6y^{3} - 6z^{3} + 5y^{2} + 5z^{2} - 2y - 2z + 1)dydz$．\n\n因为区域$D$关于$y,z$坐标轴对称，所以$\\iint_{D}(-6y^{3} - 6z^{3} - 2y - 2z)dydz=0$，故\n\n$I=\\iint_{D}(2y^{4} + 2z^{4} + 5y^{2} + 5z^{2} + 1)dydz$\n\n$=\\int_{0}^{2\\pi}d\\theta\\int_{0}^{1}[2r^{4}(\\cos^{4}\\theta + \\sin^{4}\\theta) + 5r^{2} + 1]rdr$\n\n$=\\int_{0}^{2\\pi}\\left[\\frac{1}{3}(\\cos^{4}\\theta + \\sin^{4}\\theta) + \\frac{7}{4}\\right]d\\theta$\n\n$=\\frac{7}{2}\\pi + \\frac{8}{3}\\int_{0}^{\\frac{\\pi}{2}}\\sin^{4}\\theta d\\theta = 4\\pi$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/11978/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "(本题满分12分)\n\n设\\( A=\\begin{pmatrix} 1&1&0 \\\\ 0&1&1 \\\\ 1&0&1 \\end{pmatrix} \\)，\\( A^T A = B^2 \\)，其中\\( B \\)为正定矩阵.\n\n(1)求\\( B \\)；\n\n(2)证明存在正交矩阵\\( C \\)，使得\\( A = CB \\)，并求出\\( C \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "(1) \\( A^T A = \\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix} \\)，由\n\n\\[\n\n|\\lambda E - A^T A| = \\begin{vmatrix} \\lambda - 2 & -1 & -1 \\\\ -1 & \\lambda - 2 & -1 \\\\ -1 & -1 & \\lambda - 2 \\end{vmatrix} = (\\lambda - 4)(\\lambda - 1)^2 = 0,\n\n\\]\n\n得 \\( \\lambda_1 = 4, \\lambda_2 = \\lambda_3 = 1 \\).\n\n由\n\n\\[\n\n4E - A^T A = \\begin{pmatrix} 2 & -1 & -1 \\\\ -1 & 2 & -1 \\\\ -1 & -1 & 2 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 0 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 0 \\end{pmatrix},\n\n\\]\n\n得 \\( \\lambda_1 = 4 \\) 对应的特征向量为 \\( \\xi_1 = (1,1,1)^T \\)，单位化得 \\( \\eta_1 = \\left( \\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}} \\right)^T \\).\n\n由\n\n\\[\n\nE - A^T A = \\begin{pmatrix} -1 & -1 & -1 \\\\ -1 & -1 & -1 \\\\ -1 & -1 & -1 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix},\n\n\\]\n\n得 \\( \\lambda_2 = \\lambda_3 = 1 \\) 对应的线性无关的特征向量为 \\( \\xi_2 = (-1,1,0)^T, \\xi_3 = (-1,0,1)^T \\)，将其正交化，得\n\n\\[\n\n\\beta_2 = \\xi_2, \\beta_3 = \\xi_3 - \\frac{[\\xi_3, \\beta_2]}{[\\beta_2, \\beta_2]} \\beta_2 = \\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix} - \\frac{1}{2} \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix} = \\frac{1}{2} \\begin{pmatrix} -1 \\\\ -1 \\\\ 2 \\end{pmatrix},\n\n\\]\n\n再将 \\( \\beta_2, \\beta_3 \\) 单位化，得\n\n\\[\n\n\\eta_2 = \\left( -\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0 \\right)^T, \\eta_3 = \\left( -\\frac{1}{\\sqrt{6}}, -\\frac{1}{\\sqrt{6}}, \\frac{2}{\\sqrt{6}} \\right)^T.\n\n\\]\n\n令\n\n\\[\n\nQ = (\\eta_1, \\eta_2, \\eta_3) = \\begin{pmatrix} \\frac{1}{\\sqrt{3}} & -\\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & \\frac{1}{\\sqrt{2}} & -\\frac{1}{\\sqrt{6}} \\\\ \\frac{1}{\\sqrt{3}} & 0 & \\frac{2}{\\sqrt{6}} \\end{pmatrix},\n\n\\]\n\n则\n\n\\[\n\nQ^T A^T A Q = \\Lambda = \\begin{pmatrix} 4 & & \\\\ & 1 & \\\\ & & 1 \\end{pmatrix},\n\n\\]\n\n于是\n\n\\[\n\nA^T A = Q \\Lambda Q^T = Q \\begin{pmatrix} 2 & & \\\\ & 1 & \\\\ & & 1 \\end{pmatrix}^2 Q^T = Q \\begin{pmatrix} 2 & & \\\\ & 1 & \\\\ & & 1 \\end{pmatrix} Q^T Q \\begin{pmatrix} 2 & & \\\\ & 1 & \\\\ & & 1 \\end{pmatrix} Q^T,\n\n\\]\n\n则\n\n\\[\n\nB = Q \\begin{pmatrix} 2 & & \\\\ & 1 & \\\\ & & 1 \\end{pmatrix} Q^T = \\frac{1}{3} \\begin{pmatrix} 4 & 1 & 1 \\\\ 1 & 4 & 1 \\\\ 1 & 1 & 4 \\end{pmatrix}.\n\n\\]\n\n(2) 因为 \\( B \\) 为正定矩阵，所以 \\( B \\) 可逆，由 \\( A^T A = B^2 \\)，有 \\( B^{-1} A^T A B^{-1} = E \\)，即 \\( (A B^{-1})^T A B^{-1} = E \\)，于是 \\( A B^{-1} \\) 为正交矩阵，且 \\( A = (A B^{-1}) B \\)，则有\n\n\\[\n\nC = A B^{-1} = \\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix} \\frac{1}{6} \\begin{pmatrix} 5 & -1 & -1 \\\\ -1 & 5 & -1 \\\\ -1 & -1 & 5 \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 2 & 2 & -1 \\\\ -1 & 2 & 2 \\\\ 2 & -1 & 2 \\end{pmatrix}.\n\n\\]\n\n【注】 本题命题想法为\n\n\\[\n\nA = C B\n\n\\]\n\n可逆实矩阵\\(\\stackrel{可分解为}{=\\!=\\!=\\!=\\!=\\!=\\!}\\)正交矩阵×正定矩阵",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/11979/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set2-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "(本题满分12分)\n\n设\\( X \\)服从参数为\\( \\frac{2}{\\theta} \\)的指数分布，在\\( X = x(x > 0) \\)的条件下，\\( Y \\)服从的条件概率密度为\n\n\\( f_{Y|X}(y|x)= \\begin{cases} \\frac{1}{\\theta} \\mathrm{e}^{-\\frac{y - x}{\\theta}}, & 0 < x < y, \\\\ 0, & 其他, \\end{cases} \\)\n\n其中\\( \\theta \\)为大于0的参数，\\( (X_1,Y_1),(X_2,Y_2),\\cdots,(X_n,Y_n) \\)是来自总体\\( (X,Y) \\)的简单随机样本.\n\n(1)求\\( \\theta \\)的最大似然估计量\\( \\hat{\\theta} \\)；\n\n(2)计算\\( D(\\hat{\\theta}) \\).",
+          "options": [],
+          "answer": "",
+          "explanation": "(1) 由题可知，\n\n\\[\n\nf_X(x) = \\begin{cases} \\frac{2}{\\theta} \\mathrm{e}^{-\\frac{2x}{\\theta}}, & x > 0, \\\\ 0, & 其他, \\end{cases}\n\n\\]\n\n因此，当 \\( 0 < x < y \\) 时，\\( f(x,y) = f_X(x) f_{Y|X}(y|x) = \\frac{2}{\\theta^2} \\mathrm{e}^{-\\frac{y + x}{\\theta}} \\).\n\n故\n\n\\[\n\nf(x,y) = \\begin{cases} \\frac{2}{\\theta^2} \\mathrm{e}^{-\\frac{y + x}{\\theta}}, & 0 < x < y, \\\\ 0, & 其他. \\end{cases}\n\n\\]\n\n设 \\( (X_1,Y_1),(X_2,Y_2),\\cdots,(X_n,Y_n) \\) 的观测值分别为 \\( (x_1,y_1),(x_2,y_2),\\cdots,(x_n,y_n) \\)，则似然函数为\n\n\\[\n\nL(\\theta) = \\begin{cases} \\prod_{i=1}^n f(x_i,y_i) = \\frac{2^n}{\\theta^{2n}} \\mathrm{e}^{-\\frac{1}{\\theta} \\left( \\sum_{i=1}^n x_i + \\sum_{i=1}^n y_i \\right)}, & 0 < x_i < y_i, i=1,2,\\cdots, \\\\ 0, & 其他. \\end{cases}\n\n\\]\n\n当 \\( 0 < x_i < y_i \\) 时，\n\n\\[\n\n\\ln L(\\theta) = n \\ln 2 - 2n \\ln \\theta - \\frac{1}{\\theta} \\left( \\sum_{i=1}^n x_i + \\sum_{i=1}^n y_i \\right),\n\n\\]\n\n\\[\n\n\\frac{\\mathrm{d}[\\ln L(\\theta)]}{\\mathrm{d}\\theta} = -\\frac{2n}{\\theta} + \\frac{1}{\\theta^2} \\left( \\sum_{i=1}^n x_i + \\sum_{i=1}^n y_i \\right).\n\n\\]\n\n令\n\n\\[\n\n\\frac{\\mathrm{d}[\\ln L(\\theta)]}{\\mathrm{d}\\theta} = 0,\n\n\\]\n\n得\n\n\\[\n\n\\theta = \\frac{1}{2n} \\left( \\sum_{i=1}^n x_i + \\sum_{i=1}^n y_i \\right),\n\n\\]\n\n即 \\( \\theta \\) 的最大似然估计量 \\( \\hat{\\theta} = \\frac{1}{2n} \\left( \\sum_{i=1}^n X_i + \\sum_{i=1}^n Y_i \\right) \\).\n\n(2) 由于 \\( E(X) = \\frac{\\theta}{2}, D(X) = \\frac{\\theta^2}{4} \\)，又\n\n\\[\n\nf_Y(y) = \\begin{cases} \\int_0^y \\frac{2}{\\theta^2} \\mathrm{e}^{-\\frac{y + x}{\\theta}} \\mathrm{d}x, & y > 0, \\\\ 0, & y \\leq 0 \\end{cases} = \\begin{cases} \\frac{2}{\\theta} \\left( \\mathrm{e}^{-\\frac{y}{\\theta}} - \\mathrm{e}^{-\\frac{2y}{\\theta}} \\right), & y > 0, \\\\ 0, & y \\leq 0. \\end{cases}\n\n\\]\n\n\\[\n\nE(Y) = \\int_{-\\infty}^{+\\infty} y f_Y(y) \\mathrm{d}y = \\frac{3}{2} \\theta,\n\n\\]\n\n\\[\n\nE(Y^2) = \\int_{-\\infty}^{+\\infty} y^2 f_Y(y) \\mathrm{d}y = \\frac{2}{\\theta} \\left( 2\\theta^3 - \\frac{\\theta^3}{4} \\right) = \\frac{7}{2} \\theta^2,\n\n\\]\n\n\\[\n\nD(Y) = E(Y^2) - [E(Y)]^2 = \\frac{7}{2} \\theta^2 - \\frac{9}{4} \\theta^2 = \\frac{5}{4} \\theta^2,\n\n\\]\n\n\\[\n\nE(XY) = \\iint_{\\mathbb{R}^2} xy f(x,y) \\mathrm{d}x \\mathrm{d}y = \\frac{2}{\\theta^2} \\int_0^{+\\infty} x \\mathrm{e}^{-\\frac{x}{\\theta}} \\mathrm{d}x \\int_x^{+\\infty} y \\mathrm{e}^{-\\frac{y}{\\theta}} \\mathrm{d}y = \\theta^2,\n\n\\]\n\n\\[\n\n\\mathrm{Cov}(X,Y) = E(XY) - E(X)E(Y) = \\frac{1}{4} \\theta^2,\n\n\\]\n\n故\n\n\\[\n\nD(\\hat{\\theta}) = D\\left[ \\frac{1}{2}(\\bar{X} + \\bar{Y}) \\right] = \\frac{1}{4} [D(\\bar{X}) + D(\\bar{Y}) + 2\\mathrm{Cov}(\\bar{X},\\bar{Y})]\n\n\\]\n\n\\[\n\n= \\frac{1}{4} \\left[ \\frac{\\theta^2}{4n} + \\frac{5\\theta^2}{4n} + 2 \\cdot \\frac{1}{n^2} \\cdot n \\mathrm{Cov}(X_1,Y_1) \\right] = \\frac{1}{4} \\left( \\frac{3\\theta^2}{2n} + \\frac{\\theta^2}{2n} \\right) = \\frac{\\theta^2}{2n}.\n\n\\]",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/11980/"
+        }
+      ]
+    }
+  ]
+}

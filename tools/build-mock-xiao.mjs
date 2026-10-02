@@ -120,62 +120,76 @@ function optionsFromPara(p, optMap) {
   return out;
 }
 
-const TYPE_BY_SECTION = [  [/单项选择题|单选题|选择题/, "single"],
+const TYPE_BY_SECTION = [
+  [/单项选择题|单选题|选择题/, "single"],
   [/多项选择题|多选题|多选题型/, "multiple"],
   [/填空题/, "blank"],
   [/材料分析题|分析题|解答题|计算题|论述题|综合题/, "essay"],
 ];
 
+/**
+ * 该来源站有多套页面模板（不同年份/不同上传者），分节标题的写法并不统一：
+ *   <p><strong>一、单项选择题：…</strong></p>
+ *   <p>二、多项选择题：…</p>            （无 strong）
+ *   （数学卷）根本没有分节标题
+ * 因此题型不能只靠标题判定，改用「内容驱动」：有选项 → 选择题（按答案字母数分单/多选）；
+ * 无选项 → 看题面标签（填空题/本题满分…）→ blank / essay。
+ */
+/**
+ * 考研卷的题型分布是固定的考试结构（不是内容判断）：
+ *   政治：1–16 单选（1 分）／17–33 多选（2 分）／34–38 材料分析（10 分）
+ *   数学一：1–10 选择／11–16 填空／17–22 解答
+ * 来源站的分节标题时有时无，因此优先按题号定位题型，再用抓到的内容做交叉校验。
+ */
+function templateType(subject, no, maxNo) {
+  if (subject === "politics" && maxNo >= 33) {
+    if (no <= 16) return "single";
+    if (no <= 33) return "multiple";
+    return "essay";
+  }
+  if (subject === "math1" && maxNo >= 20) {
+    if (no <= 10) return "single";
+    if (no <= 16) return "blank";
+    return "essay";
+  }
+  return null;
+}
+
+function inferType({ optCount, answer, stem, headerType }) {
+  if (optCount >= 2) return answer && answer.length > 1 ? "multiple" : "single";
+  if (optCount === 1) return answer && answer.length > 1 ? "multiple" : "single";
+  if (/（填空题）|\(填空题\)|填空题/.test(stem)) return "blank";
+  if (headerType === "blank") return "blank";
+  if (headerType === "essay") return "essay";
+  return "essay";
+}
+
 function parsePaper(html, meta) {
-  // 去掉 HTML 注释（页面把旧版答案解析整段注释掉了，会干扰)。
-  const h = html.replace(/<!--[\s\S]*?-->/g, "");
+  // 去掉 HTML 注释（页面把旧版答案解析整段注释掉了，会干扰）与零宽字符（来源页里大量混入 U+200B）
+  const h = html
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/[\u200b-\u200f\u2060\ufeff\u00ad]/g, "");
   const titleRaw = (html.match(/<title>\s*([\s\S]*?)\s*<\/title>/) || [])[1] || "";
   const pageTitle = decodeEnt(titleRaw.replace(/\s+/g, " ").trim()).replace(/__N诺考研$/, "");
 
   const marks = [...h.matchAll(/id="question(\d+)"/g)].map((m) => ({ no: Number(m[1]), at: m.index }));
+  const maxNo = marks.reduce((a, x) => Math.max(a, x.no), 0);
   const dropped = [];
-  const sections = [];
-  const secIndex = new Map();
-  let curSecKey = null;
-  let curType = "single";
+  const parsed = [];
   let curSecName = "";
+  let curHdrType = "";
 
   for (let i = 0; i < marks.length; i++) {
-    const start = marks[i].at;
-    const end = i + 1 < marks.length ? marks[i + 1].at : h.length;
-    const block = h.slice(start, end);
+    const block = h.slice(marks[i].at, i + 1 < marks.length ? marks[i + 1].at : h.length);
     const no = marks[i].no;
 
-    // ---- 分节标题（只在该节第一题里出现）
-    const secM = block.match(/<p>\s*<strong>\s*([一二三四五六七八]、[^<]{0,120}?)\s*<\/strong>\s*<\/p>/);
+    // ---- 分节标题（一般只在该节第一题里出现；允许无 <strong> 的写法）
+    const secM = block.match(/<p[^>]*>\s*(?:<strong>)?\s*([一二三四五六七八]、[^<]{0,140}?)\s*(?:<\/strong>)?\s*<\/p>/);
     if (secM) {
-      const name = text(secM[1]);
-      curSecName = name;
-      curSecKey = name.replace(/[：:].*$/, "");
-      let t = "single";
-      for (const [re, ty] of TYPE_BY_SECTION) if (re.test(name)) { t = ty; break; }
-      curType = t;
-      if (!secIndex.has(curSecKey)) {
-        secIndex.set(curSecKey, sections.length);
-        sections.push({ id: secIdOf(name, t), name: sectionLabel(name), questions: [], _types: new Set(), _sawTypes: [] });
-      }
+      curSecName = text(secM[1]);
+      curHdrType = "";
+      for (const [re, ty] of TYPE_BY_SECTION) if (re.test(curSecName)) { curHdrType = ty; break; }
     }
-    if (curSecKey === null) {
-      // 首个分节标题之前的内容（页面顶部说明）跳过，但若第一题前没有任何分节标题，则兜底建节
-      curSecKey = "默认";
-      if (!secIndex.has("默认")) {
-        secIndex.set("默认", 0);
-        sections.push({ id: "default", name: "题目", questions: [], _types: new Set(), _sawTypes: [] });
-      }
-      curSecName = "默认";
-      curType = "single";
-    }
-    const sec = sections[secIndex.get(curSecKey)];
-
-    // ---- 题号下方紧跟的类型标签（可能有多个 span.tag）
-    const tagTypes = [...block.matchAll(/<span[^>]*>\s*(单选题|多选题|多项选择题|综合题|填空题|解答题|计算题|判断题)\s*<\/span>/g)].map((m) => m[1]);
-    let type = curType;
-    if (type === "single" && tagTypes.some((t) => /多项选择题|多选题/.test(t))) type = "multiple";
 
     // ---- 题目链接里的 article id（可溯源到单题页）
     const artM = block.match(/\/Practice\/article\/(\d+)\//);
@@ -184,117 +198,130 @@ function parsePaper(html, meta) {
     // ---- subject-options 里的题干 + 选项
     let stemHtml = "";
     const soIdx = block.indexOf('class="subject-options"');
-    if (soIdx >= 0) {
-      const divStart = block.lastIndexOf("<div", soIdx);
-      stemHtml = innerDiv(block, divStart).body;
-    }
-
-    // ---- 正确答案：三处来源，按可靠性排序
-    let answer = "";
-    let answerFrom = "";
-    const caM = block.match(/class="correct-answer"[^>]*>\s*([A-D]{1,4})\s*</);
-    if (caM) { answer = caM[1]; answerFrom = "correct-answer"; }
-
-    // 折叠区 id=show_answerN（注释已剥离）
-    let explainHtml = "";
-    const saIdx = block.indexOf(`id="show_answer${no}"`);
-    if (saIdx >= 0) {
-      const divStart = block.lastIndexOf("<div", saIdx);
-      explainHtml = innerDiv(block, divStart).body;
-    }
-    const explainText = text(explainHtml);
-
-    const isChoice = type === "single" || type === "multiple";
-    if (!answer && isChoice) {
-      const m1 = explainText.match(/答案\s*[:：]?\s*([A-D]{1,4})\b/);
-      const m2 = explainText.match(/标准答案为\s*([A-D]{1,4})/);
-      const pick = m2 || m1;
-      if (pick) { answer = pick[1]; answerFrom = pick === m2 ? "答案解析内标准答案为" : "答案解析"; }
-    }
-    if (!answer && isChoice) {
-      const m = block.match(/标准答案为\s*([A-D]{1,4})/);
-      if (m) { answer = m[1]; answerFrom = "评分理由"; }
-    }
-
-    // ---- 题干 / 选项
-    const paras = [...stemHtml.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter((s) => s.length);
+    if (soIdx >= 0) stemHtml = innerDiv(block, block.lastIndexOf("<div", soIdx)).body;
+    const parasRaw = [...stemHtml.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].map((m) => text(m[1])).filter((s) => s.length);
+    // 有些页面（如 2025 张宇 8 套卷）题干是直接写在 div 里的裸文本，没有 <p>
+    const paras = parasRaw.length ? parasRaw : (text(stemHtml) ? [text(stemHtml)] : []);
     const secHeaderText = secM ? text(secM[1]) : null;
     const bodyParas = paras.filter((p) => p !== secHeaderText);
 
-    const wantOptions = curType === "single" || curType === "multiple";
     const optMap = new Map();
     const stemParas = [];
     for (const p of bodyParas) {
-      if (wantOptions) {
-        const got = optionsFromPara(p, optMap);
-        if (got) {
-          for (const [k, v] of got) if (!optMap.has(k)) optMap.set(k, v);
-          continue;
-        }
+      const got = optionsFromPara(p, optMap);
+      if (got) {
+        for (const [k, v] of got) if (!optMap.has(k)) optMap.set(k, v);
+        continue;
       }
       stemParas.push(p);
     }
 
-    // ---- 材料分析题：把材料与设问拆开
-    let stem = "";
-    let material, materialTitle;
+    // ---- 折叠区 id=show_answerN（注释已剥离）
+    let explainHtml = "";
+    const saIdx = block.indexOf(`id="show_answer${no}"`);
+    if (saIdx >= 0) explainHtml = innerDiv(block, block.lastIndexOf("<div", saIdx)).body;
+    const explainText = text(explainHtml);
+
+    // ---- 题目 id 顺序：题干先拼出来，才能据「（填空题）」「本题满分 X 分」判题型
+    let stem = "", material, materialTitle;
+    const tmpStem = stemParas.join("\n\n");
+    const tpl = templateType(meta.subject, no, maxNo);
+    let type = tpl || inferType({ optCount: optMap.size, answer: "", stem: tmpStem, headerType: curHdrType });
+    const optionIssue = optMap.size > 0 && optMap.size < 4 ? `来源页只抓到 ${optMap.size} 个选项（疑似图题/选项为图片）` : "";
+
     if (type === "essay") {
       const qStart = stemParas.findIndex((p) => /^[（(]\s*\d\s*[）)]/.test(p));
       if (qStart > 0) {
         material = stemParas.slice(0, qStart).join("\n\n");
         materialTitle = "材料";
         stem = stemParas.slice(qStart).join("\n\n");
-      } else {
-        // 有些卷子设问不带序号：整段都进 stem
-        stem = stemParas.join("\n\n");
-      }
-      // 参考答案
-      if (!answer && explainText) answer = cleanRefAnswer(explainText);
-    } else if (type === "blank") {
-      stem = stemParas.join("\n\n").trim();
-      if (!answer && explainText) answer = cleanRefAnswer(explainText);
+      } else stem = tmpStem;
     } else {
-      stem = stemParas.join("\n\n").replace(/^[（(]\s*(单项|多项)选择题\s*[）)]\s*/, "").trim();
+      stem = tmpStem.replace(/^[（(]\s*(单项|多项)选择题\s*[）)]\s*/, "").trim();
     }
     if (secHeaderText && stem.startsWith(secHeaderText)) stem = stem.slice(secHeaderText.length).trim();
 
-    // ---- 解析（去掉开头的「答案X」重复）
-    let explanation = "";
-    if (type !== "essay" && explainText) {
-      explanation = explainText.replace(/^答案\s*[:：]?\s*[A-D]{1,4}\s*/, "").replace(/^简析\s*/, "简析：").trim();
-    } else if (type === "essay" && explainText) {
-      explanation = "";
+    // ---- 答案：只取来源页明确写出的内容，绝不推断
+    let answer = "";
+    let answerFrom = "";
+    let refExplanation = "";
+    let answerNote = "";
+    const isChoiceNow = type === "single" || type === "multiple";
+
+    if (isChoiceNow) {
+      const caM = block.match(/class="correct-answer"[^>]*>\s*([A-D]{1,4})\s*</);
+      if (caM) { answer = caM[1]; answerFrom = "correct-answer"; }
+      if (!answer) {
+        // 兼容「答案A」「【答案】C」「[答案] D」「标准答案为AB」「正确答案是B」
+        const pats = [
+          [/[【\[（(]?\s*标准答案为\s*[】\]）)]?\s*[:：]?\s*([A-D]{1,4})(?![A-Za-z])/, "标准答案为"],
+          [/[【\[（(]?\s*正确答案\s*[】\]）)]?\s*[是为:：]?\s*([A-D]{1,4})(?![A-Za-z])/, "正确答案"],
+          [/[【\[（(]?\s*答案\s*[】\]）)]?\s*[:：]?\s*([A-D]{1,4})(?![A-Za-z])/, "答案解析"],
+        ];
+        for (const [re, from] of pats) {
+          const m = explainText.match(re) || block.match(re);
+          if (m) { answer = m[1]; answerFrom = from; break; }
+        }
+      }
+      // 「A、B、C正确，D错误」这类简析里的明确表述（必须列出 ≥2 个字母才采用）
+      if (!answer) {
+        const m = explainText.match(/((?:[A-D][、,，]\s*){1,3}[A-D])\s*(?:均|都)?(?:正确|对)\b?/);
+        if (m) {
+          const letters = [...new Set(m[1].match(/[A-D]/g))].sort().join("");
+          if (letters.length >= 2) { answer = letters; answerFrom = "简析中「…正确」表述"; }
+        }
+      }
+    } else if (explainText) {
+      const sp = splitRefAnswer(explainText);
+      answer = sp.answer;
+      if (answer) answerFrom = "答案解析（参考答案）";
+      if (sp.explanation) refExplanation = sp.explanation;
+    }
+
+    // ---- 与题号模板交叉校验：多选只拿到 1 个字母 → 视为来源未给全，答案留空并标注
+    if (type === "multiple" && answer && answer.length < 2) {
+      answerNote = `来源页只给出 1 个字母（${answer}），与多选题型不符，按「不猜答案」纪律未采用。`;
+      answer = "";
+      answerFrom = "";
+    }
+    if (type === "single" && answer.length > 1) {
+      answerNote = `来源页给出的答案为 ${answer}（多于 1 个字母），与单选题型不符，已按多选入库。`;
+      type = "multiple";
+    }
+
+    let explanation = refExplanation;
+    if (isChoiceNow && explainText) {
+      explanation = explainText.replace(/^[【\[（(]?\s*答案\s*[】\]）)]?\s*[:：]?\s*[A-D]{1,4}\s*/, "").replace(/^简析\s*/, "简析：").trim();
     }
 
     // ---- 组装题目
     const opts = ["A", "B", "C", "D"].map((k) => ({ key: k, text: optMap.get(k) || "" })).filter((o) => o.text.length);
-    const sectionType = curType;
-    let finalType = type;
-    // 分节说单选但抓到 4 个以上答案字母 → 按多选处理（来源侧题型标注错误）
-    if (sectionType === "single" && answer.length > 1) finalType = "multiple";
-
     const q = {
       id: `${meta.paperId}-q${no}`,
       no,
-      type: finalType,
+      type,
       stem,
-      options: finalType === "single" || finalType === "multiple" ? opts : [],
+      options: isChoiceNow ? opts : [],
       answer,
       explanation,
-      score: finalType === "single" ? 1 : finalType === "multiple" ? 2 : finalType === "essay" ? 5 : 0,
+      score: type === "single" ? 1 : type === "multiple" ? 2 : 0,
       topics: [],
       images: [],
       _articleId: articleId,
       _answerFrom: answerFrom,
+      _answerNote: answerNote,
+      _optionIssue: optionIssue,
+      _hdr: curSecName,
     };
     if (material) { q.material = material; q.materialTitle = materialTitle; }
 
-    // 单选题必须 4 选项；不合格丢弃
-    if (finalType === "single" && opts.length !== 4) {
+    // 选择题必须凑齐选项才入库（validate-mock 要求 single 恰好 4 个选项）；
+    // 缺选项的按纪律丢弃并记入报告，而不是补造选项。
+    if (isChoiceNow && type === "single" && opts.length !== 4) {
       dropped.push({ ref: `${meta.paperId}#${no}`, reason: `选项数 ${opts.length} != 4`, detail: stem.slice(0, 60) });
       continue;
     }
-    if (finalType === "multiple" && opts.length < 2) {
+    if (isChoiceNow && type === "multiple" && opts.length < 2) {
       dropped.push({ ref: `${meta.paperId}#${no}`, reason: `多选题选项数 ${opts.length} < 2`, detail: stem.slice(0, 60) });
       continue;
     }
@@ -302,40 +329,65 @@ function parsePaper(html, meta) {
       dropped.push({ ref: `${meta.paperId}#${no}`, reason: "题干为空", detail: "" });
       continue;
     }
-    if (finalType === "multiple" && answer.length === 1) {
-      // 多选只给一个字母 → 不猜，按来源照存但标记（验证脚本要求 multiple 至少 2 字母）
-      dropped.push({ ref: `${meta.paperId}#${no}`, reason: `多选答案仅 1 个字母（来源 ${answerFrom}）`, detail: stem.slice(0, 50) });
-      continue;
-    }
-    if (answer && isChoice && !/^[A-D]+$/.test(answer)) {
+    if (isChoiceNow && answer && !/^[A-D]+$/.test(answer)) {
       dropped.push({ ref: `${meta.paperId}#${no}`, reason: `答案格式非法 ${answer.slice(0, 20)}`, detail: stem.slice(0, 50) });
       continue;
     }
-    if (answer && isChoice && new Set(answer.split("")).size !== answer.length)
-      answer = [...new Set(answer.split(""))].sort().join("");
-    if (answer && isChoice) answer = [...answer].sort().join("");
-
-    sec.questions.push(q);
+    if (isChoiceNow && answer) {
+      if (new Set(answer.split("")).size !== answer.length) answer = [...new Set(answer.split(""))].join("");
+      answer = [...answer].sort().join("");
+      q.answer = answer;
+    }
+    parsed.push(q);
   }
 
-  // 清理临时字段
-  for (const s of sections) {
-    s.questions.sort((a, b) => a.no - b.no);
-    for (const q of s.questions) {
+  // ---- 按题型归并成分节（来源站模板不一致，分节标题不可靠；题型已由内容判定）
+  const ORDER = ["single", "multiple", "blank", "essay"];
+  const CN = "一二三四五六七八九十";
+  const sections = [];
+  let seq = 0;
+  for (const t of ORDER) {
+    const qs = parsed.filter((q) => q.type === t).sort((a, b) => a.no - b.no);
+    if (!qs.length) continue;
+    const hdr = qs.map((q) => q._hdr).find((x) => x && LABEL_MATCH[t] && LABEL_MATCH[t].test(x)) || "";
+    const base = hdr ? sectionLabel(hdr) : DEFAULT_LABEL[t];
+    const name = `${CN[seq] || seq + 1}、${base.replace(/^[一二三四五六七八九十]、\s*/, "")}`;
+    seq++;
+    for (const q of qs) {
+      delete q._hdr;
       if (q._articleId) q.sourceUrl = `https://noobdream.com/Practice/article/${q._articleId}/`;
       delete q._articleId;
       if (!q._answerFrom) delete q._answerFrom;
+      if (!q._answerNote) delete q._answerNote;
+      if (!q._optionIssue) delete q._optionIssue;
     }
+    sections.push({ id: t, name, questions: qs });
   }
-  const used = sections.filter((s) => s.questions.length);
-  return { pageTitle, sections: used, dropped };
+  return { pageTitle, sections, dropped };
 }
 
+const LABEL_MATCH = {
+  single: /单项|单选|选择题/,
+  multiple: /多项|多选/,
+  blank: /填空/,
+  essay: /材料分析|分析|解答|计算|论述|综合/,
+};
+const DEFAULT_LABEL = { single: "单项选择题", multiple: "多项选择题", blank: "填空题", essay: "材料分析题" };
+
 function cleanRefAnswer(t) {
-  let s = t.replace(/^参考答案\s*/, "").trim();
-  // 去掉末尾的「题目总分：X分」之类评分尾巴
-  s = s.replace(/\n?题目总分[:：][^\n]*$/g, "").trim();
+  let s = String(t)
+    .replace(/^[\s\u3000]*[【\[（(]?\s*(参考答案|答案)\s*[】\]）)]?\s*[:：]?\s*/, "")
+    .replace(/\n?题目总分[:：][^\n]*$/g, "")
+    .trim();
   return s;
+}
+
+/** 把「【答案】…【分析】…」拆成 answer / explanation */
+function splitRefAnswer(t) {
+  const s = String(t).replace(/^[\s\u3000]*[【\[（(]?\s*(参考答案|答案)\s*[】\]）)]?\s*[:：]?\s*/, "").trim();
+  const m = s.match(/^\s*([\s\S]*?)\s*[【\[]\s*(分析|解析|详解|解)\s*[】\]]\s*([\s\S]*)$/);
+  if (m) return { answer: m[1].trim(), explanation: (m[3] || "").trim() };
+  return { answer: s, explanation: "" };
 }
 function secIdOf(name, type) {
   if (/单项/.test(name)) return "single";
@@ -358,25 +410,68 @@ if (!fs.existsSync(sourcesFile)) {
 }
 const sources = JSON.parse(fs.readFileSync(sourcesFile, "utf8"));
 
-const report = { at: new Date().toISOString(), papers: [], dropped: [], skipped: [] };
+const report = { at: new Date().toISOString(), papers: [], dropped: [], skipped: [], candidates: [] };
 const questionIds = new Set();
+const built = [];
+
+const UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+/** 按需补齐缓存（同一套卷的多个上传里挑最好的那个） */
+async function ensureRaw(examId) {
+  const out = path.join(RAW, `${examId}.html`);
+  if (fs.existsSync(out) && fs.statSync(out).size > 1000) return fs.readFileSync(out, "utf8");
+  fs.mkdirSync(RAW, { recursive: true });
+  for (let t = 0; t < 2; t++) {
+    try {
+      const r = await fetch(`https://noobdream.com/Practice/exam_solution/${examId}/`, {
+        headers: { "User-Agent": UA, "Accept-Language": "zh-CN,zh;q=0.9", Referer: "https://noobdream.com/" },
+        signal: AbortSignal.timeout(40000),
+        redirect: "follow",
+      });
+      if (r.status !== 200) {
+        await r.arrayBuffer().catch(() => {});
+        return null;
+      }
+      const buf = Buffer.from(await r.arrayBuffer());
+      fs.writeFileSync(out, buf);
+      await new Promise((res) => setTimeout(res, 300));
+      return buf.toString("utf8");
+    } catch {
+      await new Promise((res) => setTimeout(res, 1200));
+    }
+  }
+  return null;
+}
 
 for (const sp of sources.papers) {
-  const rawFile = path.join(RAW, `${sp.examId}.html`);
-  if (!fs.existsSync(rawFile)) {
-    report.skipped.push({ id: sp.paperId, reason: `缺少缓存 ${path.relative(ROOT, rawFile)}` });
+  // 同一套卷可能有多个上传页面（完成度不同）：逐个试，取「实解题数 + 选择题数」最高者
+  const cands = sp.examIds && sp.examIds.length ? sp.examIds : [sp.examId];
+  let best = null;
+  for (const cid of cands) {
+    const html = await ensureRaw(cid);
+    if (!html) continue;
+    const meta = { paperId: sp.paperId };
+    const parsed = parsePaper(html, meta);
+    const qn = parsed.sections.reduce((a, s) => a + s.questions.length, 0);
+    const ch = parsed.sections.reduce((a, s) => a + s.questions.filter((q) => q.type === "single" || q.type === "multiple").length, 0);
+    const sc = qn + ch;
+    if (!best || sc > best.sc) best = { cid, html, parsed, qn, ch, sc };
+    if (qn >= 22 && ch >= 10) break; // 已是完整卷
+  }
+  if (!best) {
+    report.skipped.push({ id: sp.paperId, reason: `所有候选页面均抓取失败（examIds=${cands.join(",")}）` });
     continue;
   }
-  const html = fs.readFileSync(rawFile, "utf8");
-  const meta = { paperId: sp.paperId };
-  const { pageTitle, sections, dropped } = parsePaper(html, meta);
-  const qn = sections.reduce((a, s) => a + s.questions.length, 0);
+  const { cid: chosenId, parsed, qn, ch: choice } = best;
+  const { pageTitle, sections, dropped } = parsed;
+  sp.examId = chosenId;
   if (!qn) {
     report.skipped.push({ id: sp.paperId, reason: "解析出 0 题", pageTitle });
     continue;
   }
+  if (cands.length > 1)
+    report.candidates.push({ paperId: sp.paperId, examIds: cands, chosen: chosenId, questionCount: qn, choiceCount: choice });
   const ans = sections.reduce((a, s) => a + s.questions.filter((q) => q.answer).length, 0);
-  const choice = sections.reduce((a, s) => a + s.questions.filter((q) => q.type === "single" || q.type === "multiple").length, 0);
 
   for (const s of sections) {
     for (const q of s.questions) {

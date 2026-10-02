@@ -1,0 +1,493 @@
+{
+  "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5",
+  "subject": "math1",
+  "subjectName": "数学一",
+  "kind": "mock",
+  "mockName": "2025 张宇终极预测8套卷",
+  "publisher": "张宇",
+  "year": 2025,
+  "paperNo": 5,
+  "paperKind": "testPaper",
+  "title": "2025 张宇终极预测8套卷（五）",
+  "duration": 180,
+  "totalScore": 150,
+  "quality": "unverified",
+  "source": {
+    "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（五）练习解析页",
+    "url": "https://noobdream.com/Practice/exam_solution/35688/"
+  },
+  "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
+  "sections": [
+    {
+      "id": "single",
+      "name": "一、单项选择题（9 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "曲线\\( y = \\frac{x^3}{x + 1}\\sin\\frac{1}{x} \\)的斜渐近线方程为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( y = x + \\frac{1}{2} \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( y = x - \\frac{1}{2} \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( y = x + 1 \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( y = x - 1 \\)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "计算\\(\\lim_{x \\to \\infty} \\frac{y}{x} = \\lim_{x \\to \\infty} \\frac{x^2}{x + 1} \\cdot \\frac{1}{x} = 1\\)，再计算\\(\\lim_{x \\to \\infty} (y - x) = \\lim_{x \\to \\infty} (\\frac{x^3}{x + 1}\\sin\\frac{1}{x} - x)\\)，通过泰勒展开等方法可得极限为\\(-1\\)，故斜渐近线方程为\\( y = x - 1 \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9492/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设函数\\( f(x) \\)，\\( g(x) \\)在\\([a, b]\\)上连续，\\((a, b)\\)内可导，\\( g'(x) > 0 \\)，则\\(\\forall x \\in (a, b)\\)，“\\(\\frac{f'(x)}{g'(x)}\\)严格单调递增”是“\\(\\frac{f(x) - f(a)}{g(x) - g(a)}\\)严格单调递增”的",
+          "options": [
+            {
+              "key": "A",
+              "text": "充分必要条件."
+            },
+            {
+              "key": "B",
+              "text": "必要非充分条件."
+            },
+            {
+              "key": "C",
+              "text": "充分非必要条件."
+            },
+            {
+              "key": "D",
+              "text": "既非充分又非必要条件."
+            }
+          ],
+          "answer": "C",
+          "explanation": "充分性：由柯西中值定理，\\(\\frac{f(x) - f(a)}{g(x) - g(a)} = \\frac{f'(\\xi)}{g'(\\xi)}\\)，\\(\\xi \\in (a, x)\\)。因\\(\\frac{f'(x)}{g'(x)}\\)严格单调递增，故\\(\\frac{f'(\\xi)}{g'(\\xi)} < \\frac{f'(x)}{g'(x)}\\)，进而推出\\([\\frac{f(x) - f(a)}{g(x) - g(a)}]' > 0\\)，即\\(\\frac{f(x) - f(a)}{g(x) - g(a)}\\)严格单调递增。必要性：通过构造反例，如\\( f(x) = \\begin{cases} x^2, & -1 < x < 0 \\\\ 0, & 0 \\leq x < 1 \\end{cases}\\)，\\( g(x) = x \\)，可说明必要性不成立。故为充分非必要条件。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9493/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设\\(\\Sigma\\)是柱面\\( x^2 + y^2 = 1 \\)介于平面\\( z = 0 \\)，\\( z = 2 \\)之间的部分，方向向外。记\\( I_1 = \\iint_{\\Sigma} x^2 dS \\)，\\( I_2 = \\iint_{\\Sigma} z^2 dS \\)，\\( I_3 = \\iint_{\\Sigma} (x^2 + z^2) dydz \\)，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( I_1 > I_2 > I_3 \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( I_2 > I_1 > I_3 \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( I_3 > I_1 > I_2 \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( I_3 > I_2 > I_1 \\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "利用轮换对称性计算\\( I_1 = \\frac{1}{2} \\iint_{\\Sigma} (x^2 + y^2) dS = \\frac{1}{2} \\iint_{\\Sigma} dS = 2\\pi \\)；将\\(\\Sigma\\)分为前后两侧计算\\( I_2 \\)，可得\\( I_2 = \\frac{16\\pi}{3} \\)；分析\\( I_3 \\)，由于\\(\\Sigma_1\\)和\\(\\Sigma_2\\)方向相反，可得\\( I_3 = 0 \\)，故\\( I_2 > I_1 > I_3 \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9494/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "已知\\( f(x, y) = \\begin{cases} x^2, & y = 0 \\\\ xy, & 其他 \\end{cases} \\)，\\( \\boldsymbol{l} \\)是单位向量。以下结论：\n\n①\\( f(x, y) \\)在原点处连续；\n\n②\\( \\frac{\\partial [f(x, y)]}{\\partial \\boldsymbol{l}} \\big|_{(0, 0)} = 0 \\)；\n\n③\\( d[f(x, y)] \\big|_{(0, 0)} = 0 \\)。\n\n所有正确结论的序号是",
+          "options": [
+            {
+              "key": "A",
+              "text": "①②."
+            },
+            {
+              "key": "B",
+              "text": "②③."
+            },
+            {
+              "key": "C",
+              "text": "①③."
+            },
+            {
+              "key": "D",
+              "text": "①②③."
+            }
+          ],
+          "answer": "D",
+          "explanation": "①：分别讨论\\( y = 0 \\)和\\( y \\neq 0 \\)时\\(\\lim_{(x, y) \\to (0, 0)} f(x, y)\\)，均为\\( 0 = f(0, 0) \\)，故连续；②：由方向导数定义，无论代入哪个表达式，\\(\\frac{\\partial [f(x, y)]}{\\partial \\boldsymbol{l}} \\big|_{(0, 0)} = 0\\)；③：由②得偏导数在原点处为\\( 0 \\)，再验证可微性，可得\\( d[f(x, y)] \\big|_{(0, 0)} = 0 \\)。故①②③均正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9495/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "\\( f(x_1, x_2, x_3) = x_1^2 + 2x_2^2 + 3x_3^2 - 4x_1x_2 - 4x_2x_3 = 0 \\)是",
+          "options": [
+            {
+              "key": "A",
+              "text": "锥面."
+            },
+            {
+              "key": "B",
+              "text": "单叶双曲面."
+            },
+            {
+              "key": "C",
+              "text": "双叶双曲面."
+            },
+            {
+              "key": "D",
+              "text": "柱面."
+            }
+          ],
+          "answer": "A",
+          "explanation": "二次型对应的矩阵\\( A = \\begin{pmatrix} 1 & -2 & 0 \\\\ -2 & 2 & -2 \\\\ 0 & -2 & 3 \\end{pmatrix} \\)，令\\( |\\lambda E - A| = 0 \\)，解得特征值\\( \\lambda_1 = -1 \\)，\\( \\lambda_2 = 2 \\)，\\( \\lambda_3 = 5 \\)。二次型经正交变换可化为\\( f = -y_1^2 + 2y_2^2 + 5y_3^2 \\)，\\( f = 0 \\)时，即\\( y_1^2 = 2y_2^2 + 5y_3^2 \\)，为锥面。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9496/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "①∀列向量b∈Rⁿ，bᵀAb = 0； ②∀列向量b∈Rⁿ，bᵀA⁻&sup1;b = 0；\n\n③∀列向量b∈Rⁿ，r(A + bbᵀ) = n； ④n可能为3.\n\n正确的个数为",
+          "options": [
+            {
+              "key": "A",
+              "text": "则以下命题："
+            },
+            {
+              "key": "B",
+              "text": "2."
+            },
+            {
+              "key": "C",
+              "text": "3."
+            },
+            {
+              "key": "D",
+              "text": "4."
+            }
+          ],
+          "answer": "C",
+          "explanation": "对于①，设bᵀAb = x，则 (bᵀAb)ᵀ = bᵀAᵀb = -bᵀAb = -x = x， 解得x = 0，即bᵀAb = 0. 对于②，因为A⁻&sup1;仍然满足(A⁻&sup1;)ᵀ = -A⁻&sup1;，所以bᵀA⁻&sup1;b = 0. 对于③，构造分块矩阵，利用初等变换进行转化： $\\begin{pmatrix}1&0\\\\0&A + bb^T\\end{pmatrix}$$\\xrightarrow[加到第2行]{第1行左边乘b}$$\\begin{pmatrix}1&0\\\\b&A + bb^T\\end{pmatrix}$$\\xrightarrow[加到第2列]{第1列右边乘 - b^T}$$\\begin{pmatrix}1& - b^T\\\\b&A\\end{pmatrix}$ $\\xrightarrow[加到第1行]{第2行左边乘b^TA^{-1}}$$\\begin{pmatrix}1 + b^TA^{-1}b&0\\\\b&A\\end{pmatrix}$=$\\begin{pmatrix}1&0\\\\b&A\\end{pmatrix}$$\\xrightarrow[加到第2行]{第1行左边乘 - b}$$\\begin{pmatrix}1&0\\\\0&A\\end{pmatrix}$， 所以$\\begin{pmatrix}1&0\\\\0&A + bb^T\\end{pmatrix}$与$\\begin{pmatrix}1&0\\\\0&A\\end{pmatrix}$等价，从而A + bbᵀ与A等价，所以r(A + bbᵀ) = n. 对于④，不妨设$A = \\begin{pmatrix}0&a&b\\\\-a&0&c\\\\-b&-c&0\\end{pmatrix}$. 因为 $|A| = \\begin{vmatrix}0&a&b\\\\-a&0&c\\\\-b&-c&0\\end{vmatrix} = -a\\begin{vmatrix}-a&c\\\\-b&0\\end{vmatrix} + b\\begin{vmatrix}-a&0\\\\-b&-c\\end{vmatrix} = -abc + abc = 0$， 这违背了A可逆的条件，所以n不可能为3.事实上，n不可能是奇数.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9498/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "A. P(A$\\overline{B}$) > P(A)P($\\overline{B}$).",
+          "options": [
+            {
+              "key": "A",
+              "text": "B满足0 < P(A) < 1，0 < P(B) < 1，则P(AB) > P(A)P(B)的充要条件是"
+            },
+            {
+              "key": "B",
+              "text": "P($\\overline{A}$$\\overline{B}$) > P($\\overline{A}$)P($\\overline{B}$)."
+            },
+            {
+              "key": "C",
+              "text": "P(B | $\\overline{A}$) > P(B | A)."
+            },
+            {
+              "key": "D",
+              "text": "P(A | $\\overline{B}$) > P(A | B)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "对选项A，由P(AB) > P(A)P(B)，则P(A) - P(AB) < P(A) - P(A)P(B)， 即P(A$\\overline{B}$) < P(A)P($\\overline{B}$)，故A错误. 对选项B，由 P(A) = 1 - P($\\overline{A}$)，P(B) = 1 - P($\\overline{B}$)， P(AB) = 1 - P($\\overline{AB}$) = 1 - P($\\overline{A}$ &cup; $\\overline{B}$) = 1 - P($\\overline{A}$) - P($\\overline{B}$) + P($\\overline{A}$$\\overline{B}$)， 结合P(AB) > P(A)P(B)，有 1 - P($\\overline{A}$) - P($\\overline{B}$) + P($\\overline{A}$$\\overline{B}$) > [1 - P($\\overline{A}$)][1 - P($\\overline{B}$)]， 即P($\\overline{A}$$\\overline{B}$) > P($\\overline{A}$)P($\\overline{B}$)，以上过程可逆，故B正确. 对选项C，由P(AB) > P(A)P(B)有 P(AB) - P(A)P(AB) > P(A)P(B) - P(A)P(AB)， 即 $\\frac{P(AB)}{P(A)} > \\frac{P(B) - P(AB)}{1 - P(A)} = \\frac{P(\\overline{A}B)}{P(\\overline{A})}$， 也即P(B | $\\overline{A}$) < P(B | A)，故C错误. 对选项D，由P(AB) > P(A)P(B)有 P(AB) - P(B)P(AB) > P(A)P(B) - P(B)P(AB)， 即 $\\frac{P(AB)}{P(B)} > \\frac{P(A) - P(AB)}{1 - P(B)} = \\frac{P(A\\overline{B})}{P(\\overline{B})}$， 也即P(A | $\\overline{B}$) < P(A | B)，故D错误.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9499/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设随机变量X,Y独立同分布于$\\begin{pmatrix}-1&1\\\\\\frac{1}{2}&\\frac{1}{2}\\end{pmatrix}$，Z₁ = XY，Z₂ = $\\frac{X}{Y}$，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "X,Y,Z₁相互独立."
+            },
+            {
+              "key": "B",
+              "text": "X,Y,Z₂相互独立."
+            },
+            {
+              "key": "C",
+              "text": "X,Z₁,Z₂两两独立."
+            },
+            {
+              "key": "D",
+              "text": "X,Y,Z₂不相互独立."
+            }
+          ],
+          "answer": "D",
+          "explanation": "由题设可得 P{Z₁ = -1} = P{Z₂ = -1} = P{X = -1,Y = 1} + P{X = 1,Y = -1} = $\\frac{1}{2}$， P{Z₁ = 1} = P{Z₂ = 1} = P{X = 1,Y = 1} + P{X = -1,Y = -1} = $\\frac{1}{2}$， 所以P{Z₁ = 1,Z₂ = -1} = 0 ≠ P{Z₁ = 1}P{Z₂ = -1}， 故C错误. 对a,b ∈ {-1,1}，又 P{Z₂ = a,X = b} = P{$\\frac{X}{Y}$ = a,X = b} = P{X = b,Y = $\\frac{b}{a}$} = P{X = b}P{Y = $\\frac{b}{a}$} = $\\frac{1}{4}$， P{Z₂ = a}P{X = b} = $\\frac{1}{2}$×$\\frac{1}{2}$ = $\\frac{1}{4}$， 但P{X = -1,Y = 1,Z₂ = 1} = 0 ≠ P{X = -1}P{Y = 1}P{Z₂ = 1}， 故X,Y,Z₂不相互独立，同理，X,Y,Z₁也不相互独立.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9500/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "设总体X服从P{X = x} = $\\theta^x$ (1 - $\\theta$)&sup1;⁻ˣ，x = 0,1，0 < $\\theta$ ≤ $\\frac{1}{2}$. X₁,X₂,…,Xₙ是来自总体X的简单随机样本，$\\overline{X}$ = $\\frac{1}{n}\\sum_{i=1}^{n}X_i$，则$\\theta$的最大似然估计量为",
+          "options": [
+            {
+              "key": "A",
+              "text": "min{$\\frac{1}{2}$,$\\overline{X}$}."
+            },
+            {
+              "key": "B",
+              "text": "max{$\\frac{1}{2}$,$\\overline{X}$}."
+            },
+            {
+              "key": "C",
+              "text": "$\\overline{X}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{1}{2}$."
+            }
+          ],
+          "answer": "A",
+          "explanation": "设x₁,x₂,…,xₙ为样本X₁,X₂,…,Xₙ的一组观测值，则似然函数为 $L(\\theta) = \\prod_{i=1}^{n}\\theta^{x_i}(1 - \\theta)^{1 - x_i} = \\theta^{\\sum_{i=1}^{n}x_i}(1 - \\theta)^{n - \\sum_{i=1}^{n}x_i}$， 取对数， ln L($\\theta$) = $\\sum_{i=1}^{n}x_i$ln $\\theta$ + ($n - \\sum_{i=1}^{n}x_i$)ln (1 - $\\theta$) = $n\\overline{x}$ln $\\theta$ + ($n - n\\overline{x}$)ln(1 - $\\theta$)， 令$\\frac{d[\\ln L(\\theta)]}{d\\theta}$ = $\\frac{n\\overline{x}}{\\theta}$ - $\\frac{n(1 - \\overline{x})}{1 - \\theta}$ = 0，得$\\theta$ = $\\overline{x}$. 当$\\theta$ < $\\overline{x}$时，$\\frac{d[\\ln L(\\theta)]}{d\\theta}$ = $\\frac{n(\\overline{x} - \\theta)}{\\theta(1 - \\theta)}$ > 0；当$\\theta$ > $\\overline{x}$时，$\\frac{d[\\ln L(\\theta)]}{d\\theta}$ = $\\frac{n(\\overline{x} - \\theta)}{\\theta(1 - \\theta)}$ < 0.又 0 < $\\theta$ ≤ $\\frac{1}{2}$，故若$\\overline{x}$ < $\\frac{1}{2}$，则当$\\theta$ = $\\overline{x}$时，ln L($\\theta$)最大，此时$\\hat{\\theta}$ = $\\overline{X}$；若$\\overline{x}$ > $\\frac{1}{2}$，则当$\\theta$ = $\\frac{1}{2}$时，ln L($\\theta$)最大，此时$\\hat{\\theta}$ = $\\frac{1}{2}$. 综上，$\\hat{\\theta}$ = min{$\\frac{1}{2}$,$\\overline{X}$}.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9501/"
+        }
+      ]
+    },
+    {
+      "id": "blank",
+      "name": "二、填空题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q11",
+          "no": 11,
+          "type": "blank",
+          "stem": "（填空题）设$\\{ a_{n}\\} $非负有界，$b_{n}=\\sum\\limits _{k=1}^{n}\\frac {k}{a_{n}+n^{2}}$，则$\\lim\\limits _{n→∞}\\frac {1}{b_{n}}=$______．",
+          "options": [],
+          "answer": "2",
+          "explanation": "因为$\\{ a_{n}\\} $非负有界，故存在$M > m \\geqslant 0$，使得对任意$n \\in N_{+}$，有$m \\leqslant a_{n} \\leqslant M$，故\n$\\frac{k}{n^{2}+M} \\leqslant \\frac{k}{n^{2}+a_{n}} \\leqslant \\frac{k}{n^{2}+m}$，\n$\\frac{\\frac{n(n + 1)}{2}}{n^{2}+M} = \\sum\\limits_{k = 1}^{n}\\frac{k}{n^{2}+M} \\leqslant \\sum\\limits_{k = 1}^{n}\\frac{k}{n^{2}+a_{n}} \\leqslant \\sum\\limits_{k = 1}^{n}\\frac{k}{n^{2}+m} = \\frac{\\frac{n(n + 1)}{2}}{n^{2}+m}$，\n又$\\lim\\limits_{n→∞}\\frac{\\frac{n(n + 1)}{2}}{n^{2}+M} = \\lim\\limits_{n→∞}\\frac{\\frac{n(n + 1)}{2}}{n^{2}+m} = \\frac{1}{2}$，故$\\lim\\limits_{n→∞}b_{n} = \\frac{1}{2}$，于是$\\lim\\limits_{n→∞}\\frac{1}{b_{n}} = 2$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9502/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q12",
+          "no": 12,
+          "type": "blank",
+          "stem": "（填空题）函数$f(x)=\\int_{x}^{x + \\frac{\\pi}{2}}|\\sin t|dt$在$[0,\\pi]$上的平均值为______．",
+          "options": [],
+          "answer": "1",
+          "explanation": "$\\overline{f} = \\frac{1}{\\pi}\\int_{0}^{\\pi}f(x)dx = \\frac{1}{\\pi}\\int_{0}^{\\pi}(\\int_{x}^{x + \\frac{\\pi}{2}}|\\sin t|dt)dx$\n$= \\frac{1}{\\pi}\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}(\\int_{x}^{x + \\frac{\\pi}{2}}|\\sin t|dt)dx$\n$= \\frac{1}{\\pi}\\{x\\int_{x}^{x + \\frac{\\pi}{2}}|\\sin t|dt|_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} - \\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}x\\cdot[|\\sin(x + \\frac{\\pi}{2})| - |\\sin x|]dx\\}$\n$= \\frac{1}{\\pi}[\\frac{\\pi}{2}\\cdot 1 - (-\\frac{\\pi}{2})\\cdot 1 - 0]$\n$= \\frac{1}{\\pi}\\cdot \\pi$\n$= 1$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9503/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q13",
+          "no": 13,
+          "type": "blank",
+          "stem": "（填空题）设函数$f(x,y)$具有二阶连续偏导数，且满足$\\frac{\\partial^{2}[f(x,y)]}{\\partial x\\partial y} = 1$，$f(0,y) = \\sin y$，$f(x,0) = \\sin x$，则$f(\\frac{\\pi}{2},\\frac{\\pi}{2}) =$______．",
+          "options": [],
+          "answer": "$\\frac{\\pi^{2}}{4} + 2$",
+          "explanation": "由$\\frac{\\partial^{2}[f(x,y)]}{\\partial x\\partial y} = 1$得\n$\\frac{\\partial[f(x,y)]}{\\partial y} = x + C_{1}(y)$，\n进而\n$f(x,y) = xy + \\int C_{1}(y)dy + C_{2}(x) = xy + C_{3}(y) + C_{2}(x)$．\n由$f(0,y) = \\sin y$，$f(x,0) = \\sin x$得\n$C_{2}(x) = \\sin x - C_{3}(0)$，$C_{3}(y) = \\sin y - C_{2}(0)$，\n又$f(0,0) = 0$，所以\n$f(x,y) = xy + \\sin x + \\sin y$．\n因此$f(\\frac{\\pi}{2},\\frac{\\pi}{2}) = \\frac{\\pi^{2}}{4} + 2$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9504/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q14",
+          "no": 14,
+          "type": "blank",
+          "stem": "（填空题）已知连续曲线$y = y(x)$上点$(x,y)$处切线的斜率为$\\frac{1}{x\\sqrt{x^{2} - 1}}$，且曲线过点$(-2,0)$，则该曲线方程为______．",
+          "options": [],
+          "answer": "$y = \\arcsin\\frac{1}{x} + \\frac{\\pi}{6}(x 1$时才成立的，题设为连续曲线，既已过点$(-2,0)$，就不可能再有$x > 1$的情形了．",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9505/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q15",
+          "no": 15,
+          "type": "blank",
+          "stem": "（填空题）设$\\boldsymbol{\\alpha}_{1} = \\begin{pmatrix}1\\\\1\\\\a\\end{pmatrix}$，$\\boldsymbol{\\alpha}_{2} = \\begin{pmatrix}1\\\\a\\\\1\\end{pmatrix}$，$\\boldsymbol{\\alpha}_{3} = \\begin{pmatrix}a\\\\1\\\\1\\end{pmatrix}$，$\\boldsymbol{\\alpha}_{4} = \\begin{pmatrix}1\\\\a\\\\a^{2}\\end{pmatrix}$，若$\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}$与$\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3},\\boldsymbol{\\alpha}_{4}$等价，则$a$的取值范围是______．",
+          "options": [],
+          "answer": "$\\{ a | a \\in R, a \\neq -1$且$a \\neq -2\\}$",
+          "explanation": "$\\begin{pmatrix}1&1&a&1\\\\1&a&1&a\\\\a&1&1&a^{2}\\end{pmatrix} \\to \\begin{pmatrix}1&1&a&1\\\\0&a - 1&1 - a&a - 1\\\\0&1 - a&1 - a^{2}&a^{2} - a\\end{pmatrix}$\n$\\to \\begin{pmatrix}1&1&a&1\\\\0&a - 1&1 - a&a - 1\\\\0&0& - (a - 1)(a + 2)&a^{2} - 1\\end{pmatrix}$，\n当$a = -1$时，$r(\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}) = 3$，$r(\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3},\\boldsymbol{\\alpha}_{4}) = 2$，向量组不等价；当$a = -2$时，$r(\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}) = 2$，$r(\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3},\\boldsymbol{\\alpha}_{4}) = 3$，向量组不等价．其余情况向量组均等价，故$a$的取值范围是$\\{ a | a \\in R, a \\neq -1$且$a \\neq -2\\}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9506/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q16",
+          "no": 16,
+          "type": "blank",
+          "stem": "（填空题）已知3台机器的寿命均服从参数为$\\lambda$的指数分布，现3台机器同时开始工作且相互独立，记$X$为直到最后1台机器坏掉的时间，已知$E(X) = \\frac{11}{3}$，则$\\lambda =$______．",
+          "options": [],
+          "answer": "$\\frac{1}{2}$",
+          "explanation": "令3台机器的寿命分别为$T_{a_{1}},T_{b_{1}},T_{c_{1}}$，并令$T_{1} = \\min\\{ T_{a_{1}},T_{b_{1}},T_{c_{1}}\\}$，当$t \\geqslant 0$时，\n$F_{T_{1}}(t) = P\\{ T_{1} \\leqslant t\\} = P\\{ \\min\\{ T_{a_{1}},T_{b_{1}},T_{c_{1}}\\} \\leqslant t\\}$\n$= 1 - P\\{ T_{a_{1}} > t,T_{b_{1}} > t,T_{c_{1}} > t\\} = 1 - (P\\{ T_{a_{1}} > t\\})^{3}$\n$= 1 - [1 - F_{T_{a_{1}}}(t)]^{3} = 1 - e^{-3\\lambda t}$，\n故$T_{1} \\sim E(3\\lambda)$．\n当1台机器首先坏掉时，由指数分布的无记忆性，剩下2台机器的寿命依然服从指数分布，且时间重计．令剩余2台机器的寿命分别为$T_{a_{2}},T_{b_{2}}$，再令$T_{2} = \\min\\{ T_{a_{2}},T_{b_{2}}\\}$，当$t \\geqslant 0$时，\n$F_{T_{2}}(t) = P\\{ T_{2} \\leqslant t\\} = P\\{ \\min\\{ T_{a_{2}},T_{b_{2}}\\} \\leqslant t\\}$\n$= 1 - P\\{ T_{a_{2}} > t,T_{b_{2}} > t\\} = 1 - (P\\{ T_{a_{2}} > t\\})^{2}$\n$= 1 - [1 - F_{T_{a_{2}}}(t)]^{2} = 1 - e^{-2\\lambda t}$，\n故$T_{2} \\sim E(2\\lambda)$．\n于是剩余最后1台机器的寿命$T_{3} \\sim E(\\lambda)$．\n综上，$E(X) = \\frac{1}{3\\lambda} + \\frac{1}{2\\lambda} + \\frac{1}{\\lambda} = \\frac{11}{6\\lambda} = \\frac{11}{3}$，故$\\lambda = \\frac{1}{2}$．",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9507/"
+        }
+      ]
+    },
+    {
+      "id": "essay",
+      "name": "三、材料分析题（6 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q17",
+          "no": 17,
+          "type": "essay",
+          "stem": "（1）\\(f(x,y)\\)的表达式；\n\n（2）\\(f(x,y)\\)的极值。",
+          "options": [],
+          "answer": "（1）由题可得 \\(f(x,y)=\\int(x^{2}+y^{2}-4x + 4)e^{x}dx=(x^{2}+y^{2}-6x + 10)e^{x}+\\varphi(y)\\)， \\(\\frac{\\partial f}{\\partial y}=2ye^{x}+\\varphi^{\\prime}(y)=2ye^{x}\\)， 所以\\(\\varphi^{\\prime}(y)=0\\)，则\\(\\varphi(y)=C\\)。故 \\(f(x,y)=(x^{2}+y^{2}-6x + 10)e^{x}+C\\)， 又\\(f(0,0)=0\\)，有\\(C = - 10\\)，故 \\(f(x,y)=(x^{2}+y^{2}-6x + 10)e^{x}-10\\)。 （2）令\\(\\begin{cases}\\frac{\\partial f}{\\partial x}=0\\\\\\frac{\\partial f}{\\partial y}=0\\end{cases}\\)有\\(\\begin{cases}x = 2\\\\y = 0\\end{cases}\\)可得 \\(A = f_{xx}^{\\prime\\prime}\\big|_{(2,0)}=(2x - 4+x^{2}+y^{2}-4x + 4)e^{x}\\big|_{(2,0)}=0\\)， \\(B = f_{xy}^{\\prime\\prime}\\big|_{(2,0)}=2ye^{x}\\big|_{(2,0)}=0\\)， \\(C = f_{yy}^{\\prime\\prime}\\big|_{(2,0)}=2e^{x}\\big|_{(2,0)}=2e^{2}\\)， \\(\\Delta=AC - B^{2}=0\\)，判别式失效。 令\\(g(x)=f(x,0)=(x^{2}-6x + 10)e^{x}-10\\)，故\\(g^{\\prime}(x)=(x^{2}-4x + 4)e^{x}=(x - 2)^{2}e^{x}\\)。 令\\(g^{\\prime}(x)=0\\)有\\(x = 2\\)，又\\(g^{\\prime\\prime}(2)=0\\)，\\(g^{\\prime\\prime\\prime}(2)=2e^{2}>0\\)，所以\\(x = 2\\)不是\\(g(x)\\)的极值点，\\((2,0)\\)也不是\\(f(x,y)\\)的极值点，故\\(f(x,y)\\)无极值。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分10分） 设\\(\\frac{\\partial f}{\\partial x} = (x^{2} + y^{2}-4x + 4)e^{x}\\)，\\(\\frac{\\partial f}{\\partial y}=2ye^{x}\\)，\\(f(0,0) = 0\\)，求：",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9508/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q18",
+          "no": 18,
+          "type": "essay",
+          "stem": "（本题满分12分）\n已知有界闭区域\\(\\Omega\\)由锥面\\(z = \\sqrt{x^{2}+y^{2}}\\)与平面\\(z = 1\\)围成，计算三重积分\\(I=\\iiint_{\\Omega}(x + y + z)^{2}dxdydz\\)。",
+          "options": [],
+          "answer": "展开可得\n\\(I=\\iiint_{\\Omega}(x^{2}+y^{2}+z^{2}+2xy + 2yz + 2xz)dxdydz\\)。\n因为\\(\\Omega\\)关于\\(xOz\\)和\\(yOz\\)坐标平面对称，所以\n\\(\\iiint_{\\Omega}2xydxdydz=\\iiint_{\\Omega}2xz dxdydz=\\iiint_{\\Omega}2yz dxdydz = 0\\)。\n\n采用柱坐标变换，可得\n\\(\\iiint_{\\Omega}(x^{2}+y^{2}+z^{2})dxdydz=\\int_{0}^{2\\pi}d\\theta\\int_{0}^{1}dr\\int_{r}^{1}(r^{2}+z^{2})rdz\\)\n\\(=2\\pi\\int_{0}^{1}\\left[r^{3}(1 - r)+\\frac{1}{3}r(1 - r^{3})\\right]dr=\\frac{3\\pi}{10}\\)，\n所以\n\\(I=\\iiint_{\\Omega}(x + y + z)^{2}dxdydz=\\frac{3\\pi}{10}\\)。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "sourceUrl": "https://noobdream.com/Practice/article/9509/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q19",
+          "no": 19,
+          "type": "essay",
+          "stem": "（1）\\(\\vert b_{n}x_{0}^{n}\\vert\\leq M^{2n}\\)，\\(n = 0,1,2,\\cdots\\)；\n\n（2）当\\(\\vert x\\vert\\leq\\frac{\\vert x_{0}\\vert}{2M^{2}}\\)时，\\(\\sum_{n = 0}^{\\infty}b_{n}x^{n}\\)绝对收敛。",
+          "options": [],
+          "answer": "（1）由\\(\\sum_{k = 0}^{n}b_{k}a_{n - k}=0\\)，有\\(b_{n}a_{0}+\\sum_{k = 0}^{n - 1}b_{k}a_{n - k}=0\\)，于是 \\(b_{n}=-\\sum_{k = 0}^{n - 1}b_{k}a_{n - k}\\)， \\(\\vert b_{n}x_{0}^{n}\\vert=\\vert-\\sum_{k = 0}^{n - 1}b_{k}a_{n - k}\\cdot x_{0}^{n}\\vert=\\vert-\\sum_{k = 0}^{n - 1}b_{k}a_{n - k}\\cdot x_{0}^{k}\\cdot x_{0}^{n - k}\\vert\\leq M\\cdot\\sum_{k = 0}^{n - 1}\\vert b_{k}x_{0}^{k}\\vert\\)。 下面用数学归纳法来证明。 ①当\\(n = 0\\)时，\\(\\vert b_{0}x_{0}^{0}\\vert=b_{0}=1\\leq M^{0}\\)，显然成立； ②设\\(n = m\\)时，\\(\\vert b_{m}x_{0}^{m}\\vert\\leq M^{2m}\\)成立； ③当\\(n = m + 1\\)时，\\(\\vert b_{m + 1}x_{0}^{m + 1}\\vert\\leq M\\cdot\\sum_{k = 0}^{m + 1 - 1}\\vert b_{k}x_{0}^{k}\\vert=M\\cdot\\sum_{k = 0}^{m}\\vert b_{k}x_{0}^{k}\\vert\\leq M\\cdot\\sum_{k = 0}^{m}M^{2k}=M\\cdot\\frac{1 - M^{2(m + 1)}}{1 - M^{2}}=M\\cdot\\frac{M^{2(m + 1)}-1}{M^{2}-1}\\)。 由于\\(M\\leq M^{2}-1\\)，故\\(\\frac{M}{M^{2}-1}\\leq1\\)，则\\(\\vert b_{m + 1}x_{0}^{m + 1}\\vert\\leq M^{2(m + 1)}-1\\leq M^{2(m + 1)}\\)成立。 综上，\\(\\vert b_{n}x_{0}^{n}\\vert\\leq M^{2n}\\)。 （2）\\(\\vert b_{n}x^{n}\\vert=\\vert b_{n}x_{0}^{n}\\vert\\cdot\\vert\\frac{x}{x_{0}}\\vert^{n}\\leq(\\frac{M^{2}\\vert x\\vert}{\\vert x_{0}\\vert})^{n}\\)，当\\(\\vert x\\vert\\leq\\frac{\\vert x_{0}\\vert}{2M^{2}}\\)时，\\(\\vert b_{n}x^{n}\\vert\\leq\\frac{1}{2^{n}}\\)，故绝对收敛。",
+          "explanation": "",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分） 设\\(f(x)=\\sum_{n = 0}^{\\infty}a_{n}x^{n}\\)在\\(x = x_{0}\\)处收敛，\\(\\sum_{k = 0}^{n}b_{k}a_{n - k}=0\\)，\\(a_{0}=b_{0}=1\\)。若\\(\\vert a_{n}x_{0}^{n}\\vert\\leq M\\leq M^{2}-1\\)，\\(n = 0,1,2,\\cdots\\)。证明：",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9510/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q20",
+          "no": 20,
+          "type": "essay",
+          "stem": "（本题满分12分）\n设曲面$\\Sigma: z = 1 - x^2 - y^2(z \\geq -3)$，上侧为正方向，求曲面积分\n$I = \\iint_{\\Sigma} yz\\sqrt{x^2 + y^2 + z^2}dydz + xz\\sqrt{x^2 + y^2 + z^2}dzdx + (x^2y^2 - 2xy\\sqrt{x^2 + y^2 + z^2})dxdy$。",
+          "options": [],
+          "answer": "",
+          "explanation": "设$\\Sigma_1: z = -3(x^2 + y^2 \\leq 4)$，向下为正方向，则$I = \\iint_{\\Sigma + \\Sigma_1} - \\iint_{\\Sigma_1} = I_1 - I_2$。\n因为\n$\\frac{\\partial(yz\\sqrt{x^2 + y^2 + z^2})}{\\partial x} + \\frac{\\partial(xz\\sqrt{x^2 + y^2 + z^2})}{\\partial y} + \\frac{\\partial(x^2y^2 - 2xy\\sqrt{x^2 + y^2 + z^2})}{\\partial z}$\n$= \\frac{xyz}{\\sqrt{x^2 + y^2 + z^2}} + \\frac{xyz}{\\sqrt{x^2 + y^2 + z^2}} - 2\\frac{xyz}{\\sqrt{x^2 + y^2 + z^2}} = 0$，\n根据高斯公式，\n$I_1 = 0$。\n又因为\n$I_2 = \\iint_{\\Sigma_1}(x^2y^2 - 2xy\\sqrt{x^2 + y^2 + 9})dxdy = - \\iint_{x^2 + y^2 \\leq 4} x^2y^2dxdy = -\\frac{8\\pi}{3}$，\n所以\n$I = I_1 - I_2 = \\frac{8\\pi}{3}$。\n【注】本题中$\\Sigma + \\Sigma_1$是一个封闭曲面，因此可以考虑利用高斯公式解决问题。尽管本题中出现了因子$\\sqrt{x^2 + y^2 + z^2}$，但由于其不在分母上，因此不会引进奇点，不需要对原点进行单独讨论。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "sourceUrl": "https://noobdream.com/Practice/article/9511/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q21",
+          "no": 21,
+          "type": "essay",
+          "stem": "（1）$a$的值；\n\n（2）$\\boldsymbol{\\gamma}$。",
+          "options": [],
+          "answer": "",
+          "explanation": "（1）$\\begin{pmatrix} 1 - a & 1 & 1 & 0 \\\\ a & 1 & 0 & 1 \\\\ a + 1 & a + 1 & 1 & 2(a - 1) \\end{pmatrix} \\to \\begin{pmatrix} 1 - a & 1 & 1 & 0 \\\\ 2a - 1 & 0 & -1 & 1 \\\\ 2a - a^2 & 0 & 0 & a - 2 \\end{pmatrix}$，因$\\boldsymbol{\\beta}$不能由$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$线性表示，则$r(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3) + 1 = r(\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3,\\boldsymbol{\\beta})$，即$2a - a^2 = 0$且$a - 2 \\neq 0$，故$a = 0$。 （2）由（1）知，$a = 0$，故$\\boldsymbol{\\alpha}_1 = \\boldsymbol{\\alpha}_3$，则$(\\boldsymbol{\\beta}^T - \\boldsymbol{\\gamma}^T)\\boldsymbol{\\alpha}_i = 0$，$i = 1,2,3$。记$\\boldsymbol{\\gamma} = (\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3)\\begin{pmatrix} k_1 \\\\ k_2 \\\\ k_3 \\end{pmatrix} = \\boldsymbol{A}\\boldsymbol{x}$，于是 $(\\boldsymbol{\\beta}^T - \\boldsymbol{x}^T\\boldsymbol{A}^T)\\boldsymbol{A} = 0$，$\\boldsymbol{A}^T(\\boldsymbol{\\beta} - \\boldsymbol{A}\\boldsymbol{x}) = 0$，$\\boldsymbol{A}^T\\boldsymbol{A}\\boldsymbol{x} = \\boldsymbol{A}^T\\boldsymbol{\\beta}$， 由 $(\\boldsymbol{A}^T\\boldsymbol{A} \\vdots \\boldsymbol{A}^T\\boldsymbol{\\beta}) = \\begin{pmatrix} 2 & 2 & 2 & -2 \\\\ 2 & 3 & 2 & -1 \\\\ 2 & 2 & 2 & -2 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 0 & 1 & -2 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$， 得$\\boldsymbol{x} = \\begin{pmatrix} k_1 \\\\ k_2 \\\\ k_3 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\end{pmatrix} + k\\begin{pmatrix} 1 \\\\ 0 \\\\ -1 \\end{pmatrix}$，$k \\in \\mathbf{R}$，则 $\\boldsymbol{\\gamma} = k_1\\boldsymbol{\\alpha}_1 + k_2\\boldsymbol{\\alpha}_2 + k_3\\boldsymbol{\\alpha}_3$ $= (k - 2)\\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix} + 1\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} - k\\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 1 \\\\ -1 \\end{pmatrix}$。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "material": "（本题满分12分） 设$\\boldsymbol{\\alpha}_1 = \\begin{pmatrix} 1 - a \\\\ a \\\\ a + 1 \\end{pmatrix}$，$\\boldsymbol{\\alpha}_2 = \\begin{pmatrix} 1 \\\\ 1 \\\\ a + 1 \\end{pmatrix}$，$\\boldsymbol{\\alpha}_3 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 1 \\end{pmatrix}$，$\\boldsymbol{\\beta} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 2(a - 1) \\end{pmatrix}$，$\\boldsymbol{\\gamma} = k_1\\boldsymbol{\\alpha}_1 + k_2\\boldsymbol{\\alpha}_2 + k_3\\boldsymbol{\\alpha}_3$，若$\\boldsymbol{\\beta}$不能由$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3$线性表示，且$\\boldsymbol{\\beta}^T\\boldsymbol{\\alpha}_i = \\boldsymbol{\\gamma}^T\\boldsymbol{\\alpha}_i$，$i = 1,2$。求：",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9512/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q22",
+          "no": 22,
+          "type": "essay",
+          "stem": "（1）证明$Z$服从标准正态分布；\n\n（2）$(Y,Z)$是否服从二维正态分布？说明理由。",
+          "options": [],
+          "answer": "（1）【证】当$z < 0$时， $P\\{Z \\leq z\\} = P\\{X \\leq z, XY > 0\\} + P\\{-X \\leq z, XY < 0\\}$ $= P\\{X \\leq z, Y < 0\\} + P\\{X \\geq -z, Y < 0\\}$ $= P\\{X \\leq z\\}P\\{Y < 0\\} + P\\{X \\geq -z\\}P\\{Y < 0\\}$ $= \\frac{1}{2}(P\\{X \\leq z\\} + P\\{X \\geq -z\\})$ $= \\frac{1}{2} \\cdot 2P\\{X \\leq z\\} = P\\{X \\leq z\\}$； 当$z > 0$时， $P\\{Z > z\\} = P\\{X > z, XY > 0\\} + P\\{-X > z, XY < 0\\}$ $= P\\{X > z, Y > 0\\} + P\\{X < -z, Y > 0\\}$ $= P\\{X > z\\}$。 故 $P\\{Z \\leq z\\} = P\\{X \\leq z\\}$，$P\\{Z > z\\} = P\\{X > z\\}$。 因此，$Z$与$X$同分布于$N(0,1)$。 （2）",
+          "explanation": "若$Z > 0$，则要么$X > 0$且$Y > 0$，要么$X < 0$且$Y > 0$，于是$Z$与$Y$始终同号，则当$Z > 0$时，$0 < Y < +\\infty$。而二维正态分布的概率密度定义域为$-\\infty < y < +\\infty$，$-\\infty < z < +\\infty$，矛盾，故$(Y,Z)$不服从二维正态分布。 【注】第（2）问的答案从定义域的角度考虑，值得学习。",
+          "score": 0,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分） 设$X,Y$独立同分布于标准正态分布$N(0,1)$，$Z = \\begin{cases} X, & XY > 0, \\\\ -X, & XY < 0. \\end{cases}$",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9513/"
+        }
+      ]
+    }
+  ]
+}

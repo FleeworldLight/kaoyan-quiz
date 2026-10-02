@@ -224,6 +224,35 @@ try {
   const rec = await ev(`({ rows: document.querySelectorAll('tbody tr').length, heat: document.querySelectorAll('[data-testid="heat-cell"]').length })`);
   check("学习记录有明细与热力图", rec.rows >= 1 && rec.heat > 150, rec.rows + " 行 / " + rec.heat + " 格");
 
+  // 备份 / 导入：写一份快照文件，通过 CDP 塞进 file input，验证合并写入 localStorage
+  const snapPath = path.resolve("tools/cache/e2e-import.json");
+  fs.mkdirSync(path.dirname(snapPath), { recursive: true });
+  fs.writeFileSync(snapPath, JSON.stringify({
+    kind: "kaoyan-quiz-state", version: 1,
+    state: {
+      progress: { "e2e-imported-q1": { seen: 3, right: 2, wrong: 1, lastAt: Date.now(), subject: "math1", topics: ["e2e"], loc: { s: "math1", f: "math1/2015.json" } } },
+      wrong: { "e2e-imported-q1": { addedAt: Date.now(), subject: "math1", loc: { s: "math1", f: "math1/2015.json" }, wrongCount: 1 } },
+      fav: {}, notes: { "e2e-imported-q1": "导入进来的笔记" },
+      records: [{ id: "e2e-imported-r1", at: Date.now(), subject: "math1", mode: "chapter", total: 3, correct: 2, durationSec: 60 }],
+      exams: {}, settings: {},
+    },
+  }), "utf8");
+  await send("DOM.enable");
+  const doc = await send("DOM.getDocument", { depth: -1 });
+  const node = await send("DOM.querySelector", { nodeId: doc.root.nodeId, selector: 'input[type="file"]' });
+  if (node && node.nodeId) {
+    await send("DOM.setFileInputFiles", { nodeId: node.nodeId, files: [snapPath] });
+    await waitFor(`document.body.innerText.includes('导入完成')`, "导入结果提示", 9000);
+    await sleep(800);
+    const imported = await ev(`(() => { const s = JSON.parse(localStorage.getItem('kq:state:v1') || '{}');
+      return { note: (s.notes || {})['e2e-imported-q1'] || null,
+        rec: (s.records || []).some((r) => r.id === 'e2e-imported-r1'),
+        progress: Object.keys(s.progress || {}).length }; })()`);
+    check("能导入备份数据并合并", imported.note === "导入进来的笔记" && imported.rec === true, JSON.stringify(imported));
+  } else {
+    check("能导入备份数据并合并", false, "页面上找不到 file input");
+  }
+
   await goto("#/favorites");
   await waitFor(`document.body.innerText.includes('收藏本')`, "收藏本");
   const favPage = await ev(`(() => { const s = JSON.parse(localStorage.getItem('kq:state:v1') || '{}');
