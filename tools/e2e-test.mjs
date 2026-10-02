@@ -88,6 +88,23 @@ try {
   check("侧栏导航完整", home.nav >= 10, home.nav + " 项");
   check("四科信息出现在首页", !!home.subjects);
 
+  /* ---------------- 1.5 408 题目配图 ---------------- */
+  {
+    const paper = JSON.parse(fs.readFileSync("public/data/cs408/2020.json", "utf8"));
+    let imgQ = null;
+    for (const s of paper.sections || []) { for (const q of s.questions || []) if ((q.images || []).length) { imgQ = q; break; } if (imgQ) break; }
+    if (imgQ) {
+      await send("Page.navigate", { url: BASE + "/#/practice?mode=paper&subject=cs408&year=2020&practice=1&focus=" + encodeURIComponent(imgQ.id) });
+      await waitFor(`document.querySelector('article img') !== null`, "配图渲染", 20000);
+      const im = await ev(`(() => { const i = document.querySelector('article img');
+        return { ok: !!(i && i.complete && i.naturalWidth > 0), w: i?.naturalWidth || 0, h: i?.naturalHeight || 0, src: i?.getAttribute('src') || '' }; })()`);
+      check("408 题目配图能正常加载", im.ok === true, (im.src || "").split("/").pop() + " " + im.w + "x" + im.h);
+      check("有配图时不再显示缺图提示", (await ev(`document.body.innerText.includes('题库未收录配图')`)) === false);
+    } else {
+      check("408 题目配图能正常加载", false, "题库里找不到带图的题");
+    }
+  }
+
   /* ---------------- 2. 题库 ---------------- */
   await goto("#/library?subject=math1");
   await waitFor(`document.body.innerText.includes('考研数学（一）')`, "题库渲染");

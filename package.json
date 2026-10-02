@@ -16,7 +16,7 @@
     "data:math": "node tools/fetch-tree.mjs && node tools/fetch-math.mjs && node tools/parse-math.mjs && node tools/parse-math-2022.mjs && node tools/fetch-math-images.mjs",
     "data:english": "node tools/fetch-english.mjs && node tools/parse-english.mjs && node tools/fix-english-scores.mjs",
     "data:politics": "node tools/politics-parse.mjs && node tools/build-politics.mjs && node tools/tag-chapters.mjs && node tools/build-topics-json.mjs && node tools/add-answer-note.mjs && node tools/restore-granular-topics.mjs",
-    "data:cs408": "node tools/build-cs408.mjs",
+    "data:cs408": "node tools/build-cs408.mjs && node tools/attach-cs408-images.mjs",
     "data:mock": "node tools/fetch-mock.mjs && node tools/build-mock.mjs",
     "data:build": "npm run data:math && npm run data:english && npm run data:politics && npm run data:cs408 && npm run data:mock && npm run data:index",
     "verify": "node tools/validate-all.mjs && node tools/validate-mock.mjs",
