@@ -483,20 +483,43 @@ for (const im of allAssigned) {
 // 同一题可能多图：按 (year, no, 页, 图从上到下的位置) 排序
 assignments.sort((a, b) => (a.year - b.year) || (a.no - b.no) || (a.page - b.page) || (b.visible[3] - a.visible[3]));
 
+/* ---------- 交叉引用：题干里明确写「题 K 图」时，把第 K 题那张图也挂到本题 ---------- */
+const REF_RE = new RegExp(CAP_RE.source, "g");
+const byYearNo = new Map();
+for (const a of assignments) {
+  const k = `${a.year}|${a.no}`;
+  if (!byYearNo.has(k)) byYearNo.set(k, []);
+  if (!byYearNo.get(k).includes(a.file)) byYearNo.get(k).push(a.file);
+}
+const crossRefs = [];
+const finalImages = new Map(); // `${year}|${no}` -> files
+for (const y of YEARS) {
+  for (const sec of papers[y].sections) for (const q of sec.questions) {
+    const own = [...(byYearNo.get(`${y}|${q.no}`) || [])];
+    const full = squash([q.stem || "", ...(q.options || []).map((o) => o.text || "")].join(""));
+    for (const m of full.matchAll(REF_RE)) {
+      const a0 = Number(m[1]), b0 = m[2] ? Number(m[2]) : a0;
+      for (let k = a0; k <= b0; k++) {
+        if (k === q.no) continue;
+        const src = byYearNo.get(`${y}|${k}`) || [];
+        const added = src.filter((f) => !own.includes(f));
+        if (!added.length) continue;
+        own.push(...added);
+        crossRefs.push({ year: y, no: q.no, srcNo: k, text: m[0], files: added });
+      }
+    }
+    finalImages.set(`${y}|${q.no}`, own);
+  }
+}
+
 /* ---------- 写回 JSON ---------- */
 const writeLog = [];
 if (!DRY) {
-  const byYearNo = new Map();
-  for (const a of assignments) {
-    const k = `${a.year}|${a.no}`;
-    if (!byYearNo.has(k)) byYearNo.set(k, []);
-    byYearNo.get(k).push(a.file);
-  }
   for (const y of YEARS) {
     const doc = JSON.parse(fs.readFileSync(papers[y]._path, "utf8"));
     let changed = 0;
     for (const sec of doc.sections) for (const q of sec.questions) {
-      const want = byYearNo.get(`${y}|${q.no}`) || [];
+      const want = finalImages.get(`${y}|${q.no}`) || [];
       const cur = Array.isArray(q.images) ? q.images : [];
       if (JSON.stringify(cur) !== JSON.stringify(want)) { q.images = want; changed++; }
     }
@@ -516,7 +539,7 @@ for (const y of YEARS) {
   for (const sec of papers[y].sections) for (const q of sec.questions) {
     const full = [q.stem || "", ...(q.options || []).map((o) => o.text || "")].join(" ");
     const kws = figKeywords(full);
-    const got = assignments.filter((a) => a.year === y && a.no === q.no).length;
+    const got = (finalImages.get(`${y}|${q.no}`) || []).length;
     if (!kws.length || got) continue;
     const isTable = !/图/.test(kws.join("")) && TABLE_RE.test(squash(full));
     const row = { year: y, no: q.no, type: q.type, kw: kws.join("/"), stem40: (q.stem || "").replace(/\s+/g, " ").slice(0, 40) };
@@ -550,6 +573,10 @@ push("");
 push("--- 四、未定位到题目的图 ---");
 for (const im of allAssigned) if (!im.owners.length) push(`  [无题号] ${im.year} p${im.page} #${im.idx} ${im.name} ${im.px}x${im.py} box=${im.box.join(",")}（已写盘但未挂到任何题）`);
 for (const im of allDropped) push(`  [丢弃] ${im.year} p${im.page} #${im.idx} ${im.name || "(无名)"} ${im.px || "?"}x${im.py || "?"} box=${im.box.join(",")} → ${im.dropReasons.join("; ")}`);
+push("");
+push("--- 四之二、交叉引用补挂（题干写了「题 K 图」，把第 K 题的图也挂到本题） ---");
+for (const c of crossRefs) push(`  ${c.year} q${c.no} ← 引用了「${c.text}」→ 借用 q${c.srcNo} 的 ${c.files.join(", ")}`);
+push(`共 ${crossRefs.length} 处`);
 push("");
 push("--- 五、仍缺图的题（题干/选项提到『图』但 images 为空） ---");
 for (const m of missingFig) push(`  ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
