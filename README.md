@@ -147,11 +147,31 @@ pnpm verify         # 全库结构校验
 | 数学一 | `fetch-tree.mjs` → `fetch-math.mjs` → `parse-math.mjs` → `fetch-math-images.mjs` |
 | 英语一 | `fetch-english.mjs` → `parse-english.mjs` |
 | 政治 | `politics-parse.mjs` → `build-politics.mjs` → `tag-chapters.mjs` → `build-topics-json.mjs` → `add-answer-note.mjs` |
-| 408 | `fetch-rebuild.mjs` → `extract-rebuild.mjs` / `extract-qa.mjs` → `build-cs408.mjs` → `xcheck.mjs` |
-| 模拟卷 | `fetch-mock.mjs` |
-| 汇总 | `build-index.mjs` 生成 `index.json`；`validate-all.mjs` 全库校验 |
+| 408 | `fetch-rebuild.mjs` → `extract-rebuild.mjs` / `extract-qa.mjs` → `build-cs408.mjs` → **`attach-cs408-images.mjs`**（抽图+挂图）→ `xcheck.mjs` |
+| 模拟卷 | `fetch-mock.mjs`（GitHub 来源）+ `fetch-mock-xiao.mjs`（N诺考研来源）→ `build-mock.mjs` / `build-mock-xiao.mjs` |
+| 汇总 | `build-index.mjs` 生成 `index.json`；`validate-all.mjs` 全库校验；`validate-mock.mjs` 模拟卷校验 |
 
 原始素材缓存在 `tools/cache/`（已 gitignore），可安全删除后重新抓取。
+
+### 408 配图
+
+408 真题的「二叉树/页表/Cache 结构图/时序图」原本只有文字「如下图」。`tools/attach-cs408-images.mjs` 从 `tools/cache/rebuild/<year>.pdf` 里把嵌入图抽出来（共 121 张），按**题号在页面上的 y 区间**定位到对应题目，写回每题的 `images` 字段。
+
+```bash
+node tools/attach-cs408-images.mjs          # 抽图 + 挂图 + 出报告
+node tools/attach-cs408-images.mjs --dry    # 只扫描定位，不写盘
+```
+
+抽出来的图是原始光栅图，合计约 30 MB。仓库里提交的版本已经过压缩：
+
+```bash
+python tools/optimize-images.py --dry-run   # 看能省多少
+python tools/optimize-images.py             # 就地压缩（文件名不变，无需改 JSON）
+```
+
+这个 Python 脚本**不在 npm 流水线里**（Node 侧没有纯 JS 的 PNG 量化实现），只有重新抽图后才需要跑一次。它用自适应调色板重存 PNG，实测 30.8 MB → 14.9 MB（省 52%），PSNR 48–99 dB，视觉上无差别。
+
+仍未收录配图的题会在界面上显示「本题题干提到图，题库未收录配图，请对照原卷 PDF 查看」。
 
 ## 自动化测试
 
