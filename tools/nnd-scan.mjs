@@ -25,6 +25,7 @@ const args = process.argv.slice(2);
 const from = Number(args[0]);
 const to = Number(args[1]);
 const CONC = Number((args.find((a) => a.startsWith("--concurrency=")) || "").split("=")[1] || 8);
+const DELAY = Number((args.find((a) => a.startsWith("--delay=")) || "").split("=")[1] || 0);
 const SAVE = args.includes("--save-html");
 if (SAVE) fs.mkdirSync(RAW, { recursive: true });
 
@@ -95,6 +96,7 @@ await Promise.all(
       const r = await one(ids[i]);
       stream.write(JSON.stringify(r) + "\n");
       n++;
+      if (DELAY > 0) await new Promise((res) => setTimeout(res, DELAY));
       if (r.status === 200 && /肖秀荣|肖四|肖八|终极预测|四套卷|八套卷|米鹏|腿姐|徐涛/.test(r.title || "")) {
         hits.push(r);
         console.log(`HIT  ${r.id}\t${r.title}\tq=${r.qLinks} ans=${r.ansCount} std=${r.stdAnswerInText.length}`);

@@ -431,9 +431,108 @@ for (const sp of sources.papers) {
     fs.mkdirSync(OUTDIR, { recursive: true });
     fs.writeFileSync(path.join(OUTDIR, `${sp.paperId}.json`), JSON.stringify(doc, null, 2) + "\n");
   }
+  built.push({
+    sp,
+    doc,
+    stat: { questionCount: qn, choiceCount: choice, withAnswer: ans },
+  });
   console.log(
-    `OK ${sp.paperId.padEnd(38)} ${String(qn).padStart(3)} 题  选择 ${String(choice).padStart(3)}  有答案 ${String(ans).padStart(3)}  (${sections.map((s) => s.id + ":" + s.questions.length).join(" ")})`,
+    `OK ${sp.paperId.padEnd(44)} ${String(qn).padStart(3)} 题  选择 ${String(choice).padStart(3)}  有答案 ${String(ans).padStart(3)}  (${sections.map((s) => s.id + ":" + s.questions.length).join(" ")})`,
   );
+}
+
+// ------------------------------------------------------------------ 合并进 _manifest.json
+function mergeManifest() {
+  const mfPath = path.join(OUTDIR, "_manifest.json");
+  let mf;
+  try {
+    mf = JSON.parse(fs.readFileSync(mfPath, "utf8"));
+  } catch {
+    mf = { version: 1, generatedAt: new Date().toISOString(), note: "", failed: [], groups: [] };
+  }
+  const isMine = (id) => /^nnd-/.test(String(id || ""));
+  // 1) 移除本脚本此前写入的组（按 groupId 前缀 nnd-），保留其它来源
+  const kept = (mf.groups || []).filter((g) => !isMine(g.id));
+
+  // 2) 按 groupId 汇总本次产出
+  const byGroup = new Map();
+  for (const b of built) {
+    const gid = b.sp.groupId || `nnd-${b.sp.subject}-${b.sp.paperId}`;
+    if (!byGroup.has(gid)) {
+      byGroup.set(gid, {
+        id: gid,
+        subject: b.sp.subject,
+        subjectName: b.sp.subjectName,
+        publisher: b.sp.publisher,
+        name: b.sp.mockName,
+        year: b.sp.year,
+        source: { name: b.sp.sourceName.replace(/（.+?）练习解析页$/, " 系列练习解析页"), url: `https://noobdream.com/Practice/exam_solution/${b.sp.examId}/` },
+        note: "整卷型模拟卷（按套组织）。每卷题干/选项/正确答案/原书解析均逐字来自 N诺考研公开练习页；答案为网页明确标注的正确答案，未经逐题人工核对。",
+        papers: [],
+      });
+    }
+    const g = byGroup.get(gid);
+    const cn = "一二三四五六七八九十"[b.sp.paperNo - 1] || String(b.sp.paperNo);
+    g.papers.push({
+      id: b.sp.paperId,
+      file: `mock/${b.sp.paperId}.json`,
+      title: b.sp.title,
+      paperKind: "testPaper",
+      questionCount: b.stat.questionCount,
+      choiceCount: b.stat.choiceCount,
+      withAnswer: b.stat.withAnswer,
+      answerRate: Number((b.stat.withAnswer / b.stat.questionCount).toFixed(4)),
+      duration: b.doc.duration,
+      quality: "unverified",
+      groupId: gid,
+      paperNo: b.sp.paperNo,
+      examId: b.sp.examId,
+      sourceUrl: `https://noobdream.com/Practice/exam_solution/${b.sp.examId}/`,
+    });
+  }
+  const mine = [...byGroup.values()].sort((a, b) => a.id.localeCompare(b.id));
+  for (const g of mine) g.papers.sort((a, b) => a.paperNo - b.paperNo);
+
+  mf.groups = [...kept, ...mine];
+  mf.generatedAt = new Date().toISOString();
+
+  // 3) failed：保留旧的，去掉本脚本旧的记录，再追加本次跳过/失败的
+  const oldFailed = (mf.failed || []).filter((f) => !isMine(f.groupId) && !/^noobdream|N诺/.test(f.source || ""));
+  const newFailed = [
+    ...report.skipped.map((s) => {
+      const sp = sources.papers.find((p) => p.paperId === s.id) || {};
+      return {
+        name: `${s.id}（${sp.title || ""}）`,
+        groupId: sp.groupId,
+        source: "N诺考研 noobdream.com",
+        url: sp.examId ? `https://noobdream.com/Practice/exam_solution/${sp.examId}/` : "https://noobdream.com/Practice/",
+        reason: s.reason + (s.pageTitle ? `（页面标题：${s.pageTitle}）` : ""),
+      };
+    }),
+    ...(report.fetchFailed || []),
+  ];
+  mf.failed = [...oldFailed, ...newFailed];
+
+  // 4) 本次丢弃明细（不覆盖 build-mock.mjs 的 droppedSummary）
+  mf.droppedSummaryNnd = {
+    count: report.dropped.length,
+    note: "本轮（N诺考研来源）解析阶段主动丢弃、未写入题库的题目。依据「不乱码/不编造」纪律。完整明细见 tools/cache/mock-xiao/build-report.json。",
+    byReason: Object.entries(
+      report.dropped.reduce((a, d) => {
+        a[d.reason.replace(/\s*\d+.*$/, "").trim()] = (a[d.reason.replace(/\s*\d+.*$/, "").trim()] || 0) + 1;
+        return a;
+      }, {}),
+    ).map(([reason, count]) => ({ reason, count })),
+    items: report.dropped.slice(0, 200),
+  };
+
+  fs.writeFileSync(mfPath, JSON.stringify(mf, null, 2) + "\n");
+  return { groups: mine.length, papers: mine.reduce((a, g) => a + g.papers.length, 0), failed: newFailed.length };
+}
+
+if (!DRY) {
+  const m = mergeManifest();
+  console.log(`\n[_manifest.json] 本次并入 ${m.groups} 个系列 / ${m.papers} 套卷；新增 failed ${m.failed} 条（旧组与旧 failed 保留）`);
 }
 
 fs.mkdirSync(CACHE, { recursive: true });
