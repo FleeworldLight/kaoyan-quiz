@@ -514,6 +514,17 @@ for (const y of YEARS) {
   }
 }
 
+/* ---------- 清理上次遗留、这次不再引用的 PNG ---------- */
+if (!DRY) {
+  const referenced = new Set([...finalImages.values()].flat());
+  let removed = 0;
+  for (const f of fs.readdirSync(IMG_DIR)) {
+    if (!/^cs408-\d{4}-p\d+-\d+\.png$/.test(f)) continue;
+    if (!referenced.has(f)) { fs.unlinkSync(path.join(IMG_DIR, f)); removed++; }
+  }
+  if (removed) console.log(`清理了 ${removed} 个不再引用的旧 PNG`);
+}
+
 /* ---------- 写回 JSON ---------- */
 const writeLog = [];
 if (!DRY) {
@@ -548,6 +559,33 @@ for (const y of YEARS) {
     const row = { year: y, no: q.no, type: q.type, kw: kws.join("/"), strong, stem40: (q.stem || "").replace(/\s+/g, " ").slice(0, 40) };
     (isTable ? missingTable : missingFig).push(row);
   }
+}
+
+/* ---------- 更新 _manifest.json 里的配图说明（build-cs408.mjs 里「未采集图片」的说明已过时） ---------- */
+if (!DRY) {
+  const mp = path.join(DATA_DIR, "_manifest.json");
+  const mf = JSON.parse(fs.readFileSync(mp, "utf8"));
+  const withImg = [...finalImages.values()].filter((v) => v.length).length;
+  const pngFiles = fs.readdirSync(IMG_DIR).filter((f) => f.endsWith(".png"));
+  const pngBytes = pngFiles.reduce((a, f) => a + fs.statSync(path.join(IMG_DIR, f)).size, 0);
+  const strongMissing = missingFig.filter((x) => x.strong);
+  mf.knownLimitations = (mf.knownLimitations || []).filter((s) => !/未采集图片|images 为空/.test(s));
+  mf.knownLimitations.unshift(
+    `配图已采集：${withImg}/799 道题带图（${pngFiles.length} 个 PNG，${(pngBytes / 1024 / 1024).toFixed(1)} MB，见 cs408/images/），` +
+    `由 tools/attach-cs408-images.mjs 从 tools/cache/rebuild/<year>.pdf 的内嵌图自动抽出、按题号区间挂接（已并入 npm run data:cs408）。` +
+    (strongMissing.length ? `仍有 ${strongMissing.length} 道题的插图在源 PDF 中没有嵌入图（如 ${strongMissing.slice(0, 4).map((m) => `${m.year} q${m.no}`).join("、")} 等），题干会以「如下图」「题 N 图」引用缺失的图，需查阅原卷 PDF。` : "")
+  );
+  mf.images = {
+    dir: "cs408/images",
+    files: pngFiles.length,
+    bytes: pngBytes,
+    questionsWithImages: withImg,
+    totalQuestions: 799,
+    extractedFrom: "tools/cache/rebuild/<year>.pdf（neville-studio/408-exam-paper 的 papers-rebuild）",
+    reproducedBy: "node tools/attach-cs408-images.mjs（已并入 npm run data:cs408）",
+    note: "文件名格式 cs408-<year>-p<page>-<序号>.png；只含源 PDF 里内嵌的图片 XObject，题干中的表格在源 PDF 里多为文本层，不在此列。",
+  };
+  fs.writeFileSync(mp, JSON.stringify(mf, null, 1), "utf8");
 }
 
 /* ---------- 报告 ---------- */

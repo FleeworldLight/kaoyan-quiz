@@ -467,7 +467,7 @@
   "note": "2009–2025 全部 17 年，每年 40 单选 + 7 综合"
  },
  "knownLimitations": [
-  "所有题目均未采集图片（images 为空）。408 真题中相当一部分题目带插图（树/图/表格/Cache 结构图等），此类题目的题干会以『如下图』『如下表』引用缺失的图，需查阅原卷 PDF。",
+  "配图已采集：110/799 道题带图（121 个 PNG，29.4 MB，见 cs408/images/），由 tools/attach-cs408-images.mjs 从 tools/cache/rebuild/<year>.pdf 的内嵌图自动抽出、按题号区间挂接（已并入 npm run data:cs408）。仍有 12 道题的插图在源 PDF 中没有嵌入图（如 2010 q43、2011 q8、2011 q44、2012 q44 等），题干会以「如下图」「题 N 图」引用缺失的图，需查阅原卷 PDF。",
   "有 3 道单选题的 A/B/C/D 四个选项本身就是图片（2009 q4、2010 q3、2017 q8），options 文本为空字符串，题干保留原文。",
   "选项与题干为 PDF 文本层抽取结果，部分公式/上下标（如 log2n、2^n、n^2）在文本层中丢失上下标格式，显示为 log2n、O(n2) 等。",
   "少数解析在源 PDF 文本层中缺失（见各年 explanationMissing 字段）。",
@@ -538,5 +538,17 @@
     }
    ]
   }
- ]
+ ],
+ "images": {
+  "dir": "cs408/images",
+  "files": 121,
+  "bytes": 10866457,
+  "questionsWithImages": 110,
+  "totalQuestions": 799,
+  "extractedFrom": "tools/cache/rebuild/<year>.pdf（neville-studio/408-exam-paper 的 papers-rebuild）",
+  "reproducedBy": "node tools/attach-cs408-images.mjs（已并入 npm run data:cs408）",
+  "note": "文件名格式 cs408-<year>-p<page>-<序号>.png；只含源 PDF 里内嵌的图片 XObject，题干中的表格在源 PDF 里多为文本层，不在此列。",
+  "compressed": true,
+  "compressNote": "已用 tools/optimize-images.py 做自适应调色板压缩（墨迹掩膜 IoU ≥ 0.99，约 30 MB → 10 MB）；重跑 attach-cs408-images.mjs 会生成未压缩的原图，需再手动跑一次该脚本。"
+ }
 }
