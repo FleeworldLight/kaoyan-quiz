@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 汇总各科题库，生成 public/data/index.json
  * 用法: node tools/build-index.mjs
  *
@@ -136,6 +136,50 @@ for (const meta of SUBJECTS) {
     papers, topics,
   });
   report.push(`${meta.id.padEnd(9)} ${String(papers.length).padStart(3)} 套 / ${String(questionCount).padStart(4)} 题 / 客观题 ${String(choiceCount).padStart(4)} / 知识点 ${String(topics.length).padStart(3)} / 答案覆盖 ${questionCount ? Math.round((answerCount / questionCount) * 100) : 0}%`);
+}
+
+/* ---------------- 模拟卷：并入 index.mockGroups，并挂到各科 subjects[].mocks ---------------- */
+const mockManifest = readJSON(path.join(DATA, "mock", "_manifest.json"));
+const mockGroups = [];
+if (mockManifest && Array.isArray(mockManifest.groups)) {
+  for (const g of mockManifest.groups) {
+    const papers = [];
+    let qn = 0, cn = 0;
+    for (const p of g.papers || []) {
+      const rel = String(p.file || "").replace(/^\.\//, "");
+      const doc = rel ? readJSON(path.join(DATA, rel)) : null;
+      let pq = 0, pc = 0;
+      for (const sec of doc?.sections || []) {
+        for (const q of sec.questions || []) {
+          pq++;
+          if ((q.type === "single" || q.type === "multiple") && (q.options || []).length > 0) pc++;
+        }
+      }
+      qn += pq; cn += pc;
+      papers.push({
+        ...p,
+        file: rel,
+        questionCount: pq || p.questionCount || 0,
+        choiceCount: pc || p.choiceCount || 0,
+        duration: doc?.duration || p.duration || 180,
+        quality: p.quality || doc?.quality || "unverified",
+        kind: "mock",
+      });
+    }
+    if (!papers.length) continue;
+    mockGroups.push({ ...g, papers, questionCount: qn, choiceCount: cn });
+  }
+}
+out.mockGroups = mockGroups;
+out.mockNote = mockManifest?.note || "";
+out.mockFailed = mockManifest?.failed || [];
+for (const sub of out.subjects) {
+  sub.mocks = mockGroups.filter((g) => g.subject === sub.id).flatMap((g) =>
+    g.papers.map((p) => ({ ...p, mockGroup: g.id, publisher: g.publisher, mockName: g.name }))
+  );
+}
+if (mockGroups.length) {
+  report.push(`mock      ${String(mockGroups.length).padStart(3)} 个系列 / ${String(mockGroups.reduce((a, g) => a + g.papers.length, 0)).padStart(3)} 套 / ${mockGroups.reduce((a, g) => a + g.questionCount, 0)} 题`);
 }
 
 fs.mkdirSync(DATA, { recursive: true });

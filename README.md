@@ -1,7 +1,7 @@
 # 考研刷题（kaoyan-quiz）
 
 一个纯前端的考研刷题单页应用，覆盖 **政治 / 英语一 / 数学一 / 408** 四科。
-基于历年真题构建题库，支持章节练习、整套模考、随机组卷、错题本、统计看板，全部数据存在浏览器本地，不联网也能刷。
+历年真题 + 模拟卷，含智能组卷、错题复测、掌握地图、知识图谱、收藏本与题目笔记；全部学习数据存在浏览器本地，不联网也能刷。
 
 ## 快速开始
 
@@ -10,19 +10,10 @@
 手动方式：
 
 ```bash
-# 1. 安装依赖（已装好可跳过）
-pnpm install --node-linker=hoisted
-
-# 2. 构建并启动本地服务
-pnpm build
-pnpm serve
-# 浏览器打开 http://127.0.0.1:5199/
-```
-
-开发模式（热更新）：
-
-```bash
-pnpm dev        # 默认 http://127.0.0.1:5199/
+pnpm install --node-linker=hoisted   # 安装依赖（已装好可跳过）
+pnpm build                            # 构建
+pnpm serve                            # 启动本地服务，浏览器打开 http://127.0.0.1:5199/
+pnpm dev                              # 或开发模式（热更新）
 ```
 
 > ⚠️ 必须通过 HTTP 访问（`pnpm serve` / `启动刷题.cmd`），**不能直接双击 `dist/index.html`**——浏览器出于安全限制不允许 `file://` 下 `fetch` 本地 JSON 题库。
@@ -32,25 +23,42 @@ pnpm dev        # 默认 http://127.0.0.1:5199/
 | 科目 | 覆盖 | 套数 | 总题量 | 可自动评分 |
 |---|---|---|---|---|
 | 数学一 | 1987–2025（1994、2022 因源文件缺失/OCR 损坏剔除） | 37 | 765 | 257 |
-| 英语一 | 2017–2023 | 7 | 359 | 275 |
+| 英语一 | 2010–2023 | 14 | 723 | 555 |
 | 政治 | 2010–2024 | 15 | 565 | 495 |
-| 408 | 2009–2023 | 15 | 705 | 600 |
-| **合计** | | **74** | **2394** | **1627** |
+| 408 | 2009–2025 | 17 | 799 | 680 |
+| **合计** | | **83** | **2852** | **1987** |
+
+> 模拟卷单独成区（见 `public/data/mock/`），抓取到的系列会出现在左侧「模拟卷」里。
 
 ## 功能
 
+### 学习
 | 模块 | 说明 |
 |---|---|
-| 年份套卷 | 按年份成套真题，支持计时、答题卡、交卷、自动评分 |
-| 章节练习 | 按知识点跨年份抽题，按学科分组展示，显示各知识点掌握度 |
-| 随机组卷 | 四科按题量自由配比混合组卷 |
-| 错题本 | 答错自动收录，支持按科目筛选、查看解析、重做、导出 JSON |
-| 收藏与笔记 | 题目级收藏与 Markdown 笔记 |
-| 统计看板 | 正确率、各科进度、待加强知识点排行、26 周学习热力图、练习记录 |
-| 公式渲染 | KaTeX 渲染 LaTeX（数学、408、政治均有公式） |
-| 手机适配 | 响应式布局 + 底部导航，可在手机浏览器刷题 |
+| 学习区首页 | 考研倒计时、今日/累计统计、每日作答热力图、待办提醒、四科进度、待加强知识点、最近练习 |
+| 题库 | 四科切换 · 完整/严选/真题过滤 · 按年份/按章节两种视图 · 试卷速览（点任一题直接跳到该题） |
+| 模拟卷 | 独立模块，按系列/出版方分组，质量默认标记「未校验」 |
+| 智能组卷 | 科目 × 章节 × 题型 × 题量自由配比，6 个快捷模板，薄弱章节一键组卷，随机种子可复现 |
+| 掌握地图 | 各科掌握度分布、分组正确率雷达、最需补强章节排行、章节明细表 |
+| 知识图谱 | 科目 → 章节分组 → 知识点三层力导向图，节点大小 = 题量、颜色 = 掌握度，点击直接开练 |
 
-答题时支持键盘盲操：`A`–`D` / `1`–`4` 选择，`←` `→` 切题，`Enter` 下一题，`F` 标记。
+### 刷题
+| 模块 | 说明 |
+|---|---|
+| 练习模式 | 逐年/逐章/随机/智能组卷，作答后可选立即显示答案 |
+| 模考模式 | 计时、答题卡、交卷自动评分、分题型表现、错题清单 |
+| 作答布局 | **单题**（一屏一题）与**连续**（长列表 + 作答自滚）两种 |
+| 键盘盲操 | `A`–`D` / `1`–`4` 选项 · `←` `→` 切题 · `Enter` 下一题 · `F` 标记 · `R` 看答案 |
+| 超时提醒 | 单题耗时超过 2.5 分钟（主观题 6 分钟）时在运行条提示 |
+| 错题复测 | 错题自动收录，按科目/章节聚合，错题章节排行 + 攻坚建议，逐题展开复测 |
+| 收藏本 / 题目笔记 | 搜索、筛选、展开原题，导出 Markdown |
+| 学习记录 | 统计卡、热力图、作答趋势双轴图、练习明细表、导出 CSV、清空数据 |
+| 题目搜索 | 顶栏 `Ctrl/⌘ + K` 全库检索题干/选项/答案 |
+
+### 界面
+- Tailwind CSS v4 + Radix UI + lucide-react + Framer Motion + ECharts
+- 左侧固定侧栏（导航 + 各科进度），顶栏面包屑与全局搜索，移动端抽屉 + 底部 Tab 栏
+- 设计 token 与参考站同一语言：画布 `#f5f7fa`、墨色 `#172033`、品牌蓝 `#356fe5`、深蓝 hero `#244fa8`，14px 基准字号 + 衬线体标题
 
 ## 题库数据
 
@@ -58,12 +66,13 @@ pnpm dev        # 默认 http://127.0.0.1:5199/
 
 ```
 public/data/
-  index.json          # 全局清单：科目、试卷、题量、知识点
+  index.json            # 全局清单：科目、试卷、题量、知识点、模拟卷分组
   math1/<year>.json
   english1/<year>.json
   politics/<year>.json
   cs408/<year>.json
-  <subject>/images/   # 题干里的配图
+  mock/_manifest.json + mock/<id>.json    # 模拟卷
+  <subject>/images/     # 题干配图
 ```
 
 数据规范见 [`tools/SCHEMA.md`](tools/SCHEMA.md)。
@@ -73,90 +82,89 @@ public/data/
 | 科目 | 来源 |
 |---|---|
 | 数学一 | [TsekaLuk/Kaoyan-Math1-Papers](https://github.com/TsekaLuk/Kaoyan-Math1-Papers)（CC BY-NC-SA 4.0）：真题 Markdown + 逐题解析 |
-| 英语一 | 同上仓库 `solutions/英语一/`（真题 + 答案解析 Markdown）；详见 `tools/english-findings.md` |
+| 英语一 | 同上仓库 `solutions/英语一/` + 本地 `KaoYan-English-master` 的历年真题与解析 PDF；详见 `tools/english-findings.md` |
 | 政治 | [yy11111111111111111111/kaoyan-politics](https://github.com/yy11111111111111111111/kaoyan-politics) 为主源，与 [mrwoov/kyzz](https://github.com/mrwoov/kyzz)、学信网官方答案交叉校验；详见 `tools/politics-findings.md` |
-| 408 | [neville-studio/408-exam-paper](https://github.com/neville-studio/408-exam-paper) 的 `papers-rebuild/`（题干）+ 本地 `408真题/2009-2023答案/` 与 `2009-2016真题&答案/`（答案双源互证）；详见 `tools/cs408-findings.md` |
+| 408 | [neville-studio/408-exam-paper](https://github.com/neville-studio/408-exam-paper) 的 `papers-rebuild/`（题干）+ 本地 `408真题/` 两套 PDF 双源互证答案；详见 `tools/cs408-findings.md` |
+| 模拟卷 | 互联网公开渠道，逐套记录来源 URL；详见 `tools/mock-findings.md` |
 
-每份卷子的 JSON 里都带 `source` 字段（名称 + URL）。
-
-**几个必须知道的数据坑（都已在数据里如实标注，没有编造）**：
-
-- 政治主源之外的 `mrwoov/kyzz` **选项顺序被打乱**，答案字母与公开发布真题不一致，不能直接采用。
-- 408 本地 `2009-2023真题/*.pdf` 有 8 个年份中文全部乱码（PDF 缺 ToUnicode 映射），题干改用上游「重构版」PDF。
-- 408 与英语的含图题、部分公式上下标在文本抽取中会丢失；这类题目请对照原卷 PDF。
+每份卷子的 JSON 都带 `source` 字段（名称 + URL），前端在解析区展示。
 
 ### 数据质量
 
-- 每份卷子有 `quality` 字段（`high` / `medium` / `low`），OCR 质量差的卷子在前端会打标签提示。
-- **答案存疑**：存在跨来源答案分歧的题带 `answerDisputed: true` + `answerNote`（政治 20 题），前端显示「答案存疑」徽标，并给出分歧说明；答案不会被删除，但请以官方答案为准。
-- **选项缺失**：原始素材里选项被 OCR 吞掉的题带 `optionIssue` 字段，前端显示提示并当作主观题（自评）处理，不参与自动评分、不计入正确率。
-- 数学 2022 与 1994 因源数据不可用（2022 全文乱码、1994 无真题文件）已整体剔除，没有用生成内容填充。
-
+- 卷级 `quality`：`high` / `medium` / `low` / `unverified`（模拟卷默认），前端打标签提示。
+- **答案存疑**：跨来源答案有分歧的题带 `answerDisputed: true` + `answerNote`，前端显示「答案存疑」徽标并给出分歧说明。答案不会被删除，但请以官方答案为准。
+- **选项残缺**：原始素材里选项被 OCR 吞掉的题带 `optionIssue`，前端提示并当作主观题处理，不参与自动评分、不计入正确率。
+- **没有编造**：抓不到答案就留空并降级 `quality`；OCR 损坏严重的年份（数学 2022）整体剔除。数学 1994 源文件缺失、英语 2024 上游素材实为 2022 内容，均如实记录。
 
 ### 重新生成题库
 
 ```bash
 pnpm data:build     # 抓取原始素材 → 解析 → 生成 index.json
 pnpm data:index     # 只重建 index.json
-pnpm verify         # 校验所有题库 JSON
+pnpm verify         # 全库结构校验
 ```
-
-解析脚本都在 `tools/` 下，每个科目的解析逻辑是独立的：
 
 | 科目 | 脚本 |
 |---|---|
 | 数学一 | `fetch-tree.mjs` → `fetch-math.mjs` → `parse-math.mjs` → `fetch-math-images.mjs` |
 | 英语一 | `fetch-english.mjs` → `parse-english.mjs` |
-| 政治 | `politics-parse.mjs` → `build-politics.mjs` → `tag-chapters.mjs` → `build-topics-json.mjs` → `add-answer-note.mjs` → `validate-politics.mjs` |
-| 408 | `fetch-rebuild.mjs` → `extract-rebuild.mjs` / `extract-qa.mjs` → `build-cs408.mjs` → `xcheck.mjs` → `validate-cs408.mjs` |
-| 汇总 | `build-index.mjs` 生成 `public/data/index.json`；`validate-all.mjs` 全库校验 |
+| 政治 | `politics-parse.mjs` → `build-politics.mjs` → `tag-chapters.mjs` → `build-topics-json.mjs` → `add-answer-note.mjs` |
+| 408 | `fetch-rebuild.mjs` → `extract-rebuild.mjs` / `extract-qa.mjs` → `build-cs408.mjs` → `xcheck.mjs` |
+| 模拟卷 | `fetch-mock.mjs` |
+| 汇总 | `build-index.mjs` 生成 `index.json`；`validate-all.mjs` 全库校验 |
 
-原始素材缓存在 `tools/cache/` 下，可安全删除后重新抓取。
+原始素材缓存在 `tools/cache/`（已 gitignore），可安全删除后重新抓取。
 
-校验全部数据：
+## 自动化测试
 
 ```bash
-node tools/validate-all.mjs
+pnpm verify      # 全库数据校验：JSON 结构、id 唯一、选项与答案一致性、多选题答案升序等
+pnpm test:e2e    # 端到端交互测试（无头 Edge + CDP 真实点击）
 ```
 
-它会检查：JSON 可解析、题目 id 全库唯一、题干非空、单选题必须有 4 个 A/B/C/D 选项且答案在选项内、多选题答案字母升序且 ≥2 个、考点 id 双向一致等。
+`pnpm verify` 当前 **0 ERROR**。`pnpm test:e2e` 需要先跑起 `pnpm serve`，覆盖 15 组场景 **30/30 通过**：
+首页倒计时/热力图/侧栏 → 题库与章节视图 → 练习答错→解析→错题写入 → 键盘盲操 → 收藏与笔记 →
+连续布局 → 错题复测 → 掌握地图图表 → 知识图谱 → 智能组卷模板与生成 → 模考计时/答题卡/不立即显示答案/交卷 →
+学习记录 → 收藏本 → 笔记页 → 全局搜索 → 移动端布局 → 全程无 JS 运行时异常。
 
 ## 技术栈
 
-Vite 5 + React 18 + React Router（HashRouter） + KaTeX。无后端、无数据库。
-学习进度、错题、收藏、笔记、考试记录全部保存在 `localStorage`（键名 `kq:state:v1`）。
+Vite 5 · React 18 · React Router（HashRouter） · Tailwind CSS v4 · Radix UI · lucide-react ·
+Framer Motion · ECharts · KaTeX。无后端、无数据库，学习数据存 `localStorage`（键名 `kq:state:v1`）。
 
 ## 目录结构
 
 ```
 kaoyan-quiz/
-  启动刷题.cmd              ← 双击即可构建 + 启动 + 打开浏览器
-  index.html
-  vite.config.js
+  启动刷题.cmd
   src/
-    main.jsx  App.jsx  styles.css
-    lib/      data.js（加载与组卷） store.js（本地状态与统计） locate.js
-    components/ Layout.jsx  RichText.jsx（Markdown + KaTeX 渲染）
-    pages/    Home  Subject  Run（练习/模考）  Wrong  Fav  Stats
-  tools/      数据管线 + 静态服务器 + 校验 + 端到端测试
-  public/data/题库 JSON
+    index.css                 设计系统（Tailwind @theme token）
+    App.jsx  main.jsx
+    components/
+      ui.jsx                  基础组件（Button/Card/Badge/Progress/Tabs/Modal/…）
+      Charts.jsx              ECharts 封装 + 热力图/趋势/雷达/图谱
+      QuestionView.jsx        题目渲染（练习/模考/错题本/收藏本共用）
+      RichText.jsx            Markdown + KaTeX 渲染
+      layout/AppShell.jsx     侧栏 + 顶栏 + 移动导航 + 全局搜索
+    lib/
+      data.js                 数据加载、组卷、模拟卷
+      store.js                localStorage 状态与统计
+      question.js             题目判定纯函数
+      locate.js  utils.js
+    pages/                    Dashboard Library Mock Practice SmartCompose
+                              WrongRetest MasteryMap KnowledgeGraph
+                              Favorites Notes Records
+  tools/                      数据管线 + 静态服务器 + 校验 + 端到端测试
+  public/data/                题库 JSON
 ```
-
-## 自动化测试
-
-```bash
-pnpm verify      # 全库数据校验（JSON 结构、id 唯一、选项与答案一致性等）
-pnpm test:e2e    # 端到端交互测试：无头 Edge 真实点击，验证答题/错题本/收藏/笔记/模考
-```
-
-`test:e2e` 需要先跑起 `pnpm serve`。它会依次验证：首页四科渲染 → 答错后展示正确答案并标红 → 进度与错题写入 localStorage → 收藏与笔记 → 错题本列表 → 统计页热力图 → 章节练习 → 四科随机组卷 → 模考计时/答题卡/交卷。当前为 **16/16 通过**。
 
 ## 已知限制
 
 - 填空、解答、翻译、写作等主观题不支持自动评分，采用「查看参考答案 + 自评」，不计入正确率。
-- 错题本导出为 JSON，暂不支持导入。
+- 模拟卷来自公开渠道、尚未逐题校验，请以正式出版物为准。
+- 含图题目（408 的二叉树/页表等）在文本抽取中会丢失图形，题干会写「如下图」，需对照原卷 PDF。
+- 错题本/收藏本导出为文件，暂不支持导入。
 - 学习数据只存在本机浏览器，清空浏览器数据会丢失。
-- 部分年份的题目解析来自 OCR，个别 LaTeX 公式可能渲染异常，题干会保留原始文本。
 
 ## 版权说明
 
