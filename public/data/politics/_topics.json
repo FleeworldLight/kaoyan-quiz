@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-02T11:43:18.531Z",
+  "generatedAt": "2026-10-02T11:52:14.344Z",
   "note": "chapters[] 为章节练习用的「学科-章」索引（含少量「学科-综合」兜底，kind=subject-fallback）；subjects[] 为从本地考点笔记抽取的细粒度考点。两者 id 均为全局唯一，且只保留 count>0 的项。",
   "tagging": {
     "method": "关键词规则打分（章级阈值 6 / 科目取最高分章）",

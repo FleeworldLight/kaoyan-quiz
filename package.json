@@ -14,7 +14,7 @@
     "preview": "vite preview",
     "data:index": "node tools/build-index.mjs",
     "data:math": "node tools/fetch-tree.mjs && node tools/fetch-math.mjs && node tools/parse-math.mjs && node tools/parse-math-2022.mjs && node tools/fetch-math-images.mjs",
-    "data:english": "node tools/fetch-english.mjs && node tools/parse-english.mjs",
+    "data:english": "node tools/fetch-english.mjs && node tools/parse-english.mjs && node tools/fix-english-scores.mjs",
     "data:politics": "node tools/politics-parse.mjs && node tools/build-politics.mjs && node tools/tag-chapters.mjs && node tools/build-topics-json.mjs && node tools/add-answer-note.mjs",
     "data:cs408": "node tools/build-cs408.mjs",
     "data:mock": "node tools/fetch-mock.mjs && node tools/build-mock.mjs",

@@ -151,6 +151,7 @@ function buildHtmlYear(year) {
     sourceUrls: cfg.map(c => c.url),
     verifyMethod: "三个互相独立的公开来源：题干与选项按文本内容对齐（不依赖字母顺序），选择题答案逐题投票；多数票胜出，平票取主来源，分歧题标 CONFLICT-3src",
     sourceDetail: cfg.map(c => ({ id: c.id, name: c.name, url: c.url })),
+    contentNote: "题干与选项取自公开的真题整理版（武昌首义学院马克思主义学院），措辞与试卷原卷不完全一致：与第 4 个独立来源（西安外事学院公开的 16 页《2025 年全国硕士研究生招生考试思想政治理论真题》PDF）逐题比对，29/33 道题有 ≥3 个选项能在原件同位置对上，28/33 道题「本库答案所选选项」也与原件同位置一致；其余为措辞级差异（Q2/Q19/Q21/Q30/Q31），语义与原选项相同、正确答案位置不变。若需与试卷原卷逐字一致的题干/选项，可改用该 PDF 作为内容来源（解析脚本 tools/parse-xaiu-2025.mjs 已备好）。",
   };
 }
 
@@ -165,14 +166,14 @@ const stat = { q: 0, single: 0, multiple: 0, essay: 0, noAnswer: 0 };
 const qualityTally = { high: 0, medium: 0, low: 0 };
 
 for (let year = 2010; year <= 2025; year++) {
-  let questions = [], notes = [], srcName, srcUrl, sourceUrls, verifyMethod, sourceDetail;
+  let questions = [], notes = [], srcName, srcUrl, sourceUrls, verifyMethod, sourceDetail, contentNote;
   const useHtml = Boolean(HTML_SOURCES[year]);
 
   if (useHtml) {
     const r = buildHtmlYear(year);
     questions = r.questions; notes = r.notes;
     srcName = r.srcName; srcUrl = r.srcUrl; sourceUrls = r.sourceUrls;
-    verifyMethod = r.verifyMethod; sourceDetail = r.sourceDetail;
+    verifyMethod = r.verifyMethod; sourceDetail = r.sourceDetail; contentNote = r.contentNote;
   } else {
     const kyzzList = parseKyzz(year);
     const kyzzMap = new Map(kyzzList.map(k => [k.no, k]));
@@ -280,6 +281,7 @@ for (let year = 2010; year <= 2025; year++) {
     ].filter(s => s.questions.length),
   };
   if (sourceDetail) paper.verification.sources = sourceDetail;
+  if (contentNote) paper.verification.contentNote = contentNote;
   if (!ONLY_YEARS || ONLY_YEARS.has(year)) {
     fs.writeFileSync(path.join(OUT, `${year}.json`), JSON.stringify(paper, null, 2), "utf8");
   }

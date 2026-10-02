@@ -20,15 +20,17 @@ pnpm dev                              # 或开发模式（热更新）
 
 ## 题库规模
 
+**四科都已覆盖 2010–2025**（数学另有 1987–2009，408 另有 2009）。
+
 | 科目 | 覆盖 | 套数 | 总题量 | 可自动评分 |
 |---|---|---|---|---|
-| 数学一 | 1987–2025（缺 1994，源文件不存在） | 38 | 787 | 267 |
-| 英语一 | 2010–2023 | 14 | 723 | 555 |
+| 数学一 | 1987–2025（缺 1994，源文件不存在；2010–2025 完整） | 38 | 787 | 267 |
+| 英语一 | 2010–2025 | 16 | 827 | 635 |
 | 政治 | 2010–2025 | 16 | 603 | 528 |
 | 408 | 2009–2025 | 17 | 799 | 680 |
-| **真题合计** | | **85** | **2912** | **2030** |
+| **真题合计** | | **87** | **3016** | **2110** |
 | 模拟卷 | 见下方「模拟卷」 | 22 | 5129 | 3863 |
-| **全库合计** | | **107** | **8041** | **5893** |
+| **全库合计** | | **109** | **8145** | **5973** |
 
 ### 模拟卷（`public/data/mock/`）
 
@@ -98,7 +100,7 @@ public/data/
 | 科目 | 来源 |
 |---|---|
 | 数学一 | [TsekaLuk/Kaoyan-Math1-Papers](https://github.com/TsekaLuk/Kaoyan-Math1-Papers)（CC BY-NC-SA 4.0）：真题 Markdown + 逐题解析 |
-| 英语一 | 同上仓库 `solutions/英语一/` + 本地 `KaoYan-English-master` 的历年真题与解析 PDF；详见 `tools/english-findings.md` |
+| 英语一 | 上游 `solutions/英语一/`（2017–2023）+ 本地 `KaoYan-English-master` 历年真题与解析 PDF（2010–2016）+ [Fantasia1999/kaoyanzhenti](https://github.com/Fantasia1999/kaoyanzhenti) 与懒笔记（2024–2025）；详见 `tools/english-findings.md` |
 | 政治 | [yy11111111111111111111/kaoyan-politics](https://github.com/yy11111111111111111111/kaoyan-politics) 为主源，与 [mrwoov/kyzz](https://github.com/mrwoov/kyzz)、学信网官方答案交叉校验；详见 `tools/politics-findings.md` |
 | 408 | [neville-studio/408-exam-paper](https://github.com/neville-studio/408-exam-paper) 的 `papers-rebuild/`（题干）+ 本地 `408真题/` 两套 PDF 双源互证答案；详见 `tools/cs408-findings.md` |
 | 模拟卷 | 见 `tools/mock-findings.md`：政治 [Kaoyan_Politics2027](https://github.com/SatoriSatori555/Kaoyan_Politics2027)、数学 [zhangyu-1000t](https://github.com/jlshdsdk/zhangyu-1000t)、408 [408-quiz](https://github.com/zsc5725216-hub/408-quiz) |
