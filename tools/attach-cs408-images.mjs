@@ -153,8 +153,15 @@ const MARKER_RE = /^\s*(\d{1,2})\s*[.．]/;
  *  - excludedTop/excludedBottom：页眉页脚带（题号不会出现在那里）
  *  - 题号必须顶格（x ≈ 正文最小 x）
  */
+const FOOTER_RE = /页[（(]共|第\s*\d+\s*页/;
 function scanPageText(items, pageH) {
-  const body = items.filter((it) => it.str && it.str.trim() && it.transform && it.transform[5] > 70 && it.transform[5] < pageH - 30);
+  const body = items.filter((it) => {
+    if (!it.str || !it.str.trim() || !it.transform) return false;
+    const y = it.transform[5];
+    if (y < 32 || y > pageH - 30) return false; // 页脚带（约 y=25）
+    if (y < 48 && FOOTER_RE.test(it.str)) return false; // 「…第 N 页（共 M 页）」
+    return true;
+  });
   const xs = body.map((it) => it.transform[4]);
   const minX = xs.length ? Math.min(...xs) : 0;
   const markers = [];
@@ -233,10 +240,10 @@ function buildMarkerChain(pages) {
   for (const pg of pages) for (const m of pg.markers) cands.push({ ...m, page: pg.page });
   cands.sort((a, b) => (a.page - b.page) || (b.y - a.y) || (a.x - b.x)); // 阅读序：页 → 页内自上而下（y 递减）
   const chain = [];
-  let expect = 1;
   const skipped = [];
+  let last = 0;
   for (const c of cands) {
-    if (c.no === expect) { chain.push(c); expect++; }
+    if (c.no > last) { chain.push(c); last = c.no; }
     else skipped.push(c);
   }
   return { chain, skipped, missing: Array.from({ length: 47 }, (_, i) => i + 1).filter((n) => !chain.some((c) => c.no === n)) };
@@ -345,13 +352,11 @@ for (const y of YEARS) {
 
   // 写盘
   let yearBytes = 0;
-  if (!DRY) {
-    for (const { im, fname } of files) {
-      fs.writeFileSync(path.join(IMG_DIR, fname), im.png);
-      yearBytes += im.png.length;
-    }
-    delete papers[y]._path;
+  for (const { im, fname } of files) {
+    yearBytes += im.png.length;
+    if (!DRY) fs.writeFileSync(path.join(IMG_DIR, fname), im.png);
   }
+  delete papers[y]._path;
   yearStats[y] = { total: imgs.length, kept, droppedBg, droppedSmall, droppedBlank, unresolved, markers: chain.length, missing, skippedMarkers: skipped.length, setTransformCount, bytes: yearBytes, pageCount: pages.length };
 }
 
@@ -429,7 +434,7 @@ for (const y of YEARS) if (yearStats[y].missing.length) push(`  ${y}: 缺 ${year
 push("");
 push("--- 三、挂图对照表 (year / 题号 / 图文件 / 页码 / 图尺寸pt / 像素 / 非白% / 题干关键词 / 题干前40字) ---");
 for (const a of assignments) {
-  push(`${a.year}  q${String(a.no).padStart(2)}  ${a.file.padEnd(26)} p${String(a.page).padStart(2)}  ${a.visible[2] - a.visible[0]}x${a.visible[3] - a.visible[1]}pt  ${a.px.padEnd(10)}  ${(a.nonWhite * 100).toFixed(1)}%  [${a.kw || "无关键词"}]  ${a.stem40}`);
+  push(`${a.year}  q${String(a.no).padStart(2)}  ${a.file.padEnd(26)} p${String(a.page).padStart(2)}  ${r1(a.visible[2] - a.visible[0])}x${r1(a.visible[3] - a.visible[1])}pt  ${a.px.padEnd(10)}  ${(a.nonWhite * 100).toFixed(1)}%  [${a.kw || "无关键词"}]  ${a.stem40}`);
 }
 push("");
 push(`挂图题数: ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道（共 ${assignments.length} 张图）`);

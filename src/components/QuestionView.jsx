@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle, Copy } from "lucide-react";
 import RichText, { dataImageUrl } from "./RichText.jsx";
-import { Badge, Button, Tip, Kbd } from "./ui.jsx";
+import { Badge, Button, Tip, Kbd, Modal } from "./ui.jsx";
 import { normMultiple, isAutoGraded, isCorrect, figureMissing } from "../lib/question.js";
 import { cn } from "../lib/utils.js";
 
@@ -23,6 +23,7 @@ export default function QuestionView({
   footer, compact = false, className,
 }) {
   const [copied, setCopied] = useState(false);
+  const [zoom, setZoom] = useState(null);
   if (!q) return null;
   const meta = TYPE_META[q.type] || TYPE_META.essay;
   const auto = isAutoGraded(q);
@@ -30,6 +31,7 @@ export default function QuestionView({
   const multiSel = q.type === "multiple" ? String(picked || "") : "";
 
   return (
+    <>
     <article data-testid="question" className={cn("overflow-hidden rounded-lg border border-line bg-surface shadow-panel", className)}>
       {/* 头部 */}
       <header className="flex flex-wrap items-center gap-2 border-b border-line-subtle px-4 py-2.5">
@@ -94,7 +96,18 @@ export default function QuestionView({
         {q.images?.length > 0 ? (
           <div className="mt-2.5 flex flex-wrap gap-2">
             {q.images.map((img) => (
-              <img key={img} src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy" className="q-figure !my-0" />
+              <button
+                key={img}
+                type="button"
+                onClick={() => setZoom(img)}
+                title="点击放大"
+                className="group relative rounded-md border border-line-subtle bg-white p-0.5 transition-colors hover:border-brand-line"
+              >
+                <img src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy" className="q-figure !my-0 !border-0" />
+                <span className="pointer-events-none absolute right-1 bottom-1 hidden rounded bg-ink/75 px-1.5 py-0.5 text-[10.5px] text-white group-hover:block">
+                  点击放大
+                </span>
+              </button>
             ))}
           </div>
         ) : null}
@@ -251,5 +264,18 @@ export default function QuestionView({
 
       {footer ? <footer className="border-t border-line-subtle px-4 py-2.5">{footer}</footer> : null}
     </article>
+
+    <Modal
+      open={!!zoom}
+      onOpenChange={(v) => !v && setZoom(null)}
+      title="题目配图"
+      desc={q.subjectName ? q.subjectName + (q.year ? " " + q.year + " 年" : "") + " 第 " + q.no + " 题" : undefined}
+      width="max-w-4xl"
+    >
+      {zoom ? (
+        <img src={dataImageUrl(q.subject, zoom)} alt="题目配图" className="mx-auto max-h-[70vh] w-auto rounded-md border border-line" />
+      ) : null}
+    </Modal>
+    </>
   );
 }
