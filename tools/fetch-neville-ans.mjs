@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 const out = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/neville-ans";
 fs.mkdirSync(out, { recursive: true });
 async function dl(url, dest, tries=3) {

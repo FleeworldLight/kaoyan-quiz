@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/politics";
 const t = JSON.parse(fs.readFileSync(path.join(DIR, "_topics.json"), "utf8"));

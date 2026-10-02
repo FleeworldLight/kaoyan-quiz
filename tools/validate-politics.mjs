@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * tools/validate-politics.mjs
  * 校验 public/data/politics/*.json 是否符合 tools/SCHEMA.md 规范，并做一致性检查。

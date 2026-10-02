@@ -6,7 +6,7 @@
   "title": "2020 年全国硕士研究生招生考试 思想政治理论",
   "duration": 180,
   "totalScore": 100,
-  "quality": "medium",
+  "quality": "low",
   "source": {
     "name": "yy11111111111111111111/kaoyan-politics（历年考研政治真题，含答案要点）",
     "url": "https://github.com/yy11111111111111111111/kaoyan-politics"
@@ -71,11 +71,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-导论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q2",
@@ -109,11 +109,11 @@
           "note": "新东方 2020 真题解析（选项顺序与本题不同）给 D「价值性评价」；kyzz 解析亦主张「价值评价」，但 kyzz 的字母标注为 C。本库沿用来原始源（yy）的 C，此项存疑。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（C）；新东方 2020 真题解析与 mrwoov/kyzz 解析均主张「价值性评价」。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "马原"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q3",
@@ -144,11 +144,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q4",
@@ -179,11 +179,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-科学社会主义"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q5",
@@ -214,11 +214,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-科学社会主义"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q6",
@@ -249,11 +249,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q7",
@@ -284,11 +284,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "史纲"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q8",
@@ -319,11 +319,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q9",
@@ -354,11 +354,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q10",
@@ -389,11 +389,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q11",
@@ -424,11 +424,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q12",
@@ -461,11 +461,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q13",
@@ -496,11 +496,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q14",
@@ -531,11 +531,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q15",
@@ -566,11 +566,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q16",
@@ -601,11 +601,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "时政",
           "chapterTopics": [
             "时政-当年时事"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "时政"
+          "chapterConfidence": "chapter"
         }
       ]
     },
@@ -645,11 +645,11 @@
           "note": "kyzz 答案与本题一致（BCD），但其选项顺序不同，内容对齐后出现分歧，未能判定。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（BCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-认识论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q18",
@@ -680,11 +680,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q19",
@@ -718,11 +718,11 @@
           "note": "kyzz 答案与本题一致（BCD），但其选项顺序不同，内容对齐后出现分歧，未能判定。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（BCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q20",
@@ -753,11 +753,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q21",
@@ -791,11 +791,11 @@
           "note": "kyzz 答案与本题一致（BCD），但其选项顺序不同，内容对齐后出现分歧，未能判定。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（BCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q22",
@@ -826,11 +826,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-基本问题"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q23",
@@ -863,11 +863,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q24",
@@ -898,11 +898,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q25",
@@ -933,11 +933,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q26",
@@ -968,11 +968,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q27",
@@ -1003,11 +1003,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q28",
@@ -1038,11 +1038,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "史纲"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q29",
@@ -1073,11 +1073,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "史纲"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2020-q30",
@@ -1112,11 +1112,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q31",
@@ -1147,11 +1147,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q32",
@@ -1182,11 +1182,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "时政",
           "chapterTopics": [
             "时政-当年时事"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "时政"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2020-q33",
@@ -1217,11 +1217,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         }
       ]
     },

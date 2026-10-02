@@ -1,4 +1,4 @@
-﻿import React, { useMemo } from "react";
+import React, { useMemo } from "react";
 import katex from "katex";
 import { cn } from "../lib/utils.js";
 

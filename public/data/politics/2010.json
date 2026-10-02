@@ -6,7 +6,7 @@
   "title": "2010 年全国硕士研究生招生考试 思想政治理论",
   "duration": 180,
   "totalScore": 100,
-  "quality": "medium",
+  "quality": "low",
   "source": {
     "name": "mrwoov/kyzz（题干与选项）+ 学信网 chsi 官方真题解析（答案）",
     "url": "https://yz.chsi.com.cn/kyzx/other/201001/20100113/61646472-1.html"
@@ -22,8 +22,7 @@
     "method": "答案取自来源原文，并与独立数据集 mrwoov/kyzz 做选项文本内容级交叉校验",
     "conflicts": 4,
     "unresolved": 0,
-    "note": "本题库的题干与选项取自 mrwoov/kyzz，其选项顺序与试卷公开发布顺序不同，但答案已按学信网 chsi 官方答案给出（与该卷公开发布的答案字母一致）。本卷不含材料分析题。",
-    "note2": "以下 4 道题 chsi 官方答案与 kyzz 自带解析自述不一致，已采用 chsi 官方答案：Q2: chsi官方=D / kyzz解析自述=C（已采用 chsi 官方答案）；Q25: chsi官方=ABCD / kyzz解析自述=ACD（已采用 chsi 官方答案）；Q26: chsi官方=AB / kyzz解析自述=ABD（已采用 chsi 官方答案）；Q31: chsi官方=BD / kyzz解析自述=AB（已采用 chsi 官方答案）",
+    "note": "存在答案冲突的题目见各题 verify 字段（CONFLICT-*），请以官方答案为准",
     "conflictList": [
       "Q2: chsi官方=D / kyzz解析自述=C（已采用 chsi 官方答案）",
       "Q25: chsi官方=ABCD / kyzz解析自述=ACD（已采用 chsi 官方答案）",
@@ -72,11 +71,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-导论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q2",
@@ -110,11 +109,11 @@
           "note": "学信网 chsi 官方答案为 D；kyzz 解析主张量变质变故为 C。本题考查「坚持就是胜利」的哲理，公开真题答案以 D 为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「学信网（教育部学信网）官方真题解析」的答案（D）；另有题库（mrwoov/kyzz）据量变质变原理主张选 C。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-辩证法"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q3",
@@ -145,11 +144,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q4",
@@ -180,11 +179,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q5",
@@ -217,11 +216,11 @@
           ],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-辩证法"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q6",
@@ -252,11 +251,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q7",
@@ -287,11 +286,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2010-q8",
@@ -322,11 +321,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-总体布局"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q9",
@@ -357,11 +356,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q10",
@@ -394,11 +393,11 @@
           ],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-社会主义改造与建设"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q11",
@@ -429,11 +428,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q12",
@@ -464,11 +463,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "思修"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2010-q13",
@@ -499,11 +498,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-道德"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q14",
@@ -534,11 +533,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q15",
@@ -569,11 +568,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "时政",
           "chapterTopics": [
             "时政-当年时事"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "时政"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q16",
@@ -604,11 +603,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         }
       ]
     },
@@ -645,11 +644,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "马原"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2010-q18",
@@ -680,11 +679,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q19",
@@ -715,11 +714,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q20",
@@ -750,11 +749,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q21",
@@ -787,11 +786,11 @@
           ],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2010-q22",
@@ -822,11 +821,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q23",
@@ -859,11 +858,11 @@
           ],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-现代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q24",
@@ -894,11 +893,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-中国特色社会主义理论体系"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q25",
@@ -934,11 +933,11 @@
           "note": "学信网 chsi 官方答案为 ABCD；kyzz 解析为 ACD（认为 B 属世界潮流而非历史文化传统）。以 chsi 官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「学信网（教育部学信网）官方真题解析」的答案（ABCD）；另有题库（mrwoov/kyzz）认为 B 属于世界潮流而非历史文化传统，主张选 ACD。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q26",
@@ -972,11 +971,11 @@
           "note": "学信网 chsi 官方答案为 AB；kyzz 解析为 ABD。以 chsi 官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「学信网（教育部学信网）官方真题解析」的答案（AB）；另有题库（mrwoov/kyzz）主张选 ABD。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "史纲"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2010-q27",
@@ -1007,11 +1006,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q28",
@@ -1044,11 +1043,11 @@
           ],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q29",
@@ -1079,11 +1078,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q30",
@@ -1114,11 +1113,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q31",
@@ -1152,11 +1151,11 @@
           "note": "学信网 chsi 官方答案为 BD；mrwoov/kyzz 自带解析自述为 AB。两者对「政治权利和自由」的界定不同，公开真题答案以 BD 为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「学信网（教育部学信网）官方真题解析」的答案（BD）；另有题库（mrwoov/kyzz）对「政治权利和自由」的界定不同，主张选 AB。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q32",
@@ -1187,11 +1186,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-党建"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2010-q33",
@@ -1222,11 +1221,11 @@
           "topics": [],
           "images": [],
           "verify": "chsi-2010",
+          "subjectHint": "时政",
           "chapterTopics": [
             "时政-当年时事"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "时政"
+          "chapterConfidence": "chapter"
         }
       ]
     }

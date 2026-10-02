@@ -1,4 +1,4 @@
-﻿/**
+/**
  * validate-english.mjs — 英语一题库校验
  * 用法：node tools/validate-english.mjs
  */

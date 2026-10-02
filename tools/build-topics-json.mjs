@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 生成 public/data/politics/_topics.json —— 只保留 count > 0 的 topic。
  * 包含两套体系：
  *   chapters[] —— 28 个「学科-章」+ 6 个「学科-综合」兜底，用于章节练习（count>0 才输出）
@@ -36,7 +36,7 @@ const CH_NAMES = {
 };
 const SUBJ_NAMES = { 马原: "马克思主义基本原理", 毛中特: "毛泽东思想和中国特色社会主义理论体系概论", 史纲: "中国近现代史纲要", 思修: "思想道德与法治", 新思想: "习近平新时代中国特色社会主义思想概论", 时政: "形势与政策（时政）" };
 
-const stats = { chapter: 0, subjectOnly: 0, none: 0, total: 0, tagged: 0 };
+const stats = { chapter: 0, subjectOnly: 0, none: 0, total: 0, tagged: 0, essay: 0 };
 const counts = new Map();       // topicId -> count
 const subjectCounts = new Map();// subject -> 选择题数
 let granularTagged = 0;
@@ -46,7 +46,7 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort())
   for (const sec of paper.sections) for (const q of sec.questions) {
     for (const t of q.topics || []) counts.set(t, (counts.get(t) || 0) + 1);
     if ((q.topics || []).length) granularTagged++;
-    if (sec.id === "essay") continue;
+    if (sec.id === "essay") { stats.essay++; continue; }
     stats.total++;
     if (q.subjectHint) subjectCounts.set(q.subjectHint, (subjectCounts.get(q.subjectHint) || 0) + 1);
     const ct = (q.chapterTopics || [])[0];
@@ -96,7 +96,7 @@ const doc = {
     totalChapters: chapters.filter(c => c.kind === "chapter").length,
     totalFallbackBuckets: chapters.filter(c => c.kind === "subject-fallback").length,
     totalTopics: subjects.reduce((a, s) => a + s.chapters.reduce((b, c) => b + c.topics.length, 0), 0),
-    totalQuestions: stats.total + 70,
+    totalQuestions: stats.total + stats.essay,
     choiceQuestions: stats.total,
   },
   chapters,

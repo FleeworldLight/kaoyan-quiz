@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 const BASE = "G:/期末及简历和别的项目/考研资料/Politics-Obsidian-Note-latest";
 const SUBJECTS = ["马原", "毛中特", "史纲", "思修", "新思想"];

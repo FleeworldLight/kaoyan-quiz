@@ -1,0 +1,892 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-02T11:31:26.634Z",
+  "note": "模拟卷来源为互联网公开渠道，未经逐题校验，仅供练习；请以正式出版物为准。本区所有卷 quality 均为 unverified；其中部分素材为「题库型」（按章节组织，非整卷模拟卷），已在各 group 的 note / 各卷的 paperKind 中标明。",
+  "failed": [
+    {
+      "name": "jlshdsdk/zhangyu-1000t :: chapters/chapter-72.html",
+      "source": "jlshdsdk/zhangyu-1000t",
+      "url": "https://github.com/jlshdsdk/zhangyu-1000t",
+      "reason": "原始文件下载失败 HTTP 404"
+    },
+    {
+      "name": "jlshdsdk/zhangyu-1000t :: chapters/chapter-73.html",
+      "source": "jlshdsdk/zhangyu-1000t",
+      "url": "https://github.com/jlshdsdk/zhangyu-1000t",
+      "reason": "原始文件下载失败 HTTP 404"
+    }
+  ],
+  "groups": [
+    {
+      "id": "politics-2027-marx",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 马原",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-marx-single",
+          "file": "mock/mock-politics-2027-marx-single.json",
+          "title": "2027 考研政治选择题题库 · 马原（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 139,
+          "choiceCount": 139,
+          "withAnswer": 139,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-marx"
+        },
+        {
+          "id": "mock-politics-2027-marx-multi",
+          "file": "mock/mock-politics-2027-marx-multi.json",
+          "title": "2027 考研政治选择题题库 · 马原（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 157,
+          "choiceCount": 157,
+          "withAnswer": 157,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-marx"
+        }
+      ]
+    },
+    {
+      "id": "politics-2027-maogai",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 毛中特",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-maogai-single",
+          "file": "mock/mock-politics-2027-maogai-single.json",
+          "title": "2027 考研政治选择题题库 · 毛中特（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 64,
+          "choiceCount": 64,
+          "withAnswer": 64,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-maogai"
+        },
+        {
+          "id": "mock-politics-2027-maogai-multi",
+          "file": "mock/mock-politics-2027-maogai-multi.json",
+          "title": "2027 考研政治选择题题库 · 毛中特（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 57,
+          "choiceCount": 57,
+          "withAnswer": 57,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-maogai"
+        }
+      ]
+    },
+    {
+      "id": "politics-2027-xisi",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 习思想",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-xisi-single",
+          "file": "mock/mock-politics-2027-xisi-single.json",
+          "title": "2027 考研政治选择题题库 · 习思想（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 100,
+          "choiceCount": 100,
+          "withAnswer": 100,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-xisi"
+        },
+        {
+          "id": "mock-politics-2027-xisi-multi",
+          "file": "mock/mock-politics-2027-xisi-multi.json",
+          "title": "2027 考研政治选择题题库 · 习思想（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 146,
+          "choiceCount": 146,
+          "withAnswer": 146,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-xisi"
+        }
+      ]
+    },
+    {
+      "id": "politics-2027-shigang",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 史纲",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-shigang-single",
+          "file": "mock/mock-politics-2027-shigang-single.json",
+          "title": "2027 考研政治选择题题库 · 史纲（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 122,
+          "choiceCount": 122,
+          "withAnswer": 122,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-shigang"
+        },
+        {
+          "id": "mock-politics-2027-shigang-multi",
+          "file": "mock/mock-politics-2027-shigang-multi.json",
+          "title": "2027 考研政治选择题题库 · 史纲（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 114,
+          "choiceCount": 114,
+          "withAnswer": 114,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-shigang"
+        }
+      ]
+    },
+    {
+      "id": "politics-2027-sixiu",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 思修法基",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-sixiu-single",
+          "file": "mock/mock-politics-2027-sixiu-single.json",
+          "title": "2027 考研政治选择题题库 · 思修法基（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 78,
+          "choiceCount": 78,
+          "withAnswer": 78,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-sixiu"
+        },
+        {
+          "id": "mock-politics-2027-sixiu-multi",
+          "file": "mock/mock-politics-2027-sixiu-multi.json",
+          "title": "2027 考研政治选择题题库 · 思修法基（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 96,
+          "choiceCount": 96,
+          "withAnswer": 96,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-sixiu"
+        }
+      ]
+    },
+    {
+      "id": "politics-2027-zonghe",
+      "subject": "politics",
+      "subjectName": "政治",
+      "publisher": "徐涛 / 袁·杰（来源题库）",
+      "name": "2027 考研政治选择题题库 · 综合训练",
+      "year": 2027,
+      "source": {
+        "name": "SatoriSatori555/Kaoyan_Politics2027 · 考研政治选择题网页版题库（yantu 徐涛 袁·杰 题目）",
+        "url": "https://github.com/SatoriSatori555/Kaoyan_Politics2027"
+      },
+      "note": "题库型素材（按教材章节组织，非整卷模拟卷）。答案由来源生成（answerInferred=true），未经逐题核对；题干/选项未经人工校对。",
+      "papers": [
+        {
+          "id": "mock-politics-2027-zonghe-single",
+          "file": "mock/mock-politics-2027-zonghe-single.json",
+          "title": "2027 考研政治选择题题库 · 综合训练（单项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 70,
+          "choiceCount": 70,
+          "withAnswer": 70,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-zonghe"
+        },
+        {
+          "id": "mock-politics-2027-zonghe-multi",
+          "file": "mock/mock-politics-2027-zonghe-multi.json",
+          "title": "2027 考研政治选择题题库 · 综合训练（多项选择题）",
+          "paperKind": "questionBank",
+          "questionCount": 79,
+          "choiceCount": 79,
+          "withAnswer": 79,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "politics-2027-zonghe"
+        }
+      ]
+    },
+    {
+      "id": "math1-zhangyu1000-2026-test",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "张宇（来源：1000 题转录版）",
+      "name": "2026 张宇考研数学1000题 · 测试卷",
+      "year": 2026,
+      "source": {
+        "name": "jlshdsdk/zhangyu-1000t · 2026 张宇考研数学1000题（数学一）刷题版（题目与解析转录自原书）",
+        "url": "https://github.com/jlshdsdk/zhangyu-1000t"
+      },
+      "note": "整卷型素材（书末四套测试卷），题目与解析同步转录，未逐题核对。",
+      "papers": [
+        {
+          "id": "mock-math1-zhangyu1000-2026-test1",
+          "file": "mock/mock-math1-zhangyu1000-2026-test1.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 测试卷一",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 16,
+          "answerRate": 0.7273,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-test"
+        },
+        {
+          "id": "mock-math1-zhangyu1000-2026-test2",
+          "file": "mock/mock-math1-zhangyu1000-2026-test2.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 测试卷二",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 16,
+          "answerRate": 0.7273,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-test"
+        },
+        {
+          "id": "mock-math1-zhangyu1000-2026-test3",
+          "file": "mock/mock-math1-zhangyu1000-2026-test3.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 测试卷三",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 16,
+          "answerRate": 0.7273,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-test"
+        },
+        {
+          "id": "mock-math1-zhangyu1000-2026-test4",
+          "file": "mock/mock-math1-zhangyu1000-2026-test4.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 测试卷四",
+          "paperKind": "testPaper",
+          "questionCount": 22,
+          "choiceCount": 10,
+          "withAnswer": 16,
+          "answerRate": 0.7273,
+          "duration": 180,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-test"
+        }
+      ]
+    },
+    {
+      "id": "math1-zhangyu1000-2026-chapters",
+      "subject": "math1",
+      "subjectName": "数学一",
+      "publisher": "张宇（来源：1000 题转录版）",
+      "name": "2026 张宇考研数学1000题 · 章节练习",
+      "year": 2026,
+      "source": {
+        "name": "jlshdsdk/zhangyu-1000t · 2026 张宇考研数学1000题（数学一）刷题版（题目与解析转录自原书）",
+        "url": "https://github.com/jlshdsdk/zhangyu-1000t"
+      },
+      "note": "题库型素材（按书的篇章合并），非整卷模拟卷。",
+      "papers": [
+        {
+          "id": "mock-math1-zhangyu1000-2026-part1",
+          "file": "mock/mock-math1-zhangyu1000-2026-part1.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 基础篇（31 章合集）",
+          "paperKind": "chapterDrill",
+          "questionCount": 536,
+          "choiceCount": 211,
+          "withAnswer": 392,
+          "answerRate": 0.7313,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-chapters"
+        },
+        {
+          "id": "mock-math1-zhangyu1000-2026-part2",
+          "file": "mock/mock-math1-zhangyu1000-2026-part2.json",
+          "title": "2026 张宇考研数学1000题（数学一）· 强化篇（36 章合集）",
+          "paperKind": "chapterDrill",
+          "questionCount": 683,
+          "choiceCount": 222,
+          "withAnswer": 394,
+          "answerRate": 0.5769,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "math1-zhangyu1000-2026-chapters"
+        }
+      ]
+    },
+    {
+      "id": "cs408-wangdao-2027",
+      "subject": "cs408",
+      "subjectName": "408",
+      "publisher": "王道（来源：2027 教材 OCR 题库）",
+      "name": "2027 王道 408 教材题库",
+      "year": 2027,
+      "source": {
+        "name": "zsc5725216-hub/408-quiz · 计算机考研408刷题网站（王道 2027 教材 OCR 题库）",
+        "url": "https://github.com/zsc5725216-hub/408-quiz"
+      },
+      "note": "题库型素材（按教材章节），非整卷模拟卷；题干为 OCR 结果，未逐题校对。",
+      "papers": [
+        {
+          "id": "mock-cs408-wangdao-2027-ds",
+          "file": "mock/mock-cs408-wangdao-2027-ds.json",
+          "title": "2027 王道 408 数据结构 题库（数据结构的逻辑/存储结构与算法）",
+          "paperKind": "questionBank",
+          "questionCount": 691,
+          "choiceCount": 527,
+          "withAnswer": 691,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "cs408-wangdao-2027",
+          "answerNoteCount": 7,
+          "truncatedOpts": 0
+        },
+        {
+          "id": "mock-cs408-wangdao-2027-co",
+          "file": "mock/mock-cs408-wangdao-2027-co.json",
+          "title": "2027 王道 408 计算机组成原理 题库（计算机组成原理）",
+          "paperKind": "questionBank",
+          "questionCount": 595,
+          "choiceCount": 516,
+          "withAnswer": 595,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "cs408-wangdao-2027",
+          "answerNoteCount": 1,
+          "truncatedOpts": 0
+        },
+        {
+          "id": "mock-cs408-wangdao-2027-os",
+          "file": "mock/mock-cs408-wangdao-2027-os.json",
+          "title": "2027 王道 408 操作系统 题库（操作系统）",
+          "paperKind": "questionBank",
+          "questionCount": 725,
+          "choiceCount": 615,
+          "withAnswer": 725,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "cs408-wangdao-2027",
+          "answerNoteCount": 3,
+          "truncatedOpts": 0
+        },
+        {
+          "id": "mock-cs408-wangdao-2027-net",
+          "file": "mock/mock-cs408-wangdao-2027-net.json",
+          "title": "2027 王道 408 计算机网络 题库（计算机网络）",
+          "paperKind": "questionBank",
+          "questionCount": 589,
+          "choiceCount": 510,
+          "withAnswer": 589,
+          "answerRate": 1,
+          "duration": 0,
+          "quality": "unverified",
+          "groupId": "cs408-wangdao-2027",
+          "answerNoteCount": 4,
+          "truncatedOpts": 0
+        }
+      ]
+    }
+  ],
+  "droppedSummary": {
+    "count": 69,
+    "note": "以下为解析阶段主动丢弃、未写入题库的题目（依据「不乱码入库」纪律）。完整明细见 tools/cache/mock/build-report.json。",
+    "byReason": [
+      {
+        "reason": "选项数 3 != 4",
+        "count": 38
+      },
+      {
+        "reason": "选项数 2 != 4",
+        "count": 14
+      },
+      {
+        "reason": "选项数 0 != 4",
+        "count": 9
+      },
+      {
+        "reason": "选项数 1 != 4",
+        "count": 6
+      },
+      {
+        "reason": "答案与题型不匹配",
+        "count": 2
+      }
+    ],
+    "items": [
+      {
+        "source": "politics2027",
+        "ref": "s1#13",
+        "reason": "答案与题型不匹配(type=多选, answer=B)",
+        "detail": "随着医学、生物科学的发展，到目前为止，人类仍无法完全认识各种癌症的发病机理。这说明-"
+      },
+      {
+        "source": "politics2027",
+        "ref": "s6#26",
+        "reason": "答案与题型不匹配(type=多选, answer=D)",
+        "detail": "法律的运行是一个从创制、实施到实现的过程。这个过程主要包括法律制定、法律执行、法律适用、法律遵守等环"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/2.3#5",
+        "reason": "选项数 3 != 4",
+        "detail": "设线性表中有2n个元素，（）在单链表上实现要比在顺序表上实现效率更高。"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/3.4#8",
+        "reason": "选项数 3 != 4",
+        "detail": "若将n阶下三角矩阵 A 按列优先顺序压缩存放在一维数组 B［1..n（n+1）/2+1］中，则存放到"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/4.2#12",
+        "reason": "选项数 2 != 4",
+        "detail": "【2024统考真题】KMP算法使用修正后的 next 数组进行模式匹配，模式串力S='aabaab’"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/5.1#8",
+        "reason": "选项数 2 != 4",
+        "detail": "设一棵m叉树中有 N，个度数为1的结点，N2个度数为2的结点，•，Nm个度数为m的结点， 则该树中共"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/5.3#33",
+        "reason": "选项数 0 != 4",
+        "detail": "【2010统考真题】下列线索二叉树中（用虚线表示线索），符合后序线索树定义的是（） ⑥◎ ◎ b： "
+      },
+      {
+        "source": "w408",
+        "ref": "ds/5.5#2",
+        "reason": "选项数 0 != 4",
+        "detail": "给定整数集合 ｛3, 5, 6, 9,123，与之对应的哈夫曼树是（） 12"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.2#5",
+        "reason": "选项数 0 != 4",
+        "detail": "一个有n个顶点的图用邻接矩阵 A表示，若图为有向图，顶点v：的入度是（）；若图为无向图， 顶点vi的"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.2#10",
+        "reason": "选项数 3 != 4",
+        "detail": "若邻接表中有奇数个边表结点，则（）"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.4#2",
+        "reason": "选项数 3 != 4",
+        "detail": "用 Prim 算法和 Kruskal 算法构造图的最小生成树，所得到的最小生成树（）"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.4#18",
+        "reason": "选项数 3 != 4",
+        "detail": "【2016统考真题】下列选项中，不是下图深度优先搜索序列的是（） （Y1） ④- （Ys."
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.4#30",
+        "reason": "选项数 3 != 4",
+        "detail": "【2012 统考真题】若用邻接矩阵存储有向图，矩阵中主对角线以下的元素均为零，则关于该图 拓扑序列的"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/6.4#41",
+        "reason": "选项数 3 != 4",
+        "detail": "【2020统考真题】修改递归方式实现的图的深度优先搜索（DFS）算法，将输出（访问）顶点信息 的语句"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/7.2#2",
+        "reason": "选项数 3 != 4",
+        "detail": "由n个数据元素组成的两个表：一个递增有序，一个无序。采用顺序查找算法，对有序表从头开 始查找，发现当"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/7.3#19",
+        "reason": "选项数 0 != 4",
+        "detail": "下列四个选项中，满足红黑树定义的是（） （"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/7.3#21",
+        "reason": "选项数 0 != 4",
+        "detail": "将关键字5，4,3，2，1依次插入初始为空的红黑树T，则T的最终形态是（） ④ ② ⑤ ④ ⑤ s）"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/7.3#23",
+        "reason": "选项数 0 != 4",
+        "detail": "【2017统考真题】下列二叉树中，可能成为折半查找判定树（不含外部结点）的是（） 〇"
+      },
+      {
+        "source": "w408",
+        "ref": "ds/8.5#20",
+        "reason": "选项数 3 != 4",
+        "detail": "【2021 统考真题】将关键字6，9，1,5，8, 4,7依次插入到初始为空的大根堆H中，得到的H "
+      },
+      {
+        "source": "w408",
+        "ref": "ds/8.6#4",
+        "reason": "选项数 0 != 4",
+        "detail": "下列排序算法中属于稳定排序的是（①），平均时间复杂度为O（nlogzn） 的是（②），在最好的情况 "
+      },
+      {
+        "source": "w408",
+        "ref": "co/2.1#8",
+        "reason": "选项数 1 != 4",
+        "detail": "一个n+1 位整数x原码的数值范围是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/2.2#23",
+        "reason": "选项数 0 != 4",
+        "detail": "下图是实现32位补码一位乘法的逻辑结构图，下列说法中正确的是（） 被乘数奇存器× 32 132 加/"
+      },
+      {
+        "source": "w408",
+        "ref": "co/2.2#32",
+        "reason": "选项数 2 != 4",
+        "detail": "【2021统考真题】已知有符号整数用补码表示，变量x，y， 的机器数分别为 FFFDH, FFDFH"
+      },
+      {
+        "source": "w408",
+        "ref": "co/2.3#24",
+        "reason": "选项数 3 != 4",
+        "detail": "假定变量i、f的数据类型分别是 int、float。已知i= 12345，f=1.2345×2’，则"
+      },
+      {
+        "source": "w408",
+        "ref": "co/3.5#17",
+        "reason": "选项数 3 != 4",
+        "detail": "对于由高速缓存、主存、硬盘构成的三级存储体系，CPU 访问该存储系统时发送的地址为（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/3.5#20",
+        "reason": "选项数 1 != 4",
+        "detail": "某计算机的Cache 有16 行，块大小为16B，其映射方式可配置为直接映射或2路组相联映射， 主存"
+      },
+      {
+        "source": "w408",
+        "ref": "co/4.1#5",
+        "reason": "选项数 3 != 4",
+        "detail": "下列指令中不属于程序控制指令的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/4.3#33",
+        "reason": "选项数 1 != 4",
+        "detail": "【2023统考真题】某运算类指令中有一个地址码为通用寄存器编号，对应通用寄存器中存放的 是操作数或操"
+      },
+      {
+        "source": "w408",
+        "ref": "co/5.2#4",
+        "reason": "选项数 3 != 4",
+        "detail": "取指操作后，程序计数器中存放的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/5.2#19",
+        "reason": "选项数 3 != 4",
+        "detail": "CPU 中不包括（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/5.6#6",
+        "reason": "选项数 3 != 4",
+        "detail": "CPU 响应中断的时间是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "co/6.2#20",
+        "reason": "选项数 0 != 4",
+        "detail": "【2023统考真题】某存储器总线宽度为64位，总线时钟频率为1GHz，在总线上传输一个数据 或地址需"
+      },
+      {
+        "source": "w408",
+        "ref": "co/7.2#11",
+        "reason": "选项数 3 != 4",
+        "detail": "采用中断方式进行打印控制时，在打印控制接口和打印机之间交换的信息不包括（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/1.2#10",
+        "reason": "选项数 2 != 4",
+        "detail": "分时系统追求的目标是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.1#2",
+        "reason": "选项数 3 != 4",
+        "detail": "进程之间交换数据不能通过（）途径进行。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.1#15",
+        "reason": "选项数 1 != 4",
+        "detail": "系统进程所请求的一次1/O 操作完成后，将使进程状态从（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.1#27",
+        "reason": "选项数 2 != 4",
+        "detail": "进程自身决定（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.1#40",
+        "reason": "选项数 2 != 4",
+        "detail": "在进程转换时，下列（）转换是不可能发生的。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.2#1",
+        "reason": "选项数 3 != 4",
+        "detail": "中级调度的目的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.2#14",
+        "reason": "选项数 3 != 4",
+        "detail": "进程（线程）调度的时机有（） I. 运行的进程（线程）运行完毕 II.运行的进程（线程）所需资源未准"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.3#23",
+        "reason": "选项数 2 != 4",
+        "detail": "用来实现进程同步与互斥的PV 操作实际上是由（）过程组成的。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.3#27",
+        "reason": "选项数 3 != 4",
+        "detail": "一个系统中共有5个并发进程涉及某个相同的变量A， 变量A 的相关临界区是由（）个临界 区构成的。 c"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.4#5",
+        "reason": "选项数 3 != 4",
+        "detail": "系统产生死锁的可能原因是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/2.4#14",
+        "reason": "选项数 3 != 4",
+        "detail": "在下列死锁的解决方法中，属于死锁预防策略的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/3.2#3",
+        "reason": "选项数 2 != 4",
+        "detail": "进程在执行中发生了缺页中断，经操作系统处理后，应让其执行（）指令。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/3.2#22",
+        "reason": "选项数 3 != 4",
+        "detail": "某虚拟存储器系统采用页式内存管理，使用LRU 页面替换算法，考虑页面访问地址序列1，8， 1, 7,"
+      },
+      {
+        "source": "w408",
+        "ref": "os/3.2#35",
+        "reason": "选项数 2 != 4",
+        "detail": "提供虚拟存储技术的存储管理方法有（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/3.2#69",
+        "reason": "选项数 3 != 4",
+        "detail": "【2019统考真题】在下列动态分区分配算法中，最容易产生内存碎片的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/4.2#23",
+        "reason": "选项数 2 != 4",
+        "detail": "逻辑文件存放到存储介质上时，采用的组织形式与（）有关。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/4.2#35",
+        "reason": "选项数 3 != 4",
+        "detail": "下列各种操作系统内核相关的数据结构中，可以不用数组实现的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/4.3#10",
+        "reason": "选项数 1 != 4",
+        "detail": "若用8个字（字长32位）组成的位示图管理内存，即位示图有8行、32列，行号和列号均从1开 始，则块号"
+      },
+      {
+        "source": "w408",
+        "ref": "os/4.3#69",
+        "reason": "选项数 3 != 4",
+        "detail": "【2025统考真题】在下列选项中，文件系统可用于记录外存空闲空间使用情况的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/5.1#23",
+        "reason": "选项数 3 != 4",
+        "detail": "【2010统考真题】本地用户通过键盘登录系统时，首先获得键盘输入信息的程序是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/5.2#18",
+        "reason": "选项数 3 != 4",
+        "detail": "提高单机资源利用率的关键技术是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "os/5.3#13",
+        "reason": "选项数 3 != 4",
+        "detail": "以下算法中，（）可能出现“饥饿”现象。"
+      },
+      {
+        "source": "w408",
+        "ref": "os/5.3#40",
+        "reason": "选项数 3 != 4",
+        "detail": "【2013统考真题】用户程序发出磁盘1/0 请求后，系统的处理流程是：用户程序一系统调用处 理程序一"
+      },
+      {
+        "source": "w408",
+        "ref": "net/1.2#3",
+        "reason": "选项数 3 != 4",
+        "detail": "协议是指在（）之间进行通信的规则或约定"
+      },
+      {
+        "source": "w408",
+        "ref": "net/2.2#2",
+        "reason": "选项数 3 != 4",
+        "detail": "在电缆中采用屏蔽技术带来的好处主要是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "net/2.3#6",
+        "reason": "选项数 2 != 4",
+        "detail": "中继器可以用来连接（）"
+      },
+      {
+        "source": "w408",
+        "ref": "net/3.4#7",
+        "reason": "选项数 2 != 4",
+        "detail": "要发送的数据是1101 011011，采用CRC检验，生成多项式是10011，那么最终发送的数据应 "
+      },
+      {
+        "source": "w408",
+        "ref": "net/3.6#16",
+        "reason": "选项数 2 != 4",
+        "detail": "以太网中采用二进制指数退避算法处理冲突问题。下列数据帧重传时再次发生冲突的概率最 低的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "net/3.6#21",
+        "reason": "选项数 3 != 4",
+        "detail": "【2014统考真题】站点A、B、C通过CDMA 共享链路，A、B、C的码片序列分别是（1,1,1,1"
+      },
+      {
+        "source": "w408",
+        "ref": "net/3.6#29",
+        "reason": "选项数 1 != 4",
+        "detail": "在CSMA/CA 协议中，有三种不同的时间参数：短帧间间隔 SIFS、分布式协调帧间间隔 DIFS "
+      },
+      {
+        "source": "w408",
+        "ref": "net/3.6#36",
+        "reason": "选项数 3 != 4",
+        "detail": "下列选项中，（）不是虚拟局域网（VLAN）的优点。"
+      },
+      {
+        "source": "w408",
+        "ref": "net/4.7#3",
+        "reason": "选项数 2 != 4",
+        "detail": "以太网多播IP 地址 224.215.145.230应该映射到的多播 MAC地址是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "net/4.7#16",
+        "reason": "选项数 3 != 4",
+        "detail": "路由器转发分组（在路由表中已找到匹配的条目）时，会根据路由表中的（）字段来确定输出 端口。"
+      },
+      {
+        "source": "w408",
+        "ref": "net/5.2#10",
+        "reason": "选项数 3 != 4",
+        "detail": "下列网络应用中，不适合使用UDP的是（）"
+      },
+      {
+        "source": "w408",
+        "ref": "net/5.3#22",
+        "reason": "选项数 3 != 4",
+        "detail": "A 和B之间建立了TCP 连接，A向B发送了一个报文段，其中序号字段 seq=200，确认号字段 a"
+      },
+      {
+        "source": "w408",
+        "ref": "net/6.2#9",
+        "reason": "选项数 3 != 4",
+        "detail": "（）可以将其管辖的主机名转换主机的IP地址。"
+      }
+    ]
+  }
+}

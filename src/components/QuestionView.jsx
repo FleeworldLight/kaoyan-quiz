@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle } from "lucide-react";
 import RichText from "./RichText.jsx";
 import { Badge, Button, Tip, Kbd } from "./ui.jsx";
@@ -48,6 +48,7 @@ export default function QuestionView({
           </Tip>
         ) : null}
         {q.optionIssue ? <Badge tone="warn" dot>选项残缺</Badge> : null}
+        {q.answerInferred ? <Badge tone="warn">答案非原文</Badge> : null}
 
         <div className="ml-auto flex items-center gap-0.5">
           {onToggleFlag ? (

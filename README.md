@@ -22,13 +22,29 @@ pnpm dev                              # 或开发模式（热更新）
 
 | 科目 | 覆盖 | 套数 | 总题量 | 可自动评分 |
 |---|---|---|---|---|
-| 数学一 | 1987–2025（1994、2022 因源文件缺失/OCR 损坏剔除） | 37 | 765 | 257 |
+| 数学一 | 1987–2025（缺 1994，源文件不存在） | 38 | 787 | 267 |
 | 英语一 | 2010–2023 | 14 | 723 | 555 |
-| 政治 | 2010–2024 | 15 | 565 | 495 |
+| 政治 | 2010–2025 | 16 | 603 | 528 |
 | 408 | 2009–2025 | 17 | 799 | 680 |
-| **合计** | | **83** | **2852** | **1987** |
+| **真题合计** | | **85** | **2912** | **2030** |
+| 模拟卷 | 见下方「模拟卷」 | 22 | 5129 | 3863 |
+| **全库合计** | | **107** | **8041** | **5893** |
 
-> 模拟卷单独成区（见 `public/data/mock/`），抓取到的系列会出现在左侧「模拟卷」里。
+### 模拟卷（`public/data/mock/`）
+
+| 科目 | 来源 | 系列 | 套数 | 题量 |
+|---|---|---|---|---|
+| 政治 | [Kaoyan_Politics2027](https://github.com/SatoriSatori555/Kaoyan_Politics2027)（徐涛/袁·杰题目网页版题库） | 马原/毛中特/习思想/史纲/思修法基/综合训练 | 12 | 1222 |
+| 数学一 | [zhangyu-1000t](https://github.com/jlshdsdk/zhangyu-1000t)（张宇 1000 题转录版） | 测试卷一~四 + 基础篇/强化篇章节练习 | 6 | 1307 |
+| 408 | [408-quiz](https://github.com/zsc5725216-hub/408-quiz)（王道教材 OCR 题库） | 数据结构/计组/操作系统/计网 | 4 | 2600 |
+
+**模拟卷的已知问题（界面上都有提示）**：
+
+- 全部标记 `quality: "unverified"`，**没有逐题校验**，请以正式出版物为准。
+- 政治的 1224 题**答案是来源题库推算生成的，不是官方原文**（来源自己标了 `answerInferred=true`）。界面对这类卷显示「答案多为推算」，每道题带「答案非原文」徽标。
+- 408 的来源是教材 OCR，存在系统性噪声（`力`↔`为`、题号页码混入题干、图题选项被吞），18 道题的答案串不规范已加 `answerNote`，69 道选项数不足 4 的题直接丢弃。
+- **没找到肖四/肖八/腿姐等整卷原文**：公开渠道只有付费/网盘/扫描件。详见 `tools/mock-findings.md`（25 个来源逐条结论）。
+- 英语一暂无模拟卷。
 
 ## 功能
 
@@ -85,7 +101,7 @@ public/data/
 | 英语一 | 同上仓库 `solutions/英语一/` + 本地 `KaoYan-English-master` 的历年真题与解析 PDF；详见 `tools/english-findings.md` |
 | 政治 | [yy11111111111111111111/kaoyan-politics](https://github.com/yy11111111111111111111/kaoyan-politics) 为主源，与 [mrwoov/kyzz](https://github.com/mrwoov/kyzz)、学信网官方答案交叉校验；详见 `tools/politics-findings.md` |
 | 408 | [neville-studio/408-exam-paper](https://github.com/neville-studio/408-exam-paper) 的 `papers-rebuild/`（题干）+ 本地 `408真题/` 两套 PDF 双源互证答案；详见 `tools/cs408-findings.md` |
-| 模拟卷 | 互联网公开渠道，逐套记录来源 URL；详见 `tools/mock-findings.md` |
+| 模拟卷 | 见 `tools/mock-findings.md`：政治 [Kaoyan_Politics2027](https://github.com/SatoriSatori555/Kaoyan_Politics2027)、数学 [zhangyu-1000t](https://github.com/jlshdsdk/zhangyu-1000t)、408 [408-quiz](https://github.com/zsc5725216-hub/408-quiz) |
 
 每份卷子的 JSON 都带 `source` 字段（名称 + URL），前端在解析区展示。
 

@@ -1,4 +1,4 @@
-﻿const BASE = (import.meta.env.BASE_URL || "./").replace(/\/$/, "") + "/data/";
+const BASE = (import.meta.env.BASE_URL || "./").replace(/\/$/, "") + "/data/";
 
 const cache = new Map();
 
@@ -93,7 +93,8 @@ export async function allMockQuestions(subjectId) {
         if (!paper) continue;
         paper.file = meta.file;
         paper.kind = "mock";
-        out.push(...flatten(paper).map((q) => ({ ...q, mockName: g.name, publisher: g.publisher, mockGroup: g.id })));
+        const inferred = meta.inferredRatio > 0.5;
+        out.push(...flatten(paper).map((q) => ({ ...q, mockName: g.name, publisher: g.publisher, mockGroup: g.id, answerInferred: inferred || !!q.answerInferred })));
       }
     }
     return out;
@@ -167,7 +168,8 @@ export async function buildQueue(config) {
     const paper = await loadPaper(meta.file);
     paper.file = meta.file;
     paper.kind = "mock";
-    const qs = flatten(paper).map((q) => ({ ...q, mockName: group.name, publisher: group.publisher, mockGroup: group.id }));
+    const inferred = (meta.inferredRatio || 0) > 0.5;
+    const qs = flatten(paper).map((q) => ({ ...q, mockName: group.name, publisher: group.publisher, mockGroup: group.id, answerInferred: inferred || !!q.answerInferred }));
     return {
       title: (group.publisher ? group.publisher + " · " : "") + meta.title,
       subtitle: qs.length + " 题 · 模拟卷" + (config.practice ? " · 练习模式" : ""),

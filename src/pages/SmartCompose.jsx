@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Wand2, Plus, Trash2, Sparkles, Target, Scale, BookOpen, Cpu, Shuffle, AlertTriangle } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Field, Segmented, inputCls } from "../components/ui.jsx";

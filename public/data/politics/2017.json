@@ -65,11 +65,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q2",
@@ -100,11 +100,11 @@
           "topics": [],
           "images": [],
           "verify": "yy-unmapped",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q3",
@@ -135,11 +135,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q4",
@@ -170,11 +170,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q5",
@@ -205,11 +205,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q6",
@@ -240,11 +240,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "新思想"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q7",
@@ -277,11 +277,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-党建"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q8",
@@ -312,11 +312,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "史纲"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q9",
@@ -347,11 +347,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q10",
@@ -382,11 +382,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q11",
@@ -417,11 +417,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-新民主主义革命"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q12",
@@ -452,11 +452,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-党史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q13",
@@ -487,11 +487,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-人生观价值观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q14",
@@ -522,11 +522,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "思修"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q15",
@@ -557,11 +557,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q16",
@@ -592,11 +592,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         }
       ]
     },
@@ -633,11 +633,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-认识论"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q18",
@@ -668,11 +668,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-唯物史观"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q19",
@@ -703,11 +703,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q20",
@@ -738,11 +738,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q21",
@@ -773,11 +773,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-政治经济学"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "马原"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q22",
@@ -808,11 +808,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q23",
@@ -843,11 +843,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q24",
@@ -878,14 +878,14 @@
           "topics": [],
           "images": [],
           "verify": "CONFLICT-yy-vs-kyzz",
-          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂采用来源答案，请以官方答案为准。",
+          "note": "本题在独立数据集 mrwoov/kyzz 中的答案与本库不一致（两库选项顺序不同，已按选项文本内容对齐后仍冲突）。本库暂用来原始源答案，请以官方答案为准。",
           "answerNote": "此题在不同来源的答案存在分歧，本站采用「来源真题整理（yy11111111111111111111/kaoyan-politics）」的答案（ABCD）；另有独立题库（mrwoov/kyzz）给出不同答案。请以官方答案为准。",
           "answerDisputed": true,
+          "subjectHint": "时政",
           "chapterTopics": [
             "时政-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "时政"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q25",
@@ -916,11 +916,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "毛中特",
           "chapterTopics": [
             "毛中特-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "毛中特"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q26",
@@ -951,11 +951,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-党建"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q27",
@@ -986,11 +986,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q28",
@@ -1021,11 +1021,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "史纲",
           "chapterTopics": [
             "史纲-近代史"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "史纲"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q29",
@@ -1058,11 +1058,11 @@
           ],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "马原",
           "chapterTopics": [
             "马原-综合"
           ],
-          "chapterConfidence": "subject-only",
-          "subjectHint": "马原"
+          "chapterConfidence": "subject-only"
         },
         {
           "id": "politics-2017-q30",
@@ -1093,11 +1093,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q31",
@@ -1128,11 +1128,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "思修",
           "chapterTopics": [
             "思修-法治"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "思修"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q32",
@@ -1163,11 +1163,11 @@
           "topics": [],
           "images": [],
           "verify": "yy=kyzz",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         },
         {
           "id": "politics-2017-q33",
@@ -1198,11 +1198,11 @@
           "topics": [],
           "images": [],
           "verify": "yy-unmapped",
+          "subjectHint": "新思想",
           "chapterTopics": [
             "新思想-内外条件"
           ],
-          "chapterConfidence": "chapter",
-          "subjectHint": "新思想"
+          "chapterConfidence": "chapter"
         }
       ]
     },

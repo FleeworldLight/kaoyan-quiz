@@ -307,7 +307,10 @@ function qualityOf(questions, srcKind, jumps) {
   if (srcKind === "solution" || withAns < 0.9 || jumps > 0 || optionless > 0) return "medium";
   return "high";
 }
-const SKIP_YEARS = new Set([2022]);
+const SKIP_YEARS = new Set([2022]);   // 2022 由 parse-math-2022.mjs 单独处理
+// 先清空旧产物，避免上一轮遗留的年份文件混进索引
+if (fs.existsSync(OUTS)) for (const f of fs.readdirSync(OUTS)) if (f.endsWith(".json")) fs.unlinkSync(path.join(OUTS, f));
+
 const byYear = collect();
 const report = [], papers = [];
 let totalQ = 0, totalChoice = 0;

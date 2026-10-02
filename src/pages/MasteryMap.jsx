@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Compass, Layers, Target, TrendingUp, ArrowRight } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Progress, Segmented, Tip } from "../components/ui.jsx";

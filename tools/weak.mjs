@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
 const out = [];
 for (const y of Array.from({length:15},(_,i)=>2009+i)) {

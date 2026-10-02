@@ -1,51 +1,51 @@
 {
   "version": 2,
-  "generatedAt": "2026-10-02T09:33:19.889Z",
+  "generatedAt": "2026-10-02T11:36:56.809Z",
   "note": "chapters[] 为章节练习用的「学科-章」索引（含少量「学科-综合」兜底，kind=subject-fallback）；subjects[] 为从本地考点笔记抽取的细粒度考点。两者 id 均为全局唯一，且只保留 count>0 的项。",
   "tagging": {
     "method": "关键词规则打分（章级阈值 6 / 科目取最高分章）",
-    "choiceQuestions": 495,
-    "chapterLevel": 394,
-    "subjectFallback": 101,
-    "untagged": 0,
-    "chapterPrecision": 79.6,
-    "coverage": 100,
+    "choiceQuestions": 528,
+    "chapterLevel": 417,
+    "subjectFallback": 110,
+    "untagged": 1,
+    "chapterPrecision": 79,
+    "coverage": 99.8,
     "granularTaggedQuestions": 56
   },
   "stats": {
     "totalChapters": 22,
     "totalFallbackBuckets": 6,
     "totalTopics": 36,
-    "totalQuestions": 565,
-    "choiceQuestions": 495
+    "totalQuestions": 603,
+    "choiceQuestions": 528
   },
   "chapters": [
     {
       "id": "马原-政治经济学",
       "subject": "马原",
       "name": "马克思主义政治经济学（商品经济·资本·垄断）",
-      "count": 57,
+      "count": 60,
       "kind": "chapter"
     },
     {
       "id": "马原-综合",
       "subject": "马原",
       "name": "马克思主义基本原理·综合",
-      "count": 29,
+      "count": 31,
       "kind": "subject-fallback"
     },
     {
       "id": "马原-唯物史观",
       "subject": "马原",
       "name": "唯物史观（社会存在与社会意识·社会形态）",
-      "count": 23,
+      "count": 24,
       "kind": "chapter"
     },
     {
       "id": "马原-科学社会主义",
       "subject": "马原",
       "name": "科学社会主义（社会主义·共产主义）",
-      "count": 18,
+      "count": 19,
       "kind": "chapter"
     },
     {
@@ -59,7 +59,7 @@
       "id": "马原-唯物论",
       "subject": "马原",
       "name": "辩证唯物论（物质观·意识观）",
-      "count": 8,
+      "count": 10,
       "kind": "chapter"
     },
     {
@@ -80,21 +80,21 @@
       "id": "毛中特-中国特色社会主义理论体系",
       "subject": "毛中特",
       "name": "中国特色社会主义理论体系（邓小平理论·三个代表·科学发展观）",
-      "count": 23,
+      "count": 26,
       "kind": "chapter"
     },
     {
       "id": "毛中特-新民主主义革命",
       "subject": "毛中特",
       "name": "毛泽东思想与新民主主义革命理论",
-      "count": 16,
+      "count": 17,
       "kind": "chapter"
     },
     {
       "id": "毛中特-综合",
       "subject": "毛中特",
       "name": "毛泽东思想和中国特色社会主义理论体系概论·综合",
-      "count": 12,
+      "count": 15,
       "kind": "subject-fallback"
     },
     {
@@ -108,7 +108,7 @@
       "id": "时政-当年时事",
       "subject": "时政",
       "name": "时政：当年国内外重大时事",
-      "count": 16,
+      "count": 17,
       "kind": "chapter"
     },
     {
@@ -122,14 +122,14 @@
       "id": "史纲-近代史",
       "subject": "史纲",
       "name": "旧民主主义革命时期（近代史）",
-      "count": 27,
+      "count": 29,
       "kind": "chapter"
     },
     {
       "id": "史纲-综合",
       "subject": "史纲",
       "name": "中国近现代史纲要·综合",
-      "count": 20,
+      "count": 21,
       "kind": "subject-fallback"
     },
     {
@@ -150,7 +150,7 @@
       "id": "思修-法治",
       "subject": "思修",
       "name": "法治篇：法治素养与法律基础",
-      "count": 32,
+      "count": 35,
       "kind": "chapter"
     },
     {
@@ -164,28 +164,28 @@
       "id": "思修-道德",
       "subject": "思修",
       "name": "道德篇：道德观与道德实践",
-      "count": 12,
+      "count": 13,
       "kind": "chapter"
     },
     {
       "id": "思修-综合",
       "subject": "思修",
       "name": "思想道德与法治·综合",
-      "count": 7,
+      "count": 8,
       "kind": "subject-fallback"
     },
     {
       "id": "新思想-总体布局",
       "subject": "新思想",
       "name": "布局安排：经济·政治·文化·社会·生态",
-      "count": 49,
+      "count": 53,
       "kind": "chapter"
     },
     {
       "id": "新思想-综合",
       "subject": "新思想",
       "name": "习近平新时代中国特色社会主义思想概论·综合",
-      "count": 28,
+      "count": 30,
       "kind": "subject-fallback"
     },
     {
@@ -206,7 +206,7 @@
       "id": "新思想-基本问题",
       "subject": "新思想",
       "name": "基本问题：新时代总目标总任务与领导力量",
-      "count": 6,
+      "count": 7,
       "kind": "chapter"
     },
     {

@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { History, Download, TrendingUp, Flame, Target, Clock, FileStack, Play, Trash2, CalendarDays } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Progress, Segmented, StatCard } from "../components/ui.jsx";

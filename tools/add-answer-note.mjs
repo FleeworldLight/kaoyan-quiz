@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 决定 1：把 20 道跨源冲突题的标注规范化 —— 新增 answerNote 字段（给考生看的中文提示）。
  * 保留原 verify 字段。
  */
@@ -13,6 +13,10 @@ const NOTES = {
   "2010-26": { src: "学信网（教育部学信网）官方真题解析", alt: "另有题库（mrwoov/kyzz）主张选 ABD" },
   "2010-31": { src: "学信网（教育部学信网）官方真题解析", alt: "另有题库（mrwoov/kyzz）对「政治权利和自由」的界定不同，主张选 AB" },
   "2020-2":  { src: "来源真题整理（yy11111111111111111111/kaoyan-politics）", alt: "新东方 2020 真题解析与 mrwoov/kyzz 解析均主张「价值性评价」" },
+  // 2025：三源（武昌首义学院 / 石河子大学 / 新东方在线）互证后仍有分歧的题
+  "2025-16": { src: "武昌首义学院马克思主义学院 ＋ 新东方在线（二源一致）", alt: "石河子大学 eol 版给出的答案是 D" },
+  "2025-21": { src: "石河子大学 eol 版 ＋ 新东方在线（二源一致）", alt: "武昌首义学院马克思主义学院给出的答案是 BC（漏选 D）" },
+  "2025-27": { src: "武昌首义学院马克思主义学院 ＋ 新东方在线（二源一致）", alt: "石河子大学 eol 版给出的答案是 ACD（多选 C）" },
 };
 const GENERIC = { src: "来源真题整理（yy11111111111111111111/kaoyan-politics）", alt: "另有独立题库（mrwoov/kyzz）给出不同答案" };
 
@@ -39,4 +43,8 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort())
   if (changed) console.log(`${paper.year}: ${changed} 道 -> 题号 ${paper.verification.disputedQuestions.join(",")}`);
 }
 console.log("\n共规范化", n, "道冲突题");
-fs.writeFileSync(path.join(DIR, "..", "..", "tools/cache/disputed-list.json"), JSON.stringify(list, null, 2), "utf8");
+// 注意：原写法 path.join(DIR, "..", "..", "tools/cache/...") 会解析到 public/tools/... （不存在的目录）而报 ENOENT，
+// 这里改为显式指向仓库根目录。
+const CACHE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
+fs.mkdirSync(CACHE, { recursive: true });
+fs.writeFileSync(path.join(CACHE, "disputed-list.json"), JSON.stringify(list, null, 2), "utf8");

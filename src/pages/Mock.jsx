@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FileStack, Play, Timer, Search, Layers, Eye, Info, AlertTriangle } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Modal, Segmented, Spinner, inputCls } from "../components/ui.jsx";
@@ -25,6 +25,7 @@ export default function Mock({ index }) {
   });
 
   const totalPapers = groups.reduce((a, g) => a + g.papers.length, 0);
+  const inferredTotal = groups.reduce((a, g) => a + (g.inferredCount || 0), 0);
   const totalQ = groups.reduce((a, g) => a + g.papers.reduce((b, p) => b + (p.questionCount || 0), 0), 0);
 
   if (!groups.length) {
@@ -53,7 +54,12 @@ export default function Mock({ index }) {
           </div>
           <p className="flex max-w-md items-start gap-1.5 rounded-md bg-warn-soft px-2.5 py-2 text-[11.5px] leading-relaxed text-warn">
             <AlertTriangle className="mt-0.5 size-3.5 shrink-0" />
-            模拟卷来自互联网公开渠道，尚未逐题校验，质量标记为「未校验」，请以正式出版物为准。
+            <span>
+              模拟卷来自互联网公开渠道，<b>尚未逐题校验</b>，请以正式出版物为准。
+              {inferredTotal > 0 ? (
+                <>其中 <b>{inferredTotal}</b> 题的答案是来源推算而非官方原文，已在题目上标「答案非原文」。</>
+              ) : null}
+            </span>
           </p>
         </CardBody>
       </Card>
@@ -80,7 +86,10 @@ export default function Mock({ index }) {
                 icon={Layers}
                 title={g.name}
                 desc={[g.publisher, g.year ? g.year + " 考研" : null, g.papers.length + " 套"].filter(Boolean).join(" · ")}
-                extra={<Badge tone="navy" style={{ background: tone.bg, color: tone.fg, borderColor: tone.line }}>{sub?.name || g.subject}</Badge>}
+                extra={<span className="flex items-center gap-1.5">
+                  {g.inferredRatio > 0.5 ? <Badge tone="warn">答案多为推算</Badge> : null}
+                  <Badge tone="navy" style={{ background: tone.bg, color: tone.fg, borderColor: tone.line }}>{sub?.name || g.subject}</Badge>
+                </span>}
               />
               <CardBody className="p-0">
                 <ul className="divide-y divide-line-subtle">

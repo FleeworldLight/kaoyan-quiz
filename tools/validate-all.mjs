@@ -13,6 +13,7 @@ let totalQ = 0;
 
 function err(f, msg) { problems.push(`[${f}] ${msg}`); }
 function warnA(f, msg) { warn.push(`[${f}] ${msg}`); }
+function readJSON(p) { try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return null; } }
 
 const index = JSON.parse(fs.readFileSync(path.join(DATA, "index.json"), "utf8"));
 const subjectIds = index.subjects.map((s) => s.id);
@@ -93,6 +94,65 @@ for (const sid of subjectIds) {
     console.log(`   ${r.f.padEnd(16)} 题 ${String(r.qn).padStart(3)}  选择 ${String(r.cn).padStart(3)}  答案 ${String(r.an).padStart(3)}  ${r.quality}`);
   }
   console.log();
+}
+
+/* ------------------------------ 模拟卷 ------------------------------ */
+const mockManifestPath = path.join(DATA, "mock", "_manifest.json");
+if (fs.existsSync(mockManifestPath)) {
+  let mockManifest = null;
+  try { mockManifest = JSON.parse(fs.readFileSync(mockManifestPath, "utf8")); }
+  catch (e) { err("mock/_manifest.json", "JSON 解析失败: " + e.message); }
+  const seen = new Set();
+  let mq = 0, mChoice = 0, mAns = 0, mPapers = 0;
+  const rows = [];
+  for (const g of mockManifest?.groups || []) {
+    if (!g.id) err("mock/_manifest.json", "分组缺 id");
+    if (!g.papers?.length) warnA("mock/_manifest.json", `分组 ${g.id} 没有试卷`);
+    for (const p of g.papers || []) {
+      const rel = String(p.file || "").replace(/^\.\//, "");
+      const doc = readJSON(path.join(DATA, rel));
+      if (!doc) { err(rel, "文件不存在或无法解析"); continue; }
+      mPapers++;
+      if (doc.kind !== "mock") err(rel, "kind 不是 mock");
+      if (!doc.source) err(rel, "缺 source（模拟卷必须逐套记录来源）");
+      if (!doc.subject) err(rel, "缺 subject");
+      if (doc.quality && doc.quality !== "unverified") warnA(rel, `quality=${doc.quality}（模拟卷默认应为 unverified）`);
+      let qn = 0, cn = 0, an = 0;
+      for (const sec of doc.sections || []) {
+        for (const q of sec.questions || []) {
+          qn++;
+          if (!q.id) err(rel, `题 ${q.no} 缺 id`);
+          else if (seen.has(q.id)) err(rel, `题目 id 与其它模拟卷重复: ${q.id}`);
+          else seen.add(q.id);
+          if (String(q.stem || "").replace(/\s/g, "").length < 3) err(rel, `${q.id || q.no} 题干过短`);
+          if (q.type === "single" || q.type === "multiple") {
+            const opts = q.options || [];
+            if (q.optionIssue) { warnA(rel, `${q.id} 选项缺失（已标注）`); }
+            else {
+              cn++;
+              if (opts.length < 2) err(rel, `${q.id} 选项少于 2 个`);
+              const ans = String(q.answer || "").replace(/[^A-D]/g, "");
+              if (!ans) warnA(rel, `${q.id} 没有答案`);
+              else {
+                if (q.type === "single" && ans.length !== 1) err(rel, `${q.id} 单选答案非法: ${q.answer}`);
+                if (q.type === "multiple" && ans !== [...ans].sort().join("")) err(rel, `${q.id} 多选答案未升序: ${q.answer}`);
+                for (const c of ans) if (!opts.some((o) => o.key === c)) err(rel, `${q.id} 答案 ${c} 不在选项里`);
+              }
+            }
+          }
+          if (q.answer || q.explanation) an++;
+        }
+      }
+      mq += qn; mChoice += cn; mAns += an;
+      rows.push({ rel, qn, cn, an });
+    }
+  }
+  if (mockManifest?.groups?.length) {
+    console.log(`--- mock (${mockManifest.groups.length} 个系列 / ${mPapers} 套 / ${mq} 题 / 客观 ${mChoice} / 答案覆盖 ${mq ? Math.round((mAns / mq) * 100) : 0}%) ---`);
+    for (const r of rows) console.log(`   ${r.rel.padEnd(34)} 题 ${String(r.qn).padStart(4)}  客观 ${String(r.cn).padStart(4)}  答案 ${String(r.an).padStart(4)}`);
+    console.log();
+    totalQ += mq;
+  }
 }
 
 console.log("=== 结果 ===");

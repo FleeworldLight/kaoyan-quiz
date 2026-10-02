@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import * as RTabs from "@radix-ui/react-tabs";
 import * as RTooltip from "@radix-ui/react-tooltip";

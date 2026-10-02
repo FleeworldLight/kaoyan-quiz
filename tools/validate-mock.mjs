@@ -132,8 +132,8 @@ for (const f of paperFiles) {
       const opts = Array.isArray(q.options) ? q.options : [];
       const keys = opts.map((o) => o.key);
       if (q.type === "single" || q.type === "multiple") {
+        choice++;
         if (q.type === "single") {
-          choice++;
           if (opts.length !== 4) err(`${q.id}: single 题应有 4 个选项，实际 ${opts.length}`);
         } else if (opts.length < 2) {
           err(`${q.id}: multiple 题选项少于 2 个（实际 ${opts.length}）`);

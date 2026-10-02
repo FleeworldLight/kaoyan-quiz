@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 const p = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/build-cs408.mjs";
 let t = fs.readFileSync(p, "utf8");
 const before = (t.match(/\\n/g) || []).length;

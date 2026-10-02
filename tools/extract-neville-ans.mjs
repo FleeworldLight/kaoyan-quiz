@@ -1,4 +1,4 @@
-﻿import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
+import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
 import fs from "node:fs";
 const C = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
 for (const y of [2009,2010,2011,2013]) {

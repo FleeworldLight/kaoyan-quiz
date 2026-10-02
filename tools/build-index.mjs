@@ -144,30 +144,42 @@ const mockGroups = [];
 if (mockManifest && Array.isArray(mockManifest.groups)) {
   for (const g of mockManifest.groups) {
     const papers = [];
-    let qn = 0, cn = 0;
+    let qn = 0, cn = 0, inferred = 0;
     for (const p of g.papers || []) {
       const rel = String(p.file || "").replace(/^\.\//, "");
       const doc = rel ? readJSON(path.join(DATA, rel)) : null;
-      let pq = 0, pc = 0;
+      // 有的来源把「答案由题库生成」写在卷级 sourceNote 里（answerInferred=true），
+      // 这种卷的答案是推算值，必须在界面上显式提示。
+      const paperInferred = /answerInferred\s*=\s*true/i.test(doc?.sourceNote || "") ||
+        /答案.{0,8}(由来源|自动生成)/.test(doc?.sourceNote || "");
+      let pq = 0, pc = 0, pi = 0;
       for (const sec of doc?.sections || []) {
         for (const q of sec.questions || []) {
           pq++;
           if ((q.type === "single" || q.type === "multiple") && (q.options || []).length > 0) pc++;
+          if (q.answerInferred || paperInferred) pi++;
         }
       }
-      qn += pq; cn += pc;
+      qn += pq; cn += pc; inferred += pi;
       papers.push({
         ...p,
         file: rel,
         questionCount: pq || p.questionCount || 0,
         choiceCount: pc || p.choiceCount || 0,
+        inferredCount: pi,
+        inferredRatio: pq ? pi / pq : 0,
         duration: doc?.duration || p.duration || 180,
         quality: p.quality || doc?.quality || "unverified",
         kind: "mock",
+        paperKind: doc?.paperKind || p.paperKind || "questionBank",
       });
     }
     if (!papers.length) continue;
-    mockGroups.push({ ...g, papers, questionCount: qn, choiceCount: cn });
+    mockGroups.push({
+      ...g, papers, questionCount: qn, choiceCount: cn,
+      inferredCount: inferred,
+      inferredRatio: qn ? inferred / qn : 0,
+    });
   }
 }
 out.mockGroups = mockGroups;

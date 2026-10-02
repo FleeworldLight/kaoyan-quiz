@@ -104,6 +104,17 @@ try {
   const chap = await ev(`document.body.innerText.includes('高等数学') && document.body.innerText.includes('线性代数')`);
   check("章节视图按学科分组", !!chap);
 
+  /* ---------------- 2.5 模拟卷 ---------------- */
+  await goto("#/mock");
+  await waitFor(`document.body.innerText.includes('模拟卷')`, "模拟卷页");
+  const mock = await ev(`({
+    txt: document.body.innerText.replace(/\\s+/g, ' '),
+    groups: document.querySelectorAll('section').length,
+    practice: [...document.querySelectorAll('a,button')].filter(b => b.textContent.trim() === '练习').length,
+  })`);
+  check("模拟卷按系列分组展示", mock.groups >= 5 && /未校验/.test(mock.txt), mock.groups + " 个分组");
+  check("模拟卷可进入练习", mock.practice >= 5, mock.practice + " 个练习入口");
+
   /* ---------------- 3. 练习：答错 → 解析 → 错题本 ---------------- */
   await ev(`localStorage.clear()`);
   await goto("#/practice?mode=paper&subject=math1&year=2015&practice=1");
