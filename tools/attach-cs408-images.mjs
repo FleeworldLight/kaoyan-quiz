@@ -173,7 +173,12 @@ function scanPageText(items, pageH) {
     if (Math.abs(it.transform[4] - minX) > 3) continue;
     markers.push({ no: n, x: r1(it.transform[4]), y: r1(it.transform[5]), str: it.str.slice(0, 60) });
   }
-  return { markers, minX: r1(minX), textCount: body.length };
+  // 正文行（用于给图做「上方/下方最近一行文字」的上下文，便于人工核对）
+  const lines = body
+    .filter((it) => !MARKER_RE.test(it.str.trim()) || it.transform[4] > minX + 3)
+    .map((it) => ({ x: r1(it.transform[4]), y: r1(it.transform[5]), str: it.str.replace(/\s+/g, " ").trim().slice(0, 70) }))
+    .filter((l) => l.str);
+  return { markers, minX: r1(minX), textCount: body.length, lines };
 }
 
 /* ---------- 主扫描 ---------- */
@@ -227,8 +232,8 @@ async function scanPdf(year) {
       }
     }
     const tc = await page.getTextContent();
-    const { markers, minX, textCount } = scanPageText(tc.items, pageH);
-    pages.push({ page: p, pageW, pageH, countOps: ol.fnArray.length, images, markers, minX, textCount });
+    const { markers, minX, textCount, lines } = scanPageText(tc.items, pageH);
+    pages.push({ page: p, pageW, pageH, countOps: ol.fnArray.length, images, markers, minX, textCount, lines });
   }
   await doc.destroy();
   return { year, pages, setTransformCount };
@@ -300,12 +305,14 @@ push(`生成时间: ${new Date().toISOString()}`);
 push("");
 
 const yearStats = {};
+const pagesByYear = {};
 const allAssigned = [];
 const allUnassigned = [];
 const allDropped = [];
 
 for (const y of YEARS) {
   const { pages, setTransformCount } = await scanPdf(y);
+  pagesByYear[y] = pages;
   const { chain, skipped, missing } = buildMarkerChain(pages);
   const imgs = assignImages(pages, chain);
   let kept = 0, droppedBg = 0, droppedSmall = 0, droppedBlank = 0, unresolved = 0;
@@ -356,7 +363,6 @@ for (const y of YEARS) {
     yearBytes += im.png.length;
     if (!DRY) fs.writeFileSync(path.join(IMG_DIR, fname), im.png);
   }
-  delete papers[y]._path;
   yearStats[y] = { total: imgs.length, kept, droppedBg, droppedSmall, droppedBlank, unresolved, markers: chain.length, missing, skippedMarkers: skipped.length, setTransformCount, bytes: yearBytes, pageCount: pages.length };
 }
 
@@ -367,15 +373,34 @@ function figKeywords(stem) {
 }
 
 const assignments = []; // { year, no, file, page, stem40, kw, ratio, pages }
+/** 图的上方/下方最近一行正文，以及到本题题号/下一题题号的距离 */
+function contextAround(year, page, vis, ownerMarker, nextMarker) {
+  const pg = (pagesByYear[year] || []).find((p) => p.page === page);
+  if (!pg) return { above: "", below: "", distUp: null, distDown: null };
+  const lines = pg.lines || [];
+  let above = null, below = null;
+  for (const l of lines) {
+    if (l.y >= vis[3] - 1) { if (!above || l.y < above.y) above = l; }
+    else if (l.y <= vis[1] + 1) { if (!below || l.y > below.y) below = l; }
+  }
+  return {
+    above: above ? `${above.y} ${above.str}` : "(页首无正文)",
+    below: below ? `${below.y} ${below.str}` : "(页尾无正文)",
+    distUp: ownerMarker ? r1(ownerMarker.y - vis[3]) : null,
+    distDown: nextMarker ? r1(vis[1] - nextMarker.y) : null,
+  };
+}
 for (const im of allAssigned) {
   if (!im.file) continue;
   const stem = stemOf(im.year, im.owner) || "";
+  const ctx = contextAround(im.year, im.page, im.visible, im.ownerMarker, im.nextMarker);
   assignments.push({
     year: im.year, no: im.owner, file: im.file, page: im.page, idx: im.idx,
     stem40: stem.replace(/\s+/g, " ").slice(0, 40), kw: figKeywords(stem).join("/"),
     visible: im.visible, px: `${im.px}x${im.py}`, bytes: im.pngBytes,
     nonWhite: im.nonWhiteRatio, pageRatio: im.pageAreaRatio, clipped: im.clipped,
     nextNo: im.nextMarker ? im.nextMarker.no : null,
+    ...ctx,
   });
 }
 // 同一题可能多图：按 (year, no, page) 排序
@@ -435,6 +460,7 @@ push("");
 push("--- 三、挂图对照表 (year / 题号 / 图文件 / 页码 / 图尺寸pt / 像素 / 非白% / 题干关键词 / 题干前40字) ---");
 for (const a of assignments) {
   push(`${a.year}  q${String(a.no).padStart(2)}  ${a.file.padEnd(26)} p${String(a.page).padStart(2)}  ${r1(a.visible[2] - a.visible[0])}x${r1(a.visible[3] - a.visible[1])}pt  ${a.px.padEnd(10)}  ${(a.nonWhite * 100).toFixed(1)}%  [${a.kw || "无关键词"}]  ${a.stem40}`);
+  push(`      图上方: ${a.above}   |  图下方: ${a.below}   |  距本题号 ${a.distUp}pt / 距下一题号(${a.nextNo ?? "-"}) ${a.distDown}pt`);
 }
 push("");
 push(`挂图题数: ${new Set(assignments.map((a) => a.year + "|" + a.no)).size} 道（共 ${assignments.length} 张图）`);

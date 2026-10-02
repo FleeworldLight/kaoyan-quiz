@@ -103,7 +103,8 @@ export default function QuestionView({
                 title="点击放大"
                 className="group relative rounded-md border border-line-subtle bg-white p-0.5 transition-colors hover:border-brand-line"
               >
-                <img src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy" className="q-figure !my-0 !border-0" />
+                <img src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy"
+                     className="block max-h-72 w-auto max-w-full rounded-[5px]" />
                 <span className="pointer-events-none absolute right-1 bottom-1 hidden rounded bg-ink/75 px-1.5 py-0.5 text-[10.5px] text-white group-hover:block">
                   点击放大
                 </span>

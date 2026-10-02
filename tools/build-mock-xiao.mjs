@@ -90,8 +90,37 @@ function innerDiv(html, startIdx) {
 }
 
 // ------------------------------------------------------------------ 单卷解析
-const TYPE_BY_SECTION = [
-  [/单项选择题|单选题|选择题/, "single"],
+
+/**
+ * 从单个 <p> 段落里识别选项。来源页把选项排版成多种形态：
+ *   "A.xxx"                    （一段一个选项）
+ *   "A.投资和借贷    B.竞争和信用"   （一段两个选项）
+ *   "A.3:1  B.4:1  C.5:1  D.2:1"  （一段四个选项）
+ * 规则：字母必须严格递增，且第一个字母出现在段首、或正好接着已抓到的选项（A→B→C→D）。
+ * 返回 null 表示这不是选项段落（归入题干）。
+ */
+function optionsFromPara(p, optMap) {
+  const ms = [...p.matchAll(/([A-D])\s*[.．、,，]\s*/g)];
+  if (!ms.length) return null;
+  const keys = ms.map((m) => m[1]);
+  for (let i = 1; i < keys.length; i++) if (keys[i] <= keys[i - 1]) return null;
+  const expected = ["A", "B", "C", "D"][optMap.size] || null;
+  const head = p.slice(0, ms[0].index);
+  const atHead = /^[\s\u00a0]*$/.test(head);
+  if (!atHead && keys[0] !== expected) return null;
+  if (optMap.has(keys[keys.length - 1])) return null;
+  const out = [];
+  for (let k = 0; k < ms.length; k++) {
+    const s = ms[k].index + ms[k][0].length;
+    const e = k + 1 < ms.length ? ms[k + 1].index : p.length;
+    const t = p.slice(s, e).replace(/[\s\u00a0]+/g, " ").replace(/^[\s]+|[\s]+$/g, "");
+    if (!t) return null; // 有空选项 → 不认，整段进题干
+    out.push([keys[k], t]);
+  }
+  return out;
+}
+
+const TYPE_BY_SECTION = [  [/单项选择题|单选题|选择题/, "single"],
   [/多项选择题|多选题|多选题型/, "multiple"],
   [/填空题/, "blank"],
   [/材料分析题|分析题|解答题|计算题|论述题|综合题/, "essay"],
@@ -192,31 +221,16 @@ function parsePaper(html, meta) {
     const secHeaderText = secM ? text(secM[1]) : null;
     const bodyParas = paras.filter((p) => p !== secHeaderText);
 
+    const wantOptions = curType === "single" || curType === "multiple";
     const optMap = new Map();
     const stemParas = [];
     for (const p of bodyParas) {
-      // 形如 "A.xxx" 或 "A．xxx" 或 "A、xxx"
-      const single = p.match(/^([A-D])\s*[.．、,，]\s*([\s\S]*)$/);
-      if (single && !optMap.has(single[1])) {
-        optMap.set(single[1], single[2].trim());
-        continue;
-      }
-      // 一行里挤了多个选项：A.… B.… C.… D.…
-      const multi = [...p.matchAll(/(?:^|\s)([A-D])\s*[.．、]\s*/g)];
-      if (multi.length >= 2) {
-        let ok = true;
-        const tmp = [];
-        for (let k = 0; k < multi.length; k++) {
-          const s = multi[k].index + multi[k][0].length;
-          const e = k + 1 < multi.length ? multi[k + 1].index : p.length;
-          tmp.push([multi[k][1], p.slice(s, e).trim()]);
+      if (wantOptions) {
+        const got = optionsFromPara(p, optMap);
+        if (got) {
+          for (const [k, v] of got) if (!optMap.has(k)) optMap.set(k, v);
+          continue;
         }
-        // 只有按 A,B,C,D 递增顺序才认，避免把题干里的 "A.…" 误切
-        const keys = tmp.map((x) => x[0]).join("");
-        if (/^ABCD?$/.test(keys) || /^A/.test(keys)) {
-          for (const [k, v] of tmp) if (!optMap.has(k)) optMap.set(k, v);
-        } else ok = false;
-        if (ok) continue;
       }
       stemParas.push(p);
     }
@@ -293,12 +307,13 @@ function parsePaper(html, meta) {
       dropped.push({ ref: `${meta.paperId}#${no}`, reason: `多选答案仅 1 个字母（来源 ${answerFrom}）`, detail: stem.slice(0, 50) });
       continue;
     }
-    if (answer && !/^[A-D]+$/.test(answer)) {
-      dropped.push({ ref: `${meta.paperId}#${no}`, reason: `答案格式非法 ${answer}`, detail: stem.slice(0, 50) });
+    if (answer && isChoice && !/^[A-D]+$/.test(answer)) {
+      dropped.push({ ref: `${meta.paperId}#${no}`, reason: `答案格式非法 ${answer.slice(0, 20)}`, detail: stem.slice(0, 50) });
       continue;
     }
-    if (answer && new Set(answer.split("")).size !== answer.length) answer = [...new Set(answer.split(""))].sort().join("");
-    if (answer) answer = [...answer].sort().join("");
+    if (answer && isChoice && new Set(answer.split("")).size !== answer.length)
+      answer = [...new Set(answer.split(""))].sort().join("");
+    if (answer && isChoice) answer = [...answer].sort().join("");
 
     sec.questions.push(q);
   }
