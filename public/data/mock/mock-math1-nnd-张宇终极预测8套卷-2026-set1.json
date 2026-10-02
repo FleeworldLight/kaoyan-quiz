@@ -14,7 +14,7 @@
   "quality": "unverified",
   "source": {
     "name": "N诺考研 noobdream.com · 2026 张宇终极预测8套卷（一）练习解析页",
-    "url": "https://noobdream.com/Practice/exam_solution/39557/"
+    "url": "https://noobdream.com/Practice/exam_solution/39543/"
   },
   "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
   "sections": [
@@ -26,311 +26,311 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q1",
           "no": 1,
           "type": "single",
-          "stem": "当\\( x \\to 0 \\)时，以下无穷小量阶数最高的是",
+          "stem": "当$x \\to 0$时，以下无穷小量阶数最高的是",
           "options": [
             {
               "key": "A",
-              "text": "\\( \\int_{0}^{\\sin x} [(1+t)^t - 1] dt \\)"
+              "text": "$\\int_{0}^{\\sin x} [(1+t)^t - 1]dt$．"
             },
             {
               "key": "B",
-              "text": "\\( \\int_{0}^{\\sin x^2} (1+t)^{\\frac{1}{t}} dt \\)"
+              "text": "$\\int_{0}^{\\sin x^2} (1+t)^{\\frac{1}{t}}dt$．"
             },
             {
               "key": "C",
-              "text": "\\( \\int_{0}^{\\sin x} [e - (1+t)^{\\frac{1}{t}}] dt \\)"
+              "text": "$\\int_{0}^{\\sin x} [\\mathrm{e} - (1+t)^{\\frac{1}{t}}]dt$．"
             },
             {
               "key": "D",
-              "text": "\\( \\int_{0}^{\\sin^2 x} (te^t - t) dt \\)"
+              "text": "$\\int_{0}^{\\sin^2 x} (t\\mathrm{e}^t - t)dt$．"
             }
           ],
           "answer": "D",
-          "explanation": "【分析】 当\\(x \\to 0\\)时，\n\n\\[\n\n\\int_{0}^{\\sin x}[(1+t)^t - 1]dt \\sim \\int_{0}^{\\sin x} t^2 dt = \\frac{1}{3}\\sin^3 x \\sim \\frac{1}{3}x^3 ;\n\n\\]\n\n\\[\n\n\\int_{0}^{\\sin x^2} (1+t)^{\\frac{1}{t}} dt \\sim \\int_{0}^{\\sin x^2} e dt = e\\sin x^2 \\sim e x^2 ;\n\n\\]\n\n\\[\n\n\\int_{0}^{\\sin x} [e - (1+t)^{\\frac{1}{t}}]dt \\sim \\int_{0}^{\\sin x} \\frac{e t}{2} dt = \\frac{e}{4}\\sin^2 x \\sim \\frac{e}{4}x^2 ;\n\n\\]\n\n\\[\n\n\\int_{0}^{\\sin^2 x} (t e^t - t)dt \\sim \\int_{0}^{\\sin^2 x} t^2 dt = \\frac{1}{3}\\sin^6 x \\sim \\frac{1}{3}x^6.\n\n\\]\n\n故选D.",
+          "explanation": "【分析】 当\\( x \\to 0 \\)时，\n\n\\(\\int_{0}^{\\sin x} [(1+t)^t - 1]dt \\sim \\int_{0}^{\\sin x} t^2 dt = \\frac{1}{3}\\sin^3 x \\sim \\frac{1}{3}x^3\\)；\n\n\\(\\int_{0}^{\\sin x^2} (1+t)^{\\frac{1}{t}} dt \\sim \\int_{0}^{\\sin x^2} e dt = e\\sin x^2 \\sim e x^2\\)；\n\n\\(\\int_{0}^{e^{\\sin x}} [e - (1+t)^{\\frac{1}{t}}]dt \\sim \\int_{0}^{\\sin x} \\frac{e t}{2} dt = \\frac{e}{4}\\sin^2 x \\sim \\frac{e}{4}x^2\\)；\n\n\\(\\int_{0}^{\\sin^2 x} (t e^t - t)dt \\sim \\int_{0}^{\\sin^2 x} t^2 dt = \\frac{1}{3}\\sin^6 x \\sim \\frac{1}{3}x^6\\)。\n\n故选D.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11937/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11981/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q2",
           "no": 2,
           "type": "single",
-          "stem": "设\\( I_i = \\iint_{D_i} e^{-(x^2 + y^2)} d\\sigma, i = 1,2,3 \\)，其中\\( D_1 = \\{(x,y) | x^2 + y^2 \\leq R^2\\} \\)，\\( D_2 = \\{(x,y) | x^2 + y^2 \\leq 2R^2\\} \\)，\\( D_3 = \\{(x,y) ||x| \\leq R, |y| \\leq R\\}, R > 0 \\)，则",
+          "stem": "设$I_i = \\iint_{D_i} \\mathrm{e}^{-(x^2 + y^2)}d\\sigma, i=1,2,3$，其中$D_1 = \\{(x,y)|x^2 + y^2 \\leq R^2\\}, D_2 = \\{(x,y)|x^2 + y^2 \\leq 2R^2\\}, D_3 = \\{(x,y)||x| \\leq R, |y| \\leq R\\}, R > 0$，则",
           "options": [
             {
               "key": "A",
-              "text": "\\( I_1 < I_2 < I_3 \\)"
+              "text": "$I_1 < I_2 < I_3$．"
             },
             {
               "key": "B",
-              "text": "\\( I_2 < I_3 < I_1 \\)"
+              "text": "$I_2 < I_3 < I_1$．"
             },
             {
               "key": "C",
-              "text": "\\( I_1 < I_3 < I_2 \\)"
+              "text": "$I_1 < I_3 < I_2$．"
             },
             {
               "key": "D",
-              "text": "\\( I_3 < I_2 < I_1 \\)"
+              "text": "$I_3 < I_2 < I_1$．"
             }
           ],
           "answer": "C",
-          "explanation": "【分析】 \\(D_1, D_2\\)是以原点为圆心、半径分别为\\(R\\)与\\(\\sqrt{2}R\\)的圆，\\(D_3\\)是正方形，边长为\\(2R\\)，如图所示.显然有\n\n\\[\n\nD_1 \\subset D_3 \\subset D_2.\n\n\\]\n\n又由于\\(e^{-(x^2 + y^2)}\\)恒正，因此C成立.",
+          "explanation": "【分析】 \\( D_1, D_2 \\)是以原点为圆心、半径分别为\\( R \\)与\\( \\sqrt{2}R \\)的圆，\\( D_3 \\)是正方形，边长为\\( 2R \\)，\n\n如图所示.显然有\n\n\\( D_1 \\subset D_3 \\subset D_2 \\).\n\n又由于\\( e^{-(x^2 + y^2)} \\)恒正，因此C成立.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11938/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11982/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q3",
           "no": 3,
           "type": "single",
-          "stem": "设级数①\\( \\sum_{n=1}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{n}}} \\)，②\\( \\sum_{n=2}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{\\sqrt{\\ln n}}}} \\)，则",
+          "stem": "设$f(x) = (x-1)^{10} \\sin x$，则$f^{(11)}(1) =$",
           "options": [
             {
               "key": "A",
-              "text": "①收敛，②发散"
+              "text": "$10! \\cdot \\cos 1$．"
             },
             {
               "key": "B",
-              "text": "①发散，②收敛"
+              "text": "$11! \\cdot \\cos 1$．"
             },
             {
               "key": "C",
-              "text": "①②均收敛"
+              "text": "$10! \\cdot \\sin 1$．"
             },
             {
               "key": "D",
-              "text": "①②均发散"
+              "text": "$11! \\cdot \\sin 1$．"
             }
           ],
           "answer": "B",
-          "explanation": "【分析】 对于①\\(\\sum_{n=1}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{n}}}\\)，由于\\(\\lim_{n \\to \\infty} \\frac{n^{\\frac{1}{1 + \\frac{1}{n}}}}{\\frac{1}{n}} = 1\\)，因此由正项级数比较判别法的极限形式可知，\\(\\sum_{n=1}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{n}}}\\)发散.\n\n对于②\\(\\sum_{n=2}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{\\sqrt{\\ln n}}}}\\)，\n\n\\[\n\n\\frac{1}{n^{1 + \\frac{1}{\\sqrt{\\ln n}}}} = \\frac{1}{n \\cdot e^{\\frac{\\ln n}{\\sqrt{\\ln n}}}} = \\frac{1}{n \\cdot e^{\\sqrt{\\ln n}}}.\n\n\\]\n\n令\\(f(x) = \\frac{1}{x e^{\\sqrt{\\ln x}}}\\)，由于\\(f(x)\\)在\\([2, +\\infty)\\)上非负连续且单调递减，故由积分判别法可知，级数\\(\\sum_{n=2}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{\\sqrt{\\ln n}}}}\\)的敛散性与反常积分\\(\\int_{2}^{+\\infty} \\frac{1}{x e^{\\sqrt{\\ln x}}} dx\\)的敛散性相同.又因为\n\n\\[\n\n\\int_{2}^{+\\infty} \\frac{1}{x e^{\\sqrt{\\ln x}}} dx = \\int_{2}^{+\\infty} \\frac{1}{e^{\\sqrt{\\ln x}}} d(\\ln x) \\stackrel{\\sqrt{\\ln x} = t}{=} \\int_{\\sqrt{\\ln 2}}^{+\\infty} \\frac{2t dt}{e^t}\n\n\\]\n\n\\[\n\n= (-2t e^{-t} - 2e^{-t}) \\big|_{\\sqrt{\\ln 2}}^{+\\infty} = 2(\\sqrt{\\ln 2} + 1)e^{-\\sqrt{\\ln 2}}\n\n\\]\n\n所以级数\\(\\sum_{n=2}^{\\infty} \\frac{1}{n^{1 + \\frac{1}{\\sqrt{\\ln n}}}}\\)收敛.故选B.",
+          "explanation": "【分析】\n\n\\( f^{(11)}(1) = \\sum_{k=0}^{11} C_{11}^k [(x-1)^0]^{(k)} (\\sin x)^{(11-k)} \\big|_{x=1} \\)\n\n\\( = C_{11}^{10} 10! \\cdot \\cos 1 = 11 \\cdot \\cos 1 \\).",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11939/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11983/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q4",
           "no": 4,
           "type": "single",
-          "stem": "设\\( f(x) \\)在\\( (0, +\\infty) \\)内可导，以下结论\n\n①若\\( \\lim_{x \\to +\\infty} f(x) \\)存在，则\\( \\lim_{x \\to +\\infty} f'(x) \\)存在；\n\n②若\\( \\lim_{x \\to +\\infty} f'(x) \\)存在，则\\( \\lim_{x \\to +\\infty} f(x) \\)存在；\n\n③若\\( \\lim_{x \\to +\\infty} f'(x) = a \\neq 0 \\)，则\\( f(x) \\)在\\( x \\to +\\infty \\)时无界；\n\n④若\\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)，则\\( f(x) \\)在\\( x \\to +\\infty \\)时有界.\n\n正确的个数为",
+          "stem": "曲线$x^3 - y^3 = 3x^2$的斜渐近线方程为",
           "options": [
             {
               "key": "A",
-              "text": "1"
+              "text": "$x + y - 1 = 0$．"
             },
             {
               "key": "B",
-              "text": "2"
+              "text": "$x + y + 1 = 0$．"
             },
             {
               "key": "C",
-              "text": "3"
+              "text": "$x - y + 1 = 0$．"
             },
             {
               "key": "D",
-              "text": "4"
+              "text": "$x - y - 1 = 0$．"
             }
           ],
-          "answer": "A",
-          "explanation": "【分析】 对于①，可举反例\\(f(x) = \\frac{\\sin x^2}{x}\\)，\\(\\lim_{x \\to +\\infty} f(x)\\)存在，但\\(\\lim_{x \\to +\\infty} f'(x)\\)不存在.\n\n对于②，可举反例\\(f(x) = x\\)，\\(\\lim_{x \\to +\\infty} f'(x)\\)存在，但\\(\\lim_{x \\to +\\infty} f(x)\\)不存在.\n\n对于③，不妨设\\(a > 0\\)，则存在\\(X > 0\\)，当\\(x > X\\)时，\\(f'(x) > \\frac{a}{2}\\)，故\n\n\\[\n\nf(x) = f(X) + \\int_{X}^{x} f'(t) dt > f(X) + \\frac{a}{2}(x - X),\n\n\\]\n\n当\\(x \\to +\\infty\\)时，\\(f(x) \\to +\\infty\\)，故③正确.\n\n对于④，可举反例\\(f(x) = \\sqrt{x}\\)，\\(\\lim_{x \\to +\\infty} f'(x) = 0\\)，但\\(f(x)\\)在\\(x \\to +\\infty\\)时无界.\n\n故选A.",
+          "answer": "D",
+          "explanation": "【分析】 \\( y = \\sqrt[3]{x^3 - 3x^2} \\)，则\n\n\\( a = \\lim_{x \\to \\infty} \\frac{y}{x} = \\lim_{x \\to \\infty} \\frac{\\sqrt[3]{x^3 - 3x^2}}{x} = 1 \\),\n\n\\( b = \\lim_{x \\to \\infty} (y - x) = \\lim_{x \\to \\infty} (\\sqrt[3]{x^3 - 3x^2} - x) \\)\n\n\\( \\stackrel{t = \\frac{1}{x}}{=} \\lim_{t \\to 0} \\frac{\\sqrt[3]{1 - 3t} - 1}{t} = -1 \\),\n\n故斜渐近线方程为\\( y = x - 1 \\).",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11940/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11984/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q5",
           "no": 5,
           "type": "single",
-          "stem": "设\\( A = \\begin{pmatrix} a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a \\end{pmatrix} \\)可经初等列变换化成\\( B = \\begin{pmatrix} a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a \\end{pmatrix} \\)，则\\( a \\)的取值范围为",
+          "stem": "设$f(x)$是$[0,1]$上单调增加的连续函数，则",
           "options": [
             {
               "key": "A",
-              "text": "\\( \\{a | a \\in \\mathbb{R}, a \\neq -2\\} \\)"
+              "text": "$\\int_{0}^{1} \\mathrm{e}^{\\int_{0}^{x^2} \\mathrm{e}^{-t^2}dt} f(x)dx \\geq \\int_{0}^{1} f(x)\\mathrm{e}^{-x^2}dx$．"
             },
             {
               "key": "B",
-              "text": "\\( \\{a | a \\in \\mathbb{R}, a \\neq -2, a \\neq -1\\} \\)"
+              "text": "$\\int_{0}^{1} \\mathrm{e}^{\\int_{0}^{x^2} \\mathrm{e}^{-t^2}dt} f(x)dx \\leq \\int_{0}^{1} f(x)\\mathrm{e}^{-x^2}dx$．"
             },
             {
               "key": "C",
-              "text": "\\( \\{a | a \\in \\mathbb{R}, a \\neq 1, a \\neq -1\\} \\)"
+              "text": "$\\int_{0}^{1} \\mathrm{e}^{\\int_{0}^{x^2} \\mathrm{e}^{-t^2}dt} f(x)dx \\geq \\int_{0}^{1} f(x)dx$．"
             },
             {
               "key": "D",
-              "text": "\\( \\{a | a \\in \\mathbb{R}, a \\neq -1\\} \\)"
+              "text": "$\\int_{0}^{1} \\mathrm{e}^{\\int_{0}^{x^2} \\mathrm{e}^{-t^2}dt} f(x)dx \\leq \\int_{0}^{1} f(x)dx$．"
             }
           ],
           "answer": "B",
-          "explanation": "【分析】 记\\(\\alpha_1 = \\begin{pmatrix} a \\\\ 1 \\\\ 1 \\end{pmatrix}\\)，\\(\\alpha_2 = \\begin{pmatrix} 1 \\\\ a \\\\ 1 \\end{pmatrix}\\)，\\(\\alpha_3 = \\begin{pmatrix} 1 \\\\ a \\\\ a \\end{pmatrix}\\)，\\(\\alpha_4 = \\begin{pmatrix} 1 \\\\ 1 \\\\ a \\end{pmatrix}\\)，由题意，向量组\\(\\alpha_1, \\alpha_2, \\alpha_4\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示，可知\\(\\alpha_4\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示，所以方程组\\(x_1\\alpha_1 + x_2\\alpha_2 + x_3\\alpha_3 = \\alpha_4\\)有解，其系数行列式\n\n\\[\n\n|A| = |\\alpha_1, \\alpha_2, \\alpha_3| = \\begin{vmatrix} a & 1 & 1 \\\\ 1 & a & a \\\\ 1 & 1 & a \\end{vmatrix} = (a + 1)(a - 1)^2.\n\n\\]\n\n当\\(|\\alpha_1, \\alpha_2, \\alpha_3| = (a + 1)(a - 1)^2 \\neq 0\\)，即\\(a \\neq \\pm 1\\)时，\\(\\alpha_4\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示；\n\n当\\(a = 1\\)时，有\\(\\alpha_1 = \\alpha_2 = \\alpha_3 = \\alpha_4 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix}\\)，可知\\(\\alpha_4\\)仍可由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示；\n\n当\\(a = -1\\)时，对增广矩阵\\(\\overline{A}\\)作初等行变换，则\n\n\\[\n\n\\overline{A} = (\\alpha_1, \\alpha_2, \\alpha_3 \\vdots \\alpha_4) = \\begin{pmatrix} -1 & 1 & 1 & 1 \\\\ 1 & -1 & -1 & 1 \\\\ 1 & 1 & -1 & -1 \\end{pmatrix} \\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ -1 & 1 & 1 & 1 \\\\ 1 & 1 & -1 & -1 \\end{pmatrix}\n\n\\]\n\n\\[\n\n\\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ 0 & 0 & 0 & 2 \\\\ 0 & 2 & 0 & -2 \\end{pmatrix} \\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ 0 & 1 & 0 & -1 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix},\n\n\\]\n\n可知\\(r(\\overline{A}) = 3\\)，\\(r(A) = 2\\)，此时\\(\\alpha_4\\)不能由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示.\n\n由题设知，\\(A\\)可经初等列变换化成\\(B\\)，则\\(B\\)也可经初等列变换化成\\(A\\)，即\\(\\alpha_3\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_4\\)线性表示.同理可得\\(a \\neq -2\\).\n\n综上，\\(a \\neq -1\\)且\\(a \\neq -2\\).故选B.\n\n【注】 本题实质上是\\(\\alpha_4\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_3\\)线性表示且\\(\\alpha_3\\)可由\\(\\alpha_1, \\alpha_2, \\alpha_4\\)线性表示，进而转化成非齐次线性方程组有解的问题.",
+          "explanation": "【分析】 令\n\n\\( F(x) = \\int_{0}^{\\int_{0}^{x} e^{-t^2} dt} f(u) du - \\int_{0}^{x} f(t) e^{-x^2} dt, x \\in [0,1] \\),\n\n则\n\n\\( F'(x) = f\\left( \\int_{0}^{x} e^{-t^2} dt \\right) e^{-x^2} - f(x) e^{-x^2} = e^{-x^2} \\left[ f\\left( \\int_{0}^{x} e^{-t^2} dt \\right) - f(x) \\right] \\).\n\n由\\( 0 < e^{-x^2} \\leq 1 \\)知，\\( \\int_{0}^{x} e^{-t^2} dt \\leq \\int_{0}^{x} 1 dt = x \\)，且\\( f(x) \\)单调递增，故\\( F'(x) \\leq 0 \\)，又\\( F(0) = 0 \\)，故\n\n\\( F(1) \\leq 0 \\)，即\\( \\int_{0}^{\\int_{0}^{1} e^{-t^2} dt} f(x) dx \\leq \\int_{0}^{1} f(x) e^{-x^2} dx \\).故选项B正确.\n\n因无法判断\\( f(x) \\)在\\([0,1]\\)上的正负，故选项C, D均不正确.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11941/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11985/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q6",
           "no": 6,
           "type": "single",
-          "stem": "设二次型\\( f(x_1, x_2, x_3) \\)在正交变换\\( x = Py \\)下的标准形为\\( y_1^2 + y_2^2 - 2y_3^2 \\)，其中\\( P = (e_1, e_2, e_3) \\)。若\\( Q = (-e_3, e_2, e_1) \\)，则\\( f(x_1, x_2, x_3) \\)在正交变换\\( x = Qy \\)下的标准形为",
+          "stem": "设一单位质量细杆的长为1，$G$为引力常数．当质量为$a$的质点在细杆延长线上距杆右端点的$\\frac{1}{2}$处移至$\\frac{1}{3}$处时，引力做功大小为",
           "options": [
             {
               "key": "A",
-              "text": "\\( 2y_1^2 - y_2^2 + y_3^2 \\)"
+              "text": "$Ga\\ln\\frac{4}{3}$．"
             },
             {
               "key": "B",
-              "text": "\\( 2y_1^2 + y_2^2 - y_3^2 \\)"
+              "text": "$Ga\\ln\\frac{5}{3}$．"
             },
             {
               "key": "C",
-              "text": "\\( -2y_1^2 + y_2^2 + y_3^2 \\)"
+              "text": "$Ga\\ln 2$．"
             },
             {
               "key": "D",
-              "text": "\\( -2y_1^2 - y_2^2 + y_3^2 \\)"
+              "text": "$Ga\\ln 3$．"
             }
           ],
-          "answer": "C",
-          "explanation": "【分析】 设二次型矩阵为\\( A \\)，则\n\n\\[\n\nP^{-1}AP = P^{T}AP = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & -2 \\end{pmatrix},\n\n\\]\n\n则\\( e_1,e_2,e_3 \\)分别是\\( A \\)的对应于特征值\\( 1,1,-2 \\)的特征向量，于是\\( -e_3 \\)也是\\( A \\)的对应于特征值\\( -2 \\)的特征向量.因此\n\n\\[\n\nQ^{-1}AQ = Q^{T}AQ = \\begin{pmatrix} -2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix},\n\n\\]\n\n从而\\( f(x_1,x_2,x_3) \\)在正交变换\\( x = Qy \\)下的标准形为\\( -2y_1^2 + y_2^2 + y_3^2 \\).故选C.",
+          "answer": "A",
+          "explanation": "【分析】 设细杆的质量为\\( M \\)，长为\\( l \\)，建立如图所示的坐标系.设质点距杆左端(原点)的距离为\\( x_0(x_0 > 1) \\)，则引力微元大小为\n\n\\( dF = G \\cdot \\frac{M \\cdot \\frac{dx}{l} \\cdot a}{(x_0 - x)^2} = Ga \\frac{1}{(x_0 - x)^2} dx \\),\n\n则此瞬时引力大小为\n\n\\( F = \\int_{0}^{1} dF = Ga \\int_{0}^{1} \\frac{1}{(x_0 - x)^2} dx \\)\n\n\\( = Ga \\frac{1}{x_0 - x} \\big|_{x=0}^{x=1} = Ga \\left( \\frac{1}{x_0 - 1} - \\frac{1}{x_0} \\right) \\)\n\n\\( = Ga \\frac{1}{x_0(x_0 - 1)} \\).\n\n故所求引力做功大小为\n\n\\( W = \\left| \\int_{\\frac{3}{2}}^{\\frac{4}{3}} Ga \\frac{dx_0}{x_0(x_0 - 1)} \\right| = \\left| Ga \\ln \\frac{x_0 - 1}{x_0} \\big|_{\\frac{3}{2}}^{\\frac{4}{3}} \\right| \\)\n\n\\( = \\left| -Ga \\ln \\frac{4}{3} \\right| = Ga \\ln \\frac{4}{3} \\).",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11942/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11986/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q7",
           "no": 7,
           "type": "single",
-          "stem": "设\\( A \\)为\\( n \\)阶矩阵，\\( r(A) = r \\)，\\( E_r \\)为\\( r \\)阶单位矩阵，则“\\( A^2 = A \\)”是“存在列满秩矩阵\\( C_{n \\times r} \\)，使得\\( A = CB, BC = E_r \\)”的",
+          "stem": "设$f(x)$在$(0, +\\infty)$内可导，以下结论\n\n①若$\\lim\\limits_{x \\to +\\infty} f(x)$存在，则$\\lim\\limits_{x \\to +\\infty} f'(x)$存在；\n\n②若$\\lim\\limits_{x \\to +\\infty} f'(x)$存在，则$\\lim\\limits_{x \\to +\\infty} f(x)$存在；\n\n③若$\\lim\\limits_{x \\to +\\infty} f'(x) = a \\neq 0$，则$f(x)$在$x \\to +\\infty$时无界；\n\n④若$\\lim\\limits_{x \\to +\\infty} f'(x) = 0$，则$f(x)$在$x \\to +\\infty$时有界．\n\n正确的个数为",
           "options": [
             {
               "key": "A",
-              "text": "充分非必要条件"
+              "text": "1．"
             },
             {
               "key": "B",
-              "text": "必要非充分条件"
+              "text": "2．"
             },
             {
               "key": "C",
-              "text": "充分必要条件"
+              "text": "3．"
             },
             {
               "key": "D",
-              "text": "既非充分又非必要条件"
+              "text": "4．"
             }
           ],
-          "answer": "C",
-          "explanation": "【分析】 必要性(&lArr;).若\\( A = CB, BC = E_r, r(C) = r \\)，则\\( A^2 = CBCB = CE_rB = A \\)，成立.\n\n充分性(&rArr;).由\\( A^2 = A \\)得\\( A(A - E) = O \\)，故\\( r(A) + r(A - E) \\leq n \\).又\\( r(A) + r(A - E) \\geq r(A - (A - E)) = r(E) = n \\)，可得\\( r(A) + r(A - E) = n \\).由\\( A^2 = A \\)可得矩阵\\( A \\)的特征值只能为\\( 0 \\)或\\( 1 \\)，而\\( A \\)属于\\( 0 \\)的线性无关的特征向量个数为\\( n - r(A) \\)，属于\\( 1 \\)的线性无关的特征向量个数为\\( n - r(A - E) \\).故\\( A \\)的线性无关的特征向量个数为\\( n - r(A) + n - r(A - E) = n \\)，则\\( A \\)可相似对角化.又\\( r(A) = r \\)，则存在可逆矩阵\\( P \\)，使\\( A = P^{-1}\\begin{pmatrix} E_r & 0 \\\\ 0 & 0 \\end{pmatrix}P \\)，即\\( A = P^{-1}\\begin{pmatrix} E_r \\\\ 0 \\end{pmatrix}(E_r, 0)P \\stackrel{记}{=} CB \\)，其中\n\n\\[\n\nC = P^{-1}\\begin{pmatrix} E_r \\\\ 0 \\end{pmatrix}, r(C) = r, B = (E_r, 0)P,\n\n\\]\n\n且\\( BC = (E_r, 0)PP^{-1}\\begin{pmatrix} E_r \\\\ 0 \\end{pmatrix} = E_r \\)，成立.\n\n故选C.",
+          "answer": "A",
+          "explanation": "【分析】 对于①，可举反例\\( f(x) = \\frac{\\sin x^2}{x} \\)，\\( \\lim_{x \\to +\\infty} f(x) \\)存在，但\\( \\lim_{x \\to +\\infty} f'(x) \\)不存在.\n\n对于②，可举反例\\( f(x) = x \\)，\\( \\lim_{x \\to +\\infty} f'(x) \\)存在，但\\( \\lim_{x \\to +\\infty} f(x) \\)不存在.\n\n对于③，不妨设\\( a > 0 \\)，则存在\\( X > 0 \\)，当\\( x > X \\)时，\\( f'(x) > \\frac{a}{2} \\)，故\n\n\\( f(x) = f(X) + \\int_{X}^{x} f'(t)dt > f(X) + \\frac{a}{2}(x - X) \\),\n\n当\\( x \\to +\\infty \\)时，\\( f(x) \\to +\\infty \\).故③正确.\n\n对于④，可举反例\\( f(x) = \\sqrt{x} \\)，\\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)，但\\( f(x) \\)在\\( x \\to +\\infty \\)时无界.\n\n故选A.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11943/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11987/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q8",
           "no": 8,
           "type": "single",
-          "stem": "设\\( X, Y \\)分别服从参数为\\( n, m \\)的泊松分布，且\\( n > m \\)，\\( F_X(x), F_Y(y) \\)分别是\\( X, Y \\)的分布函数，\\( -\\infty < z < +\\infty \\)，则",
+          "stem": "设$A = \\begin{pmatrix} a & 1 & 1 \\\\ 1 & a & a \\\\ 1 & 1 & a \\end{pmatrix}$可经初等列变换化成$B = \\begin{pmatrix} a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a \\end{pmatrix}$，则$a$的取值范围为",
           "options": [
             {
               "key": "A",
-              "text": "\\( P\\{X \\geq Y\\} = 1 \\)"
+              "text": "$\\{a|a \\in \\mathbf{R}, a \\neq -2\\}$．"
             },
             {
               "key": "B",
-              "text": "\\( P\\{X \\leq Y\\} = 1 \\)"
+              "text": "$\\{a|a \\in \\mathbf{R}, a \\neq -2, a \\neq -1\\}$．"
             },
             {
               "key": "C",
-              "text": "\\( F_X(z) \\geq F_Y(z) \\)"
+              "text": "$\\{a|a \\in \\mathbf{R}, a \\neq 1, a \\neq -1\\}$．"
             },
             {
               "key": "D",
-              "text": "\\( F_X(z) \\leq F_Y(z) \\)"
+              "text": "$\\{a|a \\in \\mathbf{R}, a \\neq -1\\}$．"
             }
           ],
-          "answer": "D",
-          "explanation": "【分析】 令\\( Z \\sim P(n - m) \\)且与\\( Y \\)独立，由于\\( Z + Y \\sim P(n - m + m) = P(n) \\)，故与\\( X \\)同分布，于是\n\n\\[\n\nF_X(z) = P\\{X \\leq z\\} = P\\{Z + Y \\leq z\\}, F_Y(z) = P\\{Y \\leq z\\},\n\n\\]\n\n又由于\\( \\{Z + Y \\leq z\\} \\subset \\{Y \\leq z\\} \\)，因此\\( F_X(z) \\leq F_Y(z) \\)，故选D.\n\n【注】 此题的随机变量\\( X \\)，\\( Y \\)的取值范围均为非负整数，\\( X \\)与\\( Y \\)无法比较大小，故A，B均不正确.",
+          "answer": "B",
+          "explanation": "【分析】 记\\( \\alpha_1 = \\begin{pmatrix} a \\\\ 1 \\\\ 1 \\end{pmatrix} \\)，\\( \\alpha_2 = \\begin{pmatrix} 1 \\\\ a \\\\ 1 \\end{pmatrix} \\)，\\( \\alpha_3 = \\begin{pmatrix} 1 \\\\ a \\\\ a \\end{pmatrix} \\)，\\( \\alpha_4 = \\begin{pmatrix} 1 \\\\ 1 \\\\ a \\end{pmatrix} \\)，由题意，向量组\\( \\alpha_1, \\alpha_2, \\alpha_4 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示，可知\\( \\alpha_4 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示，所以方程组\\( x_1\\alpha_1 + x_2\\alpha_2 + x_3\\alpha_3 = \\alpha_4 \\)有解，其系数行列式\n\n\\( |A| = |\\alpha_1, \\alpha_2, \\alpha_3| = \\begin{vmatrix} a & 1 & 1 \\\\ 1 & a & a \\\\ 1 & 1 & a \\end{vmatrix} = (a + 1)(a - 1)^2 \\).\n\n当\\( |\\alpha_1, \\alpha_2, \\alpha_3| = (a + 1)(a - 1)^2 \\neq 0 \\)，即\\( a \\neq \\pm 1 \\)时，\\( \\alpha_4 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示；\n\n当\\( a = 1 \\)时，有\\( \\alpha_1 = \\alpha_2 = \\alpha_3 = \\alpha_4 = \\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} \\)，可知\\( \\alpha_4 \\)仍可由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示；\n\n当\\( a = -1 \\)时，对增广矩阵\\( \\overline{A} \\)作初等行变换，则\n\n\\( \\overline{A} = (\\alpha_1, \\alpha_2, \\alpha_3 \\mid \\alpha_4) = \\begin{pmatrix} -1 & 1 & 1 & 1 \\\\ 1 & -1 & -1 & 1 \\\\ 1 & 1 & -1 & -1 \\end{pmatrix} \\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ -1 & 1 & 1 & 1 \\\\ 1 & 1 & -1 & -1 \\end{pmatrix} \\)\n\n\\( \\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ 0 & 0 & 0 & 2 \\\\ 0 & 2 & 0 & -2 \\end{pmatrix} \\to \\begin{pmatrix} 1 & -1 & -1 & 1 \\\\ 0 & 1 & 0 & -1 \\\\ 0 & 0 & 0 & 1 \\end{pmatrix} \\),\n\n可知\\( r(\\overline{A}) = 3, r(A) = 2 \\)，此时\\( \\alpha_4 \\)不能由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示.\n\n由题设知，\\( A \\)可经初等列变换化成\\( B \\)，则\\( B \\)也可经初等列变换化成\\( A \\)，即\\( \\alpha_3 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_4 \\)线性表示.同理可得\\( a \\neq -2 \\).\n\n综上，\\( a \\neq -1 \\)且\\( a \\neq -2 \\).故选B.\n\n【注】 本题实质上是\\( \\alpha_4 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_3 \\)线性表示且\\( \\alpha_3 \\)可由\\( \\alpha_1, \\alpha_2, \\alpha_4 \\)线性表示，进而转化成非齐次线性方程组有解的问题.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11944/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11988/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q9",
           "no": 9,
           "type": "single",
-          "stem": "设\\( X_1, X_2, \\cdots, X_n (n \\geq 2) \\)为来自正态总体\\( X \\)的简单随机样本，\\( E(X) = \\mu, D(X) = \\sigma^2, \\sigma > 0 \\)，记\\( Y = \\frac{1}{n} \\sum_{i=1}^{n} |X_i - \\mu| \\)，则\\( D(Y) = \\)",
+          "stem": "设二次型$f(x_1, x_2, x_3)$在正交变换$x = Py$下的标准形为$y_1^2 + y_2^2 - 2y_3^2$，其中$P = (e_1, e_2, e_3)$．若$Q = (-e_3, e_2, e_1)$，则$f(x_1, x_2, x_3)$在正交变换$x = Qy$下的标准形为",
           "options": [
             {
               "key": "A",
-              "text": "\\( \\frac{\\sigma^2}{n} \\left(1 - \\frac{2}{\\pi}\\right) \\)"
+              "text": "$2y_1^2 - y_2^2 + y_3^2$．"
             },
             {
               "key": "B",
-              "text": "\\( \\frac{\\sigma^2}{n} \\left(1 - \\frac{\\pi}{2}\\right) \\)"
+              "text": "$2y_1^2 + y_2^2 - y_3^2$．"
             },
             {
               "key": "C",
-              "text": "\\( \\frac{\\sigma^2}{n^2} \\left(1 - \\frac{2}{\\pi}\\right) \\)"
+              "text": "$-2y_1^2 + y_2^2 + y_3^2$．"
             },
             {
               "key": "D",
-              "text": "\\( \\frac{\\sigma^2}{n^2} \\left(1 - \\frac{\\pi}{2}\\right) \\)"
+              "text": "$-2y_1^2 - y_2^2 + y_3^2$．"
             }
           ],
-          "answer": "A",
-          "explanation": "【分析】 令\\( Z = \\frac{X - \\mu}{\\sigma} \\)，则\\( Z \\sim N(0,1) \\)，故\n\n\\[\n\nE(|Z|) = \\int_{-\\infty}^{+\\infty} |z| \\frac{1}{\\sqrt{2\\pi}} \\mathrm{e}^{-\\frac{z^2}{2}} \\mathrm{d}z\n\n\\]\n\n\\[\n\n= \\frac{2}{\\sqrt{2\\pi}} \\int_{0}^{+\\infty} z\\mathrm{e}^{-\\frac{z^2}{2}} \\mathrm{d}z = \\frac{-2}{\\sqrt{2\\pi}} \\mathrm{e}^{-\\frac{z^2}{2}} \\bigg|_{0}^{+\\infty} = \\sqrt{\\frac{2}{\\pi}}.\n\n\\]\n\n因\\( Z \\sim N(0,1) \\)，则\\( Z^2 \\sim \\chi^2(1) \\)，可知\\( E(Z^2) = 1 \\)，故\n\n\\[\n\nD(|Z|) = E(Z^2) - [E(|Z|)]^2 = 1 - \\frac{2}{\\pi},\n\n\\]\n\n\\[\n\nD(Y) = \\frac{1}{n^2} D\\left( \\sum_{i=1}^{n} |X_i - \\mu| \\right) = \\frac{1}{n^2} \\sum_{i=1}^{n} D(|X_i - \\mu|)\n\n\\]\n\n\\[\n\n= \\frac{1}{n} D(|X - \\mu|) = \\frac{1}{n} D\\left( \\left| \\frac{X - \\mu}{\\sigma} \\right| \\cdot \\sigma \\right)\n\n\\]\n\n\\[\n\n= \\frac{\\sigma^2}{n} D(|Z|) = \\frac{\\sigma^2}{n} \\left( 1 - \\frac{2}{\\pi} \\right).\n\n\\]\n\n故选A.",
+          "answer": "C",
+          "explanation": "【分析】 设二次型矩阵为\\( A \\)，则\n\n\\( P^{-1}AP = P^T AP = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & -2 \\end{pmatrix} \\),\n\n则\\( e_1, e_2, e_3 \\)分别是\\( A \\)的对应于特征值1,1,-2的特征向量，于是\\( -e_3 \\)也是\\( A \\)的对应于特征值-2的特征向量.因此\n\n\\( Q^{-1}AQ = Q^T AQ = \\begin{pmatrix} -2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\),\n\n从而\\( f(x_1, x_2, x_3) \\)在正交变换\\( x = Qy \\)下的标准形为\\( -2y_1^2 + y_2^2 + y_3^2 \\).故选C.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11945/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11989/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q10",
           "no": 10,
           "type": "single",
-          "stem": "设总体\\( X \\sim N(\\mu, 1), H_0: \\mu = 0, H_1: \\mu = 1 \\). 来自总体\\( X \\)的样本容量为9的简单随机样本均值为\\( \\bar{X} \\)，设拒绝域为\\( W = \\{\\bar{X} \\geq 0.55\\} \\)，则不犯第二类错误的概率为",
+          "stem": "设$A$为$n$阶矩阵，$r(A) = r, E_r$为$r$阶单位矩阵，则“$A^2 = A$”是“存在列满秩矩阵$C_{n \\times r}$，使得$A = CB, BC = E_r$”的",
           "options": [
             {
               "key": "A",
-              "text": "\\( 1 - \\Phi(1.35) \\)"
+              "text": "充分非必要条件．"
             },
             {
               "key": "B",
-              "text": "\\( \\Phi(1.35) \\)"
+              "text": "必要非充分条件．"
             },
             {
               "key": "C",
-              "text": "\\( \\Phi(1.65) \\)"
+              "text": "充分必要条件．"
             },
             {
               "key": "D",
-              "text": "\\( 1 - \\Phi(1.65) \\)"
+              "text": "既非充分又非必要条件．"
             }
           ],
-          "answer": "B",
-          "explanation": "【分析】 由题设，\\( H_0: X \\sim N(0,1), H_1: X \\sim N(1,1) \\)，故\n\n\\[\n\n\\beta = P\\{\\overline{W} | H_1\\} = P\\{\\overline{X} < 0.55 | H_1\\}.\n\n\\]\n\n在\\( H_1 \\)成立的条件下，\\( \\overline{X} \\sim N\\left(1, \\frac{1}{9}\\right) \\)，故\n\n\\[\n\n\\beta = P\\left\\{ \\frac{\\overline{X} - 1}{\\frac{1}{3}} < \\frac{0.55 - 1}{\\frac{1}{3}} \\right\\} = \\Phi(-1.35) = 1 - \\Phi(1.35).\n\n\\]\n\n因此不犯第二类错误的概率为\\( 1 - \\beta = \\Phi(1.35) \\).\n\n故选B.\n\n【注】 设犯第二类错误的概率为\\( \\beta \\)，则不犯第二类错误的概率为\\( 1 - \\beta \\)，而不是犯第一类错误的概率，不要弄混.",
+          "answer": "C",
+          "explanation": "【分析】 必要性( \\( \\Leftarrow \\) ).若\\( A = CB, BC = E_r, r(C) = r, \\) 则\\( A^2 = CBCB = CE_r B = A \\),\n\n成立.\n\n充分性( \\( \\Rightarrow \\) ).由\\( A^2 = A \\)得\\( A(A - E) = O \\)，故\\( r(A) + r(A - E) \\leq n \\).又\\( r(A) + r(A - E) \\geq r(A - (A - E)) = r(E) = n, \\) 可得\\( r(A) + r(A - E) = n \\).由\\( A^2 = A \\)可得矩阵\\( A \\)的特征值只能为0或1，而\\( A \\)属于0的线性无关的特征向量个数为\\( n - r(A) \\)，属于1的线性无关的特征向量个数为\\( n - r(A - E) \\).故\\( A \\)的线性无关的特征向量个数为\n\n\\( n - r(A) + n - r(A - E) = n \\)，则\\( A \\)可相似对角化.又\\( r(A) = r, \\) 则存在可逆矩阵\\( P \\),使\n\n\\( A = P^{-1} \\begin{pmatrix} E_r & O \\\\ O & O \\end{pmatrix} P \\)，即\\( A = P^{-1} \\begin{pmatrix} E_r \\\\ O \\end{pmatrix} (E_r, O) P \\stackrel{记}{=} CB \\)，其中\n\n\\( C = P^{-1} \\begin{pmatrix} E_r \\\\ O \\end{pmatrix}, r(C) = r, B = (E_r, O) P \\),\n\n且\\( BC = (E_r, O) PP^{-1} \\begin{pmatrix} E_r \\\\ O \\end{pmatrix} = E_r \\), 成立.\n\n故选C.",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/11946/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11990/"
         }
       ]
     },
@@ -350,77 +350,77 @@
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11947/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11991/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q12",
           "no": 12,
           "type": "blank",
-          "stem": "（填空题）$z=\\arcsin y^{x}$在点$(-1,2)$处的全微分为$dz=$_______.",
+          "stem": "（填空题）$\\int_{0}^{1}x\\arcsin(1-x)dx=$_______.",
           "options": [],
-          "answer": "$\\frac {\\sqrt {3}}{3}\\ln 2dx-\\frac {\\sqrt {3}}{6}dy$",
-          "explanation": "$\\frac {\\partial z}{\\partial x}=\\frac {y^{x}\\ln y}{\\sqrt {1-(y^{x})^{2}}},$\n\n$\\frac {\\partial z}{\\partial y}=\\frac {xy^{x-1}}{\\sqrt {1-(y^{x})^{2}}},$\n\n故 $\\frac {\\partial z}{\\partial x}|_{(-1,2)}=\\frac {\\frac {1}{2}\\ln 2}{\\frac {\\sqrt {3}}{2}}=\\frac {\\sqrt {3}}{3}\\ln 2,$\n\n$\\frac {\\partial z}{\\partial y}|_{(-1,2)}=\\frac {-1×\\frac {1}{4}}{\\frac {\\sqrt {3}}{2}}=-\\frac {\\sqrt {3}}{6},$\n\n于是 $dz|_{(-1,2)}=\\frac {\\sqrt {3}}{3}\\ln 2dx-\\frac {\\sqrt {3}}{6}dy.$",
+          "answer": "$\\frac {3}{8}π-1$",
+          "explanation": "原式$=∫_{0}^{1}\\arcsin(1-x)d(\\frac {x^{2}}{2})=\\frac {x^{2}}{2}\\arcsin(1-x)|_{0}^{1}+\\frac {1}{2}∫_{0}^{1}\\frac {x^{2}}{\\sqrt {1-(1-x)^{2}}}dx$\n\n$\\frac {1-x=t}{} \\frac {1}{2}∫_{0}^{1}\\frac {(1-t)^{2}}{\\sqrt {1-t^{2}}}dt=\\frac {1}{2}∫_{0}^{1}\\frac {t^{2}-1-2t+2}{\\sqrt {1-t^{2}}}dt$\n\n$=-\\frac {1}{2}∫_{0}^{1}\\sqrt {1-t^{2}}dt-∫_{0}^{1}\\frac {t}{\\sqrt {1-t^{2}}}dt+∫_{0}^{1}\\frac {1}{\\sqrt {1-t^{2}}}dt$\n\n$=-\\frac {1}{2}\\cdot \\frac {π}{4}+\\sqrt {1-t^{2}}|_{0}^{1}+\\arcsin t|_{0}^{1}=\\frac {3}{8}π-1$．",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11948/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11992/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q13",
           "no": 13,
           "type": "blank",
-          "stem": "（填空题）设$e^{ax}≥1+x$对任意实数$x$均成立，则$a$的取值范围为_______.",
+          "stem": "（填空题）设$\\mathrm{e}^{ax}\\geqslant 1+x$对任意实数$x$均成立，则$a$的取值范围为_______.",
           "options": [],
           "answer": "$\\{ 1\\}$",
-          "explanation": "首先，$a>0$，若不然，当$x>0$时，$e^{ax}≤1$，此时$e^{ax}≥1+x$不成立．\n\n令$f(x)=e^{ax}-1-x$，则$f'(x)=ae^{ax}-1$，令$f'(x)=0$，得$e^{ax}=\\frac {1}{a}$，即$ax=-\\ln a$，解得$x=-\\frac {\\ln a}{a}$．因为\n\n$f''(x)=a^{2}e^{ax}>0,$\n\n故 $f_{\\text{min}}=f\\left(-\\frac {\\ln a}{a}\\right)=e^{-\\ln a}-1+\\frac {\\ln a}{a}=\\frac {1}{a}-1+\\frac {\\ln a}{a}≥0,$\n\n即$1-a+\\ln a≥0$，又$\\ln a≤a-1$，故$\\ln a=a-1$，得$a=1$．\n\n综上，$a$的取值范围是$\\{ 1\\}$．\n\n【注】 考生熟知对任意的$x∈R$，有$e^{x}≥1+x$，但本题的解答显然不是那么轻易的，要明确本题是含参不等式问题，才能走上正确的解题之路．",
+          "explanation": "首先，$a>0$，若不然，当$x>0$时，$e^{ax}≤1$，此时$e^{ax}≥1+x$不成立．\n\n令$f(x)=e^{ax}-1-x$，则$f'(x)=ae^{ax}-1$，令$f'(x)=0$，得$e^{ax}=\\frac {1}{a}$，即$ax=-\\ln a$，解得$x=-\\frac {\\ln a}{a}$．因为\n\n$f''(x)=a^{2}e^{ax}>0$，\n\n故\n\n$f_{\\min}=f\\left(-\\frac {\\ln a}{a}\\right)=e^{-\\ln a}-1+\\frac {\\ln a}{a}=\\frac {1}{a}-1+\\frac {\\ln a}{a}≥0$，\n\n即$1-a+\\ln a≥0$，又$\\ln a≤a-1$，故$\\ln a=a-1$，得$a=1$．\n\n综上，$a$的取值范围是$\\{ 1\\}$．\n\n【注】 考生熟知对任意的$x∈R$，有$e^{x}≥1+x$，但本题的解答显然不是那么轻易的，要明确本题是含参不等式问题，才能走上正确的解题之路．",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11949/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11993/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q14",
           "no": 14,
           "type": "blank",
-          "stem": "（填空题）已知$\\Omega =\\{ (x,y,z)|y^{2}+z^{2}≤1,0≤x≤1\\} $，$\\sum$为$\\Omega$的边界曲面且取外侧，则$\\oiint_{\\Sigma} (y^{3}+z\\sin x)dzdx+zdxdy=$_______.",
+          "stem": "（填空题）平面无界区域$D=\\{(x,y)\\vert (1+{x}^{2})\\vert y\\vert \\leqslant 1\\}$的面积为_______.",
           "options": [],
-          "answer": "$\\frac {7}{4}π$",
-          "explanation": "由高斯公式，得\n\n原式$=\\iiint\\limits_{\\Omega} (3y^{2}+1)dv$\n\n$=\\int_{0}^{2\\pi} d\\theta \\int_{0}^{1} r(3r^{2}\\cos^{2}\\theta +1)dr \\int_{0}^{1} dx$\n\n$=\\int_{0}^{2\\pi} \\left[ \\int_{0}^{1} (3r^{3}\\cos^{2}\\theta +r)dr \\right] d\\theta$\n\n$=\\int_{0}^{2\\pi} \\left( \\frac {3}{4}\\cos^{2}\\theta +\\frac {1}{2} \\right) d\\theta$\n\n$=\\frac {3}{4}\\cdot 4\\cdot \\frac {1}{2}\\cdot \\frac {\\pi}{2} + \\pi$\n\n$=\\frac {7}{4}\\pi$．",
+          "answer": "$2π$",
+          "explanation": "平面区域如图所示，则面积为\n\n$S=2∫_{-∞}^{+∞}\\frac {1}{1+x^{2}}dx=4\\arctan x|_{0}^{+∞}=4\\cdot \\frac {π}{2}=2π$．",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11950/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11994/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q15",
           "no": 15,
           "type": "blank",
-          "stem": "（填空题）设四元齐次线性方程组(Ⅰ)$\\left\\{\\begin{array}{l} 2x_{1}+3x_{2}-x_{3}=0,\\\\ x_{1}+3x_{2}-x_{3}=0,\\\\ x_{1}+2x_{2}+x_{3}-x_{4}=0,\\end{array}\\right. $且四元齐次线性方程组(Ⅱ)的一个基础解系为$\\xi_{1}=(2,-1,k+2,1)^{T}$,$\\xi_{2}=(-1,2,4,k+8)^{T}$,若方程组(Ⅰ)与(Ⅱ)没有非零公共解，则$k$的取值范围为_______.",
+          "stem": "（填空题）$z=\\arcsin y^{x}$在点$(-1,2)$处的全微分为$dz=$_______.",
           "options": [],
-          "answer": "$\\{ k|k∈R\\text{且}k≠-1\\}$",
-          "explanation": "方程组（Ⅱ）的通解为\n\n$k_{1}(2,-1,k+2,1)^{\\text{T}} + k_{2}(-1,2,4,k+8)^{\\text{T}}$\n\n$=(2k_{1}-k_{2}, -k_{1}+2k_{2}, k_{1}(k+2)+4k_{2}, k_{1}+k_{2}(k+8))^{\\text{T}},$\n\n其中$k_{1},k_{2}$为任意常数．将通解代入方程组（Ⅰ）并整理得$\\begin{cases} -(k+1)k_{1}=0, \\\\ (k+1)k_{1}-(k+1)k_{2}=0, \\end{cases}$ 则\n\n方程组（Ⅰ）与（Ⅱ）有非零公共解\n\n$\\Leftrightarrow$关于$k_{1},k_{2}$的方程组$\\begin{cases} -(k+1)k_{1}=0, \\\\ (k+1)k_{1}-(k+1)k_{2}=0 \\end{cases}$有非零解\n\n$\\Leftrightarrow \\begin{vmatrix} -(k+1) & 0 \\\\ k+1 & -(k+1) \\end{vmatrix} = 0$\n\n$\\Leftrightarrow k=-1$．\n\n则方程组（Ⅰ）与（Ⅱ）没有非零公共解$\\Leftrightarrow k≠-1$，即$k$的取值范围为$\\{ k|k∈R$且$k≠-1\\}$．",
+          "answer": "$\\frac {\\sqrt {3}}{3}\\ln 2dx-\\frac {\\sqrt {3}}{6}dy$",
+          "explanation": "$\\frac {\\partial z}{\\partial x}=\\frac {y^{x}\\ln y}{\\sqrt {1-(y^{x})^{2}}}$，\n\n$\\frac {\\partial z}{\\partial y}=\\frac {xy^{x-1}}{\\sqrt {1-(y^{x})^{2}}}$，\n\n故\n\n$\\frac {\\partial z}{\\partial x}|_{(-1,2)}=\\frac {\\frac {1}{2}\\ln 2}{\\frac {\\sqrt {3}}{2}}=\\frac {\\sqrt {3}}{3}\\ln 2$，\n\n$\\frac {\\partial z}{\\partial y}|_{(-1,2)}=\\frac {-1×\\frac {1}{4}}{\\frac {\\sqrt {3}}{2}}=-\\frac {\\sqrt {3}}{6}$，\n\n于是\n\n$dz|_{(-1,2)}=\\frac {\\sqrt {3}}{3}\\ln 2dx-\\frac {\\sqrt {3}}{6}dy$．",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11951/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11995/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q16",
           "no": 16,
           "type": "blank",
-          "stem": "（填空题）设随机变量$X\\sim B\\left(2,\\frac {1}{2}\\right)$，则$E(e^{2X})=$_______.",
+          "stem": "（填空题）设四元齐次线性方程组(Ⅰ)$\\begin{cases}2x_{1}+3x_{2}-x_{3}=0,\\\\x_{1}+2x_{2}+x_{3}-x_{4}=0,\\end{cases}$且四元齐次线性方程组(Ⅱ)的一个基础解系为$\\xi_{1}=(2,-1,k+2,1)^{\\mathrm{T}},\\xi_{2}=(-1,2,4,k+8)^{\\mathrm{T}}$,若方程组(Ⅰ)与(Ⅱ)没有非零公共解，则$k$的取值范围为_______.",
           "options": [],
-          "answer": "$\\frac {1}{4}(e^{2}+1)^{2}$",
-          "explanation": "因为$X\\sim B\\left(2,\\frac {1}{2}\\right)$，所以\n\n$E(e^{2X})=\\sum_{k=0}^{2} e^{2k}C_{2}^{k}\\left( \\frac {1}{2} \\right)^{k}\\left( \\frac {1}{2} \\right)^{2-k}$\n\n$=\\sum_{k=0}^{2} C_{2}^{k}\\left( e^{2}\\cdot \\frac {1}{2} \\right)^{k}\\left( \\frac {1}{2} \\right)^{2-k}$\n\n$=\\left( e^{2}\\cdot \\frac {1}{2} + \\frac {1}{2} \\right)^{2}$\n\n$=\\frac {1}{4}(e^{2}+1)^{2}$．",
+          "answer": "$\\{ k|k∈R且k≠-1\\}$",
+          "explanation": "方程组(Ⅱ)的通解为\n\n$k_{1}(2,-1,k+2,1)^{T}+k_{2}(-1,2,4,k+8)^{T}$\n\n$=(2k_{1}-k_{2},-k_{1}+2k_{2},k_{1}(k+2)+4k_{2},k_{1}+k_{2}(k+8))^{T}$，\n\n其中$k_{1},k_{2}$为任意常数．将通解代入方程组(Ⅰ)并整理得$\\begin{cases} -(k+1)k_{1}=0, \\\\ (k+1)k_{1}-(k+1)k_{2}=0, \\end{cases}$则\n\n方程组(Ⅰ)与(Ⅱ)有非零公共解\n\n$\\Leftrightarrow$关于$k_{1},k_{2}$的方程组$\\begin{cases} -(k+1)k_{1}=0, \\\\ (k+1)k_{1}-(k+1)k_{2}=0 \\end{cases}$有非零解\n\n$\\Leftrightarrow \\begin{vmatrix} -(k+1) & 0 \\\\ k+1 & -(k+1) \\end{vmatrix}=0$\n\n$\\Leftrightarrow k=-1$．\n\n则方程组(Ⅰ)与(Ⅱ)没有非零公共解⇔k≠-1，即k的取值范围为$\\{ k|k\\in \\mathbf{R}且k\\neq -1\\}$。",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11952/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11996/"
         }
       ]
     },
@@ -432,80 +432,84 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q17",
           "no": 17,
           "type": "essay",
-          "stem": "(本题满分10分)\n\n计算$\\int_{0}^{1}dx\\int_{1}^{x}(e^{-y^{2}} + e^{y}\\sin y)dy$",
+          "stem": "(本题满分10分)\n\n设$f(0)=a>0,f'(0)=b$,求$\\lim\\limits _{x→0}\\frac {f(x)f'(x)-f(0)f'(x)}{x}$.",
           "options": [],
           "answer": "",
-          "explanation": "积分区域如图所示，则\n\n原式\\( =-\\int_{0}^{1}dx\\int_{x}^{1}(e^{-y^{2}}+e^{y}\\sin y)dy \\)\n\n\\( =-\\int_{0}^{1}dy\\int_{0}^{y}(e^{-y^{2}}+e^{y}\\sin y)dx \\)\n\n\\( =-\\int_{0}^{1}ye^{-y^{2}}dy-\\int_{0}^{1}ye^{y}\\sin ydy \\)\n\n\\( =\\frac{1}{2}e^{-y^{2}}\\big|_{0}^{1}-\\int_{0}^{1}ye^{y}\\sin ydy \\)\n\n\\( =\\frac{1}{2}e^{-1}-\\frac{1}{2}-\\int_{0}^{1}ye^{y}\\sin ydy \\).\n\n其中，\n\n\\( \\int_{0}^{1}ye^{y}\\sin ydy=\\int_{0}^{1}y\\sin yd(e^{y}) \\)\n\n\\( =y\\sin y\\cdot e^{y}\\big|_{0}^{1}-\\int_{0}^{1}e^{y}(\\sin y+y\\cos y)dy \\)\n\n\\( =e\\sin1-\\int_{0}^{1}e^{y}\\sin ydy-\\int_{0}^{1}y\\cos yd(e^{y}) \\)\n\n\\( =e\\sin1-\\int_{0}^{1}e^{y}\\sin ydy-y\\cos y\\cdot e^{y}\\big|_{0}^{1}+\\int_{0}^{1}e^{y}(\\cos y-y\\sin y)dy \\)\n\n\\( =e(\\sin1-\\cos1)+e^{y}\\cos y\\big|_{0}^{1}-\\int_{0}^{1}ye^{y}\\sin ydy \\)\n\n\\( =e\\sin1-1-\\int_{0}^{1}ye^{y}\\sin ydy, \\)\n\n则\n\n\\( \\int_{0}^{1}ye^{y}\\sin ydy=\\frac{1}{2}(e\\sin1-1) \\).\n\n故\n\n原式\\( =\\frac{1}{2}e^{-1}-\\frac{1}{2}-\\frac{1}{2}(e\\sin1-1) \\)\n\n\\( =\\frac{e^{-1}-e\\sin1}{2} \\).",
+          "explanation": "当$x \\to 0$时，$f(x) > 0$，有\n\n$$\n\n\\begin{align*}\n\nf(x)^{f(x)} - f(0)^{f(x)} &= f(0)^{f(x)} \\left\\{ \\left[ \\frac{f(x)}{f(0)} \\right]^{f(x)} - 1 \\right\\} \\\\\n\n&= f(0)^{f(x)} \\left[ \\mathrm{e}^{f(x) \\ln \\frac{f(x)}{f(0)}} - 1 \\right] \\sim f(0)^{f(x)} f(x) \\ln \\frac{f(x)}{f(0)},\n\n\\end{align*}\n\n$$\n\n故\n\n$$\n\n\\begin{align*}\n\n\\text{原式} &= \\lim_{x \\to 0} \\frac{f(0)^{f(x)} f(x) \\ln \\frac{f(x)}{f(0)}}{x} \\\\\n\n&= \\lim_{x \\to 0} f(0)^{f(x)} f(x) \\lim_{x \\to 0} \\frac{\\ln f(x) - \\ln f(0)}{x - 0} \\\\\n\n&= f(0)^{f(0)} f(0) \\cdot \\lim_{x \\to 0} \\frac{\\ln f(x) - \\ln f(0)}{f(x) - f(0)} \\cdot \\frac{f(x) - f(0)}{x} \\\\\n\n&= f(0)^{f(0)} f(0) \\cdot \\frac{f'(0)}{f(0)} \\\\\n\n&= f'(0) f(0)^{f(0)} \\\\\n\n&= ba^a.\n\n\\end{align*}\n\n$$",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/11953/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11997/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q18",
           "no": 18,
           "type": "essay",
-          "stem": "(本题满分12分)\n\n设$y = y(x)$满足$x^{2}y' + (x^{2} - 3)y^{2} = 0$且$y(1) = 1$\n\n(1)求$y = y(x)$的表达式；\n\n(2)计算$\\int_{0}^{3}y^{2}(x)dx$",
+          "stem": "(1)求$y=y(x)$的表达式；\n\n(2)计算$\\int_{0}^{3}y^{2}(x)dx$.",
           "options": [],
           "answer": "",
-          "explanation": "(1)\\( x^{2}y'+(x^{2}-3)y^{2}=0 \\)整理得\\( y'=(\\frac{3}{x^{2}}-1)y^{2} \\)，即\\( y^{-2}y'=\\frac{3}{x^{2}}-1 \\)，此为可分离变量型微分方程，即\\( \\frac{dy}{y^{2}}=(\\frac{3}{x^{2}}-1)dx \\)，积分得\\( -\\frac{1}{y}=-\\frac{3}{x}-x+C \\)，即\\( y=\\frac{x}{x^{2}-Cx+3} \\).由\\( y(1)=1 \\)，知\\( \\frac{1}{4-C}=1 \\)，有\\( C=3 \\)，故\n\n\\( y(x)=\\frac{x}{x^{2}-3x+3} \\).\n\n(2)由(1)知，\n\n\\( \\int_{0}^{3}y^{2}(x)dx=\\int_{0}^{3}\\frac{x^{2}}{(x^{2}-3x+3)^{2}}dx \\).\n\n因\n\n\\( x^{2}-3x+3=(x-\\frac{3}{2})^{2}+\\frac{3}{4} \\),\n\n令\\( x-\\frac{3}{2}=\\frac{\\sqrt{3}}{2}\\tan u(|u|<\\frac{\\pi}{2}) \\)，则\n\n\\( (x^{2}-3x+3)^{2}=(\\frac{3}{4}\\sec^{2}u)^{2}=\\frac{9}{16}\\sec^{4}u \\)，\\( dx=\\frac{\\sqrt{3}}{2}\\sec^{2}udu \\).\n\n当\\( x=0 \\)时，\\( u=-\\frac{\\pi}{3} \\)；当\\( x=3 \\)时，\\( u=\\frac{\\pi}{3} \\).于是\n\n\\( \\int_{0}^{3}\\frac{x^{2}}{(x^{2}-3x+3)^{2}}dx=\\int_{-\\frac{\\pi}{3}}^{\\frac{\\pi}{3}}(\\frac{3}{4}\\tan^{2}u+\\frac{3\\sqrt{3}}{2}\\tan u+\\frac{9}{4})\\cdot\\frac{16}{9}\\cdot\\frac{\\sqrt{3}}{2}\\cos^{2}udu \\)\n\n\\( =\\frac{8}{3\\sqrt{3}}\\cdot2\\int_{0}^{\\frac{\\pi}{3}}(\\frac{3}{4}\\tan^{2}u+\\frac{9}{4})\\cos^{2}udu \\)\n\n\\( =\\frac{4}{\\sqrt{3}}\\int_{0}^{\\frac{\\pi}{3}}(\\sin^{2}u+3\\cos^{2}u)du=\\frac{4}{\\sqrt{3}}\\int_{0}^{\\frac{\\pi}{3}}(2+\\cos2u)du \\)\n\n\\( =\\frac{4}{\\sqrt{3}}(2u+\\frac{1}{2}\\sin2u)\\big|_{0}^{\\frac{\\pi}{3}}=\\frac{8\\sqrt{3}\\pi}{9}+1 \\).",
+          "explanation": "(1) $x^2 y' + (x^2 - 3)y^2 = 0$整理得$y' = \\left( \\frac{3}{x^2} - 1 \\right) y^2$，即$y^{-2} y' = \\frac{3}{x^2} - 1$，此为可分离变量型微分方程，即$\\frac{\\mathrm{d}y}{y^2} = \\left( \\frac{3}{x^2} - 1 \\right) \\mathrm{d}x$，积分得$-\\frac{1}{y} = -\\frac{3}{x} - x + C$，即$y = \\frac{x}{x^2 - Cx + 3}$。由$y(1) = 1$，知$\\frac{1}{4 - C} = 1$，有$C = 3$，故\n\n$$\n\ny(x) = \\frac{x}{x^2 - 3x + 3}.\n\n$$\n\n(2)由(1)知，\n\n$$\n\n\\int_0^3 y^2(x) \\mathrm{d}x = \\int_0^3 \\frac{x^2}{(x^2 - 3x + 3)^2} \\mathrm{d}x.\n\n$$\n\n因\n\n$$\n\nx^2 - 3x + 3 = \\left( x - \\frac{3}{2} \\right)^2 + \\frac{3}{4},\n\n$$\n\n令$x - \\frac{3}{2} = \\frac{\\sqrt{3}}{2} \\tan u \\left( |u| < \\frac{\\pi}{2} \\right)$，则\n\n$$\n\n(x^2 - 3x + 3)^2 = \\left( \\frac{3}{4} \\sec^2 u \\right)^2 = \\frac{9}{16} \\sec^4 u, \\mathrm{d}x = \\frac{\\sqrt{3}}{2} \\sec^2 u \\mathrm{d}u.\n\n$$\n\n当$x = 0$时，$u = -\\frac{\\pi}{3}$；当$x = 3$时，$u = \\frac{\\pi}{3}$。于是\n\n$$\n\n\\begin{align*}\n\n\\int_0^3 \\frac{x^2}{(x^2 - 3x + 3)^2} \\mathrm{d}x &= \\int_{-\\frac{\\pi}{3}}^{\\frac{\\pi}{3}} \\left( \\frac{3}{4} \\tan^2 u + \\frac{3\\sqrt{3}}{2} \\tan u + \\frac{9}{4} \\right) \\cdot \\frac{16}{9} \\cdot \\frac{\\sqrt{3}}{2} \\cos^2 u \\mathrm{d}u \\\\\n\n&= \\frac{8}{3\\sqrt{3}} \\cdot 2 \\int_0^{\\frac{\\pi}{3}} \\left( \\frac{3}{4} \\tan^2 u + \\frac{9}{4} \\right) \\cos^2 u \\mathrm{d}u \\\\\n\n&= \\frac{4}{\\sqrt{3}} \\int_0^{\\frac{\\pi}{3}} (\\sin^2 u + 3\\cos^2 u) \\mathrm{d}u = \\frac{4}{\\sqrt{3}} \\int_0^{\\frac{\\pi}{3}} (2 + \\cos 2u) \\mathrm{d}u \\\\\n\n&= \\frac{4}{\\sqrt{3}} \\left( 2u + \\frac{1}{2} \\sin 2u \\right) \\bigg|_0^{\\frac{\\pi}{3}} = \\frac{8\\sqrt{3}\\pi}{9} + 1.\n\n\\end{align*}\n\n$$",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/11954/"
+          "material": "(本题满分12分)\n\n设$y=y(x)$满足$x^{2}y'+(x^{2}-3)y^{2}=0$且$y(1)=1$.",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/11998/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q19",
           "no": 19,
           "type": "essay",
-          "stem": "(本题满分12分)\n\n设$f(x)$为连续函数，$T > 0$，证明：$f(x)$以$T$为周期的充分必要条件是任给常数$a$，$\\int_{a}^{a+T}f(x)dx$为常数",
+          "stem": "(本题满分12分)\n\n设$f(x)$为连续函数,$T>0$,证明:$f(x)$以$T$为周期的充分必要条件是任给常数$a$,$\\int_{a}^{a+T}f(x)dx$为常数.",
           "options": [],
-          "answer": "【证】必要性\\( (\\Rightarrow) \\).\n\n由题设，对任意的\\( x\\in\\mathbf{R} \\)，\\( f(x)=f(x+T) \\)，则\n\n\\( \\int_{a}^{a+T}f(x)dx=\\int_{a}^{0}f(x)dx+\\int_{0}^{T}f(x)dx+\\int_{T}^{a+T}f(x)dx, \\)\n\n其中\n\n\\( \\int_{T}^{a+T}f(x)dx\\stackrel{t=x-T}{=}\\int_{0}^{a}f(t+T)dt=\\int_{0}^{a}f(t)dt, \\)\n\n故\\( \\int_{a}^{a+T}f(x)dx=\\int_{a}^{0}f(x)dx+\\int_{0}^{T}f(x)dx+\\int_{0}^{a}f(x)dx=\\int_{0}^{T}f(x)dx \\)，即\\( \\int_{a}^{a+T}f(x)dx \\)为常数.\n\n充分性\\( (\\Leftarrow) \\).\n\n因\\( \\int_{a}^{a+T}f(x)dx\\equiv C \\)，则\\( \\left[\\int_{a}^{a+T}f(x)dx\\right]_{a}'=0 \\)，即\\( f(a+T)-f(a)=0 \\)，也即任给常数\\( a\\in\\mathbf{R} \\)，有\\( f(a+T)=f(a) \\)，故\\( f(x) \\)以\\( T \\)为周期.\n\n证毕.",
+          "answer": "【证】必要性$(\\Rightarrow)$.\n\n由题设，对任意的$x \\in \\mathbf{R}$，$f(x) = f(x + T)$，则\n\n$$\n\n\\int_a^{a+T} f(x) \\mathrm{d}x = \\int_a^0 f(x) \\mathrm{d}x + \\int_0^T f(x) \\mathrm{d}x + \\int_T^{a+T} f(x) \\mathrm{d}x,\n\n$$\n\n其中\n\n$$\n\n\\int_T^{a+T} f(x) \\mathrm{d}x \\stackrel{x = t + T}{=} \\int_0^a f(t + T) \\mathrm{d}t = \\int_0^a f(t) \\mathrm{d}t,\n\n$$\n\n故$\\int_a^{a+T} f(x) \\mathrm{d}x = \\int_a^0 f(x) \\mathrm{d}x + \\int_0^a f(x) \\mathrm{d}x + \\int_0^T f(x) \\mathrm{d}x = \\int_0^T f(x) \\mathrm{d}x$，即$\\int_a^{a+T} f(x) \\mathrm{d}x$为常数.\n\n充分性$(\\Leftarrow)$.\n\n因$\\int_a^{a+T} f(x) \\mathrm{d}x \\stackrel{\\text{记}}{=} C$，则$\\left[ \\int_a^{a+T} f(x) \\mathrm{d}x \\right]_a' = 0$，即$f(a + T) - f(a) = 0$，也即任给常数$a \\in \\mathbf{R}$，有$f(a + T) = f(a)$，故$f(x)$以$T$为周期.\n\n证毕.",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/11955/"
+          "sourceUrl": "https://noobdream.com/Practice/article/11999/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q20",
           "no": 20,
           "type": "essay",
-          "stem": "(本题满分12分)\n\n设$\\varGamma$为曲线$\\begin{cases}x^{2} + y^{2} + z^{2} = a^{2}, \\\\ y = x\\tan\\theta, \\end{cases}$其中$a > 0$，$-\\frac{\\pi}{2} < \\theta < \\frac{\\pi}{2}$且$\\theta \\neq 0$，从$x$轴的正向看去，$\\varGamma$的方向为顺时针方向。求当$\\theta$为何值时，$I = \\oint_{\\varGamma} (y - z)dx + (z - x)dy + (x - y)dz$最大？并求出最大值",
+          "stem": "(本题满分12分)\n\n计算$\\int_{0}^{1}dx\\int_{1}^{x}(e^{-y^{2}}+e^{y}\\sin y)dy$.",
           "options": [],
           "answer": "",
-          "explanation": "将\\( y=x\\tan\\theta \\)代入\\( x^{2}+y^{2}+z^{2}=a^{2} \\)，有\\( x^{2}\\sec^{2}\\theta+z^{2}=a^{2} \\)，令\\( \\begin{cases}x\\sec\\theta=a\\cos\\alpha, \\\\ z=a\\sin\\alpha, \\end{cases} \\)\n\n可得曲线\\( \\varGamma \\)的参数方程为\\( \\begin{cases}x=a\\cos\\alpha\\cos\\theta, \\\\ y=a\\cos\\alpha\\sin\\theta, \\\\ z=a\\sin\\alpha, \\end{cases} \\)其中参数\\( \\theta \\)的取值范围分如下两种情况.\n\n①当\\( -\\frac{\\pi}{2}<\\theta<0 \\)时，参数\\( \\alpha:0\\rightarrow2\\pi \\)，则有\n\n\\( I(\\theta)=\\int_{0}^{2\\pi}(a\\cos\\alpha\\sin\\theta-a\\sin\\alpha)(-a\\sin\\alpha\\cos\\theta)d\\alpha+ \\)\n\n\\( \\int_{0}^{2\\pi}(a\\sin\\alpha-a\\cos\\alpha\\cos\\theta)(-a\\sin\\alpha\\sin\\theta)d\\alpha+ \\)\n\n\\( \\int_{0}^{2\\pi}(a\\cos\\alpha\\cos\\theta-a\\cos\\alpha\\sin\\theta)a\\cos\\alpha d\\alpha \\)\n\n\\( =\\int_{0}^{2\\pi}a^{2}(\\cos\\theta-\\sin\\theta)d\\alpha=2\\pi a^{2}(\\cos\\theta-\\sin\\theta) \\).\n\n令\n\n\\( I'(\\theta)=2\\pi a^{2}(-\\sin\\theta-\\cos\\theta)=0, \\)\n\n可得\\( \\sin\\theta+\\cos\\theta=0 \\)，结合\\( -\\frac{\\pi}{2}<\\theta<0 \\)可解得\\( \\theta=-\\frac{\\pi}{4} \\).\n\n又\n\n\\( I''(\\theta)\\big|_{\\theta=-\\frac{\\pi}{4}}=2\\pi a^{2}(\\sin\\theta-\\cos\\theta)\\big|_{\\theta=-\\frac{\\pi}{4}}<0, \\)\n\n故此时\n\n\\( I_{\\max}=I\\left(-\\frac{\\pi}{4}\\right)=2\\pi a^{2}\\cdot\\sqrt{2}=2\\sqrt{2}\\pi a^{2} \\).\n\n②当\\( 0<\\theta<\\frac{\\pi}{2} \\)时，参数\\( \\alpha:2\\pi\\rightarrow0 \\)，类似①可得\\( I(\\theta)=2\\pi a^{2}(\\sin\\theta-\\cos\\theta) \\).此时\\( I'(\\theta)=2\\pi a^{2}(\\cos\\theta+\\sin\\theta)>0 \\)，故此时\\( I(\\theta)<I\\left(\\frac{\\pi}{2}\\right)=2\\pi a^{2}<2\\sqrt{2}\\pi a^{2} \\).\n\n综上，当\\( \\theta=-\\frac{\\pi}{4} \\)时，\\( I \\)最大，最大值为\\( 2\\sqrt{2}\\pi a^{2} \\).",
+          "explanation": "积分区域如图所示，则\n\n$$\n\n\\begin{align*}\n\n\\text{原式} &= -\\int_0^1 \\mathrm{d}x \\int_x^1 (\\mathrm{e}^{-y^2} + \\mathrm{e}^y \\sin y) \\mathrm{d}y \\\\\n\n&= -\\int_0^1 \\mathrm{d}y \\int_0^y (\\mathrm{e}^{-y^2} + \\mathrm{e}^y \\sin y) \\mathrm{d}x \\\\\n\n&= -\\int_0^1 y \\mathrm{e}^{-y^2} \\mathrm{d}y - \\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y \\\\\n\n&= \\frac{1}{2} \\mathrm{e}^{-y^2} \\bigg|_0^1 - \\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y \\\\\n\n&= \\frac{1}{2} \\mathrm{e}^{-1} - \\frac{1}{2} - \\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y.\n\n\\end{align*}\n\n$$\n\n其中，\n\n$$\n\n\\begin{align*}\n\n\\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y &= \\int_0^1 y \\sin y \\mathrm{d}(\\mathrm{e}^y) \\\\\n\n&= y \\sin y \\cdot \\mathrm{e}^y \\bigg|_0^1 - \\int_0^1 \\mathrm{e}^y (\\sin y + y \\cos y) \\mathrm{d}y \\\\\n\n&= \\mathrm{e} \\sin 1 - \\int_0^1 \\mathrm{e}^y \\sin y \\mathrm{d}y - \\int_0^1 y \\cos y \\mathrm{d}(\\mathrm{e}^y) \\\\\n\n&= \\mathrm{e} \\sin 1 - \\int_0^1 \\mathrm{e}^y \\sin y \\mathrm{d}y - y \\cos y \\cdot \\mathrm{e}^y \\bigg|_0^1 + \\int_0^1 \\mathrm{e}^y (\\cos y - y \\sin y) \\mathrm{d}y \\\\\n\n&= \\mathrm{e}(\\sin 1 - \\cos 1) + \\mathrm{e}^y \\cos y \\bigg|_0^1 - \\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y \\\\\n\n&= \\mathrm{e} \\sin 1 - 1 - \\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y,\n\n\\end{align*}\n\n$$\n\n则\n\n$$\n\n\\int_0^1 y \\mathrm{e}^y \\sin y \\mathrm{d}y = \\frac{1}{2}(\\mathrm{e} \\sin 1 - 1).\n\n$$\n\n故\n\n$$\n\n\\begin{align*}\n\n\\text{原式} &= \\frac{1}{2} \\mathrm{e}^{-1} - \\frac{1}{2} - \\frac{1}{2}(\\mathrm{e} \\sin 1 - 1) \\\\\n\n&= \\frac{\\mathrm{e}^{-1} - \\mathrm{e} \\sin 1}{2}.\n\n\\end{align*}\n\n$$",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/11956/"
+          "sourceUrl": "https://noobdream.com/Practice/article/12000/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q21",
           "no": 21,
           "type": "essay",
-          "stem": "(本题满分12分)\n\n设矩阵\\( A=\\begin{pmatrix} -1&0&1 \\\\ 1&2&0 \\\\ a&0&3 \\end{pmatrix} \\)与\\( B=\\begin{pmatrix} 1&b&0 \\\\ 0&1&0 \\\\ 0&0&2 \\end{pmatrix} \\)相似，且\\( Ax = x + (b, -b, 2b)^T \\)的一个解为\\( (0, -1, 1)^T \\)，求\n\n(1) \\( a, b \\)的值；\n\n(2) \\( A^{100} \\).",
+          "stem": "(本题满分12分)\n\n设$f(x,y)=4x^{2}(x-2y)+16y(xy-3)-33x$，求其在平面区域$D=\\{(x,y)|0\\leq y\\leq x\\leq 3\\}$上的取值范围．",
           "options": [],
           "answer": "",
-          "explanation": "(1)由A与B相似，可知|A|=|B|，即-6-2a=2，解得a=-4．\n\n由Ax=x+(b,-b,2b)ᵀ的一个解为(0,-1,1)ᵀ，可得(A-E)$\\begin{pmatrix} 0 \\\\ -1 \\\\ 1 \\end{pmatrix}$=$\\begin{pmatrix} b \\\\ -b \\\\ 2b \\end{pmatrix}$，又因(A-E)$\\begin{pmatrix} 0 \\\\ -1 \\\\ 1 \\end{pmatrix}$=$\\begin{pmatrix} 1 \\\\ -1 \\\\ 2 \\end{pmatrix}$，故b=1．\n\n(2)设可逆矩阵P=(&xi;₁,&xi;₂,&xi;₃)，使得P⁻&sup1;AP=B，即AP=PB，也即\n\nA(&xi;₁,&xi;₂,&xi;₃)=(&xi;₁,&xi;₂,&xi;₃)$\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{pmatrix}$，\n\n于是有(A&xi;₁,A&xi;₂,A&xi;₃)=(&xi;₁,&xi;₁+&xi;₂,2&xi;₃)，则$\\begin{cases} A&xi;₁=&xi;₁, \\\\ A&xi;₂=&xi;₁+&xi;₂, \\\\ A&xi;₃=2&xi;₃. \\end{cases}$\n\n由A&xi;₁=&xi;₁，得(E-A)&xi;₁=0，解(E-A)x=0得&xi;₁=(1,-1,2)ᵀ；\n\n由A&xi;₂=&xi;₁+&xi;₂，得(E-A)&xi;₂=-&xi;₁，解(E-A)x=(-1,1,-2)ᵀ得&xi;₂=(0,-1,1)ᵀ；\n\n由A&xi;₃=2&xi;₃，得(2E-A)&xi;₃=0，解(2E-A)x=0得&xi;₃=(0,1,0)ᵀ．\n\n故P=$\\begin{pmatrix} 1 & 0 & 0 \\\\ -1 & -1 & 1 \\\\ 2 & 1 & 0 \\end{pmatrix}$，使得P⁻&sup1;AP=B，于是A=PBP⁻&sup1;，所以\n\nA&sup1;⁰⁰=PB&sup1;⁰⁰P⁻&sup1;=$\\begin{pmatrix} 1 & 0 & 0 \\\\ -1 & -1 & 1 \\\\ 2 & 1 & 0 \\end{pmatrix}$$\\begin{pmatrix} 1 & 100 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2&sup1;⁰⁰ \\end{pmatrix}$$\\begin{pmatrix} 1 & 0 & 0 \\\\ -2 & 0 & 1 \\\\ -1 & 1 & 1 \\end{pmatrix}$\n\n=$\\begin{pmatrix} -199 & 0 & 100 \\\\ 201-2&sup1;⁰⁰ & 2&sup1;⁰⁰ & -101+2&sup1;⁰⁰ \\\\ -400 & 0 & 201 \\end{pmatrix}$．",
+          "explanation": "令\n\n\\[\n\n\\begin{cases}\n\nf'_x = 12x^2 - 16xy + 16y^2 - 33 = 0, \\\\\n\nf'_y = -8x^2 + 32xy - 48 = 0,\n\n\\end{cases}\n\n\\]\n\n解得\n\n\\[\n\n\\begin{cases}\n\nx = 2, \\\\\n\ny = \\frac{5}{4}\n\n\\end{cases}\n\n\\]\n\n(此处只保留\\(0 \\leq y \\leq x \\leq 3\\)的解),则\\(f\\left(2, \\frac{5}{4}\\right) = -84\\)。\n\n又在边界\\(y = 0(0 \\leq x \\leq 3)\\)上，\n\n\\[\n\nf(x, 0) = 4x^3 - 33x,\n\n\\]\n\n令\\(f'_x(x, 0) = 12x^2 - 33 = 0\\)，得\\(x = \\frac{\\sqrt{11}}{2}\\)，得点\\(\\left(\\frac{\\sqrt{11}}{2}, 0\\right)\\)，\\(f\\left(\\frac{\\sqrt{11}}{2}, 0\\right) = -11\\sqrt{11}\\)。\n\n在边界\\(x = 3(0 \\leq y \\leq 3)\\)上，\n\n\\[\n\nf(3, y) = 9 - 120y + 48y^2,\n\n\\]\n\n令\\(f'_y(3, y) = -120 + 96y = 0\\)，得\\(y = \\frac{5}{4}\\)，得点\\(\\left(3, \\frac{5}{4}\\right)\\)，\\(f\\left(3, \\frac{5}{4}\\right) = -66\\)。\n\n在边界\\(y = x(0 \\leq x \\leq 3)\\)上，\n\n\\[\n\nf(x, x) = 12x^3 - 81x,\n\n\\]\n\n令\\(f'(x, x) = 36x^2 - 81 = 0\\)，得\\(x = \\frac{3}{2}\\)，得点\\(\\left(\\frac{3}{2}, \\frac{3}{2}\\right)\\)，\\(f\\left(\\frac{3}{2}, \\frac{3}{2}\\right) = -81\\)。\n\n且\\(f(0, 0) = 0\\)，\\(f(3, 0) = 9\\)，\\(f(3, 3) = 81\\)。\n\n综上，\\(f(x, y)\\)在\\(D\\)上的取值范围是\\([-84, 81]\\)。",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/11957/"
+          "sourceUrl": "https://noobdream.com/Practice/article/12001/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2026-set1-q22",
           "no": 22,
           "type": "essay",
-          "stem": "(本题满分12分)\n\n设一组两台机器同时启动开始制作产品，其独立工作时间\\( T_1, T_2 \\)均服从参数为1的指数分布，\\( X \\)表示两台机器较早出现故障的时间，且收益\\( Y=\\begin{cases} X - 1, & X > 1, \\\\ 0, & X \\leq 1. \\end{cases} \\)\n\n(1)求\\( P\\{Y > 0\\} \\)；\n\n(2)若有\\( N \\)组机器承接制作产品的任务，收益大于0的组数记为\\( M \\)，记\\( N \\sim P(2e^2) \\)，在\\( N = n(n \\geq 1) \\)的条件下，\\( M \\sim B(n, P\\{Y > 0\\}) \\)，求\\( M \\)的概率分布.",
+          "stem": "(1)$a,b$的值；\n\n(2)$A^{100}$．",
           "options": [],
           "answer": "",
-          "explanation": "(1)X=min{T₁,T₂}，则当x>0时，\n\nF_X(x)=P{X≤x}=P{min{T₁,T₂}≤x}=1-P{T₁>x}P{T₂>x}=1-e⁻ˣe⁻ˣ=1-e⁻²ˣ．\n\n则\n\nP{Y>0}=P{X>1}=1-P{X≤1}=1-F_X(1)=e⁻²．\n\n(2)N~P(2e²)，P{M=m|N=n}=Cₙᵐ$(\\frac{1}{e²})^m$$(1-\\frac{1}{e²})^{n-m}$．\n\nP{M=m,N=n}=P{N=n}P{M=m|N=n}=$\\frac{(2e²)^n}{n!}$e⁻²ᵉ²Cₙᵐ$(\\frac{1}{e²})^m$$(1-\\frac{1}{e²})^{n-m}$．\n\n故M的概率分布为\n\nP{M=m}=$\\sum_{n=m}^∞$P{M=m,N=n}=$\\sum_{n=m}^∞$$\\frac{(2e²)^n}{n!}$e⁻²ᵉ²Cₙᵐ$(\\frac{1}{e²})^m$$(1-\\frac{1}{e²})^{n-m}$\n\n=$(2e²)^m$$(\\frac{1}{e²})^m$$\\frac{e⁻²ᵉ²}{m!}$$\\sum_{n=m}^∞$$\\frac{(2e²)^{n-m}}{(n-m)!}$$(1-\\frac{1}{e²})^{n-m}$\n\n=2ᵐe²ᵐ$\\frac{1}{e²ᵐ}$$\\frac{e⁻²ᵉ²}{m!}$e²ᵉ²⁻²=$\\frac{2ᵐ}{m!}$e⁻², m=0,1,2,⋯．\n\n即M~P(2)．",
+          "explanation": "(1)由\\(A\\)与\\(B\\)相似，可知\\(|A| = |B|\\)，即\\(-6 - 2a = 2\\)，解得\\(a = -4\\)。\n\n由\\(Ax = x + (b, -b, 2b)^T\\)的一个解为\\((0, -1, 1)^T\\)，可得\\((A - E)\\begin{pmatrix} 0 \\\\ -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} b \\\\ -b \\\\ 2b \\end{pmatrix}\\)，又因\\((A - E)\\begin{pmatrix} 0 \\\\ -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 2 \\end{pmatrix}\\)，故\\(b = 1\\)。\n\n(2)设可逆矩阵\\(P = (\\xi_1, \\xi_2, \\xi_3)\\)，使得\\(P^{-1}AP = B\\)，即\\(AP = PB\\)，也即\n\n\\[\n\nA(\\xi_1, \\xi_2, \\xi_3) = (\\xi_1, \\xi_2, \\xi_3)\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{pmatrix},\n\n\\]\n\n于是有\\((A\\xi_1, A\\xi_2, A\\xi_3) = (\\xi_1, \\xi_1 + \\xi_2, 2\\xi_3)\\)，则\n\n\\[\n\n\\begin{cases}\n\nA\\xi_1 = \\xi_1, \\\\\n\nA\\xi_2 = \\xi_1 + \\xi_2, \\\\\n\nA\\xi_3 = 2\\xi_3.\n\n\\end{cases}\n\n\\]\n\n由\\(A\\xi_1 = \\xi_1\\)，得\\((E - A)\\xi_1 = 0\\)，解\\((E - A)x = 0\\)得\\(\\xi_1 = (1, -1, 2)^T\\)；\n\n由\\(A\\xi_2 = \\xi_1 + \\xi_2\\)得\\((E - A)\\xi_2 = -\\xi_1\\)，解\\((E - A)x = (-1, 1, -2)^T\\)得\\(\\xi_2 = (0, -1, 1)^T\\)；\n\n由\\(A\\xi_3 = 2\\xi_3\\)，得\\((2E - A)\\xi_3 = 0\\)，解\\((2E - A)x = 0\\)得\\(\\xi_3 = (0, 1, 0)^T\\)。\n\n故\\(P = \\begin{pmatrix} 1 & 0 & 0 \\\\ -1 & -1 & 1 \\\\ 2 & 1 & 0 \\end{pmatrix}\\)，使得\\(P^{-1}AP = B\\)，于是\\(A = PBP^{-1}\\)，所以\n\n\\[\n\nA^{100} = PB^{100}P^{-1} = \\begin{pmatrix} 1 & 0 & 0 \\\\ -1 & -1 & 1 \\\\ 2 & 1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 & 100 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2^{100} \\end{pmatrix}\\begin{pmatrix} 1 & 0 & 0 \\\\ -2 & 0 & 1 \\\\ -1 & 1 & 1 \\end{pmatrix}\n\n\\]\n\n\\[\n\n= \\begin{pmatrix} -199 & 0 & 100 \\\\ 201 - 2^{100} & 2^{100} & -101 + 2^{100} \\\\ -400 & 0 & 201 \\end{pmatrix}.\n\n\\]",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/11958/"
+          "material": "(本题满分12分)\n\n设矩阵$A=\\begin{pmatrix}-1&0&1\\\\1&2&0\\\\a&0&3\\end{pmatrix}$与$B=\\begin{pmatrix}1&b&0\\\\0&1&0\\\\0&0&2\\end{pmatrix}$相似，且$Ax = x+(b,-b,2b)^T$的一个解为$(0,-1,1)^T$，求",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/12002/"
         }
       ]
     }

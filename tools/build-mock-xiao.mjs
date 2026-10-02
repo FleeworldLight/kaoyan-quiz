@@ -92,12 +92,13 @@ function innerDiv(html, startIdx) {
 // ------------------------------------------------------------------ 单卷解析
 
 /**
- * 从单个 <p> 段落里识别选项。来源页把选项排版成多种形态：
- *   "A.xxx"                    （一段一个选项）
+ * 从单个 <p>／文本块里识别选项。来源页把选项排版成多种形态：
+ *   "A.xxx"                        （一段一个选项）
  *   "A.投资和借贷    B.竞争和信用"   （一段两个选项）
  *   "A.3:1  B.4:1  C.5:1  D.2:1"  （一段四个选项）
- * 规则：字母必须严格递增，且第一个字母出现在段首、或正好接着已抓到的选项（A→B→C→D）。
- * 返回 null 表示这不是选项段落（归入题干）。
+ *   "题干……（换行）A.…（换行）B.…"   （题干和选项挤在同一段/同一 div 里，最常见）
+ * 返回 { head, opts }：head 是选项之前残留的题干文本（可能为空）；null 表示这不是选项块。
+ * 安全约束：选项字母必须严格递增；必须紧接段首或另起一行；起始字母必须正好接着已抓到的选项。
  */
 function optionsFromPara(p, optMap) {
   const ms = [...p.matchAll(/([A-D])\s*[.．、,，]\s*/g)];
@@ -107,17 +108,19 @@ function optionsFromPara(p, optMap) {
   const expected = ["A", "B", "C", "D"][optMap.size] || null;
   const head = p.slice(0, ms[0].index);
   const atHead = /^[\s\u00a0]*$/.test(head);
+  const atLineStart = /\n[\s\u00a0]*$/.test(head);
+  if (!atHead && !atLineStart) return null;
   if (!atHead && keys[0] !== expected) return null;
   if (optMap.has(keys[keys.length - 1])) return null;
   const out = [];
   for (let k = 0; k < ms.length; k++) {
     const s = ms[k].index + ms[k][0].length;
     const e = k + 1 < ms.length ? ms[k + 1].index : p.length;
-    const t = p.slice(s, e).replace(/[\s\u00a0]+/g, " ").replace(/^[\s]+|[\s]+$/g, "");
-    if (!t) return null; // 有空选项 → 不认，整段进题干
+    const t = p.slice(s, e).replace(/[\s\u00a0]+/g, " ").trim();
+    if (!t) return null;
     out.push([keys[k], t]);
   }
-  return out;
+  return { head: head.replace(/[\s\u00a0]+$/g, "").trim(), opts: out };
 }
 
 const TYPE_BY_SECTION = [
@@ -210,7 +213,9 @@ function parsePaper(html, meta) {
     for (const p of bodyParas) {
       const got = optionsFromPara(p, optMap);
       if (got) {
-        for (const [k, v] of got) if (!optMap.has(k)) optMap.set(k, v);
+        // 题干和选项挤在同一段/同一 div 时，把选项前面的题干文本留下来
+        if (got.head) stemParas.push(got.head);
+        for (const [k, v] of got.opts) if (!optMap.has(k)) optMap.set(k, v);
         continue;
       }
       stemParas.push(p);
@@ -265,7 +270,7 @@ function parsePaper(html, meta) {
       }
       // 「A、B、C正确，D错误」这类简析里的明确表述（必须列出 ≥2 个字母才采用）
       if (!answer) {
-        const m = explainText.match(/((?:[A-D][、,，]\s*){1,3}[A-D])\s*(?:均|都)?(?:正确|对)\b?/);
+        const m = explainText.match(/((?:[A-D][、,，]\s*){1,3}[A-D])\s*(?:均|都)?(?:正确|对)/);
         if (m) {
           const letters = [...new Set(m[1].match(/[A-D]/g))].sort().join("");
           if (letters.length >= 2) { answer = letters; answerFrom = "简析中「…正确」表述"; }
@@ -450,7 +455,7 @@ for (const sp of sources.papers) {
   for (const cid of cands) {
     const html = await ensureRaw(cid);
     if (!html) continue;
-    const meta = { paperId: sp.paperId };
+    const meta = { paperId: sp.paperId, subject: sp.subject };
     const parsed = parsePaper(html, meta);
     const qn = parsed.sections.reduce((a, s) => a + s.questions.length, 0);
     const ch = parsed.sections.reduce((a, s) => a + s.questions.filter((q) => q.type === "single" || q.type === "multiple").length, 0);
@@ -546,6 +551,21 @@ function mergeManifest() {
     mf = { version: 1, generatedAt: new Date().toISOString(), note: "", failed: [], groups: [] };
   }
   const isMine = (id) => /^nnd-/.test(String(id || ""));
+  // 0) 顶层 note：保留旧文案，追加本轮 N诺考研（肖秀荣肖四肖八等）的说明
+  const baseNote = String(mf.note || "")
+    .split("【N诺考研来源补充】")[0]
+    .trim();
+  const groups = [];
+  for (const b of built) {
+    const gid = b.sp.groupId || `nnd-${b.sp.subject}-${b.sp.paperId}`;
+    if (!groups.includes(gid)) groups.push(gid);
+  }
+  mf.note =
+    baseNote +
+    "\n【N诺考研来源补充】已入库肖秀荣《2026 考研政治冲刺 8 套卷》（肖八，8 套齐全）与《2025 肖秀荣终极预测 4 套卷》（肖四，4 套齐全），" +
+    "以及张宇终极预测 8 套卷、李林冲刺预测 6 套卷、李艳芳预测 3 套卷等数学整卷模拟卷。" +
+    "这些内容来自第三方练习站 N诺考研（noobdream.com）对原书的网页转录，**不是正式出版物原文**，题干/选项/答案均未经逐字核对；" +
+    "每套卷的 source.url 指向该套卷在 N诺考研的练习解析页，可逐题回源核对。全部 quality 仍为 unverified。";
   // 1) 移除本脚本此前写入的组（按 groupId 前缀 nnd-），保留其它来源
   const kept = (mf.groups || []).filter((g) => !isMine(g.id));
 

@@ -19,8 +19,324 @@
   "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
   "sections": [
     {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "函数$f(x)=\\frac {\\ln |1 - x|}{(e^{x}-1)(x + 2)}$的第二类间断点的个数为",
+          "options": [
+            {
+              "key": "A",
+              "text": "0."
+            },
+            {
+              "key": "B",
+              "text": "1."
+            },
+            {
+              "key": "C",
+              "text": "2."
+            },
+            {
+              "key": "D",
+              "text": "3."
+            }
+          ],
+          "answer": "C",
+          "explanation": "由函数表达式知，$x = 0$，$x = - 2$，$x = 1$是间断点。因为$\\lim\\limits_{x→0}\\frac {\\ln |1 - x|}{(e^{x}-1)(x + 2)}=\\lim\\limits_{x→0}\\frac {-x}{x(x + 2)}=-\\frac {1}{2}$，$\\lim\\limits_{x→ - 2}\\frac {\\ln |1 - x|}{(e^{x}-1)(x + 2)}=\\infty$，$\\lim\\limits_{x→1}\\frac {\\ln |1 - x|}{(e^{x}-1)(x + 2)}=-\\infty$，所以$x = 0$是第一类间断点，$x = - 2$，$x = 1$是第二类间断点。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9558/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设$f(x)$，$g(x)$为连续函数，以下结论：\n①若$\\lim\\limits_{x→0}\\frac {f(x)}{g(x)} = 1$，则$f(x)$是$g(x)$在$x→0$时的等价无穷小；\n②若$f(x)$是$g(x)$在$x→0$时的等价无穷小，则$\\lim\\limits_{x→0}\\frac {f(x)}{g(x)} = 1$；\n③若$f(n)$是$g(n)$在$n→\\infty$时的等价无穷小，则$\\sum\\limits_{n = 1}^{\\infty}f(n)$与$\\sum\\limits_{n = 1}^{\\infty}g(n)$同敛散；\n④若$\\sum\\limits_{n = 1}^{\\infty}f(n)$与$\\sum\\limits_{n = 1}^{\\infty}g(n)$同敛散，则$f(n)$是$g(n)$在$n→\\infty$时的等价无穷小。\n正确结论的个数为",
+          "options": [
+            {
+              "key": "A",
+              "text": "1."
+            },
+            {
+              "key": "B",
+              "text": "2."
+            },
+            {
+              "key": "C",
+              "text": "3."
+            },
+            {
+              "key": "D",
+              "text": "4."
+            }
+          ],
+          "answer": "A",
+          "explanation": "对于①，取$f(x) = g(x) = 1$，则$\\lim\\limits_{x→0}\\frac {1}{1} = 1$，但$f(x)$，$g(x)$均不是无穷小，更谈不上等价无穷小。\n对于②，是基本定义，正确。\n对于③，取$f(n)=\\frac {(-1)^{n}}{\\sqrt{n}}+\\frac {1}{n}$，$g(n)=\\frac {(-1)^{n}}{\\sqrt{n}}$，则$\\lim\\limits_{n→\\infty}\\frac {f(n)}{g(n)} = 1$，但$\\sum\\limits_{n = 1}^{\\infty}g(n)$条件收敛，$\\sum\\limits_{n = 1}^{\\infty}f(n)$发散。\n对于④，取$f(n)=\\frac {1}{n^{2}}$，$g(n)=\\frac {2}{n^{2}}$，且$\\sum\\limits_{n = 1}^{\\infty}f(n)$与$\\sum\\limits_{n = 1}^{\\infty}g(n)$同敛散，但$\\lim\\limits_{n→\\infty}\\frac {f(n)}{g(n)} \\neq 1$。\n故只有②正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9559/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "已知函数$z = u(x,y)e^{ax + by}$，且$u(x,y) = f(x) + g(y)$，其中$f(x)$，$g(y)$具有二阶连续导数，函数$z = z(x,y)$满足$\\frac {\\partial^{2}z}{\\partial x\\partial y}-\\frac {\\partial z}{\\partial x}-\\frac {\\partial z}{\\partial y}+z = 0$，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$a = 2$，$b = 1$."
+            },
+            {
+              "key": "B",
+              "text": "$a = 1$，$b = 1$."
+            },
+            {
+              "key": "C",
+              "text": "$a = 1$，$b = 2$."
+            },
+            {
+              "key": "D",
+              "text": "$a = 2$，$b = 2$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "因为$u(x,y) = f(x) + g(y)$，所以$\\frac {\\partial^{2}u}{\\partial x\\partial y} = 0$。\n由题设，得$\\frac {\\partial z}{\\partial x} = e^{ax + by}[\\frac {\\partial u}{\\partial x} + au(x,y)]$，$\\frac {\\partial z}{\\partial y} = e^{ax + by}[\\frac {\\partial u}{\\partial y} + bu(x,y)]$，$\\frac {\\partial^{2}z}{\\partial x\\partial y} = e^{ax + by}[b\\frac {\\partial u}{\\partial x} + a\\frac {\\partial u}{\\partial y} + abu(x,y)]$。\n又$\\frac {\\partial^{2}z}{\\partial x\\partial y}-\\frac {\\partial z}{\\partial x}-\\frac {\\partial z}{\\partial y}+z = e^{ax + by}[(b - 1)\\frac {\\partial u}{\\partial x} + (a - 1)\\frac {\\partial u}{\\partial y} + (ab - a - b + 1)u(x,y)] = 0$，\n因此$(b - 1)\\frac {\\partial u}{\\partial x} + (a - 1)\\frac {\\partial u}{\\partial y} + (ab - a - b + 1)u(x,y) = 0$，\n由此可得$a = b = 1$。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9560/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "$\\int_{\\frac {\\pi}{3}}^{\\frac {\\pi}{2}}d\\theta\\int_{1}^{\\csc\\theta}\\frac {rdr}{3\\arcsin\\frac {1}{r}-\\pi} =$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac {\\pi}{3}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac {\\pi}{6}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac {1}{3}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac {1}{18}$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "交换积分次序，则\n原式$=\\int_{1}^{\\sqrt{3}}rdr\\int_{\\frac {\\pi}{3}}^{\\arcsin\\frac {1}{r}}\\frac {1}{3\\arcsin\\frac {1}{r}-\\pi}d\\theta$\n$=\\int_{1}^{\\sqrt{3}}r\\cdot\\frac {1}{3}dr = \\frac {1}{3}\\cdot\\frac {r^{2}}{2}\\big|_{1}^{\\sqrt{3}} = \\frac {1}{18}$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9561/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设$A = \\begin{pmatrix}2&1&1\\\\1&2&1\\\\1&1&a\\end{pmatrix}$可逆，且$x = \\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}$是$A$的特征向量，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$A$的迹为4."
+            },
+            {
+              "key": "B",
+              "text": "$A$的迹为16."
+            },
+            {
+              "key": "C",
+              "text": "$A^{2}$的迹为18."
+            },
+            {
+              "key": "D",
+              "text": "$A^{3}$的迹为18."
+            }
+          ],
+          "answer": "C",
+          "explanation": "根据特征向量的定义，存在实数$\\lambda$，使得\n$Ax = \\begin{pmatrix}3 + b\\\\2 + 2b\\\\a + b + 1\\end{pmatrix} = \\lambda x = \\lambda\\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}$，\n即$\\frac {3 + b}{1} = \\frac {2 + 2b}{b} = \\frac {a + b + 1}{1}$，\n解得$a = 2$，$b = 1$或$a = 2$，$b = - 2$。\n当$a = 2$时，$|A| = \\begin{vmatrix}2&1&1\\\\1&2&1\\\\1&1&2\\end{vmatrix} = 4 \\neq 0$，$A$可逆，满足题目条件，又矩阵$A$的特征方程为$|\\lambda E - A| = (\\lambda - 1)^{2}(\\lambda - 4)$，\n解得矩阵$A$的特征值为$\\lambda_{1} = \\lambda_{2} = 1$，$\\lambda_{3} = 4$。又$A$是实对称矩阵，因此可知$A$可相似对角化，且$A \\sim \\begin{pmatrix}1&&\\\\&1&\\\\&&4\\end{pmatrix}$，故$A^{2} \\sim \\begin{pmatrix}1&&\\\\&1&\\\\&&16\\end{pmatrix}$，$A^{3} \\sim \\begin{pmatrix}1&&\\\\&1&\\\\&&64\\end{pmatrix}$，所以$A$的迹为6，$A^{2}$的迹为18，$A^{3}$的迹为66。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9562/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "设\\( A \\)是\\( 3×2 \\)矩阵，且\\( A^{T}A = E \\)，\\( \\alpha \\)为\\( 3 \\)维列向量，\\( \\beta = AA^{T}\\alpha \\)，则以下结论：①\\( A \\)的列向量正交；②\\( Ax = \\beta \\)无解；③\\( A^{T}\\alpha = A^{T}\\beta \\)；④\\( \\beta \\)与\\( \\alpha - \\beta \\)正交。所有正确结论的序号为",
+          "options": [
+            {
+              "key": "A",
+              "text": "①③."
+            },
+            {
+              "key": "B",
+              "text": "②④."
+            },
+            {
+              "key": "C",
+              "text": "①②③."
+            },
+            {
+              "key": "D",
+              "text": "①③④."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 令\\( A = (\\alpha_{1},\\alpha_{2}) \\)，由\\( A^{T}A = E \\)，则\\( \\begin{pmatrix} \\alpha_{1}^{T} \\\\ \\alpha_{2}^{T} \\end{pmatrix} (\\alpha_{1},\\alpha_{2}) = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} \\)，即\\( [\\alpha_{1},\\alpha_{2}] = 0 \\)，故①正确。\n由\\( \\beta = AA^{T}\\alpha = A(A^{T}\\alpha) \\)，则\\( \\beta \\)可由\\( A \\)的列向量线性表示，即\\( Ax = \\beta \\)有解，故②不正确。\n\\( A^{T}(\\alpha - \\beta) = A^{T}\\alpha - A^{T}\\beta = A^{T}\\alpha - A^{T}AA^{T}\\alpha = 0 \\)，故③正确。\n\\( \\beta^{T}(\\alpha - \\beta) = \\alpha^{T}AA^{T}\\alpha - \\alpha^{T}AA^{T}AA^{T}\\alpha = \\alpha^{T}AA^{T}\\alpha - \\alpha^{T}AA^{T}\\alpha = 0 \\)，故④正确。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9563/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "设\\( A \\)是\\( 3 \\)阶秩为\\( 2 \\)的实对称矩阵，\\( \\alpha,\\beta \\)是\\( 3 \\)维非零列向量，\\( B = \\begin{pmatrix} A & \\beta \\\\ \\alpha^{T} & 1 \\end{pmatrix} \\)，则\\( r(B) = 2 \\)是方程组\\( \\begin{cases} Ax = \\beta, \\\\ \\alpha^{T}x = 1 \\end{cases} \\)有解的",
+          "options": [
+            {
+              "key": "A",
+              "text": "充分非必要条件."
+            },
+            {
+              "key": "B",
+              "text": "必要非充分条件."
+            },
+            {
+              "key": "C",
+              "text": "充分必要条件."
+            },
+            {
+              "key": "D",
+              "text": "既非充分又非必要条件."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 若\\( r(B) = r(A) = 2 \\)，即\\( r\\begin{pmatrix} A & \\beta \\\\ \\alpha^{T} & 1 \\end{pmatrix} = 2 \\)。又\\( 2 = r(A) \\leq r\\begin{pmatrix} A \\\\ \\alpha^{T} \\end{pmatrix} \\leq r\\begin{pmatrix} A & \\beta \\\\ \\alpha^{T} & 1 \\end{pmatrix} = 2 \\)，于是\\( r\\begin{pmatrix} A \\\\ \\alpha^{T} \\end{pmatrix} = 2 = r\\begin{pmatrix} A & \\beta \\\\ \\alpha^{T} & 1 \\end{pmatrix} \\)，即\\( \\begin{cases} Ax = \\beta, \\\\ \\alpha^{T}x = 1 \\end{cases} \\)有解。\n反过来，若\\( \\begin{cases} Ax = \\beta, \\\\ \\alpha^{T}x = 1 \\end{cases} \\)有解，即\\( r\\begin{pmatrix} A & \\beta \\\\ \\alpha^{T} & 1 \\end{pmatrix} = r\\begin{pmatrix} A \\\\ \\alpha^{T} \\end{pmatrix} \\)，且\\( r(A \\vdots \\beta) = r(A) = 2 \\)，但\\( r\\begin{pmatrix} A \\\\ \\alpha^{T} \\end{pmatrix} \\)并不一定等于\\( r\\begin{pmatrix} A \\\\ \\beta^{T} \\end{pmatrix} = r\\begin{pmatrix} A^{T} \\\\ \\beta^{T} \\end{pmatrix} = r(A \\vdots \\beta) = 2 \\)，故为充分非必要条件。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9564/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设随机变量\\( X \\)服从参数为\\( p(0 < p < 1) \\)的几何分布，则\\( E(\\frac{1}{X}) = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( p(1 - p) \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( -p\\ln p \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( -(1 - p)\\ln p \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( -\\frac{p\\ln p}{1 - p} \\)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 由题设知，\\( P\\{ X = k\\} = p(1 - p)^{k - 1},k = 1,2,3,\\cdots \\)，因此有\n\\( E(\\frac{1}{X}) = \\sum_{k = 1}^{\\infty} \\frac{1}{k}p(1 - p)^{k - 1} \\)\n\\( = \\frac{p}{1 - p}\\sum_{k = 1}^{\\infty} \\frac{1}{k}(1 - p)^{k} \\)\n\\( = \\frac{p}{1 - p}\\sum_{k = 1}^{\\infty} \\frac{1}{k}x^{k}\\big|_{x = 1 - p} \\)。\n令\\( S(x) = \\sum_{k = 1}^{\\infty} \\frac{1}{k}x^{k} \\)，则\\( S'(x) = \\sum_{k = 1}^{\\infty} x^{k - 1} = \\frac{1}{1 - x} \\)，从而有\n\\( S(x) = S(0) + \\int_{0}^{x} \\frac{1}{1 - t}dt = -\\ln(1 - x) \\)，\n故\\( S(1 - p) = -\\ln p \\)，于是\\( E(\\frac{1}{X}) = -\\frac{p\\ln p}{1 - p} \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9565/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设随机变量\\( X_{1},X_{2},\\cdots,X_{n}(n > 1) \\)相互独立，且都服从参数为\\( \\lambda = \\frac{1}{2} \\)的泊松分布，\\( \\Phi(x) \\)为标准正态分布函数，则\\( \\lim_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i = 1}^{n}X_{i} - n}{2\\sqrt{n}} \\leq 1 \\right\\} = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( \\Phi(0) \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( \\Phi(\\sqrt{2}) \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( \\Phi(\\frac{1}{2}) \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( \\Phi(\\sqrt{3}) \\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 由于\\( X_{1},X_{2},\\cdots,X_{n} \\)相互独立，且都服从参数为\\( \\lambda = \\frac{1}{2} \\)的泊松分布，故\n\\( E(X_{i}) = D(X_{i}) = \\lambda = \\frac{1}{2},i = 1,2,\\cdots,n \\)。\n由独立同分布的中心极限定理知，对任意的实数\\( x \\)，有\n\\( \\lim_{n \\to \\infty} P\\left\\{ \\frac{\\sum_{i = 1}^{n}X_{i} - E(\\sum_{i = 1}^{n}X_{i})}{\\sqrt{D(\\sum_{i = 1}^{n}X_{i})}} \\leq x \\right\\} = \\lim_{n \\to \\infty} P\\left\\{ \\frac{\\sum_{i = 1}^{n}X_{i} - \\frac{n}{2}}{\\sqrt{\\frac{n}{2}}} \\leq x \\right\\} \\)\n\\( = \\lim_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i = 1}^{n}X_{i} - n}{2\\sqrt{n}} \\leq \\frac{x}{\\sqrt{2}} \\right\\} = \\Phi(x) \\)。\n取\\( \\frac{x}{\\sqrt{2}} = 1 \\)，即\\( x = \\sqrt{2} \\)，则\n\\( \\lim_{n \\to \\infty} P\\left\\{ \\frac{2\\sum_{i = 1}^{n}X_{i} - n}{2\\sqrt{n}} \\leq 1 \\right\\} = \\Phi(\\sqrt{2}) \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9566/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "已知随机变量\\( X \\sim U(0,4) \\)，实数\\( c \\in [0,4] \\)，且\\( X \\)与\\( |X - c| \\)不相关，则\\( c = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "1."
+            },
+            {
+              "key": "B",
+              "text": "2."
+            },
+            {
+              "key": "C",
+              "text": "3."
+            },
+            {
+              "key": "D",
+              "text": "4."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 由\\( X \\)与\\( |X - c| \\)不相关，得\n\\( \\text{Cov}(X,|X - c|) = E(X|X - c|) - E(X) \\cdot E(|X - c|) = 0 \\)。（\\(*\\)）\n由题设知，随机变量\\( X \\)的概率密度为\n\\( f(x) = \\begin{cases} \\frac{1}{4}, & 0 < x < 4, \\\\ 0, & \\text{其他}, \\end{cases} \\)\n故\n\\( E(X) = 2 \\)，\n\\( E(|X - c|) = \\int_{0}^{4} |x - c|f(x)dx \\)\n\\( = \\frac{1}{4}\\int_{0}^{c}(c - x)dx + \\frac{1}{4}\\int_{c}^{4}(x - c)dx \\)\n\\( = \\frac{c^{2}}{4} - c + 2 \\)，\n\\( E(X|X - c|) = \\int_{0}^{4}x|x - c|f(x)dx \\)\n\\( = \\frac{1}{4}\\int_{0}^{c}x(c - x)dx + \\frac{1}{4}\\int_{c}^{4}x(x - c)dx \\)\n\\( = \\frac{c^{3}}{12} - 2c + \\frac{16}{3} \\)。\n将上述期望代入（\\(*\\)）式，化简得\n\\( c^{3} - 6c^{2} + 16 = 0 \\)，\n又\\( c \\in [0,4] \\)，解得\\( c = 2 \\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9567/"
+        }
+      ]
+    },
+    {
       "id": "blank",
-      "name": "一、填空题（6 题）",
+      "name": "二、填空题（6 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q11",
@@ -110,7 +426,7 @@
     },
     {
       "id": "essay",
-      "name": "二、材料分析题（6 题）",
+      "name": "三、材料分析题（6 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set8-q17",

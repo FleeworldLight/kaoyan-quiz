@@ -281,9 +281,11 @@ function figKeywords(text) {
 /**
  * 定位规则（按优先级）：
  *  R1 图注：图上方/下方 45pt 内最近一行若是「题 N 图」→ 归第 N 题；若是「题 N～M 图」→ 归 N..M 全段（共享图）。
- *  R2 右侧图：若某题号的行落在图的纵向区间内、且该行文字在图的左侧（水平不重叠），
- *             且该题题干含图字样、而按 R3 定位到的那题题干不含图字样 → 归该题号（取最靠上者）。
+ *  R2 右侧图：若某题号的行落在图的纵向区间内、且该行文字在图的左侧（水平不重叠）→ 归该题号
+ *             （「图在题号右侧、与其题干同一水平带」是比 R3 更强的物理信号；取最靠上且题干含图字样者）。
  *  R3 题号区间（默认规则）：图的顶边 y 落在「本题题号 y」与「下一题题号 y」之间 → 归本题。
+ *             若该题题干不含图字样、而图的纵向区间里夹着别的题号、且紧随图下方的题号题干含图字样
+ *             （「图被排版到引用它的那道题的上方」）→ 归图下方那道题。
  */
 function assignImages(pages, chain, textOf) {
   const markers = chain.map((c) => ({ no: c.no, page: c.page, y: c.y, lineX1: c.lineX1 }));
@@ -328,12 +330,19 @@ function assignImages(pages, chain, textOf) {
     const diag = `区间内题号=${inBand.map((m) => `${m.no}(行右${r1(m.lineX1)})`).join(",") || "无"} 图左沿=${r1(x0)} ` +
       `区间规则归=${phys ? phys.no : "无"}${phys ? (hasFig(phys.no) ? "(题干含图)" : "(题干无图)") : ""}`;
     if (!res.owners.length) {
-      const ownKw = phys && hasFig(phys.no);
       const candKw = inBand.find((m) => hasFig(m.no));
-      if (!ownKw && candKw) res = { owners: [candKw.no], rule: "右侧图(题号与图同行)" };
+      if (candKw) res = { owners: [candKw.no], rule: "右侧图(题号与图同行)" };
     }
     // --- R3 默认 ---
-    if (!res.owners.length) res = { owners: phys ? [phys.no] : [], rule: "题号区间" };
+    if (!res.owners.length) {
+      const inside = markers.filter((m) => m.page === im.page && m.y > bot + 1 && m.y < top - 1);
+      const belowMk = markers.find((m) => m.page === im.page && m.y <= bot + 1 && bot - m.y <= 60);
+      if (phys && !hasFig(phys.no) && inside.length && belowMk && hasFig(belowMk.no)) {
+        res = { owners: [belowMk.no], rule: "题号区间(图被排到题干上方)" };
+      } else {
+        res = { owners: phys ? [phys.no] : [], rule: "题号区间" };
+      }
+    }
     const idx = chain.findIndex((c) => c.no === res.owners[0]);
     res.ownerMarker = idx >= 0 ? chain[idx] : null;
     res.nextMarker = idx >= 0 && idx + 1 < chain.length ? chain[idx + 1] : null;

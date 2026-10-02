@@ -20,7 +20,7 @@
   "sections": [
     {
       "id": "single",
-      "name": "一、单项选择题（8 题）",
+      "name": "一、单项选择题（9 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2-q1",
@@ -114,6 +114,37 @@
           "images": [],
           "_answerFrom": "correct-answer",
           "sourceUrl": "https://noobdream.com/Practice/article/11345/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设级数$\\sum\\limits_{n=2}^{\\infty}\\frac{1}{n(\\ln n)^p}$发散，且$\\sum\\limits_{n=1}^{\\infty}(-1)^{n-1}\\left(\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}\\right)$条件收敛，其中$p>0$，则$p$的取值范围为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$0<p<1$."
+            },
+            {
+              "key": "B",
+              "text": "$0<p\\leqslant\\frac{1}{3}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{1}{3}\\leqslant p<1$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{1}{3}<p\\leqslant1$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 利用积分判别法.\n\n由\n\n$\\int_{2}^{+\\infty}\\frac{\\mathrm{d}x}{x(\\ln x)^p}= \\begin{cases} \\ln\\ln x\\big|_{2}^{+\\infty}, & p=1, \\\\ \\frac{1}{1-p}\\cdot\\frac{1}{(\\ln x)^{p-1}}\\big|_{2}^{+\\infty}, & p\\neq1, \\end{cases}$\n\n知当$p=1$时，$\\sum\\limits_{n=2}^{\\infty}\\frac{1}{n(\\ln n)^p}$发散；当$p-1<0$，即$p<1$时，该级数发散.\n\n故当$0<p\\leqslant1$时，该级数发散.\n\n由不等式$x>\\arctan x(x>0)$，知$\\sum\\limits_{n=1}^{\\infty}(-1)^{n-1}\\left(\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}\\right)$是交错级数.\n\n由$\\lim\\limits_{x\\to0}\\frac{x-\\arctan x}{x^3}=\\lim\\limits_{x\\to0}\\frac{x-\\left[x-\\frac{x^3}{3}+o(x^3)\\right]}{x^3}=\\frac{1}{3}$，有$\\lim\\limits_{n\\to\\infty}\\frac{\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}}{\\left(\\frac{1}{n^p}\\right)^3}=\\frac{1}{3}$.\n\n由正项级数的比较判别法，知$\\sum\\limits_{n=1}^{\\infty}\\left(\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}\\right)$与$\\sum\\limits_{n=1}^{\\infty}\\frac{1}{n^{3p}}$有相同的敛散性.\n\n因此，当$0<3p\\leqslant1$，即$0<p\\leqslant\\frac{1}{3}$时，$\\sum\\limits_{n=1}^{\\infty}(-1)^{n-1}\\left(\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}\\right)$不绝对收敛.\n\n记$a_n=\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}$，当$0<p\\leqslant\\frac{1}{3}$时，有$\\lim\\limits_{n\\to\\infty}a_n=0$.\n\n令$f(x)=x-\\arctan x$，则$f'(x)=1-\\frac{1}{1+x^2}>0$，知$f(x)$单调递增.\n\n故$a_n=f\\left(\\frac{1}{n^p}\\right)$单调递减.由莱布尼茨定理，知$\\sum\\limits_{n=1}^{\\infty}(-1)^{n-1}\\left(\\frac{1}{n^p}-\\arctan\\frac{1}{n^p}\\right)$收敛，即条件收敛.由$0<p\\leqslant1$且$0<p\\leqslant\\frac{1}{3}$，得$0<p\\leqslant\\frac{1}{3}$，选项B正确.\n\n【注】 作为选择题，也可以对$p$取特殊值，如将$p=1$，$p=\\frac{1}{3}$代入级数判别其敛散性进行排除，从而得到答案.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11346/"
         },
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2026-set2-q5",

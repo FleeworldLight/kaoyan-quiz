@@ -19,8 +19,262 @@
   "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
   "sections": [
     {
+      "id": "single",
+      "name": "一、单项选择题（8 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "已知$f(x)=\\begin{cases} x^{2}\\ln|x| + 1, & 0\\lt|x|\\leq1, \\\\ 1, & x = 0, \\end{cases}$则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$f(0)$是$f(x)$在$[-1,1]$上的最小值."
+            },
+            {
+              "key": "B",
+              "text": "$f(0)$是$f(x)$在$[-1,1]$上的最大值."
+            },
+            {
+              "key": "C",
+              "text": "$f(x)$在点$x = 0$处连续但不可导."
+            },
+            {
+              "key": "D",
+              "text": "$f(x)$在点$x = 0$处二阶可导."
+            }
+          ],
+          "answer": "B",
+          "explanation": "当$0\\lt|x|\\leq1$时，$x^{2}\\ln|x|\\leq0$，故$x^{2}\\ln|x| + 1\\leq1 = f(0)$，即$f(0)$是$f(x)$在$[-1,1]$上的最大值.\n因为$\\lim\\limits_{x\\rightarrow0}f(x)=\\lim\\limits_{x\\rightarrow0}(x^{2}\\ln|x| + 1)=1 = f(0)$，所以$f(x)$在点$x = 0$处连续.\n又因为$f^\\prime(0)=\\lim\\limits_{x\\rightarrow0}\\frac{f(x)-f(0)}{x - 0}=\\lim\\limits_{x\\rightarrow0}\\frac{x^{2}\\ln|x| + 1 - 1}{x}=\\lim\\limits_{x\\rightarrow0}x\\ln|x| = 0$，所以$f(x)$在点$x = 0$处一阶可导.\n当$x\\neq0$时，$f^\\prime(x)=2x\\ln|x| + x$，则$f^{\\prime\\prime}(0)=\\lim\\limits_{x\\rightarrow0}\\frac{f^\\prime(x)-f^\\prime(0)}{x}=\\lim\\limits_{x\\rightarrow0}\\frac{2x\\ln|x| + x - 0}{x}=-\\infty$，所以$f(x)$在点$x = 0$处二阶导数不存在.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9514/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "设常数项级数$\\sum\\limits_{n = 1}^{\\infty}a_{n}$条件收敛，$r$是实数，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "当$|r|\\geq1$时，$\\sum\\limits_{n = 1}^{\\infty}a_{2n - 1}r^{2n - 1}$发散."
+            },
+            {
+              "key": "B",
+              "text": "当$|r|\\leq1$时，$\\sum\\limits_{n = 1}^{\\infty}a_{2n}r^{2n}$发散."
+            },
+            {
+              "key": "C",
+              "text": "当$\\sum\\limits_{n = 1}^{\\infty}a_{2n - 1}r^{2n - 1}$发散时，$|r|\\geq1$."
+            },
+            {
+              "key": "D",
+              "text": "当$\\sum\\limits_{n = 1}^{\\infty}a_{2n}r^{2n}$发散时，$|r|\\leq1$."
+            }
+          ],
+          "answer": "C",
+          "explanation": "由题意，$\\sum\\limits_{n = 1}^{\\infty}a_{n}x^{n}$的收敛半径为$R = 1$，故当$|r|\\lt1$时，$\\sum\\limits_{n = 1}^{\\infty}a_{n}r^{n}$绝对收敛，即$\\sum\\limits_{n = 1}^{\\infty}|a_{n}r^{n}|$收敛.又$\\sum\\limits_{n = 1}^{\\infty}|a_{n}r^{n}|=\\sum\\limits_{n = 1}^{\\infty}|a_{2n - 1}r^{2n - 1}|+\\sum\\limits_{n = 1}^{\\infty}|a_{2n}r^{2n}|$，则$\\sum\\limits_{n = 1}^{\\infty}a_{2n - 1}r^{2n - 1}$收敛.\n于是，当$\\sum\\limits_{n = 1}^{\\infty}a_{2n - 1}r^{2n - 1}$发散时，$|r|\\geq1$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9515/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设$f(t)=\\int_{t}^{2t}\\mathrm{d}x\\int_{x}^{t}\\mathrm{e}^{(x - y + 1)^{2}}\\mathrm{d}y$，则$\\lim\\limits_{t\\rightarrow0^{+}}\\frac{f(t)}{t^{2}}=$",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{\\mathrm{e}}{2}$."
+            },
+            {
+              "key": "B",
+              "text": "$-\\frac{\\mathrm{e}}{2}$."
+            },
+            {
+              "key": "C",
+              "text": "$2\\mathrm{e}$."
+            },
+            {
+              "key": "D",
+              "text": "$-2\\mathrm{e}$."
+            }
+          ],
+          "answer": "B",
+          "explanation": "$f(t)=-\\iint_{D_{t}}\\mathrm{e}^{(x - y + 1)^{2}}\\mathrm{d}\\sigma\\stackrel{积分中值定理}{=}-\\mathrm{e}^{(\\xi - \\eta + 1)^{2}}S_{D_{t}}=-\\mathrm{e}^{(\\xi - \\eta + 1)^{2}}\\cdot\\frac{1}{2}t^{2}$，其中$(\\xi,\\eta)\\in D_{t}=\\{(x,y)|t\\leq x\\leq2t,t\\leq y\\leq x\\}$.\n故$\\lim\\limits_{t\\rightarrow0^{+}}\\frac{f(t)}{t^{2}}=\\lim\\limits_{t\\rightarrow0^{+}}\\frac{-\\mathrm{e}^{(\\xi - \\eta + 1)^{2}}\\cdot\\frac{1}{2}t^{2}}{t^{2}}=-\\frac{1}{2}\\mathrm{e}$.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9516/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "设$f(x)$是$[a,b]$上的单调有界且有间断点的函数，则以下结论\n① 对任意$x_{0}\\in(a,b)$，$\\lim\\limits_{x\\rightarrow x_{0}}f(x)$存在；\n② $\\lim\\limits_{x\\rightarrow a^{+}}f(x)$，$\\lim\\limits_{x\\rightarrow b^{-}}f(x)$存在；\n③ $f(x)$只有第一类间断点；\n④ $f(x)$可以取到$f(a)$与$f(b)$之间的任意值.\n正确结论的个数为",
+          "options": [
+            {
+              "key": "A",
+              "text": "1."
+            },
+            {
+              "key": "B",
+              "text": "2."
+            },
+            {
+              "key": "C",
+              "text": "3."
+            },
+            {
+              "key": "D",
+              "text": "4."
+            }
+          ],
+          "answer": "C",
+          "explanation": "对于①，由单调有界准则可知$f(x)$在每一点处的单侧极限存在，因此①正确.\n对于②，根据单调有界准则知，$\\lim\\limits_{x\\rightarrow a^{+}}f(x)$，$\\lim\\limits_{x\\rightarrow b^{-}}f(x)$存在，所以②正确.\n对于③，设当$x\\lt x_{0}$时，有$f(x)\\leq f(x_{0})$，由单调有界函数必定有单侧极限的性质可知$\\lim\\limits_{x\\rightarrow x_{0}^{-}}f(x)$存在.若$x_{0}$不为定义区间的右端点，则$\\lim\\limits_{x\\rightarrow x_{0}^{+}}f(x)$存在.因此，若$x_{0}$不是连续点，则$x_{0}$为$f(x)$的第一类间断点，所以③正确.\n对于④，设$f(x)$为单调增加函数，且$c\\in(a,b)$为$f(x)$的不连续点.由③可知点$x = c$必为$f(x)$的第一类间断点.\n设$f(x)$在点$x = c$处不满足左连续，即$\\lim\\limits_{x\\rightarrow c^{-}}f(x)\\neq f(c)$.由于$f(x)$单调增加，因此$\\lim\\limits_{x\\rightarrow c^{-}}f(x)\\lt f(c)$，故当$x\\lt c$时，由极限的保号性可得$f(x)\\leq\\lim\\limits_{x\\rightarrow c^{-}}f(x)\\lt f(c)$，当$x\\geq c$时，$f(x)\\geq f(c)$，于是$f(x)$不可能取到$\\lim\\limits_{x\\rightarrow c^{-}}f(x)$与$f(c)$之间的值.\n同理，设$f(x)$在点$x = c$处不满足右连续，则$f(x)$不可能取到$\\lim\\limits_{x\\rightarrow c^{+}}f(x)$与$f(c)$之间的值.\n故④不正确.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9517/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "设$A$为$n$阶实对称矩阵，$\\boldsymbol{b}$为$n$维实列向量，则$A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}$正定是$\\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b}\\lt1$的",
+          "options": [
+            {
+              "key": "A",
+              "text": "必要非充分条件."
+            },
+            {
+              "key": "B",
+              "text": "充分非必要条件."
+            },
+            {
+              "key": "C",
+              "text": "充分必要条件."
+            },
+            {
+              "key": "D",
+              "text": "既非充分又非必要条件."
+            }
+          ],
+          "answer": "B",
+          "explanation": "若$A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}$正定，则对任意的$\\boldsymbol{x}\\neq0$，有$\\boldsymbol{x}^{\\mathrm{T}}(A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}})\\boldsymbol{x}\\gt0$，即$\\boldsymbol{x}^{\\mathrm{T}}A\\boldsymbol{x}-(\\boldsymbol{b}^{\\mathrm{T}}\\boldsymbol{x})\\boldsymbol{b}^{\\mathrm{T}}\\boldsymbol{x}\\gt0$，即$\\boldsymbol{x}^{\\mathrm{T}}A\\boldsymbol{x}\\gt\\|\\boldsymbol{b}^{\\mathrm{T}}\\boldsymbol{x}\\|^{2}\\geq0$，于是$A$正定，又$|A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}|=|A|(1 - \\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b})\\gt0$，于是$1 - \\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b}\\gt0$，即$\\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b}\\lt1$. 若$\\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b}\\lt1$，则$A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}$的$k$阶顺序主子式为$|A_{k} - \\boldsymbol{b}_{k}\\boldsymbol{b}_{k}^{\\mathrm{T}}|=|A_{k}|(1 - \\boldsymbol{b}_{k}^{\\mathrm{T}}A_{k}^{-1}\\boldsymbol{b}_{k})$，其中$|A_{k}|$与$1 - \\boldsymbol{b}_{k}^{\\mathrm{T}}A_{k}^{-1}\\boldsymbol{b}_{k}$均不确定正负，故无法得出$A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}$正定. 如$A=\\begin{pmatrix}-1&0\\\\0&1\\end{pmatrix}$，$\\boldsymbol{b}=\\begin{pmatrix}1\\\\1\\end{pmatrix}$，虽$\\boldsymbol{b}^{\\mathrm{T}}A^{-1}\\boldsymbol{b}=(1,1)\\begin{pmatrix}-1&0\\\\0&1\\end{pmatrix}\\begin{pmatrix}1\\\\1\\end{pmatrix}=0\\lt1$，但$A - \\boldsymbol{b}\\boldsymbol{b}^{\\mathrm{T}}=\\begin{pmatrix}-1&0\\\\0&1\\end{pmatrix}-\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}=\\begin{pmatrix}-2&-1\\\\-1&0\\end{pmatrix}$不正定.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9518/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "设$\\boldsymbol{\\alpha},\\boldsymbol{\\beta},\\boldsymbol{\\gamma}$为$n$维列向量，以下结论不正确的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "若$\\boldsymbol{\\gamma}$与$\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$均正交，则$\\boldsymbol{\\gamma}$与$\\boldsymbol{\\alpha}-\\boldsymbol{\\beta}$正交."
+            },
+            {
+              "key": "B",
+              "text": "若$\\|\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\|^2=\\|\\boldsymbol{\\alpha}\\|^2+\\|\\boldsymbol{\\beta}\\|^2$，则$\\boldsymbol{\\alpha}$与$\\boldsymbol{\\beta}$正交."
+            },
+            {
+              "key": "C",
+              "text": "若$\\|\\boldsymbol{\\alpha}-\\boldsymbol{\\beta}\\|^2=\\|\\boldsymbol{\\alpha}\\|^2+\\|\\boldsymbol{\\beta}\\|^2$，则$\\boldsymbol{\\alpha}$与$\\boldsymbol{\\beta}$正交."
+            },
+            {
+              "key": "D",
+              "text": "若$\\boldsymbol{\\alpha}$与$\\boldsymbol{\\beta}$正交，则$\\boldsymbol{\\alpha}$与$\\boldsymbol{\\beta}$线性无关."
+            }
+          ],
+          "answer": "D",
+          "explanation": "D\nA正确，因为$[\\boldsymbol{\\gamma},\\boldsymbol{\\alpha}]=0$，$[\\boldsymbol{\\gamma},\\boldsymbol{\\beta}]=0$，故$[\\boldsymbol{\\gamma},\\boldsymbol{\\alpha}-\\boldsymbol{\\beta}]=[\\boldsymbol{\\gamma},\\boldsymbol{\\alpha}]-[\\boldsymbol{\\gamma},\\boldsymbol{\\beta}]=0$.\nB正确，\n$\\|\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\|^2$\n$=[\\boldsymbol{\\alpha}+\\boldsymbol{\\beta},\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}]$\n$=[\\boldsymbol{\\alpha},\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}]+[\\boldsymbol{\\beta},\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}]$\n$=[\\boldsymbol{\\alpha},\\boldsymbol{\\alpha}]+[\\boldsymbol{\\alpha},\\boldsymbol{\\beta}]+[\\boldsymbol{\\beta},\\boldsymbol{\\alpha}]+[\\boldsymbol{\\beta},\\boldsymbol{\\beta}]$\n$=\\|\\boldsymbol{\\alpha}\\|^2+\\|\\boldsymbol{\\beta}\\|^2+2[\\boldsymbol{\\alpha},\\boldsymbol{\\beta}]$.\n若$\\|\\boldsymbol{\\alpha}+\\boldsymbol{\\beta}\\|^2=\\|\\boldsymbol{\\alpha}\\|^2+\\|\\boldsymbol{\\beta}\\|^2$，则$[\\boldsymbol{\\alpha},\\boldsymbol{\\beta}]=0$，即$\\boldsymbol{\\alpha}$与$\\boldsymbol{\\beta}$正交.\nC正确，将B选项中的$\\boldsymbol{\\beta}$换成$-\\boldsymbol{\\beta}$即可.\nD错误，只有非零列向量$\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$正交，才有$\\boldsymbol{\\alpha},\\boldsymbol{\\beta}$线性无关，此结论缺少“非零”的条件.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9519/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设随机变量$X,Y$独立同分布于$E(\\lambda)$，其中$\\lambda>0$，$F(x)$为$X$的分布函数，则与$F(X)$同分布的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{2X}{X + Y}$."
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{X}{Y}$."
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{X + Y}{Y}$."
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{Y}{X + Y}$."
+            }
+          ],
+          "answer": "D",
+          "explanation": "D\n法一 显然，$F(X)\\sim U(0,1)$.\n令$\\begin{cases}u=\\frac{y}{x + y}\\\\v = y\\end{cases}$则有$\\begin{cases}x=\\frac{v}{u}-v\\\\y = v\\end{cases}$，$J=\\frac{\\partial(x,y)}{\\partial(u,v)}=\\begin{vmatrix}-\\frac{v}{u^2}&\\frac{1}{u}-1\\\\0&1\\end{vmatrix}=-\\frac{v}{u^2}$.\n由题意知，随机变量$X,Y$的联合概率密度为$f(x,y)=\\begin{cases}\\lambda^2e^{-\\lambda(x + y)},&x>0,y>0\\\\0,&其他\\end{cases}$，则有\n$f(u,v)=f(\\frac{v}{u}-v,v)\\cdot\\left|-\\frac{v}{u^2}\\right|=\\begin{cases}\\lambda^2e^{-\\lambda\\frac{v}{u}}\\cdot\\frac{v}{u^2},&\\frac{v}{u}>v>0\\\\0,&其他\\end{cases}$，\n$f_U(u)=\\begin{cases}\\int_{0}^{+\\infty}\\lambda^2e^{-\\lambda\\frac{v}{u}}\\frac{v}{u^2}dv,&0<u<1\\\\0,&其他\\end{cases}=\\begin{cases}1,&0<u<1\\\\0,&其他\\end{cases}$.\n法二 分布函数法.\n记$Z=\\frac{Y}{X + Y}$，$Z$的分布函数为$F(z)$，则由分布函数法可知：\n当$z\\leq0$时，$F(z)=0$；\n当$z\\geq1$时，$F(z)=1$；\n当$0<z<1$时，有\n$F(z)=P\\left\\{\\frac{Y}{X + Y}\\leq z\\right\\}$\n$=\\int_{0}^{+\\infty}dx\\int_{0}^{\\frac{xz}{1 - z}}\\lambda^2e^{-\\lambda(x + y)}dy$\n$=\\int_{0}^{+\\infty}\\lambda e^{-\\lambda x}(1 - e^{-\\frac{\\lambda xz}{1 - z}})dx=\\int_{0}^{+\\infty}\\lambda e^{-\\lambda x}dx-\\int_{0}^{+\\infty}\\lambda e^{-\\frac{\\lambda x}{1 - z}}dx$\n$=z$.\n故\n$f(z)=F'(z)=\\begin{cases}1,&0<z<1\\\\0,&其他\\end{cases}$.\n【注】事实上，A,B,C的随机变量均可能超过1，故它们均不可能服从$U(0,1)$.据此本题即可选D，但这种思考很少有考生考虑到.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9522/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "已知总体$X$的期望$E(X)=0$，方差$D(X)=\\sigma^2$，$X_1,X_2,\\cdots,X_n$是来自总体$X$的简单随机样本，其均值为$\\overline{X}$，给出下面各统计量：\n①$\\frac{1}{n - 1}\\sum_{i = 1}^{n}(X_i - \\overline{X})^2$；\n②$\\frac{1}{n + 1}\\sum_{i = 1}^{n}(X_i - \\overline{X})^2$；\n③$\\frac{1}{n}\\sum_{i = 1}^{n}X_i^2$；\n④$\\frac{1}{n + 1}\\sum_{i = 1}^{n}X_i^2$.\n其中，可以作为$\\sigma^2$的无偏估计量的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "①③."
+            },
+            {
+              "key": "B",
+              "text": "①④."
+            },
+            {
+              "key": "C",
+              "text": "②③."
+            },
+            {
+              "key": "D",
+              "text": "②④."
+            }
+          ],
+          "answer": "A",
+          "explanation": "A\n由于$E(X)=0$，$D(X)=E(X^2)-[E(X)]^2=\\sigma^2$，因此$E(X^2)=\\sigma^2$.\n由\n$E\\left[\\sum_{i = 1}^{n}(X_i - \\overline{X})^2\\right]=E\\left(\\sum_{i = 1}^{n}X_i^2\\right)-2E\\left[\\left(\\sum_{i = 1}^{n}X_i\\right)\\cdot\\overline{X}\\right]+nE(\\overline{X}^2)$\n$=nE(X^2)-2nE(\\overline{X}^2)+nE(\\overline{X}^2)=nE(X^2)-nE(\\overline{X}^2)$\n$=nE(X^2)-n\\{D(\\overline{X})+[E(\\overline{X})]^2\\}=n\\sigma^2 - n\\left(\\frac{1}{n}\\sigma^2 + 0\\right)=(n - 1)\\sigma^2$，\n得\n$E\\left[\\frac{1}{n - 1}\\sum_{i = 1}^{n}(X_i - \\overline{X})^2\\right]=\\sigma^2$.\n故①是$\\sigma^2$的无偏估计量，②不是.\n另一方面，\n$E\\left(\\frac{1}{n}\\sum_{i = 1}^{n}X_i^2\\right)=\\frac{1}{n}\\sum_{i = 1}^{n}E(X_i^2)=\\frac{n\\sigma^2}{n}=\\sigma^2$.\n所以③是$\\sigma^2$的无偏估计量，④不是.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9523/"
+        }
+      ]
+    },
+    {
       "id": "blank",
-      "name": "一、填空题（6 题）",
+      "name": "二、填空题（6 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q11",
@@ -110,36 +364,8 @@
     },
     {
       "id": "essay",
-      "name": "二、材料分析题（8 题）",
+      "name": "三、材料分析题（6 题）",
       "questions": [
-        {
-          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q7",
-          "no": 7,
-          "type": "essay",
-          "stem": "设$A,B$为$n$阶实对称矩阵，则下列结论不成立的是\nA. $r(A\\ \\ AB)=r(A)$.\nB. $r(AB^T\\ \\ AB^TB)=r(AB^T)$.\nC. $r\\begin{pmatrix}BA\\\\B^TBA\\end{pmatrix}=r(AB^T)$.\nD. $r\\begin{pmatrix}A^TA\\\\B^TA\\end{pmatrix}=r(A)$.",
-          "options": [],
-          "answer": "C\n由$(A\\ \\ AB)\\to(A\\ \\ O)$，得$r(A\\ \\ AB)=r(A)$，A正确.\n由$(AB^T\\ \\ AB^TB)\\to(AB^T\\ \\ O)$，得$r(AB^T\\ \\ AB^TB)=r(AB^T)$，B正确.\n由$\\begin{pmatrix}BA\\\\B^TBA\\end{pmatrix}\\to\\begin{pmatrix}BA\\\\O\\end{pmatrix}$，得$r\\begin{pmatrix}BA\\\\B^TBA\\end{pmatrix}=r(BA)$，但不一定有$r(BA)=r(AB^T)$，故C不正确.\n由$\\begin{pmatrix}A^TA\\\\B^TA\\end{pmatrix}\\to\\begin{pmatrix}A\\\\B^TA\\end{pmatrix}\\to\\begin{pmatrix}A\\\\O\\end{pmatrix}$，得$r\\begin{pmatrix}A^TA\\\\B^TA\\end{pmatrix}=r(A)$，D正确.",
-          "explanation": "",
-          "score": 0,
-          "topics": [],
-          "images": [],
-          "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9520/"
-        },
-        {
-          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q8",
-          "no": 8,
-          "type": "essay",
-          "stem": "设$A,B,C$为随机事件，则下列条件中，使得$P[(A - B) - C]=P[A - (B - C)]$成立的一个充分条件是\nA. $AC=\\varnothing$.\nB. $B=\\varnothing$.\nC. $P(A)=1$.\nD. $P(C)=1$.",
-          "options": [],
-          "answer": "A\n$P[(A - B) - C]=P(A - B)-P(AC - BC)$\n$=P(A)-P(AB)-P(AC)+P(ABC)$， ①\n$P[A - (B - C)]=P(A)-P(AB - AC)$\n$=P(A)-P(AB)+P(ABC)$. ②\n若$P[(A - B) - C]=P[A - (B - C)]$，则由式①，式②知，$P(AC)=0$.当$AC=\\varnothing$时，有$P(AC)=0$，故A正确.\n【注】有些考生将$P[A - (B - C)]$写成了$P[A - (B - C)]=P(A - B + C)$，这是对事件运算律的混淆.事实上，\n$A - (B - C)=A(\\overline{B - C})=A(\\overline{B\\overline{C}})=A(\\overline{B}\\cup C)=A\\overline{B}\\cup AC$，\n而\n$A - B + C=(A\\overline{B})\\cup C$.",
-          "explanation": "",
-          "score": 0,
-          "topics": [],
-          "images": [],
-          "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9521/"
-        },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set6-q17",
           "no": 17,

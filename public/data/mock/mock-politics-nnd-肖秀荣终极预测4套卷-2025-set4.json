@@ -20,7 +20,7 @@
   "sections": [
     {
       "id": "single",
-      "name": "一、单项选择题（14 题）",
+      "name": "一、单项选择题（16 题）",
       "questions": [
         {
           "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4-q1",
@@ -271,6 +271,68 @@
           "sourceUrl": "https://noobdream.com/Practice/article/11074/"
         },
         {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "全面从严治党是党永葆生机活力、走好新的赶考之路的必由之路，是新时代党的建设的鲜明主题。全面从严治党是一项管党治党的系统工程，全面从严治党的治本之策是",
+          "options": [
+            {
+              "key": "A",
+              "text": "加强纪律建设"
+            },
+            {
+              "key": "B",
+              "text": "加强制度建设"
+            },
+            {
+              "key": "C",
+              "text": "加强作风建设"
+            },
+            {
+              "key": "D",
+              "text": "加强思想建设"
+            }
+          ],
+          "answer": "A",
+          "explanation": "【简析】 党要管党，从严治党，就要靠严明纪律和规矩。党的纪律和规矩是党的各级组织、全体党员必须遵守的行为准则。纪律是成文的规矩，一些未明文列入纪律的规矩是不成文的纪律；纪律是刚性的规矩，一些未明文列入纪律的规矩是自我约束的纪律。加强纪律建设是全面从严治党的治本之策，纪律严明是加强和规范党内政治生活的内在要求和重要保证。必须把纪律建设摆在更加突出位置，坚持纪严于法、纪在法前，时刻绷紧纪律规矩这根弦。A正确，B、C、D错误。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11075/"
+        },
+        {
+          "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "孙中山指出，辛亥革命之所以失败，\"非袁氏兵力之强，实同党人心之涣\"。从主观方面讲，辛亥革命之所以失败，在于它的领导者资产阶级革命派本身存在着许多弱点和错误。资产阶级革命派的这些弱点、错误，从根源上讲，在于",
+          "options": [
+            {
+              "key": "A",
+              "text": "不能充分发动和依靠人民群众"
+            },
+            {
+              "key": "B",
+              "text": "中国资产阶级革命派内部组织的松散和分化"
+            },
+            {
+              "key": "C",
+              "text": "中国民族资产阶级的软弱性和妥协性"
+            },
+            {
+              "key": "D",
+              "text": "没有提出彻底的反帝反封建的革命纲领"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【简析】 辛亥革命之所以失败，从主观方面来说，在于它的领导者资产阶级革命派本身存在着许多弱点和错误。主要是：(1)没有提出彻底的反帝反封建的革命纲领。(2)不能充分发动和依靠人民群众。(3)不能建立坚强的革命政党，作为团结一切革命力量的强有力的核心。资产阶级革命派的这些弱点、错误，根源于中国民族资产阶级的软弱性和妥协性。正因为如此，辛亥革命仅仅赶跑了一个皇帝，却没有能够改变封建主义和军阀官僚政治的统治基础，无法完成反帝反封建的任务。辛亥革命的失败表明，资产阶级共和国的方案没有能够救中国，先进的中国人需要进行新的探索，为中国谋求新的出路。C正确，A、B、D不符合题意。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/11076/"
+        },
+        {
           "id": "mock-politics-nnd-肖秀荣终极预测4套卷-2025-set4-q11",
           "no": 11,
           "type": "single",
@@ -490,7 +552,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11083/"
         },
         {
@@ -521,7 +583,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11084/"
         },
         {
@@ -552,7 +614,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11085/"
         },
         {
@@ -583,7 +645,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11086/"
         },
         {
@@ -614,7 +676,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11087/"
         },
         {
@@ -645,7 +707,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11088/"
         },
         {
@@ -676,7 +738,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11089/"
         },
         {
@@ -707,7 +769,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11090/"
         },
         {
@@ -738,7 +800,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11091/"
         },
         {
@@ -769,7 +831,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11092/"
         },
         {
@@ -800,7 +862,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11093/"
         },
         {
@@ -831,7 +893,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11094/"
         },
         {
@@ -862,7 +924,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11095/"
         },
         {
@@ -893,7 +955,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11096/"
         },
         {
@@ -924,7 +986,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11097/"
         },
         {
@@ -955,7 +1017,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11098/"
         },
         {
@@ -986,7 +1048,7 @@
           "score": 2,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析",
+          "_answerFrom": "标准答案为",
           "sourceUrl": "https://noobdream.com/Practice/article/11099/"
         }
       ]

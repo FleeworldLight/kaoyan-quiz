@@ -20,7 +20,7 @@
   "sections": [
     {
       "id": "single",
-      "name": "一、单项选择题（9 题）",
+      "name": "一、单项选择题（10 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set2-q1",
@@ -238,6 +238,37 @@
           "images": [],
           "_answerFrom": "correct-answer",
           "sourceUrl": "https://noobdream.com/Practice/article/10459/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set2-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设二维随机变量\\((X,Y)\\)在区域\\( D \\)上服从均匀分布，其中\\( D=\\{(x,y)\\mid 0\\leqslant x\\leqslant2,0\\leqslant y\\leqslant4-x^{2}\\} \\)，记\\( A=\\{X\\leqslant1\\} \\)，\\( B=\\{Y\\leqslant3\\} \\)，则随机事件\\( A,B \\)中恰好有一个发生的概率为",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\(\\frac{1}{16}\\)."
+            },
+            {
+              "key": "B",
+              "text": "\\(\\frac{7}{16}\\)."
+            },
+            {
+              "key": "C",
+              "text": "\\(\\frac{5}{16}\\)."
+            },
+            {
+              "key": "D",
+              "text": "\\(\\frac{3}{16}\\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "解析 区域\\( D \\)如右图所示，由\\(\\int_{0}^{2}(4-x^{2})dx=\\frac{16}{3}\\)，知\\((X,Y)\\)的概率密度为\n\n\\( f(x,y)=\\begin{cases} \\frac{3}{16}, & (x,y)\\in D, \\\\ 0, & 其他. \\end{cases} \\)\n\n右图：\\( y \\)轴、\\( x \\)轴，曲线\\( y=4-x^{2} \\)，与\\( y \\)轴交于\\((0,4)\\)，与\\( x \\)轴交于\\((2,0)\\)。\n\n由于\\( P(A)=\\int_{0}^{1}dx\\int_{0}^{1-x^{2}}\\frac{3}{16}dy=\\frac{11}{16},P(B)=\\int_{0}^{3}dy\\int_{0}^{\\sqrt{4-y}}\\frac{3}{16}dx=\\frac{7}{8} \\)，以及\\( P(AB)=P\\{X\\leqslant1,Y\\leqslant3\\}=\\int_{0}^{1}dx\\int_{0}^{3}\\frac{3}{16}dy=\\frac{9}{16} \\)，故所求概率为\\( P(A\\overline{B}\\cup\\overline{A}B)=P(A)+P(B)-2P(AB)=\\frac{7}{16} \\)。选项B正确",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10460/"
         },
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set2-q9",

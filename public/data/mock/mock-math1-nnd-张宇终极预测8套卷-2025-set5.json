@@ -181,11 +181,11 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q7",
           "no": 7,
           "type": "single",
-          "stem": "①∀列向量b∈Rⁿ，bᵀAb = 0； ②∀列向量b∈Rⁿ，bᵀA⁻&sup1;b = 0；\n\n③∀列向量b∈Rⁿ，r(A + bbᵀ) = n； ④n可能为3.\n\n正确的个数为",
+          "stem": "已知n阶方阵A可逆且满足Aᵀ = -A，则以下命题：\n\n①∀列向量b∈Rⁿ，bᵀAb = 0； ②∀列向量b∈Rⁿ，bᵀA⁻&sup1;b = 0；\n\n③∀列向量b∈Rⁿ，r(A + bbᵀ) = n； ④n可能为3.\n\n正确的个数为",
           "options": [
             {
               "key": "A",
-              "text": "则以下命题："
+              "text": "1."
             },
             {
               "key": "B",
@@ -212,11 +212,11 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set5-q8",
           "no": 8,
           "type": "single",
-          "stem": "A. P(A$\\overline{B}$) > P(A)P($\\overline{B}$).",
+          "stem": "设随机事件A,B满足0 < P(A) < 1，0 < P(B) < 1，则P(AB) > P(A)P(B)的充要条件是",
           "options": [
             {
               "key": "A",
-              "text": "B满足0 < P(A) < 1，0 < P(B) < 1，则P(AB) > P(A)P(B)的充要条件是"
+              "text": "P(A$\\overline{B}$) > P(A)P($\\overline{B}$)."
             },
             {
               "key": "B",

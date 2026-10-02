@@ -20,7 +20,7 @@
   "sections": [
     {
       "id": "single",
-      "name": "一、单项选择题（9 题）",
+      "name": "一、单项选择题（10 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1-q1",
@@ -181,11 +181,11 @@
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1-q6",
           "no": 6,
           "type": "single",
-          "stem": "A. \\( AB \\)的列向量组与\\( B \\)的列向量组等价.",
+          "stem": "设\\( A,B \\)分别为\\( m×n \\)与\\( n×s \\)矩阵，且\\( \\text{r}(A)=n \\)，则正确的是",
           "options": [
             {
               "key": "A",
-              "text": "B \\)分别为\\( m×n \\)与\\( n×s \\)矩阵，且\\( \\text{r}(A)=n \\)，则正确的是"
+              "text": "\\( AB \\)的列向量组与\\( B \\)的列向量组等价."
             },
             {
               "key": "B",
@@ -238,6 +238,37 @@
           "images": [],
           "_answerFrom": "correct-answer",
           "sourceUrl": "https://noobdream.com/Practice/article/10437/"
+        },
+        {
+          "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设随机事件 A,B 满足 \\( P(A) = 0.4 \\)，\\( P(A \\cup B) = 0.7 \\)，\\( P(\\overline{B}|\\overline{A}) + P(B|A) = 1 \\)，则 \\( P(\\overline{A} \\cup \\overline{B}) = \\)",
+          "options": [
+            {
+              "key": "A",
+              "text": "0.2"
+            },
+            {
+              "key": "B",
+              "text": "0.4"
+            },
+            {
+              "key": "C",
+              "text": "0.6"
+            },
+            {
+              "key": "D",
+              "text": "0.8"
+            }
+          ],
+          "answer": "D",
+          "explanation": "解析 由已知，\\(P(\\overline{A}) = 0.6\\)，知\\(P(B|\\overline{A}) + P(\\overline{B}|\\overline{A}) = 1\\)．\n\n又由\\(P(\\overline{B}|\\overline{A}) + P(B|A) = 1\\)，可得\\(P(B|A) = P(B|\\overline{A})\\)，故\\(A\\)与\\(B\\)相互独立．\n\n由加法公式，有\n\n\\[P(A \\cup B) = P(A) + P(\\overline{A}B) = P(A) + P(\\overline{A})P(B),\\]\n\n从而\\(P(B) = \\frac{P(A \\cup B) - P(A)}{P(\\overline{A})} = \\frac{0.7 - 0.4}{0.6} = 0.5\\)．\n\n故\\(P(\\overline{A} \\cup \\overline{B}) = P(\\overline{AB}) = 1 - P(AB) = 1 - P(A)P(B) = 1 - 0.4 \\times 0.5 = 0.8\\)．\n\n选项 D 正确．\n\n【注】 ① 本题也可以利用A与B相互独立，知\\(\\overline{A}\\)与\\(\\overline{B}\\)也相互独立，从而\\(P(A \\cup B) = 1 - P(\\overline{A}\\overline{B}) = 1 - P(\\overline{A})P(\\overline{B})\\)，即\\(0.7 = 1 - 0.6P(\\overline{B})\\)，得\\(P(\\overline{B}) = 0.5\\)。\n\n故\\(P(B) = 0.5\\)，所以\\(P(\\overline{A} \\cup \\overline{B}) = 1 - P(A)P(B) = 1 - 0.4×0.5 = 0.8\\)。\n\n② 对任何概率不为零的事件\\(\\overline{A}\\)，一定有\\(P(B|\\overline{A}) + P(\\overline{B}|\\overline{A}) = 1\\)。\n\n③ \\(\\overline{A \\cup B} = \\overline{A}\\overline{B}\\)，\\(\\overline{AB} = \\overline{A} \\cup \\overline{B}\\)。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/10438/"
         },
         {
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set1-q9",

@@ -14,7 +14,7 @@
   "quality": "unverified",
   "source": {
     "name": "N诺考研 noobdream.com · 2025 张宇终极预测8套卷（四）练习解析页",
-    "url": "https://noobdream.com/Practice/exam_solution/37506/"
+    "url": "https://noobdream.com/Practice/exam_solution/35415/"
   },
   "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
   "sections": [
@@ -26,7 +26,7 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q1",
           "no": 1,
           "type": "single",
-          "stem": "设$f(x)$在$(-1,1)$内有$f''(x)\\lt0$，且$\\lim\\limits_{x\\to0}\\frac{f(x)-\\sin x}{x}=a\\neq0$，则以下结论：\n\n①$\\lim\\limits_{x\\to0}f(x)=0$；\n\n②$\\lim\\limits_{x\\to0}f'(x)=a + 1$；\n\n③$f(x)\\leqslant ax$；④$f'(0)\\gt a$。\n\n所有正确结论的序号为",
+          "stem": "设\\( f(x) \\)在\\((-1,1)\\)内有\\( f''(x) \\lt 0 \\)，且\\(\\lim\\limits_{x \\to 0}\\frac{f(x)-\\sin x}{x}=a \\neq 0\\)，则以下结论：\n\n①\\(\\lim\\limits_{x \\to 0}f(x)=0\\)；②\\(\\lim\\limits_{x \\to 0}f'(x)=a + 1\\)；③\\( f(x) \\leq ax \\)；④\\( f'(0) \\gt a \\)。\n\n所有正确结论的序号为",
           "options": [
             {
               "key": "A",
@@ -34,303 +34,303 @@
             },
             {
               "key": "B",
-              "text": "①②④"
+              "text": "②③"
             },
             {
               "key": "C",
-              "text": "②③"
+              "text": "①②④"
             },
             {
               "key": "D",
               "text": "③"
             }
           ],
-          "answer": "B",
-          "explanation": "【分析】由$\\lim\\limits_{x\\to0}\\frac{f(x)-\\sin x}{x}=a\\neq0$，又$f''(x)\\lt0$，知$f(0)=0$，$f'(0)=\\lim\\limits_{x\\to0}\\frac{f(x)}{x}=a + 1$，故$\\lim\\limits_{x\\to0}f(x)=f(0)=0$，$\\lim\\limits_{x\\to0}f'(x)=f'(0)=a + 1\\gt a$，所以①，②，④正确。令$F(x)=f(x)-(a + 1)x$，则$F'(x)=f'(x)-(a + 1)$。又$F'(0)=f'(0)-(a + 1)=0$，$F''(x)=f''(x)\\lt0$，故$x = 0$是$F(x)$的唯一极大值点，即最大值点。因此$F(x)\\leqslant F(0)=0$，即对任意$x\\in(-1,1)$，都有$f(x)\\leqslant(a + 1)x$，但由于条件不足，不能判断$f(x)\\leqslant ax$，所以③错误。",
+          "answer": "C",
+          "explanation": "由\\(\\lim\\limits_{x \\to 0}\\frac{f(x)-\\sin x}{x}=a \\neq 0\\)，又\\( f''(x) \\lt 0 \\)，知\\( f(0)=0 \\)，\\( f'(0)=\\lim\\limits_{x \\to 0}\\frac{f(x)}{x}=a + 1 \\)，\\(\\lim\\limits_{x \\to 0}f(x)=f(0)=0\\)，\\(\\lim\\limits_{x \\to 0}f'(x)=f'(0)=a + 1 \\gt a\\)，所以①，②，④正确。 令\\( F(x)=f(x)-(a + 1)x \\)，则\\( F'(x)=f'(x)-(a + 1) \\)。又\\( F'(0)=f'(0)-(a + 1)=0 \\)，\\( F''(x)=f''(x) \\lt 0 \\)，故\\( x = 0 \\)是唯一极大值点，即最大值点。因此\\( F(x) \\leq F(0)=0 \\)，则对任意\\( x \\in (-1,1) \\)，都有\\( f(x) \\leq (a + 1)x \\)。但由于条件不足，不能判断\\( f(x) \\leq ax \\)，所以③错误。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9644/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9470/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q2",
           "no": 2,
           "type": "single",
-          "stem": "\\( f(x)=\\int_{0}^{\\sin x}|x|\\text{e}^{t^{2}}\\text{d}t(x\\in \\mathbf{R}) \\)是",
+          "stem": "逐段光滑的简单正向闭曲线\\( L:y = y(x) \\)所围区域\\( D \\)的面积\\( S \\)可表示为",
           "options": [
             {
               "key": "A",
-              "text": "有界函数."
+              "text": "\\(\\frac{1}{2}\\oint_{L}xdy - ydx\\)"
             },
             {
               "key": "B",
-              "text": "单调函数."
+              "text": "\\(\\frac{1}{2}\\oint_{L}xdy + ydx\\)"
             },
             {
               "key": "C",
-              "text": "周期函数."
+              "text": "\\(\\oint_{L}ydx\\)"
             },
             {
               "key": "D",
-              "text": "奇函数."
+              "text": "\\(-\\oint_{L}xdy\\)"
             }
           ],
-          "answer": "D",
-          "explanation": "【分析】$f(x)=|x|g[h(x)]$，其中$h(x)=\\sin x$，$g(u)=\\int_{0}^{u}e^{t^{2}}dt$，由于$|x|$是偶函数，$g[h(x)]$是奇函数，故$f(x)$为奇函数。",
+          "answer": "A",
+          "explanation": "由格林公式，\\(\\iint_{D}d\\sigma=\\oint_{L}xdy = -\\oint_{L}ydx\\)，其中\\( D \\)为曲线\\( L \\)所围成的平面有界区域，故\\( S = \\frac{1}{2}\\oint_{L}xdy - ydx \\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9645/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9471/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q3",
           "no": 3,
           "type": "single",
-          "stem": "设\\( I_{1} = \\int_{1}^{+\\infty} \\frac{\\sin x}{x}\\text{d}x \\)，\\( I_{2} = \\int_{1}^{+\\infty} \\frac{\\sin^{2} x}{x}\\text{d}x \\)，\\( I_{3} = \\int_{1}^{+\\infty} \\frac{\\sin x}{x^{2}}\\text{d}x \\)，则",
+          "stem": "设\\(\\sum_{n = 1}^{\\infty}a_{n}\\)条件收敛，\\(\\sum_{n = 1}^{\\infty}b_{n}\\)绝对收敛，则下列命题：\n\n①\\(\\sum_{n = 1}^{\\infty}(|a_{n}| - |b_{n}|)\\)绝对收敛；\n\n②\\(\\sum_{n = 1}^{\\infty}(|a_{n}| - |b_{n}|)\\)条件收敛；\n\n③\\(\\sum_{n = 1}^{\\infty}(a_{n} - b_{n})\\)绝对收敛；\n\n④\\(\\sum_{n = 1}^{\\infty}(a_{n} - b_{n})\\)条件收敛。\n\n所有正确命题的序号为",
           "options": [
             {
               "key": "A",
-              "text": "\\( I_{2} \\)发散，\\( I_{3} \\)条件收敛."
+              "text": "①③"
             },
             {
               "key": "B",
-              "text": "\\( I_{2} \\)收敛，\\( I_{3} \\)绝对收敛."
+              "text": "①"
             },
             {
               "key": "C",
-              "text": "\\( I_{1} \\)条件收敛，\\( I_{3} \\)绝对收敛."
+              "text": "②④"
             },
             {
               "key": "D",
-              "text": "\\( I_{1} \\)绝对收敛，\\( I_{2} \\)发散."
+              "text": "④"
             }
           ],
-          "answer": "C",
-          "explanation": "【分析】$I_{1}=\\int_{1}^{+\\infty}\\frac{\\sin x}{x}dx=-\\frac{\\cos x}{x}\\big|_{1}^{+\\infty}-\\int_{1}^{+\\infty}\\frac{\\cos x}{x^{2}}dx=\\cos1-\\int_{1}^{+\\infty}\\frac{\\cos x}{x^{2}}dx$，由$\\big|\\int_{1}^{+\\infty}\\frac{\\cos x}{x^{2}}dx\\big|\\leqslant\\int_{1}^{+\\infty}\\frac{1}{x^{2}}dx$，故$I_{1}$收敛。$I_{2}=\\int_{1}^{+\\infty}\\frac{\\sin^{2}x}{x}dx=\\int_{1}^{+\\infty}\\frac{1 - \\cos2x}{2x}dx=\\frac{1}{2}\\int_{1}^{+\\infty}\\frac{1}{x}dx-\\frac{1}{2}\\int_{1}^{+\\infty}\\frac{\\cos2x}{x}dx=\\frac{1}{2}\\int_{1}^{+\\infty}\\frac{1}{x}dx-\\frac{1}{4}\\left(\\frac{\\sin2x}{x}\\big|_{1}^{+\\infty}+\\int_{1}^{+\\infty}\\frac{\\sin2x}{x^{2}}dx\\right)=\\frac{1}{2}\\int_{1}^{+\\infty}\\frac{1}{x}dx+\\frac{1}{4}\\sin2-\\frac{1}{4}\\int_{1}^{+\\infty}\\frac{\\sin2x}{x^{2}}dx$。由$\\big|\\int_{1}^{+\\infty}\\frac{\\sin2x}{x^{2}}dx\\big|\\leqslant\\int_{1}^{+\\infty}\\frac{1}{x^{2}}dx$，故$\\int_{1}^{+\\infty}\\frac{\\sin2x}{x^{2}}dx$收敛。又$\\int_{1}^{+\\infty}\\frac{1}{x}dx$发散，故$I_{2}$发散。因为$\\big|\\frac{\\sin x}{x}\\big|\\geqslant\\frac{\\sin^{2}x}{x}$，又对于$I_{2}$，有$\\int_{1}^{+\\infty}\\frac{\\sin^{2}x}{x}dx$发散，所以$\\int_{1}^{+\\infty}\\big|\\frac{\\sin x}{x}\\big|dx$发散，则$I_{1}$条件收敛。对于$I_{3}$，由$\\big|\\frac{\\sin x}{x^{2}}\\big|\\leqslant\\frac{1}{x^{2}}$，且$\\int_{1}^{+\\infty}\\frac{1}{x^{2}}dx$收敛，故$I_{3}$绝对收敛。",
+          "answer": "D",
+          "explanation": "由题设知，\\(\\sum_{n = 1}^{\\infty}|a_{n}|\\)发散，\\(\\sum_{n = 1}^{\\infty}|b_{n}|\\)收敛，故\\(\\sum_{n = 1}^{\\infty}(|a_{n}| - |b_{n}|)\\)发散，因此①，②均错误。因\\(\\sum_{n = 1}^{\\infty}a_{n}\\)条件收敛，\\(\\sum_{n = 1}^{\\infty}b_{n}\\)绝对收敛，则\\(\\sum_{n = 1}^{\\infty}(a_{n} - b_{n})=\\sum_{n = 1}^{\\infty}a_{n}-\\sum_{n = 1}^{\\infty}b_{n}\\)收敛。若\\(\\sum_{n = 1}^{\\infty}(a_{n} - b_{n})\\)绝对收敛，则由\\(|a_{n}|=|a_{n} - b_{n} + b_{n}| \\leq |a_{n} - b_{n}| + |b_{n}|\\)，知\\(\\sum_{n = 1}^{\\infty}a_{n}\\)绝对收敛，矛盾，故\\(\\sum_{n = 1}^{\\infty}(a_{n} - b_{n})\\)条件收敛，因此③错误，④正确。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9646/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9472/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q4",
           "no": 4,
           "type": "single",
-          "stem": "已知函数\\( f(u,v) \\)具有二阶连续偏导数，\\( f(1,1)=1 \\)是\\( f(x,y) \\)的极值，且\\( z = f[xy,f(x,y)] \\)，则\\( \\frac{\\partial^{2} z}{\\partial x\\partial y}\\big|_{(1,1)} = \\)",
+          "stem": "设\\( p(x)=x^{4} + 2x^{3} + 3x^{2} + 2x + 1 \\)，反常积分\\( I_{k}=\\int_{0}^{+\\infty}\\frac{x^{k}}{p(x)}dx\\)，\\( k = 0,1,2,3 \\)，则\\(\\min\\{I_{0},I_{1},I_{2},I_{3}\\}=\\)",
           "options": [
             {
               "key": "A",
-              "text": "\\( f''_{uu}(1,1) + f''_{uv}(1,1) \\)."
+              "text": "\\( I_{0} \\)"
             },
             {
               "key": "B",
-              "text": "\\( 2f''_{uv}(1,1) \\)."
+              "text": "\\( I_{1} \\)"
             },
             {
               "key": "C",
-              "text": "0."
+              "text": "\\( I_{2} \\)"
             },
             {
               "key": "D",
-              "text": "\\( f''_{uu}(1,1) \\)."
+              "text": "\\( I_{3} \\)"
             }
           ],
-          "answer": "D",
-          "explanation": "【分析】由题，复合函数$z = f[xy,f(x,y)]$的复合结构图为（$z$到$xy$（标记1）和$f(x,y)$（标记2）；$xy$到$x$、$y$；$f(x,y)$到$x$（标记1）、$y$（标记2））。$\\frac{\\partial z}{\\partial x}=f_{1}'[xy,f(x,y)]\\cdot y + f_{2}'[xy,f(x,y)]\\cdot f_{1}'(x,y)$，$\\frac{\\partial^{2}z}{\\partial x\\partial y}=\\{f_{11}''[xy,f(x,y)]\\cdot x + f_{12}''[xy,f(x,y)]\\cdot f_{2}'(x,y)\\}y + f_{1}'[xy,f(x,y)] + \\{f_{21}''[xy,f(x,y)]\\cdot x + f_{22}''[xy,f(x,y)]\\cdot f_{2}'(x,y)\\}f_{1}'(x,y) + f_{2}'[xy,f(x,y)]\\cdot f_{12}''(x,y)$，由于$f(1,1)=1$是极值，故$f_{1}'(1,1)=f_{2}'(1,1)=0$，于是$\\frac{\\partial^{2}z}{\\partial x\\partial y}\\big|_{(1,1)}=f_{11}''(1,1)=f_{uu}''(1,1)$。",
+          "answer": "B",
+          "explanation": "\\( I_{k}=\\int_{0}^{+\\infty}\\frac{x^{k}}{p(x)}dx=\\int_{0}^{1}\\frac{x^{k}}{p(x)}dx+\\int_{1}^{+\\infty}\\frac{x^{k}}{p(x)}dx \\)，其中，若\\(\\int_{0}^{1}\\frac{x^{k}}{p(x)}dx\\)收敛，则\\(-k \\lt 1\\)，即\\( k \\gt -1 \\)；若\\(\\int_{1}^{+\\infty}\\frac{x^{k}}{p(x)}dx\\)收敛，则\\( 4 - k \\gt 1 \\)，即\\( k \\lt 3 \\)。 于是，当\\( k = 3 \\)时，\\( I_{3}=+\\infty \\)，发散。 当\\( k \\in (-1,3) \\)时， \\( I_{k}=\\int_{0}^{+\\infty}\\frac{x^{k}}{p(x)}dx \\stackrel{x = t^{-1}}{=}\\int_{0}^{+\\infty}\\frac{t^{-k}}{t^{-4}p(t)t^{2}}dt=\\int_{0}^{+\\infty}\\frac{x^{2 - k}}{p(x)}dx = I_{2 - k} \\)， 所以\\( I_{k}=\\frac{I_{k} + I_{2 - k}}{2}=\\frac{1}{2}\\int_{0}^{+\\infty}\\frac{x^{k} + x^{2 - k}}{p(x)}dx \\geq \\int_{0}^{+\\infty}\\frac{\\sqrt{x^{k} \\cdot x^{2 - k}}}{p(x)}dx=\\int_{0}^{+\\infty}\\frac{|x|}{p(x)}dx=\\int_{0}^{+\\infty}\\frac{x}{p(x)}dx = I_{1} \\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9647/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9473/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q5",
           "no": 5,
           "type": "single",
-          "stem": "记\\( D = \\{(x,y) \\mid 0 \\leqslant x + y \\leqslant \\frac{\\pi}{2}, 0 \\leqslant x - y \\leqslant \\frac{\\pi}{2}\\} \\)，则\\(\\iint_{D} y\\sin(x + y)\\text{d}x\\text{d}y = \\)",
+          "stem": "设\\( A=\\begin{pmatrix}\\frac{2}{5}&-\\frac{3}{10}\\\\\\frac{2}{5}&\\frac{6}{5}\\end{pmatrix} \\)，当\\( n \\)充分大时，\\( A^{n} \\)为",
           "options": [
             {
               "key": "A",
-              "text": "\\(\\frac{\\pi}{8} - \\frac{\\pi^{2}}{32}\\)."
+              "text": "\\(\\begin{pmatrix}-\\frac{1}{2}&-\\frac{3}{4}\\\\1&\\frac{3}{2}\\end{pmatrix}\\)"
             },
             {
               "key": "B",
-              "text": "\\(\\frac{\\pi}{8} + \\frac{\\pi^{2}}{32}\\)."
+              "text": "\\(\\begin{pmatrix}\\frac{1}{2}&-\\frac{3}{4}\\\\-1&\\frac{3}{2}\\end{pmatrix}\\)"
             },
             {
               "key": "C",
-              "text": "\\(\\frac{\\pi}{8} - \\frac{\\pi^{2}}{16}\\)."
+              "text": "\\(\\begin{pmatrix}-\\frac{1}{2}&\\frac{3}{4}\\\\-1&\\frac{3}{2}\\end{pmatrix}\\)"
             },
             {
               "key": "D",
-              "text": "\\(\\frac{\\pi}{8} + \\frac{\\pi^{2}}{16}\\)."
+              "text": "\\(\\begin{pmatrix}\\frac{1}{2}&\\frac{3}{4}\\\\-1&-\\frac{3}{2}\\end{pmatrix}\\)"
             }
           ],
           "answer": "A",
-          "explanation": "【分析】法一 利用三角恒等变形以及重积分的对称性。由$\\sin(x + y)=\\sin x\\cos y + \\cos x\\sin y$，并根据重积分的对称性，得原式$=2\\int_{0}^{\\frac{\\pi}{4}}y\\sin ydy\\int_{y}^{\\frac{\\pi}{2}-y}\\cos xdx=2\\int_{0}^{\\frac{\\pi}{4}}y\\sin y(\\cos y - \\sin y)dy=\\int_{0}^{\\frac{\\pi}{4}}y\\sin2ydy + \\int_{0}^{\\frac{\\pi}{4}}y\\cos2ydy - \\int_{0}^{\\frac{\\pi}{4}}ydy=\\frac{1}{4} + \\left(\\frac{\\pi}{8}-\\frac{1}{4}\\right)-\\frac{\\pi^{2}}{32}=\\frac{\\pi}{8}-\\frac{\\pi^{2}}{32}$。法二 变量代换。令$\\begin{cases}u = x + y\\\\v = x - y\\end{cases}$，则$\\begin{cases}x = \\frac{1}{2}(u + v)\\\\y = \\frac{1}{2}(u - v)\\end{cases}$。因为$J=\\begin{vmatrix}\\frac{\\partial x}{\\partial u}&\\frac{\\partial x}{\\partial v}\\\\\\frac{\\partial y}{\\partial u}&\\frac{\\partial y}{\\partial v}\\end{vmatrix}=\\begin{vmatrix}\\frac{1}{2}&\\frac{1}{2}\\\\\\frac{1}{2}&-\\frac{1}{2}\\end{vmatrix}=-\\frac{1}{2}$，所以，原式$=\\int_{0}^{\\frac{\\pi}{2}}dv\\int_{0}^{\\frac{\\pi}{2}}\\frac{1}{2}(u - v)|J|\\sin udu=\\frac{1}{4}\\int_{0}^{\\frac{\\pi}{2}}dv\\int_{0}^{\\frac{\\pi}{2}}u\\sin udu - \\frac{1}{4}\\int_{0}^{\\frac{\\pi}{2}}vdv\\int_{0}^{\\frac{\\pi}{2}}\\sin udu=\\frac{1}{4}\\times\\frac{\\pi}{2}\\times1 - \\frac{1}{4}\\times\\frac{\\pi^{2}}{8}\\times1=\\frac{\\pi}{8}-\\frac{\\pi^{2}}{32}$。",
+          "explanation": "因为\\(|\\lambda E - A|=\\begin{vmatrix}\\lambda - \\frac{2}{5}&\\frac{3}{10}\\\\-\\frac{2}{5}&\\lambda - \\frac{6}{5}\\end{vmatrix}=(\\lambda - 1)(\\lambda - \\frac{3}{5})\\)，所以\\( A \\)的特征值为\\(\\lambda_{1}=1\\)，\\(\\lambda_{2}=\\frac{3}{5}\\)。 当\\(\\lambda_{1}=1\\)时，有\\((E - A)x = 0\\)，得\\( A \\)对应特征值\\( 1 \\)的一个特征向量\\(\\xi_{1}=\\begin{pmatrix}-1\\\\2\\end{pmatrix}\\)。 当\\(\\lambda_{2}=\\frac{3}{5}\\)时，有\\((\\frac{3}{5}E - A)x = 0\\)，得\\( A \\)对应特征值\\(\\frac{3}{5}\\)的一个特征向量\\(\\xi_{2}=\\begin{pmatrix}-3\\\\2\\end{pmatrix}\\)。 令\\( P = (\\xi_{1},\\xi_{2})=\\begin{pmatrix}-1&-3\\\\2&2\\end{pmatrix}\\)，则\\( P^{-1}AP = \\Lambda=\\begin{pmatrix}1&0\\\\0&\\frac{3}{5}\\end{pmatrix}\\)。故\\( A = P\\Lambda P^{-1}=\\begin{pmatrix}-1&-3\\\\2&2\\end{pmatrix}\\begin{pmatrix}1&0\\\\0&\\frac{3}{5}\\end{pmatrix}\\frac{1}{4}\\begin{pmatrix}2&3\\\\-2&-1\\end{pmatrix}\\)， \\( A^{n}=\\begin{pmatrix}-1&-3\\\\2&2\\end{pmatrix}\\begin{pmatrix}1&0\\\\0&(\\frac{3}{5})^{n}\\end{pmatrix}\\frac{1}{4}\\begin{pmatrix}2&3\\\\-2&-1\\end{pmatrix}=\\frac{1}{4}\\begin{pmatrix}-2 + 6(\\frac{3}{5})^{n}&-3 + 3(\\frac{3}{5})^{n}\\\\4 - 4(\\frac{3}{5})^{n}&6 - 2(\\frac{3}{5})^{n}\\end{pmatrix} \\)。 因此，当\\( n \\to \\infty \\)时，\\( A^{n}=\\frac{1}{4}\\begin{pmatrix}-2&-3\\\\4&6\\end{pmatrix}=\\begin{pmatrix}-\\frac{1}{2}&-\\frac{3}{4}\\\\1&\\frac{3}{2}\\end{pmatrix} \\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9648/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9474/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q6",
           "no": 6,
           "type": "single",
-          "stem": "设$f'(x)$在$[0,1]$上单调增加，$f(0)=f'(0)=0$，则在$[0,1]$上",
+          "stem": "已知\\(\\boldsymbol{\\alpha_1}=\\begin{pmatrix}3\\\\1\\\\-1\\\\3\\end{pmatrix}\\)，\\(\\boldsymbol{\\alpha_2}=\\begin{pmatrix}-5\\\\1\\\\5\\\\-7\\end{pmatrix}\\)，\\(\\boldsymbol{\\alpha_3}=\\begin{pmatrix}1\\\\1\\\\-2\\\\8\\end{pmatrix}\\)，记\\(\\boldsymbol{\\beta_1}=\\boldsymbol{\\alpha_1}\\)，\\(\\boldsymbol{\\beta_2}=\\boldsymbol{\\alpha_2}+k\\boldsymbol{\\beta_1}\\)，\\(\\boldsymbol{\\beta_3}=\\boldsymbol{\\alpha_3}+l_1\\boldsymbol{\\beta_1}+l_2\\boldsymbol{\\beta_2}\\)，若\\(\\boldsymbol{\\beta_1}\\)，\\(\\boldsymbol{\\beta_2}\\)，\\(\\boldsymbol{\\beta_3}\\)两两正交，则\\(l_1\\)，\\(l_2\\)依次为",
           "options": [
             {
               "key": "A",
-              "text": "$\\mathrm{e}^{x}f(x)$单调增加，$\\mathrm{e}^{-x}f(x)$单调减少．"
+              "text": "\\(\\frac{3}{2}\\)，\\(\\frac{1}{2}\\)"
             },
             {
               "key": "B",
-              "text": "$\\mathrm{e}^{x}f(x)$单调增加，$\\mathrm{e}^{-x}f(x)$单调增加．"
+              "text": "\\(-\\frac{3}{2}\\)，\\(\\frac{1}{2}\\)"
             },
             {
               "key": "C",
-              "text": "$\\mathrm{e}^{x}f(x)$单调减少，$\\mathrm{e}^{-x}f(x)$单调增加．"
+              "text": "\\(\\frac{3}{2}\\)，\\(-\\frac{1}{2}\\)"
             },
             {
               "key": "D",
-              "text": "$\\mathrm{e}^{x}f(x)$单调减少，$\\mathrm{e}^{-x}f(x)$单调减少．"
+              "text": "\\(-\\frac{3}{2}\\)，\\(-\\frac{1}{2}\\)"
             }
           ],
           "answer": "B",
-          "explanation": "令\\( h(x) = \\mathrm{e}^{x}f(x) \\)，则\\( h'(x) = \\mathrm{e}^{x}[f(x) + f'(x)] \\)，由于\\( f'(x) \\)在\\([0,1]\\)上单调增加，则\\( f'(x) \\geqslant f'(0) = 0 \\)，故\\( f(x) \\)单调增加，则\\( f(x) \\geqslant f(0) = 0 \\)。故\\( h'(x) \\geqslant 0 \\)，即\\( \\mathrm{e}^{x}f(x) \\)在\\([0,1]\\)上单调增加。 令\\( g(x) = \\frac{f(x)}{\\mathrm{e}^{x}} \\)，则\\( g'(x) = \\frac{f'(x)\\mathrm{e}^{x} - f(x)\\mathrm{e}^{x}}{\\mathrm{e}^{2x}} = \\frac{f'(x) - f(x)}{\\mathrm{e}^{x}} \\)。由拉格朗日中值定理，得\\( f(x) - f(0) = f'(\\xi)x \\)，其中\\( 0 < \\xi < x \\leqslant 1 \\)。 故\\( g'(x) = \\frac{f'(x) - f'(\\xi) \\cdot x}{\\mathrm{e}^{x}} \\)，又\\( f'(x) \\)在\\([0,1]\\)上单调增加，则\\( f'(x) \\geqslant f'(\\xi) \\geqslant 0 \\)，故当\\( 0 \\leqslant x \\leqslant 1 \\)时，\\( xf'(\\xi) \\leqslant xf'(x) \\leqslant f'(x) \\)，所以\\( g'(x) \\geqslant 0 \\)，即\\( \\frac{f(x)}{\\mathrm{e}^{x}} \\)在\\([0,1]\\)上单调增加。",
+          "explanation": "由题可知，\\(\\boldsymbol{\\beta_1}\\)，\\(\\boldsymbol{\\beta_2}\\)，\\(\\boldsymbol{\\beta_3}\\)两两正交，故由施密特正交化，得 \\(\\boldsymbol{\\beta_1}=\\boldsymbol{\\alpha_1}=\\begin{pmatrix}3\\\\1\\\\-1\\\\3\\end{pmatrix}\\)，\\(\\boldsymbol{\\beta_2}=\\boldsymbol{\\alpha_2}-\\frac{[\\boldsymbol{\\alpha_2},\\boldsymbol{\\beta_1}]}{[\\boldsymbol{\\beta_1},\\boldsymbol{\\beta_1}]}\\boldsymbol{\\beta_1}=\\begin{pmatrix}-5\\\\1\\\\5\\\\-7\\end{pmatrix}+2\\begin{pmatrix}3\\\\1\\\\-1\\\\3\\end{pmatrix}=\\begin{pmatrix}1\\\\3\\\\3\\\\-1\\end{pmatrix}\\)， \\(\\boldsymbol{\\beta_3}=\\boldsymbol{\\alpha_3}-\\frac{[\\boldsymbol{\\alpha_3},\\boldsymbol{\\beta_1}]}{[\\boldsymbol{\\beta_1},\\boldsymbol{\\beta_1}]}\\boldsymbol{\\beta_1}-\\frac{[\\boldsymbol{\\alpha_3},\\boldsymbol{\\beta_2}]}{[\\boldsymbol{\\beta_2},\\boldsymbol{\\beta_2}]}\\boldsymbol{\\beta_2}=\\boldsymbol{\\alpha_3}-\\frac{3}{2}\\boldsymbol{\\beta_1}+\\frac{1}{2}\\boldsymbol{\\beta_2}\\)。 即\\(l_1=-\\frac{3}{2}\\)，\\(l_2=\\frac{1}{2}\\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9649/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9475/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q7",
           "no": 7,
           "type": "single",
-          "stem": "设平面\\( D \\)是由\\( y = \\ln x \\)，\\( x = 1 \\)，\\( y = 1 \\)围成的第一象限的有界区域，记\\( D \\)分别绕\\( x \\)轴与绕\\( y = 1 \\)旋转一周所得旋转体体积为\\( V_1 \\)，\\( V_2 \\)，则",
+          "stem": "设\\(f(x_1,x_2,x_3)=\\boldsymbol{x^TAx}\\)，\\(A = A^T\\)，\\(\\boldsymbol{x}=(x_1,x_2,x_3)^T\\)，\\(A\\)的特征值为\\(\\lambda_1\\)，\\(\\lambda_2\\)，\\(\\lambda_3\\)，且\\(\\lambda_1>\\lambda_2>\\lambda_3\\)，对应的特征向量分别为\\(\\boldsymbol{\\xi_1}\\)，\\(\\boldsymbol{\\xi_2}\\)，\\(\\boldsymbol{\\xi_3}\\)。若\\(\\boldsymbol{x^Tx}=1\\)，\\(\\boldsymbol{x^T\\xi_1}=0\\)，则\\(f(x_1,x_2,x_3)\\)的最大值为",
           "options": [
             {
               "key": "A",
-              "text": "\\( V_1 > \\frac{\\pi}{2} > V_2 \\)．"
+              "text": "\\(\\lambda_1\\)"
             },
             {
               "key": "B",
-              "text": "\\( V_2 > \\frac{\\pi}{2} > V_1 \\)．"
+              "text": "\\(\\lambda_2\\)"
             },
             {
               "key": "C",
-              "text": "\\( \\frac{\\pi}{2} > V_1 > V_2 \\)．"
+              "text": "\\(\\lambda_1+\\lambda_2\\)"
             },
             {
               "key": "D",
-              "text": "\\( \\frac{\\pi}{2} > V_2 > V_1 \\)．"
+              "text": "\\(\\lambda_2+\\lambda_3\\)"
             }
           ],
-          "answer": "A",
-          "explanation": "\\( V_1 = \\int_{1}^{\\mathrm{e}} \\pi[1 - (\\ln x)^{2}]dx = \\pi\\left[(e - 1) - x(\\ln x)^{2}\\big|_{1}^{\\mathrm{e}} + 2\\int_{1}^{\\mathrm{e}} \\ln xdx\\right] = \\pi(-1 + 2x\\ln x\\big|_{1}^{\\mathrm{e}} - 2\\int_{1}^{\\mathrm{e}} 1dx) = \\pi \\)。 \\( V_2 = \\int_{1}^{\\mathrm{e}} \\pi(1 - \\ln x)^{2}dx = \\pi\\left[(e - 1) + \\int_{1}^{\\mathrm{e}} (\\ln x)^{2}dx - 2\\int_{1}^{\\mathrm{e}} \\ln xdx\\right] = \\pi(2e - 5) \\)。 因此\\( V_1 > \\frac{\\pi}{2} > V_2 \\)。",
+          "answer": "B",
+          "explanation": "将\\(\\boldsymbol{\\xi_1}\\)，\\(\\boldsymbol{\\xi_2}\\)，\\(\\boldsymbol{\\xi_3}\\)单位化后，写作\\(\\boldsymbol{\\eta_1}\\)，\\(\\boldsymbol{\\eta_2}\\)，\\(\\boldsymbol{\\eta_3}\\)，令\\(Q = (\\boldsymbol{\\eta_1},\\boldsymbol{\\eta_2},\\boldsymbol{\\eta_3})\\)，则\\(Q^{-1}=Q^T\\)。再令\\(\\boldsymbol{x}=Q\\boldsymbol{y}\\)，其中\\(\\boldsymbol{y}=(y_1,y_2,y_3)^T\\)，有 \\(f(x_1,x_2,x_3)=\\boldsymbol{x^TAx}=\\boldsymbol{y^TQ^TAQy}=\\boldsymbol{y^T}\\begin{pmatrix}\\lambda_1&&\\\\&\\lambda_2&\\\\&&\\lambda_3\\end{pmatrix}\\boldsymbol{y}\\)。 由\\(\\boldsymbol{x^Tx}=1\\)，知\\(\\boldsymbol{y^Ty}=1\\)，即\\(y_1^2 + y_2^2 + y_3^2 = 1\\)。又由\\(\\boldsymbol{x^T\\xi_1}=0\\)，知\\(\\boldsymbol{x^T\\eta_1}=0\\)，即\\((Q\\boldsymbol{y})^T\\boldsymbol{\\eta_1}=\\boldsymbol{y^TQ^T\\eta_1}=0\\)， 其中\\(Q^T\\boldsymbol{\\eta_1}=\\begin{pmatrix}\\boldsymbol{\\eta_1^T}\\\\\\boldsymbol{\\eta_2^T}\\\\\\boldsymbol{\\eta_3^T}\\end{pmatrix}\\boldsymbol{\\eta_1}=\\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix}\\)，即\\((y_1,y_2,y_3)\\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix}=0\\)，故\\(y_1 = 0\\)，于是有\\(y_2^2 + y_3^2 = 1\\)。 因此，\\(f(x_1,x_2,x_3)=\\lambda_1y_1^2+\\lambda_2y_2^2+\\lambda_3y_3^2=\\lambda_2y_2^2+\\lambda_3y_3^2\\leqslant\\lambda_2(y_2^2 + y_3^2)=\\lambda_2\\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9650/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9476/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q8",
           "no": 8,
           "type": "single",
-          "stem": "设\\( \\boldsymbol{A} = \\begin{pmatrix} \\frac{2}{5} & -\\frac{3}{10} \\\\ \\frac{2}{5} & \\frac{6}{5} \\end{pmatrix} \\)，当\\( n \\)充分大时，\\( \\boldsymbol{A}^{n} \\)为",
+          "stem": "已知随机变量\\(X_1\\)与\\(X_2\\)相互独立，且\\(X_1\\sim\\begin{pmatrix}0&1\\\\\\frac{1}{2}&\\frac{1}{2}\\end{pmatrix}\\)，\\(X_2\\sim N(0,1)\\)。记\\(X_1\\)，\\(X_2\\)的分布函数分别为\\(F_1(x)\\)和\\(F_2(x)\\)，则\\(X_1 + X_2\\)的分布函数是",
           "options": [
             {
               "key": "A",
-              "text": "\\( \\begin{pmatrix} \\frac{1}{2} & -\\frac{3}{4} \\\\ -1 & \\frac{3}{2} \\end{pmatrix} \\)．"
+              "text": "\\(\\frac{1}{2}F_1(x)+\\frac{1}{2}F_1(x - 1)\\)"
             },
             {
               "key": "B",
-              "text": "\\( \\begin{pmatrix} -\\frac{1}{2} & \\frac{3}{4} \\\\ -1 & \\frac{3}{2} \\end{pmatrix} \\)．"
+              "text": "\\(\\frac{1}{2}F_1(x)+\\frac{1}{2}F_2(x)\\)"
             },
             {
               "key": "C",
-              "text": "\\( \\begin{pmatrix} -\\frac{1}{2} & -\\frac{3}{4} \\\\ 1 & \\frac{3}{2} \\end{pmatrix} \\)．"
+              "text": "\\(\\frac{1}{2}F_2(x)+\\frac{1}{2}F_2(x - 1)\\)"
             },
             {
               "key": "D",
-              "text": "\\( \\begin{pmatrix} \\frac{1}{2} & \\frac{3}{4} \\\\ -1 & -\\frac{3}{2} \\end{pmatrix} \\)．"
+              "text": "\\(\\frac{1}{2}F_1(x)+\\frac{1}{2}F_2(x - 1)\\)"
             }
           ],
           "answer": "C",
-          "explanation": "因为\\( |\\lambda \\boldsymbol{E} - \\boldsymbol{A}| = \\begin{vmatrix} \\lambda - \\frac{2}{5} & \\frac{3}{10} \\\\ -\\frac{2}{5} & \\lambda - \\frac{6}{5} \\end{vmatrix} = (\\lambda - 1)\\left(\\lambda - \\frac{3}{5}\\right) \\)，所以\\( \\boldsymbol{A} \\)的特征值为\\( \\lambda_1 = 1 \\)，\\( \\lambda_2 = \\frac{3}{5} \\)。 当\\( \\lambda_1 = 1 \\)时，有\\( (\\boldsymbol{E} - \\boldsymbol{A})\\boldsymbol{x} = \\boldsymbol{0} \\)，得\\( \\boldsymbol{A} \\)对应于特征值\\( 1 \\)的一个特征向量\\( \\boldsymbol{\\xi}_1 = \\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix} \\)。 当\\( \\lambda_2 = \\frac{3}{5} \\)时，有\\( \\left(\\frac{3}{5}\\boldsymbol{E} - \\boldsymbol{A}\\right)\\boldsymbol{x} = \\boldsymbol{0} \\)，得\\( \\boldsymbol{A} \\)对应于特征值\\( \\frac{3}{5} \\)的一个特征向量\\( \\boldsymbol{\\xi}_2 = \\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix} \\)。 令\\( \\boldsymbol{P} = (\\boldsymbol{\\xi}_1, \\boldsymbol{\\xi}_2) = \\begin{pmatrix} -1 & -3 \\\\ 2 & 2 \\end{pmatrix} \\)，则\\( \\boldsymbol{P}^{-1}\\boldsymbol{A}\\boldsymbol{P} = \\boldsymbol{\\Lambda} = \\begin{pmatrix} 1 & 0 \\\\ 0 & \\frac{3}{5} \\end{pmatrix} \\)。 故\\( \\boldsymbol{A} = \\boldsymbol{P}\\boldsymbol{\\Lambda}\\boldsymbol{P}^{-1} = \\begin{pmatrix} -1 & -3 \\\\ 2 & 2 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & \\frac{3}{5} \\end{pmatrix}\\frac{1}{4}\\begin{pmatrix} 2 & 3 \\\\ -2 & -1 \\end{pmatrix} \\)。 \\( \\boldsymbol{A}^{n} = \\begin{pmatrix} -1 & -3 \\\\ 2 & 2 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & \\left(\\frac{3}{5}\\right)^{n} \\end{pmatrix}\\frac{1}{4}\\begin{pmatrix} 2 & 3 \\\\ -2 & -1 \\end{pmatrix} = \\frac{1}{4}\\begin{pmatrix} -2 + 6\\left(\\frac{3}{5}\\right)^{n} & -3 + 3\\left(\\frac{3}{5}\\right)^{n} \\\\ 4 - 4\\left(\\frac{3}{5}\\right)^{n} & 6 - 2\\left(\\frac{3}{5}\\right)^{n} \\end{pmatrix} \\)。 因此，当\\( n \\to \\infty \\)时，\\( \\boldsymbol{A}^{n} = \\frac{1}{4}\\begin{pmatrix} -2 & -3 \\\\ 4 & 6 \\end{pmatrix} = \\begin{pmatrix} -\\frac{1}{2} & -\\frac{3}{4} \\\\ 1 & \\frac{3}{2} \\end{pmatrix} \\)。",
+          "explanation": "根据分布函数的定义，及\\(X_1\\)与\\(X_2\\)相互独立的条件，有 \\(F(x)=P\\{X_1 + X_2\\leqslant x\\}=P\\{X_1 = 0,X_1 + X_2\\leqslant x\\}+P\\{X_1 = 1,X_1 + X_2\\leqslant x\\}\\) \\(=P\\{X_1 = 0,X_2\\leqslant x\\}+P\\{X_1 = 1,X_2\\leqslant x - 1\\}\\) \\(=P\\{X_1 = 0\\}P\\{X_2\\leqslant x\\}+P\\{X_1 = 1\\}P\\{X_2\\leqslant x - 1\\}\\) \\(=\\frac{1}{2}P\\{X_2\\leqslant x\\}+\\frac{1}{2}P\\{X_2\\leqslant x - 1\\}=\\frac{1}{2}F_2(x)+\\frac{1}{2}F_2(x - 1)\\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9651/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9477/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q9",
           "no": 9,
           "type": "single",
-          "stem": "已知\\( \\boldsymbol{\\alpha}_1 = \\begin{pmatrix} 3 \\\\ 1 \\\\ -1 \\\\ 3 \\end{pmatrix} \\)，\\( \\boldsymbol{\\alpha}_2 = \\begin{pmatrix} -5 \\\\ 1 \\\\ 5 \\\\ -7 \\end{pmatrix} \\)，\\( \\boldsymbol{\\alpha}_3 = \\begin{pmatrix} 1 \\\\ 1 \\\\ -2 \\\\ 8 \\end{pmatrix} \\)，记\\( \\boldsymbol{\\beta}_1 = \\boldsymbol{\\alpha}_1 \\)，\\( \\boldsymbol{\\beta}_2 = \\boldsymbol{\\alpha}_2 + k\\boldsymbol{\\beta}_1 \\)，\\( \\boldsymbol{\\beta}_3 = \\boldsymbol{\\alpha}_3 + l_1\\boldsymbol{\\beta}_1 + l_2\\boldsymbol{\\beta}_2 \\)，若\\( \\boldsymbol{\\beta}_1 \\)，\\( \\boldsymbol{\\beta}_2 \\)，\\( \\boldsymbol{\\beta}_3 \\)两两正交，则\\( l_1 \\)，\\( l_2 \\)依次为",
+          "stem": "设随机变量\\(X\\)，\\(Y\\)独立同分布于参数为\\(1\\)的指数分布，令\\(Z = \\max\\{X,Y\\}\\)，\\(W = \\min\\{X,Y\\}\\)，则\\(Z\\)与\\(W\\)的相关系数为",
           "options": [
             {
               "key": "A",
-              "text": "\\( -\\frac{3}{2} \\)，\\( \\frac{1}{2} \\)．"
+              "text": "\\(\\frac{\\sqrt{2}}{2}\\)"
             },
             {
               "key": "B",
-              "text": "\\( \\frac{3}{2} \\)，\\( \\frac{1}{2} \\)．"
+              "text": "\\(\\frac{\\sqrt{3}}{3}\\)"
             },
             {
               "key": "C",
-              "text": "\\( \\frac{3}{2} \\)，\\( -\\frac{1}{2} \\)．"
+              "text": "\\(\\frac{\\sqrt{5}}{5}\\)"
             },
             {
               "key": "D",
-              "text": "\\( -\\frac{3}{2} \\)，\\( -\\frac{1}{2} \\)．"
+              "text": "\\(1\\)"
             }
           ],
-          "answer": "A",
-          "explanation": "由题可知，\\( \\boldsymbol{\\beta}_1 \\)，\\( \\boldsymbol{\\beta}_2 \\)，\\( \\boldsymbol{\\beta}_3 \\)两两正交，故由施密特正交化得 \\( \\boldsymbol{\\beta}_1 = \\boldsymbol{\\alpha}_1 = \\begin{pmatrix} 3 \\\\ 1 \\\\ -1 \\\\ 3 \\end{pmatrix} \\)，\\( \\boldsymbol{\\beta}_2 = \\boldsymbol{\\alpha}_2 - \\frac{[\\boldsymbol{\\alpha}_2, \\boldsymbol{\\beta}_1]}{[\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1]}\\boldsymbol{\\beta}_1 = \\begin{pmatrix} -5 \\\\ 1 \\\\ 5 \\\\ -7 \\end{pmatrix} + 2\\begin{pmatrix} 3 \\\\ 1 \\\\ -1 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\\\ 3 \\\\ -1 \\end{pmatrix} \\)， \\( \\boldsymbol{\\beta}_3 = \\boldsymbol{\\alpha}_3 - \\frac{[\\boldsymbol{\\alpha}_3, \\boldsymbol{\\beta}_1]}{[\\boldsymbol{\\beta}_1, \\boldsymbol{\\beta}_1]}\\boldsymbol{\\beta}_1 - \\frac{[\\boldsymbol{\\alpha}_3, \\boldsymbol{\\beta}_2]}{[\\boldsymbol{\\beta}_2, \\boldsymbol{\\beta}_2]}\\boldsymbol{\\beta}_2 = \\boldsymbol{\\alpha}_3 - \\frac{3}{2}\\boldsymbol{\\beta}_1 + \\frac{1}{2}\\boldsymbol{\\beta}_2 \\)。 即\\( l_1 = -\\frac{3}{2} \\)，\\( l_2 = \\frac{1}{2} \\)。",
+          "answer": "C",
+          "explanation": "由题设可知，\\(Z\\)的概率密度为 \\(f_Z(z)=2F_X(z)f_X(z)=\\begin{cases}2(1 - e^{-z})e^{-z},&z>0\\\\0,&\\text{其他}\\end{cases}\\) 故 \\(E(Z)=\\int_{0}^{+\\infty}z\\cdot2(1 - e^{-z})e^{-z}dz=\\frac{3}{2}\\)， \\(E(Z^2)=\\int_{0}^{+\\infty}z^2\\cdot2(1 - e^{-z})e^{-z}dz=\\frac{7}{2}\\)， 因此\\(D(Z)=E(Z^2)-[E(Z)]^2=\\frac{5}{4}\\)。 \\(W\\)的概率密度为 \\(f_W(w)=2[1 - F_X(w)]f_X(w)=\\begin{cases}2e^{-2w},&w>0\\\\0,&\\text{其他}\\end{cases}\\) 故\\(W\\sim E(2)\\)，则\\(D(W)=\\frac{1}{4}\\)。 又\\(Z + W = X + Y\\)且\\(X\\)与\\(Y\\)相互独立，于是 \\(D(Z)+D(W)+2\\text{Cov}(Z,W)=D(X)+D(Y)\\)， 代入可得\\(\\text{Cov}(Z,W)=\\frac{1}{4}\\)，进而可得\\(\\rho_{ZW}=\\frac{\\text{Cov}(Z,W)}{\\sqrt{D(Z)}\\cdot\\sqrt{D(W)}}=\\frac{\\sqrt{5}}{5}\\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9652/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9478/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q10",
           "no": 10,
           "type": "single",
-          "stem": "设\\( f(x_1, x_2, x_3) = \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x} \\)，\\( \\boldsymbol{A} = \\boldsymbol{A}^{\\mathrm{T}} \\)，\\( \\boldsymbol{x} = (x_1, x_2, x_3)^{\\mathrm{T}} \\)，\\( \\boldsymbol{A} \\)的特征值为\\( \\lambda_1 \\)，\\( \\lambda_2 \\)，\\( \\lambda_3 \\)，且\\( \\lambda_1 > \\lambda_2 > \\lambda_3 \\)，对应的特征向量分别为\\( \\boldsymbol{\\xi}_1 \\)，\\( \\boldsymbol{\\xi}_2 \\)，\\( \\boldsymbol{\\xi}_3 \\)。若\\( \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{x} = 1 \\)，\\( \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\xi}_1 = 0 \\)，则\\( f(x_1, x_2, x_3) \\)的最大值为",
+          "stem": "设总体\\(X\\sim N(0,\\sigma^2)\\)，\\(X_1\\)，\\(X_2\\)，\\(\\cdots\\)，\\(X_n\\)为来自总体的简单随机样本，令\\(Y_i = X_i - \\overline{X}\\)，\\(i = 1,2,\\cdots,n\\)。若\\(c(Y_1 + Y_n)^2\\)为\\(\\sigma^2\\)的无偏估计量，则\\(c =\\)",
           "options": [
             {
               "key": "A",
-              "text": "\\( \\lambda_1 \\)．"
+              "text": "\\(\\frac{n}{n - 1}\\)"
             },
             {
               "key": "B",
-              "text": "\\( \\lambda_2 \\)．"
+              "text": "\\(\\frac{n}{2n - 2}\\)"
             },
             {
               "key": "C",
-              "text": "\\( \\lambda_1 + \\lambda_2 \\)．"
+              "text": "\\(\\frac{n}{n - 2}\\)"
             },
             {
               "key": "D",
-              "text": "\\( \\lambda_2 + \\lambda_3 \\)．"
+              "text": "\\(\\frac{n}{2n - 4}\\)"
             }
           ],
-          "answer": "B",
-          "explanation": "将\\( \\boldsymbol{\\xi}_1 \\)，\\( \\boldsymbol{\\xi}_2 \\)，\\( \\boldsymbol{\\xi}_3 \\)单位化后，写作\\( \\boldsymbol{\\eta}_1 \\)，\\( \\boldsymbol{\\eta}_2 \\)，\\( \\boldsymbol{\\eta}_3 \\)，令\\( \\boldsymbol{Q} = (\\boldsymbol{\\eta}_1, \\boldsymbol{\\eta}_2, \\boldsymbol{\\eta}_3) \\)，则\\( \\boldsymbol{Q}^{-1} = \\boldsymbol{Q}^{\\mathrm{T}} \\)。再令\\( \\boldsymbol{x} = \\boldsymbol{Q}\\boldsymbol{y} \\)，其中\\( \\boldsymbol{y} = (y_1, y_2, y_3)^{\\mathrm{T}} \\)，有 \\( f(x_1, x_2, x_3) = \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x} = \\boldsymbol{y}^{\\mathrm{T}}\\boldsymbol{Q}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{Q}\\boldsymbol{y} = \\boldsymbol{y}^{\\mathrm{T}}\\begin{pmatrix} \\lambda_1 & & \\\\ & \\lambda_2 & \\\\ & & \\lambda_3 \\end{pmatrix}\\boldsymbol{y} \\)。 由\\( \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{x} = 1 \\)，知\\( \\boldsymbol{y}^{\\mathrm{T}}\\boldsymbol{y} = 1 \\)，即\\( y_1^2 + y_2^2 + y_3^2 = 1 \\)。又由\\( \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\xi}_1 = 0 \\)，知\\( \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{\\eta}_1 = 0 \\)，即\\( (\\boldsymbol{Q}\\boldsymbol{y})^{\\mathrm{T}}\\boldsymbol{\\eta}_1 = \\boldsymbol{y}^{\\mathrm{T}}\\boldsymbol{Q}^{\\mathrm{T}}\\boldsymbol{\\eta}_1 = 0 \\)， 其中\\( \\boldsymbol{Q}^{\\mathrm{T}}\\boldsymbol{\\eta}_1 = \\begin{pmatrix} \\boldsymbol{\\eta}_1^{\\mathrm{T}} \\\\ \\boldsymbol{\\eta}_2^{\\mathrm{T}} \\\\ \\boldsymbol{\\eta}_3^{\\mathrm{T}} \\end{pmatrix}\\boldsymbol{\\eta}_1 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\)，即\\( (y_1, y_2, y_3)\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} = 0 \\)，故\\( y_1 = 0 \\)，于是有\\( y_2^2 + y_3^2 = 1 \\)。 因此，\\( f(x_1, x_2, x_3) = \\lambda_1 y_1^2 + \\lambda_2 y_2^2 + \\lambda_3 y_3^2 = \\lambda_2 y_2^2 + \\lambda_3 y_3^2 \\leqslant \\lambda_2(y_2^2 + y_3^2) = \\lambda_2 \\)。 【注】 线性代数中\\( f = \\boldsymbol{x}^{\\mathrm{T}}\\boldsymbol{A}\\boldsymbol{x} \\)的最大值不一定是最大特征值，要看条件。",
+          "answer": "D",
+          "explanation": "\\(X_i\\sim N(0,\\sigma^2)(i = 1,2,\\cdots,n)\\)，\\(\\overline{X}\\sim N(0,\\frac{\\sigma^2}{n})\\)，则 \\(D(Y_i)=D(X_i - \\overline{X})=D(X_i)+D(\\overline{X})-2\\text{Cov}(X_i,\\overline{X})\\)， 其中\\(\\text{Cov}(X_i,\\overline{X})=\\text{Cov}\\left[X_i,\\frac{1}{n}(X_1 + X_2 + \\cdots + X_n)\\right]=\\frac{1}{n}\\text{Cov}(X_i,X_i)\\) \\(=\\frac{1}{n}D(X_i)=\\frac{\\sigma^2}{n}\\)， 故\\(D(Y_i)=\\sigma^2+\\frac{\\sigma^2}{n}-\\frac{2\\sigma^2}{n}=\\sigma^2-\\frac{\\sigma^2}{n}=\\left(1 - \\frac{1}{n}\\right)\\sigma^2\\)。 \\(E[(Y_1 + Y_n)^2]=D(Y_1 + Y_n)+[E(Y_1 + Y_n)]^2=D(Y_1 + Y_n)\\) \\(=D(Y_1)+D(Y_n)+2\\text{Cov}(Y_1,Y_n)\\)， 其中 \\(\\text{Cov}(Y_1,Y_n)=\\text{Cov}(X_1 - \\overline{X},X_n - \\overline{X})\\) \\(=\\text{Cov}(X_1,X_n)-\\text{Cov}(X_1,\\overline{X})-\\text{Cov}(\\overline{X},X_n)+D(\\overline{X})\\) \\(=0 - \\frac{\\sigma^2}{n} - \\frac{\\sigma^2}{n} + \\frac{\\sigma^2}{n}=-\\frac{\\sigma^2}{n}\\)， 故\\(E[(Y_1 + Y_n)^2]=2\\left(1 - \\frac{1}{n}\\right)\\sigma^2+2\\left(-\\frac{\\sigma^2}{n}\\right)=\\left(2 - \\frac{4}{n}\\right)\\sigma^2\\)。于是\\(c = \\frac{n}{2n - 4}\\)。",
           "score": 1,
           "topics": [],
           "images": [],
           "_answerFrom": "correct-answer",
-          "sourceUrl": "https://noobdream.com/Practice/article/9653/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9479/"
         }
       ]
     },
@@ -356,71 +356,71 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q12",
           "no": 12,
           "type": "blank",
-          "stem": "（填空题）已知$∫_{a}^{2\\ln 2}\\frac {dx}{\\sqrt {e^{x}-1}}=\\frac {π}{6}$，则$a=$______.",
+          "stem": "（填空题）设函数\\(f(x)=\\begin{cases} 1, & |x| \\leq \\frac{\\pi}{2}, \\\\ \\cos^{4}x, & \\frac{\\pi}{2} < x < \\pi, \\end{cases}\\)若\\(\\int_{k}^{\\pi}f(x)dx = \\frac{7}{16}\\pi\\)，则\\(k = \\)______。",
           "options": [],
-          "answer": "令$\\sqrt {e^{x}-1}=t$，则$x=\\ln (t^{2}+1)$，$dx=\\frac {2t}{t^{2}+1}dt$，于是$∫_{a}^{2\\ln 2}\\frac {dx}{\\sqrt {e^{x}-1}}=∫_{\\sqrt {e^{a}-1}}^{\\sqrt {3}}\\frac {1}{t}\\cdot \\frac {2t}{t^{2}+1}dt=2\\arctan t|_{\\sqrt {e^{a}-1}}^{\\sqrt {3}}=2\\left(\\frac {π}{3}-\\arctan \\sqrt {e^{a}-1}\\right)$，又$∫_{a}^{2\\ln 2}\\frac {dx}{\\sqrt {e^{x}-1}}=\\frac {π}{6}$，所以$\\arctan \\sqrt {e^{a}-1}=\\frac {π}{4}$，解得$a=\\ln 2$",
+          "answer": "由题设知，当$x∈[-\\frac {π}{2},π)$时，$f(x)>0$，从而$I(k)=∫_{k}^{π}f(x)dx>0$，$k∈[-\\frac {π}{2},π)$。又$∫_{\\frac {π}{2}}^{π}\\cos^{4}xdx\\xlongequal {令x=π-t}∫_{\\frac {π}{2}}^{0}(-\\cos t)^{4}dt=∫_{0}^{\\frac {π}{2}}\\cos^{4}tdt$ $=\\frac {3}{4}×\\frac {1}{2}×\\frac {π}{2}=\\frac {3}{16}π<\\frac {7}{16}π$，故$k∈[-\\frac {π}{2},\\frac {π}{2})$。因此有$∫_{k}^{π}f(x)dx=∫_{k}^{\\frac {π}{2}}1dx+∫_{\\frac {π}{2}}^{π}\\cos^{4}xdx=\\frac {π}{2}-k+\\frac {3}{16}π=\\frac {11}{16}π-k=\\frac {7}{16}π$，故$k=\\frac {π}{4}$。答案：$\\frac {π}{4}$",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9654/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9481/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q13",
           "no": 13,
           "type": "blank",
-          "stem": "（填空题）设$f(x)=∫_{0}^{x-1}\\ln (x+t+1)dt$，则$f^{(5)}(1)=$______.",
+          "stem": "（填空题）函数$f(x,y)=3xe^{y}-x^{3}-e^{3y}$的极大值点为______.",
           "options": [],
-          "answer": "$∫_{0}^{x-1}\\ln (x+t+1)dt\\xlongequal{x+t+1=u}∫_{x+1}^{2x}\\ln udu$，故$f'(x)=2\\ln (2x)-\\ln (x+1)$，$f''(x)=\\frac {2}{x}-\\frac {1}{1+x}$，$f^{(n+2)}(x)=(-1)^{n}\\cdot n!\\cdot 2\\cdot \\frac {1}{x^{n+1}}-(-1)^{n}\\cdot n!\\cdot \\frac {1}{(x+1)^{n+1}}$，故$f^{(5)}(1)=(-1)^{3}\\cdot 3!\\cdot 2-(-1)^{3}\\cdot 3!\\cdot \\frac {1}{2^{4}}=-12+\\frac {3}{8}=-\\frac {93}{8}$",
+          "answer": "由题可知$f(x,y)=3xe^{y}-x^{3}-e^{3y}$，令$f'_{x}(x,y)=3e^{y}-3x^{2}=0$，$f'_{y}(x,y)=3xe^{y}-3e^{3y}=0$。故$3x\\cdot x^{2}-3\\cdot x^{6}=3x^{3}(1 - x^{3})=0$，解得$x_{1}=1$，$x_{2}=0$（舍去），则驻点为$(1,0)$。又$A=f''_{xx}(x,y)|_{(1,0)}=-6x|_{(1,0)}=-6$，$B=f''_{xy}(x,y)|_{(1,0)}=3e^{y}|_{(1,0)}=3$，$C=f''_{yy}(x,y)|_{(1,0)}=(3xe^{y}-9e^{3y})|_{(1,0)}=-6$，则$\\Delta = AC - B^{2}=27>0$，$A<0$，故$(1,0)$为极大值点。答案：$(1,0)$",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9655/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9482/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q14",
           "no": 14,
           "type": "blank",
-          "stem": "（填空题）已知过点$(a,1)(a>0)$的单调递减曲线$y=f(x)$，其上任意一点的切线在$x$轴上的截距与该点横坐标的距离恒为$a$，则$f(x)=$______.",
+          "stem": "（填空题）曲面$z=e^{x^{2}-y^{2}}+2x^{2}$与曲面$z=e^{x^{2}-y^{2}}-y^{2}+1$所围成的封闭区域的体积为______.",
           "options": [],
-          "answer": "易知$y = f(x)$上任一点$(x_{0},f(x_{0}))$的切线在$x$轴上的截距为$x_{0}-\\frac {f(x_{0})}{f'(x_{0})}$，则$a=\\left|x_{0}-x_{0}+\\frac {f(x_{0})}{f'(x_{0})}\\right|=\\left|\\frac {f(x_{0})}{f'(x_{0})}\\right|$，于是$\\left|\\frac {f'(x)}{f(x)}\\right|=\\frac {1}{a}$，即$[\\ln |f(x)|]'=\\pm \\frac {1}{a}$，得$\\ln |f(x)|=\\pm \\frac {x}{a}+C$。由$f(a)=1$，有$\\ln |f(a)|=\\pm 1 + C = 0$，得$C=\\mp 1$，故$f(x)=e^{\\frac {x}{a}-1}$或$f(x)=e^{-\\frac {x}{a}+1}$。由$f(x)$单调递减，$a>0$，得$f(x)=e^{-\\frac {x}{a}+1}$",
+          "answer": "令$e^{x^{2}-y^{2}}+2x^{2}=e^{x^{2}-y^{2}}-y^{2}+1$，解得$2x^{2}+y^{2}=1$。设平面区域$D=\\{(x,y)|2x^{2}+y^{2}≤1\\}$，则所求体积$V=∫_{D}[(e^{x^{2}-y^{2}}-y^{2}+1)-(e^{x^{2}-y^{2}}+2x^{2})]dxdy=∫_{D}(1 - 2x^{2}-y^{2})dxdy$\n$\\xlongequal {x=\\frac {r}{\\sqrt {2}}\\cosθ,y=r\\sinθ}∫_{0}^{2π}dθ∫_{0}^{1}\\frac {(1 - r^{2})}{\\sqrt {2}}rdr=\\sqrt {2}π(\\frac {1}{2}r^{2}-\\frac {1}{4}r^{4})|_{0}^{1}$\n$=\\sqrt {2}π×\\frac {1}{4}=\\frac {\\sqrt {2}π}{4}$。答案：$\\frac {\\sqrt {2}π}{4}$",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9656/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9483/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q15",
           "no": 15,
           "type": "blank",
-          "stem": "（填空题）函数$f(x,y)=3xe^{y}-x^{3}-e^{3y}$的极大值点为______.",
+          "stem": "（填空题）已知$A,B$均为4阶矩阵，$r(AA^{T})=3$，$|AB|=\\begin{vmatrix} 2&a&0&-a\\\\ -a&2&-5&b\\\\ b&0&b&-2\\\\ 0&-2&4&0\\end{vmatrix}$，且$\\begin{vmatrix} 2&a&-a\\\\ -a&2&b\\\\ b&0&-2\\end{vmatrix} =5$，则$\\begin{vmatrix} -a&-5&b\\\\ 2&0&-a\\\\ b&b&-2\\end{vmatrix} =$______.",
           "options": [],
-          "answer": "由题可知$f(x,y)=3xe^{y}-x^{3}-e^{3y}$，令$f'_{x}(x,y)=3e^{y}-3x^{2}=0$，$f'_{y}(x,y)=3xe^{y}-3e^{3y}=0$。故$3x\\cdot x^{2}-3\\cdot x^{6}=3x^{3}(1 - x^{3})=0$，解得$x_{1}=1$，$x_{2}=0$（舍去），则$\\begin{cases}x = 1\\\\y = 0\\end{cases}$。又$A = f''_{xx}(x,y)\\big|_{(1,0)}=-6x\\big|_{(1,0)}=-6$，$B = f''_{xy}(x,y)\\big|_{(1,0)}=3e^{y}\\big|_{(1,0)}=3$，$C = f''_{yy}(x,y)\\big|_{(1,0)}=(3xe^{y}-9e^{3y})\\big|_{(1,0)}=-6$，则$\\Delta = AC - B^{2}=27>0$，$A<0$，故$(1,0)$为极大值点",
+          "answer": "由$r(AA^{T})=3$，知$|A|=0$，$|AB|=|A||B|=0$，即$|AB|\\xlongequal {将第4行展开}(-2)\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix} +(-4)\\begin{vmatrix} 2&a&-a\\\\ -a&2&b\\\\ b&0&-2\\end{vmatrix}$\n$=(-2)\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix} +(-4)×5=0$，得$\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix} = - 10$，于是$\\begin{vmatrix} -a&-5&b\\\\ 2&0&-a\\\\ b&b&-2\\end{vmatrix} = 10$。答案：$10$",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9657/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9484/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q16",
           "no": 16,
           "type": "blank",
-          "stem": "（填空题）已知$\\boldsymbol{A},\\boldsymbol{B}$均为4阶矩阵，$r(\\boldsymbol{AA}^{\\mathrm{T}})=3$，$|\\boldsymbol{AB}|=\\begin{vmatrix} 2&a&0&-a\\\\ -a&2&-5&b\\\\ b&0&b&-2\\\\ 0&-2&4&0\\end{vmatrix}$，且$\\begin{vmatrix} 2&a&-a\\\\ -a&2&b\\\\ b&0&-2\\end{vmatrix}=5$，则$\\begin{vmatrix} -a&-5&b\\\\ 2&0&-a\\\\ b&b&-2\\end{vmatrix}=$______.",
+          "stem": "（填空题）设$X_{1},X_{2},\\cdots,X_{n}$是来自均匀分布$U(0,1)$的简单随机样本，令$Y_{n}=\\sqrt [n]{\\prod\\limits _{i=1}^{n}X_{i}}$，则由辛钦大数定律，$Y_{n}$依概率收敛于______.",
           "options": [],
-          "answer": "由$r(\\boldsymbol{AA}^{\\mathrm{T}})=3$，知$|\\boldsymbol{A}|=0$，$|\\boldsymbol{AB}|=|\\boldsymbol{A}||\\boldsymbol{B}|=0$，即$|\\boldsymbol{AB}|=(-2)\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix}+(-4)\\begin{vmatrix} 2&a&-a\\\\ -a&2&b\\\\ b&0&-2\\end{vmatrix}=(-2)\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix}+(-4)\\cdot 5 = 0$，得$\\begin{vmatrix} 2&0&-a\\\\ -a&-5&b\\\\ b&b&-2\\end{vmatrix}=-10$，于是$\\begin{vmatrix} -a&-5&b\\\\ 2&0&-a\\\\ b&b&-2\\end{vmatrix}=10$",
+          "answer": "$\\ln Y_{n}=\\frac {1}{n}\\sum\\limits _{i=1}^{n}\\ln X_{i}$，$E(\\ln X_{i})=∫_{0}^{1}\\ln xdx=x\\ln x|_{0}^{1}-∫_{0}^{1}dx=-1$。故$\\ln Y_{n}\\xrightarrow {P}E(\\ln Y_{n})=\\frac {1}{n}E(\\sum\\limits _{i=1}^{n}\\ln X_{i})=\\frac {1}{n}\\sum\\limits _{i=1}^{n}(-1)=-1$，于是$Y_{n}\\xrightarrow {P}\\frac {1}{e}$。答案：$\\frac {1}{e}$",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9658/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9485/"
         }
       ]
     },
@@ -432,89 +432,94 @@
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q17",
           "no": 17,
           "type": "essay",
-          "stem": "（本题满分10分）求曲线\\(x^{2}+xy+y^{2}+2x - 2y - 12 = 0\\)上的点到原点距离的最大值和最小值.",
+          "stem": "（本题满分10分）求曲线\\(x^{2}+xy + y^{2}+2x - 2y - 12 = 0\\)上的点到原点距离的最大值和最小值.",
           "options": [],
-          "answer": "题目相当于求点\\((x,y)\\)到原点距离的平方\\(d^{2}=x^{2}+y^{2}\\)的最值.\n设\\(F(x,y,\\lambda)=x^{2}+y^{2}+\\lambda(x^{2}+xy+y^{2}+2x - 2y - 12)\\)，\n令\\(\\begin{cases}F'_{x}=2x+\\lambda(2x + y + 2)=0,\\\\F'_{y}=2y+\\lambda(x + 2y - 2)=0,\\\\F'_{\\lambda}=x^{2}+xy+y^{2}+2x - 2y - 12 = 0.\\end{cases}\\)\n解得\\(\\begin{cases}x = - 6,\\\\y = 6\\end{cases}\\)或\\(\\begin{cases}x = 2,\\\\y = - 2\\end{cases}\\)或\\(\\begin{cases}x=\\frac{3\\pm\\sqrt{21}}{3},\\\\y=\\frac{- 3\\pm\\sqrt{21}}{3}\\end{cases}\\)\n从而距离\\(d = \\sqrt{x^{2}+y^{2}}\\)的最大、最小值一定落在以上点当中.\n逐一计算可得，\\(d_{\\max}=6\\sqrt{2},d_{\\min}=\\frac{2\\sqrt{15}}{3}\\).",
-          "explanation": "",
+          "answer": "",
+          "explanation": "题目相当于求点\\((x,y)\\)到原点距离的平方\\(d^{2}=x^{2}+y^{2}\\)的最值.\n设\\(F(x,y,\\lambda)=x^{2}+y^{2}+\\lambda(x^{2}+xy + y^{2}+2x - 2y - 12)\\)，令\n\\(\\begin{cases}F_{x}' = 2x+\\lambda(2x + y + 2)=0,\\\\F_{y}' = 2y+\\lambda(x + 2y - 2)=0,\\\\F_{\\lambda}' = x^{2}+xy + y^{2}+2x - 2y - 12 = 0.\\end{cases}\\)\n解得\\(\\begin{cases}x = - 6,\\\\y = 6\\end{cases}\\)或\\(\\begin{cases}x = 2,\\\\y = - 2\\end{cases}\\)或\\(\\begin{cases}x=\\frac{3\\pm\\sqrt{21}}{3},\\\\y=\\frac{-3\\pm\\sqrt{21}}{3}\\end{cases}\\)\n从而距离\\(d = \\sqrt{x^{2}+y^{2}}\\)的最大、最小值一定落在以上点当中.\n逐一计算可得，\n\\(d_{\\max}=6\\sqrt{2},d_{\\min}=\\frac{2\\sqrt{15}}{3}\\).",
           "score": 0,
           "topics": [],
           "images": [],
-          "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9659/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9486/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q18",
           "no": 18,
           "type": "essay",
-          "stem": "（本题满分12分）求定积分\\(\\int_{1}^{2}\\frac{dx}{x\\sqrt{3x^{2}-2x - 1}}\\).",
+          "stem": "（1）\\(a_{n}\\gt b_{n}\\)，\\(n = 1,2,\\cdots\\)；\n\n（2）\\(\\sum_{n = 1}^{\\infty}(b_{n}-a_{n})\\)收敛.",
           "options": [],
-          "answer": "首先，注意到当\\(x\\in(1,2)\\)时，\n\\(x\\sqrt{3x^{2}-2x - 1}=x\\sqrt{(3x + 1)(x - 1)}=x(x - 1)\\sqrt{\\frac{3x + 1}{x - 1}}\\).\n令\\(t = \\sqrt{\\frac{3x + 1}{x - 1}}\\)，有\\(\\frac{3x + 1}{x - 1}=t^{2}\\)，解得\\(x=\\frac{t^{2}+1}{t^{2}-3}=1+\\frac{4}{t^{2}-3}\\)，则\\(dx = -\\frac{8t}{(t^{2}-3)^{2}}\\).\n于是\\(\\int_{1}^{2}\\frac{dx}{x\\sqrt{3x^{2}-2x - 1}}=\\int_{1}^{2}\\frac{1}{x(x - 1)\\sqrt{\\frac{3x + 1}{x - 1}}}dx\\)\n\\(=\\int_{+\\infty}^{\\sqrt{7}}\\frac{1}{\\frac{t^{2}+1}{t^{2}-3}\\cdot\\frac{4}{t^{2}-3}\\cdot t}\\cdot\\frac{-8t}{(t^{2}-3)^{2}}dt\\)\n\\(=\\int_{\\sqrt{7}}^{+\\infty}\\frac{2}{1 + t^{2}}dt = 2\\arctan t|_{\\sqrt{7}}^{+\\infty}=\\pi - 2\\arctan\\sqrt{7}\\).",
+          "answer": "【证】（1）令\\(f(x)=\\text{e}^{x}-\\text{e}^{-x}\\)，在\\([0,a_{n}](0\\lt a_{n}\\lt1)\\)上用拉格朗日中值定理，有 \\(\\text{e}^{a_{n}}-\\text{e}^{-a_{n}}-0=(\\text{e}^{\\zeta_{n}}+\\text{e}^{-\\zeta_{n}})\\cdot a_{n},0\\lt\\zeta_{n}\\lt a_{n}\\)， 又当\\(0\\lt x\\lt1\\)时，\\(f''(x)=\\text{e}^{x}-\\text{e}^{-x}\\gt0\\)，则\\(f'(x)=\\text{e}^{x}+\\text{e}^{-x}\\)在\\((0,1)\\)上单调递增. 由\\(\\text{e}^{a_{n}}-\\text{e}^{-a_{n}}=(\\text{e}^{b_{n}}+\\text{e}^{-b_{n}})a_{n}\\)知，\\(\\zeta_{n}=b_{n}\\)，即 \\(0\\lt b_{n}\\lt a_{n},n = 1,2,\\cdots\\).\n\n（2）由于\\(\\text{e}^{x}-\\text{e}^{-x}=(\\text{e}^{\\frac{x}{2}}-\\text{e}^{-\\frac{x}{2}})(\\text{e}^{\\frac{x}{2}}+\\text{e}^{-\\frac{x}{2}}),0\\lt x\\lt1\\)， \\(\\text{e}^{x}+\\text{e}^{-x}\\gt2\\)， 因此\\(\\int_{0}^{x}(\\text{e}^{t}+\\text{e}^{-t})\\text{d}t\\gt\\int_{0}^{x}2\\text{d}t = 2x\\)， 即\\(\\text{e}^{x}-\\text{e}^{-x}\\gt2x,\\text{e}^{\\frac{x}{2}}-\\text{e}^{-\\frac{x}{2}}\\gt x\\)， 得\\(\\text{e}^{x}-\\text{e}^{-x}\\gt x(\\text{e}^{\\frac{x}{2}}+\\text{e}^{-\\frac{x}{2}})\\). 又\\(\\text{e}^{a_{n}}-\\text{e}^{-a_{n}}=a_{n}(\\text{e}^{b_{n}}+\\text{e}^{-b_{n}})\\gt a_{n}(\\text{e}^{\\frac{a_{n}}{2}}+\\text{e}^{-\\frac{a_{n}}{2}})\\)，有\\(\\frac{a_{n}}{2}\\lt b_{n},0\\lt b_{n}\\lt a_{n}\\lt2b_{n}\\)，于是 \\(0\\lt a_{n}-b_{n}\\lt b_{n}\\)，又\\(\\sum_{n = 1}^{\\infty}b_{n}\\)收敛，故\\(\\sum_{n = 1}^{\\infty}(b_{n}-a_{n})\\)收敛.",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "sourceUrl": "https://noobdream.com/Practice/article/9660/"
+          "material": "（本题满分12分）设数列\\(\\{a_{n}\\}\\)，\\(\\{b_{n}\\}\\)满足\\(\\text{e}^{a_{n}}-\\text{e}^{-a_{n}}=a_{n}(\\text{e}^{b_{n}}+\\text{e}^{-b_{n}})\\)，\\(0\\lt a_{n}\\lt1\\)，\\(0\\lt b_{n}\\lt1\\)，\\(n = 1,2,\\cdots\\)，且\\(\\sum_{n = 1}^{\\infty}b_{n}\\)收敛. 证明：",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9487/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q19",
           "no": 19,
           "type": "essay",
-          "stem": "（1）证明\\(\\lim\\limits_{x\\rightarrow+\\infty}f(x)\\)存在；\n\n（2）判断\\(\\int_{0}^{+\\infty}xf'(x)dx\\)是否收敛？说明理由.",
+          "stem": "（1）证明\\(\\lim_{x\\rightarrow+\\infty}f(x)\\)存在；\n\n（2）判断\\(\\int_{0}^{+\\infty}xf'(x)\\text{d}x\\)是否收敛？说明理由.",
           "options": [],
-          "answer": "（1）反证法. 若存在\\(x_{0}>0\\)，使得\\(f'(x_{0})>0\\)，不妨记\\(f'(x_{0})=a>0\\)，由\\(f''(x)\\geq0\\)，有\\(f'(x)\\)单调增加，则当\\(x\\geq x_{0}\\)时，\\(f'(x)\\geq f'(x_{0})=a>0\\)， 故\\(f(x)=f(x_{0})+\\int_{x_{0}}^{x}f'(t)dt\\geq f(x_{0})+a(x - x_{0})\\)， 当\\(x\\rightarrow+\\infty\\)时，\\(f(x)\\rightarrow+\\infty\\)，则函数\\(f(x)\\)在\\([0,+\\infty)\\)上无界，与题设矛盾，故\\(f'(x)\\leq0(x>0)\\)，所以\\(f(x)\\)单调减少且有界，故\\(\\lim\\limits_{x\\rightarrow+\\infty}f(x)\\)存在. （2）\\(\\int_{0}^{+\\infty}xf'(x)dx=\\int_{0}^{+\\infty}xd[f(x)]=\\lim\\limits_{x\\rightarrow+\\infty}xf(x)-\\int_{0}^{+\\infty}f(x)dx\\)， 取\\(f(x)=\\frac{1}{x + 1}\\)，则\\(\\lim\\limits_{x\\rightarrow+\\infty}xf(x)=1\\)，\\(\\int_{0}^{+\\infty}\\frac{dx}{x + 1}=+\\infty\\)，从而\\(\\int_{0}^{+\\infty}xf'(x)dx\\)发散； 取\\(f(x)=\\frac{1}{(x + 1)^{2}}\\)，则\\(\\lim\\limits_{x\\rightarrow+\\infty}xf(x)=0\\)，\\(\\int_{0}^{+\\infty}\\frac{dx}{(x + 1)^{2}}=1\\)，从而\\(\\int_{0}^{+\\infty}xf'(x)dx\\)收敛. 综上，\\(\\int_{0}^{+\\infty}xf'(x)dx\\)的敛散性不确定.",
-          "explanation": "",
+          "answer": "（1）【证】反证法. 若存在\\(x_{0}\\gt0\\)，使得\\(f'(x_{0})\\gt0\\)，不妨记\\(f'(x_{0})=a\\gt0\\)，由\\(f''(x)\\geq0\\)，有\\(f'(x)\\)单调增加，则当\\(x\\geq x_{0}\\)时， \\(f'(x)\\geq f'(x_{0})=a\\gt0\\)， 故 \\(f(x)=f(x_{0})+\\int_{x_{0}}^{x}f'(t)\\text{d}t\\geq f(x_{0})+a(x - x_{0})\\)， 当\\(x\\rightarrow+\\infty\\)时，\\(f(x)\\rightarrow+\\infty\\)，则函数\\(f(x)\\)在\\([0,+\\infty)\\)上无界，与题设矛盾，故\\(f'(x)\\leq0(x\\gt0)\\)，所以\\(f(x)\\)单调减少且有界，故\\(\\lim_{x\\rightarrow+\\infty}f(x)\\)存在.\n\n（2）",
+          "explanation": "\\(\\int_{0}^{+\\infty}xf'(x)\\text{d}x=\\int_{0}^{+\\infty}x\\text{d}[f(x)]=\\lim_{x\\rightarrow+\\infty}xf(x)-\\int_{0}^{+\\infty}f(x)\\text{d}x\\)， 取\\(f(x)=\\frac{1}{x + 1}\\)，则\\(\\lim_{x\\rightarrow+\\infty}xf(x)=1,\\int_{0}^{+\\infty}\\frac{\\text{d}x}{x + 1}=+\\infty\\)，从而\\(\\int_{0}^{+\\infty}xf'(x)\\text{d}x\\)发散； 取\\(f(x)=\\frac{1}{(x + 1)^{2}}\\)，则\\(\\lim_{x\\rightarrow+\\infty}xf(x)=0,\\int_{0}^{+\\infty}\\frac{\\text{d}x}{(x + 1)^{2}}=1\\)，从而\\(\\int_{0}^{+\\infty}xf'(x)\\text{d}x\\)收敛. 综上，\\(\\int_{0}^{+\\infty}xf'(x)\\text{d}x\\)的敛散性不确定.",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "material": "（本题满分12分）设函数\\(f(x)\\)在\\([0,+\\infty)\\)上具有一阶连续导数且是有界的凹函数.",
+          "material": "（本题满分12分）设函数\\(f(x)\\)在\\([0,+\\infty)\\)上具有二阶导数且是有界的凹函数.",
           "materialTitle": "材料",
-          "sourceUrl": "https://noobdream.com/Practice/article/9661/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9488/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q20",
           "no": 20,
           "type": "essay",
-          "stem": "（1）$a_{n} > b_{n}$，$n = 1$，$2$，$\\cdots$；\n\n（2）$\\lim\\limits_{n\\to\\infty}\\left( \\frac{b_{n} - a_{n}}{a_{n}}\\right)^{n} = 0$．",
+          "stem": "（1）求\\( a \\)的值；\n\n（2）求\\( f(x,y,z) \\)的表达式。",
           "options": [],
-          "answer": "【证】（1）令$f(x) = \\text{e}^{x} - \\text{e}^{-x}$，在$[0, a_{n}](0 < a_{n} < 1)$上用拉格朗日中值定理，有 $\\text{e}^{a_{n}} - \\text{e}^{-a_{n}} - 0 = (\\text{e}^{\\xi_{n}} + \\text{e}^{-\\xi_{n}})\\cdot a_{n}$，$0 < \\xi_{n} < a_{n}$， 又当$0 < x < 1$时，$f''(x) = \\text{e}^{x} - \\text{e}^{-x} > 0$，则$f'(x) = \\text{e}^{x} + \\text{e}^{-x}$在$(0, 1)$上单调递增． 由$\\text{e}^{a_{n}} - \\text{e}^{-a_{n}} = (\\text{e}^{b_{n}} + \\text{e}^{-b_{n}})a_{n}$，知$\\xi_{n} = b_{n}$，即 $0 < b_{n} < a_{n}$，$n = 1$，$2$，$\\cdots$． （2）由于 $\\text{e}^{x} - \\text{e}^{-x} = (\\text{e}^{\\frac{x}{2}} - \\text{e}^{-\\frac{x}{2}})(\\text{e}^{\\frac{x}{2}} + \\text{e}^{-\\frac{x}{2}})$，$0 < x < 1$， $\\text{e}^{x} + \\text{e}^{-x} > 2$， 因此 $\\int_{0}^{x}(\\text{e}^{t} + \\text{e}^{-t})\\text{d}t > \\int_{0}^{x}2\\text{d}t = 2x$， 即 $\\text{e}^{x} - \\text{e}^{-x} > 2x$，$\\text{e}^{\\frac{x}{2}} - \\text{e}^{-\\frac{x}{2}} > x$， 得 $\\text{e}^{x} - \\text{e}^{-x} > x(\\text{e}^{\\frac{x}{2}} + \\text{e}^{-\\frac{x}{2}})$． 又$\\text{e}^{a_{n}} - \\text{e}^{-a_{n}} = a_{n}(\\text{e}^{b_{n}} + \\text{e}^{-b_{n}}) > a_{n}(\\text{e}^{\\frac{a_{n}}{2}} + \\text{e}^{-\\frac{a_{n}}{2}})$，有$\\frac{a_{n}}{2} < b_{n}$，$0 < b_{n} < a_{n} < 2b_{n}$，则$-\\frac{1}{2} < \\frac{b_{n} - a_{n}}{a_{n}} < 0$，于是$\\lim\\limits_{n\\to\\infty}\\left( \\frac{b_{n} - a_{n}}{a_{n}}\\right)^{n} = 0$．",
+          "answer": "（1）由题意，\\( \\text{rot}\\ u = 0 \\)，即 \\[ \\begin{vmatrix} i & j & k \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ e^{x}\\cos y + yz & xz - e^{x}\\sin y & axy + z \\end{vmatrix} = 0 \\] 可得\\( \\frac{\\partial(axy + z)}{\\partial y} = \\frac{\\partial(xz - e^{x}\\sin y)}{\\partial z} \\)，则\\( ax = x \\)，即\\( a = 1 \\)。\n\n（2）由于\\( \\frac{\\partial f}{\\partial x} = e^{x}\\cos y + yz \\)，则 \\( f(x,y,z) = e^{x}\\cos y + xyz + g(y,z) \\)。 又\\( \\frac{\\partial f}{\\partial y} = xz - e^{x}\\sin y \\)，得\\( -e^{x}\\sin y + xz + \\frac{\\partial[g(y,z)]}{\\partial y} = xz - e^{x}\\sin y \\)。于是 \\( \\frac{\\partial[g(y,z)]}{\\partial y} = 0 \\)，即\\( g(y,z) = h(z) \\)。 由\\( \\frac{\\partial f}{\\partial z} = xy + z \\)，有\\( xy + \\frac{\\text{d}[h(z)]}{\\text{d}z} = xy + z \\)，\\( h(z) = \\frac{z^{2}}{2} + C \\)。故 \\( f(x,y,z) = e^{x}\\cos y + xyz + \\frac{z^{2}}{2} + C \\)。 又\\( f(1,0,1) = e \\)，则\\( C = -\\frac{1}{2} \\)，于是\\( f(x,y,z) = e^{x}\\cos y + xyz + \\frac{z^{2}}{2} - \\frac{1}{2} \\)。",
           "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
           "_answerFrom": "答案解析（参考答案）",
-          "material": "（本题满分12分） 设数列$\\{ a_{n}\\} $，$\\{ b_{n}\\} $满足$\\text{e}^{a_{n}} - \\text{e}^{-a_{n}} = a_{n}(\\text{e}^{b_{n}} + \\text{e}^{-b_{n}})$，$0 < a_{n} < 1$，$0 < b_{n} < 1$，$n = 1$，$2$，$\\cdots$． 证明：",
+          "material": "（本题满分12分） 设\\( u = (e^{x}\\cos y + yz)i + (xz - e^{x}\\sin y)j + (axy + z)k \\)是某三元函数\\( f(x,y,z) \\)的梯度向量，\\( f(1,0,1) = e \\)。",
           "materialTitle": "材料",
-          "sourceUrl": "https://noobdream.com/Practice/article/9662/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9489/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q21",
           "no": 21,
           "type": "essay",
-          "stem": "（本题满分12分）\n设连续函数$f(x)$满足\n$f(x) = x\\iint_{D}f(x + y)\\text{d}\\sigma + x^{2}\\int_{0}^{1}f(x)\\text{d}x + x^{3}$，\n其中$D = \\left\\{ (x, y)\\mid x^{2} + y^{2} \\leq \\frac{1}{\\sqrt{\\pi}} \\right\\}$，试求$f(x)$的表达式．",
+          "stem": "（1）求流量通解；\n\n（2）当\\( x_{4} \\)交通封闭时，求此时\\( x_{2} \\)的最大流量。",
           "options": [],
-          "answer": "",
-          "explanation": "记$A = \\iint_{D}f(x + y)\\text{d}\\sigma$，$B = \\int_{0}^{1}f(x)\\text{d}x$，则\n$f(x) = Ax + Bx^{2} + x^{3}$．\n对上式两边在$[0, 1]$上作定积分：\n$B = \\int_{0}^{1}f(x)\\text{d}x = \\int_{0}^{1}(Ax + Bx^{2} + x^{3})\\text{d}x = \\left. \\left( \\frac{1}{2}Ax^{2} + \\frac{1}{3}Bx^{3} + \\frac{1}{4}x^{4}\\right) \\right|_{0}^{1}$\n$= \\frac{1}{2}A + \\frac{1}{3}B + \\frac{1}{4}$，\n所以\n$\\frac{2}{3}B = \\frac{1}{2}A + \\frac{1}{4}$．\n又因为\n$f(x + y) = A(x + y) + B(x + y)^{2} + (x + y)^{3}$，\n对上式两边在$D$上作二重积分：\n$A = \\iint_{D}[A(x + y) + B(x + y)^{2} + (x + y)^{3}]\\text{d}\\sigma = B\\iint_{D}(x + y)^{2}\\text{d}\\sigma$\n$= B\\int_{0}^{2\\pi}\\text{d}\\theta\\int_{0}^{\\sqrt{\\frac{1}{\\sqrt{\\pi}}}}r^{3}\\text{d}r = 2\\pi B \\cdot \\frac{1}{4}\\left( \\sqrt{\\frac{1}{\\sqrt{\\pi}}}\\right)^{4} = \\frac{B}{2}$，\n由此联立解得\n$A = \\frac{3}{10}$，$B = \\frac{3}{5}$，\n所以$f(x) = \\frac{3}{10}x + \\frac{3}{5}x^{2} + x^{3}$．",
+          "answer": "（1）由题意可知，有\\( a = 40 + 100 + b \\)，且流量满足下列非齐次线性方程组： \\[ \\begin{cases} x_{1} - x_{3} - x_{4} = 40, \\\\ x_{1} + x_{2} = a, \\\\ x_{2} + x_{3} - x_{5} = 100, \\\\ x_{4} + x_{5} = b. \\end{cases} \\] 对增广矩阵作初等行变换得 \\[ \\begin{pmatrix} 1 & 0 & -1 & -1 & 0 & 40 \\\\ 1 & 1 & 0 & 0 & 0 & a \\\\ 0 & 1 & 1 & 0 & -1 & 100 \\\\ 0 & 0 & 0 & 1 & 1 & b \\end{pmatrix} \\to \\begin{pmatrix} 1 & 0 & -1 & 0 & 1 & 40 + b \\\\ 0 & 1 & 1 & 0 & -1 & 100 \\\\ 0 & 0 & 0 & 1 & 1 & b \\\\ 0 & 0 & 0 & 0 & 0 & 0 \\end{pmatrix}, \\] 则齐次线性方程组的基础解系为\\( \\xi_{1} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\)，\\( \\xi_{2} = \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ -1 \\\\ 1 \\end{pmatrix} \\)，非齐次线性方程组的特解为\\( \\eta = \\begin{pmatrix} 40 + b \\\\ 100 \\\\ 0 \\\\ b \\\\ 0 \\end{pmatrix} \\)，故非齐次线性方程组的通解为 \\[ \\begin{pmatrix} x_{1} \\\\ x_{2} \\\\ x_{3} \\\\ x_{4} \\\\ x_{5} \\end{pmatrix} = \\begin{pmatrix} 40 + b \\\\ 100 \\\\ 0 \\\\ b \\\\ 0 \\end{pmatrix} + k_{1}\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix} + k_{2}\\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 40 + b + k_{1} - k_{2} \\\\ 100 - k_{1} + k_{2} \\\\ k_{1} \\\\ b - k_{2} \\\\ k_{2} \\end{pmatrix}, \\] 且由于\\( x_{i} \\geq 0 \\)，即\\( \\begin{cases} 40 + b + k_{1} - k_{2} \\geq 0, \\\\ 100 - k_{1} + k_{2} \\geq 0, \\\\ k_{1} \\geq 0, \\\\ b - k_{2} \\geq 0, \\\\ k_{2} \\geq 0, \\end{cases} \\)得\\( \\begin{cases} -(40 + b) \\leq k_{1} - k_{2} \\leq 100, \\\\ k_{1} \\geq 0, \\\\ 0 \\leq k_{2} \\leq b. \\end{cases} \\)\n\n（2）当\\( x_{4} = 0 \\)时，\\( k_{2} = b \\)，则\\( x_{2} = 100 + b - k_{1} \\)，又因\\( k_{1} \\geq 0 \\)，故\\( x_{2} \\)的最大值为\\( 100 + b \\)。",
+          "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
-          "sourceUrl": "https://noobdream.com/Practice/article/9663/"
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分） 某高速公路网络的交通流量如图所示，其中\\( a,b \\)为常数，已知该交通网络的流量\\( (x_{1},x_{2},x_{3},x_{4},x_{5}) \\)有解。",
+          "materialTitle": "材料",
+          "sourceUrl": "https://noobdream.com/Practice/article/9490/"
         },
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set4-q22",
           "no": 22,
           "type": "essay",
-          "stem": "（1）求流量的通解；\n\n（2）当$x_{4}$交通封闭时，求此时$x_{2}$的最大流量．",
+          "stem": "（1）求\\( a \\)的值；\n\n（2）求\\( Z = X^{2}Y \\)的概率密度； （3）求\\( E(Y \\mid X = \\frac{1}{2}) \\)。",
           "options": [],
-          "answer": "",
-          "explanation": "（1）由题意可知，有$a = 40 + 100 + b$，且流量满足下列非齐次线性方程组： $\\begin{cases} x_{1} - x_{3} - x_{4} = 40, \\\\ x_{1} + x_{2} = a, \\\\ x_{2} + x_{3} - x_{5} = 100, \\\\ x_{4} + x_{5} = b. \\end{cases}$ 对增广矩阵作初等行变换得 $\\begin{pmatrix} 1 & 0 & -1 & -1 & 0 & \\vdots & 40 \\\\ 1 & 1 & 0 & 0 & 0 & \\vdots & a \\\\ 0 & 1 & 1 & 0 & -1 & \\vdots & 100 \\\\ 0 & 0 & 0 & 1 & 1 & \\vdots & b \\end{pmatrix} \\to \\begin{pmatrix} 1 & 0 & -1 & 0 & 1 & \\vdots & 40 + b \\\\ 0 & 1 & 1 & 0 & -1 & \\vdots & 100 \\\\ 0 & 0 & 0 & 1 & 1 & \\vdots & b \\\\ 0 & 0 & 0 & 0 & 0 & \\vdots & 0 \\end{pmatrix}$， 则齐次线性方程组的基础解系为$\\boldsymbol{\\xi}_{1} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix}$，$\\boldsymbol{\\xi}_{2} = \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ -1 \\\\ 1 \\end{pmatrix}$，非齐次线性方程组的特解为$\\boldsymbol{\\eta} = \\begin{pmatrix} 40 + b \\\\ 100 \\\\ 0 \\\\ b \\\\ 0 \\end{pmatrix}$，故非齐次线性方程组的通解为 $\\begin{pmatrix} x_{1} \\\\ x_{2} \\\\ x_{3} \\\\ x_{4} \\\\ x_{5} \\end{pmatrix} = \\begin{pmatrix} 40 + b \\\\ 100 \\\\ 0 \\\\ b \\\\ 0 \\end{pmatrix} + k_{1}\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix} + k_{2}\\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\\\ -1 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 40 + b + k_{1} - k_{2} \\\\ 100 - k_{1} + k_{2} \\\\ k_{1} \\\\ b - k_{2} \\\\ k_{2} \\end{pmatrix}$． 且由于$x_{i} \\geq 0$，即$\\begin{cases} 40 + b + k_{1} - k_{2} \\geq 0, \\\\ 100 - k_{1} + k_{2} \\geq 0, \\\\ k_{1} \\geq 0, \\\\ b - k_{2} \\geq 0, \\\\ k_{2} \\geq 0, \\end{cases}$得$\\begin{cases} -(40 + b) \\leq k_{1} - k_{2} \\leq 100, \\\\ k_{1} \\geq 0, \\\\ 0 \\leq k_{2} \\leq b. \\end{cases}$\n\n（2）当$x_{4} = 0$时，$k_{2} = b$，则$x_{2} = 100 + b - k_{1}$，又因$k_{1} \\geq 0$，故$x_{2}$的最大值为$100 + b$．",
+          "answer": "（1）由\\( \\iint_{D} f(x,y)\\text{d}x\\text{d}y = 1 \\)知，\\( \\int_{-1}^{1}\\text{d}x\\int_{x^{2}}^{1}ax^{2}y\\text{d}y = 1 \\)，解得\\( a = \\frac{21}{4} \\)。\n\n（2）法一 令\\( \\begin{cases} z = x^{2}y, \\\\ v = y, \\end{cases} \\)由\\( z = x^{2}y \\)可知\\( z,y \\)同号，所以\\( z,v \\)同号，则\\( \\begin{cases} x = \\sqrt{z/v}, \\\\ y = v \\end{cases} \\)或\\( \\begin{cases} x = -\\sqrt{z/v}, \\\\ y = v. \\end{cases} \\)若\\( \\begin{cases} x = \\sqrt{z/v}, \\\\ y = v, \\end{cases} \\) 则雅可比行列式为 \\[ J_{1} = \\begin{vmatrix} \\frac{1}{2}(zv)^{-\\frac{1}{2}} & -\\frac{1}{2}z^{\\frac{1}{2}}v^{-\\frac{3}{2}} \\\\ 0 & 1 \\end{vmatrix} = \\frac{1}{2}(zv)^{-\\frac{1}{2}}. \\] 同理，若\\( \\begin{cases} x = -\\sqrt{z/v}, \\\\ y = v, \\end{cases} \\) 则雅可比行列式为\\( J_{2} = -\\frac{1}{2}(zv)^{-\\frac{1}{2}} \\)，所以\\( (z,v) \\)的概率密度为 \\[ f(z,v) = \\begin{cases} \\frac{21}{4}z \\cdot \\frac{1}{2}(zv)^{-\\frac{1}{2}} + \\frac{21}{4}z \\cdot \\frac{1}{2}(zv)^{-\\frac{1}{2}}, & 0 \\leq z \\leq v^{2} \\leq 1, v > 0, \\\\ 0, & \\text{其他} \\end{cases} = \\begin{cases} \\frac{21}{4}\\sqrt{z/v}, & 0 \\leq z \\leq v^{2} \\leq 1, v > 0, \\\\ 0, & \\text{其他}. \\end{cases} \\] 故\\( Z \\)的概率密度为 \\[ f_{Z}(z) = \\begin{cases} \\int_{\\sqrt{z}}^{1}\\frac{21}{4}\\sqrt{z/v}\\text{d}v, & 0 \\leq z \\leq 1, \\\\ 0, & \\text{其他} \\end{cases} = \\begin{cases} \\frac{21}{2}z^{\\frac{1}{2}} - \\frac{21}{2}z^{\\frac{3}{4}}, & 0 \\leq z \\leq 1, \\\\ 0, & \\text{其他}. \\end{cases} \\] 法二 记\\( Z \\)的分布函数为\\( F(z) \\)。由题设知， 当\\( z < 0 \\)时，\\( F(z) = 0 \\)；当\\( z > 1 \\)时，\\( F(z) = 1 \\)； 当\\( 0 \\leq z \\leq 1 \\)时， \\[ \\begin{align*} F(z) &= P\\{X^{2}Y \\leq z\\} = 1 - 2\\left(\\int_{z^{\\frac{1}{4}}}^{1}\\text{d}x\\int_{x^{2}}^{\\frac{z}{x^{2}}}\\frac{21}{4}x^{2}y\\text{d}y + \\int_{z^{\\frac{1}{4}}}^{1}\\text{d}x\\int_{x^{2}}^{1}\\frac{21}{4}x^{2}y\\text{d}y\\right) \\\\ &= 1 - 2\\left[\\int_{z^{\\frac{1}{4}}}^{1}\\frac{21}{8}x^{2}\\left(1 - \\frac{z^{2}}{x^{4}}\\right)\\text{d}x + \\int_{z^{\\frac{1}{4}}}^{1}\\frac{21}{8}x^{2}\\left(1 - x^{4}\\right)\\text{d}x\\right] \\\\ &= 1 - 2\\left[\\frac{21}{8}\\left(\\frac{x^{3}}{3} + \\frac{z^{2}}{x}\\right)\\bigg|_{z^{\\frac{1}{4}}}^{1} + \\frac{21}{8}\\left(\\frac{1}{3}x^{3} - \\frac{1}{7}x^{7}\\right)\\bigg|_{z^{\\frac{1}{4}}}^{1}\\right] \\\\ &= 1 - 2\\left(\\frac{1}{2} - \\frac{7}{2}z^{\\frac{3}{2}} + 3z^{\\frac{7}{4}}\\right) = 7z^{\\frac{3}{2}} - 6z^{\\frac{7}{4}}. \\end{align*} \\] 所以\\( Z \\)的概率密度为 \\[ f_{Z}(z) = F'(z) = \\begin{cases} \\frac{21}{2}z^{\\frac{1}{2}} - \\frac{21}{2}z^{\\frac{3}{4}}, & 0 \\leq z \\leq 1, \\\\ 0, & \\text{其他}. \\end{cases} \\]\n\n（3）当\\( -1 < x < 1 \\)时，\\( f_{X}(x) = \\int_{x^{2}}^{1}\\frac{21}{4}x^{2}y\\text{d}y = \\frac{21}{8}x^{2}(1 - x^{4}) \\)，所以 \\[ f_{Y|X}(y \\mid x) = \\frac{f(x,y)}{f_{X}(x)} = \\begin{cases} \\frac{2y}{1 - x^{4}}, & x^{2} < y < 1, \\\\ 0, & \\text{其他}, \\end{cases} \\] 所以\\( f_{Y|X}\\left(y \\mid x = \\frac{1}{2}\\right) = \\begin{cases} \\frac{32y}{15}, & \\frac{1}{4} < y < 1, \\\\ 0, & \\text{其他}. \\end{cases} \\)故\\( E\\left(Y \\mid X = \\frac{1}{2}\\right) = \\int_{\\frac{1}{4}}^{1}\\frac{32y^{2}}{15}\\text{d}y = \\frac{7}{10} \\)。",
+          "explanation": "",
           "score": 0,
           "topics": [],
           "images": [],
-          "material": "（本题满分12分） 某高速公路网络的交通流量如图所示，其中$a$，$b$是常数．已知该网络的交通流量$(x_{1}, x_{2}, x_{3}, x_{4}, x_{5})$有解．",
+          "_answerFrom": "答案解析（参考答案）",
+          "material": "（本题满分12分） 设二维随机变量\\( (X,Y) \\)的概率密度为 \\[ f(x,y) = \\begin{cases} ax^{2}y, & x^{2} \\leq y \\leq 1, \\\\ 0, & \\text{其他}. \\end{cases} \\]",
           "materialTitle": "材料",
-          "sourceUrl": "https://noobdream.com/Practice/article/9664/"
+          "sourceUrl": "https://noobdream.com/Practice/article/9491/"
         }
       ]
     }

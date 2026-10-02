@@ -181,11 +181,11 @@
           "id": "mock-math1-nnd-李林冲刺预测6套卷-2025-set6-q6",
           "no": 6,
           "type": "single",
-          "stem": "A.若r(C)=m,则r(A)≤m.\n\nC.若r(A)=n,则r(B)≤r(C).",
+          "stem": "设A,B分别为m×n,n×s矩阵,且AB=C,则正确的是",
           "options": [
             {
               "key": "A",
-              "text": "B分别为m×n,n×s矩阵,且AB="
+              "text": "若r(C)=m,则r(A)≤m."
             },
             {
               "key": "B",
@@ -193,7 +193,7 @@
             },
             {
               "key": "C",
-              "text": "则正确的是"
+              "text": "若r(A)=n,则r(B)≤r(C)."
             },
             {
               "key": "D",

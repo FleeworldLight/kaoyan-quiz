@@ -10,7 +10,9 @@ export default function Mock({ index }) {
   const nav = useNavigate();
   const groups = index.mockGroups || [];
   const [subject, setSubject] = useState("all");
+  const [publisher, setPublisher] = useState("all");
   const [kw, setKw] = useState("");
+  const [sort, setSort] = useState("year");
   const [preview, setPreview] = useState(null);
 
   const subjects = useMemo(() => {
@@ -18,11 +20,28 @@ export default function Mock({ index }) {
     return ids.map((id) => index.subjects.find((s) => s.id === id) || { id, name: id, color: "#356fe5" });
   }, [groups, index]);
 
-  const shown = groups.filter((g) => {
-    if (subject !== "all" && g.subject !== subject) return false;
-    if (kw && !(g.name + " " + (g.publisher || "") + " " + (g.year || "")).toLowerCase().includes(kw.toLowerCase())) return false;
-    return true;
-  });
+  const publishers = useMemo(() => {
+    const m = new Map();
+    for (const g of groups) {
+      const p = g.publisher || "未标注";
+      m.set(p, (m.get(p) || 0) + g.papers.length);
+    }
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }, [groups]);
+
+  const shown = useMemo(() => {
+    const list = groups.filter((g) => {
+      if (subject !== "all" && g.subject !== subject) return false;
+      if (publisher !== "all" && (g.publisher || "未标注") !== publisher) return false;
+      if (kw && !(g.name + " " + (g.publisher || "") + " " + (g.year || "")).toLowerCase().includes(kw.toLowerCase())) return false;
+      return true;
+    });
+    return [...list].sort((a, b) => {
+      if (sort === "year") return (b.year || 0) - (a.year || 0) || String(a.name).localeCompare(String(b.name), "zh");
+      if (sort === "size") return (b.questionCount || 0) - (a.questionCount || 0);
+      return String(a.name).localeCompare(String(b.name), "zh");
+    });
+  }, [groups, subject, publisher, kw, sort]);
 
   const totalPapers = groups.reduce((a, g) => a + g.papers.length, 0);
   const inferredTotal = groups.reduce((a, g) => a + (g.inferredCount || 0), 0);
@@ -72,7 +91,27 @@ export default function Mock({ index }) {
           <Search className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-ink-faint" />
           <input className={cn(inputCls, "pl-8")} placeholder="搜索系列 / 出版方 / 年份" value={kw} onChange={(e) => setKw(e.target.value)} />
         </div>
+        <Segmented value={sort} onChange={setSort}
+          options={[{ value: "year", label: "按年份" }, { value: "size", label: "按题量" }, { value: "name", label: "按名称" }]} />
       </div>
+
+      {publishers.length > 2 ? (
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="text-[12px] text-ink-faint">出版方</span>
+          <button onClick={() => setPublisher("all")}
+            className={cn("rounded-md border px-2 py-1 text-[12px] transition-colors",
+              publisher === "all" ? "border-brand-line bg-brand-soft font-semibold text-brand" : "border-line text-ink-subtle hover:border-line-strong")}>
+            全部 <span className="text-ink-faint">{totalPapers}</span>
+          </button>
+          {publishers.map(([p, n]) => (
+            <button key={p} onClick={() => setPublisher(p)}
+              className={cn("rounded-md border px-2 py-1 text-[12px] transition-colors",
+                publisher === p ? "border-brand-line bg-brand-soft font-semibold text-brand" : "border-line text-ink-subtle hover:border-line-strong")}>
+              {p} <span className="text-ink-faint">{n}</span>
+            </button>
+          ))}
+        </div>
+      ) : null}
 
       {!shown.length && <Card><Empty icon={Search} title="没有匹配的模拟卷" desc="换个关键词或切回「全部」。" /></Card>}
 

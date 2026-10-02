@@ -19,8 +19,324 @@
   "sourceNote": "来源为 N诺考研（noobdream.com）公开的「练习作答记录 + 答案解析」页，题干/选项/正确答案/原书解析均逐字抄自该页；该页是第三方练习站对原书的转录，**不是正式出版物原文**，未经逐字核对，请以正式出版物为准。",
   "sections": [
     {
+      "id": "single",
+      "name": "一、单项选择题（10 题）",
+      "questions": [
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q1",
+          "no": 1,
+          "type": "single",
+          "stem": "\\( f(x)=\\frac{|\\ln |x||}{x^{2}-1} \\) 有",
+          "options": [
+            {
+              "key": "A",
+              "text": "两个跳跃间断点，一个无穷间断点."
+            },
+            {
+              "key": "B",
+              "text": "两个可去间断点，一个无穷间断点."
+            },
+            {
+              "key": "C",
+              "text": "一个可去间断点，一个跳跃间断点，一个无穷间断点."
+            },
+            {
+              "key": "D",
+              "text": "三个无穷间断点."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 显然函数 \\( f(x) \\) 的间断点为 \\( x = -1 \\)，\\( x = 0 \\)，\\( x = 1 \\).\n由\n\\( \\lim_{x \\to (-1)^{-}} f(x) = \\lim_{x \\to (-1)^{-}} \\frac{\\ln (-x)}{x^{2} - 1} = \\lim_{x \\to (-1)^{-}} \\frac{1}{x - 1} \\cdot \\frac{\\ln [1 - (x + 1)]}{x + 1} = \\frac{1}{2} \\)，\n\\( \\lim_{x \\to (-1)^{+}} f(x) = \\lim_{x \\to (-1)^{+}} \\frac{-\\ln (-x)}{x^{2} - 1} = -\\lim_{x \\to (-1)^{+}} \\frac{1}{x - 1} \\cdot \\frac{\\ln [1 - (x + 1)]}{x + 1} = -\\frac{1}{2} \\)，\n得 \\( x = -1 \\) 为 \\( f(x) \\) 的跳跃间断点，同理可得 \\( x = 1 \\) 为 \\( f(x) \\) 的跳跃间断点.\n由 \\( \\lim_{x \\to 0} f(x) = -\\infty \\) 得 \\( x = 0 \\) 为 \\( f(x) \\) 的无穷间断点.\n所以 \\( f(x) \\) 有两个跳跃间断点，一个无穷间断点.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9536/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q2",
+          "no": 2,
+          "type": "single",
+          "stem": "以下结论，正确的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "若 \\( \\sum_{n = 0}^{\\infty} a_{n}^{2} \\) 收敛，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 收敛."
+            },
+            {
+              "key": "B",
+              "text": "若 \\( \\sum_{n = 0}^{\\infty} a_{n}^{2} \\) 发散，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 发散."
+            },
+            {
+              "key": "C",
+              "text": "若 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 收敛，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{4} \\) 收敛."
+            },
+            {
+              "key": "D",
+              "text": "若 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 发散，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{4} \\) 发散."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 对于选项A，若 \\( \\sum_{n = 0}^{\\infty} a_{n}^{2} \\) 收敛，则 \\( \\lim_{n \\to \\infty} a_{n}^{2} = 0 \\)，当 \\( n \\) 充分大时，\\( |a_{n}^{2}| < 1 \\)，\\( |a_{n}| < 1 \\)，\n于是 \\( |a_{n}^{3}| = |a_{n}^{2}| |a_{n}| < |a_{n}^{2}| = a_{n}^{2} \\)，故 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 绝对收敛，\\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 收敛.\n对于选项B，取 \\( a_{n} = \\frac{1}{\\sqrt{n + 1}} \\)，\\( a_{n}^{2} = \\frac{1}{n + 1} \\)，\\( a_{n}^{3} = \\frac{1}{(n + 1)^{\\frac{3}{2}}} \\)，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{2} \\) 发散，但 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 收敛.\n对于选项C，取 \\( a_{n}^{3} = \\frac{(-1)^{3(n + 1)}}{(n + 1)^{\\frac{3}{4}}} \\)，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 收敛，但 \\( a_{n}^{4} = \\frac{1}{n + 1} \\)，\\( \\sum_{n = 0}^{\\infty} a_{n}^{4} \\) 发散.\n对于选项D，取 \\( a_{n} = \\frac{1}{\\sqrt[3]{n + 1}} \\)，\\( a_{n}^{3} = \\frac{1}{n + 1} \\)，\\( a_{n}^{4} = \\frac{1}{(n + 1)^{\\frac{4}{3}}} \\)，则 \\( \\sum_{n = 0}^{\\infty} a_{n}^{3} \\) 发散，但 \\( \\sum_{n = 0}^{\\infty} a_{n}^{4} \\) 收敛.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9537/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q3",
+          "no": 3,
+          "type": "single",
+          "stem": "设曲面 \\( z_{1} = f(x, y) \\) 与 \\( z_{2} = g(x, y) \\) 在点 \\( (1, 0) \\) 处的切平面 \\( \\pi_{1} \\) 与 \\( \\pi_{2} \\) 的交线与 \\( xOy \\) 面相交于点 \\( \\left(-\\frac{1}{2}, -\\frac{1}{2}, 0\\right) \\)，\\( f(1, 0) = f_{x}'(1, 0) = 1 \\)，\\( g(1, 0) = g_{x}'(1, 0) = -1 \\)，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( f_{y}'(1, 0) = 1 \\)，\\( g_{y}'(1, 0) = 1 \\)."
+            },
+            {
+              "key": "B",
+              "text": "\\( f_{y}'(1, 0) = -1 \\)，\\( g_{y}'(1, 0) = 1 \\)."
+            },
+            {
+              "key": "C",
+              "text": "\\( f_{y}'(1, 0) = 1 \\)，\\( g_{y}'(1, 0) = -1 \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( f_{y}'(1, 0) = -1 \\)，\\( g_{y}'(1, 0) = -1 \\)."
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 由题可设\n\\( \\pi_{1}: z_{1} - f(x_{1}, y_{1}) = f_{x}'(x_{1}, y_{1})(x - x_{1}) + f_{y}'(x_{1}, y_{1})(y - y_{1}) \\)，\n\\( \\pi_{2}: z_{2} - g(x_{1}, y_{1}) = g_{x}'(x_{1}, y_{1})(x - x_{1}) + g_{y}'(x_{1}, y_{1})(y - y_{1}) \\).\n联立 \\( \\pi_{1} \\)，\\( \\pi_{2} \\) 的方程并令 \\( z_{1} = z_{2} = 0 \\)，得 \\( (x_{2}, y_{2}) \\) 满足\n\\( \\begin{cases} f_{x}'(x_{1}, y_{1})(x_{2} - x_{1}) + f_{y}'(x_{1}, y_{1})(y_{2} - y_{1}) = -f(x_{1}, y_{1}) \\\\ g_{x}'(x_{1}, y_{1})(x_{2} - x_{1}) + g_{y}'(x_{1}, y_{1})(y_{2} - y_{1}) = -g(x_{1}, y_{1}) \\end{cases} \\)，\n将 \\( f(1, 0) = f_{x}'(1, 0) = 1 \\)，\\( g(1, 0) = g_{x}'(1, 0) = -1 \\) 代入方程组，得\n\\( \\begin{cases} 1 \\cdot \\left(-\\frac{1}{2} - 1\\right) + f_{y}'(1, 0) \\cdot \\left(-\\frac{1}{2} - 0\\right) = -1 \\\\ -1 \\cdot \\left(-\\frac{1}{2} - 1\\right) + g_{y}'(1, 0) \\cdot \\left(-\\frac{1}{2} - 0\\right) = 1 \\end{cases} \\)，\n解得 \\( f_{y}'(1, 0) = -1 \\)，\\( g_{y}'(1, 0) = 1 \\).",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9538/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q4",
+          "no": 4,
+          "type": "single",
+          "stem": "已知函数 \\( f(x) \\) 在区间 \\( (0, +\\infty) \\) 上可导，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "若 \\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)，则 \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0 \\)."
+            },
+            {
+              "key": "B",
+              "text": "若 \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0 \\)，则 \\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)."
+            },
+            {
+              "key": "C",
+              "text": "若 \\( \\lim_{x \\to +\\infty} f'(x) \\) 存在，则 \\( f(x) \\) 在 \\( x \\to +\\infty \\) 时有渐近线."
+            },
+            {
+              "key": "D",
+              "text": "若 \\( f(x) \\) 在 \\( x \\to +\\infty \\) 时有渐近线，则 \\( \\lim_{x \\to +\\infty} f'(x) \\) 存在."
+            }
+          ],
+          "answer": "A",
+          "explanation": "【分析】 对于A选项，因为 \\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)，所以对任意的 \\( \\varepsilon > 0 \\)，存在 \\( A > 0 \\)，当 \\( x > A \\) 时，有 \\( |f'(x)| A \\) 时，根据拉格朗日中值定理，有\n\\( f(x) - f(A) = f'(\\xi)(x - A) \\)，其中 \\( A x_{0} \\) 时，有 \\( 0 < \\frac{|f(x)|}{x} < 2\\varepsilon \\)，因而 \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0 \\).\n对于选项B，若 \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0 \\)，则 \\( \\lim_{x \\to +\\infty} f'(x) = 0 \\) 不一定成立.\n例如，取 \\( f(x) = \\sin x \\)，则 \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0 \\) 成立，但 \\( \\lim_{x \\to +\\infty} f'(x) \\) 不存在.\n对于选项C，若 \\( \\lim_{x \\to +\\infty} f'(x) \\) 存在，则 \\( f(x) \\) 在 \\( x \\to +\\infty \\) 时不一定有渐近线.\n例如，取 \\( f(x) = \\ln x \\)，则 \\( \\lim_{x \\to +\\infty} f'(x) = 0 \\)，但 \\( f(x) \\) 在 \\( x \\to +\\infty \\) 时没有渐近线.\n对于选项D，若 \\( f(x) \\) 在 \\( x \\to +\\infty \\) 时有渐近线，则 \\( \\lim_{x \\to +\\infty} f'(x) \\) 不一定存在.\n例如，取 \\( f(x) = \\frac{1}{x}(\\sin x^{2} + 2) \\)，在 \\( x \\to +\\infty \\) 时有渐近线 \\( y = 0 \\)，但 \\( \\lim_{x \\to +\\infty} f'(x) \\) 不存在.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9539/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q5",
+          "no": 5,
+          "type": "single",
+          "stem": "\\( n \\) 阶矩阵 \\( A \\) 经有限次初等行变换得到矩阵 \\( B \\)，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "\\( A \\)，\\( B \\) 有相同的特征值."
+            },
+            {
+              "key": "B",
+              "text": "\\( Ax = b \\)，\\( Bx = b \\) 是同解方程组."
+            },
+            {
+              "key": "C",
+              "text": "\\( r(A) = r(B) = r(A \\mid B) \\)."
+            },
+            {
+              "key": "D",
+              "text": "\\( r(A) = r(B) = r(A^{T} \\mid B^{T}) \\)."
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 对于A，设 \\( A \\) 的特征值为 \\( \\lambda_{1}, \\lambda_{2}, \\cdots, \\lambda_{n} \\)，\\( B \\) 的特征值为 \\( \\mu_{1}, \\mu_{2}, \\cdots, \\mu_{n} \\). 因初等行变换可能改变行列式的值，即 \\( |A| \\neq |B| \\)，又 \\( |A| = \\lambda_{1}\\lambda_{2} \\cdot \\cdots \\cdot \\lambda_{n} \\)，\\( |B| = \\mu_{1}\\mu_{2} \\cdot \\cdots \\cdot \\mu_{n} \\)，若A成立，则一定有 \\( |A| = |B| \\)，故A不正确.\n对于B，当 \\( b = 0 \\) 时成立，但 \\( b \\neq 0 \\) 时，\\( Ax = b \\)，\\( Bx = b \\) 不一定是同解方程组. 因为 \\( Ax = b \\)，\\( Bx = b \\) 在有解条件下同解 \\( \\Leftrightarrow r(A \\mid b) = r(B \\mid b) = r\\begin{pmatrix} A & b \\\\ B & b \\end{pmatrix} \\). 故B不正确.\n对于C，\\( r(A) = r(B) = r(A \\mid B) \\Leftrightarrow A \\) 的列向量组与 \\( B \\) 的列向量组等价. 而初等行变换不改变列向量组的线性相关性，但不意味着它们等价. 如 \\( A = \\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\end{pmatrix} \\)，\\( B = \\begin{pmatrix} 1 & 1 \\\\ 0 & 0 \\end{pmatrix} \\)，故C不正确.\n对于D，\\( r(A^{T}) = r(B^{T}) = r(A^{T} \\mid B^{T}) \\Leftrightarrow A \\)，\\( B \\) 的行向量组等价.",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9540/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q6",
+          "no": 6,
+          "type": "single",
+          "stem": "下列矩阵中，不能相似对角化的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\boldsymbol{A}=\\begin{pmatrix}1&a&0\\\\0&2&0\\\\-2&-2&-1\\end{pmatrix}$"
+            },
+            {
+              "key": "B",
+              "text": "$\\boldsymbol{B}=\\begin{pmatrix}1&a&0\\\\a&2&-2\\\\0&-2&-1\\end{pmatrix}$"
+            },
+            {
+              "key": "C",
+              "text": "$\\boldsymbol{C}=\\begin{pmatrix}0&1&0\\\\-1&2&a\\\\0&0&1\\end{pmatrix}$"
+            },
+            {
+              "key": "D",
+              "text": "$\\boldsymbol{D}=\\begin{pmatrix}1&1&a\\\\0&2&0\\\\0&0&2\\end{pmatrix}$"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 对于选项 A，由 $|\\lambda\\boldsymbol{E}-\\boldsymbol{A}|=\\begin{vmatrix}\\lambda - 1&-a&0\\\\0&\\lambda - 2&0\\\\2&2&\\lambda + 1\\end{vmatrix}=(\\lambda + 1)(\\lambda - 1)(\\lambda - 2)=0$，知矩阵 $\\boldsymbol{A}$ 有 3 个不同的特征值，故矩阵 $\\boldsymbol{A}$ 可相似对角化。\n对于选项 B，由于 $\\boldsymbol{B}^{\\mathrm{T}}=\\boldsymbol{B}$，因此矩阵 $\\boldsymbol{B}$ 可相似对角化。\n对于选项 C，由 $|\\lambda\\boldsymbol{E}-\\boldsymbol{C}|=\\begin{vmatrix}\\lambda&-1&0\\\\1&\\lambda - 2&-a\\\\0&0&\\lambda - 1\\end{vmatrix}=(\\lambda - 1)^3 = 0$，知矩阵 $\\boldsymbol{C}$ 有三重特征值 1，若矩阵 $\\boldsymbol{C}$ 可相似对角化，则要求 $r(1\\boldsymbol{E}-\\boldsymbol{C}) = 0$，即 $\\boldsymbol{C}=\\boldsymbol{E}$，因为 $\\boldsymbol{C}\\neq\\boldsymbol{E}$，所以矩阵 $\\boldsymbol{C}$ 不能相似对角化。\n对于选项 D，由于矩阵 $\\boldsymbol{D}$ 的特征值为 1，2，2，又 $3 - r(2\\boldsymbol{E}-\\boldsymbol{D}) = 3 - r\\begin{pmatrix}1&-1&-a\\\\0&0&0\\\\0&0&0\\end{pmatrix}=2$，故矩阵 $\\boldsymbol{D}$ 可相似对角化。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9541/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q7",
+          "no": 7,
+          "type": "single",
+          "stem": "设可逆矩阵 $\\boldsymbol{A}=\\begin{pmatrix}2&1&1\\\\1&2&1\\\\1&1&a\\end{pmatrix}$，$\\boldsymbol{\\alpha}=\\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}$，若 $\\boldsymbol{A}^*\\boldsymbol{\\alpha}=\\lambda\\boldsymbol{\\alpha}$，则",
+          "options": [
+            {
+              "key": "A",
+              "text": "$a = 2$ 时，$\\lambda = 1$"
+            },
+            {
+              "key": "B",
+              "text": "$a = 2$ 时，$\\lambda = 4$"
+            },
+            {
+              "key": "C",
+              "text": "$b = 1$ 时，$\\lambda = 1$"
+            },
+            {
+              "key": "D",
+              "text": "$b = 1$ 时，$\\lambda = 4$"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 由 $\\boldsymbol{A}^*\\boldsymbol{\\alpha}=\\lambda\\boldsymbol{\\alpha}$，有 $\\boldsymbol{A}\\boldsymbol{A}^*\\boldsymbol{\\alpha}=\\lambda\\boldsymbol{A}\\boldsymbol{\\alpha}$，则 $|\\boldsymbol{A}|\\boldsymbol{\\alpha}=\\lambda\\boldsymbol{A}\\boldsymbol{\\alpha}$，$\\boldsymbol{A}\\boldsymbol{\\alpha}=\\frac{|\\boldsymbol{A}|}{\\lambda}\\boldsymbol{\\alpha}$，即\n$\\begin{pmatrix}2&1&1\\\\1&2&1\\\\1&1&a\\end{pmatrix}\\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}=\\frac{|\\boldsymbol{A}|}{\\lambda}\\begin{pmatrix}1\\\\b\\\\1\\end{pmatrix}$，\n于是有\n$\\begin{cases}3 + b=\\frac{|\\boldsymbol{A}|}{\\lambda},&①\\\\2 + 2b=\\frac{|\\boldsymbol{A}|}{\\lambda}b,&②\\\\a + b + 1=\\frac{|\\boldsymbol{A}|}{\\lambda}.&③\\end{cases}$\n由 ①，③ 知，$a = 2$，则 $|\\boldsymbol{A}| = 4$。\n由 ①，② 知 $3b + b^2 = 2 + 2b$，即\n$(b + 2)(b - 1) = 0$，\n则 $b = 1$ 或 $b = -2$。\n当 $b = 1$ 时，$\\frac{|\\boldsymbol{A}|}{\\lambda}=4$，又 $|\\boldsymbol{A}| = 4$，则 $\\lambda = 1$；\n当 $b = -2$ 时，$\\frac{|\\boldsymbol{A}|}{\\lambda}=1$，又 $|\\boldsymbol{A}| = 4$，则 $\\lambda = 4$。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9542/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q8",
+          "no": 8,
+          "type": "single",
+          "stem": "设 $X,Y$ 独立同分布于参数为 $\\lambda(\\lambda\\gt0)$ 的指数分布，则在 $X + Y = z(z\\gt0)$ 的条件下，$X$ 的数学期望和方差分别为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{z}{2\\lambda},\\frac{z}{2\\lambda^2}$"
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{1}{\\lambda^2},\\frac{1}{\\lambda^4}$"
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{z}{\\lambda^2},\\frac{z}{\\lambda^4}$"
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{z}{2},\\frac{z^2}{12}$"
+            }
+          ],
+          "answer": "D",
+          "explanation": "【分析】 令 $Z = X + Y$，对 $0\\leq x\\leq z$，$f_{X|Z}(x|z)=\\frac{f_X(x)\\cdot f_{Z|X}(z|x)}{f_Z(z)}$，又\n$F_{Z|X}(z|x)=P\\{Z\\leq z|X = x\\}=P\\{X + Y\\leq z|X = x\\}$\n$=P\\{x + Y\\leq z\\}=P\\{Y\\leq z - x\\}=F_Y(z - x)$，\n故 $f_{Z|X}(z|x)=f_Y(z - x)$，于是\n$f_{X|Z}(x|z)=\\frac{f_X(x)\\cdot f_Y(z - x)}{f_Z(z)}=\\frac{1}{f_Z(z)}\\cdot\\lambda\\mathrm{e}^{-\\lambda x}\\cdot\\lambda\\mathrm{e}^{-\\lambda(z - x)}=\\frac{\\lambda^2\\mathrm{e}^{-\\lambda z}}{f_Z(z)}=g(z)$，\n即当 $x\\in[0,z]$ 时，$f_{X|Z}(x|z)$ 为与 $x$ 无关的常数，所以\n$f_{X|Z}(x|z)=\\begin{cases}\\frac{1}{z},&0\\leq x\\leq z,\\\\0,&其他,\\end{cases}$\n故 $E(X|X + Y = z)=\\frac{z}{2}$，$D(X|X + Y = z)=\\frac{z^2}{12}$。\n【注】 由卷积公式可得 $f_Z(z)=\\begin{cases}\\lambda^2 z\\mathrm{e}^{-\\lambda z},&z\\gt0,\\\\0,&其他.\\end{cases}$",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9543/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q9",
+          "no": 9,
+          "type": "single",
+          "stem": "设随机变量 $X,Y$ 独立同分布于 $N(0,1)$，$Z = \\frac{X}{Y}$，则与 $Z$ 同分布的是",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{|X|}{2Y}$"
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{X}{|Y|}$"
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{\\sqrt{2}X}{\\sqrt{X^2 + Y^2}}$"
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{\\sqrt{2}Y}{\\sqrt{X^2 + Y^2}}$"
+            }
+          ],
+          "answer": "B",
+          "explanation": "【分析】 法一 由题可得\n$(X,Y)\\sim f(x,y)=f_X(x)\\cdot f_Y(y)=\\frac{1}{2\\pi}\\mathrm{e}^{-\\frac{x^2 + y^2}{2}},x\\in\\mathbf{R},y\\in\\mathbf{R}$。\n令 $\\begin{cases}u = \\frac{x}{y},\\\\v = y,\\end{cases}$ 则有 $\\begin{cases}x = uv,\\\\y = v,\\end{cases}$ $J=\\begin{vmatrix}v&u\\\\0&1\\end{vmatrix}=v$，于是 $f(u,v)=f_X(uv)\\cdot f_Y(v)\\cdot|v|$，故\n$f_U(u)=\\int_{-\\infty}^{+\\infty}f_X(uv)\\cdot f_Y(v)\\cdot|v|\\mathrm{d}v$\n$=2\\int_{0}^{+\\infty}\\frac{1}{2\\pi}\\mathrm{e}^{-\\frac{u^2v^2 + v^2}{2}}\\cdot v\\mathrm{d}v$\n$=\\left(-\\frac{2}{1 + u^2}\\right)\\cdot\\frac{1}{2\\pi}\\cdot\\mathrm{e}^{-\\frac{1 + u^2}{2}v^2}\\Bigg|_{0}^{+\\infty}$\n$=\\frac{1}{\\pi(1 + u^2)}$，\n即 $Z\\sim t(1)$。而 $Y^2\\sim\\chi^2(1)$，$\\frac{X}{\\sqrt{\\frac{Y^2}{1}}}=\\frac{X}{|Y|}\\sim t(1)$，故选项 B 正确。\n因为 $X^2 + Y^2\\sim\\chi^2(2)$，$X\\sim N(0,1)$，所以 $\\frac{\\sqrt{2}X}{\\sqrt{X^2 + Y^2}}=\\frac{X}{\\sqrt{\\frac{X^2 + Y^2}{2}}}\\sim t(2)$，故 C 不正确。同理可知 D 不正确。\n法二 记 $Z$ 的分布函数为 $F(z)$。由题设可知，$X$ 与 $Y$ 的联合概率密度为 $f(x,y)=\\frac{1}{2\\pi}\\mathrm{e}^{-\\frac{x^2 + y^2}{2}},-\\infty\\lt x,y\\lt+\\infty$。\n由分布函数法，则有\n当 $z\\geq0$ 时，\n$F(z)=2\\int_{0}^{+\\infty}\\mathrm{d}y\\int_{-\\infty}^{yz}f(x,y)\\mathrm{d}x$\n$=\\frac{1}{\\pi}\\int_{\\arctan\\frac{1}{z}}^{\\pi}\\mathrm{d}\\theta\\int_{0}^{+\\infty}\\mathrm{e}^{-\\frac{r^2}{2}}r\\mathrm{d}r$\n$=\\frac{1}{\\pi}\\left(\\pi - \\arctan\\frac{1}{z}\\right)=\\frac{1}{\\pi}\\left(\\frac{\\pi}{2} + \\arctan z\\right)$；\n当 $z\\lt0$ 时，\n$F(z)=2\\int_{0}^{+\\infty}\\mathrm{d}x\\int_{\\frac{x}{z}}^{0}f(x,y)\\mathrm{d}y$\n$=\\frac{1}{\\pi}\\int_{\\arctan\\frac{1}{z}}^{0}\\mathrm{d}\\theta\\int_{0}^{+\\infty}\\mathrm{e}^{-\\frac{1}{2}r^2}r\\mathrm{d}r$\n$=\\frac{1}{\\pi}\\left(0 - \\arctan\\frac{1}{z}\\right)=\\frac{1}{\\pi}\\left(\\frac{\\pi}{2} + \\arctan z\\right)$。\n综上所述，$F(z)=\\frac{1}{\\pi}\\left(\\frac{\\pi}{2} + \\arctan z\\right)(-\\infty\\lt z\\lt+\\infty)$，所以 $Z$ 的概率密度为\n$f(z)=\\frac{1}{\\pi(1 + z^2)},-\\infty\\lt z\\lt+\\infty$，\n下同法一。\n【注】 当 $n = 1$ 时，$t$ 分布的概率密度为\n$\\frac{1}{\\pi(1 + t^2)},-\\infty\\lt t\\lt+\\infty$。\n这个特殊结论应该掌握。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9544/"
+        },
+        {
+          "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q10",
+          "no": 10,
+          "type": "single",
+          "stem": "已知总体 $X$ 的概率密度为\n$f(x)=\\frac{1}{2}\\mathrm{e}^{-|x - \\theta|},-\\infty\\lt x\\lt+\\infty$，\n$x_1\\leq x_2\\leq\\cdots\\leq x_{10}$ 是来自该总体的简单随机样本的观察值，则 $\\theta$ 的最大似然估计值为",
+          "options": [
+            {
+              "key": "A",
+              "text": "$\\frac{x_5}{2}$"
+            },
+            {
+              "key": "B",
+              "text": "$\\frac{x_6}{2}$"
+            },
+            {
+              "key": "C",
+              "text": "$\\frac{x_5 + x_6}{2}$"
+            },
+            {
+              "key": "D",
+              "text": "$\\frac{x_6 - x_5}{2}$"
+            }
+          ],
+          "answer": "C",
+          "explanation": "【分析】 似然函数为\n$L(\\theta)=\\prod_{i = 1}^{10}\\left(\\frac{1}{2}\\mathrm{e}^{-|x_i - \\theta|}\\right)=\\frac{1}{2^{10}}\\mathrm{e}^{-\\sum_{i = 1}^{10}|x_i - \\theta|}$，\n取对数为\n$\\ln L(\\theta)=-10\\ln 2 - \\sum_{i = 1}^{10}|x_i - \\theta|$。\n将样本观测值 $x_1,x_2,\\cdots,x_{10}$ 标于数轴上，设在数轴上 $\\theta$ 左边有 $k$ 个观测值，即\n$x_1\\leq x_2\\leq\\cdots\\leq x_k\\leq\\theta\\leq x_{k + 1}\\leq\\cdots\\leq x_{10}$，\n故\n$\\ln L(\\theta)=-10\\ln 2 - \\left[\\sum_{i = 1}^{k}(\\theta - x_i) + \\sum_{i = k + 1}^{10}(x_i - \\theta)\\right]$\n$=-10\\ln 2 + \\sum_{i = 1}^{k}x_i - \\sum_{i = k + 1}^{10}x_i + (10 - 2k)\\theta$，\n令 $\\frac{\\mathrm{d}[\\ln L(\\theta)]}{\\mathrm{d}\\theta}=10 - 2k = 0$，得 $k = 5$，则 $\\theta$ 的最大似然估计值 $\\hat{\\theta}$ 取在区间 $[x_5,x_6]$ 中的任一个值均可。选项中只有 C 中的 $\\frac{x_5 + x_6}{2}\\in[x_5,x_6]$。",
+          "score": 1,
+          "topics": [],
+          "images": [],
+          "_answerFrom": "correct-answer",
+          "sourceUrl": "https://noobdream.com/Practice/article/9545/"
+        }
+      ]
+    },
+    {
       "id": "blank",
-      "name": "一、填空题（6 题）",
+      "name": "二、填空题（6 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q11",
@@ -110,7 +426,7 @@
     },
     {
       "id": "essay",
-      "name": "二、材料分析题（6 题）",
+      "name": "三、材料分析题（6 题）",
       "questions": [
         {
           "id": "mock-math1-nnd-张宇终极预测8套卷-2025-set7-q17",
