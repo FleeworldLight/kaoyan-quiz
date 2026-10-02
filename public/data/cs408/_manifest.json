@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": "2026-10-02T09:33:02.380Z",
+ "generatedAt": "2026-10-02T11:14:16.680Z",
  "subject": {
   "id": "cs408",
   "name": "408",
@@ -274,93 +274,127 @@
     "answerSource": "本地 2009-2023答案/2023答案.pdf",
     "explanationMissing": 0,
     "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2024",
+    "year": 2024,
+    "title": "2024 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2024.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions），已与 neville-studio answers/2024-answer.pdf（官方参考答案扫描件）OCR 逐题互证",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2025",
+    "year": 2025,
+    "title": "2025 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2025.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions），已与 neville-studio answers/2025-answer.pdf（官方参考答案扫描件）OCR 逐题互证",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
    }
   ],
   "topics": [
    {
     "id": "co-存储系统",
     "name": "存储系统",
-    "count": 51
+    "count": 55
    },
    {
     "id": "ds-树与二叉树",
     "name": "树与二叉树",
-    "count": 49
+    "count": 52
    },
    {
     "id": "os-进程管理",
     "name": "进程管理",
-    "count": 43
+    "count": 46
    },
    {
     "id": "ds-图",
     "name": "图",
-    "count": 27
-   },
-   {
-    "id": "co-指令系统",
-    "name": "指令系统",
-    "count": 26
-   },
-   {
-    "id": "cn-数据链路层",
-    "name": "数据链路层",
-    "count": 25
+    "count": 31
    },
    {
     "id": "co-中央处理器",
     "name": "中央处理器",
-    "count": 24
+    "count": 29
+   },
+   {
+    "id": "cn-数据链路层",
+    "name": "数据链路层",
+    "count": 29
    },
    {
     "id": "cn-传输层",
     "name": "传输层",
-    "count": 24
+    "count": 29
    },
    {
-    "id": "cn-网络层",
-    "name": "网络层",
-    "count": 23
-   },
-   {
-    "id": "os-内存管理",
-    "name": "内存管理",
-    "count": 22
+    "id": "co-指令系统",
+    "name": "指令系统",
+    "count": 27
    },
    {
     "id": "os-文件管理",
     "name": "文件管理",
-    "count": 21
+    "count": 26
+   },
+   {
+    "id": "os-内存管理",
+    "name": "内存管理",
+    "count": 26
+   },
+   {
+    "id": "cn-网络层",
+    "name": "网络层",
+    "count": 26
    },
    {
     "id": "ds-排序",
     "name": "排序",
-    "count": 20
+    "count": 23
    },
    {
     "id": "co-数据的表示和运算",
     "name": "数据的表示和运算",
-    "count": 16
-   },
-   {
-    "id": "ds-绪论",
-    "name": "绪论",
-    "count": 13
+    "count": 20
    },
    {
     "id": "co-输入输出系统",
     "name": "输入输出系统",
-    "count": 13
+    "count": 15
    },
    {
     "id": "os-计算机系统概述",
     "name": "计算机系统概述",
-    "count": 12
+    "count": 14
+   },
+   {
+    "id": "ds-绪论",
+    "name": "绪论",
+    "count": 14
    },
    {
     "id": "ds-栈与队列",
     "name": "栈与队列",
-    "count": 11
+    "count": 12
    },
    {
     "id": "cn-计算机网络体系结构",
@@ -375,7 +409,7 @@
    {
     "id": "ds-查找",
     "name": "查找",
-    "count": 9
+    "count": 10
    },
    {
     "id": "cn-物理层",
@@ -385,27 +419,27 @@
    {
     "id": "cn-应用层",
     "name": "应用层",
+    "count": 7
+   },
+   {
+    "id": "ds-线性表",
+    "name": "线性表",
     "count": 6
    },
    {
     "id": "co-总线",
     "name": "总线",
-    "count": 5
-   },
-   {
-    "id": "ds-线性表",
-    "name": "线性表",
-    "count": 4
+    "count": 6
    },
    {
     "id": "os-输入输出管理",
     "name": "输入输出管理",
-    "count": 4
+    "count": 5
    },
    {
     "id": "ds-串",
     "name": "串",
-    "count": 1
+    "count": 2
    }
   ]
  },
@@ -425,18 +459,38 @@
    2020,
    2021,
    2022,
-   2023
+   2023,
+   2024,
+   2025
   ],
-  "count": 15,
-  "note": "2009–2023 全部 15 年，每年 40 单选 + 7 综合"
+  "count": 17,
+  "note": "2009–2025 全部 17 年，每年 40 单选 + 7 综合"
  },
  "knownLimitations": [
   "所有题目均未采集图片（images 为空）。408 真题中相当一部分题目带插图（树/图/表格/Cache 结构图等），此类题目的题干会以『如下图』『如下表』引用缺失的图，需查阅原卷 PDF。",
   "有 3 道单选题的 A/B/C/D 四个选项本身就是图片（2009 q4、2010 q3、2017 q8），options 文本为空字符串，题干保留原文。",
   "选项与题干为 PDF 文本层抽取结果，部分公式/上下标（如 log2n、2^n、n^2）在文本层中丢失上下标格式，显示为 log2n、O(n2) 等。",
-  "少数解析在源 PDF 文本层中缺失（见各年 explanationMissing 字段）。"
+  "少数解析在源 PDF 文本层中缺失（见各年 explanationMissing 字段）。",
+  "2024 / 2025 的官方参考答案 PDF（answers/2024-answer.pdf、answers/2025-answer.pdf）是**扫描图片**，没有文本层，因此这两年的答案改用两个独立文本来源（csgraduates.com 408 真题精讲、408os.cn 题库）并已与官方扫描件 OCR 结果逐题互证；详见各年 JSON 的 answerVerification 字段。"
  ],
- "answerSourceNote": "答案与解析取自本地 PDF（2009-2023答案/、2009-2016真题&答案/）。本地 2021 答案 PDF 为扫描件无法提取文本，2021 年答案改用 JDC2001/408 仓库的 2021答案.pdf。",
+ "answerSourceNote": "2009–2023：答案与解析取自本地 PDF（2009-2023答案/、2009-2016真题&答案/）；本地 2021 答案 PDF 为扫描件无法提取文本，2021 年答案改用 JDC2001/408 仓库的 2021答案.pdf。2024–2025：neville-studio answers/<year>-answer.pdf 为扫描件（无文本层），答案改用 csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions）双文本源，并以官方扫描件 OCR 结果仲裁，三方 0 冲突。",
+ "verificationSummary": {
+  "2024": {
+   "singleAnswers": "40/40",
+   "sources": 3,
+   "conflicts": 0,
+   "officialScanReadable": "26/40",
+   "essayAnswers": "7/7"
+  },
+  "2025": {
+   "singleAnswers": "40/40",
+   "sources": 3,
+   "conflicts": 0,
+   "officialScanReadable": "30/40",
+   "essayAnswers": "7/7"
+  },
+  "method": "tools/build-ans-2425.mjs（生成+一致性断言，分歧即中止）、tools/compare-2425.mjs（多源比对报告）"
+ },
  "diagnostics": [
   "2009: single=40/40 essay=7/7 letters=40[S-答案清单] expl=39(O:neville-ans-2009.txt E6-解析标记) essayAns=7 noAnswer=0 emptyOpt=1 noTopic=13 quality=medium conflicts=[] neville=1 xconflicts=[]",
   "2010: single=40/40 essay=7/7 letters=40[B4-答案区首字母] expl=40(E3-解析区(标题)) essayAns=7 noAnswer=0 emptyOpt=1 noTopic=12 quality=medium conflicts=[] neville=0 xconflicts=[]",
@@ -452,7 +506,9 @@
   "2020: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=38(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=18 quality=high conflicts=[q40:B1=D/P-=C]",
   "2021: single=40/40 essay=7/7 letters=40[B2-字母+【解析】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=16 quality=high conflicts=[]",
   "2022: single=40/40 essay=7/7 letters=40[B4-答案区首字母] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=14 quality=high conflicts=[]",
-  "2023: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=15 quality=high conflicts=[q40:B1=D/P-=A]"
+  "2023: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=15 quality=high conflicts=[q40:B1=D/P-=A]",
+  "2024: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=18 quality=high conflicts=[]",
+  "2025: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=15 quality=high conflicts=[]"
  ],
  "defects": [
   {

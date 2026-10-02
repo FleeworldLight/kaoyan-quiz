@@ -1,9 +1,10 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 const CACHE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
 const OUTDIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
 const NEVILLE_ANS = { 2009: "neville-ans-2009.txt", 2010: "neville-ans-2010.txt", 2011: "neville-ans-2011.txt", 2013: "neville-ans-2013.txt" };
-const YEARS = Array.from({ length: 15 }, (_, i) => 2009 + i);
+// 2009–2023：本地/公开 PDF 文本层答案；2024–2025：官方答案 PDF 为扫描件，改用多源互证答案（见 ANS_CFG / ESSAY_CFG）
+const YEARS = Array.from({ length: 17 }, (_, i) => 2009 + i);
 
 /* ================= 试卷解析 ================= */
 function cleanPaper(raw) {
@@ -236,6 +237,42 @@ const ANS_CFG = {
   2021: ["jdc-ans-2021.txt", "JDC2001/408 答案/2021答案.pdf（本地 2021答案.pdf 为扫描件不可用）"],
   2022: ["ans-2022.txt", "本地 2009-2023答案/2022答案.pdf"],
   2023: ["ans-2023.txt", "本地 2009-2023答案/2023答案.pdf"],
+  2024: ["ans-2425-2024.txt", "csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions），已与 neville-studio answers/2024-answer.pdf（官方参考答案扫描件）OCR 逐题互证"],
+  2025: ["ans-2425-2025.txt", "csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions），已与 neville-studio answers/2025-answer.pdf（官方参考答案扫描件）OCR 逐题互证"],
+};
+// 2024/2025 的综合题参考答案单独成文件（来源同上，csgraduates「解答题」章节）
+const ESSAY_CFG = {
+  2024: "ans-2425-2024-essay.txt",
+  2025: "ans-2425-2025-essay.txt",
+};
+// 2024/2025 综合题科目：由 csgraduates 的「解答题」章节分组实证
+const ESSAY_SUBJ = {
+  2024: { 41: "ds", 42: "ds", 43: "co", 44: "co", 45: "os", 46: "os", 47: "cn" },
+  2025: { 41: "ds", 42: "ds", 43: "co", 44: "co", 45: "os", 46: "os", 47: "cn" },
+};
+const ANS_URL = {
+  jdc: "https://github.com/JDC2001/408",
+  local: "https://github.com/suhan42/cs-408",
+  csgrad: "https://github.com/dyuebug/csgraduates",
+  os408: "https://github.com/kaichan-kc/408-questions",
+};
+function answerSourcesFor(y) {
+  const [afile, adesc] = ANS_CFG[y];
+  const base = [
+    { role: "题干与选项", name: `papers-rebuild/${y}.pdf（重构版真题）`, url: `https://github.com/neville-studio/408-exam-paper/blob/main/papers-rebuild/${y}.pdf` },
+    { role: "答案与解析", name: adesc, url: afile.startsWith("jdc") ? ANS_URL.jdc : afile.startsWith("ans-2425") ? ANS_URL.csgrad : ANS_URL.local },
+  ];
+  if (afile.startsWith("ans-2425")) {
+    base.push({ role: "答案第二来源（互证）", name: "408os.cn 题库 kaichan-kc/408-questions 408_questions_by_year/" + y + ".json", url: ANS_URL.os408 });
+    base.push({ role: "答案仲裁来源（官方参考答案扫描件，Windows OCR）", name: `answers/${y}-answer.pdf`, url: `https://github.com/neville-studio/408-exam-paper/blob/main/answers/${y}-answer.pdf` });
+    base.push({ role: "综合题参考答案", name: `tools/cache/${ESSAY_CFG[y]}（csgraduates.com「解答题」章节）`, url: ANS_URL.csgrad });
+  }
+  return base;
+}
+// 2024/2025 答案互证结论（由 tools/compare-2425.mjs 计算，写入卷级 answerVerification）
+const ANSWER_VERIFICATION = {
+  2024: { officialScannable: 26, sources: ["csgraduates.com 408 真题精讲（单选 40/40 + 41–47 参考解答 7/7）", "408os.cn 题库（单选 40/40）", "neville-studio answers/2024-answer.pdf（官方参考答案扫描件，OCR 可读 26/40）"] },
+  2025: { officialScannable: 30, sources: ["csgraduates.com 408 真题精讲（单选 40/40 + 41–47 参考解答 7/7）", "408os.cn 题库（单选 40/40）", "neville-studio answers/2025-answer.pdf（官方参考答案扫描件，OCR 可读 30/40）"] },
 };
 
 /* ================= 知识点 ================= */
@@ -312,11 +349,13 @@ for (const y of YEARS) {
   const [afile, adesc] = ANS_CFG[y];
   const atext = norm(fs.readFileSync(`${CACHE}/${afile}`, "utf8"));
   const A = extractAnswers(atext, y);
-  const eSegs = splitByMarkers(atext, [41, 42, 43, 44, 45, 46, 47]) || new Map();
+  // 综合题参考答案：2024/2025 单独成文件；其余年份从答案 PDF 的 41–47 段落切分
+  const essaySrcText = ESSAY_CFG[y] ? norm(fs.readFileSync(`${CACHE}/${ESSAY_CFG[y]}`, "utf8")) : atext;
+  const eSegs = splitByMarkers(essaySrcText, [41, 42, 43, 44, 45, 46, 47]) || new Map();
   const essayAns = new Map();
   for (const [n, seg] of eSegs) {
     let s = seg.trim();
-    const m = s.match(/^[（(]?\s*(?:【答案解析】|【解析】|解答|解析)[:：]?\s*[）)]?/);
+    const m = s.match(/^[（(]?\s*(?:【答案解析】|【参考答案】|【参考答案及解析】|【答案】|【解析】|解答|解析)[:：]?\s*[）)]?/);
     if (m) s = s.slice(m[0].length).trim();
     essayAns.set(n, s);
   }
@@ -349,7 +388,7 @@ for (const y of YEARS) {
     const m = stem.match(/^[（(]\s*(\d+)\s*分\s*[）)]\s*/);
     const score = m ? Number(m[1]) : 0;
     const cleanStem = m ? stem.slice(m[0].length).trim() : stem;
-    const subj = pickSubjectByContent(cleanStem);
+    const subj = (ESSAY_SUBJ[y] && ESSAY_SUBJ[y][n]) || pickSubjectByContent(cleanStem);
     const topics = subj ? pickTopic(subj, cleanStem) : [];
     for (const tp of topics) topicCount.set(tp, (topicCount.get(tp) || 0) + 1);
     const ans = essayAns.get(n) || "";
@@ -370,15 +409,22 @@ for (const y of YEARS) {
     title: `${y} 年全国硕士研究生招生考试 计算机学科专业基础综合（408）`,
     duration: 180, totalScore: 150, quality,
     source: { name: "neville-studio/408-exam-paper", url: "https://github.com/neville-studio/408-exam-paper" },
-    sources: [
-      { role: "题干与选项", name: `papers-rebuild/${y}.pdf（重构版真题）`, url: `https://github.com/neville-studio/408-exam-paper/blob/main/papers-rebuild/${y}.pdf` },
-      { role: "答案与解析", name: adesc, url: afile.startsWith("jdc") ? "https://github.com/JDC2001/408" : "https://github.com/suhan42/cs-408" },
-    ],
+    sources: answerSourcesFor(y),
     sections: [
       { id: "choice", name: "一、单项选择题", questions: questions.filter(q => q.type === "single") },
       { id: "essay", name: "二、综合应用题", questions: questions.filter(q => q.type === "essay") },
     ],
   };
+  if (ANSWER_VERIFICATION[y]) {
+    paper.answerVerification = {
+      method: "多源互证（两个独立文本来源 + 官方参考答案扫描件 OCR 仲裁）",
+      sources: ANSWER_VERIFICATION[y].sources,
+      officialScanReadable: `${ANSWER_VERIFICATION[y].officialScannable}/40`,
+      conflicts: [],
+      note: `三个来源在可读范围内逐题一致，0 冲突。官方参考答案 PDF（answers/${y}-answer.pdf）无文本层，经 Windows OCR 识别出的 ${ANSWER_VERIFICATION[y].officialScannable} 道选择题答案与上述文本源完全相同。综合题参考答案来自 csgraduates.com「解答题」章节，与官方扫描件「答案要点」内容一致。`,
+      reproducedBy: "node tools/build-ans-2425.mjs && node tools/compare-2425.mjs",
+    };
+  }
   fs.writeFileSync(path.join(OUTDIR, `${y}.json`), JSON.stringify(paper, null, 1), "utf8");
   papers.push({
     id: `cs408-${y}`, year: y, title: paper.title, file: `cs408/${y}.json`,
@@ -410,14 +456,20 @@ const manifest = {
     papers,
     topics: [...topicCount.entries()].map(([id, count]) => ({ id, name: id.split("-").slice(1).join("-"), count })).sort((a, b) => b.count - a.count),
   },
-  coverage: { years: YEARS, count: YEARS.length, note: "2009–2023 全部 15 年，每年 40 单选 + 7 综合" },
+  coverage: { years: YEARS, count: YEARS.length, note: "2009–2025 全部 17 年，每年 40 单选 + 7 综合" },
   knownLimitations: [
     "所有题目均未采集图片（images 为空）。408 真题中相当一部分题目带插图（树/图/表格/Cache 结构图等），此类题目的题干会以『如下图』『如下表』引用缺失的图，需查阅原卷 PDF。",
     "有 3 道单选题的 A/B/C/D 四个选项本身就是图片（2009 q4、2010 q3、2017 q8），options 文本为空字符串，题干保留原文。",
     "选项与题干为 PDF 文本层抽取结果，部分公式/上下标（如 log2n、2^n、n^2）在文本层中丢失上下标格式，显示为 log2n、O(n2) 等。",
     "少数解析在源 PDF 文本层中缺失（见各年 explanationMissing 字段）。",
+    "2024 / 2025 的官方参考答案 PDF（answers/2024-answer.pdf、answers/2025-answer.pdf）是**扫描图片**，没有文本层，因此这两年的答案改用两个独立文本来源（csgraduates.com 408 真题精讲、408os.cn 题库）并已与官方扫描件 OCR 结果逐题互证；详见各年 JSON 的 answerVerification 字段。",
   ],
-  answerSourceNote: "答案与解析取自本地 PDF（2009-2023答案/、2009-2016真题&答案/）。本地 2021 答案 PDF 为扫描件无法提取文本，2021 年答案改用 JDC2001/408 仓库的 2021答案.pdf。",
+  answerSourceNote: "2009–2023：答案与解析取自本地 PDF（2009-2023答案/、2009-2016真题&答案/）；本地 2021 答案 PDF 为扫描件无法提取文本，2021 年答案改用 JDC2001/408 仓库的 2021答案.pdf。2024–2025：neville-studio answers/<year>-answer.pdf 为扫描件（无文本层），答案改用 csgraduates.com 408 真题精讲（dyuebug/csgraduates）+ 408os.cn 题库（kaichan-kc/408-questions）双文本源，并以官方扫描件 OCR 结果仲裁，三方 0 冲突。",
+  verificationSummary: {
+    2024: { singleAnswers: "40/40", sources: 3, conflicts: 0, officialScanReadable: "26/40", essayAnswers: "7/7" },
+    2025: { singleAnswers: "40/40", sources: 3, conflicts: 0, officialScanReadable: "30/40", essayAnswers: "7/7" },
+    method: "tools/build-ans-2425.mjs（生成+一致性断言，分歧即中止）、tools/compare-2425.mjs（多源比对报告）",
+  },
   diagnostics, defects: defectsAll,
 };
 fs.writeFileSync(path.join(OUTDIR, "_manifest.json"), JSON.stringify(manifest, null, 1), "utf8");

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * parse-english.mjs — 考研英语（一）真题 -> 结构化题库 JSON
  * 风格参照 tools/parse-math.mjs
  *
@@ -8,6 +8,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { buildEnglishManifest } from "./english-manifest.mjs";
 
 const CACHE = "tools/cache/english/solutions/英语一";
 const OUTS = "public/data/english1";
@@ -914,35 +915,19 @@ for (const year of Object.keys(PAPERS).map(Number).sort((a, b) => a - b)) {
   });
 }
 
-/* 知识点：只统计真正打上标签的题 */
-const TOPIC_NAMES = {
-  "完型-逻辑关系": "完型 · 逻辑关系", "完型-词汇辨析": "完型 · 词汇辨析",
-  "阅读-细节题": "阅读 · 细节题", "阅读-推断题": "阅读 · 推断题",
-  "阅读-主旨题": "阅读 · 主旨题", "阅读-态度题": "阅读 · 态度题",
-  "阅读-词义句意题": "阅读 · 词义句意题",
-  "新题型-排序/匹配": "新题型 · 排序/匹配", "翻译-长难句": "翻译 · 长难句",
-  "写作-应用文": "写作 · 应用文", "写作-图画作文": "写作 · 图画作文",
-};
-const topics = [...topicCount.entries()].sort((a, b) => b[1] - a[1])
-  .map(([id, count]) => ({ id, name: TOPIC_NAMES[id] || id, count }));
-
-const manifest = {
-  id: "english1", name: "英语一", fullName: "考研英语（一）",
-  color: "#0ea5e9", icon: "EN", examDuration: 180, examTotalScore: 100,
-  sections: SEC_DEFS.map((d) => ({ id: d.id, name: d.name })),
-  papers, topics,
-  generatedAt: new Date().toISOString(),
-  note: "2024 年真题素材缺失：cache 中 2024/english1_2024 与 2024_markdown 两个目录下的文件标题均为「2022 年」，正文与 2022 真题一致（两目录哈希相同），故未产出 2024.json。",
-};
-fs.mkdirSync(OUTS, { recursive: true });
-fs.writeFileSync(path.join(OUTS, "_manifest.json"), JSON.stringify({ subject: "english1", ...manifest }, null, 1), "utf8");
+/* manifest 统一由 tools/english-manifest.mjs 扫描 public/data/english1/*.json 生成，
+   这样它总是覆盖目录下实际存在的全部年份（含 parse-english-old.mjs 产出的 2010–2016），
+   不会被本脚本的 7 卷覆盖。 */
+const manifest = buildEnglishManifest(OUTS, {
+  extraNotes: skipped.length ? ["本次 parse-english.mjs 未产出的年份：" + skipped.join("；")] : [],
+});
 
 if (IS_MAIN) console.log(report.join("\n"));
 if (IS_MAIN && skipped.length) console.log("\n未产出:\n  " + skipped.join("\n  "));
 if (IS_MAIN) console.log("\n卷数:", papers.length, "总题:", papers.reduce((s, p) => s + p.questionCount, 0),
   "选择题:", papers.reduce((s, p) => s + p.singleCount, 0),
   "主观题:", papers.reduce((s, p) => s + p.essayCount, 0));
-if (IS_MAIN) console.log("知识点:", topics.map((t) => t.id + "=" + t.count).join(" "));
+if (IS_MAIN) console.log("知识点:", manifest.topics.map((t) => t.id + "=" + t.count).join(" "));
 export { PAPERS, CACHE, sectionHeaders, parseCloze, parseReading, parseNewtype, parseTranslation, parseWriting, extractAnswerEntries, stripMd, SELF_SOL_MARK, SEC_DEFS, clozeQuestionLine, clozeRegionEnd, scanMarks, splitSeq, normalizeCloze, pickOptions, mineMarks, findAnswers, qStartRe };
 
 

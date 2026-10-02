@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "react";
+﻿import { useSyncExternalStore } from "react";
 
 const KEY = "kq:state:v1";
 
@@ -9,7 +9,7 @@ const EMPTY = {
   notes: {},      // qid -> string
   records: [],    // { id, at, subject, mode, paperId, total, correct, blank, durationSec, topic }
   exams: {},      // `${subject}-${year}` -> { answers:{}, startedAt, submittedAt, flags:{} }
-  settings: { fontSize: "normal", instantReveal: true, shuffleOptions: false },
+  settings: { instantReveal: true, autoScroll: true, shuffleOptions: false, overtimeHint: true },
 };
 
 function load() {
