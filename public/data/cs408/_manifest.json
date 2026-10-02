@@ -1,0 +1,486 @@
+{
+ "version": 1,
+ "generatedAt": "2026-10-02T09:33:02.380Z",
+ "subject": {
+  "id": "cs408",
+  "name": "408",
+  "fullName": "计算机学科专业基础综合（408）",
+  "color": "#0ea5e9",
+  "icon": "💻",
+  "examDuration": 180,
+  "examTotalScore": 150,
+  "sections": [
+   {
+    "id": "choice",
+    "name": "单项选择题"
+   },
+   {
+    "id": "essay",
+    "name": "综合应用题"
+   }
+  ],
+  "papers": [
+   {
+    "id": "cs408-2009",
+    "year": 2009,
+    "title": "2009 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2009.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "medium",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009年计算机408真题及答案解析.pdf（题干+答案）",
+    "explanationMissing": 1,
+    "emptyOptionQuestions": 1
+   },
+   {
+    "id": "cs408-2010",
+    "year": 2010,
+    "title": "2010 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2010.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "medium",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2010答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 1
+   },
+   {
+    "id": "cs408-2011",
+    "year": 2011,
+    "title": "2011 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2011.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2011年计算机408真题及答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2012",
+    "year": 2012,
+    "title": "2012 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2012.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2012答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2013",
+    "year": 2013,
+    "title": "2013 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2013.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2013年计算机408真题及答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2014",
+    "year": 2014,
+    "title": "2014 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2014.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2014答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2015",
+    "year": 2015,
+    "title": "2015 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2015.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2015答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2016",
+    "year": 2016,
+    "title": "2016 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2016.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2016答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2017",
+    "year": 2017,
+    "title": "2017 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2017.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "medium",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2017答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 1
+   },
+   {
+    "id": "cs408-2018",
+    "year": 2018,
+    "title": "2018 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2018.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2018答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2019",
+    "year": 2019,
+    "title": "2019 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2019.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2019答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2020",
+    "year": 2020,
+    "title": "2020 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2020.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2020答案.pdf",
+    "explanationMissing": 1,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2021",
+    "year": 2021,
+    "title": "2021 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2021.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "JDC2001/408 答案/2021答案.pdf（本地 2021答案.pdf 为扫描件不可用）",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2022",
+    "year": 2022,
+    "title": "2022 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2022.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2022答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   },
+   {
+    "id": "cs408-2023",
+    "year": 2023,
+    "title": "2023 年全国硕士研究生招生考试 计算机学科专业基础综合（408）",
+    "file": "cs408/2023.json",
+    "questionCount": 47,
+    "choiceCount": 40,
+    "essayCount": 7,
+    "totalScore": 150,
+    "duration": 180,
+    "quality": "high",
+    "source": "neville-studio/408-exam-paper",
+    "sourceUrl": "https://github.com/neville-studio/408-exam-paper",
+    "answerSource": "本地 2009-2023答案/2023答案.pdf",
+    "explanationMissing": 0,
+    "emptyOptionQuestions": 0
+   }
+  ],
+  "topics": [
+   {
+    "id": "co-存储系统",
+    "name": "存储系统",
+    "count": 51
+   },
+   {
+    "id": "ds-树与二叉树",
+    "name": "树与二叉树",
+    "count": 49
+   },
+   {
+    "id": "os-进程管理",
+    "name": "进程管理",
+    "count": 43
+   },
+   {
+    "id": "ds-图",
+    "name": "图",
+    "count": 27
+   },
+   {
+    "id": "co-指令系统",
+    "name": "指令系统",
+    "count": 26
+   },
+   {
+    "id": "cn-数据链路层",
+    "name": "数据链路层",
+    "count": 25
+   },
+   {
+    "id": "co-中央处理器",
+    "name": "中央处理器",
+    "count": 24
+   },
+   {
+    "id": "cn-传输层",
+    "name": "传输层",
+    "count": 24
+   },
+   {
+    "id": "cn-网络层",
+    "name": "网络层",
+    "count": 23
+   },
+   {
+    "id": "os-内存管理",
+    "name": "内存管理",
+    "count": 22
+   },
+   {
+    "id": "os-文件管理",
+    "name": "文件管理",
+    "count": 21
+   },
+   {
+    "id": "ds-排序",
+    "name": "排序",
+    "count": 20
+   },
+   {
+    "id": "co-数据的表示和运算",
+    "name": "数据的表示和运算",
+    "count": 16
+   },
+   {
+    "id": "ds-绪论",
+    "name": "绪论",
+    "count": 13
+   },
+   {
+    "id": "co-输入输出系统",
+    "name": "输入输出系统",
+    "count": 13
+   },
+   {
+    "id": "os-计算机系统概述",
+    "name": "计算机系统概述",
+    "count": 12
+   },
+   {
+    "id": "ds-栈与队列",
+    "name": "栈与队列",
+    "count": 11
+   },
+   {
+    "id": "cn-计算机网络体系结构",
+    "name": "计算机网络体系结构",
+    "count": 11
+   },
+   {
+    "id": "co-计算机系统概述",
+    "name": "计算机系统概述",
+    "count": 10
+   },
+   {
+    "id": "ds-查找",
+    "name": "查找",
+    "count": 9
+   },
+   {
+    "id": "cn-物理层",
+    "name": "物理层",
+    "count": 7
+   },
+   {
+    "id": "cn-应用层",
+    "name": "应用层",
+    "count": 6
+   },
+   {
+    "id": "co-总线",
+    "name": "总线",
+    "count": 5
+   },
+   {
+    "id": "ds-线性表",
+    "name": "线性表",
+    "count": 4
+   },
+   {
+    "id": "os-输入输出管理",
+    "name": "输入输出管理",
+    "count": 4
+   },
+   {
+    "id": "ds-串",
+    "name": "串",
+    "count": 1
+   }
+  ]
+ },
+ "coverage": {
+  "years": [
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023
+  ],
+  "count": 15,
+  "note": "2009–2023 全部 15 年，每年 40 单选 + 7 综合"
+ },
+ "knownLimitations": [
+  "所有题目均未采集图片（images 为空）。408 真题中相当一部分题目带插图（树/图/表格/Cache 结构图等），此类题目的题干会以『如下图』『如下表』引用缺失的图，需查阅原卷 PDF。",
+  "有 3 道单选题的 A/B/C/D 四个选项本身就是图片（2009 q4、2010 q3、2017 q8），options 文本为空字符串，题干保留原文。",
+  "选项与题干为 PDF 文本层抽取结果，部分公式/上下标（如 log2n、2^n、n^2）在文本层中丢失上下标格式，显示为 log2n、O(n2) 等。",
+  "少数解析在源 PDF 文本层中缺失（见各年 explanationMissing 字段）。"
+ ],
+ "answerSourceNote": "答案与解析取自本地 PDF（2009-2023答案/、2009-2016真题&答案/）。本地 2021 答案 PDF 为扫描件无法提取文本，2021 年答案改用 JDC2001/408 仓库的 2021答案.pdf。",
+ "diagnostics": [
+  "2009: single=40/40 essay=7/7 letters=40[S-答案清单] expl=39(O:neville-ans-2009.txt E6-解析标记) essayAns=7 noAnswer=0 emptyOpt=1 noTopic=13 quality=medium conflicts=[] neville=1 xconflicts=[]",
+  "2010: single=40/40 essay=7/7 letters=40[B4-答案区首字母] expl=40(E3-解析区(标题)) essayAns=7 noAnswer=0 emptyOpt=1 noTopic=12 quality=medium conflicts=[] neville=0 xconflicts=[]",
+  "2011: single=40/40 essay=7/7 letters=40[P-逐题] expl=36(E2-逐题首段) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=13 quality=high conflicts=[] neville=0 xconflicts=[]",
+  "2012: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=12 quality=high conflicts=[q40:B1=D/P-=B]",
+  "2013: single=40/40 essay=7/7 letters=40[S-答案清单] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=16 quality=high conflicts=[q40:S-=A/P-=D] neville=0 xconflicts=[]",
+  "2014: single=40/40 essay=7/7 letters=40[S-答案清单] expl=40(E3-解析区(标题)) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=14 quality=high conflicts=[]",
+  "2015: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=18 quality=high conflicts=[q40:B1=C/P-=A]",
+  "2016: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=13 quality=high conflicts=[q40:B1=C/P-=D]",
+  "2017: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=1 noTopic=19 quality=medium conflicts=[q40:B1=C/P-=B]",
+  "2018: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=22 quality=high conflicts=[q40:B1=D/P-=B]",
+  "2019: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=13 quality=high conflicts=[]",
+  "2020: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=38(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=18 quality=high conflicts=[q40:B1=D/P-=C]",
+  "2021: single=40/40 essay=7/7 letters=40[B2-字母+【解析】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=16 quality=high conflicts=[]",
+  "2022: single=40/40 essay=7/7 letters=40[B4-答案区首字母] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=14 quality=high conflicts=[]",
+  "2023: single=40/40 essay=7/7 letters=40[B1-【参考答案】] expl=40(E1-随答案块) essayAns=7 noAnswer=0 emptyOpt=0 noTopic=15 quality=high conflicts=[q40:B1=D/P-=A]"
+ ],
+ "defects": [
+  {
+   "year": 2009,
+   "items": [
+    {
+     "no": 4,
+     "issue": "选项为图片/未采集，options 文本为空"
+    }
+   ]
+  },
+  {
+   "year": 2010,
+   "items": [
+    {
+     "no": 3,
+     "issue": "选项为图片/未采集，options 文本为空"
+    }
+   ]
+  },
+  {
+   "year": 2017,
+   "items": [
+    {
+     "no": 8,
+     "issue": "选项为图片/未采集，options 文本为空"
+    }
+   ]
+  }
+ ]
+}

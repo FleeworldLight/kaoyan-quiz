@@ -1,0 +1,10 @@
+﻿import fs from "node:fs";
+const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const p = JSON.parse(fs.readFileSync(`${DIR}/2016.json`, "utf8"));
+const es = p.sections.find(s=>s.id==="essay").questions;
+const q = es[0];
+console.log(JSON.stringify({id:q.id,no:q.no,type:q.type,stem:q.stem.slice(0,120),answer:q.answer.slice(0,200),score:q.score,topics:q.topics}, null, 1));
+console.log("--- 2021 essay q47 ---");
+const p2 = JSON.parse(fs.readFileSync(`${DIR}/2021.json`, "utf8"));
+const q2 = p2.sections.find(s=>s.id==="essay").questions[6];
+console.log(JSON.stringify({id:q2.id,stem:q2.stem.slice(0,100),answer:q2.answer.slice(0,180),score:q2.score,topics:q2.topics}, null, 1));

@@ -1,0 +1,369 @@
+{
+ "subject": "english1",
+ "id": "english1",
+ "name": "英语一",
+ "fullName": "考研英语（一）",
+ "color": "#0ea5e9",
+ "icon": "EN",
+ "examDuration": 180,
+ "examTotalScore": 100,
+ "sections": [
+  {
+   "id": "cloze",
+   "name": "Section I Use of English 完型填空"
+  },
+  {
+   "id": "reading",
+   "name": "Section II Reading Comprehension Part A 阅读理解"
+  },
+  {
+   "id": "newtype",
+   "name": "Section II Reading Comprehension Part B 新题型"
+  },
+  {
+   "id": "translation",
+   "name": "Section III Translation 翻译"
+  },
+  {
+   "id": "writing",
+   "name": "Section IV Writing 写作"
+  }
+ ],
+ "papers": [
+  {
+   "id": "english1-2017",
+   "year": 2017,
+   "title": "2017 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2017.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 50,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.962,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2018",
+   "year": 2018,
+   "title": "2018 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2018.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 50,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.962,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2019",
+   "year": 2019,
+   "title": "2019 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2019.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 51,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.981,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2020",
+   "year": 2020,
+   "title": "2020 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2020.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 52,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 1,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2021",
+   "year": 2021,
+   "title": "2021 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2021.json",
+   "questionCount": 47,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 2,
+   "answerCount": 45,
+   "choiceCount": 40,
+   "totalScore": 60,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.957,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2022",
+   "year": 2022,
+   "title": "2022 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2022.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 50,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.962,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  },
+  {
+   "id": "english1-2023",
+   "year": 2023,
+   "title": "2023 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2023.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "answerCount": 10,
+   "choiceCount": 40,
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "low",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "answerCoverage": 0.192,
+   "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
+   "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
+  }
+ ],
+ "topics": [
+  {
+   "id": "完型-词汇辨析",
+   "name": "完型 · 词汇辨析",
+   "count": 95
+  },
+  {
+   "id": "完型-逻辑关系",
+   "name": "完型 · 逻辑关系",
+   "count": 45
+  },
+  {
+   "id": "新题型-排序/匹配",
+   "name": "新题型 · 排序/匹配",
+   "count": 35
+  },
+  {
+   "id": "阅读-细节题",
+   "name": "阅读 · 细节题",
+   "count": 34
+  },
+  {
+   "id": "翻译-长难句",
+   "name": "翻译 · 长难句",
+   "count": 30
+  },
+  {
+   "id": "阅读-推断题",
+   "name": "阅读 · 推断题",
+   "count": 15
+  },
+  {
+   "id": "阅读-态度题",
+   "name": "阅读 · 态度题",
+   "count": 10
+  },
+  {
+   "id": "阅读-主旨题",
+   "name": "阅读 · 主旨题",
+   "count": 9
+  },
+  {
+   "id": "写作-应用文",
+   "name": "写作 · 应用文",
+   "count": 7
+  },
+  {
+   "id": "写作-图画作文",
+   "name": "写作 · 图画作文",
+   "count": 7
+  },
+  {
+   "id": "阅读-词义句意题",
+   "name": "阅读 · 词义句意题",
+   "count": 5
+  }
+ ],
+ "generatedAt": "2026-10-02T09:52:19.976Z",
+ "note": "2024 年真题素材缺失：cache 中 2024/english1_2024 与 2024_markdown 两个目录下的文件标题均为「2022 年」，正文与 2022 真题一致（两目录哈希相同），故未产出 2024.json。"
+}
