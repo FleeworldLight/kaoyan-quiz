@@ -271,7 +271,9 @@ function buildMarkerChain(pages) {
 /* ---------- 挂图 ---------- */
 const CAP_RE = /题\s*(\d{1,2})(?:\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)]))?\s*(?:[～~至]\s*(\d{1,2})\s*题?)?\s*[图表]/;
 /** 题干/选项里「引用了一张图」的措辞 */
-const FIG_RE = /如下图|如图|下图|上图|图中|右图|左图|如下表|下表|表所示|如下所示|树形|示意图|结构图|流程图|时序图|编码图|如下|下面[^，。；]{0,4}图|下列[^，。；]{0,4}图|题\s*\d{1,2}\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)])?\s*(?:[～~\-—－至]\s*\d{1,2})?\s*题?\s*[图表]/;
+const FIG_RE = /如下图|如图|下图|上图|图中|右图|左图|如下表|下表|表所示|如下所示|树形|示意图|结构图|流程图|时序图|编码图|如下|下面[^，。；]{0,4}图|下列(?:图|[^，。；]{0,2}图)|题\s*\d{1,2}\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)])?\s*(?:[～~\-—－至]\s*\d{1,2})?\s*题?\s*[图表]/;
+/** 「强」图引用：基本可以断定这道题需要一张插图（不同于「如下」这种可能是代码/表格的弱信号） */
+const STRONG_FIG_RE = /如下图|如图|下图|上图|图中|右图|左图|树形|示意图|结构图|流程图|时序图|编码图|题\s*\d{1,2}\s*(?:[-\u2010-\u2015][a-zA-Z]|[（(][a-zA-Z][）)])?\s*(?:[～~\-—－至]\s*\d{1,2})?\s*题?\s*[图表]/;
 const TABLE_RE = /如下表|下表|表所示|题\s*\d{1,2}\s*表/;
 /** 注意：来源 PDF 的文本层会在汉字之间插空格（如「如 右 图 所 示」），匹配前先去掉空白 */
 const squash = (s) => String(s || "").replace(/\s+/g, "");
@@ -496,7 +498,7 @@ const finalImages = new Map(); // `${year}|${no}` -> files
 for (const y of YEARS) {
   for (const sec of papers[y].sections) for (const q of sec.questions) {
     const own = [...(byYearNo.get(`${y}|${q.no}`) || [])];
-    const full = squash([q.stem || "", ...(q.options || []).map((o) => o.text || "")].join(""));
+    const full = squash(q.stem || ""); // 只按题干判断引用，避免选项里的排版残留造成误挂
     for (const m of full.matchAll(REF_RE)) {
       const a0 = Number(m[1]), b0 = m[2] ? Number(m[2]) : a0;
       for (let k = a0; k <= b0; k++) {
@@ -542,7 +544,8 @@ for (const y of YEARS) {
     const got = (finalImages.get(`${y}|${q.no}`) || []).length;
     if (!kws.length || got) continue;
     const isTable = !/图/.test(kws.join("")) && TABLE_RE.test(squash(full));
-    const row = { year: y, no: q.no, type: q.type, kw: kws.join("/"), stem40: (q.stem || "").replace(/\s+/g, " ").slice(0, 40) };
+    const strong = STRONG_FIG_RE.test(squash(full));
+    const row = { year: y, no: q.no, type: q.type, kw: kws.join("/"), strong, stem40: (q.stem || "").replace(/\s+/g, " ").slice(0, 40) };
     (isTable ? missingTable : missingFig).push(row);
   }
 }
@@ -579,8 +582,11 @@ for (const c of crossRefs) push(`  ${c.year} q${c.no} ← 引用了「${c.text}�
 push(`共 ${crossRefs.length} 处`);
 push("");
 push("--- 五、仍缺图的题（题干/选项提到『图』但 images 为空） ---");
-for (const m of missingFig) push(`  ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
-push(`共 ${missingFig.length} 道`);
+push("  ◆ 强引用（基本可断定需要插图，但源 PDF 里没有对应嵌入图）：");
+for (const m of missingFig.filter((x) => x.strong)) push(`    ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
+push("  ◇ 弱引用（「如下/如下表/下列…图」等，可能只是代码段、表格或矩阵以文本形式给出）：");
+for (const m of missingFig.filter((x) => !x.strong)) push(`    ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
+push(`共 ${missingFig.length} 道（强引用 ${missingFig.filter((x) => x.strong).length} 道）`);
 push("");
 push("--- 五之二、只提到『表』的题（表格在源 PDF 里多为文本，不一定缺图） ---");
 for (const m of missingTable) push(`  ${m.year} q${m.no} (${m.type}) [${m.kw}] ${m.stem40}`);
