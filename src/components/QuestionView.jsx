@@ -29,7 +29,7 @@ export default function QuestionView({
   const multiSel = q.type === "multiple" ? String(picked || "") : "";
 
   return (
-    <article className={cn("overflow-hidden rounded-lg border border-line bg-surface shadow-panel", className)}>
+    <article data-testid="question" className={cn("overflow-hidden rounded-lg border border-line bg-surface shadow-panel", className)}>
       {/* 头部 */}
       <header className="flex flex-wrap items-center gap-2 border-b border-line-subtle px-4 py-2.5">
         <span className={cn("grid h-6 min-w-6 place-items-center rounded-md px-1.5 text-[12.5px] font-bold text-white",
@@ -107,6 +107,8 @@ export default function QuestionView({
               return (
                 <button
                   key={o.key}
+                  data-testid="option"
+                  data-key={o.key}
                   type="button"
                   disabled={revealed || !onPick}
                   onClick={() => onPick && onPick(o.key)}
@@ -153,7 +155,7 @@ export default function QuestionView({
 
         {/* 解析 */}
         {revealed ? (
-          <div className="mt-3.5 rounded-md border border-dashed border-line bg-subtle px-3.5 py-3">
+          <div data-testid="explanation" className="mt-3.5 rounded-md border border-dashed border-line bg-subtle px-3.5 py-3">
             <div className="mb-1.5 flex flex-wrap items-center gap-2">
               {auto ? (
                 <>

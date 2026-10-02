@@ -259,7 +259,7 @@ export default function Practice({ index }) {
             <Badge tone="warn" dot>本题已耗时 {fmtClock(qElapsed)}</Badge>
           ) : null}
           {isExam ? (
-            <span className={cn("rounded-md px-2.5 py-1 text-[13.5px] font-bold tabular-nums",
+            <span data-testid="timer" className={cn("rounded-md px-2.5 py-1 text-[13.5px] font-bold tabular-nums",
               left < 300 ? "bg-bad-soft text-bad" : "bg-sunken text-ink")}>
               {fmtClock(left)}
             </span>
@@ -329,7 +329,7 @@ export default function Practice({ index }) {
             const a = answers[x.id];
             const r = revealed[x.id] ? isCorrect(x, a) : null;
             return (
-              <button key={x.id} onClick={() => { setIdx(i); setSheet(false); if (layout === "list") setTimeout(() => cardRefs.current[x.id]?.scrollIntoView({ behavior: "smooth", block: "start" }), 40); }}
+              <button key={x.id} data-testid="sheet-item" onClick={() => { setIdx(i); setSheet(false); if (layout === "list") setTimeout(() => cardRefs.current[x.id]?.scrollIntoView({ behavior: "smooth", block: "start" }), 40); }}
                 className={cn("grid size-8 place-items-center rounded-md border text-[12px] font-semibold tabular-nums transition-colors",
                   i === idx && "ring-2 ring-brand ring-offset-1",
                   r === true ? "border-ok-line bg-ok-soft text-ok"

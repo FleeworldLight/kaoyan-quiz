@@ -122,6 +122,7 @@ export function PracticeHeatmap({ days, weeks = 26, className }) {
                 {wk.map((d) => (
                   <span
                     key={d.key}
+                    data-testid="heat-cell"
                     title={d.key + "：" + d.count + " 题"}
                     className={cn("size-[13px] rounded-[3px] transition-colors", HEAT_CLASS[levelOf(d.count)])}
                   />

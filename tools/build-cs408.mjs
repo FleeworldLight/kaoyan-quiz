@@ -385,7 +385,7 @@ for (const y of YEARS) {
     const c = eChain[n - 41];
     if (!c) { defects.push({ no: n, issue: "综合题题干解析失败" }); continue; }
     const stem = c.seg.trim();
-    const m = stem.match(/^[（(]\s*(\d+)\s*分\s*[）)]\s*/);
+    const m = stem.match(/^[（(]\s*(?:本题\s*)?(\d+)\s*分\s*[）)]\s*/);
     const score = m ? Number(m[1]) : 0;
     const cleanStem = m ? stem.slice(m[0].length).trim() : stem;
     const subj = (ESSAY_SUBJ[y] && ESSAY_SUBJ[y][n]) || pickSubjectByContent(cleanStem);

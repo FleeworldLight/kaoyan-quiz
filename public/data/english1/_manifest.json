@@ -1,5 +1,35 @@
 {
- "subject": "english1",
+ "subject": {
+  "id": "english1",
+  "name": "英语一",
+  "fullName": "考研英语（一）",
+  "color": "#0ea5e9",
+  "icon": "EN",
+  "examDuration": 180,
+  "examTotalScore": 100,
+  "sections": [
+   {
+    "id": "cloze",
+    "name": "Section I Use of English 完型填空"
+   },
+   {
+    "id": "reading",
+    "name": "Section II Reading Comprehension Part A 阅读理解"
+   },
+   {
+    "id": "newtype",
+    "name": "Section II Reading Comprehension Part B 新题型"
+   },
+   {
+    "id": "translation",
+    "name": "Section III Translation 翻译"
+   },
+   {
+    "id": "writing",
+    "name": "Section IV Writing 写作"
+   }
+  ]
+ },
  "id": "english1",
  "name": "英语一",
  "fullName": "考研英语（一）",
@@ -31,16 +61,18 @@
  ],
  "papers": [
   {
-   "id": "english1-2017",
-   "year": 2017,
-   "title": "2017 年全国硕士研究生招生考试 英语（一）",
-   "file": "english1/2017.json",
+   "id": "english1-2010",
+   "year": 2010,
+   "title": "2010 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2010.json",
    "questionCount": 52,
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 50,
    "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
    "totalScore": 70,
    "duration": 180,
    "quality": "high",
@@ -66,7 +98,296 @@
      "count": 2
     }
    ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2010年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2011",
+   "year": 2011,
+   "title": "2011 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2011.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2011年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2012",
+   "year": 2012,
+   "title": "2012 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2012.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2012年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2013",
+   "year": 2013,
+   "title": "2013 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2013.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2013年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2014",
+   "year": 2014,
+   "title": "2014 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2014.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2014年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2015",
+   "year": 2015,
+   "title": "2015 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2015.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2015年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2016",
+   "year": 2016,
+   "title": "2016 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2016.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
+   "source": "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016） + KaoYan-English-master · 2016年考研英语真题答案及解析（PDF）",
+   "sourceUrl": "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf"
+  },
+  {
+   "id": "english1-2017",
+   "year": 2017,
+   "title": "2017 年全国硕士研究生招生考试 英语（一）",
+   "file": "english1/2017.json",
+   "questionCount": 52,
+   "singleCount": 40,
+   "blankCount": 5,
+   "essayCount": 7,
+   "choiceCount": 40,
+   "answerCount": 50,
    "answerCoverage": 0.962,
+   "missingAnswerNos": [
+    51,
+    52
+   ],
+   "totalScore": 70,
+   "duration": 180,
+   "quality": "high",
+   "sections": [
+    {
+     "id": "cloze",
+     "count": 20
+    },
+    {
+     "id": "reading",
+     "count": 20
+    },
+    {
+     "id": "newtype",
+     "count": 5
+    },
+    {
+     "id": "translation",
+     "count": 5
+    },
+    {
+     "id": "writing",
+     "count": 2
+    }
+   ],
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -79,8 +400,13 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 50,
    "choiceCount": 40,
+   "answerCount": 50,
+   "answerCoverage": 0.962,
+   "missingAnswerNos": [
+    51,
+    52
+   ],
    "totalScore": 70,
    "duration": 180,
    "quality": "high",
@@ -106,7 +432,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 0.962,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -119,8 +444,12 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 51,
    "choiceCount": 40,
+   "answerCount": 51,
+   "answerCoverage": 0.981,
+   "missingAnswerNos": [
+    48
+   ],
    "totalScore": 70,
    "duration": 180,
    "quality": "high",
@@ -146,7 +475,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 0.981,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -159,8 +487,10 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 52,
    "choiceCount": 40,
+   "answerCount": 52,
+   "answerCoverage": 1,
+   "missingAnswerNos": [],
    "totalScore": 70,
    "duration": 180,
    "quality": "high",
@@ -186,7 +516,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 1,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -199,8 +528,13 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 2,
-   "answerCount": 45,
    "choiceCount": 40,
+   "answerCount": 45,
+   "answerCoverage": 0.957,
+   "missingAnswerNos": [
+    51,
+    52
+   ],
    "totalScore": 60,
    "duration": 180,
    "quality": "high",
@@ -222,7 +556,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 0.957,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -235,8 +568,13 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 50,
    "choiceCount": 40,
+   "answerCount": 50,
+   "answerCoverage": 0.962,
+   "missingAnswerNos": [
+    51,
+    52
+   ],
    "totalScore": 70,
    "duration": 180,
    "quality": "high",
@@ -262,7 +600,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 0.962,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   },
@@ -275,8 +612,53 @@
    "singleCount": 40,
    "blankCount": 5,
    "essayCount": 7,
-   "answerCount": 10,
    "choiceCount": 40,
+   "answerCount": 10,
+   "answerCoverage": 0.192,
+   "missingAnswerNos": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    51,
+    52
+   ],
    "totalScore": 70,
    "duration": 180,
    "quality": "low",
@@ -302,7 +684,6 @@
      "count": 2
     }
    ],
-   "answerCoverage": 0.192,
    "source": "TsekaLuk/Kaoyan-Math1-Papers · 英语一",
    "sourceUrl": "https://github.com/TsekaLuk/Kaoyan-Math1-Papers"
   }
@@ -311,59 +692,59 @@
   {
    "id": "完型-词汇辨析",
    "name": "完型 · 词汇辨析",
-   "count": 95
-  },
-  {
-   "id": "完型-逻辑关系",
-   "name": "完型 · 逻辑关系",
-   "count": 45
-  },
-  {
-   "id": "新题型-排序/匹配",
-   "name": "新题型 · 排序/匹配",
-   "count": 35
+   "count": 213
   },
   {
    "id": "阅读-细节题",
    "name": "阅读 · 细节题",
-   "count": 34
+   "count": 73
+  },
+  {
+   "id": "新题型-排序/匹配",
+   "name": "新题型 · 排序/匹配",
+   "count": 70
+  },
+  {
+   "id": "完型-逻辑关系",
+   "name": "完型 · 逻辑关系",
+   "count": 67
   },
   {
    "id": "翻译-长难句",
    "name": "翻译 · 长难句",
-   "count": 30
+   "count": 65
   },
   {
    "id": "阅读-推断题",
    "name": "阅读 · 推断题",
-   "count": 15
-  },
-  {
-   "id": "阅读-态度题",
-   "name": "阅读 · 态度题",
-   "count": 10
+   "count": 31
   },
   {
    "id": "阅读-主旨题",
    "name": "阅读 · 主旨题",
-   "count": 9
+   "count": 20
   },
   {
-   "id": "写作-应用文",
-   "name": "写作 · 应用文",
-   "count": 7
+   "id": "阅读-态度题",
+   "name": "阅读 · 态度题",
+   "count": 15
   },
   {
    "id": "写作-图画作文",
    "name": "写作 · 图画作文",
-   "count": 7
+   "count": 14
+  },
+  {
+   "id": "写作-应用文",
+   "name": "写作 · 应用文",
+   "count": 14
   },
   {
    "id": "阅读-词义句意题",
    "name": "阅读 · 词义句意题",
-   "count": 5
+   "count": 12
   }
  ],
- "generatedAt": "2026-10-02T09:52:19.976Z",
- "note": "2024 年真题素材缺失：cache 中 2024/english1_2024 与 2024_markdown 两个目录下的文件标题均为「2022 年」，正文与 2022 真题一致（两目录哈希相同），故未产出 2024.json。"
+ "generatedAt": "2026-10-02T11:15:20.391Z",
+ "note": "覆盖 2010–2023 共 14 卷 （目标区间 2010–2025）。缺失年份：2024、2025。\nquality：high 13 卷，low 1 卷（2023）。\n答案/范文缺口（该题在来源里确实没有答案，按纪律留空、未推断）：2017 第 51,52 题；2018 第 51,52 题；2019 第 48 题；2021 第 51,52 题；2022 第 51,52 题；2023 第 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52 题。\n题目客观题（单选）560 题；答案/解析覆盖 672/723（93%）。\n2010–2016 年素材：KaoYan-English-master 的《2005—2016年历年考研英语真题集》(PDF) + 《<年>年考研英语真题答案及解析》(PDF)；由 tools/parse-english-old.mjs 解析。\n2017–2023 年素材：上游仓库 TsekaLuk/Kaoyan-Math1-Papers 的英语一 markdown + 答案解析；由 tools/parse-english.mjs 解析。"
 }

@@ -1,5 +1,11 @@
 import fs from "node:fs";
 const D = "public/data/cs408";
+for (const y of [2009, 2023, 2024, 2025]) {
+  const p = JSON.parse(fs.readFileSync(`${D}/${y}.json`, "utf8"));
+  const e = p.sections.find((s) => s.id === "essay").questions.slice().sort((a, b) => a.no - b.no);
+  console.log(`${y} 综合题分值: ${e.map((q) => `${q.no}=${q.score}`).join(" ")} | 合计 ${e.reduce((a, q) => a + q.score, 0)}`);
+}
+console.log("");
 for (const y of [2024, 2025]) {
   const p = JSON.parse(fs.readFileSync(`${D}/${y}.json`, "utf8"));
   const qs = p.sections.flatMap((s) => s.questions);

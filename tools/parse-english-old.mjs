@@ -15,6 +15,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { buildEnglishManifest } from "./english-manifest.mjs";
 
 const LOCAL = "tools/cache/english/local";
 const OUTS = "public/data/english1";
@@ -710,4 +711,12 @@ if (isMain) {
     );
   }
   console.log("\n" + report.join("\n"));
+  const m = buildEnglishManifest(OUTS, {
+    extraNotes: [
+      "2010–2016 年素材：KaoYan-English-master 的《2005—2016年历年考研英语真题集》(PDF) + 《<年>年考研英语真题答案及解析》(PDF)；由 tools/parse-english-old.mjs 解析。",
+      "2017–2023 年素材：上游仓库 TsekaLuk/Kaoyan-Math1-Papers 的英语一 markdown + 答案解析；由 tools/parse-english.mjs 解析。",
+    ],
+  });
+  console.log("_manifest.json: " + m.papers.length + " 卷");
+  console.log(m.note);
 }
