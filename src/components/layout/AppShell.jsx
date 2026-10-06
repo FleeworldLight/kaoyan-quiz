@@ -22,6 +22,7 @@ export const NAV_SUB = [
   { to: "/favorites", label: "收藏本", icon: Star, badge: "fav" },
   { to: "/notes", label: "题目笔记", icon: NotebookPen, badge: "notes" },
   { to: "/records", label: "学习记录", icon: History },
+  { to: "/about", label: "数据说明", icon: Info },
 ];
 export const NAV_TAB = [
   { to: "/", label: "首页", icon: House, end: true },
@@ -39,6 +40,7 @@ const CRUMB = {
   "/wrong-retest": "错题复测",
   "/mastery": "掌握地图",
   "/graph": "知识图谱",
+  "/about": "数据来源与说明",
   "/favorites": "收藏本",
   "/notes": "题目笔记",
   "/records": "学习记录",

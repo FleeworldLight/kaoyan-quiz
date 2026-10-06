@@ -282,6 +282,22 @@ try {
   await waitFor(`document.body.innerText.includes('题目笔记')`, "笔记页");
   check("笔记页列出笔记", (await ev(`document.body.innerText.includes('端到端测试笔记')`)) === true);
 
+  /* ---------------- 12.5 数据说明页（公开部署时给访客看的） ---------------- */
+  await goto("#/about");
+  await waitFor(`document.body.innerText.includes('数据来源与说明')`, "数据说明页", 15000);
+  const about = await ev(`(() => { const t = document.body.innerText;
+    return { disclaimer: t.includes('个人学习用途'), mockRisk: t.includes('商业出版物'),
+      privacy: t.includes('localStorage'), annot: t.includes('答案存疑'),
+      sources: document.querySelectorAll('a[target="_blank"]').length,
+      pub: t.includes('肖秀荣') }; })()`);
+  check("数据说明页：免责声明 / 模拟卷风险 / 隐私说明", about.disclaimer && about.mockRisk && about.privacy,
+    "外部来源链接 " + about.sources + " 个");
+  check("数据说明页列出模拟卷出版方与标注约定", about.pub && about.annot);
+  await goto("#/");
+  await waitFor(`document.body.innerText.includes('学习区')`, "回到首页");
+  check("侧栏含「数据说明」入口",
+    (await ev(`[...document.querySelectorAll('a')].some(a => a.textContent.trim() === '数据说明')`)) === true);
+
   /* ---------------- 13. 全局搜索 ---------------- */
   await goto("#/");
   await ev(`window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))`);

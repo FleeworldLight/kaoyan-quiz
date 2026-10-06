@@ -15,6 +15,7 @@ import KnowledgeGraph from "./pages/KnowledgeGraph.jsx";
 import Favorites from "./pages/Favorites.jsx";
 import Notes from "./pages/Notes.jsx";
 import Records from "./pages/Records.jsx";
+import About from "./pages/About.jsx";
 
 export default function App() {
   const [index, setIndex] = useState(null);
@@ -70,6 +71,7 @@ export default function App() {
         <Route path="/favorites" element={<Favorites index={index} />} />
         <Route path="/notes" element={<Notes index={index} />} />
         <Route path="/records" element={<Records index={index} />} />
+        <Route path="/about" element={<About index={index} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AppShell>
