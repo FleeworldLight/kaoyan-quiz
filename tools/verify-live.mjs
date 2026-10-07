@@ -189,6 +189,48 @@ try {
   check("数据说明页含免责声明 / 风险提示 / 隐私说明", about.disc && about.risk && about.privacy, `外部来源链接 ${about.links} 个`);
   check("数据说明页没有死链", about.dead === 0, `非 http 链接 ${about.dead} 个`);
 
+  /* ---------- 6.5 Service Worker 与弱网可用性 ---------- */
+  // ready 会在 active worker 出现时兑现，但此时状态可能还是 activating，
+  // 所以要轮询等它真正 activated（曾在这里误报过一次失败）
+  const swState = await ev(`(async () => {
+    if (!("serviceWorker" in navigator)) return "unsupported";
+    try {
+      const reg = await navigator.serviceWorker.ready;
+      for (let i = 0; i < 60; i++) {
+        const w = reg.active || reg.installing || reg.waiting;
+        if (w && w.state === "activated") return "activated";
+        await new Promise((r) => setTimeout(r, 250));
+      }
+      return (reg.active && reg.active.state) || "unknown";
+    } catch (e) { return "error:" + e.message; }
+  })()`);
+  check("Service Worker 已注册并激活", swState === "activated", String(swState));
+
+  // 2018 第 44 题：一整幅大图（缓存/TLB/页表），用于确认「被切碎的图已合并成单张」
+  await send("Page.navigate", { url: URL_BASE + "#/practice?mode=paper&subject=cs408&year=2018&practice=1&focus=cs408-2018-q44" });
+  await waitFor(`document.querySelector('article img') !== null`, "2018 大图元素", 40000);
+  let bigOk = false;
+  try {
+    await waitFor(`(() => { const i = document.querySelector('article img'); return !!(i && i.complete && i.naturalWidth > 0); })()`, "2018 大图下载", 60000);
+    bigOk = true;
+  } catch {}
+  const big = await ev(`(() => { const imgs = document.querySelectorAll('article img');
+    const i = imgs[0]; return { n: imgs.length, w: i?.naturalWidth || 0, h: i?.naturalHeight || 0, src: i?.getAttribute('src') || '' }; })()`);
+  check("被切碎的 2018 大图已合并为单张且能加载", bigOk && big.n === 1,
+    `${(big.src || "").split("/").pop()} ${big.w}x${big.h} · 页面上 ${big.n} 个 img`);
+
+  // 断网往返：这是手机端「图片出不来」的根因场景
+  await send("Network.emulateNetworkConditions", { offline: true, latency: 0, downloadThroughput: 0, uploadThroughput: 0 });
+  let offlineOk = false;
+  try {
+    await send("Page.navigate", { url: URL_BASE + "#/practice?mode=paper&subject=cs408&year=2020&practice=1&focus=cs408-2020-q5" });
+    await waitFor(`document.querySelectorAll('[data-testid="option"]').length >= 4`, "断网练习页", 40000);
+    await waitFor(`(() => { const i = document.querySelector('article img'); return !!(i && i.complete && i.naturalWidth > 0); })()`, "断网配图", 40000);
+    offlineOk = true;
+  } catch {}
+  await send("Network.emulateNetworkConditions", { offline: false, latency: 0, downloadThroughput: -1, uploadThroughput: -1 });
+  check("★ 断网后仍能刷题、配图来自缓存", offlineOk);
+
   /* ---------- 7. 资源与异常 ---------- */
   check("线上没有 4xx/5xx 资源请求", badResponses.length === 0,
     badResponses.length ? badResponses.slice(0, 4).join(" | ") : `${okResponses.length} 个静态资源全部 200`);
