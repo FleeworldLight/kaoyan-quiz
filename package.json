@@ -22,7 +22,10 @@
     "verify": "node tools/validate-all.mjs && node tools/validate-mock.mjs",
     "test:e2e": "node tools/e2e-test.mjs",
     "verify:live": "node tools/verify-live.mjs",
-    "test:offline": "node tools/test-offline.mjs"
+    "test:offline": "node tools/test-offline.mjs",
+    "test:zip": "node tools/test-zip.mjs",
+    "test:localbank": "node tools/test-localbank.mjs",
+    "test:all": "node tools/validate-all.mjs && node tools/validate-mock.mjs && node tools/test-zip.mjs && node tools/e2e-test.mjs && node tools/test-offline.mjs && node tools/test-localbank.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",

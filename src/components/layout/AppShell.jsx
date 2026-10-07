@@ -8,6 +8,7 @@ import { Button, Card, IconButton, Modal, Badge, Progress, TipProvider, Tip, Emp
 import { cn, accuracy, fmtDayKey } from "../../lib/utils.js";
 import { useStore, streak, subjectStats } from "../../lib/store.js";
 import { allQuestions } from "../../lib/data.js";
+import { useLocalBankSnapshot } from "../../lib/localbank.js";
 
 export const NAV_MAIN = [
   { to: "/", label: "首页", icon: House, end: true },
@@ -52,6 +53,7 @@ export default function AppShell({ index, children }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const loc = useLocation();
   const s = useStore();
+  const localSnap = useLocalBankSnapshot();
 
   useEffect(() => { setOpen(false); }, [loc.pathname, loc.search]);
   useEffect(() => {
@@ -65,7 +67,10 @@ export default function AppShell({ index, children }) {
   const wrongN = Object.keys(s.wrong).length;
   const favN = Object.keys(s.fav).length;
   const noteN = Object.keys(s.notes).length;
-  const counts = { wrong: wrongN, fav: favN, notes: noteN };
+  // 本地图片题也算「错题」：它们不进 s.wrong（避免污染题库统计），
+  // 但用户在侧栏看到的错题数应当把两部分加起来
+  const localN = localSnap.items.length;
+  const counts = { wrong: wrongN + localN, fav: favN, notes: noteN };
   const crumb = CRUMB[loc.pathname] || "学习区";
 
   return (

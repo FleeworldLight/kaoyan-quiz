@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { History, Download, Upload, Save, TrendingUp, Flame, Target, Clock, FileStack, Play, Trash2, CalendarDays } from "lucide-react";
 import { Badge, Button, Card, CardBody, CardHead, Empty, Progress, Segmented, StatCard } from "../components/ui.jsx";
 import { PracticeHeatmap, ActivityTrend, DonutStat } from "../components/Charts.jsx";
-import { useStore, subjectStats, heatmap, streak, resetAll, importData } from "../lib/store.js";
+import { useStore, subjectStats, heatmap, streak, resetAll } from "../lib/store.js";
+import { exportBackup, importBackup, describeImport } from "../lib/backup.js";
+import { fmtBytes } from "../lib/image.js";
+import { useLocalBankSnapshot } from "../lib/localbank.js";
 import { accuracy, fmtDate, fmtDuration } from "../lib/utils.js";
 
 const MODE_LABEL = { exam: "整套模考", chapter: "章节练习", random: "随机组卷", wrong: "错题复测", fav: "收藏练习", paper: "套卷练习", mock: "模拟卷", custom: "智能组卷" };
@@ -14,6 +17,8 @@ export default function Records({ index }) {
   const fileRef = React.useRef(null);
   const [subject, setSubject] = useState("all");
   const [msg, setMsg] = useState(null);
+  const [busy, setBusy] = useState(false);
+  const localSnap = useLocalBankSnapshot();
 
   const days = useMemo(() => heatmap(s, 26), [s.records]);
   const sum = useMemo(() => {
@@ -51,25 +56,39 @@ export default function Records({ index }) {
     URL.revokeObjectURL(a.href);
   }
 
-  function exportAll() {
-    const blob = new Blob([JSON.stringify({ kind: "kaoyan-quiz-state", version: 1, exportedAt: new Date().toISOString(), state: s }, null, 1)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "考研刷题-学习数据-" + new Date().toISOString().slice(0, 10) + ".json";
-    a.click();
-    URL.revokeObjectURL(a.href);
+  async function exportAll() {
+    setBusy(true);
+    setMsg("正在打包…");
+    try {
+      const r = await exportBackup(s);
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(r.blob);
+      a.download = r.filename;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      setMsg(r.kind === "zip"
+        ? `已导出 ${r.filename}：学习状态 + ${r.photos} 道图片题（共 ${fmtBytes(r.bytes)}）。换设备时导回来的就是这个文件。`
+        : `已导出 ${r.filename}（纯 JSON，因为你还没有记过图片题）。`);
+    } catch (e) {
+      setMsg("导出失败：" + e.message);
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function importAll(file) {
     if (!file) return;
+    setBusy(true);
+    setMsg("正在导入…");
     try {
-      const text = await file.text();
-      const stats = importData(JSON.parse(text));
-      setMsg(`导入完成：进度 ${stats.progress} 条 · 错题 ${stats.wrong} 条 · 收藏 ${stats.fav} 条 · 笔记 ${stats.notes} 条 · 记录 ${stats.records} 条（已有的数据按较大值保留，不会丢）`);
+      const r = await importBackup(file);
+      setMsg(describeImport(r));
     } catch (e) {
       setMsg("导入失败：" + e.message);
+    } finally {
+      setBusy(false);
+      if (fileRef.current) fileRef.current.value = "";
     }
-    if (fileRef.current) fileRef.current.value = "";
   }
 
   return (
@@ -79,8 +98,11 @@ export default function Records({ index }) {
         <Badge tone="brand">{sum.sessions} 次练习</Badge>
         <div className="ml-auto flex flex-wrap items-center gap-2">
           <Button variant="secondary" size="sm" onClick={exportCSV} disabled={!list.length}><Download className="size-3.5" />导出 CSV</Button>
-          <Button variant="secondary" size="sm" onClick={exportAll}><Save className="size-3.5" />备份全部数据</Button>
-          <input ref={fileRef} type="file" accept="application/json,.json" className="hidden"
+          <Button variant="secondary" size="sm" onClick={exportAll} disabled={busy} data-testid="backup-all">
+            <Save className="size-3.5" />{localSnap.items.length ? `备份全部（含 ${localSnap.items.length} 张图片）` : "备份全部数据"}
+          </Button>
+          <input ref={fileRef} type="file" accept=".zip,application/zip,application/json,.json" className="hidden"
+                 data-testid="import-file"
                  onChange={(e) => importAll(e.target.files?.[0])} />
           <Button variant="secondary" size="sm" onClick={() => fileRef.current?.click()}><Upload className="size-3.5" />导入数据</Button>
           <Button variant="danger" size="sm" onClick={() => { if (confirm("确定清空全部学习数据（进度、错题、收藏、笔记、记录）？不可恢复。")) resetAll(); }}>

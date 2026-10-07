@@ -145,8 +145,9 @@ pnpm test:offline    # 断网可用性测试：联网加载一次 → 切成完�
 | 键盘盲操 | `A`–`D` / `1`–`4` 选项 · `←` `→` 切题 · `Enter` 下一题 · `F` 标记 · `R` 看答案 |
 | 超时提醒 | 单题耗时超过 2.5 分钟（主观题 6 分钟）时在运行条提示 |
 | 错题复测 | 错题自动收录，按科目/章节聚合，错题章节排行 + 攻坚建议，逐题展开复测 |
+| **我的错题本（拍照记题）** | 拍书上的题 / 粘贴截图 / 拖放 → 自动压缩存本地（IndexedDB），自己写解析、从四科章节选标签；**只进错题本、不进刷题队列，不打分不统计**；「翻看复习」随机抽看（答案默认折叠，先回忆再对）；页内显示存储占用并可申请持久化存储 |
 | 收藏本 / 题目笔记 | 搜索、筛选、展开原题，导出 Markdown |
-| 学习记录 | 统计卡、热力图、作答趋势双轴图、练习明细表、导出 CSV、清空数据 |
+| 学习记录 | 统计卡、热力图、作答趋势双轴图、练习明细表、导出 CSV、**备份全部数据（无图片导 JSON / 有图片导 zip，可整包导回）**、清空数据 |
 | 题目搜索 | 顶栏 `Ctrl/⌘ + K` 全库检索题干/选项/答案 |
 
 ### 界面
@@ -255,19 +256,29 @@ python tools/optimize-images.py             # 就地压缩（文件名不变，�
 ## 自动化测试
 
 ```bash
-pnpm verify      # 全库数据校验：JSON 结构、id 唯一、选项与答案一致性、多选题答案升序等
-pnpm test:e2e    # 端到端交互测试（无头 Edge + CDP 真实点击）
+pnpm verify            # 全库数据校验：JSON 结构、id 唯一、选项与答案一致性、多选题答案升序等
+pnpm test:e2e          # 端到端交互测试（无头 Edge + CDP 真实点击；会自己起服务）
+pnpm test:offline      # 断网可用性：联网加载一次 → 切完全离线 → 断言仍能刷题、配图来自缓存
+pnpm test:zip          # 备份 zip 的格式往返测试（含 Python zipfile / Windows Expand-Archive 双向互证）
+pnpm test:localbank    # 我的错题本端到端：注入图片→压缩→填解析→选章节→保存→翻看→导出 zip（Python 校验）→删除→导入还原
+pnpm test:all          # 上面全部按序跑一遍
+pnpm verify:live       # 部署后跑真实站点的 14 项验收（含 SW 激活、断网往返）
 ```
 
-`pnpm verify` 当前 **0 ERROR**。`pnpm test:e2e` 需要先跑起 `pnpm serve`，覆盖 15 组场景 **30/30 通过**：
-首页倒计时/热力图/侧栏 → 题库与章节视图 → 练习答错→解析→错题写入 → 键盘盲操 → 收藏与笔记 →
-连续布局 → 错题复测 → 掌握地图图表 → 知识图谱 → 智能组卷模板与生成 → 模考计时/答题卡/不立即显示答案/交卷 →
-学习记录 → 收藏本 → 笔记页 → 全局搜索 → 移动端布局 → 全程无 JS 运行时异常。
+当前结果：`verify` **0 ERROR** · `test:e2e` **39/39** · `test:offline` **10/10** ·
+`test:zip` **66 项** · `test:localbank` **24/24** · `verify:live` **14/14**。
+
+`test:e2e` 覆盖：首页倒计时/热力图/侧栏 → 408 配图加载 → 题库与章节视图 → 练习答错→解析→错题写入 →
+键盘盲操 → 收藏与笔记 → 连续布局 → 错题复测 → 数据说明页 → 掌握地图图表 → 知识图谱 →
+智能组卷模板与生成 → 模考计时/答题卡/交卷 → 学习记录（含备份导入）→ 全局搜索 → 移动端布局 →
+全程无 JS 运行时异常。
 
 ## 技术栈
 
 Vite 5 · React 18 · React Router（HashRouter） · Tailwind CSS v4 · Radix UI · lucide-react ·
-Framer Motion · ECharts · KaTeX。无后端、无数据库，学习数据存 `localStorage`（键名 `kq:state:v1`）。
+Framer Motion · ECharts · KaTeX。无后端、无数据库：
+学习数据存 `localStorage`（键名 `kq:state:v1`），「我的错题本」的图片与元数据存 `IndexedDB`
+（库 `kaoyan-quiz-local`），备份为自研零依赖 ZIP（`src/lib/zip.js`，STORE 格式）。
 
 ## 目录结构
 
@@ -287,10 +298,11 @@ kaoyan-quiz/
       data.js                 数据加载、组卷、模拟卷
       store.js                localStorage 状态与统计
       question.js             题目判定纯函数
-      locate.js  utils.js
+      locate.js  utils.js    localbank.js image.js backup.js zip.js
     pages/                    Dashboard Library Mock Practice SmartCompose
                               WrongRetest MasteryMap KnowledgeGraph
-                              Favorites Notes Records
+                              Favorites Notes Records About
+                              AddWrong PhotoReview
   tools/                      数据管线 + 静态服务器 + 校验 + 端到端测试
   public/data/                题库 JSON
 ```
@@ -300,7 +312,12 @@ kaoyan-quiz/
 - 填空、解答、翻译、写作等主观题不支持自动评分，采用「查看参考答案 + 自评」，不计入正确率。
 - 模拟卷来自公开渠道、尚未逐题校验，请以正式出版物为准。
 - 含图题目（408 的二叉树/页表等）在文本抽取中会丢失图形，题干会写「如下图」，需对照原卷 PDF。
-- 学习数据支持「备份全部数据（JSON）」与「导入数据」，导入时按较大值合并，不会覆盖已有练习量。
+- **「我的错题本」（拍照记题）**：只存在本机浏览器（IndexedDB），不参与正确率/掌握度统计，
+  也不进刷题队列；「翻看复习」是纯翻看、不打分不记录。清浏览器数据会丢——
+  页面里可申请「持久化存储」降低被自动回收的风险，但**定期导出备份仍是唯一可靠兜底**。
+- 学习数据备份：无图片时导出 JSON、有图片时导出 zip（`state.json` + `images/` + `index.json`），
+  导入时状态按较大值合并、图片题按 id 去重不覆盖；导入的 zip 只支持我们导出的 STORE 格式
+  （第三方 deflate 压缩的 zip 会报「不支持的压缩方法」）。
 - 学习数据只存在本机浏览器，清空浏览器数据会丢失。
 
 ## 版权说明

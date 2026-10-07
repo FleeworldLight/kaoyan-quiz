@@ -155,7 +155,7 @@ export default function About({ index }) {
           {subjectSources.map(({ subject, list }) => (
             <div key={subject.id} className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <span className={cn("text-[13px] font-semibold", (SUBJECT_TONE[subject.id] || {}).text || "text-ink-strong")}>
+                <span className={cn("text-[13px] font-semibold", "text-ink-strong")}>
                   {subject.fullName || subject.name}
                 </span>
                 <span className="text-[11.5px] text-ink-faint">
@@ -255,8 +255,10 @@ export default function About({ index }) {
             <Heart className="mt-0.5 size-3.5 shrink-0 text-brand" />
             <span>
               <b className="text-ink-strong">本站不收集任何个人信息</b>：没有后端、没有账号、没有埋点统计。
-              你的做题记录、错题、收藏、笔记全部只保存在<b className="text-ink-strong">你自己浏览器的 localStorage</b> 里，
-              不会上传到任何服务器。清除浏览器数据就会清空，建议定期用「学习记录 → 备份全部数据」导出保存。
+              你的做题记录、错题、收藏、笔记保存在<b className="text-ink-strong">浏览器的 localStorage</b>，
+              「我的错题本」里自己拍的题目图片保存在<b className="text-ink-strong">浏览器的 IndexedDB</b>——
+              都不会上传到任何服务器。清除浏览器数据就会清空，建议定期用「学习记录 → 备份全部数据」导出
+              （有图片时会导出成 zip，可以整包导回来）。
             </span>
           </div>
           <div className="flex gap-2">

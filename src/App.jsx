@@ -16,6 +16,8 @@ import Favorites from "./pages/Favorites.jsx";
 import Notes from "./pages/Notes.jsx";
 import Records from "./pages/Records.jsx";
 import About from "./pages/About.jsx";
+import AddWrong from "./pages/AddWrong.jsx";
+import PhotoReview from "./pages/PhotoReview.jsx";
 
 export default function App() {
   const [index, setIndex] = useState(null);
@@ -66,6 +68,8 @@ export default function App() {
         <Route path="/practice" element={<Practice index={index} />} />
         <Route path="/smart-compose" element={<SmartCompose index={index} />} />
         <Route path="/wrong-retest" element={<WrongRetest index={index} />} />
+        <Route path="/wrong/add" element={<AddWrong index={index} />} />
+        <Route path="/wrong/view" element={<PhotoReview index={index} />} />
         <Route path="/mastery" element={<MasteryMap index={index} />} />
         <Route path="/graph" element={<KnowledgeGraph index={index} />} />
         <Route path="/favorites" element={<Favorites index={index} />} />
