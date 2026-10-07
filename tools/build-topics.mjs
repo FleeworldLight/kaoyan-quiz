@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-const BASE = "G:/期末及简历和别的项目/考研资料/Politics-Obsidian-Note-latest";
+const BASE = "<资料目录>/Politics-Obsidian-Note-latest";
 const SUBJECTS = ["马原", "毛中特", "史纲", "思修", "新思想"];
 
 const clean = s => s
@@ -66,5 +66,5 @@ out.totalTopics = total;
 // 检查 id 唯一
 const ids = out.subjects.flatMap(s => s.chapters.flatMap(c => c.topics.map(t => t.id)));
 console.log("id 总数:", ids.length, "唯一:", new Set(ids).size, "重复示例:", ids.filter((x, i) => ids.indexOf(x) !== i).slice(0, 6));
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/topics-raw.json", JSON.stringify(out, null, 2), "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/topics-raw.json", JSON.stringify(out, null, 2), "utf8");
 console.log("\n样本:", JSON.stringify(out.subjects[0].chapters.slice(0, 2), null, 1).slice(0, 900));

@@ -336,8 +336,8 @@ csgraduates 的「解答题」章节把 41–47 明确分成 4 组，据此写�
 ## 九、复现方式
 
 ```powershell
-$node = "C:\Users\20396\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe"
-cd G:\期末及简历和别的项目\考研资料\kaoyan-quiz
+$node = "node"
+cd <项目根目录>
 
 # 2009–2023 原有链路
 & $node tools\build-cs408.mjs        # 重新生成 public/data/cs408/*.json（2009–2025，images 全为空）
@@ -598,8 +598,8 @@ cd G:\期末及简历和别的项目\考研资料\kaoyan-quiz
 ### 10.5 复现（重要）
 
 ```powershell
-$node = "C:\Users\20396\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe"
-cd G:\期末及简历和别的项目\考研资料\kaoyan-quiz
+$node = "node"
+cd <项目根目录>
 
 & $node tools\build-cs408.mjs          # 1) 重新生成 17 份卷子（此时 images 全为空）
 & $node tools\attach-cs408-images.mjs   # 2) 从 rebuild PDF 抽图 + 挂图（≈1 分钟）

@@ -1,7 +1,7 @@
 /** 为冲突题目补 note 字段，并在卷级写入校验摘要 */
 import fs from "node:fs";
 import path from "node:path";
-const ROOT = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz";
+const ROOT = "<项目根目录>";
 const DIR = path.join(ROOT, "public/data/politics");
 const rep = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/cache/build-report.json"), "utf8"));
 const byYear = new Map(rep.years.map(y => [y.year, y]));

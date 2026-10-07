@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const CACHE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
+const CACHE = "<项目根目录>/tools/cache";
 const YEARS = [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
 
 function cleanPaper(raw) {

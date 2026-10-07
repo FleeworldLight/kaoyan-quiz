@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
 
-const ROOT = "G:/期末及简历和别的项目/考研资料/KaoYan-English-master";
+const ROOT = "<资料目录>/KaoYan-English-master";
 const OUT = "tools/cache/english/local";
 fs.mkdirSync(OUT, { recursive: true });
 

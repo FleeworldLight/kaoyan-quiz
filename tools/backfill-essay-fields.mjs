@@ -1,7 +1,7 @@
 /** 为材料分析题（essay）补齐 chapterTopics / subjectHint / chapterConfidence 字段（材料题不做章级分类） */
 import fs from "node:fs";
 import path from "node:path";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/politics";
+const DIR = "<项目根目录>/public/data/politics";
 let n = 0;
 for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort()) {
   const p = path.join(DIR, f);

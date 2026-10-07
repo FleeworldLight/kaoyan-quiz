@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const DIR = "<项目根目录>/public/data/cs408";
 const errors = [];
 const warns = [];
 const stats = { files: 0, questions: 0, singles: 0, essays: 0, emptyStem: 0, emptyAnswer: 0, emptyExpl: 0, emptyOpt: 0, noTopic: 0 };
@@ -136,6 +136,6 @@ for (const w of warns) lines.push("  [W] " + w);
 lines.push("");
 lines.push(errors.length === 0 ? "RESULT: PASS（无错误）" : `RESULT: FAIL（${errors.length} 个错误）`);
 const out = lines.join("\n");
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/validate-report.txt", out, "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/validate-report.txt", out, "utf8");
 console.log(out);
 process.exit(errors.length ? 1 : 0);

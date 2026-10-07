@@ -1,6 +1,6 @@
 import fs from "node:fs";
-const C = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const C = "<项目根目录>/tools/cache";
+const DIR = "<项目根目录>/public/data/cs408";
 const norm = (t) => t.replace(/<<PAGE>>/g, " ").replace(/\s+/g, " ").trim();
 
 function simpleLetters(text) {

@@ -169,10 +169,14 @@ export default function About({ index }) {
                     {src.range ? <span className="text-ink-faint">{src.range} 年</span> : null}
                     <span className="text-ink-faint">{src.count} 套</span>
                     {src.url ? (
-                      <a href={src.url} target="_blank" rel="noreferrer noopener"
-                         className="inline-flex items-center gap-0.5 text-brand hover:underline">
-                        <ExternalLink className="size-3" />链接
-                      </a>
+                      /^https?:/.test(src.url) ? (
+                        <a href={src.url} target="_blank" rel="noreferrer noopener"
+                           className="inline-flex items-center gap-0.5 text-brand hover:underline">
+                          <ExternalLink className="size-3" />链接
+                        </a>
+                      ) : (
+                        <span className="text-ink-faint">（本地资料：{src.url.replace(/^本地资料 · /, "")}）</span>
+                      )
                     ) : null}
                   </li>
                 ))}
@@ -201,7 +205,7 @@ export default function About({ index }) {
                 </div>
                 {p.sources.length ? (
                   <div className="flex flex-wrap gap-x-3 gap-y-0.5">
-                    {p.sources.map(([name, url]) => (
+                    {p.sources.filter(([, url]) => /^https?:/.test(url)).map(([name, url]) => (
                       <a key={url} href={url} target="_blank" rel="noreferrer noopener"
                          className="inline-flex items-center gap-0.5 text-[11.5px] text-brand hover:underline">
                         <ExternalLink className="size-3" />{name}

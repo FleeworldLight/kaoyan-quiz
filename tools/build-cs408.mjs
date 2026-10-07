@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-const CACHE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
-const OUTDIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const CACHE = "<项目根目录>/tools/cache";
+const OUTDIR = "<项目根目录>/public/data/cs408";
 const NEVILLE_ANS = { 2009: "neville-ans-2009.txt", 2010: "neville-ans-2010.txt", 2011: "neville-ans-2011.txt", 2013: "neville-ans-2013.txt" };
 // 2009–2023：本地/公开 PDF 文本层答案；2024–2025：官方答案 PDF 为扫描件，改用多源互证答案（见 ANS_CFG / ESSAY_CFG）
 const YEARS = Array.from({ length: 17 }, (_, i) => 2009 + i);

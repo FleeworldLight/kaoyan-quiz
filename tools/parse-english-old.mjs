@@ -23,9 +23,9 @@ const PAPER_FILE = "paper-2005-2016.txt";
 const YEARS = [2010, 2011, 2012, 2013, 2014, 2015, 2016];
 
 const SRC_PAPER_NAME = "KaoYan-English-master · 历年考研英语（一）真题集（PDF版本 2005—2016）";
-const SRC_PAPER_URL = "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf";
+const SRC_PAPER_URL = "本地资料 · KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2005—2016年历年考研英语真题集.pdf";
 const SRC_ANS_NAME = "KaoYan-English-master · <year>年考研英语真题答案及解析（PDF）";
-const SRC_ANS_URL = "local:G:/期末及简历和别的项目/考研资料/KaoYan-English-master/答案解析/<year>年考研英语真题答案及解析.pdf";
+const SRC_ANS_URL = "本地资料 · KaoYan-English-master/答案解析/<year>年考研英语真题答案及解析.pdf";
 
 export const SEC_DEFS = [
   { id: "cloze", name: "Section I Use of English 完型填空", from: 1, to: 20, score: 0.5 },

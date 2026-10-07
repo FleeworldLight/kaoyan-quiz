@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
-export const YY = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/yy";
-export const KYZZ = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/kyzz";
+export const YY = "<项目根目录>/tools/cache/yy";
+export const KYZZ = "<项目根目录>/tools/cache/kyzz";
 
 // 归一化：去掉空白、标点、字母选项前缀，便于跨源比较文本
 export function norm(s) {

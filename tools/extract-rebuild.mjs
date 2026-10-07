@@ -1,7 +1,7 @@
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
 import fs from "node:fs";
-const dir = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/rebuild";
-const out = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
+const dir = "<项目根目录>/tools/cache/rebuild";
+const out = "<项目根目录>/tools/cache";
 for (const y of [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023]) {
   const f = `${dir}/${y}.pdf`;
   if (!fs.existsSync(f)) { console.log(y,"MISSING"); continue; }
@@ -14,7 +14,7 @@ for (const y of [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,202
   console.log(y,"pages",doc.numPages,"chars",t.length,"cjk",cjk);
 }
 // 2021 answer
-const f21 = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/rebuild-ans/2021.pdf";
+const f21 = "<项目根目录>/tools/cache/rebuild-ans/2021.pdf";
 const d21 = new Uint8Array(fs.readFileSync(f21));
 const doc21 = await pdfjs.getDocument({ data: d21, useSystemFonts: true, isEvalSupported: false }).promise;
 let t21="";

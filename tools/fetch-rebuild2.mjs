@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const outDir = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/rebuild";
+const outDir = "<项目根目录>/tools/cache/rebuild";
 fs.mkdirSync(outDir, { recursive: true });
 async function dl(url, dest, tries=4) {
   for (let a=0;a<tries;a++) {
@@ -19,7 +19,7 @@ for (const y of [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,202
   console.log(y, n);
 }
 console.log("--- answers ---");
-const aDir = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/rebuild-ans";
+const aDir = "<项目根目录>/tools/cache/rebuild-ans";
 fs.mkdirSync(aDir, { recursive: true });
 for (const y of [2021]) {
   const dest = `${aDir}/${y}.pdf`;

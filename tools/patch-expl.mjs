@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const p = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/build-cs408.mjs";
+const p = "<项目根目录>/tools/build-cs408.mjs";
 let t = fs.readFileSync(p, "utf8");
 const oldBlock = t.slice(t.indexOf("  // ---- 解析文本"), t.indexOf("const ANS_CFG = {"));
 const newBlock = `  // ---- 解析文本：多来源取"有实质内容"最多者 ----

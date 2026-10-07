@@ -4,7 +4,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/politics";
+const DIR = "<项目根目录>/public/data/politics";
 
 // 每题给一句面向考生的提示。source 取本库实际采用答案的来源。
 const NOTES = {
@@ -45,6 +45,6 @@ for (const f of fs.readdirSync(DIR).filter(x => /^\d{4}\.json$/.test(x)).sort())
 console.log("\n共规范化", n, "道冲突题");
 // 注意：原写法 path.join(DIR, "..", "..", "tools/cache/...") 会解析到 public/tools/... （不存在的目录）而报 ENOENT，
 // 这里改为显式指向仓库根目录。
-const CACHE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
+const CACHE = "<项目根目录>/tools/cache";
 fs.mkdirSync(CACHE, { recursive: true });
 fs.writeFileSync(path.join(CACHE, "disputed-list.json"), JSON.stringify(list, null, 2), "utf8");

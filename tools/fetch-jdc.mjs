@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const out = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/rebuild-ans";
+const out = "<项目根目录>/tools/cache/rebuild-ans";
 fs.mkdirSync(out, { recursive: true });
 async function dl(url, dest, tries=3) {
   for (let a=0;a<tries;a++) {

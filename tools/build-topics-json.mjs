@@ -6,7 +6,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-const ROOT = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz";
+const ROOT = "<项目根目录>";
 const DIR = path.join(ROOT, "public/data/politics");
 
 // 章名映射（与 tag-chapters.mjs 的 id 保持一致）

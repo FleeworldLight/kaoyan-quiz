@@ -15,7 +15,7 @@ import path from "node:path";
 import { parseYY, parseKyzz, AB } from "./politics-parse.mjs";
 import { parsePaperHtmlFile } from "./politics-parse-html.mjs";
 
-const ROOT = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz";
+const ROOT = "<项目根目录>";
 const OUT = path.join(ROOT, "public/data/politics");
 const CACHE = path.join(ROOT, "tools/cache");
 fs.mkdirSync(OUT, { recursive: true });

@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const DIR = "<项目根目录>/public/data/cs408";
 const out = [];
 for (const y of Array.from({length:15},(_,i)=>2009+i)) {
   const p = JSON.parse(fs.readFileSync(`${DIR}/${y}.json`, "utf8"));
@@ -12,5 +12,5 @@ for (const y of Array.from({length:15},(_,i)=>2009+i)) {
 }
 out.push("");
 out.push("2009 官方清单应为: BCDBCBADABCDDCDCAADBDADDCACBAABABBCDDCA");
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/answers-summary.txt", out.join("\n"), "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/answers-summary.txt", out.join("\n"), "utf8");
 console.log(out.join("\n"));

@@ -6,7 +6,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/politics";
+const DIR = "<项目根目录>/public/data/politics";
 
 const RULES = [
   { id: "马原-导论", subject: "马原", kw: [
@@ -254,5 +254,5 @@ console.log(`  未打标                 ${stat.none}`);
 console.log(`  总覆盖                 ${(((stat.chapter+stat.subjectOnly)/stat.total)*100).toFixed(1)}%`);
 console.log("\n科目分布:", JSON.stringify(bySubj));
 console.log("\n章命中："); for (const k of Object.keys(byChap).sort()) console.log(`  ${String(byChap[k]).padStart(3)}  ${k}`);
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/chapter-report.json", JSON.stringify({ stat, byChap, bySubj, noHint }, null, 2), "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/chapter-report.json", JSON.stringify({ stat, byChap, bySubj, noHint }, null, 2), "utf8");
 console.log("\n未打标："); for (const u of noHint) console.log("  " + u);

@@ -396,8 +396,8 @@ Q2/Q3 则把真题 Q2/Q3 的正确选项文字互相颠倒地当成题干。这�
 ## 十一、复现方式与「既有数据零回归」说明
 
 ```powershell
-$node = "C:\Users\20396\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe"
-cd G:\期末及简历和别的项目\考研资料\kaoyan-quiz
+$node = "node"
+cd <项目根目录>
 
 # 1) 抓取 2025 的三个来源
 & $node tools\fetch-politics-src2.mjs      # 武昌首义学院 / 石河子大学 / 西安外事学院 PDF

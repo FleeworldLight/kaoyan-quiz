@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const DIR = "<项目根目录>/public/data/cs408";
 const p = JSON.parse(fs.readFileSync(`${DIR}/2016.json`, "utf8"));
 const es = p.sections.find(s=>s.id==="essay").questions;
 const q = es[0];

@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const DIR = "<项目根目录>/public/data/cs408";
 const out = [];
 const m = JSON.parse(fs.readFileSync(`${DIR}/_manifest.json`, "utf8"));
 out.push("manifest keys: " + Object.keys(m).join(", "));
@@ -19,5 +19,5 @@ for (const y of [2011, 2014, 2009, 2020]) {
   out.push(`   q5 expl: ${(qs[4].explanation||"(空)").slice(0,90)}`);
   out.push(`   topics: ${qs.slice(0,12).map(q=>q.topics[0]||"-").join(" | ")}`);
 }
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/manifest-check.txt", out.join("\n"), "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/manifest-check.txt", out.join("\n"), "utf8");
 console.log(out.join("\n"));

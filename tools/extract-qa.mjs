@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
-const base = "G:/期末及简历和别的项目/考研资料/cs-408-main/cs-408-main/408真题";
-const outDir = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache";
+const base = "<资料目录>/cs-408-main/cs-408-main/408真题";
+const outDir = "<项目根目录>/tools/cache";
 fs.mkdirSync(outDir, { recursive: true });
 const jobs = [];
 for (const y of [2009,2010,2011,2012,2013,2014,2015,2016]) {

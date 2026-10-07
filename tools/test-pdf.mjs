@@ -2,9 +2,9 @@ import fs from "node:fs";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.mjs";
 
 const files = [
-  "G:/期末及简历和别的项目/考研资料/cs-408-main/cs-408-main/408真题/2009-2023真题/2020计算机考研408真题.pdf",
-  "G:/期末及简历和别的项目/考研资料/cs-408-main/cs-408-main/408真题/2009-2023答案/2020答案.pdf",
-  "G:/期末及简历和别的项目/考研资料/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2017考研英语（一)真题.pdf",
+  "<资料目录>/cs-408-main/cs-408-main/408真题/2009-2023真题/2020计算机考研408真题.pdf",
+  "<资料目录>/cs-408-main/cs-408-main/408真题/2009-2023答案/2020答案.pdf",
+  "<资料目录>/KaoYan-English-master/真题集（纯真题可直接打印）英语一/PDF版本/2017考研英语（一)真题.pdf",
 ];
 for (const f of files) {
   try {

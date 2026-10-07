@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/cs408";
+const DIR = "<项目根目录>/public/data/cs408";
 const m = JSON.parse(fs.readFileSync(`${DIR}/_manifest.json`, "utf8"));
 const lines = [];
 for (const p of m.subject.papers) lines.push(`${p.year}|${p.questionCount}|${p.choiceCount}|${p.essayCount}|${p.quality}|${p.explanationMissing}|${p.emptyOptionQuestions}|${p.answerSource}`);
@@ -7,5 +7,5 @@ lines.push("--- defects ---");
 for (const d of m.defects) for (const it of d.items) lines.push(`${d.year} q${it.no}: ${it.issue}`);
 lines.push("--- diagnostics ---");
 for (const d of m.diagnostics) lines.push(d);
-fs.writeFileSync("G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/manifest-flat.txt", lines.join("\n"), "utf8");
+fs.writeFileSync("<项目根目录>/tools/cache/manifest-flat.txt", lines.join("\n"), "utf8");
 console.log(lines.join("\n"));

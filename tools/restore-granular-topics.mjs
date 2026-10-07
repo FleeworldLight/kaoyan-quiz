@@ -11,8 +11,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const DIR = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/public/data/politics";
-const BASE = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/cache/politics-baseline";
+const DIR = "<项目根目录>/public/data/politics";
+const BASE = "<项目根目录>/tools/cache/politics-baseline";
 
 let restored = 0, yearsTouched = 0, missing = [];
 for (const f of fs.readdirSync(DIR).filter((x) => /^\d{4}\.json$/.test(x)).sort()) {

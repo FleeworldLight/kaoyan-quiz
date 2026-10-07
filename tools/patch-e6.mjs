@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const p = "G:/期末及简历和别的项目/考研资料/kaoyan-quiz/tools/build-cs408.mjs";
+const p = "<项目根目录>/tools/build-cs408.mjs";
 let t = fs.readFileSync(p, "utf8");
 // add E6 parser-marker extractor + cleanup
 t = t.replace(`  const explSet = (tx, prefix) => [
