@@ -1,10 +1,14 @@
 /**
  * 端到端交互测试（第二版，对应重做后的界面）
- * 用法: node tools/e2e-test.mjs     需要先跑起 dist 静态服务
+ * 用法: node tools/e2e-test.mjs
+ *
+ * 会自动确保 dist 静态服务可用：如果 KQ_URL/5199 上没有服务，就自己起一个
+ * （跑完自动关掉）。这样测试不依赖外部先手动跑 pnpm serve，CI 里也能直接执行。
  */
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import http from "node:http";
 
 const EDGE = [
   "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
@@ -12,10 +16,45 @@ const EDGE = [
 ].find((p) => fs.existsSync(p));
 if (!EDGE) { console.error("找不到 Edge"); process.exit(1); }
 
+const ROOT = path.resolve(import.meta.dirname, "..");
 const PORT = 9340;
-const BASE = process.env.KQ_URL || "http://127.0.0.1:5199";
+let BASE = process.env.KQ_URL || "http://127.0.0.1:5199";
 const PROFILE = path.resolve(".edge-e2e-profile-" + Date.now());
 fs.rmSync(PROFILE, { recursive: true, force: true });
+
+/* ---------- 确保被测试的站点在跑 ---------- */
+let ownServer = null;
+
+function reachable(url, timeoutMs = 1500) {
+  return new Promise((resolve) => {
+    const req = http.get(url, (res) => { res.resume(); resolve(res.statusCode < 500); });
+    req.setTimeout(timeoutMs, () => { req.destroy(); resolve(false); });
+    req.on("error", () => resolve(false));
+  });
+}
+
+async function ensureServer() {
+  if (await reachable(BASE + "/")) return;
+  if (!fs.existsSync(path.join(ROOT, "dist", "index.html"))) {
+    console.error("dist/ 不存在，请先执行 pnpm build");
+    process.exit(1);
+  }
+  const port = Number(new URL(BASE).port || 5199);
+  console.log(`[e2e] ${BASE} 上没有服务，自动启动临时静态服务（端口 ${port}）…`);
+  ownServer = spawn(process.execPath, [path.join(ROOT, "tools", "serve.mjs"), String(port), "dist"], {
+    cwd: ROOT, stdio: "ignore",
+  });
+  for (let i = 0; i < 40; i++) {
+    await new Promise((r) => setTimeout(r, 200));
+    if (await reachable(BASE + "/")) { console.log("[e2e] 服务已就绪"); return; }
+  }
+  console.error("[e2e] 起服务失败");
+  process.exit(1);
+}
+
+const stopOwnServer = () => { if (ownServer) { try { ownServer.kill(); } catch {} ownServer = null; } };
+process.on("exit", stopOwnServer);
+process.on("SIGINT", () => { stopOwnServer(); process.exit(130); });
 
 const child = spawn(EDGE, [
   "--headless=new", "--disable-gpu", "--no-sandbox", "--no-first-run",
@@ -58,6 +97,7 @@ async function goto(hash) {
 }
 
 try {
+  await ensureServer();
   let wsUrl;
   for (let i = 0; i < 60 && !wsUrl; i++) {
     try { const l = await (await fetch("http://127.0.0.1:" + PORT + "/json/list")).json(); wsUrl = l.find((t) => t.type === "page")?.webSocketDebuggerUrl; } catch {}
