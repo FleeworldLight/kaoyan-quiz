@@ -2,12 +2,39 @@ const BASE = (import.meta.env.BASE_URL || "./").replace(/\/$/, "") + "/data/";
 
 const cache = new Map();
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * 取 JSON，失败自动重试。
+ *
+ * 为什么要重试：站点在 GitHub Pages 上，国内（尤其手机流量）访问 github.io 经常
+ * 出现 net::ERR_CONNECTION_RESET —— 是间歇性的，同一个请求重试往往就成功了。
+ * 以前一次失败就让整个应用停在「题库加载失败」，体验很差。
+ * 指数退避重试 3 次（0.35s / 0.9s），配合 Service Worker 的缓存基本能兜住。
+ */
+async function fetchJSONOnce(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error("加载失败 " + url + " (HTTP " + r.status + ")");
+  return r.json();
+}
+
 async function getJSON(rel) {
   if (cache.has(rel)) return cache.get(rel);
-  const p = fetch(BASE + rel).then((r) => {
-    if (!r.ok) throw new Error("加载失败 " + rel + " (HTTP " + r.status + ")");
-    return r.json();
-  });
+  const p = (async () => {
+    const url = BASE + rel;
+    let lastErr;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        return await fetchJSONOnce(url);
+      } catch (e) {
+        lastErr = e;
+        // HTTP 404 这类确定性错误不必重试
+        if (/HTTP 4\d\d/.test(e.message)) break;
+        if (attempt < 3) await sleep(attempt === 1 ? 350 : 900);
+      }
+    }
+    throw lastErr;
+  })();
   cache.set(rel, p);
   try { return await p; } catch (e) { cache.delete(rel); throw e; }
 }

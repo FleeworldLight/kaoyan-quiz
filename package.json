@@ -21,7 +21,8 @@
     "data:build": "npm run data:math && npm run data:english && npm run data:politics && npm run data:cs408 && npm run data:mock && npm run data:index",
     "verify": "node tools/validate-all.mjs && node tools/validate-mock.mjs",
     "test:e2e": "node tools/e2e-test.mjs",
-    "verify:live": "node tools/verify-live.mjs"
+    "verify:live": "node tools/verify-live.mjs",
+    "test:offline": "node tools/test-offline.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",

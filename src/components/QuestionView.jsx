@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle, Copy } from "lucide-react";
+import { Star, Flag, NotebookPen, Check, X, ListChecks, Lightbulb, AlertTriangle, Copy, ImageOff, RotateCw } from "lucide-react";
 import RichText, { dataImageUrl } from "./RichText.jsx";
 import { Badge, Button, Tip, Kbd, Modal } from "./ui.jsx";
 import { normMultiple, isAutoGraded, isCorrect, figureMissing } from "../lib/question.js";
@@ -24,6 +24,31 @@ export default function QuestionView({
 }) {
   const [copied, setCopied] = useState(false);
   const [zoom, setZoom] = useState(null);
+  // 配图加载：弱网下 github.io 会间歇性重置连接，自动重试两次再给出手动重试
+  const [imgRetry, setImgRetry] = useState({});
+  const [imgFailed, setImgFailed] = useState({});
+  const MAX_AUTO_RETRY = 2;
+
+  /** 重试时带 ?r=N，强制绕过（Service Worker 也会忽略这个参数做缓存键） */
+  function imgSrc(img) {
+    const base = dataImageUrl(q.subject, img);
+    const n = imgRetry[img] || 0;
+    if (!n) return base;
+    return base + (base.includes("?") ? "&" : "?") + "r=" + n;
+  }
+  function onImgError(img) {
+    const n = imgRetry[img] || 0;
+    if (n < MAX_AUTO_RETRY) {
+      const delay = 400 * (n + 1);
+      setTimeout(() => setImgRetry((m) => ({ ...m, [img]: (m[img] || 0) + 1 })), delay);
+    } else {
+      setImgFailed((m) => ({ ...m, [img]: true }));
+    }
+  }
+  function retryImg(img) {
+    setImgFailed((m) => ({ ...m, [img]: false }));
+    setImgRetry((m) => ({ ...m, [img]: (m[img] || 0) + 1 }));
+  }
   if (!q) return null;
   const meta = TYPE_META[q.type] || TYPE_META.essay;
   const auto = isAutoGraded(q);
@@ -100,14 +125,36 @@ export default function QuestionView({
                 key={img}
                 type="button"
                 onClick={() => setZoom(img)}
-                title="点击放大"
-                className="group relative rounded-md border border-line-subtle bg-white p-0.5 transition-colors hover:border-brand-line"
+                title={imgFailed[img] ? undefined : "点击放大"}
+                className={cn(
+                  "group relative rounded-md border bg-white p-0.5 transition-colors",
+                  imgFailed[img] ? "border-warn-line" : "border-line-subtle hover:border-brand-line",
+                )}
               >
-                <img src={dataImageUrl(q.subject, img)} alt="题目配图" loading="lazy"
-                     className="block max-h-72 w-auto max-w-full rounded-[5px]" />
-                <span className="pointer-events-none absolute right-1 bottom-1 hidden rounded bg-ink/75 px-1.5 py-0.5 text-[10.5px] text-white group-hover:block">
-                  点击放大
-                </span>
+                {imgFailed[img] ? (
+                  <span className="flex h-20 w-44 flex-col items-center justify-center gap-1.5 px-2 text-center">
+                    <ImageOff className="size-4 text-warn" />
+                    <span className="text-[11.5px] leading-tight text-ink-subtle">图片加载失败</span>
+                    <span
+                      role="button"
+                      tabIndex={0}
+                      onClick={(e) => { e.stopPropagation(); retryImg(img); }}
+                      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); retryImg(img); } }}
+                      className="inline-flex items-center gap-1 rounded border border-line px-1.5 py-0.5 text-[11px] text-brand hover:bg-brand-soft"
+                    >
+                      <RotateCw className="size-3" />重新加载
+                    </span>
+                  </span>
+                ) : (
+                  <>
+                    <img src={imgSrc(img)} alt="题目配图" loading="lazy" decoding="async"
+                         onError={() => onImgError(img)}
+                         className="block max-h-72 w-auto max-w-full rounded-[5px]" />
+                    <span className="pointer-events-none absolute right-1 bottom-1 hidden rounded bg-ink/75 px-1.5 py-0.5 text-[10.5px] text-white group-hover:block">
+                      点击放大
+                    </span>
+                  </>
+                )}
               </button>
             ))}
           </div>
