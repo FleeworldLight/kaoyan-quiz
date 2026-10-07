@@ -6,7 +6,7 @@ import { useLocalBankSnapshot, getBlobUrl } from "../lib/localbank.js";
 import { cn } from "../lib/utils.js";
 
 /**
- * 翻看复习（本地图片题）。
+ * 翻看复习（手工录入错题）。
  *
  * 注意这是**纯翻看**：不打分、不记录、不产生任何复习数据（与题库错题的复测不同）。
  * 唯一的一点"复习"设计是：答案默认折叠，先自己回忆，点一下/按空格再看。

@@ -67,7 +67,7 @@ export default function AppShell({ index, children }) {
   const wrongN = Object.keys(s.wrong).length;
   const favN = Object.keys(s.fav).length;
   const noteN = Object.keys(s.notes).length;
-  // 本地图片题也算「错题」：它们不进 s.wrong（避免污染题库统计），
+  // 手工录入错题也算「错题」：它们不进 s.wrong（避免污染题库统计），
   // 但用户在侧栏看到的错题数应当把两部分加起来
   const localN = localSnap.items.length;
   const counts = { wrong: wrongN + localN, fav: favN, notes: noteN };

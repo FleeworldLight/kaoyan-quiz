@@ -1,11 +1,11 @@
 /**
- * 我的错题本（本地图片题）—— IndexedDB 存储层。
+ * 我的错题本（手工录入错题）—— IndexedDB 存储层。
  *
  * 为什么单独一层而不是塞进 localStorage 的 s.wrong：
  *   1. 图片是二进制，localStorage 只能存字符串（base64 会膨胀 33%），且总量约 5 MB 根本不够
  *   2. s.wrong 里的每条都会被 lib/locate.js 拿去题库 JSON 里还原成结构化题目，
- *      而图片题在题库里根本不存在；混进去只会污染错题统计与正确率
- *   → 所以本地图片题自成一库，只共享「错题本」这个页面入口。
+ *      而手工录入错题在题库里根本不存在；混进去只会污染错题统计与正确率
+ *   → 所以手工录入错题自成一库，只共享「错题本」这个页面入口。
  *
  * 存储结构（DB: kaoyan-quiz-local v1）：
  *   items  元数据（纯文本，列表、筛选、统计都只读它，很快）
@@ -83,7 +83,7 @@ export function getSnapshot() {
   return snapshot;
 }
 /**
- * React hook：订阅本地图片题列表。
+ * React hook：订阅手工录入错题列表。
  * 用 useSyncExternalStore 保证增删/导入后订阅组件真正重渲染
  * （直接返回 snapshot 的话，组件挂载后就再也不会因为 items 变化而更新）。
  */
@@ -182,7 +182,7 @@ function newId() {
 }
 
 /**
- * 新增一道图片题。
+ * 新增一道手工录入错题。
  * @param {object} rec
  *   image: Blob, thumb: Blob, mime, width, height        —— 由 lib/image.js 压缩产出
  *   subject, topicId, topicName, groupName                —— 从四科章节列表里选

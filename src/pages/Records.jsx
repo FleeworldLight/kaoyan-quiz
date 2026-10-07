@@ -67,8 +67,8 @@ export default function Records({ index }) {
       a.click();
       URL.revokeObjectURL(a.href);
       setMsg(r.kind === "zip"
-        ? `已导出 ${r.filename}：学习状态 + ${r.photos} 道图片题（共 ${fmtBytes(r.bytes)}）。换设备时导回来的就是这个文件。`
-        : `已导出 ${r.filename}（纯 JSON，因为你还没有记过图片题）。`);
+        ? `已导出 ${r.filename}：学习状态 + ${r.photos} 道手工录入错题（共 ${fmtBytes(r.bytes)}）。换设备时导回来的就是这个文件。`
+        : `已导出 ${r.filename}（纯 JSON，因为你还没有记过手工录入错题）。`);
     } catch (e) {
       setMsg("导出失败：" + e.message);
     } finally {

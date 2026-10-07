@@ -19,7 +19,7 @@ import { cn, accuracy, fmtDate } from "../lib/utils.js";
 /**
  * 错题本。两个标签页，因为两类内容本质不同：
  *   题库错题  —— 从题库里答错的题，可判分、可复测，会进正确率统计
- *   我的图片题 —— 用户自己拍照记下的题，只有「图片 + 自己写的解析 + 章节标签」，
+ *   手工录入错题 —— 用户自己拍照记下的题，只有「图片 + 自己写的解析 + 章节标签」，
  *                不打分、不记录、不进统计（见 README「我的错题本」一节）
  */
 export default function WrongRetest({ index }) {
@@ -36,7 +36,7 @@ export default function WrongRetest({ index }) {
           onChange={(v) => setParams(v === "photo" ? { tab: "photo" } : {})}
           options={[
             { value: "bank", label: "题库错题", count: bankN },
-            { value: "photo", label: "我的图片题", count: snap.items.length },
+            { value: "photo", label: "手工录入错题", count: snap.items.length },
           ]} />
         {tab === "photo" ? (
           <span className="ml-auto flex flex-wrap items-center gap-2">
@@ -263,7 +263,7 @@ function BankWrong({ index }) {
 }
 
 /* ==========================================================================
- *  标签页二：我的图片题
+ *  标签页二：手工录入错题
  * ========================================================================== */
 
 function PhotoWrong({ index }) {
@@ -354,11 +354,11 @@ function PhotoWrong({ index }) {
     <div className="flex flex-col gap-4">
       <div className="grid gap-3 lg:grid-cols-[1fr_320px]">
         <Card>
-          <CardHead icon={Camera} title="我的图片题"
+          <CardHead icon={Camera} title="手工录入错题"
             desc={"共 " + snap.items.length + " 道 · " + fmtBytes(totalBytes) + "。只存在你自己的浏览器里，不上传任何地方。"} />
           <CardBody className="flex flex-col gap-3">
             <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-              <Mini label="图片题总数" value={snap.items.length} tone="text-brand" />
+              <Mini label="录入总数" value={snap.items.length} tone="text-brand" />
               <Mini label="涉及科目" value={bySubject.size} tone="text-ink-strong" />
               <Mini label="涉及章节" value={topics.length} tone="text-ink-strong" />
               <Mini label="占用空间" value={fmtBytes(totalBytes)} tone="text-ink-strong" small />

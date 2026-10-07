@@ -3,11 +3,11 @@
  *
  * 有两块东西要备份，形态完全不同：
  *   1. 学习状态（localStorage）—— 几十 KB 的 JSON，就是现在「备份全部数据」导出的那个
- *   2. 我的图片题（IndexedDB）—— 每张几百 KB 的二进制
+ *   2. 手工录入错题（IndexedDB）—— 每张几百 KB 的二进制
  *
  * 所以分两种导出：
- *   · 没有图片题        → 还是导出单个 .json（小、可读、向后兼容）
- *   · 有图片题          → 导出 .zip（state.json + manifest.json + images/ + thumbs/）
+ *   · 没有手工录入错题        → 还是导出单个 .json（小、可读、向后兼容）
+ *   · 有手工录入错题          → 导出 .zip（state.json + manifest.json + images/ + thumbs/）
  *
  * 为什么图片不塞进 JSON：base64 会膨胀 33%，几百张图会得到一个几十 MB 的 JSON，
  * 浏览器 JSON.stringify 直接卡死。用 zip（STORE 不压缩，图片本身已压缩）最合适。
@@ -55,7 +55,7 @@ export async function exportBackup(state) {
   entries.push({ name: "manifest.json", data: JSON.stringify({
     kind: KIND, version: VERSION, exportedAt: new Date().toISOString(),
     photos: photos.length, hasImages: true,
-    note: "images/ 与 thumbs/ 里是「我的图片题」的图片，文件名就是记录 id；state.json 是学习状态。",
+    note: "images/ 与 thumbs/ 里是「手工录入错题」的图片，文件名就是记录 id；state.json 是学习状态。",
   }, null, 1) });
   entries.push({ name: "state.json", data: JSON.stringify(state) });
 
@@ -84,9 +84,9 @@ export async function exportBackup(state) {
 }
 
 /**
- * 导入备份。自动识别 .json（只有状态）与 .zip（状态 + 图片题）。
+ * 导入备份。自动识别 .json（只有状态）与 .zip（状态 + 手工录入错题）。
  * 合并策略：状态按原有规则（进度取较大值、错题收藏笔记取并集），
- *          图片题按 id 去重，已存在的跳过（不覆盖你现有的内容）。
+ *          手工录入错题按 id 去重，已存在的跳过（不覆盖你现有的内容）。
  */
 export async function importBackup(file) {
   if (!file) throw new Error("没有选择文件");
@@ -162,6 +162,6 @@ export function describeImport(r) {
   if (r.state) {
     parts.push(`进度 ${r.state.progress} 条、错题 ${r.state.wrong} 条、收藏 ${r.state.fav} 条、笔记 ${r.state.notes} 条、记录 ${r.state.records} 条`);
   }
-  if (r.kind === "zip") parts.push(`图片题新增 ${r.photos.added} 道（已存在跳过 ${r.photos.skipped} 道）`);
+  if (r.kind === "zip") parts.push(`手工录入错题新增 ${r.photos.added} 道（已存在跳过 ${r.photos.skipped} 道）`);
   return parts.length ? "导入完成：" + parts.join("；") : "文件里没有可导入的内容。";
 }

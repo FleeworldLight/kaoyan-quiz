@@ -6,7 +6,7 @@ import { getBlobUrl } from "../lib/localbank.js";
 import { cn, fmtDate } from "../lib/utils.js";
 
 /**
- * 本地图片题的一张卡片。
+ * 手工录入错题的一张卡片。
  * 缩略图从 IndexedDB 取（长边 400 的缩略图，不会把几百 KB 的大图拉进列表）。
  */
 export default function WrongPhotoCard({ item, subjectName, onOpen, onDelete, onPreview, dense }) {

@@ -6,7 +6,7 @@
  *   1. 生成一张模拟手机拍书页的图片
  *   2. 在 /wrong/add 通过 file input 注入 → 断言压缩完成、体积大幅下降
  *   3. 填自己写的答案解析、从四科章节里选标签 → 保存（三项必填的约束也一并验证）
- *   4. 断言出现在 错题本 → 我的图片题，缩略图能加载
+ *   4. 断言出现在 错题本 → 手工录入错题，缩略图能加载
  *   5. 翻看复习：断言图片来自 IndexedDB、答案默认折叠、可以展开
  *   6. 导出备份：拦截 createObjectURL 拿到 Blob，落盘成 zip，
  *      **用 Python zipfile 校验**（外部实现证明包是标准 zip，且图片逐字节可读）
@@ -182,11 +182,11 @@ try {
   console.log("\n=== 4. 保存并查看列表 ===");
   await ev(`document.querySelector('[data-testid="save-wrong"]').click()`);
   await waitFor(`location.hash.includes('tab=photo')`, "跳回错题本", 20000);
-  await waitFor(`document.querySelectorAll('[data-testid="photo-thumb"]').length > 0`, "图片题卡片", 20000);
+  await waitFor(`document.querySelectorAll('[data-testid="photo-thumb"]').length > 0`, "手工录入错题卡片", 20000);
   const cardInfo = await ev(`(() => { const t = document.body.innerText;
     return { thumbs: document.querySelectorAll('[data-testid="photo-thumb"]').length,
       hasAnswer: t.includes('TLB 和 Cache'), hasTopic: /高等数学/.test(t) }; })()`);
-  check("错题本里出现这道图片题", cardInfo.thumbs === 1 && cardInfo.hasAnswer && cardInfo.hasTopic, JSON.stringify(cardInfo));
+  check("错题本里出现这道手工录入错题", cardInfo.thumbs === 1 && cardInfo.hasAnswer && cardInfo.hasTopic, JSON.stringify(cardInfo));
 
   await waitFor(`(() => { const i = document.querySelector('[data-testid="photo-thumb"] img'); return !!(i && i.complete && i.naturalWidth > 0); })()`, "缩略图加载", 20000);
   const thumb = await ev(`(() => { const i = document.querySelector('[data-testid="photo-thumb"] img');
@@ -295,7 +295,7 @@ print("PY_STATE_KEYS=" + json.dumps(sorted(st.keys())))
   await setFileOn('[data-testid="import-file"]', ZIP_OUT);
   await waitFor(`document.body.innerText.includes('导入完成')`, "导入结果", 40000);
   const impMsg = await ev(`(/导入完成[^\\n]*/.exec(document.body.innerText) || [])[0] || ""`);
-  check("导入提示包含图片题恢复数量", /图片题新增 1 道/.test(impMsg), impMsg.slice(0, 120));
+  check("导入提示包含手工录入错题恢复数量", /手工录入错题新增 1 道/.test(impMsg), impMsg.slice(0, 120));
 
   await send("Page.navigate", { url: BASE + "/#/wrong-retest?tab=photo" });
   await waitFor(`document.querySelectorAll('[data-testid="photo-thumb"]').length > 0`, "还原后的卡片", 25000);

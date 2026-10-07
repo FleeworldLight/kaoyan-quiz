@@ -130,14 +130,22 @@ try {
   await send("Runtime.enable"); await send("Page.enable"); await send("Network.enable");
 
 
-  /* ---------- 1. 首屏 ---------- */
-  await send("Page.navigate", { url: URL_BASE });
-  await waitFor(`document.body.innerText.includes('离考研还有') || document.body.innerText.includes('学习区')`, "首屏渲染");
-  const home = await ev(`({ days: /(\\d+)\\s*天/.exec(document.body.innerText)?.[1] || null,
-    nav: document.querySelectorAll('a').length, len: document.getElementById('root').innerHTML.length,
-    title: document.title })`);
-  check("线上首屏渲染成功", home.len > 20000, `root ${home.len} B · 导航 ${home.nav} 项`);
-  check("首页倒计时可用（题库已加载）", !!home.days, `${home.days} 天`);
+  /* ---------- 1. 首屏（国内访问 github.io 的 JS chunk 常被 RST，最多重试 3 次导航）---------- */
+  let home = null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    await send("Page.navigate", { url: URL_BASE });
+    try {
+      await waitFor(`document.body.innerText.includes('离考研还有') || document.body.innerText.includes('学习区')`,
+        "首屏渲染（第 " + attempt + " 次）", 45000);
+      home = await ev(`({ days: /(\\d+)\\s*天/.exec(document.body.innerText)?.[1] || null,
+        nav: document.querySelectorAll('a').length, len: document.getElementById('root').innerHTML.length,
+        title: document.title })`);
+      if (home && home.len > 20000) break;
+    } catch { /* 下一轮重试 */ }
+    await sleep(1500);
+  }
+  check("线上首屏渲染成功", !!home && home.len > 20000, home ? `root ${home.len} B · 导航 ${home.nav} 项` : "3 次重试后仍失败");
+  check("首页倒计时可用（题库已加载）", !!home?.days, `${home?.days} 天`);
 
   /* ---------- 2. 题库数据真的能取到 ---------- */
   const api = await ev(`fetch('./data/index.json').then(r => r.ok ? r.json() : null).then(j => j ? {
